@@ -1,8 +1,8 @@
 {
   "title": "表姐严选",
   "dataDate": "2026-06-19",
-  "runTime": "2026-06-19 18:27",
-  "verifyStatus": "OpenD端口未连接；已核验 353（来自本地落盘缓存），缓存缺失 25，暂不支持 49；部分未完成实时核验",
+  "runTime": "2026-06-19 19:44",
+  "verifyStatus": "OpenD已连接；已核验 353（新拉取 0，今日缓存 353），失败 25，暂不支持 49；部分未完成实时核验",
   "scope": "核心精选去重后 427 个标的",
   "calcNote": "价格/均线/买点/止损/动态RS=OpenD日K复算",
   "defaultFilters": {
@@ -59,7 +59,7 @@
       "ret120": "140.08%",
       "market_cap": "189.6",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.864；地位：格芯，成熟特色制程晶圆代工；群里重点；环节：成熟制程代工",
       "memo": "格芯，成熟特色制程晶圆代工"
@@ -108,7 +108,7 @@
       "ret120": "55.45%",
       "market_cap": "378616.1",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.679；地位：👑晶圆代工龙头；群里重点；环节：代工",
       "memo": "台积电，全球晶圆代工龙头(CoWoS 封装)"
@@ -157,7 +157,7 @@
       "ret120": "103.57%",
       "market_cap": "246.2",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.781；地位：👑光模块/激光龙头；群里重点；环节：光模块/激光",
       "memo": "高意 Coherent(原 II-VI)，激光/光通信器件/SiC 衬底"
@@ -206,7 +206,7 @@
       "ret120": "100.76%",
       "market_cap": "89.7",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.787；地位：莱迪思 Lattice，FPGA；群里重点",
       "memo": "莱迪思 Lattice，FPGA"
@@ -255,7 +255,7 @@
       "ret120": "137.65%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.847；地位：'全龙头'组合(半导体国产替代)；群里重点；环节：接口芯片/PCIe",
       "memo": "'全龙头'组合(半导体国产替代)"
@@ -304,7 +304,7 @@
       "ret120": "81.74%",
       "market_cap": "3478.9",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.753；地位：👑光刻机垄断；群里重点；环节：光刻机",
       "memo": "阿斯麦，EUV/DUV 光刻机垄断"
@@ -353,7 +353,7 @@
       "ret120": "126.49%",
       "market_cap": "26.5",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.855；地位：Axcelis，离子注入设备；群里重点",
       "memo": "Axcelis，离子注入设备"
@@ -402,7 +402,7 @@
       "ret120": "30.69%",
       "market_cap": "1892.1",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.662；地位：手机SoC龙头；群里重点；环节：SoC",
       "memo": "高通，手机/车/PC SoC + AI 边缘"
@@ -451,7 +451,7 @@
       "ret120": "120.76%",
       "market_cap": "280.8",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.801；地位：测试设备龙头；群里重点；环节：测试设备",
       "memo": "泰瑞达 Teradyne，测试设备 + 机器人"
@@ -500,7 +500,7 @@
       "ret120": "165.44%",
       "market_cap": "43",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.872；地位：Powell，配电与电气设备；群里重点",
       "memo": "Powell，配电与电气设备"
@@ -549,7 +549,7 @@
       "ret120": "224.86%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA20，属于常规回调买点；策略动作：✅踩EMA20·正常回踩观察；动态RS=0.892；地位：收入+44%,EBITDA+296%,订单积压+；群里重点",
       "memo": "收入+44%,EBITDA+296%,订单积压+483%"
@@ -598,7 +598,7 @@
       "ret120": "17.70%",
       "market_cap": "16774.8",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.517；地位：👑定制ASIC龙头；群里重点；环节：ASIC/网络",
       "memo": "博通，定制 AI ASIC + 网络交换/光 DSP"
@@ -647,7 +647,7 @@
       "ret120": "11.84%",
       "market_cap": "47093.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.472；地位：👑AI GPU绝对龙头；群里重点；环节：GPU",
       "memo": "英伟达，AI GPU/CUDA/网络绝对龙头"
@@ -696,7 +696,7 @@
       "ret120": "126.63%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.838；地位：力量钻石，A股 培育钻石/金刚石散热；群里重点；环节：金刚石散热",
       "memo": "力量钻石，A股 培育钻石/金刚石散热"
@@ -745,7 +745,7 @@
       "ret120": "33.20%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.636；地位：'嘣粥打野'暗号常提;保偏/特种光纤；群里重点",
       "memo": "'嘣粥打野'暗号常提;保偏/特种光纤"
@@ -794,7 +794,7 @@
       "ret120": "105.54%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.776；地位：Comfort Systems，数据中心机电 E；群里重点",
       "memo": "Comfort Systems，数据中心机电 EPC"
@@ -843,7 +843,7 @@
       "ret120": "14.65%",
       "market_cap": "103.3",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.511；地位：思佳讯 Skyworks，射频前端；群里重点",
       "memo": "思佳讯 Skyworks，射频前端"
@@ -892,7 +892,7 @@
       "ret120": "53.71%",
       "market_cap": "1436.6",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.741；地位：软件等其盘后财报定方向；群里重点",
       "memo": "软件等其盘后财报定方向"
@@ -941,7 +941,7 @@
       "ret120": "27.10%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.594；地位：'全龙头'组合;SMIC N+3工艺逼近Inte；群里重点；环节：代工",
       "memo": "'全龙头'组合;SMIC N+3工艺逼近Intel 18A"
@@ -990,7 +990,7 @@
       "ret120": "69.54%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.739；地位：核心池关联；群里重点",
       "memo": "核心池关联"
@@ -1039,7 +1039,7 @@
       "ret120": "122.63%",
       "market_cap": "127.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.807；地位：MACOM，射频/光器件/高速模拟；环节：光器件/射频",
       "memo": "MACOM，射频/光器件/高速模拟"
@@ -1088,7 +1088,7 @@
       "ret120": "158.32%",
       "market_cap": "39.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.83；地位：Viavi，光网络测试 + 3D 传感滤光",
       "memo": "Viavi，光网络测试 + 3D 传感滤光"
@@ -1137,7 +1137,7 @@
       "ret120": "66.60%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.685；地位：👑电网设备龙头；群里重点",
       "memo": "GE Vernova，燃机/电网设备(AI 用电核心)"
@@ -1186,7 +1186,7 @@
       "ret120": "69.87%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.659；地位：MasTec，电力/通信基建 EPC；群里重点",
       "memo": "MasTec，电力/通信基建 EPC"
@@ -1235,7 +1235,7 @@
       "ret120": "49.55%",
       "market_cap": "423",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.665；地位：👑AI云租赁龙头；群里重点",
       "memo": "CoreWeave，GPU 云算力租赁龙头"
@@ -1284,7 +1284,7 @@
       "ret120": "62.04%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.639；地位：电力EPC龙头；群里重点",
       "memo": "Quanta Services，电力基建 EPC"
@@ -1333,7 +1333,7 @@
       "ret120": "25.06%",
       "market_cap": "0.6",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.628；地位：38%空头占比;2 MSA on hypersc；群里重点",
       "memo": "38%空头占比;2 MSA on hyperscalers"
@@ -1382,7 +1382,7 @@
       "ret120": "33.28%",
       "market_cap": "149.3",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.653；地位：Okta，身份认证与访问管理 SaaS；群里重点",
       "memo": "Okta，身份认证与访问管理 SaaS"
@@ -1431,7 +1431,7 @@
       "ret120": "42.83%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.645；地位：IREN，比特币矿场转 AI 算力；群里重点",
       "memo": "IREN，比特币矿场转 AI 算力"
@@ -1480,7 +1480,7 @@
       "ret120": "16.56%",
       "market_cap": "34620.2",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.494；地位：谷歌 Alphabet，搜索/云/自研 TPU(；群里重点",
       "memo": "谷歌 Alphabet，搜索/云/自研 TPU(AI 芯片)"
@@ -1529,7 +1529,7 @@
       "ret120": "109.43%",
       "market_cap": "127.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.798；地位：半导体材料龙头",
       "memo": "Entegris，半导体材料/过滤纯化"
@@ -1578,7 +1578,7 @@
       "ret120": "120.81%",
       "market_cap": "198.3",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.832；地位：功率/SiC龙头；群里重点；环节：功率/SiC",
       "memo": "安森美 onsemi，功率/SiC/图像传感"
@@ -1627,7 +1627,7 @@
       "ret120": "56.42%",
       "market_cap": "13.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.688；地位：Digi，物联网连接模块",
       "memo": "Digi，物联网连接模块"
@@ -1676,7 +1676,7 @@
       "ret120": "39.79%",
       "market_cap": "513.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.648；地位：汽车半导体龙头",
       "memo": "恩智浦，汽车/工业 MCU/模拟"
@@ -1725,7 +1725,7 @@
       "ret120": "84.39%",
       "market_cap": "1481.9",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.77；地位：模拟器件龙头；群里重点；环节：模拟",
       "memo": "德州仪器，模拟与嵌入式半导体龙头"
@@ -1774,7 +1774,7 @@
       "ret120": "137.70%",
       "market_cap": "5.7",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.881；地位：万代半导体 AOS，MOSFET/功率器件；群里重点；环节：MOSFET",
       "memo": "万代半导体 AOS，MOSFET/功率器件"
@@ -1823,7 +1823,7 @@
       "ret120": "136.05%",
       "market_cap": "19.7",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.841；地位：Power Integrations，高压电源管；群里重点；环节：电源IC",
       "memo": "Power Integrations，高压电源管理 IC"
@@ -1872,7 +1872,7 @@
       "ret120": "45.80%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.656；地位：盈透证券，券商；群里重点",
       "memo": "盈透证券，券商"
@@ -1921,7 +1921,7 @@
       "ret120": "29.43%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.597；地位：AI PCB龙头(A股)；群里重点；环节：PCB/CCL",
       "memo": "胜宏科技，A股 PCB(AI 服务器/加速卡 PCB)"
@@ -1970,7 +1970,7 @@
       "ret120": "86.90%",
       "market_cap": "124.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.79；地位：TD SYNNEX，IT 分销",
       "memo": "TD SYNNEX，IT 分销"
@@ -2019,7 +2019,7 @@
       "ret120": "70.83%",
       "market_cap": "179.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.727；地位：nVent，电气连接与防护/液冷",
       "memo": "nVent，电气连接与防护/液冷"
@@ -2068,7 +2068,7 @@
       "ret120": "54.32%",
       "market_cap": "300.7",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.696；地位：微芯 Microchip，MCU/模拟/功率；群里重点；环节：MCU/功率",
       "memo": "微芯 Microchip，MCU/模拟/功率"
@@ -2117,7 +2117,7 @@
       "ret120": "83.50%",
       "market_cap": "9.9",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.761；地位：Redwire，太空基础设施/部件；群里重点",
       "memo": "Redwire，太空基础设施/部件"
@@ -2166,7 +2166,7 @@
       "ret120": "-10.20%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.548；地位：Robinhood，零售券商/加密交易；群里重点",
       "memo": "Robinhood，零售券商/加密交易"
@@ -2215,7 +2215,7 @@
       "ret120": "77.11%",
       "market_cap": "316.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.713；地位：Keysight，电子测量仪器",
       "memo": "Keysight，电子测量仪器"
@@ -2264,7 +2264,7 @@
       "ret120": "78.28%",
       "market_cap": "610.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.778；地位：网络安全龙头",
       "memo": "Fortinet，网络安全"
@@ -2313,7 +2313,7 @@
       "ret120": "106.83%",
       "market_cap": "16.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.795；地位：Benchmark，EMS 代工",
       "memo": "Benchmark，EMS 代工"
@@ -2362,7 +2362,7 @@
       "ret120": "70.25%",
       "market_cap": "56.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.707；地位：ESCO，工业/国防部件",
       "memo": "ESCO，工业/国防部件"
@@ -2411,7 +2411,7 @@
       "ret120": "38.95%",
       "market_cap": "266.9",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.619；地位：小火箭龙头；群里重点",
       "memo": "Rocket Lab，小型火箭发射+卫星制造"
@@ -2460,7 +2460,7 @@
       "ret120": "87.45%",
       "market_cap": "19.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.773；地位：Knowles，MEMS 麦克风/电容元件",
       "memo": "Knowles，MEMS 麦克风/电容元件"
@@ -2509,7 +2509,7 @@
       "ret120": "49.94%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.736；地位：纳指 100 3 倍做多 ETF；群里重点",
       "memo": "纳指 100 3 倍做多 ETF"
@@ -2558,7 +2558,7 @@
       "ret120": "52.63%",
       "market_cap": "51.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.634；地位：EnerSys，工业电池/储能",
       "memo": "EnerSys，工业电池/储能"
@@ -2607,7 +2607,7 @@
       "ret120": "58.00%",
       "market_cap": "35.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.591；地位：IPG Photonics，工业光纤激光器",
       "memo": "IPG Photonics，工业光纤激光器"
@@ -2656,7 +2656,7 @@
       "ret120": "32.90%",
       "market_cap": "600.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.58；地位：👑美股铜龙头；群里重点",
       "memo": "Freeport，全球铜矿龙头(AI 用铜 + 通胀对冲)"
@@ -2705,7 +2705,7 @@
       "ret120": "29.75%",
       "market_cap": "1699.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.605；地位：👑数据中心交换机龙头",
       "memo": "Arista，数据中心高速交换机"
@@ -2754,7 +2754,7 @@
       "ret120": "70.08%",
       "market_cap": "9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.764；地位：Allient，运动控制/电机",
       "memo": "Allient，运动控制/电机"
@@ -2803,7 +2803,7 @@
       "ret120": "43.54%",
       "market_cap": "1369.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.702；地位：端点安全龙头",
       "memo": "CrowdStrike，云原生网络安全"
@@ -2852,7 +2852,7 @@
       "ret120": "75.59%",
       "market_cap": "60.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.747；地位：BrightSpring，医疗健康服务",
       "memo": "BrightSpring，医疗健康服务"
@@ -2901,7 +2901,7 @@
       "ret120": "51.41%",
       "market_cap": "46.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.651；地位：Sensata，传感器",
       "memo": "Sensata，传感器"
@@ -2950,7 +2950,7 @@
       "ret120": "68.35%",
       "market_cap": "18.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.719；地位：Bel Fuse，连接器/磁性/电源",
       "memo": "Bel Fuse，连接器/磁性/电源"
@@ -2999,7 +2999,7 @@
       "ret120": "69.37%",
       "market_cap": "18.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.71；地位：Bel Fuse，连接器/磁性/电源",
       "memo": "Bel Fuse，连接器/磁性/电源"
@@ -3048,7 +3048,7 @@
       "ret120": "19.10%",
       "market_cap": "1737.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.574；地位：👑连接器龙头；环节：连接器",
       "memo": "安费诺 Amphenol，连接器/互连龙头"
@@ -3097,7 +3097,7 @@
       "ret120": "23.81%",
       "market_cap": "73",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.69；地位：JFrog，DevOps 软件供应链",
       "memo": "JFrog，DevOps 软件供应链"
@@ -3146,7 +3146,7 @@
       "ret120": "9.04%",
       "market_cap": "40408.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.449；地位：苹果，消费电子/自研芯片",
       "memo": "苹果，消费电子/自研芯片"
@@ -3195,7 +3195,7 @@
       "ret120": "28.72%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.625；地位：Guardant Health，癌症液体活检(医；群里重点",
       "memo": "Guardant Health，癌症液体活检(医药,误归)"
@@ -3244,7 +3244,7 @@
       "ret120": "18.34%",
       "market_cap": "524",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.486；地位：Dominion，电力",
       "memo": "Dominion，电力"
@@ -3293,7 +3293,7 @@
       "ret120": "21.35%",
       "market_cap": "431.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.483；地位：Entergy，电力(核)",
       "memo": "Entergy，电力(核)"
@@ -3342,7 +3342,7 @@
       "ret120": "-10.28%",
       "market_cap": "92.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.514；地位：D-Wave，量子退火；群里重点",
       "memo": "D-Wave，量子退火"
@@ -3391,7 +3391,7 @@
       "ret120": "18.79%",
       "market_cap": "55.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.506；地位：Enel Chile，智利电力",
       "memo": "Enel Chile，智利电力"
@@ -3440,7 +3440,7 @@
       "ret120": "17.33%",
       "market_cap": "34620.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.5；地位：谷歌 Alphabet，搜索/云/自研 TPU",
       "memo": "谷歌 Alphabet，搜索/云/自研 TPU"
@@ -3489,7 +3489,7 @@
       "ret120": "17.97%",
       "market_cap": "106.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.466；地位：Pinnacle West，电力",
       "memo": "Pinnacle West，电力"
@@ -3538,7 +3538,7 @@
       "ret120": "20.73%",
       "market_cap": "384.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.537；地位：Celestica，EMS/服务器代工(AI 受",
       "memo": "Celestica，EMS/服务器代工(AI 受益)"
@@ -3587,7 +3587,7 @@
       "ret120": "15.47%",
       "market_cap": "291.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.438；地位：DTE，电力",
       "memo": "DTE，电力"
@@ -3636,7 +3636,7 @@
       "ret120": "-5.33%",
       "market_cap": "287.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.435；地位：光伏组件龙头(美)",
       "memo": "First Solar，薄膜光伏组件"
@@ -3685,7 +3685,7 @@
       "ret120": "11.82%",
       "market_cap": "67.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.46；地位：Ormat，地热发电",
       "memo": "Ormat，地热发电"
@@ -3734,7 +3734,7 @@
       "ret120": "14.91%",
       "market_cap": "178",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.432；地位：Evergy，电力",
       "memo": "Evergy，电力"
@@ -3783,7 +3783,7 @@
       "ret120": "13.28%",
       "market_cap": "175.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.423；地位：Alliant，电力",
       "memo": "Alliant，电力"
@@ -3832,7 +3832,7 @@
       "ret120": "13.33%",
       "market_cap": "258.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.415；地位：CenterPoint，电力/燃气",
       "memo": "CenterPoint，电力/燃气"
@@ -3881,7 +3881,7 @@
       "ret120": "18.85%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.531；地位：纳指 100 ETF；群里重点",
       "memo": "纳指 100 ETF"
@@ -3930,7 +3930,7 @@
       "ret120": "12.08%",
       "market_cap": "373.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.401；地位：Fortis，加拿大电力",
       "memo": "Fortis，加拿大电力"
@@ -3979,7 +3979,7 @@
       "ret120": "12.89%",
       "market_cap": "70.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.412；地位：IDACORP，电力",
       "memo": "IDACORP，电力"
@@ -4028,7 +4028,7 @@
       "ret120": "50.66%",
       "market_cap": "24.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2025-12-16",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.582；地位：Sapiens，保险核心系统软件",
       "memo": "Sapiens，保险核心系统软件"
@@ -4077,7 +4077,7 @@
       "ret120": "9.68%",
       "market_cap": "233",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.381；地位：Brookfield 基础设施",
       "memo": "Brookfield 基础设施"
@@ -4126,7 +4126,7 @@
       "ret120": "10.36%",
       "market_cap": "286",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.366；地位：Ameren，电力",
       "memo": "Ameren，电力"
@@ -4175,7 +4175,7 @@
       "ret120": "10.32%",
       "market_cap": "41.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.406；地位：NorthWestern，电力公用",
       "memo": "NorthWestern，电力公用"
@@ -4224,7 +4224,7 @@
       "ret120": "8.52%",
       "market_cap": "1011.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.332；地位：Southern Company，电力(核)",
       "memo": "Southern Company，电力(核)"
@@ -4273,7 +4273,7 @@
       "ret120": "5.96%",
       "market_cap": "276.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.347；地位：Eversource，电力",
       "memo": "Eversource，电力"
@@ -4322,7 +4322,7 @@
       "ret120": "2.54%",
       "market_cap": "158.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.403；地位：罗技，电脑外设",
       "memo": "罗技，电脑外设"
@@ -4371,7 +4371,7 @@
       "ret120": "7.16%",
       "market_cap": "464",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.327；地位：Exelon，电力",
       "memo": "Exelon，电力"
@@ -4420,7 +4420,7 @@
       "ret120": "7.27%",
       "market_cap": "100.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.355；地位：AES，电力",
       "memo": "AES，电力"
@@ -4469,7 +4469,7 @@
       "ret120": "7.50%",
       "market_cap": "39.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2025-12-12",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.364；地位：ALLETE，电力公用",
       "memo": "ALLETE，电力公用"
@@ -4518,7 +4518,7 @@
       "ret120": "71.59%",
       "market_cap": "64.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.744；地位：Moog，航空航天运动控制",
       "memo": "Moog，航空航天运动控制"
@@ -4567,7 +4567,7 @@
       "ret120": "-23.42%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.185；地位：DraftKings，在线体育博彩；群里重点",
       "memo": "DraftKings，在线体育博彩"
@@ -4616,7 +4616,7 @@
       "ret120": "82.67%",
       "market_cap": "17.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.767；地位：Astronics，航空电子/照明",
       "memo": "Astronics，航空电子/照明"
@@ -4665,7 +4665,7 @@
       "ret120": "57.45%",
       "market_cap": "1187.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.676；地位：高端模拟龙头；环节：模拟/电源",
       "memo": "亚德诺 ADI，高性能模拟/电源/信号链"
@@ -4714,7 +4714,7 @@
       "ret120": "21.83%",
       "market_cap": "23.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.509；地位：Diebold Nixdorf，ATM/银行科技",
       "memo": "Diebold Nixdorf，ATM/银行科技"
@@ -4763,7 +4763,7 @@
       "ret120": "-1.78%",
       "market_cap": "8.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.497；地位：Red Violet，数据分析",
       "memo": "Red Violet，数据分析"
@@ -4812,7 +4812,7 @@
       "ret120": "43.06%",
       "market_cap": "54.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.699；地位：比特币矿龙头",
       "memo": "MARA，比特币矿企"
@@ -4861,7 +4861,7 @@
       "ret120": "58.05%",
       "market_cap": "15.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.722；地位：Kaiser，铝加工",
       "memo": "Kaiser，铝加工"
@@ -4910,7 +4910,7 @@
       "ret120": "-3.07%",
       "market_cap": "50.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.293；地位：Pampa，阿根廷电力",
       "memo": "Pampa，阿根廷电力"
@@ -4959,7 +4959,7 @@
       "ret120": "67.49%",
       "market_cap": "14.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.716；地位：Ducommun，航空结构/电子",
       "memo": "Ducommun，航空结构/电子"
@@ -5008,7 +5008,7 @@
       "ret120": "-5.96%",
       "market_cap": "34.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.295；地位：Hayward，泳池设备",
       "memo": "Hayward，泳池设备"
@@ -5057,7 +5057,7 @@
       "ret120": "3.68%",
       "market_cap": "30.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.446；地位：欢聚集团，直播社交",
       "memo": "欢聚集团，直播社交"
@@ -5106,7 +5106,7 @@
       "ret120": "7.48%",
       "market_cap": "0.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.452；地位：Eltek，印刷电路板(以色列)",
       "memo": "Eltek，印刷电路板(以色列)"
@@ -5155,7 +5155,7 @@
       "ret120": "43.36%",
       "market_cap": "230.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.642；地位：Steel Dynamics，钢铁",
       "memo": "Steel Dynamics，钢铁"
@@ -5204,7 +5204,7 @@
       "ret120": "-14.58%",
       "market_cap": "110.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.256；地位：Acuity，照明/楼宇",
       "memo": "Acuity，照明/楼宇"
@@ -5253,7 +5253,7 @@
       "ret120": "56.78%",
       "market_cap": "33.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.67；地位：AAR，航空 MRO/零部件",
       "memo": "AAR，航空 MRO/零部件"
@@ -5302,7 +5302,7 @@
       "ret120": "-12.10%",
       "market_cap": "145.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.386；地位：Wayfair，家居电商",
       "memo": "Wayfair，家居电商"
@@ -5351,7 +5351,7 @@
       "ret120": "-4.90%",
       "market_cap": "444.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.358；地位：Take-Two，游戏(GTA)",
       "memo": "Take-Two，游戏(GTA)"
@@ -5400,7 +5400,7 @@
       "ret120": "34.00%",
       "market_cap": "1120.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.585；地位：铜矿龙头",
       "memo": "南方铜业，铜矿"
@@ -5449,7 +5449,7 @@
       "ret120": "38.70%",
       "market_cap": "213.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.614；地位：Teck，铜/锌",
       "memo": "Teck，铜/锌"
@@ -5498,7 +5498,7 @@
       "ret120": "-5.50%",
       "market_cap": "724.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.287；地位：连接器龙头；环节：连接器",
       "memo": "泰科电子 TE，连接器与传感龙头"
@@ -5547,7 +5547,7 @@
       "ret120": "41.02%",
       "market_cap": "298.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.599；地位：安赛乐米塔尔，钢铁",
       "memo": "安赛乐米塔尔，钢铁"
@@ -5596,7 +5596,7 @@
       "ret120": "37.26%",
       "market_cap": "164.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.602；地位：Woodward，航空航天/工业控制系统",
       "memo": "Woodward，航空航天/工业控制系统"
@@ -5645,7 +5645,7 @@
       "ret120": "31.00%",
       "market_cap": "824.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.554；地位：Howmet，航空结构件/紧固件",
       "memo": "Howmet，航空结构件/紧固件"
@@ -5694,7 +5694,7 @@
       "ret120": "13.20%",
       "market_cap": "3259.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.52；地位：GE Aerospace，航空发动机",
       "memo": "GE Aerospace，航空发动机"
@@ -5743,7 +5743,7 @@
       "ret120": "-11.02%",
       "market_cap": "23.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.222；地位：Central Puerto，阿根廷电力",
       "memo": "Central Puerto，阿根廷电力"
@@ -5792,7 +5792,7 @@
       "ret120": "27.19%",
       "market_cap": "52.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.588；地位：Copa，巴拿马航空",
       "memo": "Copa，巴拿马航空"
@@ -5841,7 +5841,7 @@
       "ret120": "36.02%",
       "market_cap": "213",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.557；地位：Curtiss-Wright，国防/核/工业部件",
       "memo": "Curtiss-Wright，国防/核/工业部件"
@@ -5890,7 +5890,7 @@
       "ret120": "-0.08%",
       "market_cap": "29.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.338；地位：Privia Health，医生平台",
       "memo": "Privia Health，医生平台"
@@ -5939,7 +5939,7 @@
       "ret120": "21.73%",
       "market_cap": "40.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.571；地位：VSE，航空售后/分销",
       "memo": "VSE，航空售后/分销"
@@ -5988,7 +5988,7 @@
       "ret120": "28.29%",
       "market_cap": "54.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.562；地位：Hexcel，航空复合材料",
       "memo": "Hexcel，航空复合材料"
@@ -6037,7 +6037,7 @@
       "ret120": "-1.10%",
       "market_cap": "503.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.261；地位：艺电 EA，游戏发行",
       "memo": "艺电 EA，游戏发行"
@@ -6086,7 +6086,7 @@
       "ret120": "24.89%",
       "market_cap": "74",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.543；地位：Ternium，钢铁",
       "memo": "Ternium，钢铁"
@@ -6135,7 +6135,7 @@
       "ret120": "-23.60%",
       "market_cap": "297.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.23；地位：MongoDB，文档型数据库(NoSQL)",
       "memo": "MongoDB，文档型数据库(NoSQL)"
@@ -6184,7 +6184,7 @@
       "ret120": "-20.24%",
       "market_cap": "53.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.241；地位：Qualys，云安全/合规",
       "memo": "Qualys，云安全/合规"
@@ -6233,7 +6233,7 @@
       "ret120": "-28.09%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.165；地位：小仓搏；群里重点",
       "memo": "小仓搏"
@@ -6282,7 +6282,7 @@
       "ret120": "8.46%",
       "market_cap": "33.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.48；地位：Ero Copper，铜",
       "memo": "Ero Copper，铜"
@@ -6331,7 +6331,7 @@
       "ret120": "-12.85%",
       "market_cap": "93.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.457；地位：超导量子龙头",
       "memo": "Rigetti，超导量子计算"
@@ -6380,7 +6380,7 @@
       "ret120": "-0.25%",
       "market_cap": "393.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA10，属于强势浅回调/加仓观察区；策略动作：✅踩EMA10·浅回踩观察；动态RS=0.418；地位：航空售后龙头",
       "memo": "HEICO，航空零部件/MRO"
@@ -6429,7 +6429,7 @@
       "ret120": "16.24%",
       "market_cap": "179.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.426；地位：BWX Technologies，核部件/海军核",
       "memo": "BWX Technologies，核部件/海军核动力"
@@ -6478,7 +6478,7 @@
       "ret120": "1.12%",
       "market_cap": "737",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.395；地位：👑航空零部件龙头",
       "memo": "TransDigm，航空零部件"
@@ -6527,7 +6527,7 @@
       "ret120": "-20.30%",
       "market_cap": "8.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：EMA5/10/20/55 多头排列，趋势保持；策略动作：✅多头排列·持有；动态RS=0.21；地位：MediaAlpha，保险导流广告",
       "memo": "MediaAlpha，保险导流广告"
@@ -6576,7 +6576,7 @@
       "ret120": "-27.18%",
       "market_cap": "98.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.145；地位：Lyft，网约车",
       "memo": "Lyft，网约车"
@@ -6625,7 +6625,7 @@
       "ret120": "-56.55%",
       "market_cap": "1.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.065；地位：FTC Solar，光伏支架",
       "memo": "FTC Solar，光伏支架"
@@ -6674,7 +6674,7 @@
       "ret120": "2.87%",
       "market_cap": "68.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.369；地位：Commercial Metals，钢铁",
       "memo": "Commercial Metals，钢铁"
@@ -6723,7 +6723,7 @@
       "ret120": "2.22%",
       "market_cap": "943.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.307；地位：通用动力，国防/潜艇/公务机",
       "memo": "通用动力，国防/潜艇/公务机"
@@ -6772,7 +6772,7 @@
       "ret120": "0.33%",
       "market_cap": "2382.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.276；地位：国防/航发龙头",
       "memo": "雷神 RTX，国防/导弹/航发"
@@ -6821,7 +6821,7 @@
       "ret120": "2.73%",
       "market_cap": "47.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.29；地位：Grupo Simec，墨西哥钢铁",
       "memo": "Grupo Simec，墨西哥钢铁"
@@ -6870,7 +6870,7 @@
       "ret120": "-16.13%",
       "market_cap": "287.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.19；地位：瑞安航空(欧洲廉航)",
       "memo": "瑞安航空(欧洲廉航)"
@@ -6919,7 +6919,7 @@
       "ret120": "-9.76%",
       "market_cap": "58.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.205；地位：Eldorado，黄金",
       "memo": "Eldorado，黄金"
@@ -6968,7 +6968,7 @@
       "ret120": "-6.02%",
       "market_cap": "624.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：贴近EMA55，属于深回踩/中期买点，守住才买；策略动作：✅踩EMA55·中期买点观察；动态RS=0.27",
       "memo": ""
@@ -7017,7 +7017,7 @@
       "ret120": "95.80%",
       "market_cap": "309.8",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.812；地位：慧与 HPE，AI 服务器 + 网络(并 Jun；群里重点",
       "memo": "慧与 HPE，AI 服务器 + 网络(并 Juniper)"
@@ -7066,7 +7066,7 @@
       "ret120": "109.44%",
       "market_cap": "62.2",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.827；地位：Semtech，CopperEdge 铜连接 +；群里重点；环节：CopperEdge铜连接",
       "memo": "Semtech，CopperEdge 铜连接 + 物联网"
@@ -7115,7 +7115,7 @@
       "ret120": "49.42%",
       "market_cap": "110",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.682；地位：Rambus，内存接口芯片(HBM/DDR5 受；群里重点",
       "memo": "Rambus，内存接口芯片(HBM/DDR5 受益)"
@@ -7164,7 +7164,7 @@
       "ret120": "61.55%",
       "market_cap": "669.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.75；地位：Datadog，云可观测性监控 SaaS；群里重点",
       "memo": "Datadog，云可观测性监控 SaaS"
@@ -7213,7 +7213,7 @@
       "ret120": "56.79%",
       "market_cap": "92.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.733；地位：Sanmina，EMS/通信与服务器代工；群里重点",
       "memo": "Sanmina，EMS/通信与服务器代工"
@@ -7262,7 +7262,7 @@
       "ret120": "54.87%",
       "market_cap": "2914.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.693；地位：思科，企业网络/交换路由+AI 数据中心网络",
       "memo": "思科，企业网络/交换路由+AI 数据中心网络"
@@ -7311,7 +7311,7 @@
       "ret120": "4.67%",
       "market_cap": "914.2",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.565；地位：数据云龙头；群里重点",
       "memo": "Snowflake，云数据仓库/数据云"
@@ -7360,7 +7360,7 @@
       "ret120": "",
       "market_cap": "39.3",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. COMM",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.987；地位：CommScope，网络连接与基础设施",
       "memo": "CommScope，网络连接与基础设施"
@@ -7409,7 +7409,7 @@
       "ret120": "13.51%",
       "market_cap": "179.7",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.611；地位：👑离子阱量子龙头；群里重点",
       "memo": "IonQ，离子阱量子计算"
@@ -7458,7 +7458,7 @@
       "ret120": "58.68%",
       "market_cap": "228.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.673；地位：Jabil，EMS 电子制造服务",
       "memo": "Jabil，EMS 电子制造服务"
@@ -7507,7 +7507,7 @@
       "ret120": "",
       "market_cap": "42",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. CWEN.A",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.993；地位：Clearway，可再生电力",
       "memo": "Clearway，可再生电力"
@@ -7556,7 +7556,7 @@
       "ret120": "",
       "market_cap": "33.5",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. ELP",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.963；地位：Copel，巴西电力",
       "memo": "Copel，巴西电力"
@@ -7605,7 +7605,7 @@
       "ret120": "21.91%",
       "market_cap": "858.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.568；地位：EDA龙头(并列)",
       "memo": "Cadence，EDA 芯片设计软件"
@@ -7654,7 +7654,7 @@
       "ret120": "",
       "market_cap": "71.4",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. AL",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.993；地位：Air Lease，飞机租赁",
       "memo": "Air Lease，飞机租赁"
@@ -7703,7 +7703,7 @@
       "ret120": "42.29%",
       "market_cap": "20.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.608；地位：NetScout，网络性能监控",
       "memo": "NetScout，网络性能监控"
@@ -7752,7 +7752,7 @@
       "ret120": "",
       "market_cap": "252.1",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. CYBR",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.95；地位：CyberArk，特权身份安全",
       "memo": "CyberArk，特权身份安全"
@@ -7801,7 +7801,7 @@
       "ret120": "",
       "market_cap": "38.7",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. MGIC",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.988；地位：Magic Software，IT 集成软件",
       "memo": "Magic Software，IT 集成软件"
@@ -7850,7 +7850,7 @@
       "ret120": "",
       "market_cap": "22.4",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. CSGS",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.991；地位：CSG Systems，计费/客户管理软件",
       "memo": "CSG Systems，计费/客户管理软件"
@@ -7899,7 +7899,7 @@
       "ret120": "",
       "market_cap": "23.3",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD K线不足：6根",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.979；地位：Premier，医疗采购/数据",
       "memo": "Premier，医疗采购/数据"
@@ -7948,7 +7948,7 @@
       "ret120": "",
       "market_cap": "13.1",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. VMEO",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.99；地位：Vimeo，视频托管平台",
       "memo": "Vimeo，视频托管平台"
@@ -7997,7 +7997,7 @@
       "ret120": "",
       "market_cap": "1.4",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. CCLDO",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.99；地位：CareCloud，医疗 IT(优先股)",
       "memo": "CareCloud，医疗 IT(优先股)"
@@ -8046,7 +8046,7 @@
       "ret120": "8.80%",
       "market_cap": "12",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.54；地位：Taboola，内容推荐广告",
       "memo": "Taboola，内容推荐广告"
@@ -8095,7 +8095,7 @@
       "ret120": "2.35%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.44；地位：欧阳卖cc(1165)；群里重点",
       "memo": "欧阳卖cc(1165)"
@@ -8144,7 +8144,7 @@
       "ret120": "48.34%",
       "market_cap": "340.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.668；地位：美国钢铁龙头",
       "memo": "Nucor，钢铁"
@@ -8193,7 +8193,7 @@
       "ret120": "47.20%",
       "market_cap": "1092.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.616；地位：全球矿业龙头",
       "memo": "必和必拓，多金属矿业"
@@ -8242,7 +8242,7 @@
       "ret120": "39.01%",
       "market_cap": "94.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破/低于EMA10先等确认，站回再看买点；策略动作：🟡低于EMA10·等站回确认；动态RS=0.631；地位：Hudbay，铜矿",
       "memo": "Hudbay，铜矿"
@@ -8291,7 +8291,7 @@
       "ret120": "",
       "market_cap": "59.9",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. NGD",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.978；地位：New Gold，金/铜",
       "memo": "New Gold，金/铜"
@@ -8340,7 +8340,7 @@
       "ret120": "",
       "market_cap": "32.1",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. ARMN",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.99；地位：Aris Mining，黄金",
       "memo": "Aris Mining，黄金"
@@ -8389,7 +8389,7 @@
       "ret120": "",
       "market_cap": "0.7",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. MESA",
       "last_kline_date": "",
       "reason": "策略动作：RS强势，等待均线/量价核验；动态RS=0.97；地位：Mesa Air 支线航空",
       "memo": "Mesa Air 支线航空"
@@ -8438,7 +8438,7 @@
       "ret120": "99.67%",
       "market_cap": "662.9",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：趋势未破但买点不够贴近，等待更清晰的回踩/突破确认；策略动作：技术观察·等更清晰买点；动态RS=0.756；地位：👑数据中心电源/液冷龙头；群里重点",
       "memo": "Vertiv，数据中心电源 + 液冷热管理龙头"
@@ -8487,7 +8487,7 @@
       "ret120": "118.14%",
       "market_cap": "763.1",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：趋势未破但买点不够贴近，等待更清晰的回踩/突破确认；策略动作：技术观察·等更清晰买点；动态RS=0.793；地位：光纤/玻璃基板龙头；群里重点",
       "memo": "康宁 Corning，光纤/玻璃基板/特种材料"
@@ -8536,7 +8536,7 @@
       "ret120": "15.43%",
       "market_cap": "240.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：趋势未破但买点不够贴近，等待更清晰的回踩/突破确认；策略动作：技术观察·等更清晰买点；动态RS=0.474；地位：Hubbell，电气设备/连接",
       "memo": "Hubbell，电气设备/连接"
@@ -8585,7 +8585,7 @@
       "ret120": "16.42%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：趋势未破但买点不够贴近，等待更清晰的回踩/突破确认；策略动作：技术观察·等更清晰买点；动态RS=0.503；地位：洛阳钼业，A股 铜钴/钼；群里重点",
       "memo": "洛阳钼业，A股 铜钴/钼"
@@ -8634,7 +8634,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "★",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD K线不足：61根",
       "last_kline_date": "",
       "reason": "地位：'aaoi为什么不上2倍';光模块弹性；群里重点；未完成实时均线核验，先作为候选池管理",
       "memo": "'aaoi为什么不上2倍';光模块弹性"
@@ -8683,7 +8683,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "★",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. LYTE",
       "last_kline_date": "",
       "reason": "地位：Roundhill新申请;同团队此前发DRAM；群里重点；未完成实时均线核验，先作为候选池管理",
       "memo": "Roundhill新申请;同团队此前发DRAM ETF"
@@ -8732,7 +8732,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "★",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD K线不足：89根",
       "last_kline_date": "",
       "reason": "地位：'标准的发货2倍';跟MRVL出货；群里重点；未完成实时均线核验，先作为候选池管理",
       "memo": "'标准的发货2倍';跟MRVL出货"
@@ -8781,7 +8781,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "★",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD K线不足：54根",
       "last_kline_date": "",
       "reason": "地位：DRAM篮子杠杆,唐僧铲一度加仓至30%；群里重点；未完成实时均线核验，先作为候选池管理",
       "memo": "DRAM篮子杠杆,唐僧铲一度加仓至30%"
@@ -8830,7 +8830,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "★",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD K线不足：100根",
       "last_kline_date": "",
       "reason": "地位：闪迪2倍做多；群里重点；未完成实时均线核验，先作为候选池管理",
       "memo": "闪迪2倍做多"
@@ -8879,7 +8879,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "★",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD K线不足：39根",
       "last_kline_date": "",
       "reason": "地位：跟千里冲2倍axti；群里重点；未完成实时均线核验，先作为候选池管理",
       "memo": "跟千里冲2倍axti"
@@ -8928,7 +8928,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "★",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. LOTES",
       "last_kline_date": "",
       "reason": "地位：连接器(对标A股)；群里重点；未完成实时均线核验，先作为候选池管理",
       "memo": "连接器(对标A股)"
@@ -9810,7 +9810,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "★",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD K线不足：164根",
       "last_kline_date": "",
       "reason": "地位：南方东英 SK 海力士杠杆产品(港股)；群里重点；未完成实时均线核验，先作为候选池管理",
       "memo": "南方东英 SK 海力士杠杆产品(港股)"
@@ -9859,7 +9859,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "★",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD K线不足：11根",
       "last_kline_date": "",
       "reason": "地位：Quantinuum，霍尼韦尔系量子(6/4 上；群里重点；未完成实时均线核验，先作为候选池管理",
       "memo": "Quantinuum，霍尼韦尔系量子(6/4 上市)"
@@ -9908,7 +9908,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "★",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. SPX/SPXW",
       "last_kline_date": "",
       "reason": "地位：标普 500 指数期权；群里重点；未完成实时均线核验，先作为候选池管理",
       "memo": "标普 500 指数期权"
@@ -11525,7 +11525,7 @@
       "ret120": "259.53%",
       "market_cap": "770.1",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.955；地位：AI网络/定制芯片龙头；群里重点；环节：光DSP/定制芯片",
       "memo": "迈威尔，定制 ASIC + 光/电互连(AI 网络)"
@@ -11574,7 +11574,7 @@
       "ret120": "293.96%",
       "market_cap": "1578.2",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.963；地位：👑CPU IP龙头；群里重点；环节：IP架构",
       "memo": "Arm，CPU/AI 指令集 IP 授权"
@@ -11623,7 +11623,7 @@
       "ret120": "270.55%",
       "market_cap": "1807.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.952；地位：英特尔，CPU + 晶圆代工 + 先进封装；群里重点；环节：CPU/代工/封装",
       "memo": "英特尔，CPU + 晶圆代工 + 先进封装"
@@ -11672,7 +11672,7 @@
       "ret120": "406.04%",
       "market_cap": "13",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.983；地位：MaxLinear，宽带/光通信 PHY 与连接；群里重点；环节：PHY/连接",
       "memo": "MaxLinear，宽带/光通信 PHY 与连接芯片"
@@ -11721,7 +11721,7 @@
       "ret120": "145.38%",
       "market_cap": "266.5",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.918；地位：👑PCIe retimer龙头；群里重点；环节：PCIe retimer/互连",
       "memo": "Astera Labs，PCIe/CXL retimer 与互连芯片"
@@ -11770,7 +11770,7 @@
       "ret120": "295.89%",
       "market_cap": "2748.9",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.96；地位：👑美股存储龙头；群里重点；环节：DRAM/HBM",
       "memo": "美光，DRAM/NAND/HBM 存储原厂(HBM 受益 AI)"
@@ -11819,7 +11819,7 @@
       "ret120": "149.89%",
       "market_cap": "4214.8",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.901；地位：GPU/CPU第二；群里重点；环节：GPU/CPU",
       "memo": "超威 AMD，GPU(MI 系列)+CPU"
@@ -11868,7 +11868,7 @@
       "ret120": "773.62%",
       "market_cap": "414.9",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.994；地位：闪迪，从 WDC 分拆的 NAND/SSD 业务；群里重点；环节：NAND",
       "memo": "闪迪，从 WDC 分拆的 NAND/SSD 业务，与铠侠合资"
@@ -11917,7 +11917,7 @@
       "ret120": "315.90%",
       "market_cap": "567.9",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.957；地位：西部数据，HDD + 企业级存储(已分拆 NAN；群里重点；环节：HDD/NAND",
       "memo": "西部数据，HDD + 企业级存储(已分拆 NAND 为闪迪)"
@@ -11966,7 +11966,7 @@
       "ret120": "80.99%",
       "market_cap": "277.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.869；地位：👑AEC铜缆龙头；群里重点；环节：AEC铜连接/retimer",
       "memo": "Credo，AEC 有源铜缆/SerDes/retimer"
@@ -12015,7 +12015,7 @@
       "ret120": "275.82%",
       "market_cap": "604.9",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.949；地位：HDD龙头；群里重点；环节：HDD/近线",
       "memo": "希捷，机械硬盘(HDD)龙头，AI 数据冷存储/近线受益"
@@ -12064,7 +12064,7 @@
       "ret120": "294.76%",
       "market_cap": "16.3",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.926；地位：旭创美国，数据中心光模块/光器件；群里重点；环节：光模块",
       "memo": "旭创美国，数据中心光模块/光器件"
@@ -12113,7 +12113,7 @@
       "ret120": "335.30%",
       "market_cap": "19.2",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.972；地位：Vishay，被动元件/分立器件；群里重点；环节：被动/分立",
       "memo": "Vishay，被动元件/分立器件"
@@ -12162,7 +12162,7 @@
       "ret120": "249.19%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.94；地位：收购索尔思切入光模块;100G EML国内唯一过；群里重点",
       "memo": "收购索尔思切入光模块;100G EML国内唯一过北美验证"
@@ -12211,7 +12211,7 @@
       "ret120": "186.80%",
       "market_cap": "7",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.861；地位：Lightwave Logic，电光聚合物调制材；群里重点；环节：电光聚合物",
       "memo": "Lightwave Logic，电光聚合物调制材料(早期)"
@@ -12260,7 +12260,7 @@
       "ret120": "963.80%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=1；地位：美光2倍(同前)；群里重点",
       "memo": "美光2倍(同前)"
@@ -12309,7 +12309,7 @@
       "ret120": "134.13%",
       "market_cap": "393.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.818；地位：高塔 Tower，特色模拟/射频代工；群里重点",
       "memo": "高塔 Tower，特色模拟/射频代工"
@@ -12358,7 +12358,7 @@
       "ret120": "114.69%",
       "market_cap": "180",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.759；地位：光模块龙头；群里重点；环节：光模块",
       "memo": "Lumentum，光模块/激光器/CPO 光引擎"
@@ -12407,7 +12407,7 @@
       "ret120": "422.43%",
       "market_cap": "7",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.974；地位：Aehr，老化测试(SiC/HBM 受益)；群里重点；环节：老化测试",
       "memo": "Aehr，老化测试(SiC/HBM 受益)"
@@ -12456,7 +12456,7 @@
       "ret120": "219.11%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.915；地位：'全龙头'组合(存储)；群里重点；环节：存储/MCU",
       "memo": "'全龙头'组合(存储)"
@@ -12505,7 +12505,7 @@
       "ret120": "137.23%",
       "market_cap": "1838.1",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.852；地位：👑前道设备龙头；群里重点；环节：前道设备",
       "memo": "应用材料，前道半导体设备龙头"
@@ -12554,7 +12554,7 @@
       "ret120": "257.98%",
       "market_cap": "299.7",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.938；地位：21EMA支撑;欧阳cc roll对冲；群里重点",
       "memo": "21EMA支撑;欧阳cc roll对冲"
@@ -12603,7 +12603,7 @@
       "ret120": "463.42%",
       "market_cap": "5.1",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.969；地位：AXT，砷化镓/磷化铟化合物衬底；群里重点；环节：化合物衬底",
       "memo": "AXT，砷化镓/磷化铟化合物衬底"
@@ -12652,7 +12652,7 @@
       "ret120": "221.36%",
       "market_cap": "943",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.932；地位：👑AI服务器OEM龙头；群里重点",
       "memo": "戴尔，AI 服务器 OEM 出货龙头"
@@ -12701,7 +12701,7 @@
       "ret120": "119.81%",
       "market_cap": "2027.5",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.81；地位：刻蚀龙头；群里重点；环节：刻蚀",
       "memo": "泛林 Lam，刻蚀/沉积设备"
@@ -12750,7 +12750,7 @@
       "ret120": "73.08%",
       "market_cap": "5.3",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破八周线为警戒信号，优先减仓/风控；策略动作：🔴破八周线·警戒；动态RS=0.784；地位：POET Technologies，硅光集成光引；群里重点；环节：硅光集成",
       "memo": "POET Technologies，硅光集成光引擎"
@@ -12799,7 +12799,7 @@
       "ret120": "317.29%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.966；地位：芯基微装，A股 先进封装光刻设备；群里重点；环节：光刻/涂胶设备",
       "memo": "芯基微装，A股 先进封装光刻设备"
@@ -12848,7 +12848,7 @@
       "ret120": "103.78%",
       "market_cap": "1575.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.804；地位：👑量检测龙头；群里重点；环节：量检测",
       "memo": "科磊 KLA，量测/检测设备龙头"
@@ -12897,7 +12897,7 @@
       "ret120": "190.06%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.909；地位：兴福电子，A股 电子特气/湿电子化学品；群里重点；环节：电子特气",
       "memo": "兴福电子，A股 电子特气/湿电子化学品"
@@ -12946,7 +12946,7 @@
       "ret120": "146.47%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.884；地位：鼎龙股份，A股 CMP 抛光垫/半导体材料；群里重点；环节：CMP抛光垫",
       "memo": "鼎龙股份，A股 CMP 抛光垫/半导体材料"
@@ -12995,7 +12995,7 @@
       "ret120": "122.60%",
       "market_cap": "85.2",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.835；地位：Amkor，封测代工；群里重点",
       "memo": "Amkor，封测代工"
@@ -13044,7 +13044,7 @@
       "ret120": "157.11%",
       "market_cap": "40",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.844；地位：FormFactor，探针卡；群里重点；环节：探针卡",
       "memo": "FormFactor，探针卡"
@@ -13093,7 +13093,7 @@
       "ret120": "174.12%",
       "market_cap": "3.7",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.935；地位：下一个FLNC;6.6亿市值/3.8亿现金;P/；群里重点",
       "memo": "下一个FLNC;6.6亿市值/3.8亿现金;P/S 2.4x"
@@ -13142,7 +13142,7 @@
       "ret120": "246.56%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.946；地位：四方达，A股 超硬材料/金刚石；群里重点；环节：金刚石散热",
       "memo": "四方达，A股 超硬材料/金刚石"
@@ -13191,7 +13191,7 @@
       "ret120": "78.22%",
       "market_cap": "295.5",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.622；地位：光传输设备龙头；群里重点；环节：光网络设备",
       "memo": "Ciena，光传输网络设备"
@@ -13240,7 +13240,7 @@
       "ret120": "198.17%",
       "market_cap": "72.8",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.906；地位：TTM Technologies，美股 PCB(；群里重点；环节：PCB",
       "memo": "TTM Technologies，美股 PCB(含高频/军工)"
@@ -13289,7 +13289,7 @@
       "ret120": "214.59%",
       "market_cap": "237",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.929；地位：Nebius，AI 云算力租赁(Neocloud；群里重点",
       "memo": "Nebius，AI 云算力租赁(Neocloud)"
@@ -13338,7 +13338,7 @@
       "ret120": "723.77%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.997；地位：建滔积层板，覆铜板(CCL)；群里重点；环节：覆铜板",
       "memo": "建滔积层板，覆铜板(CCL)"
@@ -13387,7 +13387,7 @@
       "ret120": "174.48%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.895；地位：Sterling Infrastructure，；群里重点",
       "memo": "Sterling Infrastructure，数据中心地基/基建"
@@ -13436,7 +13436,7 @@
       "ret120": "404.18%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.98；地位：CCL龙头；群里重点；环节：CCL/覆铜板",
       "memo": "建滔集团，覆铜板/CCL 与 PCB 一体化龙头"
@@ -13485,7 +13485,7 @@
       "ret120": "147.53%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.878；地位：黄河旋风，A股 金刚石(散热/超硬材料)；群里重点；环节：金刚石散热",
       "memo": "黄河旋风，A股 金刚石(散热/超硬材料)"
@@ -13534,7 +13534,7 @@
       "ret120": "373.65%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.977；地位：风华高科，A股 MLCC/被动元件龙头；群里重点；环节：MLCC",
       "memo": "风华高科，A股 MLCC/被动元件龙头"
@@ -13583,7 +13583,7 @@
       "ret120": "252.39%",
       "market_cap": "44.3",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.923；地位：DigitalOcean，中小企业云；群里重点",
       "memo": "DigitalOcean，中小企业云"
@@ -13632,7 +13632,7 @@
       "ret120": "135.68%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.889；地位：拥有可用算力的新型云厂商重估；群里重点",
       "memo": "拥有可用算力的新型云厂商重估"
@@ -13681,7 +13681,7 @@
       "ret120": "160.84%",
       "market_cap": "10269.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.886；地位：封测龙头",
       "memo": "日月光 ASE，封测龙头(CoWoS/先进封装)"
@@ -13730,7 +13730,7 @@
       "ret120": "135.42%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.858；地位：TeraWulf，矿场转 AI 数据中心；群里重点",
       "memo": "TeraWulf，矿场转 AI 数据中心"
@@ -13779,7 +13779,7 @@
       "ret120": "132.88%",
       "market_cap": "315.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.849；地位：南茂 ChipMOS，存储封测",
       "memo": "南茂 ChipMOS，存储封测"
@@ -13828,7 +13828,7 @@
       "ret120": "19.10%",
       "market_cap": "160.3",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.361；地位：光模块代工龙头；群里重点；环节：光模块代工",
       "memo": "Fabrinet，光模块/光器件代工龙头"
@@ -13877,7 +13877,7 @@
       "ret120": "35.71%",
       "market_cap": "38",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.56；地位：氢能；群里重点",
       "memo": "氢能"
@@ -13926,7 +13926,7 @@
       "ret120": "200.97%",
       "market_cap": "191.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.912；地位：意法半导体，功率/模拟/MCU(SiC)；群里重点；环节：功率/模拟",
       "memo": "意法半导体，功率/模拟/MCU(SiC)"
@@ -13975,7 +13975,7 @@
       "ret120": "531.73%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.991；地位：Direxion 半导体 3 倍做多 ETF；群里重点",
       "memo": "Direxion 半导体 3 倍做多 ETF"
@@ -14024,7 +14024,7 @@
       "ret120": "680.22%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.989；地位：南方东英三星杠杆产品(港股)；群里重点",
       "memo": "南方东英三星杠杆产品(港股)"
@@ -14073,7 +14073,7 @@
       "ret120": "549.72%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.986；地位：Direxion 韩国 MSCI 3 倍做多 E；群里重点",
       "memo": "Direxion 韩国 MSCI 3 倍做多 ETF"
@@ -14122,7 +14122,7 @@
       "ret120": "213.58%",
       "market_cap": "19.9",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.92；地位：Navitas，氮化镓(GaN)+SiC 功率器；群里重点；环节：GaN",
       "memo": "Navitas，氮化镓(GaN)+SiC 功率器件"
@@ -14171,7 +14171,7 @@
       "ret120": "205.52%",
       "market_cap": "42.1",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.903；地位：Vicor，高密度电源模块(800V/48V 架；群里重点；环节：电源模块",
       "memo": "Vicor，高密度电源模块(800V/48V 架构)"
@@ -14220,7 +14220,7 @@
       "ret120": "211.50%",
       "market_cap": "5.1",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.943；地位：👑SiC衬底龙头；群里重点；环节：SiC衬底",
       "memo": "Wolfspeed，碳化硅(SiC)衬底/器件龙头"
@@ -14269,7 +14269,7 @@
       "ret120": "3.34%",
       "market_cap": "236.7",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.224；地位：👑卫星直连手机龙头；群里重点",
       "memo": "AST SpaceMobile，卫星直连普通手机"
@@ -14318,7 +14318,7 @@
       "ret120": "149.12%",
       "market_cap": "102.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.866；地位：MKS，半导体/真空仪器",
       "memo": "MKS，半导体/真空仪器"
@@ -14367,7 +14367,7 @@
       "ret120": "132.27%",
       "market_cap": "232.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.875；地位：伟创力 Flex，EMS 电子制造服务",
       "memo": "伟创力 Flex，EMS 电子制造服务"
@@ -14416,7 +14416,7 @@
       "ret120": "64.64%",
       "market_cap": "459.1",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破八周线为警戒信号，优先减仓/风控；策略动作：🔴破八周线·警戒；动态RS=0.705；地位：服务器电源龙头；群里重点；环节：电源管理IC",
       "memo": "芯源系统 MPS，电源管理芯片(服务器供电受益)"
@@ -14465,7 +14465,7 @@
       "ret120": "89.03%",
       "market_cap": "162.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.724；地位：Enlight，可再生能源",
       "memo": "Enlight，可再生能源"
@@ -14514,7 +14514,7 @@
       "ret120": "120.53%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.821；地位：Invesco 半导体 ETF；群里重点",
       "memo": "Invesco 半导体 ETF"
@@ -14563,7 +14563,7 @@
       "ret120": "69.58%",
       "market_cap": "22.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破八周线为警戒信号，优先减仓/风控；策略动作：🔴破八周线·警戒；动态RS=0.73；地位：USA Rare Earth，稀土磁材；群里重点",
       "memo": "USA Rare Earth，稀土磁材"
@@ -14612,7 +14612,7 @@
       "ret120": "19.37%",
       "market_cap": "3190.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.409；地位：爱立信，5G 电信设备",
       "memo": "爱立信，5G 电信设备"
@@ -14661,7 +14661,7 @@
       "ret120": "-6.11%",
       "market_cap": "6471",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.341；地位：数据库龙头；群里重点",
       "memo": "甲骨文，数据库 + OCI 云(AI 算力租赁)"
@@ -14710,7 +14710,7 @@
       "ret120": "137.89%",
       "market_cap": "0.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到100%及以上，属于极度乖离，优先立即风控；策略动作：🚫不追·极度乖离(立即风控)；动态RS=0.898；地位：WidePoint，政府网络安全/身份",
       "memo": "WidePoint，政府网络安全/身份"
@@ -14759,7 +14759,7 @@
       "ret120": "108.24%",
       "market_cap": "21.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.815；地位：10x Genomics，单细胞测序工具",
       "memo": "10x Genomics，单细胞测序工具"
@@ -14808,7 +14808,7 @@
       "ret120": "0.36%",
       "market_cap": "226.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.455；地位：AI整机/液冷龙头",
       "memo": "超微 Supermicro，AI 服务器/液冷整机"
@@ -14857,7 +14857,7 @@
       "ret120": "-24.77%",
       "market_cap": "164.1",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.151；地位：SMR龙头之一；群里重点",
       "memo": "Oklo，小型核反应堆(SMR)"
@@ -14906,7 +14906,7 @@
       "ret120": "-17.14%",
       "market_cap": "2944.2",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.202；地位：IBM，企业 IT/混合云/咨询/量子；群里重点",
       "memo": "IBM，企业 IT/混合云/咨询/量子"
@@ -14955,7 +14955,7 @@
       "ret120": "-13.38%",
       "market_cap": "15350.3",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.159；地位：Meta，社交广告/自研 AI 训练芯片；群里重点",
       "memo": "Meta，社交广告/自研 AI 训练芯片"
@@ -15004,7 +15004,7 @@
       "ret120": "-2.48%",
       "market_cap": "40.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.335；地位：安霸 Ambarella，视觉 AI SoC",
       "memo": "安霸 Ambarella，视觉 AI SoC"
@@ -15053,7 +15053,7 @@
       "ret120": "-21.91%",
       "market_cap": "37989.9",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.134；地位：微软，Azure 云/Copilot/OpenA；群里重点",
       "memo": "微软，Azure 云/Copilot/OpenAI 大股东"
@@ -15102,7 +15102,7 @@
       "ret120": "36.74%",
       "market_cap": "16.8",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.545；地位：Intuitive Machines，月球着陆器；群里重点",
       "memo": "Intuitive Machines，月球着陆器/月面服务"
@@ -15151,7 +15151,7 @@
       "ret120": "11.62%",
       "market_cap": "105.8",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.477；地位：👑美国稀土龙头；群里重点",
       "memo": "MP Materials，美国稀土开采+磁材龙头"
@@ -15200,7 +15200,7 @@
       "ret120": "31.54%",
       "market_cap": "27.6",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.489；地位：Century Aluminum，电解铝；群里重点",
       "memo": "Century Aluminum，电解铝"
@@ -15249,7 +15249,7 @@
       "ret120": "-72.71%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.011；地位：两倍苹果；群里重点",
       "memo": "两倍苹果"
@@ -15298,7 +15298,7 @@
       "ret120": "14.46%",
       "market_cap": "26.8",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.463；地位：52名单航空航天;土狗清过仓；群里重点",
       "memo": "52名单航空航天;土狗清过仓"
@@ -15347,7 +15347,7 @@
       "ret120": "14.09%",
       "market_cap": "403.1",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.398；地位：👑铀矿龙头；群里重点",
       "memo": "Cameco，全球铀矿龙头"
@@ -15396,7 +15396,7 @@
       "ret120": "38.93%",
       "market_cap": "38.3",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.443；地位：Planet Labs，对地观测卫星数据；群里重点",
       "memo": "Planet Labs，对地观测卫星数据"
@@ -15445,7 +15445,7 @@
       "ret120": "12.42%",
       "market_cap": "656.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.372；地位：美国电力 AEP",
       "memo": "美国电力 AEP"
@@ -15494,7 +15494,7 @@
       "ret120": "69.83%",
       "market_cap": "17.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.577；地位：Fastly，CDN/边缘计算",
       "memo": "Fastly，CDN/边缘计算"
@@ -15543,7 +15543,7 @@
       "ret120": "-33.84%",
       "market_cap": "4367.3",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.057；地位：AI分析龙头；群里重点",
       "memo": "Palantir，AI 数据分析/决策平台"
@@ -15592,7 +15592,7 @@
       "ret120": "9.36%",
       "market_cap": "1788.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.321；地位：公用事业龙头",
       "memo": "NextEra，公用事业 + 新能源龙头"
@@ -15641,7 +15641,7 @@
       "ret120": "12.10%",
       "market_cap": "91.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.378；地位：OGE Energy，电力",
       "memo": "OGE Energy，电力"
@@ -15690,7 +15690,7 @@
       "ret120": "-37.72%",
       "market_cap": "1797.2",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.06；地位：企业工作流龙头；群里重点",
       "memo": "ServiceNow，企业工作流 SaaS + AI Agent"
@@ -15739,7 +15739,7 @@
       "ret120": "8.08%",
       "market_cap": "364.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.344；地位：WEC Energy，电力",
       "memo": "WEC Energy，电力"
@@ -15788,7 +15788,7 @@
       "ret120": "14.77%",
       "market_cap": "42",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.389；地位：Clearway，可再生电力",
       "memo": "Clearway，可再生电力"
@@ -15837,7 +15837,7 @@
       "ret120": "7.75%",
       "market_cap": "200.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.352；地位：Emera，电力",
       "memo": "Emera，电力"
@@ -15886,7 +15886,7 @@
       "ret120": "7.25%",
       "market_cap": "963.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.318；地位：Duke Energy，电力",
       "memo": "Duke Energy，电力"
@@ -15935,7 +15935,7 @@
       "ret120": "43.62%",
       "market_cap": "50.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.523；地位：Clear Secure，生物识别安检通行",
       "memo": "Clear Secure，生物识别安检通行"
@@ -15984,7 +15984,7 @@
       "ret120": "5.17%",
       "market_cap": "26105.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.384；地位：亚马逊，电商 + AWS 云 + 自研芯片",
       "memo": "亚马逊，电商 + AWS 云 + 自研芯片"
@@ -16033,7 +16033,7 @@
       "ret120": "6.86%",
       "market_cap": "477.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.315；地位：Xcel Energy，电力",
       "memo": "Xcel Energy，电力"
@@ -16082,7 +16082,7 @@
       "ret120": "-30.20%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.199；地位：唐僧铲加仓至5%；群里重点",
       "memo": "唐僧铲加仓至5%"
@@ -16131,7 +16131,7 @@
       "ret120": "80.71%",
       "market_cap": "1.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：乖离EMA200达到70%-100%，进入不追红线；策略动作：🚫不追·严重乖离(只减/等回踩)；动态RS=0.824；地位：Friedman Industries，钢材",
       "memo": "Friedman Industries，钢材"
@@ -16180,7 +16180,7 @@
       "ret120": "5.21%",
       "market_cap": "584",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.298；地位：National Grid，英国电网",
       "memo": "National Grid，英国电网"
@@ -16229,7 +16229,7 @@
       "ret120": "6.27%",
       "market_cap": "228.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.312；地位：CMS Energy，电力",
       "memo": "CMS Energy，电力"
@@ -16278,7 +16278,7 @@
       "ret120": "",
       "market_cap": "7.8",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD订阅失败：Unknown stock. CTLP",
       "last_kline_date": "",
       "reason": "策略动作：高RS观察，等回踩或突破确认；动态RS=0.93；地位：Cantaloupe，自助零售支付软件",
       "memo": "Cantaloupe，自助零售支付软件"
@@ -16327,7 +16327,7 @@
       "ret120": "5.64%",
       "market_cap": "267.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.301；地位：FirstEnergy，电力",
       "memo": "FirstEnergy，电力"
@@ -16376,7 +16376,7 @@
       "ret120": "2.79%",
       "market_cap": "603.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.267；地位：Sempra，电力/燃气",
       "memo": "Sempra，电力/燃气"
@@ -16425,7 +16425,7 @@
       "ret120": "6.10%",
       "market_cap": "33.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.324；地位：Avista，电力公用",
       "memo": "Avista，电力公用"
@@ -16474,7 +16474,7 @@
       "ret120": "2.75%",
       "market_cap": "272.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.278；地位：PPL，电力",
       "memo": "PPL，电力"
@@ -16523,7 +16523,7 @@
       "ret120": "6.29%",
       "market_cap": "56.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.31；地位：Portland General，电力",
       "memo": "Portland General，电力"
@@ -16572,7 +16572,7 @@
       "ret120": "8.79%",
       "market_cap": "375.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.264；地位：Cemig，巴西电力",
       "memo": "Cemig，巴西电力"
@@ -16621,7 +16621,7 @@
       "ret120": "9.67%",
       "market_cap": "51",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.304；地位：Energy Fuels，铀 + 稀土；群里重点",
       "memo": "Energy Fuels，铀 + 稀土"
@@ -16670,7 +16670,7 @@
       "ret120": "-20.41%",
       "market_cap": "316167.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.102；地位：韩国电力 KEPCO",
       "memo": "韩国电力 KEPCO"
@@ -16719,7 +16719,7 @@
       "ret120": "-20.58%",
       "market_cap": "287134.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.131；地位：索尼，图像传感器/娱乐/消费电子",
       "memo": "索尼，图像传感器/娱乐/消费电子"
@@ -16768,7 +16768,7 @@
       "ret120": "-0.68%",
       "market_cap": "75.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.259；地位：Brookfield 可再生",
       "memo": "Brookfield 可再生"
@@ -16817,7 +16817,7 @@
       "ret120": "-1.35%",
       "market_cap": "66.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.236；地位：Algonquin，公用",
       "memo": "Algonquin，公用"
@@ -16866,7 +16866,7 @@
       "ret120": "-1.81%",
       "market_cap": "62.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.227；地位：TXNM Energy，电力公用",
       "memo": "TXNM Energy，电力公用"
@@ -16915,7 +16915,7 @@
       "ret120": "7.69%",
       "market_cap": "29.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.213；地位：Kenon，电力/航运控股",
       "memo": "Kenon，电力/航运控股"
@@ -16964,7 +16964,7 @@
       "ret120": "27.18%",
       "market_cap": "925.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.528；地位：全球矿业龙头",
       "memo": "力拓，多金属矿业"
@@ -17013,7 +17013,7 @@
       "ret120": "24.92%",
       "market_cap": "0.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.42；地位：Motorsport Games，赛车游戏",
       "memo": "Motorsport Games，赛车游戏"
@@ -17062,7 +17062,7 @@
       "ret120": "-15.36%",
       "market_cap": "323.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.139；地位：NRG Energy，电力",
       "memo": "NRG Energy，电力"
@@ -17111,7 +17111,7 @@
       "ret120": "-24.48%",
       "market_cap": "1105.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.108；地位：👑核电运营龙头",
       "memo": "Constellation，全美最大核电运营(给 AI 供电)"
@@ -17160,7 +17160,7 @@
       "ret120": "-54.29%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.006；地位：土狗加仓20%;中概反弹；群里重点",
       "memo": "土狗加仓20%;中概反弹"
@@ -17209,7 +17209,7 @@
       "ret120": "38.69%",
       "market_cap": "33.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.526",
       "memo": ""
@@ -17258,7 +17258,7 @@
       "ret120": "-1.63%",
       "market_cap": "253.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.281；地位：Zoom，视频会议",
       "memo": "Zoom，视频会议"
@@ -17307,7 +17307,7 @@
       "ret120": "-4.25%",
       "market_cap": "740.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.253；地位：👑EDA龙头",
       "memo": "Synopsys，EDA 芯片设计"
@@ -17356,7 +17356,7 @@
       "ret120": "-2.92%",
       "market_cap": "198.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.125；地位：Circle，USDC 稳定币发行商；群里重点",
       "memo": "Circle，USDC 稳定币发行商"
@@ -17405,7 +17405,7 @@
       "ret120": "35.54%",
       "market_cap": "725.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.491；地位：Elbit Systems，以色列国防电子",
       "memo": "Elbit Systems，以色列国防电子"
@@ -17454,7 +17454,7 @@
       "ret120": "12.20%",
       "market_cap": "260199.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.349；地位：POSCO，韩国钢铁",
       "memo": "POSCO，韩国钢铁"
@@ -17503,7 +17503,7 @@
       "ret120": "-2.08%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.216；地位：A股铜金龙头；群里重点",
       "memo": "紫金矿业，A股 铜金矿龙头"
@@ -17552,7 +17552,7 @@
       "ret120": "26.60%",
       "market_cap": "15.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.551；地位：Taseko，铜矿",
       "memo": "Taseko，铜矿"
@@ -17601,7 +17601,7 @@
       "ret120": "2.08%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.207；地位：持SpaceX约2%股权(频谱权交易)；群里重点",
       "memo": "持SpaceX约2%股权(频谱权交易)"
@@ -17650,7 +17650,7 @@
       "ret120": "17.26%",
       "market_cap": "2984.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.429；地位：淡水河谷，铁矿石",
       "memo": "淡水河谷，铁矿石"
@@ -17699,7 +17699,7 @@
       "ret120": "12.93%",
       "market_cap": "360.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.469；地位：Gerdau，钢铁",
       "memo": "Gerdau，钢铁"
@@ -17748,7 +17748,7 @@
       "ret120": "-6.02%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.196；地位：SPDR 黄金 ETF；群里重点",
       "memo": "SPDR 黄金 ETF"
@@ -17797,7 +17797,7 @@
       "ret120": "31.91%",
       "market_cap": "15.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.534；地位：Silvercorp，白银",
       "memo": "Silvercorp，白银"
@@ -17846,7 +17846,7 @@
       "ret120": "-18.22%",
       "market_cap": "20.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.173；地位：Sonos，无线音响",
       "memo": "Sonos，无线音响"
@@ -17895,7 +17895,7 @@
       "ret120": "-7.58%",
       "market_cap": "79.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.244；地位：Dropbox，云存储协作",
       "memo": "Dropbox，云存储协作"
@@ -17944,7 +17944,7 @@
       "ret120": "-34.94%",
       "market_cap": "161.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.077；地位：AeroVironment，军用无人机/弹药；群里重点",
       "memo": "AeroVironment，军用无人机/弹药"
@@ -17993,7 +17993,7 @@
       "ret120": "-11.72%",
       "market_cap": "1944.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.17；地位：优步，网约车/外卖",
       "memo": "优步，网约车/外卖"
@@ -18042,7 +18042,7 @@
       "ret120": "-17.67%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.182；地位：iShares 软件 ETF；群里重点",
       "memo": "iShares 软件 ETF"
@@ -18091,7 +18091,7 @@
       "ret120": "-29.10%",
       "market_cap": "645.4",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.04；地位：👑BTC储备龙头；群里重点",
       "memo": "Strategy(MicroStrategy)，比特币储备"
@@ -18140,7 +18140,7 @@
       "ret120": "-8.75%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.156；地位：iShares 白银 ETF；群里重点",
       "memo": "iShares 白银 ETF"
@@ -18189,7 +18189,7 @@
       "ret120": "-8.07%",
       "market_cap": "24.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.233；地位：ePlus，IT 解决方案/分销",
       "memo": "ePlus，IT 解决方案/分销"
@@ -18238,7 +18238,7 @@
       "ret120": "-26.99%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.142；地位：NuScale，小型模块化核反应堆；群里重点",
       "memo": "NuScale，小型模块化核反应堆"
@@ -18287,7 +18287,7 @@
       "ret120": "-12.35%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.136；地位：Sprott 实物白银信托；群里重点",
       "memo": "Sprott 实物白银信托"
@@ -18336,7 +18336,7 @@
       "ret120": "-28.76%",
       "market_cap": "34.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.048；地位：晶科能源，光伏组件",
       "memo": "晶科能源，光伏组件"
@@ -18385,7 +18385,7 @@
       "ret120": "4.02%",
       "market_cap": "6247.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.33；地位：AngloGold，黄金",
       "memo": "AngloGold，黄金"
@@ -18434,7 +18434,7 @@
       "ret120": "-35.76%",
       "market_cap": "2038.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.088；地位：电商建站龙头",
       "memo": "Shopify，电商建站"
@@ -18483,7 +18483,7 @@
       "ret120": "-17.39%",
       "market_cap": "48.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.116；地位：OSI Systems，安检/光电系统",
       "memo": "OSI Systems，安检/光电系统"
@@ -18532,7 +18532,7 @@
       "ret120": "-38.56%",
       "market_cap": "195.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.034；地位：Trimble，定位/测绘",
       "memo": "Trimble，定位/测绘"
@@ -18581,7 +18581,7 @@
       "ret120": "-35.70%",
       "market_cap": "2701.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.062；地位：ERP龙头",
       "memo": "SAP，ERP 龙头"
@@ -18630,7 +18630,7 @@
       "ret120": "",
       "market_cap": "32.1",
       "star": "",
-      "verify": "未完成实时核验：OpenD端口未连接且本地缓存缺失",
+      "verify": "未完成实时核验：OpenD K线不足：188根",
       "last_kline_date": "",
       "reason": "策略动作：高RS观察，等回踩或突破确认；动态RS=0.905",
       "memo": ""
@@ -18679,7 +18679,7 @@
       "ret120": "-25.95%",
       "market_cap": "208",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.114；地位：SS&C，金融科技软件",
       "memo": "SS&C，金融科技软件"
@@ -18728,7 +18728,7 @@
       "ret120": "-27.98%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.08；地位：iShares 比特币现货 ETF；群里重点",
       "memo": "iShares 比特币现货 ETF"
@@ -18777,7 +18777,7 @@
       "ret120": "-48.66%",
       "market_cap": "409.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.097；地位：研发协作龙头",
       "memo": "Atlassian，研发协作(Jira)"
@@ -18826,7 +18826,7 @@
       "ret120": "-14.33%",
       "market_cap": "129.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.119；地位：CACI，政府 IT/国防",
       "memo": "CACI，政府 IT/国防"
@@ -18875,7 +18875,7 @@
       "ret120": "-31.90%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.071；地位：👑合规加密交易所龙头；群里重点",
       "memo": "Coinbase，美国合规加密交易所"
@@ -18924,7 +18924,7 @@
       "ret120": "-29.87%",
       "market_cap": "1931.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.051；地位：拼多多，电商",
       "memo": "拼多多，电商"
@@ -18973,7 +18973,7 @@
       "ret120": "-31.30%",
       "market_cap": "486.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.074；地位：Veeva，生命科学 CRM/云",
       "memo": "Veeva，生命科学 CRM/云"
@@ -19022,7 +19022,7 @@
       "ret120": "9.75%",
       "market_cap": "16",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.392；地位：Silver Resources，白银",
       "memo": "Silver Resources，白银"
@@ -19071,7 +19071,7 @@
       "ret120": "11.79%",
       "market_cap": "35.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.375；地位：Centerra，黄金",
       "memo": "Centerra，黄金"
@@ -19120,7 +19120,7 @@
       "ret120": "-42.49%",
       "market_cap": "2342.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.031；地位：👑CRM龙头",
       "memo": "Salesforce，CRM 龙头"
@@ -19169,7 +19169,7 @@
       "ret120": "-29.09%",
       "market_cap": "112.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.094；地位：唯品会，特卖电商",
       "memo": "唯品会，特卖电商"
@@ -19218,7 +19218,7 @@
       "ret120": "-0.47%",
       "market_cap": "1015.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.284；地位：👑黄金龙头",
       "memo": "Newmont，全球黄金龙头"
@@ -19267,7 +19267,7 @@
       "ret120": "-34.67%",
       "market_cap": "77.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.085；地位：Formula Systems，以色列 IT 控",
       "memo": "Formula Systems，以色列 IT 控股"
@@ -19316,7 +19316,7 @@
       "ret120": "-35.01%",
       "market_cap": "642.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.037；地位：Autodesk，CAD/设计软件",
       "memo": "Autodesk，CAD/设计软件"
@@ -19365,7 +19365,7 @@
       "ret120": "-44.71%",
       "market_cap": "1410.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.02；地位：👑创意/文档龙头",
       "memo": "Adobe，创意/文档软件"
@@ -19414,7 +19414,7 @@
       "ret120": "-41.35%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.026；地位：富时中国 3 倍做多 ETF；群里重点",
       "memo": "富时中国 3 倍做多 ETF"
@@ -19463,7 +19463,7 @@
       "ret120": "-60.24%",
       "market_cap": "1838.2",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.003；地位：中小财税龙头",
       "memo": "Intuit，QuickBooks/TurboTax"
@@ -19512,7 +19512,7 @@
       "ret120": "-49.34%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.014；地位：白银 2 倍做多 ETF；群里重点",
       "memo": "白银 2 倍做多 ETF"
@@ -19561,7 +19561,7 @@
       "ret120": "-59.61%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.009；地位：金矿企 2 倍做多 ETF；群里重点",
       "memo": "金矿企 2 倍做多 ETF"
@@ -19610,7 +19610,7 @@
       "ret120": "-45.62%",
       "market_cap": "501.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.023；地位：Zscaler，云安全(SASE)",
       "memo": "Zscaler，云安全(SASE)"
@@ -19659,7 +19659,7 @@
       "ret120": "0.81%",
       "market_cap": "489",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.273；地位：Wheaton，贵金属流式权利金",
       "memo": "Wheaton，贵金属流式权利金"
@@ -19708,7 +19708,7 @@
       "ret120": "-16.14%",
       "market_cap": "11.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.099；地位：GigaCloud，跨境 B2B 电商",
       "memo": "GigaCloud，跨境 B2B 电商"
@@ -19757,7 +19757,7 @@
       "ret120": "-93.95%",
       "market_cap": "",
       "star": "★",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0；地位：Direxion 半导体 3 倍做空 ETF；群里重点",
       "memo": "Direxion 半导体 3 倍做空 ETF"
@@ -19806,7 +19806,7 @@
       "ret120": "6.43%",
       "market_cap": "1057.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.239；地位：国防龙头",
       "memo": "洛克希德·马丁，国防/战机/导弹"
@@ -19855,7 +19855,7 @@
       "ret120": "-33.36%",
       "market_cap": "46.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.054；地位：Paymentus，账单支付软件",
       "memo": "Paymentus，账单支付软件"
@@ -19904,7 +19904,7 @@
       "ret120": "-42.26%",
       "market_cap": "246.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.017；地位：Leidos，国防 IT/科技服务",
       "memo": "Leidos，国防 IT/科技服务"
@@ -19953,7 +19953,7 @@
       "ret120": "-20.78%",
       "market_cap": "4.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.091；地位：搜狐，门户/游戏",
       "memo": "搜狐，门户/游戏"
@@ -20002,7 +20002,7 @@
       "ret120": "-42.63%",
       "market_cap": "33.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.043；地位：Appian，低代码平台",
       "memo": "Appian，低代码平台"
@@ -20051,7 +20051,7 @@
       "ret120": "-9.36%",
       "market_cap": "629.8",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.219；地位：Barrick(B)，黄金",
       "memo": "Barrick(B)，黄金"
@@ -20100,7 +20100,7 @@
       "ret120": "-1.50%",
       "market_cap": "145.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.25；地位：Textron，公务机(Cessna)/Bell",
       "memo": "Textron，公务机(Cessna)/Bell 直升机/国防"
@@ -20149,7 +20149,7 @@
       "ret120": "-40.19%",
       "market_cap": "10.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.045；地位：NerdWallet，理财导流",
       "memo": "NerdWallet，理财导流"
@@ -20198,7 +20198,7 @@
       "ret120": "-13.80%",
       "market_cap": "6637.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.153；地位：Gold Fields，黄金",
       "memo": "Gold Fields，黄金"
@@ -20247,7 +20247,7 @@
       "ret120": "-2.54%",
       "market_cap": "82.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.247；地位：IAMGOLD，黄金",
       "memo": "IAMGOLD，黄金"
@@ -20296,7 +20296,7 @@
       "ret120": "-53.66%",
       "market_cap": "10.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.028；地位：Yext，企业搜索/知识",
       "memo": "Yext，企业搜索/知识"
@@ -20345,7 +20345,7 @@
       "ret120": "-0.37%",
       "market_cap": "561.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.193；地位：L3Harris，国防通信/电子",
       "memo": "L3Harris，国防通信/电子"
@@ -20394,7 +20394,7 @@
       "ret120": "-7.70%",
       "market_cap": "869.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.162；地位：Agnico Eagle，黄金",
       "memo": "Agnico Eagle，黄金"
@@ -20443,7 +20443,7 @@
       "ret120": "-8.52%",
       "market_cap": "313.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.176；地位：Kinross，黄金",
       "memo": "Kinross，黄金"
@@ -20492,7 +20492,7 @@
       "ret120": "-7.48%",
       "market_cap": "163.3",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.188；地位：Royal Gold，黄金权利金",
       "memo": "Royal Gold，黄金权利金"
@@ -20541,7 +20541,7 @@
       "ret120": "-8.43%",
       "market_cap": "161.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.179；地位：Pan American，白银",
       "memo": "Pan American，白银"
@@ -20590,7 +20590,7 @@
       "ret120": "-13.62%",
       "market_cap": "91.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.148；地位：Triple Flag，贵金属权利金",
       "memo": "Triple Flag，贵金属权利金"
@@ -20639,7 +20639,7 @@
       "ret120": "-28.38%",
       "market_cap": "451.5",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.105；地位：执法装备龙头",
       "memo": "Axon，泰瑟枪/执法云"
@@ -20688,7 +20688,7 @@
       "ret120": "-20.31%",
       "market_cap": "87.9",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.128；地位：CAE，飞行模拟/培训",
       "memo": "CAE，飞行模拟/培训"
@@ -20737,7 +20737,7 @@
       "ret120": "-19.48%",
       "market_cap": "104.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.111；地位：Hecla，白银",
       "memo": "Hecla，白银"
@@ -20786,7 +20786,7 @@
       "ret120": "-5.16%",
       "market_cap": "645.4",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.168",
       "memo": ""
@@ -20835,7 +20835,7 @@
       "ret120": "-37.39%",
       "market_cap": "22.7",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.122；地位：Vizsla，白银",
       "memo": "Vizsla，白银"
@@ -20884,7 +20884,7 @@
       "ret120": "-27.86%",
       "market_cap": "103.1",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.068；地位：Equinox，黄金",
       "memo": "Equinox，黄金"
@@ -20933,7 +20933,7 @@
       "ret120": "-32.95%",
       "market_cap": "17.6",
       "star": "",
-      "verify": "OpenD已核验(本地落盘缓存)",
+      "verify": "OpenD已核验(缓存)",
       "last_kline_date": "2026-06-18",
       "reason": "策略方法：破EMA55为中期破位，优先离场/回避；策略动作：🔴破EMA55·中期破位；动态RS=0.082；地位：Cadre，安全防护装备",
       "memo": "Cadre，安全防护装备"
