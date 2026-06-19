@@ -130,10 +130,10 @@
       tbody tr.detail-row { margin-top:-10px; border-top:0; box-shadow:none; }
       td { display:grid; grid-template-columns:78px minmax(0,1fr); gap:8px; background:rgba(255,255,255,.86); }
       td::before { content:attr(data-label); color:#64748b; font-size:11px; font-weight:850; }
-      td[data-label="标的"] { order:-2; grid-template-columns:1fr; gap:4px; padding:12px 12px 10px; background:linear-gradient(135deg,#f3fffb,#ffffff); border-left:4px solid var(--green); }
-      td[data-label="标的"]::before { content:"标的"; font-size:12px; }
-      td[data-label="标的"] .code { font-size:26px; line-height:1.05; letter-spacing:0; color:#0f172a; }
-      td[data-label="标的"] .cell-sub { font-size:13px; font-weight:750; color:#64748b; }
+      td[data-label="标的"] { order:-3; grid-template-columns:1fr; gap:6px; padding:15px 14px 13px; background:linear-gradient(135deg,#dff8f1 0%,#f7fffd 58%,#ffffff 100%); border-left:7px solid var(--green); box-shadow:inset 0 0 0 1px rgba(14,128,118,.14); }
+      td[data-label="标的"]::before { content:"股票"; font-size:12px; color:var(--green); }
+      td[data-label="标的"] .code { display:block; font-size:34px; line-height:1; letter-spacing:0; color:#07141b; font-weight:950; }
+      td[data-label="标的"] .cell-sub { display:inline-flex; width:max-content; max-width:100%; align-items:center; gap:4px; padding:3px 9px; border-radius:999px; font-size:13px; font-weight:850; color:var(--green); background:rgba(14,128,118,.12); }
       td[data-label="信号"] { order:-1; }
       .group-row td { display:block; }
       .group-row td::before { content:""; display:none; }
