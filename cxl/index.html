@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CXL 综合分析报告｜图文版</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #65707d;
+      --line: #d9dee5;
+      --paper: #fbfcfe;
+      --panel: #ffffff;
+      --teal: #0b8f7c;
+      --blue: #2f6f9f;
+      --amber: #c98018;
+      --rose: #b9555c;
+      --violet: #7464b8;
+      --green: #4b8a38;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.68;
+      letter-spacing: 0;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 42px 22px 64px;
+    }
+
+    header {
+      padding: 34px 0 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .kicker {
+      margin: 0 0 10px;
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.08;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      max-width: 780px;
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: #fff;
+    }
+
+    section {
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 28px 0 10px;
+      font-size: 20px;
+    }
+
+    p { margin: 10px 0; }
+
+    .lead {
+      font-size: 18px;
+      color: #27313d;
+      max-width: 900px;
+    }
+
+    .note {
+      padding: 14px 16px;
+      border-left: 4px solid var(--amber);
+      background: #fff8ec;
+      border-radius: 6px;
+      color: #4a3516;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin: 18px 0;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .panel h3 { margin-top: 0; }
+
+    .metric {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .metric div {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 24px;
+      color: var(--blue);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    figure {
+      margin: 24px 0;
+      padding: 0;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    figcaption {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      display: table;
+    }
+
+    th, td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    th {
+      background: #eef4f7;
+      color: #24313f;
+      font-weight: 700;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .rating-buy { color: var(--teal); font-weight: 700; }
+    .rating-watch { color: var(--amber); font-weight: 700; }
+    .rating-risk { color: var(--rose); font-weight: 700; }
+
+    .footer {
+      padding-top: 24px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .page { padding: 24px 14px 44px; }
+      .grid, .metric { grid-template-columns: 1fr; }
+      header { padding: 18px 0 20px; }
+      section { padding: 26px 0; }
+      .subtitle, .lead { font-size: 16px; }
+      .meta { gap: 8px; }
+      .tag { width: 100%; }
+      .metric div { padding: 14px; }
+      figure {
+        margin-left: -2px;
+        margin-right: -2px;
+        padding-bottom: 8px;
+      }
+      figure::after {
+        content: "左右滑动查看完整图";
+        display: block;
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 12px;
+        text-align: center;
+      }
+      svg {
+        width: 920px;
+        max-width: none;
+      }
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      th, td {
+        min-width: 120px;
+        white-space: normal;
+      }
+      h1 { font-size: 34px; }
+      h2 { font-size: 24px; }
+      h3 { font-size: 18px; }
+    }
+
+    @media (max-width: 420px) {
+      .page { padding-left: 12px; padding-right: 12px; }
+      h1 { font-size: 30px; }
+      .kicker { font-size: 12px; }
+      .subtitle, .lead { font-size: 15px; }
+      p, li { font-size: 15px; }
+      svg { width: 860px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="kicker">AI Infrastructure · Memory Wall · CXL</p>
+      <h1>CXL 综合分析报告</h1>
+      <p class="subtitle">CXL 是 AI 基础设施从“拼 GPU 算力”进入“拼内存效率”的关键分支。它更像 CPO 在内存侧的镜像：CPO 解决互连功耗/带宽墙，CXL 解决内存容量、闲置率和 TCO 墙。</p>
+      <div class="meta">
+        <span class="tag">生成日期：2026-06-25</span>
+        <span class="tag">口径：6-12 个月研究型目标价</span>
+        <span class="tag">格式：HTML 图文版</span>
+        <span class="tag">不构成投资建议</span>
+      </div>
+    </header>
+
+    <section>
+      <h2>一、核心结论</h2>
+      <p class="lead">CXL 的投资含义不是“替代 HBM”或“替代 NVLink”，而是让外部 DRAM、NAND 或内存池更像系统内存，从而缓解长上下文推理、KV cache、RAG 和 agentic workflow 对内存容量与成本的压力。</p>
+      <div class="metric">
+        <div><strong>3-4</strong>当前阶段：客户认证期到试点部署期</div>
+        <div><strong>2027-28</strong>第一轮规模放量观察窗口</div>
+        <div><strong>ALAB</strong>美股主题纯度锚</div>
+        <div><strong>688008</strong>A/H 最直接映射：澜起科技</div>
+      </div>
+      <p class="note">一句话定位：CXL 是“内存效率工具”，不是“主互连工具”。单机内存扩展先放量，KV cache/RAG 场景随后放量，多主机池化和 CXL over optics 更靠后。</p>
+    </section>
+
+    <section>
+      <h2>二、CXL 到底解决什么问题</h2>
+      <p>传统服务器里，CPU、GPU、SSD 各自绑定自己的内存或缓冲资源。AI 推理进入长上下文后，一边是 HBM/DRAM 紧缺，另一边是昂贵内存闲置却不能被其他主机复用。CXL 通过 PCIe 物理层和 CXL.mem / CXL.cache / CXL.io 协议，把外部内存变成可寻址、可扩展、可分层的系统资源。</p>
+      <figure>
+        <svg viewBox="0 0 1080 470" role="img" aria-label="CXL 架构示意图">
+          <rect x="0" y="0" width="1080" height="470" fill="#ffffff"/>
+          <text x="42" y="52" font-size="28" font-weight="800" fill="#17202a">CXL 架构：把外部内存接入系统地址空间</text>
+          <text x="42" y="82" font-size="15" fill="#65707d">不是把所有内存变成 HBM 速度，而是让冷/温数据更便宜、更接近计算。</text>
+
+          <rect x="54" y="140" width="170" height="90" rx="8" fill="#e8f3f1" stroke="#0b8f7c"/>
+          <text x="88" y="177" font-size="20" font-weight="700" fill="#0b5d52">CPU</text>
+          <text x="78" y="205" font-size="14" fill="#345">DDR5 本地内存</text>
+
+          <rect x="54" y="270" width="170" height="90" rx="8" fill="#eef1fa" stroke="#7464b8"/>
+          <text x="88" y="307" font-size="20" font-weight="700" fill="#4d4380">GPU</text>
+          <text x="79" y="335" font-size="14" fill="#345">HBM 热数据</text>
+
+          <rect x="390" y="178" width="260" height="140" rx="8" fill="#fff7e8" stroke="#c98018"/>
+          <text x="454" y="224" font-size="24" font-weight="800" fill="#8c5813">CXL 控制器 / Switch</text>
+          <text x="430" y="257" font-size="15" fill="#4a3516">CXL.mem · CXL.cache · CXL.io</text>
+          <text x="444" y="285" font-size="15" fill="#4a3516">Memory expansion / pooling</text>
+
+          <rect x="810" y="112" width="190" height="78" rx="8" fill="#edf6ff" stroke="#2f6f9f"/>
+          <text x="852" y="145" font-size="19" font-weight="700" fill="#2f5b80">CXL DRAM</text>
+          <text x="850" y="170" font-size="13" fill="#345">Type 3 扩展</text>
+
+          <rect x="810" y="221" width="190" height="78" rx="8" fill="#f8eef0" stroke="#b9555c"/>
+          <text x="852" y="254" font-size="19" font-weight="700" fill="#8b3f46">CXL Flash</text>
+          <text x="830" y="279" font-size="13" fill="#345">微秒级容量层</text>
+
+          <rect x="810" y="330" width="190" height="78" rx="8" fill="#eef6e9" stroke="#4b8a38"/>
+          <text x="844" y="363" font-size="19" font-weight="700" fill="#3d712e">Memory Pool</text>
+          <text x="833" y="388" font-size="13" fill="#345">多主机共享资源</text>
+
+          <path d="M224 185 C300 185, 312 230, 390 230" stroke="#0b8f7c" stroke-width="5" fill="none"/>
+          <path d="M224 315 C300 315, 312 266, 390 266" stroke="#7464b8" stroke-width="5" fill="none"/>
+          <path d="M650 228 C720 178, 740 151, 810 151" stroke="#2f6f9f" stroke-width="5" fill="none"/>
+          <path d="M650 248 C720 248, 740 260, 810 260" stroke="#b9555c" stroke-width="5" fill="none"/>
+          <path d="M650 278 C720 336, 740 369, 810 369" stroke="#4b8a38" stroke-width="5" fill="none"/>
+
+          <text x="284" y="172" font-size="14" fill="#65707d">load/store 语义</text>
+          <text x="704" y="206" font-size="14" fill="#65707d">外部容量接入</text>
+        </svg>
+        <figcaption>CXL 的核心价值：让外部内存从“设备”更像“系统资源”。</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>三、产业阶段：六段式判断框架</h2>
+      <p>产业阶段建议用六段式：技术验证期、工程样机期、客户认证期、试点部署期、规模放量期、标准化普及期。CXL 当前处在第 3-4 阶段之间：已有产品、客户测试和 preview，但还没有成为大客户标准服务器配置。</p>
+      <figure>
+        <svg viewBox="0 0 1080 360" role="img" aria-label="CXL 产业阶段时间线">
+          <rect width="1080" height="360" fill="#fff"/>
+          <text x="42" y="48" font-size="28" font-weight="800" fill="#17202a">产业阶段尺：CXL 处在第 3-4 阶段之间</text>
+          <line x1="80" y1="178" x2="1000" y2="178" stroke="#d9dee5" stroke-width="10" stroke-linecap="round"/>
+          <g font-size="14" text-anchor="middle">
+            <circle cx="120" cy="178" r="20" fill="#eef4f7" stroke="#65707d"/>
+            <text x="120" y="183" fill="#17202a" font-weight="700">1</text>
+            <text x="120" y="225" fill="#17202a">技术验证期</text>
+            <text x="120" y="248" fill="#65707d">PoC / 论文</text>
+
+            <circle cx="292" cy="178" r="20" fill="#eef4f7" stroke="#65707d"/>
+            <text x="292" y="183" fill="#17202a" font-weight="700">2</text>
+            <text x="292" y="225" fill="#17202a">工程样机期</text>
+            <text x="292" y="248" fill="#65707d">样片 / demo</text>
+
+            <circle cx="464" cy="178" r="24" fill="#fff7e8" stroke="#c98018" stroke-width="3"/>
+            <text x="464" y="184" fill="#8c5813" font-weight="800">3</text>
+            <text x="464" y="225" fill="#17202a" font-weight="700">客户认证期</text>
+            <text x="464" y="248" fill="#65707d">送样 / 适配</text>
+
+            <circle cx="636" cy="178" r="24" fill="#e8f3f1" stroke="#0b8f7c" stroke-width="3"/>
+            <text x="636" y="184" fill="#0b5d52" font-weight="800">4</text>
+            <text x="636" y="225" fill="#17202a" font-weight="700">试点部署期</text>
+            <text x="636" y="248" fill="#65707d">preview / 小批量</text>
+
+            <circle cx="808" cy="178" r="20" fill="#eef4f7" stroke="#65707d"/>
+            <text x="808" y="183" fill="#17202a" font-weight="700">5</text>
+            <text x="808" y="225" fill="#17202a">规模放量期</text>
+            <text x="808" y="248" fill="#65707d">批量采购</text>
+
+            <circle cx="980" cy="178" r="20" fill="#eef4f7" stroke="#65707d"/>
+            <text x="980" y="183" fill="#17202a" font-weight="700">6</text>
+            <text x="980" y="225" fill="#17202a">标准化普及期</text>
+            <text x="980" y="248" fill="#65707d">默认配置</text>
+          </g>
+          <path d="M460 112 L640 112 L640 140 L460 140 Z" fill="#17202a"/>
+          <text x="550" y="132" font-size="16" text-anchor="middle" fill="#fff" font-weight="700">CXL 当前区间</text>
+        </svg>
+        <figcaption>CXL 不是实验室阶段，也还不是规模放量阶段；更准确是客户认证到试点部署。</figcaption>
+      </figure>
+      <table>
+        <thead>
+          <tr><th>阶段</th><th>称呼</th><th>主要形态</th><th>投资观察点</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>技术验证期</td><td>论文、仿真、实验室 PoC</td><td>技术可行性</td></tr>
+          <tr><td>2</td><td>工程样机期</td><td>芯片样片、板卡样机、互操作测试</td><td>供应商产品节奏</td></tr>
+          <tr><td>3</td><td>客户认证期</td><td>送样、兼容性测试、软件栈适配</td><td>大客户验证与生态适配</td></tr>
+          <tr><td>4</td><td>试点部署期</td><td>云厂商 preview、小批量部署</td><td>真实负载与 TCO 数据</td></tr>
+          <tr><td>5</td><td>规模放量期</td><td>大客户批量采购、供应链扩产</td><td>收入拆分、订单弹性、产能约束</td></tr>
+          <tr><td>6</td><td>标准化普及期</td><td>成为服务器/机柜默认配置</td><td>估值从主题转为常规产业链</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>四、与 CPO 等 AI 赛道的类比</h2>
+      <p>CXL 最接近 CPO：两者都是架构型瓶颈交易。区别在于，CPO 解决数据传输中的功耗和带宽问题，CXL 解决内存容量、分层和闲置率问题。阶段上，CXL 大致相当于 CPO 在 2024-2025 年的状态，方向清晰、客户验证增多，但大规模采购仍要等平台周期。</p>
+      <figure>
+        <svg viewBox="0 0 1080 520" role="img" aria-label="AI 赛道类比矩阵">
+          <rect width="1080" height="520" fill="#fff"/>
+          <text x="42" y="50" font-size="28" font-weight="800" fill="#17202a">AI 基础设施瓶颈地图</text>
+          <text x="42" y="78" font-size="15" fill="#65707d">CXL 是内存侧的架构升级；CPO 是互连侧的架构升级。</text>
+
+          <line x1="110" y1="420" x2="970" y2="420" stroke="#17202a" stroke-width="2"/>
+          <line x1="110" y1="420" x2="110" y2="110" stroke="#17202a" stroke-width="2"/>
+          <text x="500" y="462" font-size="15" fill="#65707d">产业成熟度：早期验证 → 标准配置</text>
+          <text x="30" y="275" font-size="15" fill="#65707d" transform="rotate(-90 30 275)">AI 系统瓶颈强度</text>
+
+          <circle cx="805" cy="150" r="58" fill="#eef1fa" stroke="#7464b8" stroke-width="3"/>
+          <text x="805" y="145" font-size="20" font-weight="800" fill="#4d4380" text-anchor="middle">HBM</text>
+          <text x="805" y="172" font-size="13" fill="#4d4380" text-anchor="middle">已大规模放量</text>
+
+          <circle cx="690" cy="225" r="60" fill="#edf6ff" stroke="#2f6f9f" stroke-width="3"/>
+          <text x="690" y="219" font-size="20" font-weight="800" fill="#2f5b80" text-anchor="middle">CPO</text>
+          <text x="690" y="246" font-size="13" fill="#2f5b80" text-anchor="middle">互连墙</text>
+
+          <circle cx="525" cy="250" r="64" fill="#e8f3f1" stroke="#0b8f7c" stroke-width="4"/>
+          <text x="525" y="244" font-size="22" font-weight="800" fill="#0b5d52" text-anchor="middle">CXL</text>
+          <text x="525" y="271" font-size="13" fill="#0b5d52" text-anchor="middle">内存墙</text>
+
+          <circle cx="780" cy="315" r="52" fill="#eef6e9" stroke="#4b8a38" stroke-width="3"/>
+          <text x="780" y="310" font-size="18" font-weight="800" fill="#3d712e" text-anchor="middle">液冷</text>
+          <text x="780" y="335" font-size="13" fill="#3d712e" text-anchor="middle">热墙</text>
+
+          <circle cx="870" cy="260" r="54" fill="#fff7e8" stroke="#c98018" stroke-width="3"/>
+          <text x="870" y="255" font-size="18" font-weight="800" fill="#8c5813" text-anchor="middle">先进封装</text>
+          <text x="870" y="280" font-size="13" fill="#8c5813" text-anchor="middle">芯片集成</text>
+
+          <circle cx="360" cy="330" r="50" fill="#f8eef0" stroke="#b9555c" stroke-width="3"/>
+          <text x="360" y="325" font-size="18" font-weight="800" fill="#8b3f46" text-anchor="middle">AI ODM</text>
+          <text x="360" y="350" font-size="13" fill="#8b3f46" text-anchor="middle">整机集成</text>
+
+          <text x="185" y="406" font-size="13" fill="#65707d">技术验证</text>
+          <text x="430" y="406" font-size="13" fill="#65707d">客户导入</text>
+          <text x="685" y="406" font-size="13" fill="#65707d">规模放量</text>
+          <text x="870" y="406" font-size="13" fill="#65707d">标准普及</text>
+        </svg>
+        <figcaption>CXL 与 CPO 的共同点是“架构升级”；区别是一个针对内存，一个针对互连。</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>五、产业链与标的矩阵</h2>
+      <p>选股上应区分“主题纯度”和“兑现确定性”。ALAB 纯度最高，MRVL 确定性更强，RMBS 是授权/IP 赔率锚，PENG 和 CRDO 更偏弹性交易，澜起科技是 A/H 股最直接映射。</p>
+      <figure>
+        <svg viewBox="0 0 1080 540" role="img" aria-label="CXL 投资标的矩阵">
+          <rect width="1080" height="540" fill="#fff"/>
+          <text x="42" y="50" font-size="28" font-weight="800" fill="#17202a">投资矩阵：纯度 × 确定性</text>
+          <line x1="130" y1="450" x2="980" y2="450" stroke="#17202a" stroke-width="2"/>
+          <line x1="130" y1="450" x2="130" y2="100" stroke="#17202a" stroke-width="2"/>
+          <text x="505" y="492" font-size="15" fill="#65707d">兑现确定性</text>
+          <text x="54" y="296" font-size="15" fill="#65707d" transform="rotate(-90 54 296)">CXL 纯度</text>
+
+          <rect x="130" y="100" width="850" height="350" fill="#fbfcfe"/>
+          <line x1="555" y1="100" x2="555" y2="450" stroke="#d9dee5" stroke-dasharray="8 8"/>
+          <line x1="130" y1="275" x2="980" y2="275" stroke="#d9dee5" stroke-dasharray="8 8"/>
+
+          <text x="175" y="132" font-size="14" fill="#65707d">高纯度 / 低确定性</text>
+          <text x="650" y="132" font-size="14" fill="#65707d">高纯度 / 高确定性</text>
+          <text x="172" y="428" font-size="14" fill="#65707d">低纯度 / 低确定性</text>
+          <text x="650" y="428" font-size="14" fill="#65707d">低纯度 / 高确定性</text>
+
+          <circle cx="705" cy="185" r="48" fill="#e8f3f1" stroke="#0b8f7c" stroke-width="4"/>
+          <text x="705" y="181" font-size="18" font-weight="800" fill="#0b5d52" text-anchor="middle">ALAB</text>
+          <text x="705" y="206" font-size="12" fill="#0b5d52" text-anchor="middle">纯度龙一</text>
+
+          <circle cx="770" cy="250" r="45" fill="#edf6ff" stroke="#2f6f9f" stroke-width="3"/>
+          <text x="770" y="246" font-size="17" font-weight="800" fill="#2f5b80" text-anchor="middle">MRVL</text>
+          <text x="770" y="270" font-size="12" fill="#2f5b80" text-anchor="middle">确定性锚</text>
+
+          <circle cx="620" cy="220" r="42" fill="#fff7e8" stroke="#c98018" stroke-width="3"/>
+          <text x="620" y="216" font-size="17" font-weight="800" fill="#8c5813" text-anchor="middle">688008</text>
+          <text x="620" y="240" font-size="12" fill="#8c5813" text-anchor="middle">A/H 映射</text>
+
+          <circle cx="505" cy="205" r="38" fill="#eef1fa" stroke="#7464b8" stroke-width="3"/>
+          <text x="505" y="202" font-size="17" font-weight="800" fill="#4d4380" text-anchor="middle">RMBS</text>
+          <text x="505" y="225" font-size="12" fill="#4d4380" text-anchor="middle">IP 赔率</text>
+
+          <circle cx="405" cy="238" r="36" fill="#f8eef0" stroke="#b9555c" stroke-width="3"/>
+          <text x="405" y="235" font-size="17" font-weight="800" fill="#8b3f46" text-anchor="middle">PENG</text>
+          <text x="405" y="257" font-size="12" fill="#8b3f46" text-anchor="middle">小票弹性</text>
+
+          <circle cx="565" cy="315" r="38" fill="#eef6e9" stroke="#4b8a38" stroke-width="3"/>
+          <text x="565" y="312" font-size="17" font-weight="800" fill="#3d712e" text-anchor="middle">CRDO</text>
+          <text x="565" y="335" font-size="12" fill="#3d712e" text-anchor="middle">互连弹性</text>
+
+          <circle cx="840" cy="340" r="36" fill="#f6f2ea" stroke="#8a7454" stroke-width="3"/>
+          <text x="840" y="337" font-size="17" font-weight="800" fill="#6e5a3d" text-anchor="middle">AVGO</text>
+          <text x="840" y="359" font-size="12" fill="#6e5a3d" text-anchor="middle">生态巨头</text>
+        </svg>
+        <figcaption>越靠右上，越适合作为中枢配置；越靠左上，弹性更高但验证风险更大。</figcaption>
+      </figure>
+
+      <table>
+        <thead>
+          <tr><th>排序</th><th>标的</th><th>产业定位</th><th>纯度</th><th>弹性</th><th>确定性</th><th>结论</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>ALAB</td><td>CXL 控制器、PCIe/CXL retimer、AI fabric</td><td>极高</td><td>高</td><td>中高</td><td class="rating-buy">产业龙一，回调优先</td></tr>
+          <tr><td>2</td><td>MRVL</td><td>CXL memory expander + ASIC/网络/存储</td><td>中高</td><td>中</td><td>高</td><td class="rating-buy">稳健配置</td></tr>
+          <tr><td>3</td><td>RMBS</td><td>CXL Controller IP、内存接口 IP</td><td>中高</td><td>中高</td><td>中</td><td class="rating-watch">非对称关注</td></tr>
+          <tr><td>4</td><td>PENG</td><td>AI factory 集成 + CXL/KV cache 服务器线索</td><td>中</td><td>高</td><td>中低</td><td class="rating-risk">小仓进攻</td></tr>
+          <tr><td>5</td><td>CRDO</td><td>高速连接/AEC/retimer 相关</td><td>中</td><td>高</td><td>中</td><td class="rating-watch">强观察</td></tr>
+          <tr><td>6</td><td>澜起科技 688008 / 6809</td><td>CXL MXC、PCIe/CXL AEC、DDR5 RCD</td><td>高</td><td>中高</td><td>中高</td><td class="rating-buy">A/H 龙一，等回调更优</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>六、放量路线图与催化信号</h2>
+      <p>放量顺序大概率不是 CXL over optics 一步到位，而是单机内存扩展先放量，KV cache/RAG 相关推理场景随后放量，多主机池化和跨机架共享内存最后放量。</p>
+      <figure>
+        <svg viewBox="0 0 1080 390" role="img" aria-label="CXL 放量路线图">
+          <rect width="1080" height="390" fill="#fff"/>
+          <text x="42" y="50" font-size="28" font-weight="800" fill="#17202a">CXL 放量路线图：从单机扩展到跨机架共享</text>
+          <g>
+            <rect x="70" y="125" width="220" height="145" rx="8" fill="#fff7e8" stroke="#c98018" stroke-width="3"/>
+            <text x="98" y="165" font-size="22" font-weight="800" fill="#8c5813">2025-2026</text>
+            <text x="98" y="198" font-size="16" fill="#17202a">客户认证 / 试点部署</text>
+            <text x="98" y="230" font-size="13" fill="#65707d">CXL DRAM 扩展</text>
+            <text x="98" y="252" font-size="13" fill="#65707d">AIC / EDSFF / preview</text>
+          </g>
+          <path d="M300 198 L390 198" stroke="#65707d" stroke-width="3"/>
+          <polygon points="390,198 374,188 374,208" fill="#65707d"/>
+          <g>
+            <rect x="405" y="125" width="250" height="145" rx="8" fill="#e8f3f1" stroke="#0b8f7c" stroke-width="3"/>
+            <text x="433" y="165" font-size="22" font-weight="800" fill="#0b5d52">2027-2028</text>
+            <text x="433" y="198" font-size="16" fill="#17202a">第一轮规模放量</text>
+            <text x="433" y="230" font-size="13" fill="#65707d">AI 推理 / KV cache</text>
+            <text x="433" y="252" font-size="13" fill="#65707d">收入拆分与批量采购</text>
+          </g>
+          <path d="M665 198 L755 198" stroke="#65707d" stroke-width="3"/>
+          <polygon points="755,198 739,188 739,208" fill="#65707d"/>
+          <g>
+            <rect x="770" y="125" width="240" height="145" rx="8" fill="#edf6ff" stroke="#2f6f9f" stroke-width="3"/>
+            <text x="798" y="165" font-size="22" font-weight="800" fill="#2f5b80">2029+</text>
+            <text x="798" y="198" font-size="16" fill="#17202a">生态扩散 / 标准化</text>
+            <text x="798" y="230" font-size="13" fill="#65707d">多主机 pooling</text>
+            <text x="798" y="252" font-size="13" fill="#65707d">CXL fabric / optics</text>
+          </g>
+          <text x="76" y="325" font-size="15" fill="#65707d">关键验证：hyperscaler 是否把 CXL 从 preview 变成标准服务器配置。</text>
+        </svg>
+        <figcaption>2027-2028 是最关键窗口：若没有收入拆分和批量订单，主题会面临估值回吐风险。</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>七、目标价区间</h2>
+      <p>目标价为 6-12 个月研究型区间，基于当前主题热度、公开行情估值和产业兑现假设，不构成投资建议。</p>
+      <table>
+        <thead>
+          <tr><th>标的</th><th>当前参考价</th><th>保守目标价</th><th>基准目标价</th><th>乐观目标价</th><th>最终评级</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>ALAB</td><td>417.07 美元</td><td>320 美元</td><td>440 美元</td><td>550 美元</td><td>产业龙一，回调优先</td></tr>
+          <tr><td>MRVL</td><td>310.58 美元</td><td>280 美元</td><td>360 美元</td><td>430 美元</td><td>稳健配置</td></tr>
+          <tr><td>RMBS</td><td>141.17 美元</td><td>125 美元</td><td>160 美元</td><td>190 美元</td><td>非对称关注</td></tr>
+          <tr><td>PENG</td><td>67.15 美元</td><td>50 美元</td><td>75 美元</td><td>95 美元</td><td>小仓进攻</td></tr>
+          <tr><td>CRDO</td><td>271.83 美元</td><td>220 美元</td><td>285 美元</td><td>340 美元</td><td>强观察</td></tr>
+          <tr><td>澜起科技 688008</td><td>279.96 元</td><td>240 元</td><td>320 元</td><td>390 元</td><td>A/H 龙一，等回调更优</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>八、风险与跟踪指标</h2>
+      <div class="grid">
+        <div class="panel">
+          <h3>主要风险</h3>
+          <p><strong>估值风险：</strong>ALAB、CRDO、澜起科技都已给出高成长估值，财报若无法持续 beat-and-raise，回撤会很剧烈。</p>
+          <p><strong>技术风险：</strong>CXL 的延迟、NUMA、软件调度、故障隔离和多租户安全仍需要工程验证。</p>
+          <p><strong>误读风险：</strong>CXL Flash 是微秒级容量层，不是纳秒级 DRAM 替代。</p>
+        </div>
+        <div class="panel">
+          <h3>跟踪指标</h3>
+          <p>1. Azure、Google、Oracle、Meta、NVIDIA 是否把 CXL 从 preview/demo 推到量产采购。</p>
+          <p>2. ALAB Leo / Scorpio、MRVL Structera、澜起 MXC 是否出现清晰客户与收入拆分。</p>
+          <p>3. KV cache/RAG/long-context 推理是否进入生产负载。</p>
+          <p>4. DDR5/HBM/DRAM 价格若继续上涨，CXL 的 TCO 价值会增强。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>九、最终评级</h2>
+      <p class="lead">CXL 是 AI 基础设施里“存储/内存重估”的下一条细分线，但不适合无差别配置。较合理的排序是：ALAB 做主题纯度锚，MRVL 做确定性锚，RMBS 做赔率锚，PENG 做小仓弹性；A/H 股用澜起科技做最直接映射。</p>
+      <table>
+        <thead>
+          <tr><th>结论项</th><th>判断</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>产业/主题定位</td><td>AI 推理内存墙、数据中心 TCO、内存分层和池化</td></tr>
+          <tr><td>纯度、弹性、确定性、风险评级</td><td>纯度：高；弹性：中高；确定性：中；风险：中高</td></tr>
+          <tr><td>龙一 / 龙二</td><td>美股龙一 ALAB，龙二 MRVL；A/H 龙一澜起科技</td></tr>
+          <tr><td>最终评级</td><td>主题确定、阶段偏早，适合回调跟踪和分层配置</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="footer">
+      <h2>参考来源</h2>
+      <p>本地 Clippings：Copper Has Limits. CXL Has Ambitions. Optics Has Answers；Saso Capital CXL memory trade；Serenity DeepSeek / CXL；high cagr CXL + Flash；J / RMBS；Penguin Solutions；铠侠深度更新。</p>
+      <p>公开资料：Astera Labs Leo CXL Smart Memory Controllers；Marvell CXL / Structera；Rambus CXL Memory Initiative / Controller IP；Montage Technology MXC / PCIe 6.x CXL AEC；NVIDIA / CPO 产业进展参考；Google Finance 行情页。</p>
+      <p>说明：本报告为研究型资料，不构成投资建议。目标价为 6-12 个月研究口径，需随财报、订单、客户导入与市场估值变化动态调整。</p>
+    </section>
+  </main>
+</body>
+</html>
