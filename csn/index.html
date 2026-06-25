@@ -6,7 +6,7 @@
   <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <title>表姐严选</title>
+  <title>系统A · 表姐严选</title>
   <style>
     :root {
       --bg:#f3f6f8; --panel:#fff; --text:#172026; --muted:#68737d; --line:#d9dee3;
@@ -21,6 +21,10 @@
       color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.45; }
     main { width:min(1440px,100%); margin:0 auto; padding:14px; }
     header { display:grid; gap:10px; margin-bottom:10px; }
+    .system-nav { display:flex; align-items:center; gap:8px; width:max-content; max-width:100%; margin:0 0 4px; padding:5px; border:1px solid #cfe0e8; border-radius:10px; background:#fff; box-shadow:0 8px 20px rgba(23,32,38,.05); }
+    .system-nav a { display:inline-flex; align-items:center; min-height:34px; padding:6px 13px; border-radius:8px; color:#3b5262; text-decoration:none; font-weight:900; font-size:14px; }
+    .system-nav a.active { background:#172026; color:#fff; }
+    .system-intro { margin-top:10px; padding:10px 12px; border:1px solid #bfe6df; border-radius:10px; background:#f4fffc; color:#516977; font-size:13px; line-height:1.65; font-weight:800; }
     h1 { margin:0; font-size:clamp(20px,4vw,30px); letter-spacing:0; }
     .sub { display:grid; gap:3px; color:var(--muted); font-size:13px; overflow-wrap:anywhere; }
     .sub-line { display:block; }
@@ -128,6 +132,8 @@
     }
     @media (max-width: 760px) {
       main { padding:10px; }
+      .system-nav { width:100%; }
+      .system-nav a { flex:1; justify-content:center; }
       .summary-row { grid-template-columns:repeat(2,minmax(0,1fr)); }
       .summary-row .panel { grid-column:1/-1; }
       .watchlist-text { font-size:14px; line-height:1.75; }
@@ -161,16 +167,20 @@
 <body>
 <main>
   <header>
+    <nav class="system-nav" aria-label="系统切换">
+      <a class="active" href="../csn/">系统A</a>
+      <a href="../csn2/">系统B</a>
+    </nav>
     <div>
-      <h1>表姐严选</h1>
+      <h1>系统A · 表姐严选</h1>
       <div class="sub">
         <span class="sub-line">数据日期：2026-06-25 ｜ 运行时间：2026-06-25 16:04</span>
         <span class="sub-line">核验状态：OpenD已连接；已核验 352（新拉取 0，今日缓存 352），失败 26，暂不支持 49；部分未完成实时核验</span>
         <span class="sub-line">范围：核心精选去重后 427 个标的</span>
         <span class="sub-line">价格/均线/买点/止损/核心池动态RS=OpenD日K复算</span>
         <span class="sub-line"><a class="doc-link" href="csn_algorithm_model_20260625_1356.html" target="_blank" rel="noopener">算法说明：表姐严选当前模型（2026-06-25 13:56）</a></span>
-        <span class="sub-line"><a class="doc-link" href="../csn2/" target="_blank" rel="noopener">备选系统</a></span>
       </div>
+      <div class="system-intro">系统A说明：核心精选池每日筛选；以群里重点、二阶段、动态RS、买点/止损和OpenD均线核验为主。默认展示群里重点、已核验、买入观察名单，保留原有筛选框和表格逻辑。</div>
     </div>
     <section class="summary">
       <div class="summary-row">
