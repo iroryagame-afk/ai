@@ -2529,15 +2529,15 @@
     },
     {
       "指数": "VIX",
-      "现价": "",
+      "现价": "18.10",
       "MA50": "",
       "MA200": "",
       "站上MA50": "",
       "站上MA200": "",
       "趋势状态": "",
-      "VIX状态": "",
+      "VIX状态": "低波动",
       "总仓位档位": "",
-      "备注": "未完成实时核验：OpenD订阅失败：Unknown stock. VIX"
+      "备注": "富途客户端 .VIX 手动核验；OpenD API 返回 US stock indices are not supported"
     },
     {
       "指数": "📊 综合仓位建议",
@@ -2548,8 +2548,8 @@
       "站上MA200": "",
       "趋势状态": "",
       "VIX状态": "",
-      "总仓位档位": "",
-      "备注": ""
+      "总仓位档位": "🟢 正常开仓",
+      "备注": "按SPY/SOXX/VIX规则自动归纳；VIX若未核验则降级提示"
     },
     {
       "指数": "总仓位档位:",
@@ -2576,7 +2576,7 @@
   },
   "meta": {
     "title": "CSN2 Alen交易系统",
-    "generatedAt": "2026-06-25 17:20",
+    "generatedAt": "2026-06-25 17:26",
     "source": "股票池来自xlsx，价格/均线/ATR/RS/买点/止损来自富途OpenD日K复算",
     "poolCount": 20,
     "strongCount": 9,
@@ -2587,7 +2587,7 @@
     "planCount": 7,
     "openPositionCount": 0,
     "atrAlertCount": 0,
-    "marketStance": "未完成",
+    "marketStance": "🟢 正常开仓",
     "opendMode": "OpenD已连接",
     "opendVerified": 0,
     "opendCached": 24,
