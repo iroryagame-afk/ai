@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>表姐严选导航｜AI服务器产业链</title>
+  <style>
+    :root {
+      --bg:#f3f6f8; --panel:#fff; --text:#172026; --muted:#68737d; --line:#d9dee3;
+      --green:#0f766e; --green-bg:#d9f3ee; --blue:#2563eb; --blue-bg:#dbeafe;
+      --amber:#b45309; --amber-bg:#fef3c7; --red:#b91c1c; --red-bg:#fee2e2;
+      --violet:#5b21b6; --violet-bg:#ede9fe; --gray:#64748b; --gray-bg:#e2e8f0;
+      --cyan:#0369a1; --cyan-bg:#e0f2fe; --chip:#eef2f5;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      background:linear-gradient(180deg,#edf4f7 0,#f7f9fb 220px,var(--bg) 100%);
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+      line-height:1.5;
+    }
+    a { color:inherit; text-decoration:none; }
+    main { width:min(1280px,100%); margin:0 auto; padding:14px; }
+    header { display:grid; gap:12px; margin-bottom:12px; }
+    h1 { margin:0; font-size:clamp(24px,5vw,34px); letter-spacing:0; line-height:1.12; }
+    h2 { margin:0 0 12px; font-size:clamp(18px,3.8vw,24px); letter-spacing:0; }
+    h3 { margin:0; font-size:17px; letter-spacing:0; }
+    .sub { display:grid; gap:4px; color:var(--muted); font-size:13px; overflow-wrap:anywhere; }
+    .hero {
+      display:grid;
+      grid-template-columns:1.3fr .7fr;
+      gap:12px;
+      align-items:stretch;
+    }
+    .panel,.metric,.card,.lane,.update-card {
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:8px;
+      box-shadow:0 8px 18px rgba(23,32,38,.05);
+    }
+    .panel { padding:14px; border-left:5px solid var(--blue); }
+    .hero-copy {
+      min-height:156px;
+      background:linear-gradient(135deg,#e9f8f5,#f7fffd 55%,#ffffff);
+      border-color:#9adbd0;
+      border-left-color:var(--green);
+      display:grid;
+      align-content:center;
+      gap:10px;
+    }
+    .hero-copy p { margin:0; color:#263448; font-size:15px; line-height:1.8; }
+    .hero-badges { display:flex; flex-wrap:wrap; gap:8px; }
+    .hero-badges span,.pill {
+      display:inline-flex;
+      align-items:center;
+      min-height:24px;
+      max-width:100%;
+      padding:2px 8px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:850;
+      white-space:normal;
+      overflow-wrap:anywhere;
+    }
+    .hero-badges span { background:var(--green-bg); color:var(--green); }
+    .metric-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    .metric { position:relative; overflow:hidden; min-height:92px; padding:12px; align-content:start; }
+    .metric::after {
+      content:"";
+      position:absolute;
+      right:-22px;
+      bottom:-30px;
+      width:78px;
+      height:78px;
+      border-radius:50%;
+      opacity:.16;
+      background:currentColor;
+    }
+    .metric span { color:rgba(23,32,38,.68); font-size:12px; font-weight:750; }
+    .metric strong { display:block; margin-top:7px; font-size:27px; line-height:1.05; }
+    .metric small { display:block; margin-top:6px; color:#52627a; font-size:12px; line-height:1.4; }
+    .metric.green { color:var(--green); background:linear-gradient(135deg,#f3fffb,#d9f3ee); border-color:#a7e4d8; }
+    .metric.blue { color:var(--blue); background:linear-gradient(135deg,#f3f7ff,#dbeafe); border-color:#bfdbfe; }
+    .metric.amber { color:var(--amber); background:linear-gradient(135deg,#fffaf0,#fef3c7); border-color:#fde68a; }
+    .metric.violet { color:var(--violet); background:linear-gradient(135deg,#faf7ff,#ede9fe); border-color:#ddd6fe; }
+    .controls {
+      position:sticky;
+      top:0;
+      z-index:6;
+      display:grid;
+      grid-template-columns:minmax(220px,1.6fr) minmax(160px,.7fr) auto;
+      gap:8px;
+      background:rgba(243,246,248,.94);
+      backdrop-filter:blur(10px);
+      padding:8px 0;
+      margin:6px 0 10px;
+    }
+    input,select,button {
+      min-height:42px;
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:#fff;
+      color:var(--text);
+      padding:8px 10px;
+      font:inherit;
+    }
+    button { cursor:pointer; font-weight:800; border-color:#cbd5e1; }
+    button:hover { background:#f8fafc; border-color:#94a3b8; }
+    .quick { display:flex; gap:8px; overflow-x:auto; padding:0 0 8px; }
+    .quick button { flex:0 0 auto; white-space:nowrap; }
+    .quick button.active { background:#172026; color:white; border-color:#172026; }
+    .result-bar {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin:0 0 10px;
+      padding:9px 11px;
+      border:1px solid #d7dee6;
+      border-radius:8px;
+      background:#fff;
+      box-shadow:0 6px 16px rgba(23,32,38,.04);
+      color:#334155;
+      font-size:13px;
+    }
+    .result-bar strong { color:var(--green); font-size:16px; }
+    .section { margin:12px 0; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+    .card {
+      display:grid;
+      gap:10px;
+      padding:13px;
+      min-height:178px;
+      border-left:5px solid #cbd5e1;
+      transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .card:hover {
+      transform:translateY(-1px);
+      box-shadow:0 14px 30px rgba(23,32,38,.08);
+      border-color:#94a3b8;
+    }
+    .card-head { display:flex; justify-content:space-between; gap:8px; align-items:flex-start; }
+    .card-title { display:grid; gap:3px; min-width:0; }
+    .card-title strong { font-size:18px; overflow-wrap:anywhere; }
+    .card-title small { color:var(--muted); font-size:12px; font-weight:800; }
+    .card p { margin:0; color:#334155; font-size:13px; line-height:1.65; }
+    .card-tags { display:flex; flex-wrap:wrap; gap:6px; align-self:end; }
+    .tag-core { color:var(--green); background:var(--green-bg); }
+    .tag-report { color:var(--blue); background:var(--blue-bg); }
+    .tag-track { color:var(--violet); background:var(--violet-bg); }
+    .tag-watch { color:var(--amber); background:var(--amber-bg); }
+    .tag-risk { color:var(--red); background:var(--red-bg); }
+    .tag-muted { color:var(--gray); background:var(--gray-bg); }
+    .tag-cyan { color:var(--cyan); background:var(--cyan-bg); }
+    .status {
+      flex:0 0 auto;
+      display:inline-flex;
+      align-items:center;
+      min-height:24px;
+      padding:2px 8px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:850;
+      color:#334155;
+      background:#f1f5f9;
+      border:1px solid #d7dee6;
+      white-space:nowrap;
+    }
+    .status.live { color:var(--green); background:var(--green-bg); border-color:#99d7cc; }
+    .status.seed { color:var(--amber); background:var(--amber-bg); border-color:#fde68a; }
+    .map {
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:10px;
+    }
+    .lane { padding:12px; min-height:148px; border-top:4px solid #cbd5e1; }
+    .lane h3 { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:9px; }
+    .lane h3 span {
+      color:var(--muted);
+      background:#f1f5f9;
+      border-radius:999px;
+      padding:2px 7px;
+      font-size:12px;
+      font-weight:850;
+      white-space:nowrap;
+    }
+    .lane p { margin:0; color:#334155; font-size:13px; line-height:1.65; }
+    .lane-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+    .update-list { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .update-card { padding:12px; display:grid; gap:8px; }
+    .update-card time { color:var(--muted); font-size:12px; font-weight:850; }
+    .update-card p { margin:0; color:#334155; font-size:13px; line-height:1.65; }
+    .empty {
+      display:none;
+      padding:20px;
+      border:1px dashed #cbd5e1;
+      border-radius:8px;
+      color:var(--muted);
+      background:#fff;
+      text-align:center;
+      font-weight:800;
+    }
+    footer { margin:16px 0 4px; color:var(--muted); font-size:12px; line-height:1.7; }
+    @media (max-width: 980px) {
+      .hero { grid-template-columns:1fr; }
+      .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .map { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width: 680px) {
+      main { padding:10px; }
+      .hero-copy { min-height:auto; }
+      .metric-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .metric { min-height:88px; padding:11px; }
+      .metric strong { font-size:24px; }
+      .controls { grid-template-columns:1fr; }
+      .controls button { width:100%; }
+      .result-bar { display:grid; }
+      .grid,.map,.update-list { grid-template-columns:1fr; }
+      .card { min-height:156px; }
+      .card-head { display:grid; }
+      .status { width:max-content; max-width:100%; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="hero">
+      <section class="panel hero-copy">
+        <div>
+          <h1>AI服务器产业链导航</h1>
+          <div class="sub">
+            <span>表姐严选资料库入口｜用于沉淀报告、专题、复盘和后续新增页面</span>
+            <span>更新日期：2026-06-25｜页面类型：检索导航｜适配手机端</span>
+          </div>
+        </div>
+        <p>把 AI 服务器产业链拆成算力、整机、存储、互连、材料、散热供电和设备材料几条主线。后续新增内容优先挂到对应主题下，方便按关键词、产业环节和资料类型复查。</p>
+        <div class="hero-badges">
+          <span>表姐严选主入口</span>
+          <span>CXL / Memory专题</span>
+          <span>CPO / 光互连</span>
+          <span>手机端检索</span>
+        </div>
+      </section>
+      <section class="metric-grid" aria-label="资料库概览">
+        <div class="metric green">
+          <span>核心入口</span>
+          <strong id="metricLive">0</strong>
+          <small>可直接打开的线上页面</small>
+        </div>
+        <div class="metric blue">
+          <span>专题分组</span>
+          <strong>8</strong>
+          <small>按 AI服务器产业链拆分</small>
+        </div>
+        <div class="metric amber">
+          <span>待补专题</span>
+          <strong id="metricSeed">0</strong>
+          <small>预留给后续上传内容</small>
+        </div>
+        <div class="metric violet">
+          <span>检索口径</span>
+          <strong>标题+标签</strong>
+          <small>适合快速回看结论</small>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <nav class="quick" aria-label="快速分类">
+    <button class="active" data-chip="全部">全部</button>
+    <button data-chip="总入口">总入口</button>
+    <button data-chip="Memory">Memory</button>
+    <button data-chip="互连">互连</button>
+    <button data-chip="整机">整机</button>
+    <button data-chip="材料">材料</button>
+    <button data-chip="电力散热">电力散热</button>
+    <button data-chip="A股">A股</button>
+  </nav>
+
+  <section class="controls" aria-label="筛选资料">
+    <input id="searchInput" type="search" placeholder="搜索：CXL、CPO、液冷、PCB、ODM、复盘、买入观察..." autocomplete="off" />
+    <select id="typeSelect" aria-label="资料类型">
+      <option value="全部">全部类型</option>
+      <option value="主页面">主页面</option>
+      <option value="专题报告">专题报告</option>
+      <option value="预留专题">预留专题</option>
+      <option value="外部观察">外部观察</option>
+    </select>
+    <button id="resetBtn" type="button">重置</button>
+  </section>
+
+  <div class="result-bar">
+    <span>当前显示 <strong id="resultCount">0</strong> 个入口</span>
+    <span id="activeLabel">全部主题</span>
+  </div>
+
+  <section class="section" aria-label="入口卡片">
+    <div id="cards" class="grid"></div>
+    <div id="empty" class="empty">没有匹配到内容，可以换一个关键词。</div>
+  </section>
+
+  <section class="section">
+    <h2>产业链地图</h2>
+    <div class="map">
+      <article class="lane" style="border-top-color:var(--green)">
+        <h3>算力芯片 <span>GPU / ASIC</span></h3>
+        <p>AI服务器的需求源头，决定整机规格、互连带宽、供电散热和内存容量。</p>
+        <div class="lane-tags"><span class="pill tag-core">GPU</span><span class="pill tag-core">ASIC</span><span class="pill tag-core">CPU</span></div>
+      </article>
+      <article class="lane" style="border-top-color:var(--blue)">
+        <h3>整机系统 <span>ODM / 机柜</span></h3>
+        <p>从板级设计走向机柜级交付，是订单可见度和国产链验证的关键环节。</p>
+        <div class="lane-tags"><span class="pill tag-report">服务器</span><span class="pill tag-report">ODM</span><span class="pill tag-report">机柜</span></div>
+      </article>
+      <article class="lane" style="border-top-color:var(--violet)">
+        <h3>存储链 <span>HBM / CXL</span></h3>
+        <p>围绕内存墙展开，CXL更像服务器内存扩展和池化的中期增量赛道。</p>
+        <div class="lane-tags"><span class="pill tag-track">HBM</span><span class="pill tag-track">DDR5</span><span class="pill tag-track">CXL</span></div>
+      </article>
+      <article class="lane" style="border-top-color:var(--cyan)">
+        <h3>高速互连 <span>CPO / 光模块</span></h3>
+        <p>承担集群内外通信瓶颈，放量节奏通常早于更底层的新协议生态。</p>
+        <div class="lane-tags"><span class="pill tag-cyan">CPO</span><span class="pill tag-cyan">光模块</span><span class="pill tag-cyan">铜连接</span></div>
+      </article>
+      <article class="lane" style="border-top-color:var(--amber)">
+        <h3>板级材料 <span>PCB / CCL</span></h3>
+        <p>AI板卡高速化带来层数、低损耗材料、ABF载板和被动件升级。</p>
+        <div class="lane-tags"><span class="pill tag-watch">PCB</span><span class="pill tag-watch">CCL</span><span class="pill tag-watch">MLCC</span></div>
+      </article>
+      <article class="lane" style="border-top-color:var(--red)">
+        <h3>供电散热 <span>液冷 / 电源</span></h3>
+        <p>单柜功率提升后，液冷、UPS、电源模块和数据中心配套成为显性约束。</p>
+        <div class="lane-tags"><span class="pill tag-risk">液冷</span><span class="pill tag-risk">电源</span><span class="pill tag-risk">IDC</span></div>
+      </article>
+      <article class="lane" style="border-top-color:#475569">
+        <h3>设备材料 <span>前道 / 封测</span></h3>
+        <p>国产替代和先进封装共同驱动，适合作为AI链的底层弹性观察。</p>
+        <div class="lane-tags"><span class="pill tag-muted">设备</span><span class="pill tag-muted">材料</span><span class="pill tag-muted">封测</span></div>
+      </article>
+      <article class="lane" style="border-top-color:#0f766e">
+        <h3>交易复盘 <span>买点 / 风险</span></h3>
+        <p>把研究结论回落到买入观察、风险排雷、技术位置和新闻修正。</p>
+        <div class="lane-tags"><span class="pill tag-core">表姐严选</span><span class="pill tag-core">mda100</span><span class="pill tag-core">复盘</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>最近沉淀</h2>
+    <div class="update-list">
+      <a class="update-card" href="../cxl/">
+        <time>2026-06-25</time>
+        <h3>CXL 综合分析报告</h3>
+        <p>补齐“是什么、目前状态、什么时候放量、产业阶段、类比CPO、相关公司”的前置框架。</p>
+      </a>
+      <a class="update-card" href="../csn/">
+        <time>持续更新</time>
+        <h3>表姐严选主页面</h3>
+        <p>用于跟踪买入观察名单、RS强势候选、核心池和每日复盘信号。</p>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    后续新增专题建议统一放在本页入口数据中：标题、分类、标签、状态、链接和一句话用途。页面不替代实时行情核验，仅用于资料检索和复查。
+  </footer>
+</main>
+
+<script>
+  const entries = [
+    {
+      title:"表姐严选",
+      url:"../csn/",
+      category:"总入口",
+      type:"主页面",
+      status:"线上",
+      desc:"核心精选、买入观察、RS强势候选和风险排雷的主页面。后续大量内容可以从这里回到每日跟踪。",
+      tags:["核心池","买入观察","复盘","RS","表姐严选"],
+      accent:"var(--green)"
+    },
+    {
+      title:"CXL 综合分析报告",
+      url:"../cxl/",
+      category:"Memory",
+      type:"专题报告",
+      status:"线上",
+      desc:"解释CXL是什么、产业状态、放量节奏、与CPO的类比、国内外环节和股票映射。",
+      tags:["CXL","Memory","内存墙","DDR5","PCIe","图文报告"],
+      accent:"var(--violet)"
+    },
+    {
+      title:"mda100 A股科技链",
+      url:"https://iroryagame-afk.github.io/ai-tracker/",
+      category:"A股",
+      type:"外部观察",
+      status:"外部",
+      desc:"A股科技链复盘和评分体系入口，适合与表姐严选的临时观察名单交叉复查。",
+      tags:["A股","mda100","技术分","新闻修正","科技链"],
+      accent:"var(--blue)"
+    },
+    {
+      title:"CPO / 光互连专题",
+      url:"#",
+      category:"互连",
+      type:"预留专题",
+      status:"待补",
+      desc:"预留给CPO、光模块、光芯片、800G/1.6T、交换机和高速铜连接专题。",
+      tags:["CPO","光模块","交换机","铜连接","高速互连"],
+      accent:"var(--cyan)"
+    },
+    {
+      title:"AI服务器整机专题",
+      url:"#",
+      category:"整机",
+      type:"预留专题",
+      status:"待补",
+      desc:"预留给ODM、品牌服务器、机柜级交付、国产AI服务器和液冷整机配置。",
+      tags:["AI服务器","ODM","整机","机柜","国产替代"],
+      accent:"var(--blue)"
+    },
+    {
+      title:"PCB / CCL / ABF专题",
+      url:"#",
+      category:"材料",
+      type:"预留专题",
+      status:"待补",
+      desc:"预留给高多层PCB、低损耗CCL、ABF载板、MLCC和服务器板级材料。",
+      tags:["PCB","CCL","ABF","MLCC","板级材料"],
+      accent:"var(--amber)"
+    },
+    {
+      title:"液冷 / 电力链专题",
+      url:"#",
+      category:"电力散热",
+      type:"预留专题",
+      status:"待补",
+      desc:"预留给液冷、UPS、电源模块、温控、数据中心供配电和IDC配套。",
+      tags:["液冷","电源","UPS","温控","IDC"],
+      accent:"var(--red)"
+    },
+    {
+      title:"HBM / 存储链专题",
+      url:"#",
+      category:"Memory",
+      type:"预留专题",
+      status:"待补",
+      desc:"预留给HBM、DDR5、eSSD、内存接口、模组和存储国产化专题。",
+      tags:["HBM","DDR5","eSSD","内存模组","存储链"],
+      accent:"var(--violet)"
+    },
+    {
+      title:"半导体设备材料专题",
+      url:"#",
+      category:"材料",
+      type:"预留专题",
+      status:"待补",
+      desc:"预留给前道设备、先进封装、材料、气体、硅片和国产替代节奏。",
+      tags:["设备","材料","先进封装","气体","硅片"],
+      accent:"var(--gray)"
+    },
+    {
+      title:"新闻复盘与排雷",
+      url:"#",
+      category:"总入口",
+      type:"预留专题",
+      status:"待补",
+      desc:"预留给重大合同、并购融资、辟谣澄清、减持解禁、监管问询和业绩预告复查。",
+      tags:["新闻修正","公告","风险排雷","减持","业绩"],
+      accent:"var(--green)"
+    }
+  ];
+
+  const cards = document.querySelector("#cards");
+  const empty = document.querySelector("#empty");
+  const searchInput = document.querySelector("#searchInput");
+  const typeSelect = document.querySelector("#typeSelect");
+  const resetBtn = document.querySelector("#resetBtn");
+  const resultCount = document.querySelector("#resultCount");
+  const activeLabel = document.querySelector("#activeLabel");
+  const chipButtons = Array.from(document.querySelectorAll("[data-chip]"));
+  let activeChip = "全部";
+
+  function tagClass(tag) {
+    if (["CXL","Memory","HBM","DDR5","eSSD","内存墙"].includes(tag)) return "tag-track";
+    if (["CPO","光模块","交换机","铜连接","高速互连"].includes(tag)) return "tag-cyan";
+    if (["PCB","CCL","ABF","MLCC","板级材料"].includes(tag)) return "tag-watch";
+    if (["液冷","电源","UPS","温控","IDC","风险排雷"].includes(tag)) return "tag-risk";
+    if (["A股","mda100","技术分","新闻修正","科技链"].includes(tag)) return "tag-report";
+    if (["核心池","买入观察","复盘","RS","表姐严选"].includes(tag)) return "tag-core";
+    return "tag-muted";
+  }
+
+  function entryText(entry) {
+    return [entry.title, entry.category, entry.type, entry.status, entry.desc, ...entry.tags].join(" ").toLowerCase();
+  }
+
+  function render() {
+    const keyword = searchInput.value.trim().toLowerCase();
+    const type = typeSelect.value;
+    const filtered = entries.filter(entry => {
+      const chipOk = activeChip === "全部" || entry.category === activeChip;
+      const typeOk = type === "全部" || entry.type === type;
+      const keywordOk = !keyword || entryText(entry).includes(keyword);
+      return chipOk && typeOk && keywordOk;
+    });
+
+    cards.innerHTML = filtered.map(entry => {
+      const href = entry.url === "#" ? "javascript:void(0)" : entry.url;
+      const target = entry.url.startsWith("http") ? ' target="_blank" rel="noopener"' : "";
+      const statusClass = entry.status === "线上" ? "live" : entry.status === "待补" ? "seed" : "";
+      return `
+        <a class="card" href="${href}"${target} style="border-left-color:${entry.accent}">
+          <div class="card-head">
+            <div class="card-title">
+              <strong>${entry.title}</strong>
+              <small>${entry.category}｜${entry.type}</small>
+            </div>
+            <span class="status ${statusClass}">${entry.status}</span>
+          </div>
+          <p>${entry.desc}</p>
+          <div class="card-tags">
+            ${entry.tags.map(tag => `<span class="pill ${tagClass(tag)}">${tag}</span>`).join("")}
+          </div>
+        </a>
+      `;
+    }).join("");
+
+    resultCount.textContent = filtered.length;
+    activeLabel.textContent = `${activeChip}｜${type === "全部" ? "全部类型" : type}`;
+    empty.style.display = filtered.length ? "none" : "block";
+  }
+
+  chipButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      activeChip = button.dataset.chip;
+      chipButtons.forEach(item => item.classList.toggle("active", item === button));
+      render();
+    });
+  });
+
+  searchInput.addEventListener("input", render);
+  typeSelect.addEventListener("change", render);
+  resetBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    typeSelect.value = "全部";
+    activeChip = "全部";
+    chipButtons.forEach(item => item.classList.toggle("active", item.dataset.chip === "全部"));
+    render();
+  });
+
+  document.querySelector("#metricLive").textContent = entries.filter(entry => entry.status === "线上").length;
+  document.querySelector("#metricSeed").textContent = entries.filter(entry => entry.status === "待补").length;
+  render();
+</script>
+</body>
+</html>
