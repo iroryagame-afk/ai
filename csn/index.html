@@ -51,13 +51,19 @@
     .model-switch { display:flex; align-items:center; gap:8px; overflow-x:auto; padding:8px 10px; border:1px solid #d7dee6; border-radius:8px; background:#fff; }
     .model-switch strong { flex:0 0 auto; color:#334155; font-size:13px; }
     .model-switch button { min-height:32px; padding:5px 10px; white-space:nowrap; }
-    .quick { display:flex; gap:8px; overflow-x:auto; padding-bottom:2px; }
+    .quick { display:flex; align-items:center; gap:8px; overflow-x:auto; padding-bottom:2px; }
     .quick button { white-space:nowrap; }
     .call-filter { display:flex; align-items:center; gap:8px; overflow-x:auto; padding:8px 10px; border:1px solid #d7dee6; border-radius:8px; background:#fff; }
     .call-filter strong { flex:0 0 auto; color:#334155; font-size:13px; }
     .call-filter label { flex:0 0 auto; display:inline-flex; align-items:center; gap:5px; min-height:30px; padding:4px 9px; border:1px solid #d7dee6; border-radius:999px; background:#f8fafc; color:#334155; font-size:13px; font-weight:750; cursor:pointer; }
     .call-filter input { min-height:0; width:14px; height:14px; padding:0; margin:0; accent-color:#0f766e; }
     .call-filter label:has(input:checked) { border-color:#99d7cc; background:#e9f8f5; color:#0f766e; }
+    .advanced-filter { flex:0 0 auto; display:flex; align-items:center; gap:8px; }
+    .advanced-filter summary { display:inline-flex; align-items:center; min-height:40px; padding:8px 10px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:#334155; font-weight:750; cursor:pointer; white-space:nowrap; }
+    .advanced-filter summary::-webkit-details-marker { display:none; }
+    .advanced-filter summary::after { content:"+"; margin-left:6px; color:#64748b; font-weight:900; }
+    .advanced-filter[open] summary::after { content:"-"; }
+    .advanced-actions { display:inline-flex; align-items:center; gap:8px; }
     .result-bar { display:flex; align-items:center; justify-content:space-between; gap:10px; margin:0 0 8px; padding:9px 11px; border:1px solid #d7dee6; border-radius:8px; background:#fff; box-shadow:0 6px 16px rgba(23,32,38,.04); color:#334155; font-size:13px; }
     .result-bar strong { color:#0f766e; font-size:16px; }
     .result-bar span { color:#64748b; }
@@ -181,28 +187,37 @@
       <button data-model="trend" class="active">主升优先</button>
       <button data-model="entry">今日买点</button>
       <button data-model="core">核心仓</button>
-      <button data-model="attack">进攻弹性</button>
     </section>
     <section class="quick" aria-label="快捷筛选">
       <button data-quick="star" class="active">群里重点</button>
-      <button data-quick="us">美股</button>
       <button data-quick="stage2">二阶段</button>
       <button data-quick="a6strong">A6强</button>
-      <button data-quick="extended">扩展过热</button>
-      <button data-quick="strong">RS强势候选</button>
-      <button data-quick="rs95">RS≥0.95</button>
-      <button data-quick="risk">只看风险</button>
       <button data-quick="verified" class="active">已核验</button>
       <button data-quick="reset">重置</button>
+      <details class="advanced-filter">
+        <summary>更多筛选</summary>
+        <div class="advanced-actions">
+          <button data-quick="us">美股</button>
+          <button data-quick="extended">扩展过热</button>
+          <button data-quick="strong">RS强势候选</button>
+          <button data-quick="rs95">RS≥0.95</button>
+          <button data-quick="risk">只看风险</button>
+        </div>
+      </details>
     </section>
     <section class="call-filter" aria-label="策略建议筛选">
       <strong>策略建议</strong>
       <label><input type="checkbox" data-call="买入观察" checked />买入观察</label>
       <label><input type="checkbox" data-call="持有" />持有</label>
-      <label><input type="checkbox" data-call="等待确认" />等待确认</label>
-      <label><input type="checkbox" data-call="不追/减仓" />不追/减仓</label>
-      <label><input type="checkbox" data-call="卖出/回避" />卖出/回避</label>
-      <label><input type="checkbox" data-call="观察" />观察</label>
+      <details class="advanced-filter">
+        <summary>更多策略</summary>
+        <div class="advanced-actions">
+          <label><input type="checkbox" data-call="等待确认" />等待确认</label>
+          <label><input type="checkbox" data-call="不追/减仓" />不追/减仓</label>
+          <label><input type="checkbox" data-call="卖出/回避" />卖出/回避</label>
+          <label><input type="checkbox" data-call="观察" />观察</label>
+        </div>
+      </details>
     </section>
   </header>
   <section class="controls" aria-label="筛选控件">
