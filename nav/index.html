@@ -280,7 +280,6 @@
     <button data-chip="整机">整机</button>
     <button data-chip="材料">材料</button>
     <button data-chip="电力散热">电力散热</button>
-    <button data-chip="A股">A股</button>
   </nav>
 
   <section class="controls" aria-label="筛选资料">
@@ -290,7 +289,6 @@
       <option value="主页面">主页面</option>
       <option value="专题报告">专题报告</option>
       <option value="预留专题">预留专题</option>
-      <option value="外部观察">外部观察</option>
     </select>
     <button id="resetBtn" type="button">重置</button>
   </section>
@@ -346,7 +344,7 @@
       <article class="lane" style="border-top-color:#0f766e">
         <h3>交易复盘 <span>买点 / 风险</span></h3>
         <p>把研究结论回落到买入观察、风险排雷、技术位置和新闻修正。</p>
-        <div class="lane-tags"><span class="pill tag-core">表姐严选</span><span class="pill tag-core">mda100</span><span class="pill tag-core">复盘</span></div>
+        <div class="lane-tags"><span class="pill tag-core">表姐严选</span><span class="pill tag-core">买入观察</span><span class="pill tag-core">复盘</span></div>
       </article>
     </div>
   </section>
@@ -393,16 +391,6 @@
       desc:"解释CXL是什么、产业状态、放量节奏、与CPO的类比、国内外环节和股票映射。",
       tags:["CXL","Memory","内存墙","DDR5","PCIe","图文报告"],
       accent:"var(--violet)"
-    },
-    {
-      title:"mda100 A股科技链",
-      url:"https://iroryagame-afk.github.io/ai-tracker/",
-      category:"A股",
-      type:"外部观察",
-      status:"外部",
-      desc:"A股科技链复盘和评分体系入口，适合与表姐严选的临时观察名单交叉复查。",
-      tags:["A股","mda100","技术分","新闻修正","科技链"],
-      accent:"var(--blue)"
     },
     {
       title:"CPO / 光互连专题",
@@ -491,7 +479,6 @@
     if (["CPO","光模块","交换机","铜连接","高速互连"].includes(tag)) return "tag-cyan";
     if (["PCB","CCL","ABF","MLCC","板级材料"].includes(tag)) return "tag-watch";
     if (["液冷","电源","UPS","温控","IDC","风险排雷"].includes(tag)) return "tag-risk";
-    if (["A股","mda100","技术分","新闻修正","科技链"].includes(tag)) return "tag-report";
     if (["核心池","买入观察","复盘","RS","表姐严选"].includes(tag)) return "tag-core";
     return "tag-muted";
   }
