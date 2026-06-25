@@ -24,6 +24,8 @@
     h1 { margin:0; font-size:clamp(20px,4vw,30px); letter-spacing:0; }
     .sub { display:grid; gap:3px; color:var(--muted); font-size:13px; overflow-wrap:anywhere; }
     .sub-line { display:block; }
+    .doc-link { display:inline-flex; align-items:center; width:max-content; max-width:100%; margin-top:3px; padding:4px 9px; border:1px solid #99d7cc; border-radius:999px; background:#e9f8f5; color:#0f766e; font-weight:850; text-decoration:none; }
+    .doc-link:hover { background:#d9f3ee; border-color:#65c3b5; }
     .summary { display:grid; gap:10px; }
     .summary-row { display:grid; grid-template-columns:1fr; gap:10px; align-items:stretch; }
     .panel,.metric { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; box-shadow:0 8px 18px rgba(23,32,38,.05); }
@@ -166,6 +168,7 @@
         <span class="sub-line">核验状态：OpenD端口未连接；已核验 352（来自本地落盘缓存），缓存缺失 26，暂不支持 49；部分未完成实时核验</span>
         <span class="sub-line">范围：核心精选去重后 427 个标的</span>
         <span class="sub-line">价格/均线/买点/止损/核心池动态RS=OpenD日K复算</span>
+        <span class="sub-line"><a class="doc-link" href="csn_algorithm_model_20260625_1301.html" target="_blank" rel="noopener">算法说明：表姐严选当前模型（2026-06-25 13:01）</a></span>
       </div>
     </div>
     <section class="summary">

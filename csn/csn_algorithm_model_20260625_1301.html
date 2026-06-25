@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>表姐严选算法说明 2026-06-25 13:01</title>
+<style>
+:root { color-scheme: light; --bg:#f4f8f7; --panel:#ffffff; --text:#142028; --muted:#667985; --green:#0f766e; --line:#d7e4e1; --soft:#e7f7f3; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.7; }
+main { max-width:980px; margin:0 auto; padding:24px 16px 56px; }
+article { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:26px; box-shadow:0 16px 40px rgba(20,32,40,.08); }
+h1 { margin:0 0 14px; font-size:30px; line-height:1.25; }
+h2 { margin-top:30px; padding-top:14px; border-top:1px solid var(--line); font-size:22px; }
+h3 { margin-top:22px; font-size:18px; }
+p, li { font-size:15px; }
+a { color:var(--green); font-weight:750; text-decoration:none; }
+a:hover { text-decoration:underline; }
+blockquote { margin:18px 0; padding:12px 16px; border-left:5px solid var(--green); background:var(--soft); border-radius:8px; }
+code { padding:2px 5px; border-radius:5px; background:#edf2f1; font-family:"SFMono-Regular",Consolas,monospace; font-size:.92em; }
+pre { overflow:auto; padding:14px; border-radius:10px; background:#132026; color:#e8fffa; }
+pre code { padding:0; background:transparent; color:inherit; }
+table { width:100%; border-collapse:collapse; margin:14px 0 20px; background:#fff; }
+th,td { border:1px solid var(--line); padding:8px 10px; vertical-align:top; font-size:14px; }
+th { background:#eaf3f1; text-align:left; }
+.footer { margin-top:22px; color:var(--muted); font-size:13px; }
+@media (max-width: 640px) { article { padding:18px 14px; } h1 { font-size:24px; } h2 { font-size:19px; } th,td { font-size:13px; } }
+</style>
+</head>
+<body>
+<main>
+<article>
+<h1>表姐严选：当前算法模型说明（2026-06-25 13:01）</h1>
+<p>生成时间：2026-06-25 13:01  </p>
+<p>对应脚本：<code>scripts/generate_ai_chain_overnight_html.py</code>  </p>
+<p>对应页面：<code>outputs/ai_chain_stock_reminder/ai_chain_overnight_screen_20260625.html</code>  </p>
+<p>线上页面：<code>https://csnpk.com/csn/</code></p>
+<blockquote>
+<p>默认口径：这是“开盘前关注清单”和“买入观察筛选器”，不是自动买卖指令。所有价格、均线、买点、止损、动态 RS 都以 Futu OpenD 日 K 复算结果为准；未完成 OpenD 核验的标的默认不进入首屏重点。</p>
+</blockquote>
+<h2>1. 股票池范围</h2>
+<p>当前页面只使用 Excel 附件中的 <code>核心精选</code> 去重股票池。</p>
+<p>数据读取来源：</p>
+<ul>
+<li><code>核心精选</code>：确定最终股票范围。</li>
+<li><code>AI产业链股票池</code>：补充主线、子环节、龙头地位、主营备注、市值、原表 RS、群里标记。</li>
+<li><code>均线监控</code>：作为初始动作、均线和买点字段来源，但最终会被 OpenD 日 K 复算覆盖。</li>
+</ul>
+<p>当前默认范围：</p>
+<ul>
+<li>核心精选去重后 427 个标的。</li>
+<li>默认筛选：<code>群里重点</code> + <code>已核验</code> + <code>买入观察</code>。</li>
+</ul>
+<h2>2. OpenD 核验逻辑</h2>
+<p>代码转 Futu 格式：</p>
+<ul>
+<li>美股：<code>US.代码</code></li>
+<li>A股：<code>SH.6/9开头</code>，<code>SZ.0/2/3开头</code></li>
+<li>港股：<code>HK.五位代码</code></li>
+<li>不符合格式的标的标记为：<code>OpenD暂未支持该市场/代码格式</code></li>
+</ul>
+<p>行情获取：</p>
+<ul>
+<li>使用 Futu OpenD：<code>127.0.0.1:11111</code></li>
+<li>订阅类型：<code>K_DAY</code></li>
+<li>取数接口：<code>get_cur_kline</code></li>
+<li>复权方式：<code>QFQ</code></li>
+<li>每只股票最多取 260 根日 K。</li>
+<li>至少需要 200 根有效 K 线，否则标记为 K 线不足。</li>
+</ul>
+<p>缓存机制：</p>
+<ul>
+<li>当日缓存路径：<code>outputs/ai_chain_stock_reminder/cache/futu_cur_kline_YYYYMMDD.json</code></li>
+<li>若缓存已有 200 根以上日 K，优先使用缓存并标记 <code>OpenD已核验(缓存)</code>。</li>
+<li>若 OpenD 未连接，可使用本地落盘缓存生成页面，但页面会标明缓存来源。</li>
+</ul>
+<h2>3. 均线与技术指标</h2>
+<p>OpenD 核验后，每只股票复算以下指标：</p>
+<table>
+<thead><tr><th>指标</th><th>计算方式</th></tr></thead><tbody>
+<tr><td>价格</td><td>最新日 K 收盘价</td></tr>
+<tr><td>EMA5 / EMA10 / EMA20 / EMA50 / EMA55 / EMA144 / EMA200</td><td>指数移动平均</td></tr>
+<tr><td>八周线</td><td>40 日 SMA</td></tr>
+<tr><td>距离 EMA</td><td><code>价格 / EMA - 1</code></td></tr>
+<tr><td>MA200 乖离</td><td><code>价格 / EMA200 - 1</code></td></tr>
+<tr><td>ATR</td><td>14 日 True Range 均值</td></tr>
+<tr><td>ATR%</td><td><code>ATR / 价格 * 100</code></td></tr>
+<tr><td>扩展10</td><td><code>(价格 - EMA10) / ATR</code></td></tr>
+<tr><td>扩展50</td><td><code>(价格 - EMA50) / ATR</code></td></tr>
+<tr><td>放量倍数</td><td>当日成交量 / 过去 20 日均量</td></tr>
+<tr><td>跳空幅度</td><td>当日开盘价 / 前收盘价 - 1</td></tr>
+<tr><td>20日新高</td><td>当前价格是否突破前 20 日高点</td></tr>
+<tr><td>20/60/120 日涨幅</td><td>当前收盘价相对对应周期前收盘价</td></tr>
+</tbody></table>
+<h2>4. 二阶段 / LH008 阶段模型</h2>
+<p>当前版本的二阶段不再只按 EMA200 乖离分段，已经加入 EMA200 斜率、EMA20/EMA55 关系和破 EMA55 警戒。</p>
+<table>
+<thead><tr><th>阶段</th><th>条件</th><th>页面说明</th></tr></thead><tbody>
+<tr><td>四阶段·200线下</td><td>价格 &lt; EMA200</td><td>不属于二阶段</td></tr>
+<tr><td>二阶段警戒·破55</td><td>价格 &gt; EMA200 但价格 &lt; EMA55</td><td>二阶段内先警戒，跌破 EMA200 才确认离开</td></tr>
+<tr><td>二阶段启动</td><td>价格 &gt; EMA200、EMA20 &gt; EMA55、EMA200 走平/上行、乖离 0%-10%</td><td>Stage=1 Launch</td></tr>
+<tr><td>二阶段推进</td><td>价格 &gt; EMA200、EMA20 &gt; EMA55、EMA200 走平/上行、乖离 10%-30%</td><td>Stage=2 Advance，主升浪核心区</td></tr>
+<tr><td>二阶段偏热</td><td>价格 &gt; EMA200、EMA20 &gt; EMA55、EMA200 走平/上行、乖离 30%-50%</td><td>Stage=3 Hot，仍属二阶段但不宜追高</td></tr>
+<tr><td>二阶段观察</td><td>价格 &gt; EMA200 且 EMA200 未恶化，但 EMA20/EMA55 尚未完全转强</td><td>早期观察</td></tr>
+<tr><td>一/二阶段交界</td><td>价格 &gt; EMA200 但 EMA200 仍下行</td><td>先观察，不按成熟主升处理</td></tr>
+<tr><td>三阶段高潮</td><td>价格高于 EMA200，乖离 50%-70%</td><td>Stage=4 Climax，优先持有/减仓观察</td></tr>
+<tr><td>三阶段危险</td><td>价格高于 EMA200，乖离 70%-100%</td><td>Stage=5 Danger，不追并加强风控</td></tr>
+<tr><td>极端扩展</td><td>价格高于 EMA200，乖离 &gt;100%</td><td>Stage=6 Extreme</td></tr>
+</tbody></table>
+<p>说明：</p>
+<ul>
+<li>EMA200 斜率使用当前 EMA200 与 20 个交易日前 EMA200 比较。</li>
+<li><code>EMA200斜率 &gt;= -2%</code> 视为走平或未恶化。</li>
+<li><code>EMA200斜率 &gt;= 0</code> 视为已经转上行。</li>
+</ul>
+<h2>5. A6 强弱模型</h2>
+<p>A6 使用 5 个短中期动量指标投票。</p>
+<table>
+<thead><tr><th>子项</th><th>多头条件</th></tr></thead><tbody>
+<tr><td>MTM</td><td>当前收盘价 &gt; 10 日前收盘价</td></tr>
+<tr><td>LWR</td><td>Williams %R &gt; -50</td></tr>
+<tr><td>RSI</td><td>52 &lt; RSI14 &lt; 78</td></tr>
+<tr><td>KDJ</td><td>K &gt; D 且 J &lt; 90</td></tr>
+<tr><td>MACD</td><td>DIF &gt; DEA</td></tr>
+</tbody></table>
+<p>得分：</p>
+<ul>
+<li><code>A6强</code>：4-5 分</li>
+<li><code>A6中</code>：3 分</li>
+<li><code>A6弱</code>：0-2 分</li>
+</ul>
+<p>页面筛选：</p>
+<ul>
+<li><code>A6强</code> 按钮只保留 A6 得分 &gt;= 4 的标的。</li>
+</ul>
+<h2>6. 动态 RS</h2>
+<p>动态 RS 不直接使用原表 RS，而是用 OpenD 日 K 复算。当前口径已明确为“核心池动态 RS”，不是全市场 RS。</p>
+<p>单票原始强度：</p>
+<pre><code>rs_raw = 120日涨幅 * 0.5 + 60日涨幅 * 0.3 + 20日涨幅 * 0.2</code></pre>
+<p>然后在“已完成 OpenD 核验且 rs_raw 有效”的核心池内做百分位排名：</p>
+<pre><code>动态RS = 当前标的 rs_raw 排名位置 / (有效标的数量 - 1)</code></pre>
+<p>含义：</p>
+<ul>
+<li>动态 RS 接近 1：在当前已核验核心池内相对最强。</li>
+<li>动态 RS 接近 0：在当前已核验核心池内相对最弱。</li>
+<li>原表 RS 会保留为 <code>rs_table</code>，但页面主排序和强度展示优先使用动态 RS。</li>
+</ul>
+<h2>7. 买点 / 止损 / 卖出线</h2>
+<p>买点：</p>
+<table>
+<thead><tr><th>字段</th><th>口径</th></tr></thead><tbody>
+<tr><td>买点A</td><td>EMA10，浅回踩，强势加仓观察</td></tr>
+<tr><td>买点B</td><td>EMA20，正常回踩</td></tr>
+<tr><td>买点C</td><td>EMA55，深回踩，中期买点，守住才买</td></tr>
+</tbody></table>
+<p>止损：</p>
+<pre><code>止损 = max(EMA10 * 0.92, 八周线)</code></pre>
+<p>页面说明：</p>
+<ul>
+<li>买点A按 EMA10 -8% 和八周线取更靠上者。</li>
+<li>买点C按跌破 EMA55 风控。</li>
+</ul>
+<p>减仓 / 清仓参考：</p>
+<ul>
+<li>破 EMA5：减仓观察。</li>
+<li>破 EMA10：清仓或等待重新站回。</li>
+<li>破 EMA55：中期破位，优先卖出/回避。</li>
+</ul>
+<h2>8. 技术动作分类</h2>
+<p>OpenD 复算后，先生成 <code>action</code>，再映射为策略建议。</p>
+<p>技术动作优先级：</p>
+<table>
+<thead><tr><th>条件</th><th>action</th><th>策略含义</th></tr></thead><tbody>
+<tr><td>价格相对 EMA200 乖离 &gt;=100%</td><td>不追·极度乖离</td><td>立即风控</td></tr>
+<tr><td>价格相对 EMA200 乖离 70%-100%</td><td>不追·严重乖离</td><td>只减/等回踩</td></tr>
+<tr><td>价格 &lt; EMA55</td><td>破EMA55·中期破位</td><td>卖出/回避</td></tr>
+<tr><td>0 &lt;= 距 EMA55 &lt;= 5%</td><td>踩EMA55·中期买点观察</td><td>深回踩观察</td></tr>
+<tr><td>价格 &lt; 八周线</td><td>破八周线·警戒</td><td>减仓/风控</td></tr>
+<tr><td>价格 &lt; EMA10</td><td>低于EMA10·等站回确认</td><td>等待确认</td></tr>
+<tr><td>突破前20日高点且放量倍数 &gt;= 1.3，价格 &gt; EMA10</td><td>放量突破·买入观察</td><td>买入观察</td></tr>
+<tr><td>跳空幅度 &gt;= 3%，放量倍数 &gt;= 1.5，价格 &gt; EMA10</td><td>跳空放量·买入观察</td><td>买入观察</td></tr>
+<tr><td>二阶段内，价格 &gt; EMA10/EMA20，放量倍数 &gt;= 1.2</td><td>二阶段量价确认·买入观察</td><td>买入观察</td></tr>
+<tr><td>0 &lt;= 距 EMA10 &lt;= 3%</td><td>踩EMA10·浅回踩观察</td><td>买入观察</td></tr>
+<tr><td>0 &lt;= 距 EMA20 &lt;= 4%</td><td>踩EMA20·正常回踩观察</td><td>买入观察</td></tr>
+<tr><td>价格 &gt; EMA5 &gt; EMA10 &gt; EMA20 &gt; EMA55</td><td>多头排列·持有</td><td>持有</td></tr>
+<tr><td>其他</td><td>技术观察·等更清晰买点</td><td>观察</td></tr>
+</tbody></table>
+<p>策略建议映射：</p>
+<table>
+<thead><tr><th>action / 分类</th><th>页面策略建议</th></tr></thead><tbody>
+<tr><td>破EMA55 / 破八周 / 中期破位</td><td>卖出/回避</td></tr>
+<tr><td>极度乖离 / 严重乖离 / 不追</td><td>不追/减仓</td></tr>
+<tr><td>踩EMA10 / 踩EMA20 / 踩EMA55 / 低吸 / 可动手</td><td>买入观察</td></tr>
+<tr><td>多头排列 / 持有</td><td>持有</td></tr>
+<tr><td>等确认 / 站回 / 低于EMA10</td><td>等待确认</td></tr>
+<tr><td>强势候选 / 高RS观察</td><td>观察</td></tr>
+<tr><td>风险/剔除</td><td>风控</td></tr>
+</tbody></table>
+<h2>9. 信号分类</h2>
+<p>页面的原始分类字段为 <code>category</code>。</p>
+<table>
+<thead><tr><th>分类</th><th>触发逻辑</th></tr></thead><tbody>
+<tr><td>行动信号</td><td>action 含 ✅、低吸、可动手、浅回踩</td></tr>
+<tr><td>等确认</td><td>action 含 🟡、待、确认、站上EMA10</td></tr>
+<tr><td>风险/剔除</td><td>action 含 🔴、🚫、减、清仓、破EMA10清、止损、不追；或 action 含“破”且不是“站上”</td></tr>
+<tr><td>技术观察</td><td>有技术数据但没有明确动作</td></tr>
+<tr><td>强势候选</td><td>动态 RS &gt;= 0.95，且是群里重点/有龙头地位/强主线</td></tr>
+<tr><td>高RS观察</td><td>动态 RS &gt;= 0.85</td></tr>
+<tr><td>核心跟踪</td><td>群里重点或有龙头地位</td></tr>
+<tr><td>资料池</td><td>其他</td></tr>
+</tbody></table>
+<h2>10. 老优先级分数 score_for</h2>
+<p>这是旧版排序分，仍保留在数据里，但当前页面默认排序已经切到四模型分数。</p>
+<pre><code>score =
+  分类基础分
+  + 动态RS * 20
+  + 市值加分
+  + 群里重点加分
+  + 龙头地位加分
+  + 主线权重
+  + 技术核验加分</code></pre>
+<p>分类基础分：</p>
+<table>
+<thead><tr><th>分类</th><th>基础分</th></tr></thead><tbody>
+<tr><td>行动信号</td><td>100</td></tr>
+<tr><td>等确认</td><td>86</td></tr>
+<tr><td>强势候选</td><td>76</td></tr>
+<tr><td>高RS观察</td><td>64</td></tr>
+<tr><td>技术观察</td><td>58</td></tr>
+<tr><td>核心跟踪</td><td>50</td></tr>
+<tr><td>风险/剔除</td><td>28</td></tr>
+<tr><td>资料池</td><td>10</td></tr>
+</tbody></table>
+<p>其他加分：</p>
+<ul>
+<li>市值加分：<code>min(8, log10(市值 + 1))</code></li>
+<li>群里重点：+8</li>
+<li>龙头地位：+7</li>
+<li>有技术核验：+8</li>
+<li>动态 RS：<code>RS * 20</code></li>
+</ul>
+<p>主线权重：</p>
+<table>
+<thead><tr><th>主线</th><th>分值</th></tr></thead><tbody>
+<tr><td>光模块·铜连接·CPO</td><td>12</td></tr>
+<tr><td>GPU·算力·AI芯片</td><td>11</td></tr>
+<tr><td>存储</td><td>10</td></tr>
+<tr><td>半导体设备·材料</td><td>9</td></tr>
+<tr><td>电力·数据中心·散热</td><td>8</td></tr>
+<tr><td>算力租赁·服务器·硬件</td><td>7</td></tr>
+<tr><td>PCB·基板·材料·被动</td><td>6</td></tr>
+<tr><td>软件·互联网</td><td>5</td></tr>
+</tbody></table>
+<h2>11. 当前四套评分模型</h2>
+<p>页面当前有四套评分模型，数据里全部保留；主界面当前只露出三个：<code>主升优先</code>、<code>今日买点</code>、<code>核心仓</code>。  </p>
+<p>默认排序模型：<code>主升优先</code>。</p>
+<h3>11.1 归一化因子</h3>
+<p>阶段因子：</p>
+<table>
+<thead><tr><th>阶段</th><th>归一值</th></tr></thead><tbody>
+<tr><td>二阶段启动</td><td>1.00</td></tr>
+<tr><td>二阶段推进</td><td>0.92</td></tr>
+<tr><td>二阶段偏热</td><td>0.68</td></tr>
+<tr><td>三阶段高潮</td><td>0.32</td></tr>
+<tr><td>三阶段危险</td><td>0.05</td></tr>
+<tr><td>极端扩展</td><td>0.00</td></tr>
+<tr><td>四阶段·200线下</td><td>0.00</td></tr>
+</tbody></table>
+<p>买点因子：</p>
+<table>
+<thead><tr><th>action</th><th>归一值</th></tr></thead><tbody>
+<tr><td>鲜入S2 / 鲜入</td><td>1.00</td></tr>
+<tr><td>推进回踩 / ADVANCE</td><td>0.96</td></tr>
+<tr><td>放量突破</td><td>0.92</td></tr>
+<tr><td>跳空放量</td><td>0.90</td></tr>
+<tr><td>二阶段量价确认</td><td>0.86</td></tr>
+<tr><td>踩EMA10</td><td>0.88</td></tr>
+<tr><td>踩EMA20</td><td>0.80</td></tr>
+<tr><td>踩EMA55</td><td>0.72</td></tr>
+<tr><td>突破 / 收复EMA50 / 站上</td><td>0.72</td></tr>
+<tr><td>多头排列 / 持有</td><td>0.42</td></tr>
+<tr><td>低于EMA10 / 等站回 / 确认</td><td>0.22</td></tr>
+<tr><td>破 / 不追 / 风控</td><td>0.00</td></tr>
+<tr><td>无明确买点</td><td>0.18</td></tr>
+</tbody></table>
+<p>RS 因子：</p>
+<table>
+<thead><tr><th>动态 RS</th><th>归一值</th></tr></thead><tbody>
+<tr><td>&gt;= 0.95</td><td>1.00</td></tr>
+<tr><td>&gt;= 0.85</td><td>0.80</td></tr>
+<tr><td>&gt;= 0.70</td><td>0.53</td></tr>
+<tr><td>&gt;= 0.50</td><td>0.27</td></tr>
+<tr><td>&lt; 0.50</td><td>0.00</td></tr>
+</tbody></table>
+<p>A6 因子：</p>
+<pre><code>A6因子 = A6得分 / 5</code></pre>
+<p>产业因子：</p>
+<table>
+<thead><tr><th>条件</th><th>加分</th></tr></thead><tbody>
+<tr><td>有龙头/地位</td><td>+0.45</td></tr>
+<tr><td>群里重点</td><td>+0.25</td></tr>
+<tr><td>主线权重 &gt;= 10</td><td>+0.30</td></tr>
+<tr><td>主线权重 8-9</td><td>+0.20</td></tr>
+</tbody></table>
+<p>产业因子最高封顶 1.00。</p>
+<p>波动因子：</p>
+<pre><code>波动因子 = min(ATR% / 10, 1)</code></pre>
+<h3>11.2 风险扣分</h3>
+<table>
+<thead><tr><th>风险项</th><th>条件</th><th>扣分</th></tr></thead><tbody>
+<tr><td>扩展10危险</td><td>扩展10 &gt;= 7</td><td>-6</td></tr>
+<tr><td>扩展10偏高</td><td>扩展10 &gt;= 4</td><td>-3</td></tr>
+<tr><td>扩展50危险</td><td>扩展50 &gt;= 8</td><td>-6</td></tr>
+<tr><td>扩展50偏高</td><td>扩展50 &gt;= 5</td><td>-3</td></tr>
+<tr><td>九转衰竭</td><td>abs(九转) &gt;= 9</td><td>-4</td></tr>
+<tr><td>ATR过高</td><td>ATR% &gt;= 10</td><td>-6</td></tr>
+<tr><td>ATR偏高</td><td>ATR% &gt;= 7</td><td>-3</td></tr>
+<tr><td>跳空过大</td><td>跳空幅度 &gt;= 8%</td><td>-4</td></tr>
+<tr><td>阶段危险</td><td>三阶段危险 / 极端扩展</td><td>-8</td></tr>
+<tr><td>二阶段破55警戒</td><td>二阶段警戒·破55</td><td>-5</td></tr>
+<tr><td>风险分类</td><td>category = 风险/剔除</td><td>-8</td></tr>
+</tbody></table>
+<p>每个模型都有风险扣分上限。</p>
+<h3>11.3 模型权重</h3>
+<p>最终分数：</p>
+<pre><code>模型分 = clamp(正向分 - min(风险扣分, 模型风险上限), 0, 100)</code></pre>
+<table>
+<thead><tr><th>模型</th><th>阶段</th><th>买点</th><th>RS</th><th>A6</th><th>产业</th><th>群里重点</th><th>波动</th><th>风险上限</th><th>适用场景</th></tr></thead><tbody>
+<tr><td>主升优先</td><td>25</td><td>25</td><td>15</td><td>10</td><td>10</td><td>5</td><td>0</td><td>10</td><td>默认排序，找二阶段趋势好、买点不差的票</td></tr>
+<tr><td>今日买点</td><td>20</td><td>35</td><td>15</td><td>10</td><td>5</td><td>5</td><td>0</td><td>10</td><td>找更贴近 EMA10/20/55 的当日可观察买点</td></tr>
+<tr><td>核心仓</td><td>20</td><td>10</td><td>15</td><td>5</td><td>25</td><td>5</td><td>0</td><td>10</td><td>找产业地位更硬、适合核心跟踪的票</td></tr>
+<tr><td>进攻弹性</td><td>15</td><td>25</td><td>25</td><td>10</td><td>10</td><td>5</td><td>10</td><td>15</td><td>找高 RS、高波动、高弹性票；当前主界面已隐藏</td></tr>
+</tbody></table>
+<h2>12. 默认页面筛选</h2>
+<p>当前默认打开页面时：</p>
+<ul>
+<li>快捷筛选：<code>群里重点</code>、<code>已核验</code></li>
+<li>策略建议：<code>买入观察</code>，并默认要求当前模型分 &gt;= 55</li>
+<li>默认排序：<code>主升优先</code> 模型分，从高到低。</li>
+</ul>
+<p>主界面保留按钮：</p>
+<ul>
+<li>评分模型：<code>主升优先</code>、<code>今日买点</code>、<code>核心仓</code></li>
+<li>快捷筛选：<code>群里重点</code>、<code>二阶段</code>、<code>A6强</code>、<code>已核验</code>、<code>重置</code></li>
+<li>策略建议：<code>买入观察</code>、<code>持有</code></li>
+</ul>
+<p>收起到更多筛选：</p>
+<ul>
+<li><code>美股</code></li>
+<li><code>扩展过热</code></li>
+<li><code>RS强势候选</code></li>
+<li><code>RS≥0.95</code></li>
+<li><code>只看风险</code></li>
+</ul>
+<p>收起到更多策略：</p>
+<ul>
+<li><code>等待确认</code></li>
+<li><code>不追/减仓</code></li>
+<li><code>卖出/回避</code></li>
+<li><code>观察</code></li>
+</ul>
+<h2>13. 今日关注名单生成</h2>
+<p>顶部“买入观察名单”目前使用以下条件：</p>
+<pre><code>OpenD已核验
+AND 群里重点 = ★
+AND 策略建议 = 买入观察
+AND category != 风险/剔除
+AND 主升优先模型分 &gt;= 55</code></pre>
+<p>排序：</p>
+<p>1. 策略建议排序：买入观察优先。</p>
+<p>2. 主升优先模型分从高到低。</p>
+<p>3. 动态 RS 从高到低。</p>
+<p>4. 老优先级分数 score 从高到低。</p>
+<p>5. 股票代码排序。</p>
+<h2>14. 目前可以继续优化的点</h2>
+<p>1. “进攻弹性”模型目前只隐藏在主界面，但数据仍计算。若以后想专门找短线弹性，可重新露出。</p>
+<p>2. 动态 RS 当前只在核心池内排名，不是全市场 RS；优点是更贴近本页面股票池，缺点是不能代表全市场强弱。</p>
+<p>3. 量价结构已经加入放量、跳空、20日新高，但还没有做更复杂的平台突破、缺口不回补、成交额放大和筹码压力判断。</p>
+<p>4. 顶部今日关注现在更严格：必须同时满足“群里重点 + 已核验 + 买入观察 + 主升分&gt;=55”。</p>
+<p class="footer">文件生成时间：2026-06-25 13:01 ｜ UTF-8 HTML 版，避免 Markdown 直开乱码。</p>
+</article>
+</main>
+</body>
+</html>
