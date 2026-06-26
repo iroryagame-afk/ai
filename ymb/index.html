@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>掩膜版 3+2 研究卡</title>
+  <meta name="description" content="清溢光电、路维光电、龙图光罩、菲利华、聚和材料的掩膜版产业链位置、客户证据、技术图形与研究型目标价。">
+  <style>
+    :root {
+      --bg: #f6f7f3;
+      --ink: #17201b;
+      --muted: #667067;
+      --line: #d8ded4;
+      --panel: #ffffff;
+      --panel2: #eef4f1;
+      --green: #1d7658;
+      --blue: #2d5f8f;
+      --amber: #9a6a18;
+      --red: #9a3f3f;
+      --shadow: 0 18px 50px rgba(31, 45, 34, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.58;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1180px, calc(100% - 28px)); margin: 0 auto; }
+    header {
+      padding: 34px 0 24px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #fbfcf8 0%, #f6f7f3 100%);
+    }
+    .topline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px 10px;
+      background: rgba(255,255,255,.75);
+      color: #3d493f;
+      white-space: nowrap;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 56px);
+      line-height: 1.04;
+      letter-spacing: 0;
+      max-width: 920px;
+    }
+    .lead {
+      margin: 18px 0 0;
+      max-width: 920px;
+      color: #39443d;
+      font-size: 18px;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      padding: 24px 0 10px;
+      align-items: stretch;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .panel h2, section h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+    .rank-list {
+      display: grid;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .rank-list li {
+      display: grid;
+      grid-template-columns: 36px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #edf0eb;
+    }
+    .rank-list li:last-child { border-bottom: 0; }
+    .num {
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--panel2);
+      font-weight: 800;
+      color: var(--green);
+    }
+    .stock strong { display: block; font-size: 17px; }
+    .stock span { display: block; color: var(--muted); font-size: 13px; }
+    .verdict {
+      font-weight: 700;
+      color: var(--green);
+      white-space: nowrap;
+    }
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 8px 0 0;
+    }
+    main { padding: 18px 0 48px; }
+    section { margin-top: 24px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 780px;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 11px 12px;
+      border-bottom: 1px solid #e9ede6;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: #435047;
+      font-size: 13px;
+      background: #f1f5ee;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    tr:last-child td { border-bottom: 0; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      min-height: 24px;
+      padding: 2px 9px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+    .p-green { color: #145a43; background: #e5f4ec; border-color: #c5e5d4; }
+    .p-blue { color: #214f78; background: #e7f0f8; border-color: #c6dcee; }
+    .p-amber { color: #73500d; background: #fbf0d8; border-color: #ead39e; }
+    .p-red { color: #853636; background: #fae8e8; border-color: #ecc6c6; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .mini {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+      min-height: 166px;
+    }
+    .mini h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+    .mini p { margin: 7px 0; font-size: 13px; color: var(--muted); }
+    .metric { font-size: 20px; font-weight: 800; color: var(--ink); }
+    .source-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .source-list li { margin: 5px 0; }
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+    }
+    @media (max-width: 920px) {
+      .summary, .grid { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 18px, 1180px); }
+      header { padding-top: 24px; }
+      .lead { font-size: 16px; }
+      .rank-list li { grid-template-columns: 30px 1fr; }
+      .verdict { grid-column: 2; white-space: normal; }
+      .cards { grid-template-columns: 1fr; }
+      .panel { padding: 14px; }
+      th, td { padding: 10px; }
+      table { font-size: 13px; min-width: 720px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="topline">
+        <span class="tag">掩膜版 3+2</span>
+        <span class="tag">Serenity 瓶颈视角</span>
+        <span class="tag">Futu OpenD 核验：2026-06-26</span>
+        <span class="tag">6-12个月研究型目标价</span>
+      </div>
+      <h1>先看卡住的位置，再看谁离客户最近</h1>
+      <p class="lead">这页把清溢光电、路维光电、龙图光罩、菲利华、聚和材料放在同一张产业链图里看：谁是成品光罩，谁是上游材料，谁有明确客户，谁只是新故事。</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="summary">
+      <div class="panel">
+        <h2>一句话结论</h2>
+        <p>如果只买“掩膜版正股”，优先看 <strong>龙图光罩</strong>，其次是清溢光电和路维光电；如果买新增卡脖子故事，看 <strong>聚和材料</strong> 的 Blank Mask 收购；如果买更上游材料外溢，看 <strong>菲利华</strong>。当前不适合把整条线一把追高，龙图偏主线，聚和偏弹性，清溢/路维等回踩，菲利华放材料观察位。</p>
+        <p class="note">默认口径：研究支持，不构成投资建议。</p>
+      </div>
+      <div class="panel">
+        <h2>综合优先级</h2>
+        <ol class="rank-list">
+          <li><span class="num">1</span><span class="stock"><strong>龙图光罩 688721</strong><span>半导体光罩龙一</span></span><span class="verdict">主线最纯</span></li>
+          <li><span class="num">2</span><span class="stock"><strong>聚和材料 688503</strong><span>Blank Mask 新逻辑</span></span><span class="verdict">弹性补充</span></li>
+          <li><span class="num">3</span><span class="stock"><strong>清溢光电 688138</strong><span>显示强，半导体推进</span></span><span class="verdict">稳健正股</span></li>
+          <li><span class="num">4</span><span class="stock"><strong>路维光电 688401</strong><span>高世代显示 + 半导体</span></span><span class="verdict">等回踩</span></li>
+          <li><span class="num">5</span><span class="stock"><strong>菲利华 300395</strong><span>石英材料/基板映射</span></span><span class="verdict">材料观察</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <section>
+      <h2>产业链卡点</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>层级</th>
+              <th>公司</th>
+              <th>卡住的环节</th>
+              <th>核心产品阶段</th>
+              <th>判断</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>半导体成品光罩</td>
+              <td><strong>龙图光罩</strong></td>
+              <td>90nm/65nm成熟制程光罩，向40-28nm推进</td>
+              <td><span class="pill p-green">规模放量期</span></td>
+              <td>产业纯度和客户证据最强，是主线龙一。</td>
+            </tr>
+            <tr>
+              <td>显示 + 半导体掩膜版</td>
+              <td><strong>清溢光电、路维光电</strong></td>
+              <td>高世代显示、先进封装、成熟制程半导体掩膜版</td>
+              <td><span class="pill p-green">规模放量期</span></td>
+              <td>客户基础扎实，但显示业务权重仍高。</td>
+            </tr>
+            <tr>
+              <td>空白掩模 Blank Mask</td>
+              <td><strong>聚和材料</strong></td>
+              <td>DUV-ArF / DUV-KrF 空白掩模基板收购</td>
+              <td><span class="pill p-amber">客户认证期 / 试点部署期</span></td>
+              <td>新故事强，但客户名称和国内收入节奏未公开。</td>
+            </tr>
+            <tr>
+              <td>石英材料 / 光掩膜基板</td>
+              <td><strong>菲利华</strong></td>
+              <td>石英玻璃材料、半导体石英耗材、光掩膜基板</td>
+              <td><span class="pill p-blue">规模放量期</span></td>
+              <td>材料确定性不错，掩膜版主题映射更间接。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>主要客户证据</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>股票</th>
+              <th>公开披露客户 / 认证方</th>
+              <th>客户确定性</th>
+              <th>关键提醒</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>龙图光罩</strong></td>
+              <td>华虹半导体、芯联集成、士兰微、积塔半导体、新唐科技、比亚迪半导体、立昂微、燕东微、粤芯半导体、长飞先进、扬杰科技；材料还提到英诺赛科、三安光电等认证/客户资源。</td>
+              <td><span class="pill p-green">最高</span></td>
+              <td>半导体光罩客户披露最直接。</td>
+            </tr>
+            <tr>
+              <td><strong>清溢光电</strong></td>
+              <td>显示：京东方、维信诺、惠科、天马、TCL华星、信利、龙腾光电、群创光电、华佳彩。半导体：芯联集成、中车时代、比亚迪半导体、三安光电、长电科技、通富微电、艾克尔、士兰微、积塔半导体等。</td>
+              <td><span class="pill p-blue">中高</span></td>
+              <td>客户广，但半导体收入体量还不是最纯。</td>
+            </tr>
+            <tr>
+              <td><strong>路维光电</strong></td>
+              <td>显示：京东方、TCL华星、天马、维信诺、寰采星。半导体/封装/PCB：晶方科技、华天科技、通富微电、三安光电、奥特斯、鹏鼎控股、众凌科技。</td>
+              <td><span class="pill p-blue">中高</span></td>
+              <td>前五大销售表匿名，客户集中度较高。</td>
+            </tr>
+            <tr>
+              <td><strong>聚和材料</strong></td>
+              <td>原主业光伏客户：通威太阳能、晶科能源、天合光能、晶澳科技、阿特斯、捷泰科技、爱旭股份、中润新能源、英发集团、正泰新能源、横店东磁等。Blank Mask：只披露多家晶圆厂及第三方掩模板客户验证并量产，未点名。</td>
+              <td><span class="pill p-amber">中</span></td>
+              <td>不能写成已绑定中芯、华虹、长鑫。</td>
+            </tr>
+            <tr>
+              <td><strong>菲利华</strong></td>
+              <td>认证方：TEL、Lam Research、Applied Materials、日立高新；子公司石英制品通过中微公司、北方华创等国内设备厂商认证。</td>
+              <td><span class="pill p-amber">中</span></td>
+              <td>更像设备耗材/石英材料链，不是掩膜版正股。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Futu OpenD 图形快照</h2>
+      <div class="cards">
+        <article class="mini">
+          <h3>龙图光罩</h3>
+          <div class="metric">54.22</div>
+          <p>二阶段推进；压力 55.55；支撑 51.66 / 49.71。</p>
+          <p>形态：主线里最均衡，不算极端。</p>
+        </article>
+        <article class="mini">
+          <h3>聚和材料</h3>
+          <div class="metric">94.98</div>
+          <p>贴 EMA10/20/55；强弱线约 94.5；压力 101.48 / 121.03。</p>
+          <p>形态：5只里技术位置最舒服。</p>
+        </article>
+        <article class="mini">
+          <h3>清溢光电</h3>
+          <div class="metric">42.55</div>
+          <p>二阶段偏热；压力 44.98；支撑 39.08 / 37.03。</p>
+          <p>形态：强，但短线乖离偏大。</p>
+        </article>
+        <article class="mini">
+          <h3>路维光电</h3>
+          <div class="metric">89.63</div>
+          <p>二阶段过热；压力 91.83；支撑 82.53 / 79.20。</p>
+          <p>形态：等回踩比追高更合理。</p>
+        </article>
+        <article class="mini">
+          <h3>菲利华</h3>
+          <div class="metric">139.96</div>
+          <p>二阶段偏热；压力 144.88 / 153.58；支撑 132.55 / 130.29。</p>
+          <p>形态：趋势还在，主题纯度靠后。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>评级与目标价</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>股票</th>
+              <th>最终评级</th>
+              <th>保守目标价</th>
+              <th>基准目标价</th>
+              <th>乐观目标价</th>
+              <th>操作风格</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>龙图光罩</strong></td><td>强候选 / 龙一</td><td>56-60</td><td>65-72</td><td>80-88</td><td>主线仓，等突破或回踩确认。</td></tr>
+            <tr><td><strong>聚和材料</strong></td><td>弹性观察仓</td><td>101-105</td><td>115-125</td><td>135-150</td><td>事件弹性仓，盯交割和客户导入。</td></tr>
+            <tr><td><strong>清溢光电</strong></td><td>趋势观察</td><td>45-48</td><td>52-58</td><td>65-70</td><td>稳健正股，等乖离收敛。</td></tr>
+            <tr><td><strong>路维光电</strong></td><td>等回踩观察</td><td>92-96</td><td>105-115</td><td>125-135</td><td>好公司但短线偏热。</td></tr>
+            <tr><td><strong>菲利华</strong></td><td>材料侧辅助</td><td>145-154</td><td>165-180</td><td>195-210</td><td>上游材料配置，不当光罩龙头。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <h2>什么情况说明判断错了</h2>
+        <p>龙图的40-28nm客户验证显著慢于预期，或成熟制程光罩价格战恶化；聚和材料收购交割、人员绑定或大陆扩产不顺；清溢、路维半导体收入占比迟迟上不来；菲利华光掩膜基板没有形成可见收入，这些都会削弱本页排序。</p>
+      </div>
+      <div class="panel">
+        <h2>下一步核验</h2>
+        <p>重点盯龙图募投问询回复、40-28nm验证进度；聚和材料 Lumina Mask 交割完成公告、国内扩产计划和是否披露客户；清溢/路维半导体掩膜版收入占比；菲利华光掩膜基板项目投产和客户认证。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>资料来源</h2>
+      <ul class="source-list">
+        <li><a href="http://static.cninfo.com.cn/finalpage/2026-04-27/1225197584.PDF">清溢光电 2025 年年度报告</a></li>
+        <li><a href="http://static.cninfo.com.cn/finalpage/2026-04-17/1225113244.PDF">路维光电 2025 年年度报告</a></li>
+        <li><a href="http://static.cninfo.com.cn/finalpage/2026-04-29/1225247471.PDF">龙图光罩 2026 年度向特定对象发行 A 股股票募集说明书</a></li>
+        <li><a href="http://static.cninfo.com.cn/finalpage/2026-04-24/1225161586.PDF">菲利华 2025 年年度报告</a></li>
+        <li><a href="http://static.cninfo.com.cn/finalpage/2026-03-31/1225060850.PDF">聚和材料 2025 年年度报告</a></li>
+        <li><a href="https://www.stcn.com/article/detail/3330047.html">证券时报：聚和材料拟收购 SKE 空白掩模业务</a></li>
+        <li><a href="https://www.appliedmaterials.com/cn/zh_cn/semiconductor/products/processes/photomask.html">Applied Materials：光掩膜产业说明</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">生成时间：2026-06-26 16:55 BJT。页面用途：研究复盘与分享，不构成投资建议。</div>
+  </footer>
+</body>
+</html>
