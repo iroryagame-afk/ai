@@ -1,0 +1,4 @@
+interface:
+  display_name: "股票位置择时"
+  short_description: "按本地模型核验A股买卖位置支撑压力风控点并给出动作"
+  default_prompt: "Use $stock-position-timing to judge an A-share stock's buy, hold, reduce, and stop-loss position."

@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{TICKER}} 择时竖图</title>
+  <style>
+    :root {
+      --paper: #f2f2f2;
+      --ink: #2d2926;
+      --muted: #6f6a64;
+      --teal: #b8d8be;
+      --teal-dark: #4f8068;
+      --pink: #e91e63;
+      --yellow: #fff200;
+      --panel: rgba(255,255,255,.78);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #d8d8d8;
+      display: grid;
+      place-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      color: var(--ink);
+    }
+
+    .canvas {
+      position: relative;
+      width: 1080px;
+      height: 2600px;
+      padding: 54px;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(45,41,38,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,41,38,.055) 1px, transparent 1px),
+        var(--paper);
+      background-size: 32px 32px;
+      border: 1px solid rgba(45,41,38,.24);
+    }
+
+    .canvas::before,
+    .canvas::after {
+      content: "";
+      position: absolute;
+      inset: 32px;
+      border: 1px solid rgba(45,41,38,.32);
+      pointer-events: none;
+    }
+
+    .canvas::after {
+      inset: 48px;
+      border-style: dashed;
+      opacity: .36;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: var(--muted);
+    }
+
+    .barcode {
+      width: 220px;
+      height: 28px;
+      background:
+        linear-gradient(90deg,
+          var(--ink) 0 6px, transparent 6px 12px,
+          var(--ink) 12px 18px, transparent 18px 30px,
+          var(--ink) 30px 44px, transparent 44px 52px,
+          var(--ink) 52px 58px, transparent 58px 70px,
+          var(--ink) 70px 92px, transparent 92px 104px,
+          var(--ink) 104px 110px, transparent 110px 132px,
+          var(--ink) 132px 146px, transparent 146px 154px,
+          var(--ink) 154px 176px, transparent 176px 188px,
+          var(--ink) 188px 194px, transparent 194px 220px);
+      opacity: .74;
+    }
+
+    header {
+      position: relative;
+      padding-bottom: 22px;
+      border-bottom: 5px solid var(--ink);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 104px;
+      line-height: .92;
+      font-weight: 950;
+    }
+
+    .title-row {
+      display: grid;
+      grid-template-columns: 1fr 310px;
+      gap: 24px;
+      align-items: end;
+    }
+
+    .ticker {
+      display: inline-block;
+      padding: 0 16px 8px;
+      background: var(--yellow);
+      box-shadow: 12px 10px 0 rgba(233,30,99,.16);
+    }
+
+    .price-card {
+      border: 3px solid var(--ink);
+      background: var(--teal);
+      padding: 18px;
+      min-height: 180px;
+    }
+
+    .price-card .label {
+      font-size: 24px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .price-card .price {
+      font-size: 64px;
+      font-weight: 950;
+      line-height: 1;
+    }
+
+    .price-card .change {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 6px 10px;
+      background: var(--pink);
+      color: white;
+      font-size: 26px;
+      font-weight: 900;
+    }
+
+    .subtitle {
+      margin: 18px 0 0;
+      font-size: 30px;
+      line-height: 1.35;
+      max-width: 900px;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .module {
+      position: relative;
+      background: var(--panel);
+      border: 3px solid var(--ink);
+      padding: 20px;
+      min-height: 226px;
+      box-shadow: 8px 8px 0 rgba(45,41,38,.12);
+    }
+
+    .module.wide { grid-column: span 2; }
+    .module.tall { min-height: 306px; }
+    .module.alert { border-color: var(--pink); }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 5px 10px;
+      background: var(--ink);
+      color: #fff;
+      font-size: 21px;
+      font-weight: 850;
+    }
+
+    .tag.pink { background: var(--pink); }
+    .tag.teal { background: var(--teal-dark); }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 36px;
+      line-height: 1.08;
+    }
+
+    p {
+      margin: 0;
+      font-size: 27px;
+      line-height: 1.38;
+      font-weight: 650;
+    }
+
+    .big {
+      font-size: 50px;
+      line-height: 1.05;
+      font-weight: 950;
+    }
+
+    .pink-text { color: var(--pink); }
+    .muted { color: var(--muted); }
+
+    .levels {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .level {
+      display: grid;
+      grid-template-columns: 148px 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 12px;
+      border: 2px solid rgba(45,41,38,.42);
+      background: rgba(184,216,190,.35);
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.22;
+    }
+
+    .level strong {
+      padding: 5px 8px;
+      background: var(--yellow);
+      font-size: 25px;
+    }
+
+    .meter {
+      margin-top: 16px;
+      height: 28px;
+      border: 2px solid var(--ink);
+      background: linear-gradient(90deg, var(--teal) 0 36%, var(--yellow) 36% 68%, var(--pink) 68% 100%);
+    }
+
+    .meter-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      font-size: 20px;
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    .votes {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-size: 24px;
+      line-height: 1.22;
+      font-weight: 700;
+    }
+
+    .votes th,
+    .votes td {
+      border-bottom: 2px solid rgba(45,41,38,.28);
+      padding: 10px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .votes th {
+      background: rgba(184,216,190,.55);
+      font-size: 22px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 5px 9px;
+      background: var(--yellow);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: 1fr 44px 1fr 44px 1fr;
+      align-items: stretch;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .box {
+      padding: 14px 10px;
+      border: 2px solid var(--ink);
+      background: rgba(255,255,255,.64);
+      text-align: center;
+      font-size: 24px;
+      line-height: 1.22;
+      font-weight: 850;
+    }
+
+    .arrow {
+      display: grid;
+      place-items: center;
+      font-size: 34px;
+      font-weight: 950;
+    }
+
+    .targets {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .target {
+      border: 2px solid var(--ink);
+      padding: 14px 10px;
+      background: rgba(255,242,0,.38);
+      text-align: center;
+      min-height: 112px;
+    }
+
+    .target .name {
+      font-size: 22px;
+      color: var(--muted);
+      font-weight: 850;
+    }
+
+    .target .value {
+      margin-top: 8px;
+      font-size: 31px;
+      font-weight: 950;
+    }
+
+    .foot {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 270px;
+      gap: 20px;
+      align-items: end;
+      border-top: 3px solid var(--ink);
+      margin-top: 20px;
+      padding-top: 16px;
+      font-size: 20px;
+      line-height: 1.34;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .stamp {
+      justify-self: end;
+      border: 3px solid var(--pink);
+      color: var(--pink);
+      padding: 10px 14px;
+      transform: rotate(-2deg);
+      font-size: 26px;
+      font-weight: 950;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas">
+    <div class="meta">
+      <span>SEC-{{TICKER}} / TIMING CARD / {{DATA_SOURCE_SHORT}}</span>
+      <span class="barcode" aria-hidden="true"></span>
+    </div>
+
+    <header>
+      <div class="title-row">
+        <div>
+          <h1><span class="ticker">{{TICKER}}</span><br />择时图</h1>
+          <p class="subtitle">{{ONE_LINE_CONCLUSION}}</p>
+        </div>
+        <div class="price-card">
+          <div class="label">{{PRICE_DATE}} 收盘</div>
+          <div class="price">{{LAST_PRICE}}</div>
+          <div class="change">{{DAY_CHANGE}}</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="module alert">
+        <span class="tag pink">A-01 结论</span>
+        <h2>{{ACTION_LABEL}}</h2>
+        <p class="big">{{ACTION_MAIN_LINE_1}}<br /><span class="pink-text">{{ACTION_MAIN_PRICE}}</span><br />{{ACTION_MAIN_LINE_2}}</p>
+        <div class="meter"></div>
+        <div class="meter-labels"><span>低吸</span><span>观察</span><span>过热</span></div>
+      </article>
+
+      <article class="module">
+        <span class="tag teal">A-02 当前位置</span>
+        <h2>{{POSITION_STAGE}}</h2>
+        <p>{{POSITION_SUMMARY}}</p>
+      </article>
+
+      <article class="module wide">
+        <span class="tag">B-01 买入观察区</span>
+        <h2>{{BUY_ZONE_HEADLINE}}</h2>
+        <div class="levels">
+          <div class="level"><strong>{{BUY_ZONE_1_LABEL}}</strong><span>{{BUY_ZONE_1_TEXT}}</span></div>
+          <div class="level"><strong>{{BUY_ZONE_2_LABEL}}</strong><span>{{BUY_ZONE_2_TEXT}}</span></div>
+          <div class="level"><strong>{{BUY_ZONE_3_LABEL}}</strong><span>{{BUY_ZONE_3_TEXT}}</span></div>
+        </div>
+      </article>
+
+      <article class="module">
+        <span class="tag pink">C-01 风险线</span>
+        <h2>{{RISK_HEADLINE}}</h2>
+        <p>{{RISK_TEXT_WITH_SPANS}}</p>
+      </article>
+
+      <article class="module">
+        <span class="tag teal">C-02 压力区</span>
+        <h2>{{RESISTANCE_HEADLINE}}</h2>
+        <p>{{RESISTANCE_TEXT_WITH_SPANS}}</p>
+      </article>
+
+      <article class="module wide tall">
+        <span class="tag">D-01 算法投票</span>
+        <h2>{{VOTE_HEADLINE}}</h2>
+        <table class="votes">
+          <thead><tr><th>模块</th><th>结论</th><th>含义</th></tr></thead>
+          <tbody>
+            <tr><td>{{VOTE_1_NAME}}</td><td>{{VOTE_1_RESULT}}</td><td>{{VOTE_1_MEANING}}</td></tr>
+            <tr><td>{{VOTE_2_NAME}}</td><td>{{VOTE_2_RESULT}}</td><td>{{VOTE_2_MEANING}}</td></tr>
+            <tr><td>{{VOTE_3_NAME}}</td><td>{{VOTE_3_RESULT}}</td><td>{{VOTE_3_MEANING}}</td></tr>
+            <tr><td>{{VOTE_4_NAME}}</td><td>{{VOTE_4_RESULT}}</td><td>{{VOTE_4_MEANING}}</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="module wide">
+        <span class="tag teal">E-01 操作路径</span>
+        <h2>{{ACTION_PATH_HEADLINE}}</h2>
+        <div class="flow">
+          <div class="box">{{PATH_1}}</div>
+          <div class="arrow">→</div>
+          <div class="box">{{PATH_2}}</div>
+          <div class="arrow">→</div>
+          <div class="box">{{PATH_3}}</div>
+        </div>
+      </article>
+
+      <article class="module wide">
+        <span class="tag">F-01 6-12个月研究型目标价</span>
+        <h2>目标区间，不构成投资建议</h2>
+        <div class="targets">
+          <div class="target"><div class="name">保守</div><div class="value">{{TARGET_CONSERVATIVE}}</div></div>
+          <div class="target"><div class="name">基准</div><div class="value">{{TARGET_BASE}}</div></div>
+          <div class="target"><div class="name">乐观</div><div class="value">{{TARGET_BULL}}</div></div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="foot">
+      <div>{{FOOTER_DATA_SOURCE}} {{FOOTER_THEME}}</div>
+      <div class="stamp">{{STAMP_LINE_1}}<br />{{STAMP_LINE_2}}</div>
+    </footer>
+  </main>
+</body>
+</html>
