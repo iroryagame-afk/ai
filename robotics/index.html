@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A 股人形机器人产业链完整调研报告</title>
+  <meta name="description" content="A 股人形机器人产业链调研报告：按确定性、弹性、消耗/复购拆解执行器、丝杠、谐波减速器、感知、控制、能源、软件和本体。">
+  <style>
+    :root {
+      --ink:#10203f;
+      --muted:#64748b;
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --line:#dbe5f2;
+      --blue:#1f5fd4;
+      --cyan:#0f9ab4;
+      --orange:#e87918;
+      --red:#d44747;
+      --soft:#f8fbff;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+      font-size:16px;
+      line-height:1.75;
+    }
+    a { color:var(--blue); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .hero {
+      background:#0d1830;
+      color:#fff;
+      padding:34px 28px 28px;
+      border-bottom:5px solid var(--blue);
+    }
+    .hero-inner { width:min(1180px, calc(100vw - 32px)); margin:0 auto; }
+    .eyebrow { color:#9cc8ff; font-size:14px; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
+    .hero h1 { margin:8px 0 12px; font-size:42px; line-height:1.15; letter-spacing:0; }
+    .hero p { margin:0; max-width:980px; color:#dbeafe; font-size:18px; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+    .meta span { border:1px solid rgba(255,255,255,.22); background:rgba(255,255,255,.08); border-radius:999px; padding:7px 11px; font-weight:800; font-size:13px; }
+    .wrap { width:min(1180px, calc(100vw - 32px)); margin:20px auto 56px; }
+    .visual {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:12px;
+      box-shadow:0 8px 24px rgba(16,32,63,.06);
+      margin-bottom:18px;
+    }
+    .visual img { display:block; width:100%; height:auto; border-radius:8px; }
+    .toc {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+      gap:10px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:14px;
+      margin-bottom:18px;
+      box-shadow:0 8px 24px rgba(16,32,63,.04);
+    }
+    .toc a { display:block; border:1px solid #e6edf7; border-radius:8px; padding:9px 10px; color:#223052; font-weight:850; background:#fbfdff; }
+    article {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:28px;
+      box-shadow:0 8px 24px rgba(16,32,63,.05);
+    }
+    article > h1:first-child { display:none; }
+    h1,h2,h3,h4 { line-height:1.35; letter-spacing:0; }
+    h2 {
+      margin:34px 0 14px;
+      padding:11px 14px;
+      border-radius:8px;
+      background:#10203f;
+      color:#fff;
+      font-size:24px;
+    }
+    h3 {
+      margin:26px 0 10px;
+      font-size:21px;
+      color:#123260;
+      border-left:5px solid var(--blue);
+      padding-left:10px;
+    }
+    h4 { margin:18px 0 8px; font-size:18px; }
+    p { margin:10px 0; }
+    strong { color:#0f2348; }
+    code {
+      background:#eef4fb;
+      color:#0f3f88;
+      border-radius:6px;
+      padding:2px 6px;
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-weight:800;
+    }
+    .sep { border:0; border-top:1px solid var(--line); margin:26px 0; }
+    ul,ol { padding-left:1.35em; margin:10px 0 14px; }
+    li { margin:5px 0; }
+    .table-wrap {
+      width:100%;
+      overflow-x:auto;
+      margin:14px 0 22px;
+      border:1px solid var(--line);
+      border-radius:8px;
+    }
+    table { width:100%; min-width:760px; border-collapse:separate; border-spacing:0; background:#fff; }
+    th {
+      background:#13223f;
+      color:#fff;
+      text-align:left;
+      padding:10px 11px;
+      font-size:13px;
+      white-space:nowrap;
+    }
+    td {
+      border-top:1px solid #e8eef6;
+      padding:10px 11px;
+      vertical-align:top;
+      font-size:13px;
+      line-height:1.55;
+    }
+    tr:nth-child(even) td { background:#f8fbff; }
+    footer {
+      width:min(1180px, calc(100vw - 32px));
+      margin:0 auto 42px;
+      color:#64748b;
+      font-size:13px;
+      text-align:center;
+    }
+    @media (max-width: 760px) {
+      .hero { padding:28px 18px 24px; }
+      .hero h1 { font-size:30px; }
+      .hero p { font-size:16px; }
+      article { padding:18px; }
+      h2 { font-size:21px; }
+      h3 { font-size:19px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">A-share robotics research</div>
+      <h1>A 股人形机器人产业链完整调研报告</h1>
+      <p>从整机、本体、执行器、丝杠、谐波减速器、感知、控制、能源、电源和软件大脑拆解，按确定性、弹性、消耗/复购筛选更值得研究的 A 股环节。</p>
+      <div class="meta">
+        <span>生成日期：2026-07-03</span>
+        <span>价格基准：腾讯行情收盘后</span>
+        <span>研究型目标价，不构成投资建议</span>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="visual">
+      <img src="./a-share-robotics-value-chain.png" alt="A股人形机器人产业链价值图">
+    </section>
+    <nav class="toc" aria-label="目录">
+      <a href="#1-核心结论">核心结论</a>
+      <a href="#2-产业阶段判断">产业阶段</a>
+      <a href="#4-产业链拆解">产业链拆解</a>
+      <a href="#5-a-股候选公司完整映射">公司映射</a>
+      <a href="#6-公司介绍与投资要点">公司介绍</a>
+      <a href="#8-6-12-个月研究型目标价区间">目标价区间</a>
+      <a href="#9-风险清单">风险清单</a>
+      <a href="#10-下一步验证清单">验证清单</a>
+    </nav>
+    <article>
+      <h1 id="a-股人形机器人产业链完整调研报告">A 股人形机器人产业链完整调研报告</h1>
+<p>生成日期：2026-07-03 研究范围：A 股机器人产业链，重点覆盖人形机器人、工业机器人、核心零部件、感知、控制、能源、软件、本体与系统集成。 价格基准：腾讯行情，2026-07-03 收盘后。 报告定位：研究框架与优先级排序，不构成投资建议。</p>
+<hr class="sep">
+<h2 id="1-核心结论">1. 核心结论</h2>
+<p>先排产业链层级，再排公司。机器人不是简单的“谁市值大谁受益”，而是要看三个问题：</p>
+<ol>
+<li><strong>确定性</strong>：公司是否已有成熟主业、客户基础、制造能力和财务兑现。</li>
+<li><strong>弹性</strong>：机器人放量后，相关收入和估值能否被重新定价。</li>
+<li><strong>消耗/复购</strong>：单台机器人需要多少个相关部件，是否随出货量线性放大，是否有维修替换或持续升级需求。</li>
+</ol>
+<p>按这个口径，A 股机器人链的价值优先级是：</p>
+<div class="table-wrap"><table><thead><tr><th>层级</th><th>价值判断</th><th>代表标的</th></tr></thead><tbody><tr><td>S 级</td><td>执行器、丝杠、轴承、谐波减速器。单机用量高、认证难、供给扩张慢，是最接近“机器人放量卡点”的层。</td><td>三花智控、拓普集团、绿的谐波、贝斯特、五洲新春、双环传动</td></tr><tr><td>A 级</td><td>伺服控制、运动控制、机器视觉、力传感、电源电控。确定性较强，但弹性和纯度分化明显。</td><td>汇川技术、柯力传感、奥比中光、凌云光、麦格米特、鸣志电器</td></tr><tr><td>B 级</td><td>本体、系统集成、软件大脑、电池。叙事强，但利润率、订单确认和机器人收入占比仍需验证。</td><td>埃斯顿、机器人、埃夫特、科大讯飞、中科创达、工业富联</td></tr></tbody></table></div>
+<p>一句话结论：<strong>机器人产业链目前最值得优先研究的不是整机，而是核心运动部件；最舒服的底仓不是最高弹性票，而是控制、伺服、传动里已有成熟主业的公司。</strong></p>
+<hr class="sep">
+<h2 id="2-产业阶段判断">2. 产业阶段判断</h2>
+<h3 id="2-1-工业机器人-已经是成熟产业-增速来自国产替代和应用扩散">2.1 工业机器人：已经是成熟产业，增速来自国产替代和应用扩散</h3>
+<p>IFR《World Robotics 2025》显示，2024 年全球工业机器人安装量为 542,076 台，全球运行存量为 4,663,698 台；中国 2024 年工业机器人安装量为 295,045 台，占全球 54%，运行存量为 2,027,190 台，占全球 43%。这说明中国不是“刚开始做机器人”，而是已经拥有全球最大应用市场和制造生态。</p>
+<p>工业机器人本身已经进入<strong>标准化普及期</strong>，投资价值更多来自：</p>
+<ul>
+<li>国产品牌替代外资；</li>
+<li>电子、金属加工、锂电、光伏、汽车等场景扩散；</li>
+<li>低成本机器人打开中小制造企业需求；</li>
+<li>伺服、控制器、减速器等核心部件国产化。</li>
+</ul>
+<h3 id="2-2-人形机器人-客户认证期到试点部署期-尚未真正财报放量">2.2 人形机器人：客户认证期到试点部署期，尚未真正财报放量</h3>
+<p>人形机器人还没有进入稳定大规模放量。当前阶段更接近：</p>
+<ul>
+<li><strong>工程样机期</strong>：整机厂发布产品、演示运动能力、展示灵巧手和大模型交互。</li>
+<li><strong>客户认证期</strong>：进入车厂、电子厂、物流仓储等场景做测试。</li>
+<li><strong>试点部署期</strong>：小批量进入工厂、展厅、服务场景，但尚未成为标准生产工具。</li>
+</ul>
+<p>按照你的“核心产品阶段”口径，机器人链拆开看：</p>
+<div class="table-wrap"><table><thead><tr><th>环节</th><th>当前阶段</th><th>判断</th></tr></thead><tbody><tr><td>工业机器人本体</td><td>规模放量期/标准化普及期</td><td>已有真实收入，弹性不如早期零部件</td></tr><tr><td>人形机器人整机</td><td>工程样机期到试点部署期</td><td>热度高，订单真实性需验证</td></tr><tr><td>执行器总成</td><td>客户认证期</td><td>最像未来放量前的核心卡点</td></tr><tr><td>谐波减速器</td><td>试点部署期</td><td>工业机器人已有基础，人形机器人增加新需求</td></tr><tr><td>丝杠/轴承</td><td>客户认证期</td><td>高弹性、高消耗，但良率和客户认证是关键</td></tr><tr><td>伺服/控制器</td><td>规模放量期</td><td>确定性高，机器人弹性被成熟主业稀释</td></tr><tr><td>机器视觉/力控</td><td>客户认证期</td><td>感知入口价值提升，但路线未完全定型</td></tr><tr><td>AI 软件大脑</td><td>技术验证期到客户认证期</td><td>长期空间大，短期商业化不如部件</td></tr></tbody></table></div>
+<hr class="sep">
+<h2 id="3-需求驱动-为什么机器人会成为-ai-下半场">3. 需求驱动：为什么机器人会成为 AI 下半场</h2>
+<p>机器人本质上是“AI 从数字世界进入物理世界”。大模型负责理解、规划和交互，机器人负责行动、搬运、装配、巡检和服务。</p>
+<p>需求驱动分四层：</p>
+<ol>
+<li><strong>劳动力成本与人口结构</strong></li>
+</ol>
+<p>制造业、物流、养老服务、危险作业都存在长期用工压力。</p>
+<ol>
+<li><strong>AI 模型能力提升</strong></li>
+</ol>
+<p>多模态大模型、端侧推理、仿真训练和遥操作数据采集，让机器人从“固定程序”走向“任务泛化”。</p>
+<ol>
+<li><strong>电动车供应链迁移</strong></li>
+</ol>
+<p>电机、电控、电池、热管理、传感器、结构件、线束、精密制造能力可以迁移到机器人。Time 对中国科技产业的分析也强调，EV 供应链与机器人零部件存在较高复用度。</p>
+<ol>
+<li><strong>中国制造生态优势</strong></li>
+</ol>
+<p>宇树、优必选、智元等本体厂推动产品迭代，背后需要大量 A 股零部件供应商配合。宇树官网已展示四足机器人、人形机器人、灵巧手、关节电机、伺服等产品线；优必选官网也覆盖人形服务机器人、商业、医疗、工业和教育场景。</p>
+<hr class="sep">
+<h2 id="4-产业链拆解">4. 产业链拆解</h2>
+<h3 id="4-1-本体厂-oem">4.1 本体厂/OEM</h3>
+<p>这一层负责整机定义、运动控制系统集成、场景部署和客户关系。代表公司包括 Tesla Optimus、宇树、优必选、智元、Figure、Agility、1X，以及 A 股的埃斯顿、机器人、埃夫特、拓斯达等。</p>
+<p>本体厂的优势是品牌和系统定义权，但短期投资难点在于：</p>
+<ul>
+<li>整机价格战可能压缩利润；</li>
+<li>零部件仍在快速迭代，BOM 不稳定；</li>
+<li>真正大规模订单还少；</li>
+<li>工厂场景需要长期验证稳定性、维护成本和安全性。</li>
+</ul>
+<p>结论：<strong>本体是产业牵引者，但 A 股投资上不一定是利润最好的层。</strong></p>
+<h3 id="4-2-执行器与运动部件">4.2 执行器与运动部件</h3>
+<p>执行器是人形机器人的“肌肉”。一个完整执行器通常涉及电机、减速器、丝杠、轴承、编码器、传感器、壳体、驱动器和热管理。</p>
+<p>价值来自：</p>
+<ul>
+<li>单机用量高；</li>
+<li>客户认证周期长；</li>
+<li>精度、寿命、噪音、重量和成本需要同时达标；</li>
+<li>从样机到量产会不断迭代，优质供应商更容易被锁定。</li>
+</ul>
+<p>重点公司：</p>
+<ul>
+<li>三花智控：执行器和热管理平台型公司，确定性高。</li>
+<li>拓普集团：汽车零部件平台迁移到机器人执行器，弹性高。</li>
+<li>绿的谐波：谐波减速器高纯度标的。</li>
+<li>贝斯特：滚珠丝杠/精密零部件方向弹性高。</li>
+<li>五洲新春：丝杠、轴承、精密传动，单机消耗逻辑强。</li>
+<li>双环传动：齿轮传动基础强，确定性好。</li>
+</ul>
+<p>结论：<strong>这是全产业链第一优先级。</strong></p>
+<h3 id="4-3-减速器-丝杠-轴承">4.3 减速器、丝杠、轴承</h3>
+<p>机器人关节需要把电机高速低扭矩输出变成低速高扭矩输出，同时保持精度和寿命。谐波减速器和 RV 减速器已经在工业机器人里验证，人形机器人进一步带来轻量化、小型化和高密度需求。</p>
+<p>丝杠的价值在于线性执行器和灵巧手。人形机器人若采用大量线性执行器，滚珠丝杠、行星滚柱丝杠、轴承和导轨的单机价值量可能显著提升。</p>
+<p>投资判断：</p>
+<ul>
+<li>谐波减速器：确定性较强，但市场已较拥挤，绿的谐波估值压力大。</li>
+<li>丝杠/轴承：弹性更高，但需要验证量产良率、客户认证和真实订单。</li>
+<li>齿轮传动：确定性较强，但机器人纯度通常低于谐波和丝杠。</li>
+</ul>
+<h3 id="4-4-伺服-控制器-运动控制">4.4 伺服、控制器、运动控制</h3>
+<p>控制系统是机器人的“小脑”和神经系统。它决定运动协调、响应速度、稳定性和能耗。</p>
+<p>代表公司：</p>
+<ul>
+<li>汇川技术：伺服、变频、PLC、工业自动化龙头，确定性最高。</li>
+<li>禾川科技：伺服系统弹性标的。</li>
+<li>雷赛智能：运动控制和伺服基础较强。</li>
+<li>固高科技：运动控制技术型公司。</li>
+<li>鸣志电器：电机、驱动、运动控制相关，机器人映射强。</li>
+</ul>
+<p>结论：<strong>控制和伺服适合作为机器人链的确定性底座，但股价弹性通常低于执行器和丝杠。</strong></p>
+<h3 id="4-5-感知与力控">4.5 感知与力控</h3>
+<p>机器人从“能动”变成“能干活”，关键在感知。包括 3D 视觉、CIS、激光雷达、IMU、六维力传感、触觉传感、环境传感等。</p>
+<p>重点公司：</p>
+<ul>
+<li>奥比中光：3D 视觉高弹性标的。</li>
+<li>柯力传感：力传感映射，机器人力控逻辑强。</li>
+<li>凌云光：机器视觉与工业检测，工业场景确定性较高。</li>
+<li>思特威/豪威集团：CIS 视觉传感器，机器人纯度被消费电子/汽车业务稀释。</li>
+<li>汉威科技：环境传感和气体传感，服务机器人映射。</li>
+</ul>
+<p>结论：<strong>感知是长期方向，但路线分散，当前优先级低于执行器。</strong></p>
+<h3 id="4-6-能源-电源和热管理">4.6 能源、电源和热管理</h3>
+<p>人形机器人对续航、重量和散热敏感。电池、电源管理、电控、散热结构件都会参与。</p>
+<p>重点公司：</p>
+<ul>
+<li>宁德时代、亿纬锂能、欣旺达、珠海冠宇：电池确定性强，但机器人收入占比低。</li>
+<li>德赛电池：小型电池封装映射。</li>
+<li>麦格米特：电源、电控属性更适合机器人链研究。</li>
+<li>三花智控：热管理和执行器交叉受益。</li>
+</ul>
+<p>结论：<strong>能源链确定性高，但多数公司机器人纯度低，除非出现明确机器人客户或产品线。</strong></p>
+<h3 id="4-7-软件大脑与边缘智能">4.7 软件大脑与边缘智能</h3>
+<p>机器人软件包括大模型、任务规划、操作系统、仿真训练、视觉算法、数据闭环和边缘推理。</p>
+<p>代表公司：</p>
+<ul>
+<li>科大讯飞：语音、多模态交互和模型能力。</li>
+<li>中科创达：操作系统、边缘智能、智能终端软件。</li>
+<li>虹软科技：视觉算法。</li>
+<li>云从科技：视觉 AI 和行业 AI。</li>
+<li>寒武纪：AI 芯片，机器人端侧推理有远期想象，但纯度低。</li>
+<li>海康威视：AIoT、机器视觉和工业视觉基础。</li>
+</ul>
+<p>结论：<strong>软件大脑长期空间大，但 A 股短期兑现要看具体订单和机器人收入占比；不应只因为“AI”就排在核心部件前面。</strong></p>
+<hr class="sep">
+<h2 id="5-a-股候选公司完整映射">5. A 股候选公司完整映射</h2>
+<h3 id="5-1-s-级-优先研究名单">5.1 S 级：优先研究名单</h3>
+<div class="table-wrap"><table><thead><tr><th>公司</th><th>代码</th><th>当前价</th><th>产业链位置</th><th>核心产品阶段</th><th>确定性</th><th>弹性</th><th>消耗</th><th>综合判断</th></tr></thead><tbody><tr><td>三花智控</td><td>002050</td><td>48.99</td><td>执行器/热管理/精密机电</td><td>客户认证期</td><td>高</td><td>中高</td><td>中高</td><td>平台型零部件龙头，适合作为机器人执行器确定性核心</td></tr><tr><td>拓普集团</td><td>601689</td><td>62.43</td><td>执行器总成/汽车零部件迁移</td><td>客户认证期</td><td>中高</td><td>高</td><td>中高</td><td>汽车链迁移机器人链，弹性强但需订单明朗</td></tr><tr><td>绿的谐波</td><td>688017</td><td>488.00</td><td>谐波减速器</td><td>试点部署期</td><td>中高</td><td>高</td><td>高</td><td>纯度高、卡点强，但估值和交易拥挤度高</td></tr><tr><td>贝斯特</td><td>300580</td><td>25.96</td><td>滚珠丝杠/精密零部件</td><td>客户认证期</td><td>中</td><td>高</td><td>高</td><td>丝杠弹性标的，关键看良率和客户认证</td></tr><tr><td>五洲新春</td><td>603667</td><td>76.15</td><td>丝杠/轴承/精密传动</td><td>客户认证期</td><td>中</td><td>高</td><td>高</td><td>单机消耗逻辑强，主题弹性大</td></tr><tr><td>双环传动</td><td>002472</td><td>47.01</td><td>齿轮/传动系统</td><td>客户认证期</td><td>中高</td><td>中</td><td>中</td><td>确定性强于弹性，适合传动链底仓观察</td></tr></tbody></table></div>
+<h3 id="5-2-a-级-确定性底座和关键入口">5.2 A 级：确定性底座和关键入口</h3>
+<div class="table-wrap"><table><thead><tr><th>公司</th><th>代码</th><th>当前价</th><th>产业链位置</th><th>核心产品阶段</th><th>判断</th></tr></thead><tbody><tr><td>汇川技术</td><td>300124</td><td>72.15</td><td>伺服/控制器/工业自动化</td><td>规模放量期</td><td>确定性最高，但机器人弹性被大主业稀释</td></tr><tr><td>麦格米特</td><td>002851</td><td>147.62</td><td>电源/电控</td><td>客户认证期</td><td>电源电控属性更纯，估值也需谨慎</td></tr><tr><td>鸣志电器</td><td>603728</td><td>68.02</td><td>空心杯电机/运动控制</td><td>客户认证期</td><td>机器人映射强，估值波动大</td></tr><tr><td>柯力传感</td><td>603662</td><td>80.00</td><td>力传感</td><td>客户认证期</td><td>力控入口价值高，需验证机器人收入贡献</td></tr><tr><td>奥比中光</td><td>688322</td><td>147.33</td><td>3D 视觉</td><td>客户认证期</td><td>高弹性视觉入口，亏损和估值压力需跟踪</td></tr><tr><td>凌云光</td><td>688400</td><td>71.41</td><td>机器视觉/工业检测</td><td>规模放量期</td><td>工业视觉确定性较高，机器人纯度中等</td></tr><tr><td>中大力德</td><td>002896</td><td>85.62</td><td>减速器/电机/驱动一体化</td><td>客户认证期</td><td>小市值高弹性，但交易波动较大</td></tr><tr><td>兆威机电</td><td>003021</td><td>100.80</td><td>微型传动系统</td><td>客户认证期</td><td>灵巧手/微传动映射，需订单验证</td></tr></tbody></table></div>
+<h3 id="5-3-b-级-主题强但兑现慢">5.3 B 级：主题强但兑现慢</h3>
+<div class="table-wrap"><table><thead><tr><th>公司</th><th>代码</th><th>当前价</th><th>产业链位置</th><th>判断</th></tr></thead><tbody><tr><td>埃斯顿</td><td>002747</td><td>44.77</td><td>工业机器人本体/控制</td><td>本体龙头之一，但本体利润率和订单质量需跟踪</td></tr><tr><td>机器人</td><td>300024</td><td>18.31</td><td>工业机器人/系统集成</td><td>老牌机器人平台，弹性来自国企改革和订单修复</td></tr><tr><td>埃夫特</td><td>688165</td><td>23.26</td><td>工业机器人本体</td><td>高弹性但盈利质量仍需验证</td></tr><tr><td>拓斯达</td><td>300607</td><td>52.96</td><td>自动化设备/系统集成</td><td>弹性强但波动大，需看订单可持续性</td></tr><tr><td>工业富联</td><td>601138</td><td>64.72</td><td>制造组装/AI 服务器/机器人代工线索</td><td>确定性强，但机器人纯度低</td></tr><tr><td>科大讯飞</td><td>002230</td><td>41.51</td><td>语音交互/AI 大脑</td><td>长期空间大，短期机器人收入不明朗</td></tr><tr><td>中科创达</td><td>300496</td><td>62.70</td><td>操作系统/边缘智能</td><td>软件底座型公司，机器人收入需验证</td></tr><tr><td>寒武纪</td><td>688256</td><td>1353.00</td><td>AI 芯片</td><td>端侧推理远期想象强，但机器人不是当前主要收入锚</td></tr></tbody></table></div>
+<hr class="sep">
+<h2 id="6-公司介绍与投资要点">6. 公司介绍与投资要点</h2>
+<h3 id="三花智控-002050">三花智控 002050</h3>
+<p>公司是全球制冷、空调、新能源车热管理领域的重要零部件供应商，官网产品覆盖电子膨胀阀、控制器、压力传感器、阀件、换热器等。机器人方向的核心看点不是传统制冷业务，而是其精密机电、热管理和大客户制造能力能否迁移到执行器。 定位：执行器平台型龙头。 优势：确定性高、客户认证能力强、制造体系成熟。 风险：机器人收入占比仍需公告验证，估值已包含较多预期。 评级：S 级核心研究。 目标价区间：保守 52，基准 60，乐观 70。</p>
+<h3 id="拓普集团-601689">拓普集团 601689</h3>
+<p>公司官网将其定位为科技平台型汽车零部件企业，产品线包括减震、内外饰、车身轻量化、底盘、热管理、空气悬架、智能驾驶和 Actuator。公司拥有超过 100 个制造基地、超过 4,000 人研发团队和超过 25,000 名员工。机器人方向的核心逻辑是汽车零部件平台向机器人执行器和结构件迁移。 定位：执行器总成和结构件平台。 优势：汽车链制造能力强，平台化产品多。 风险：机器人订单透明度不足，汽车主业周期影响估值。 评级：S 级核心研究。 目标价区间：保守 65，基准 76，乐观 90。</p>
+<h3 id="绿的谐波-688017">绿的谐波 688017</h3>
+<p>公司英文官网 Leaderdrive 把自身定位为精密机器人部件制造商，重点研发生产高性能谐波减速器，产品包括 strain wave gears、rotary actuators、frameless motors 等；官网披露其国内市场份额超过 60%，2025 年谐波减速器年销量超过 30 万台。 定位：谐波减速器高纯度龙头。 优势：纯度高，卡点清晰，机器人客户接受度高。 风险：估值极高，任何订单低于预期都会造成较大波动；谐波减速器竞争者增加。 评级：S 级但不适合无脑追高。 目标价区间：保守 430，基准 560，乐观 680。</p>
+<h3 id="贝斯特-300580">贝斯特 300580</h3>
+<p>公司原有主业偏汽车精密零部件和工装夹具，机器人方向市场主要关注滚珠丝杠、精密零部件和线性执行器链条。 定位：丝杠和精密零部件弹性标的。 优势：市值相对不大，机器人弹性较强。 风险：客户认证、良率和产能爬坡是核心验证点。 评级：S- 高弹性观察。 目标价区间：保守 28，基准 34，乐观 42。</p>
+<h3 id="五洲新春-603667">五洲新春 603667</h3>
+<p>公司主业为轴承、汽车零部件和精密制造，机器人方向市场关注丝杠、轴承和精密传动。 定位：丝杠/轴承消耗逻辑。 优势：单机消耗和替换逻辑更强，弹性高。 风险：主题拥挤、短线涨幅大，订单和利润贡献需核验。 评级：S- 高弹性观察。 目标价区间：保守 72，基准 88，乐观 105。</p>
+<h3 id="双环传动-002472">双环传动 002472</h3>
+<p>公司以齿轮和传动系统见长，新能源车和机械传动基础较强。机器人方向看齿轮、关节传动和精密制造能力迁移。 定位：传动系统确定性标的。 优势：制造能力和客户基础较好。 风险：机器人纯度不如谐波和丝杠，弹性相对中等。 评级：A+ 稳健研究。 目标价区间：保守 50，基准 58，乐观 68。</p>
+<h3 id="汇川技术-300124">汇川技术 300124</h3>
+<p>公司是国内工业自动化龙头，覆盖变频器、伺服、PLC、控制系统、新能源车电驱等。机器人方向看伺服系统、运动控制和工厂自动化生态。 定位：确定性底仓。 优势：财务质量和客户基础强，工业自动化底盘稳。 风险：机器人弹性被成熟主业稀释。 评级：A+ 稳健研究。 目标价区间：保守 75，基准 86，乐观 100。</p>
+<h3 id="鸣志电器-603728">鸣志电器 603728</h3>
+<p>公司在步进电机、控制电机、驱动系统等领域积累较深，机器人方向看空心杯电机、灵巧手、运动控制和执行器组件。 定位：电机与运动控制弹性标的。 优势：机器人映射清晰，单机用量逻辑较强。 风险：估值波动大，客户导入节奏不确定。 评级：A 高弹性观察。 目标价区间：保守 62，基准 76，乐观 90。</p>
+<h3 id="柯力传感-603662">柯力传感 603662</h3>
+<p>公司以传感器为主，机器人方向看力控、触觉和六维力传感映射。 定位：力传感入口。 优势：感知层关键性提升，力控是机器人从“会动”到“会干活”的重要环节。 风险：机器人收入占比和产品认证阶段需继续核验。 评级：A 高弹性观察。 目标价区间：保守 74，基准 90，乐观 105。</p>
+<h3 id="奥比中光-688322">奥比中光 688322</h3>
+<p>公司定位 3D 视觉感知，机器人、AIoT、消费电子、工业检测等场景均可应用。 定位：3D 视觉高弹性入口。 优势：机器人需要空间感知，长期逻辑顺。 风险：亏损压力、客户结构和机器人实际收入贡献需要确认。 评级：A- 主题弹性研究。 目标价区间：保守 130，基准 165，乐观 200。</p>
+<h3 id="麦格米特-002851">麦格米特 002851</h3>
+<p>公司覆盖电源、电控、智能家电、新能源和工业电源等，机器人方向看电源管理、电控模块和工业电气能力。 定位：电源电控。 优势：比纯电池公司更接近机器人电控。 风险：估值高，机器人业务明牌程度不足。 评级：A- 观察。 目标价区间：保守 135，基准 165，乐观 195。</p>
+<h3 id="埃斯顿-002747">埃斯顿 002747</h3>
+<p>公司是国内工业机器人本体和自动化核心公司，覆盖机器人本体、运动控制、伺服系统和智能制造系统。 定位：本体和控制一体化。 优势：机器人收入纯度高。 风险：本体竞争激烈，盈利能力和规模化订单是关键。 评级：B+ 主题核心但利润弹性待验证。 目标价区间：保守 40，基准 50，乐观 60。</p>
+<h3 id="工业富联-601138">工业富联 601138</h3>
+<p>公司是全球电子制造和 AI 服务器产业链核心公司，机器人方向看制造组装、工厂自动化和潜在整机代工能力。 定位：制造平台。 优势：制造能力强、客户基础强。 风险：机器人纯度低，更多是外围观察，不应因市值大就排前。 评级：B+ 外部观察。 目标价区间：保守 62，基准 72，乐观 85。</p>
+<hr class="sep">
+<h2 id="7-为什么不按市值排序">7. 为什么不按市值排序</h2>
+<p>市值排序会把宁德时代、工业富联、海康威视、寒武纪、汇川技术排得很靠前，但这不等于机器人链价值最高。</p>
+<p>机器人主题更应该看：</p>
+<ul>
+<li><strong>机器人收入纯度</strong>：机器人能否成为收入和利润的增量，而不是大公司业务里的一个小标签。</li>
+<li><strong>单机价值量</strong>：一台机器人需要多少部件，单个部件价格和数量是多少。</li>
+<li><strong>认证壁垒</strong>：客户换供应商难不难。</li>
+<li><strong>供给弹性</strong>：产能能否快速扩张，良率是否容易提升。</li>
+<li><strong>替代风险</strong>：技术路线改变后，公司会不会被绕开。</li>
+</ul>
+<p>因此：</p>
+<ul>
+<li>宁德时代、工业富联：确定性强，但机器人纯度低。</li>
+<li>寒武纪、科大讯飞：AI 叙事强，但机器人收入兑现慢。</li>
+<li>埃斯顿、机器人、埃夫特：本体纯度高，但本体利润率可能低于核心零部件。</li>
+<li>三花、拓普、绿的、贝斯特、五洲、双环：更接近“机器人放量时谁先被消耗”的问题。</li>
+</ul>
+<hr class="sep">
+<h2 id="8-6-12-个月研究型目标价区间">8. 6-12 个月研究型目标价区间</h2>
+<p>目标价按产业价值、当前价格、估值压力和主题弹性综合估算，仅作研究锚，不构成投资建议。</p>
+<div class="table-wrap"><table><thead><tr><th>公司</th><th>当前价</th><th>保守目标</th><th>基准目标</th><th>乐观目标</th><th>评级</th></tr></thead><tbody><tr><td>三花智控</td><td>48.99</td><td>52</td><td>60</td><td>70</td><td>S</td></tr><tr><td>拓普集团</td><td>62.43</td><td>65</td><td>76</td><td>90</td><td>S</td></tr><tr><td>绿的谐波</td><td>488.00</td><td>430</td><td>560</td><td>680</td><td>S-</td></tr><tr><td>贝斯特</td><td>25.96</td><td>28</td><td>34</td><td>42</td><td>S-</td></tr><tr><td>五洲新春</td><td>76.15</td><td>72</td><td>88</td><td>105</td><td>S-</td></tr><tr><td>双环传动</td><td>47.01</td><td>50</td><td>58</td><td>68</td><td>A+</td></tr><tr><td>汇川技术</td><td>72.15</td><td>75</td><td>86</td><td>100</td><td>A+</td></tr><tr><td>鸣志电器</td><td>68.02</td><td>62</td><td>76</td><td>90</td><td>A</td></tr><tr><td>柯力传感</td><td>80.00</td><td>74</td><td>90</td><td>105</td><td>A</td></tr><tr><td>奥比中光</td><td>147.33</td><td>130</td><td>165</td><td>200</td><td>A-</td></tr><tr><td>麦格米特</td><td>147.62</td><td>135</td><td>165</td><td>195</td><td>A-</td></tr><tr><td>埃斯顿</td><td>44.77</td><td>40</td><td>50</td><td>60</td><td>B+</td></tr></tbody></table></div>
+<hr class="sep">
+<h2 id="9-风险清单">9. 风险清单</h2>
+<ol>
+<li><strong>人形机器人量产低于预期</strong></li>
+</ol>
+<p>如果 2026-2027 年仍停留在演示、小批量试点，部件公司收入兑现会推迟。</p>
+<ol>
+<li><strong>整机价格战传导到零部件</strong></li>
+</ol>
+<p>一旦整机厂以低价抢市场，零部件供应商可能被压价。</p>
+<ol>
+<li><strong>技术路线变化</strong></li>
+</ol>
+<p>线性执行器、谐波减速器、丝杠、空心杯电机等路线仍可能变化，单一技术押注有风险。</p>
+<ol>
+<li><strong>估值过度提前反映</strong></li>
+</ol>
+<p>绿的谐波、五洲新春、鸣志电器、拓普集团等短期已经有较强预期，追高风险大。</p>
+<ol>
+<li><strong>客户认证不等于收入确认</strong></li>
+</ol>
+<p>送样、测试、定点和批量收入是四个阶段，不能混为一谈。</p>
+<ol>
+<li><strong>公司跨界讲故事</strong></li>
+</ol>
+<p>需要警惕低纯度公司用机器人概念抬高估值，但财报没有收入证明。</p>
+<hr class="sep">
+<h2 id="10-下一步验证清单">10. 下一步验证清单</h2>
+<p>建议后续按以下顺序继续精查：</p>
+<ol>
+<li><strong>公司年报/半年报</strong>：机器人相关产品是否单独披露收入、毛利率、客户和产能。</li>
+<li><strong>互动易/上证 e 互动</strong>：送样、定点、客户认证是否有正式表述。</li>
+<li><strong>产能和项目备案</strong>：丝杠、谐波减速器、执行器产线是否真实扩产。</li>
+<li><strong>应收、存货、合同负债</strong>：是否出现订单兑现信号。</li>
+<li><strong>客户交叉验证</strong>：是否进入 Tesla、宇树、优必选、智元、车厂或电子厂供应链。</li>
+<li><strong>技术路线跟踪</strong>：线性执行器、旋转执行器、灵巧手和关节设计是否发生路线切换。</li>
+<li><strong>K 线和资金面</strong>：对 S 级标的单独做择时，不用产业结论替代买点。</li>
+</ol>
+<hr class="sep">
+<h2 id="11-报告用到的主要公开来源">11. 报告用到的主要公开来源</h2>
+<ul>
+<li>IFR, *World Robotics 2025 - Industrial Robots Executive Summary*: https://ifr.org/img/worldrobotics/Executive_Summary_WR_2025_Industrial_Robots.pdf</li>
+<li>Tesla AI &amp; Robotics: https://www.tesla.com/AI</li>
+<li>Unitree Robotics 官方网站: https://www.unitree.com/</li>
+<li>UBTECH 官方网站: https://www.ubtrobot.com/</li>
+<li>Sanhua Europe 官方产品页: https://www.sanhuaeurope.com/</li>
+<li>Tuopu Group 官方网站: https://www.tuopu.com/</li>
+<li>Leaderdrive 官方网站: https://www.leaderdrive.com/</li>
+<li>Time, *The Shift East: How China's EV Boom Powers Its Tech Rise*: https://time.com/7288660/shift-east-china-electric-vehicles-economy-technology-trump-tariffs-ai/</li>
+<li>The Verge, *A humanoid robot-shaped bubble is forming, China warns*: https://www.theverge.com/news/831451/china-humanoid-robotics-bubble</li>
+<li>MarketWatch, UBS humanoid robot market discussion: https://www.marketwatch.com/story/300-million-humanoid-robots-are-coming-and-here-are-the-companies-that-will-benefit-04c36ae8</li>
+<li>腾讯行情接口，2026-07-03 收盘后拉取。</li>
+</ul>
+    </article>
+  </main>
+  <footer>Research only. Built from local report Markdown and public sources. Last updated 2026-07-03.</footer>
+</body>
+</html>
