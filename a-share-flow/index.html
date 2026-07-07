@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A股资金流向复盘 - 2026-07-06 收盘</title>
+  <title>A股资金流向复盘 - 2026-07-07 收盘</title>
   <style>
     :root {
       --bg: #090b10;
@@ -552,14 +552,14 @@
 </head>
 <body>
   <div class="topbar">
-    <div class="brand"><div class="logo">◆</div><span>A股资金流向复盘 · 2026-07-06 收盘</span></div>
+    <div class="brand"><div class="logo">◆</div><span>A股资金流向复盘 · 2026-07-07 收盘</span></div>
   </div>
 
   <div class="app">
     <main>
       <div class="page-head">
         <h1>首页</h1>
-        <div class="date-pill">⌕ 周一 · 收盘 2026-07-06</div>
+        <div class="date-pill">⌕ 周二 · 收盘 2026-07-07</div>
       </div>
 
       <section class="dashboard">
@@ -598,27 +598,27 @@
               <tbody>
                 <tr>
                   <td class="seq">1</td>
-                  <td><b>主线切换</b>7月6日资金主线切到医药 / 创新药与红利银行防守。</td>
+                  <td><b>主线切换</b>7月7日资金转向半导体封测、半导体材料等局部修复方向。</td>
                 </tr>
                 <tr>
                   <td class="seq">2</td>
-                  <td><b>科技承压</b>科技成长整体被明显抽血，通信、半导体、PCB/元件仍是主要流出区。</td>
+                  <td><b>压力变化</b>医药 / 创新药从昨日流入转为大额流出，防守承接不连续。</td>
                 </tr>
                 <tr>
                   <td class="seq">3</td>
-                  <td><b>半导体判断</b>内部虽有设备 ETF 申购和局部修复，但主力资金口径还不能算回流主线。</td>
+                  <td><b>半导体判断</b>总口径仍小幅流出，但封测、材料转强，内部修复强于昨日。</td>
                 </tr>
               </tbody>
             </table>
             <div class="market-row">
-              <span>上证 <span class="down">-0.06%</span></span>
-              <span>深成指 <span class="down">-1.16%</span></span>
-              <span>创业板 <span class="down">-1.77%</span></span>
-              <span>科创50 <span class="up">+1.04%</span></span>
-              <span>成交额 <span class="up">约3.09万亿</span></span>
-              <span>医药资金 <span class="up">+29.11亿</span></span>
-              <span>半导体资金 <span class="down">-95.24亿</span></span>
-              <span>通信资金 <span class="down">-146.14亿</span></span>
+              <span>上证 <span class="down">-1.26%</span></span>
+              <span>深成指 <span class="down">-1.24%</span></span>
+              <span>创业板 <span class="down">-0.94%</span></span>
+              <span>科创50 <span class="up">+0.28%</span></span>
+              <span>成交额 <span class="up">约2.58万亿</span></span>
+              <span>封测资金 <span class="up">+50.30亿</span></span>
+              <span>医药资金 <span class="down">-81.47亿</span></span>
+              <span>PCB资金 <span class="down">-138.85亿</span></span>
             </div>
           </section>
 
@@ -658,8 +658,8 @@
             </div>
             <div class="signal-wrap">
               <div class="signal-summary">
-                <div class="signal-kpi"><strong class="up">3</strong><span>短线贴趋势</span><small>集成电路制造、先进封装、数字芯片设计</small></div>
-                <div class="signal-kpi"><strong style="color:var(--amber)">2</strong><span>短线偏热</span><small>半导体材料、机器人</small></div>
+                <div class="signal-kpi"><strong class="up">3</strong><span>短线贴趋势</span><small>集成电路制造、数字芯片设计、机器人</small></div>
+                <div class="signal-kpi"><strong style="color:var(--amber)">2</strong><span>短线偏热</span><small>先进封装、半导体材料</small></div>
                 <div class="signal-kpi"><strong class="down">1</strong><span>短线过热</span><small>半导体设备</small></div>
               </div>
               <table class="signal-table" aria-label="量化模型趋势状态信号">
@@ -690,68 +690,57 @@
 
   <script>
     const marketFlowBars = [
-      { name: '医药生物', value: 29.11, change: 0.64 },
-      { name: '创新药', value: 26.59, change: 1.39 },
-      { name: '红利股', value: 22.14, change: 1.80 },
-      { name: '化学制药', value: 20.65, change: 0.96 },
-      { name: '化学制剂', value: 19.95, change: 1.13 },
-      { name: '计算机设备', value: 15.34, change: -1.64 },
-      { name: '银行', value: 14.75, change: 2.31 },
-      { name: '生物制品', value: 8.83, change: 1.35 },
-      { name: '养殖业', value: 8.32, change: 3.21 },
-      { name: '集成电路制造', value: 7.37, change: 2.11 },
-      { name: '煤炭', value: 6.28, change: 3.08 },
-      { name: '食品饮料', value: 5.02, change: 0.75 },
-      { name: '基础化工', value: -60.36, change: -1.17 },
-      { name: 'PCB', value: -61.79, change: -3.95 },
-      { name: '机械设备', value: -64.20, change: -2.27 },
-      { name: '小金属', value: -64.85, change: -4.37 },
-      { name: '有色金属', value: -71.52, change: -2.63 },
-      { name: '光学光电子', value: -82.16, change: -3.50 },
-      { name: '元件', value: -86.90, change: -4.08 },
-      { name: '半导体', value: -95.24, change: -0.54 },
-      { name: '电力设备', value: -101.54, change: -2.57 },
-      { name: '通信', value: -146.14, change: -2.45 }
+      { name: '集成电路封测', value: 50.30, change: 2.88 },
+      { name: '游戏', value: 12.60, change: 0.84 },
+      { name: '传媒', value: 10.76, change: -1.59 },
+      { name: '半导体材料', value: 10.06, change: 2.17 },
+      { name: '银行', value: 6.47, change: -0.40 },
+      { name: '红利股', value: 5.24, change: -1.72 },
+      { name: '电力设备', value: -10.55, change: -3.01 },
+      { name: '半导体', value: -17.12, change: 0.57 },
+      { name: '通信', value: -51.68, change: -2.91 },
+      { name: '创新药', value: -59.63, change: -3.98 },
+      { name: '医药生物', value: -81.47, change: -3.78 },
+      { name: '人形机器人', value: -99.57, change: -2.71 },
+      { name: 'PCB', value: -138.85, change: -2.19 },
+      { name: '机器人概念', value: -196.91, change: -2.73 }
     ];
 
     const focusFlowBars = [
-      { name: '红利股', value: 22.14, change: 1.80 },
-      { name: '银行', value: 14.75, change: 2.31 },
-      { name: '集成电路制造', value: 7.37, change: 2.11 },
-      { name: '模拟芯片设计', value: 1.29, change: 0.61 },
-      { name: '机器人', value: -16.08, change: -3.01 },
-      { name: '电力', value: -25.72, change: -1.04 },
-      { name: '数字芯片设计', value: -42.47, change: -0.63 },
-      { name: '半导体材料', value: -47.60, change: -3.83 },
-      { name: '半导体', value: -95.24, change: -0.54 },
-      { name: '人形机器人', value: -98.66, change: -3.18 },
-      { name: '电力设备', value: -101.54, change: -2.57 },
-      { name: '存储芯片', value: -125.56, change: -0.85 },
-      { name: 'PCB', value: -211.58, change: -3.97 },
-      { name: '机器人概念', value: -214.32, change: -2.52 },
-      { name: '半导体概念', value: -287.79, change: -1.93 }
+      { name: '集成电路封测', value: 50.30, change: 2.88 },
+      { name: '半导体材料', value: 10.06, change: 2.17 },
+      { name: '银行', value: 6.47, change: -0.40 },
+      { name: '红利股', value: 5.24, change: -1.72 },
+      { name: '电力设备', value: -10.55, change: -3.01 },
+      { name: '半导体', value: -17.12, change: 0.57 },
+      { name: '通信', value: -51.68, change: -2.91 },
+      { name: '创新药', value: -59.63, change: -3.98 },
+      { name: '医药生物', value: -81.47, change: -3.78 },
+      { name: '人形机器人', value: -99.57, change: -2.71 },
+      { name: 'PCB', value: -138.85, change: -2.19 },
+      { name: '机器人概念', value: -196.91, change: -2.73 }
     ];
 
-    const closeFlowDates = ['6/30', '7/1', '7/2', '7/3', '7/6'];
+    const closeFlowDates = ['7/1', '7/2', '7/3', '7/6', '7/7'];
     const carbonFlowTrendLines = [
-      { name: '医药生物', color: '#ff5c5c', values: [-35.21, 32.43, 15.54, 20.45, 29.11] },
-      { name: '创新药', color: '#ff9f43', values: [-22.69, 18.92, 10.56, 18.31, 26.59] },
-      { name: '红利股', color: '#d6a23c', values: [-16.94, 3.75, 14.02, 8.39, 22.14] },
-      { name: '银行', color: '#4aa3ff', values: [-16.36, 6.87, 6.52, 0.18, 14.75] }
+      { name: '医药生物', color: '#ff5c5c', values: [32.43, 15.54, 20.45, 29.11, -81.47] },
+      { name: '创新药', color: '#ff9f43', values: [18.92, 10.56, 18.31, 26.59, -59.63] },
+      { name: '红利股', color: '#d6a23c', values: [3.75, 14.02, 8.39, 22.14, 5.24] },
+      { name: '银行', color: '#4aa3ff', values: [6.87, 6.52, 0.18, 14.75, 6.47] }
     ];
     const siliconFlowTrendLines = [
-      { name: '半导体', color: '#8e6bf1', values: [59.87, -259.56, -484.31, -194.77, -95.24] },
-      { name: '通信', color: '#45c7d8', values: [111.97, -201.74, -207.09, -30.91, -146.14] },
-      { name: 'PCB', color: '#b8c0ce', values: [37.11, -220.69, -251.61, 2.78, -211.58] }
+      { name: '半导体', color: '#8e6bf1', values: [-259.56, -484.31, -194.77, -95.24, -17.12] },
+      { name: '通信', color: '#45c7d8', values: [-201.74, -207.09, -30.91, -146.14, -51.68] },
+      { name: 'PCB', color: '#b8c0ce', values: [-220.69, -251.61, 2.78, -211.58, -138.85] }
     ];
 
     const quantSignals = [
-      { name: '半导体设备', ema20Dev: 8.9, ema20Range: '+4.7%~+18.8%', ema20YtdRange: '-7.92%~+32.89%', ema20YtdLow: '3/23', ema20YtdHigh: '6/29', ma200Dev: 95.6, ma200Range: '+61.8%~+121.4%', rs: 0.66, aboveWeek8: true, action: '不追/等回踩', theme: '设备链', members: ['北方华创', '中微公司', '拓荆科技', '华海清科', '盛美上海', '芯源微'], note: 'Futu核验：长期极端乖离，短线也偏热' },
-      { name: '集成电路制造', ema20Dev: 5.5, ema20Range: '+1.0%~+15.0%', ema20YtdRange: '-11.41%~+25.58%', ema20YtdLow: '3/3', ema20YtdHigh: '6/24', ma200Dev: 63.7, ma200Range: '+19.8%~+119.7%', rs: 0.72, aboveWeek8: true, action: '持有/观察', theme: '制造链', members: ['中芯国际', '华虹公司', '晶合集成', '士兰微', '华润微', '燕东微'], note: 'Futu核验：中芯短线贴EMA20，池内长期高位' },
-      { name: '先进封装', ema20Dev: 3.2, ema20Range: '-3.1%~+22.6%', ema20YtdRange: '-11.23%~+25.98%', ema20YtdLow: '3/23', ema20YtdHigh: '5/26', ma200Dev: 65.7, ma200Range: '+40.2%~+118.9%', rs: 0.61, aboveWeek8: true, action: '等回踩确认', theme: '封装链', members: ['通富微电', '长电科技', '甬矽电子', '华天科技', '寒武纪', '华海诚科'], note: 'Futu核验：中位贴EMA20，但内部冷热差异大' },
-      { name: '半导体材料', ema20Dev: 5.8, ema20Range: '+1.4%~+7.5%', ema20YtdRange: '-11.03%~+32.44%', ema20YtdLow: '3/23', ema20YtdHigh: '6/30', ma200Dev: 60.2, ma200Range: '+48.7%~+103.5%', rs: 0.45, aboveWeek8: true, action: '等资金回流', theme: '材料链', members: ['沪硅产业', '安集科技', '南大光电', '鼎龙股份', '彤程新材', '雅克科技'], note: 'Futu核验：短线温和，长期仍高位' },
-      { name: '数字芯片设计', ema20Dev: 1.7, ema20Range: '-1.7%~+20.3%', ema20YtdRange: '-10.74%~+16.23%', ema20YtdLow: '3/31', ema20YtdHigh: '5/11', ma200Dev: 64.5, ma200Range: '-16.0%~+115.3%', rs: 0.43, aboveWeek8: true, action: '分化观察', theme: '设计链', members: ['兆易创新', '澜起科技', '韦尔股份', '圣邦股份', '北京君正', '瑞芯微'], note: 'Futu核验：短线贴EMA20，长期高低分化' },
-      { name: '机器人', ema20Dev: 5.3, ema20Range: '+1.5%~+24.2%', ma200Dev: 0.1, ma200Range: '-8.9%~+107.3%', rs: 0.58, aboveWeek8: false, action: '去弱留强', theme: '机器人', members: ['三花智控', '绿的谐波', '拓普集团', '鸣志电器', '埃斯顿', '中大力德'], note: 'Futu核验：中位接近MA200，池内分化很大' }
+      { name: '半导体设备', ema20Dev: 9.8, ema20Range: '+4.8%~+18.8%', ema20YtdRange: '-7.92%~+32.89%', ema20YtdLow: '3/23', ema20YtdHigh: '6/29', ma200Dev: 96.3, ma200Range: '+58.4%~+107.2%', rs: 0.66, aboveWeek8: true, action: '不追/等回踩', theme: '设备链', members: ['北方华创', '中微公司', '拓荆科技', '华海清科', '盛美上海', '芯源微'], note: 'Futu核验：长期极端乖离，短线仍偏热' },
+      { name: '集成电路制造', ema20Dev: 6.5, ema20Range: '+1.8%~+13.5%', ema20YtdRange: '-11.41%~+25.58%', ema20YtdLow: '3/3', ema20YtdHigh: '6/24', ma200Dev: 58.8, ma200Range: '+20.7%~+118.1%', rs: 0.72, aboveWeek8: true, action: '持有/观察', theme: '制造链', members: ['中芯国际', '华虹公司', '晶合集成', '士兰微', '华润微', '燕东微'], note: 'Futu核验：短线贴EMA20上方，池内长期高位' },
+      { name: '先进封装', ema20Dev: 6.8, ema20Range: '-0.3%~+27.3%', ema20YtdRange: '-11.23%~+25.98%', ema20YtdLow: '3/23', ema20YtdHigh: '5/26', ma200Dev: 66.7, ma200Range: '+40.0%~+127.1%', rs: 0.61, aboveWeek8: true, action: '等回踩确认', theme: '封装链', members: ['通富微电', '长电科技', '甬矽电子', '华天科技', '寒武纪', '华海诚科'], note: 'Futu核验：内部冷热差异大，甬矽等仍扩展' },
+      { name: '半导体材料', ema20Dev: 6.4, ema20Range: '+2.0%~+10.1%', ema20YtdRange: '-11.03%~+32.44%', ema20YtdLow: '3/23', ema20YtdHigh: '6/30', ma200Dev: 57.2, ma200Range: '+51.4%~+95.0%', rs: 0.45, aboveWeek8: true, action: '观察修复', theme: '材料链', members: ['沪硅产业', '安集科技', '南大光电', '鼎龙股份', '彤程新材', '雅克科技'], note: 'Futu核验：资金转正，但长期位置仍高' },
+      { name: '数字芯片设计', ema20Dev: 2.2, ema20Range: '-4.9%~+8.9%', ema20YtdRange: '-10.74%~+16.23%', ema20YtdLow: '3/31', ema20YtdHigh: '5/11', ma200Dev: 52.6, ma200Range: '-11.7%~+94.3%', rs: 0.43, aboveWeek8: true, action: '贴线观察', theme: '设计链', members: ['兆易创新', '澜起科技', '韦尔股份', '圣邦股份', '北京君正', '瑞芯微'], note: 'Futu核验：短线更贴EMA20，长期高低分化' },
+      { name: '机器人', ema20Dev: 1.4, ema20Range: '+0.1%~+28.3%', ma200Dev: -3.0, ma200Range: '-8.0%~+105.9%', rs: 0.58, aboveWeek8: false, action: '去弱留强', theme: '机器人', members: ['三花智控', '绿的谐波', '拓普集团', '鸣志电器', '埃斯顿', '中大力德'], note: 'Futu核验：中位回到贴线，资金仍明显流出' }
     ];
 
     const tooltip = document.getElementById('tooltip');
