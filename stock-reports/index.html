@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>股票深度分析报告</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #637083;
+      --line: #d9e0ea;
+      --bg: #f6f8fb;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --warn: #9a5b00;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    main {
+      width: min(960px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 40px 0 56px;
+    }
+    header {
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 8px 24px rgba(23, 32, 51, 0.06);
+    }
+    h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+    .score {
+      margin: 0 0 12px;
+      color: var(--warn);
+      font-weight: 700;
+    }
+    .note {
+      min-height: 78px;
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    a:hover { text-decoration: underline; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 7px 11px;
+      border: 1px solid #b7d7d1;
+      border-radius: 999px;
+      background: #eefaf7;
+      font-size: 14px;
+    }
+    footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>股票深度分析报告</h1>
+      <p class="sub">UZI-Skill 快速体检版，生成时间：2026-07-08。报告用于研究记录，不构成投资建议。</p>
+    </header>
+
+    <section class="grid" aria-label="报告列表">
+      <article>
+        <h2>腾讯控股 0700.HK</h2>
+        <p class="score">49.7 / 100 · 谨慎</p>
+        <p class="note">51 位评委里 7 人看多。腾讯相对更偏现金流、社交生态和业务稳定性，但仍需等待趋势和财报确认。</p>
+        <div class="links">
+          <a class="pill" href="./tencent-0700/">打开报告</a>
+          <a class="pill" href="./tencent-0700/share-card.png">分享卡</a>
+          <a class="pill" href="./tencent-0700/war-report.png">战报图</a>
+        </div>
+      </article>
+
+      <article>
+        <h2>阿里巴巴 9988.HK</h2>
+        <p class="score">42.6 / 100 · 谨慎</p>
+        <p class="note">51 位评委里 3 人看多。阿里更像反转观察票，弹性来自电商修复、云与 AI，但确定性弱于腾讯。</p>
+        <div class="links">
+          <a class="pill" href="./alibaba-9988/">打开报告</a>
+          <a class="pill" href="./alibaba-9988/share-card.png">分享卡</a>
+          <a class="pill" href="./alibaba-9988/war-report.png">战报图</a>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      注：本页收录的是 lite 快速报告，正式深度版需补充 agent_analysis 与行业景气度核查。
+    </footer>
+  </main>
+</body>
+</html>
