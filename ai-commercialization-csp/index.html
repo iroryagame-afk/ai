@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>从硬件链到 CSP 验证：AI 商业化进入第二阶段定价</title>
+  <style>
+    :root {
+      --paper: #f7f8fb;
+      --surface: #ffffff;
+      --ink: #17191f;
+      --muted: #5f6572;
+      --line: #d9dde7;
+      --soft-line: #edf0f6;
+      --blue: #002fa7;
+      --blue-soft: #e7edff;
+      --green: #3e6f58;
+      --orange: #df6b3f;
+      --shadow: 0 18px 60px rgba(27, 33, 49, .09);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+    a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    img { max-width: 100%; display: block; }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header.hero {
+      padding: 32px 0 26px;
+      border-bottom: 1px solid var(--line);
+    }
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 0 0 18px;
+      margin-bottom: 26px;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+      font-weight: 760;
+      letter-spacing: 0;
+    }
+    .masthead span {
+      color: var(--muted);
+      font: 12px/1.2 var(--mono);
+      font-weight: 500;
+    }
+    .date-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      color: var(--muted);
+      font: 12px/1.3 var(--mono);
+      text-transform: uppercase;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: var(--surface);
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    h1 {
+      margin: 24px 0 16px;
+      max-width: 980px;
+      font-size: clamp(34px, 5.2vw, 68px);
+      line-height: 1.04;
+      letter-spacing: 0;
+      font-weight: 760;
+      overflow-wrap: anywhere;
+    }
+    .dek {
+      max-width: 980px;
+      margin: 0 0 18px;
+      color: #3a404d;
+      font-size: clamp(20px, 2.35vw, 30px);
+      line-height: 1.32;
+      font-weight: 520;
+    }
+    .byline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin: 18px 0 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .byline b { color: var(--ink); }
+    .lead {
+      max-width: 900px;
+      font-size: clamp(17px, 2vw, 22px);
+      color: #333845;
+      margin: 0 0 26px;
+    }
+    .takeaways {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+      margin: 24px 0 0;
+      max-width: 940px;
+    }
+    .takeaways b {
+      display: block;
+      margin-bottom: 10px;
+      font: 12px/1.2 var(--mono);
+      color: var(--blue);
+      text-transform: uppercase;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 22px;
+    }
+    .takeaways li {
+      margin: 8px 0;
+      color: #303642;
+    }
+    .verdict-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+      box-shadow: var(--shadow);
+    }
+    .verdict {
+      background: var(--surface);
+      padding: 18px;
+      min-height: 132px;
+    }
+    .verdict b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+    .verdict span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 34px;
+      padding: 34px 0 72px;
+      min-width: 0;
+    }
+    nav.toc {
+      position: sticky;
+      top: 18px;
+      align-self: start;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.82);
+      backdrop-filter: blur(12px);
+      padding: 16px;
+    }
+    .toc strong {
+      display: block;
+      margin-bottom: 10px;
+      font: 12px/1.2 var(--mono);
+      color: var(--muted);
+    }
+    .toc a {
+      display: block;
+      padding: 8px 0;
+      color: #303642;
+      font-size: 14px;
+      text-decoration: none;
+      border-top: 1px solid var(--soft-line);
+    }
+    .toc a.sub {
+      padding-left: 18px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .toc a:hover { color: var(--blue); }
+
+    main {
+      display: grid;
+      gap: 28px;
+      min-width: 0;
+    }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: clamp(22px, 4vw, 40px);
+      box-shadow: 0 8px 32px rgba(27,33,49,.045);
+      min-width: 0;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(24px, 3vw, 38px);
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 28px 0 10px;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+    p { margin: 12px 0; }
+    .kicker {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--blue);
+      font: 12px/1.2 var(--mono);
+    }
+    .callout {
+      border-left: 4px solid var(--blue);
+      padding: 14px 18px;
+      background: var(--blue-soft);
+      margin: 20px 0;
+      color: #1d2841;
+    }
+    .risk {
+      border-left-color: var(--orange);
+      background: #fff0e9;
+    }
+    .figure {
+      margin: 22px 0;
+      border: 1px solid var(--line);
+      background: #fbfcff;
+      padding: 12px;
+    }
+    .figure img { width: 100%; border: 1px solid var(--soft-line); background: #fff; }
+    figcaption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 18px 0;
+    }
+    .note-box {
+      border: 1px solid var(--line);
+      padding: 16px;
+      background: #fbfcff;
+    }
+    .note-box b {
+      display: block;
+      margin-bottom: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 14px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 12px 10px;
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      color: var(--muted);
+      font: 12px/1.4 var(--mono);
+      background: #f2f5fb;
+    }
+    .rank {
+      font: 12px/1.2 var(--mono);
+      color: var(--blue);
+      white-space: nowrap;
+    }
+    .badge {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px 8px;
+      margin: 2px 4px 2px 0;
+      font-size: 12px;
+      background: #fff;
+      color: #343a47;
+      white-space: nowrap;
+    }
+    .tag-hot { border-color: #f1c8b8; background: #fff4ee; color: #9a4628; }
+    .tag-blue { border-color: #b9c7ff; background: #eef3ff; color: #163e99; }
+    .tag-green { border-color: #b8d4c6; background: #eef8f3; color: #2c6349; }
+    .matrix {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--line);
+      margin: 20px 0;
+    }
+    .matrix > div {
+      padding: 18px;
+      border-right: 1px solid var(--line);
+      min-height: 170px;
+    }
+    .matrix > div:last-child { border-right: 0; }
+    .matrix .num {
+      font: 22px/1.1 var(--mono);
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .source-list {
+      padding-left: 18px;
+      color: #343a47;
+    }
+    .source-list li { margin: 8px 0; }
+    .disclaimer {
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+    }
+    .tool-read {
+      border: 1px dashed var(--line);
+      background: #fbfcff;
+      padding: 14px 16px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .verdict-strip { grid-template-columns: repeat(2, 1fr); }
+      .layout { grid-template-columns: 1fr; }
+      nav.toc { position: static; }
+      .grid-2, .matrix { grid-template-columns: 1fr; }
+      .matrix > div { border-right: 0; border-bottom: 1px solid var(--line); }
+      .matrix > div:last-child { border-bottom: 0; }
+    }
+    @media (max-width: 560px) {
+      .page { width: min(100% - 20px, 1180px); }
+      header.hero { padding-top: 24px; }
+      .masthead { align-items: flex-start; flex-direction: column; }
+      .verdict-strip { grid-template-columns: 1fr; }
+      section { padding: 20px; }
+      table {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      body { overflow-x: hidden; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="masthead">
+        <div>AI Commercialization Research</div>
+        <span>Infrastructure · Cloud · Capital Markets</span>
+      </div>
+      <div class="date-line">
+        <span class="pill">Research Note</span>
+        <span class="pill">2026-07-08</span>
+        <span class="pill">AI 商业化再定价</span>
+      </div>
+      <h1>从硬件链到 CSP 验证：AI 商业化进入第二阶段定价</h1>
+      <p class="dek">
+        上半年市场交易硬件订单，下一阶段要验证云收入、折旧压力、融资结构和 Agent 交易层。
+      </p>
+      <div class="byline">
+        <span><b>作者</b>：Codex Research Desk</span>
+        <span><b>口径</b>：研究框架，不构成投资建议</span>
+      </div>
+      <p class="lead">
+        上半年二级市场主要交易 AI 硬件链和 hyperscaler CapEx。OpenAI 与 Anthropic 尚未上市，只能作为需求和利润样本。下一阶段的核心验证，是硬件订单能否传导到 CSP 云收入和可持续 ROIC。
+      </p>
+      <div class="takeaways">
+        <b>Key Takeaways</b>
+        <ol>
+          <li>第一阶段股价弹性来自硬件链，CapEx 上修最先映射到 GPU、服务器、网络、电力和液冷。</li>
+          <li>模型层盈利样本验证需求，但 OpenAI 与 Anthropic 尚未上市，二级市场更依赖供应链和云厂映射。</li>
+          <li>阿里云、AWS、Google Cloud 和 Cloudflare 的收入数据，是判断 AI 基建能否转化为云消费的关键锚点。</li>
+          <li>Agent 交易层可能成为后续外延，核心在请求入口、身份权限、工具调用和机器结算。</li>
+        </ol>
+      </div>
+    </header>
+
+    <div class="layout">
+      <nav class="toc">
+        <strong>REPORT MAP</strong>
+        <a href="#framework">总论：第二阶段定价</a>
+        <a href="#data">一、数据锚点：收入验证</a>
+        <a href="#model">二、模型层：需求验证</a>
+        <a href="#multi-model">三、采用方式：多模型架构</a>
+        <a href="#capex">四、硬件链：CapEx 传导</a>
+        <a href="#debt" class="sub">4.1 债务融资放大周期</a>
+        <a href="#csp">五、CSP：收入验证</a>
+        <a href="#agent" class="sub">5.1 Agent 交易层外延</a>
+        <a href="#stocks">六、股价映射</a>
+        <a href="#conclusion">结论：ROIC 是终局</a>
+      </nav>
+
+      <main>
+        <section id="framework">
+          <span class="kicker">INTRODUCTION</span>
+          <h2>一套新的 AI 商业化定价框架：从硬件订单走向收入验证</h2>
+          <p>
+            今年上半年，二级市场最直接交易的是硬件链：GPU、AI 服务器、光模块、交换机、电力、液冷和数据中心。
+          </p>
+          <p>
+            这一交易路径有现实约束：OpenAI、Anthropic 尚未上市，模型层无法被二级市场直接定价。投资者只能通过云厂 CapEx、供应链订单和数据中心建设来表达对 AI 需求的预期。
+          </p>
+          <p>
+            硬件订单只是第一阶段。Anthropic 的盈利样本验证高价值 token 的付费能力；BofA 上调 CapEx 显示云厂扩建周期仍在延续；SemiAnalysis 的债务框架则提示 AI 基建正在进入资产负债表扩张。
+          </p>
+          <p>
+            因此，下一阶段 AI 商业化需要同时看三张表：模型利润表、云厂收入与资本开支表、AI 基建资产负债表。
+          </p>
+          <figure class="figure">
+            <img src="assets/01-three-tables.png" alt="AI 商业化三张表框架图" />
+            <figcaption>配图：AI 商业化从硬件订单交易，进入模型利润、云厂业绩、资本开支和债务周期共同定价的阶段。</figcaption>
+          </figure>
+          <div class="callout">
+            核心判断：硬件链负责第一阶段股价弹性；模型利润证明高价值 token 有付费能力；CSP 业绩证明 AI 进入生产系统；CapEx 和债务决定这轮投资能否形成可持续回报。
+          </div>
+        </section>
+
+        <section id="data">
+          <span class="kicker">DATA EVIDENCE</span>
+          <h2>一、数据锚点：收入、利润与 CapEx 已开始相互验证</h2>
+          <p>
+            AI 商业化不能只停留在逻辑判断。更重要的跟踪线索，是模型利润、云收入增速、客户合同、资本开支和自由现金流之间能否闭环。
+          </p>
+          <p>
+            现阶段的数据可以分为三类：已披露财报、媒体或研究机构披露的模型预测、市场 preview 口径。三类数据可信度不同，但共同指向同一个问题：AI CapEx 是否正在转化为可持续收入。
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>对象</th>
+                <th>最新数据锚点</th>
+                <th>口径</th>
+                <th>对本文框架的意义</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Anthropic</td>
+                <td>据 SemiAnalysis 2026 年 7 月 8 日付费报告公开页，Anthropic 与 OpenAI 合计 ARR 约 1000 亿美元；市场摘要称 SemiAnalysis 预测 Anthropic 3Q26 GAAP 营业利润超过 10 亿美元，利润率约 6%。</td>
+                <td>研究模型预测，非官方财报</td>
+                <td>验证高价值 token 具备付费能力，但二级市场只能间接交易云厂和供应链映射。</td>
+              </tr>
+              <tr>
+                <td>AWS</td>
+                <td>2026 年一季度 AWS 收入 376 亿美元，同比增长 28%；经营利润约 142 亿美元。同期 Amazon 资本开支约 432 亿美元，全年 CapEx 计划约 2000 亿美元，主要投向 AI 基础设施。</td>
+                <td>公司财报与媒体转述</td>
+                <td>云收入已加速，但 CapEx 增速仍高于收入增速，自由现金流和折旧是估值约束。</td>
+              </tr>
+              <tr>
+                <td>Google Cloud</td>
+                <td>2026 年一季度收入 200 亿美元，同比增长 63%；cloud backlog 超过 4600 亿美元。Alphabet 将 2026 年 CapEx 指引上调至 1800-1900 亿美元。</td>
+                <td>公司财报与媒体转述</td>
+                <td>Google Cloud 是“AI 云收入兑现”的强证据，backlog 提供后续收入可见度。</td>
+              </tr>
+              <tr>
+                <td>阿里云</td>
+                <td>2026 年 1-3 月云智能集团收入 416 亿元，同比增长 38%。1QFY27 preview 口径显示，Jun Q 云收入预计增长 45%，高于市场预期的 40%；margin 预计 11-12%，长期目标 20%。</td>
+                <td>前一季度已披露财报 + 市场 preview</td>
+                <td>中国 CSP 的 AI 云也开始进入收入加速和利润率改善同步验证阶段。</td>
+              </tr>
+              <tr>
+                <td>Cloudflare</td>
+                <td>2026 年一季度收入 6.398 亿美元，同比增长 34%。Q4 2025 Pool of Funds 合同占新增 ACV 的 20%，新 ACV 预订同比增长近 50%，Workers 平台活跃开发者超过 450 万。</td>
+                <td>公司财报与媒体转述</td>
+                <td>规模小于 hyperscalers，但更直接映射 Agent、边缘执行、SASE、使用量计费和 AI 流量入口。</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>阿里 1QFY27 preview 拆解</h3>
+          <p>
+            阿里这份 preview 的价值在于横向对比：集团收入和国内消费业务并不强，真正超预期来自云和 AI。
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>业务线</th>
+                <th>preview 口径</th>
+                <th>研究含义</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>集团</td>
+                <td>收入预计同比增长 9%；EBITA 约 260 亿元，高于一致预期约 240 亿元。</td>
+                <td>整体利润略好于预期，但不是由传统电商强复苏驱动。</td>
+              </tr>
+              <tr>
+                <td>电商</td>
+                <td>Jun Q CMR 预计下降 7-8%；旧口径剔除商家补贴影响后增长 1-2%。电商 EBITA 预计下降 3-4%。</td>
+                <td>内需部分一般，平台通过补贴效率和费用控制改善利润表现。</td>
+              </tr>
+              <tr>
+                <td>云与 AI</td>
+                <td>Jun Q 云收入预计增长 45%，高于市场预期的 40%；margin 预计 11-12%，长期目标 20%。</td>
+                <td>核心超预期来源，MaaS 占比提升和自研平头哥芯片可能改善成本结构。</td>
+              </tr>
+              <tr>
+                <td>即时零售</td>
+                <td>Jun Q 亏损预计收窄至约 100 亿元，低于 Mar Q 约 180 亿元亏损。</td>
+                <td>闪购亏损低于预期，降低对集团利润的拖累。</td>
+              </tr>
+              <tr>
+                <td>其他业务</td>
+                <td>亏损预计约 170 亿元，低于 Mar Q 约 210 亿元亏损，基本符合预期。</td>
+                <td>后续重点看 Qwen APP 与 training cost 披露，透明度提升有助于重估云 AI 投入回报。</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            这些数据的重点不是比较绝对规模，而是识别验证顺序。模型层先证明高价值任务能付费；云厂用收入和 backlog 证明需求进入生产系统；Cloudflare 这类边缘平台则观察 Agent 流量能否形成新的使用量收入。
+          </p>
+          <div class="callout">
+            新增判断：阿里 1QFY27 preview 是中国云厂的重要观察点。如果云收入增速从 38% 进一步抬升至 45%，同时 margin 维持 11-12%，说明 AI MaaS、自研芯片和模型服务正在从投入期进入利润率改善期。
+          </div>
+        </section>
+
+        <section id="model">
+          <span class="kicker">MODEL LAYER</span>
+          <h2>二、模型层：需求验证，高价值 token 已出现盈利样本</h2>
+          <p>
+            SemiAnalysis 在 2026 年 7 月 8 日发布的付费报告《Anthropic 3Q26 Profit Over $1B》，重新提高了市场对模型层盈利能力的关注。
+          </p>
+          <p>
+            据公开页与市场摘要，该报告基于 Tokenomics 模型，预测 Anthropic 2026 年第三季度 GAAP 营业利润超过 10 亿美元，利润率约 6%。主要驱动包括 token 处理量增长、Claude Code 在软件开发场景的采用，以及 B2B 定价能力。
+          </p>
+          <p>
+            这组预测的重点不在单季利润精确值，而在方向。顶级闭源模型不再只是高投入研发项目，而可能在代码、工程和企业自动化等高价值场景中形成利润。
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>观察点</th>
+                <th>含义</th>
+                <th>股价映射</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Anthropic 盈利预期</td>
+                <td>前沿闭源模型在 B2B 高价值场景存在定价权</td>
+                <td>提升 AI 商业化信心，利好云厂和算力链需求预期</td>
+              </tr>
+              <tr>
+                <td>Claude Code 增长</td>
+                <td>代码与工程场景是最早兑现的高价值用例之一</td>
+                <td>开发工具、企业软件面临重估与替代压力并存</td>
+              </tr>
+              <tr>
+                <td>未上市状态</td>
+                <td>OpenAI、Anthropic 难以直接在二级市场交易</td>
+                <td>二级市场更容易交易其云平台、芯片和基础设施供应链</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="risk callout">
+            口径提示：Anthropic 相关季度利润和 IPO 细节仍以 SemiAnalysis 模型推演和媒体线索为主，非 Anthropic 官方审计财报。正式披露前，应视为研究预测而非确定财报。
+          </div>
+        </section>
+
+        <section id="multi-model">
+          <span class="kicker">ADOPTION</span>
+          <h2>三、采用方式：企业 AI 使用进入多模型架构</h2>
+          <p>
+            Coinbase 通过模型路由、开源模型、缓存命中率提升和上下文精简来降低 AI 支出。微软上线自研 MAI 模型，主要覆盖高频、低复杂度、高体积任务。
+          </p>
+          <p>
+            这些案例指向同一趋势：企业不是减少 AI 使用，而是通过工程优化降低单位成本，扩大使用规模。
+          </p>
+          <div class="grid-2">
+            <div class="note-box">
+              <b>高价值任务</b>
+              <p>复杂推理、代码、金融分析、科研、Agent 高阶任务继续使用 Claude、GPT、Gemini 等前沿闭源模型。</p>
+              <span class="badge tag-blue">高价 token</span>
+              <span class="badge tag-blue">高准确率</span>
+            </div>
+            <div class="note-box">
+              <b>高频任务</b>
+              <p>摘要、分类、客服、检索增强、内部流程自动化会更多转向开源模型、小模型和 CSP 自研模型。</p>
+              <span class="badge tag-green">低成本 token</span>
+              <span class="badge tag-green">规模化推理</span>
+            </div>
+          </div>
+          <p>
+            这意味着闭源模型不会吃掉企业所有 AI 预算。前沿模型继续站在能力上限，但大量中低价值任务的价值会流向开源模型、自研模型和 CSP 工程层。
+          </p>
+        </section>
+
+        <section id="capex">
+          <span class="kicker">CAPEX</span>
+          <h2>四、硬件链：CapEx 上修先传导到订单</h2>
+          <p>
+            BofA Global Research 图表显示，美银上调 Alphabet、Meta 与 Amazon AWS 的资本开支预测。按图中口径，2028 年三者合计 CapEx 从 7020 亿美元上调至 8160 亿美元，2026 年基本未动，2027-2028 年上修更明显。
+          </p>
+          <figure class="figure">
+            <img src="assets/bofa-capex-chart.png" alt="BofA 上调 Alphabet Meta AWS CapEx 预测图" />
+            <figcaption>图表来源：BofA Global Research Estimates。单位为十亿美元，2028 年更新后合计 8160 亿美元。</figcaption>
+          </figure>
+          <p>
+            这不是收入确认，而是建设强度指标。它说明 hyperscalers 对 AI 数据中心、GPU/ASIC、服务器、存储、交换机、电力和冷却的需求预期继续上修。
+          </p>
+          <p>
+            短期看，CapEx 上修最先反映在硬件供应链；中期看，云厂需要证明这些投入能够转化为云收入、利润率和自由现金流。
+          </p>
+          <figure class="figure">
+            <img src="assets/03-capex-chain.png" alt="CapEx 到硬件订单再到回报验证传导链" />
+            <figcaption>配图：CapEx 上修先映射到硬件订单，但股价最终要回到毛利率、回款、云收入和 ROIC。</figcaption>
+          </figure>
+          <table>
+            <thead>
+              <tr>
+                <th>受益环节</th>
+                <th>代表资产</th>
+                <th>股价验证点</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GPU / ASIC</td>
+                <td>NVIDIA、AMD、Broadcom</td>
+                <td>订单能见度、供给约束、ASP、客户集中度</td>
+              </tr>
+              <tr>
+                <td>服务器与整机柜</td>
+                <td>浪潮信息、中科曙光、海外 ODM</td>
+                <td>AI 服务器占比、毛利率、交付节奏、回款质量</td>
+              </tr>
+              <tr>
+                <td>网络与光模块</td>
+                <td>交换机、CPO、光模块、网络芯片</td>
+                <td>800G/1.6T 渗透率、数据中心网络升级节奏</td>
+              </tr>
+              <tr>
+                <td>电力与液冷</td>
+                <td>变压器、配电、液冷、IDC</td>
+                <td>电力瓶颈、建设周期、客户锁定、资产回报率</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="debt">
+          <span class="kicker">BALANCE SHEET</span>
+          <h2>4.1 债务融资：订单弹性与尾部风险同步放大</h2>
+          <p>
+            SemiAnalysis 另一篇报告《Nvidia GPU Debt Backstop Unleashes the AI Project Trinity》将问题推进到融资层。
+          </p>
+          <p>
+            据公开摘要，其核心观点是 AI 建设正在从现金流驱动转向债务融资驱动。报告预计，2029 年全球 AI 相关债务可能超过 7 万亿美元，2024-2029 年累计 AI CapEx 约 11.1 万亿美元。
+          </p>
+          <p>
+            NVIDIA 的角色也可能从 GPU 供应商，延伸为 AI 算力信用体系的关键节点。若其通过 backstop、take-or-pay、最低收入保证等方式支持 Neocloud 融资，短期会扩大需求，长期也会加深自身信用与 AI 债务链的绑定。
+          </p>
+          <div class="matrix">
+            <div>
+              <div class="num">01</div>
+              <b>资本</b>
+              <p>Neocloud 需要低成本融资，才能采购 GPU、租赁数据中心和建设算力集群。</p>
+            </div>
+            <div>
+              <div class="num">02</div>
+              <b>承购</b>
+              <p>take-or-pay 和收入保证让 GPU 集群更像可融资资产，但也把利用率风险显性化。</p>
+            </div>
+            <div>
+              <div class="num">03</div>
+              <b>数据中心</b>
+              <p>电力、土地、冷却、网络和交付周期决定 AI 债务能否转化为可运营资产。</p>
+            </div>
+          </div>
+          <div class="risk callout">
+            风险判断：债务让 AI CapEx 周期更长、更大，也更脆弱。若 GPU 租赁价格下跌、利用率不足或模型需求不及预期，硬件订单和云厂估值都可能反向波动。
+          </div>
+        </section>
+
+        <section id="csp">
+          <span class="kicker">CSP RE-RATING</span>
+          <h2>五、CSP：从硬件订单进入收入验证</h2>
+          <p>
+            市场此前担心 CSP 只是转售算力和模型 token，承担巨额 CapEx，却未必捕获足够利润。多模型架构正在改变这一判断。
+          </p>
+          <p>
+            在企业生产环境中，CSP 不只获取闭源模型 API 分成，还承接模型托管、数据存储、权限治理、监控运维和算力租用等全栈云消费。
+          </p>
+          <p>
+            因此，CSP 的股价验证不能只看 CapEx 上修，还要同步看云收入增速、backlog、MaaS 占比、经营利润率、折旧压力和自由现金流。AWS、Google Cloud 与阿里云的最新数据，已经把分析重点从“是否投入”推向“投入能否变现”。
+          </p>
+          <figure class="figure">
+            <img src="assets/02-csp-os.png" alt="CSP AI 操作系统层机制图" />
+            <figcaption>配图：CSP 的价值不只在模型 API，而在模型路由、开源托管、算力租用、安全治理和企业生产系统。</figcaption>
+          </figure>
+          <table>
+            <thead>
+              <tr>
+                <th>CSP 收入层</th>
+                <th>具体内容</th>
+                <th>投资含义</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>模型层</td>
+                <td>闭源 API、开源模型托管、自研模型推理</td>
+                <td>模型降价未必压缩 CSP，可能扩大推理总量</td>
+              </tr>
+              <tr>
+                <td>数据层</td>
+                <td>对象存储、数据库、数据仓库、向量检索</td>
+                <td>AI 负载越贴近企业数据，云消费越容易沉淀</td>
+              </tr>
+              <tr>
+                <td>运维治理层</td>
+                <td>Kubernetes、MLOps、安全、权限、审计、监控</td>
+                <td>企业真正付费的是可靠生产系统，不只是模型能力</td>
+              </tr>
+              <tr>
+                <td>算力层</td>
+                <td>GPU、TPU、ASIC、私有化部署、推理集群</td>
+                <td>短期压 FCF，长期看利用率、折旧和 ROIC</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="callout">
+            关键句：模型公司决定 AI 能做什么；CSP 决定 AI 能以多大规模、多低成本、多高可靠性进入企业生产系统。
+          </div>
+        </section>
+
+        <section id="agent">
+          <span class="kicker">AGENT LAYER</span>
+          <h2>5.1 Agent 交易层：CSP 价值继续外延</h2>
+          <p>
+            如果第一阶段 CSP 赚训练和推理算力，第二阶段赚企业 AI 工程化，那么 Agent 时代对应第三层价值：机器请求、身份授权与自动结算。
+          </p>
+          <p>
+            未来 AI Agent 不只调用模型，还会调用 API、网页、数据库、企业系统、支付系统和交易平台。
+          </p>
+          <p>
+            MCP、A2A、x402、AP2 等协议本身不对应直接投资标的，但会把价值引向掌握基础设施的公司：Cloudflare、AWS、Microsoft、Google，以及 Visa、Mastercard、PayPal、Stripe、支付宝、微信支付等支付清算层。
+          </p>
+          <figure class="figure">
+            <img src="assets/04-agent-layer.png" alt="Agent 请求、身份权限与机器结算机制图" />
+            <figcaption>配图：Agent 时代的基础设施价值，从跑 token 延伸到请求入口、工具调用、身份权限、机器结算和结果回执。</figcaption>
+          </figure>
+          <table>
+            <thead>
+              <tr>
+                <th>层级</th>
+                <th>观察对象</th>
+                <th>股票映射</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>请求入口</td>
+                <td>ChatGPT Apps SDK、MCP、企业 Agent 入口</td>
+                <td>OpenAI 未上市；Microsoft、Google 间接受益</td>
+              </tr>
+              <tr>
+                <td>边缘网关</td>
+                <td>Cloudflare Agents、MCP、x402、WAF、Bot 管理</td>
+                <td>Cloudflare 是 Agent 请求收费网关候选，弹性大但标准尚早</td>
+              </tr>
+              <tr>
+                <td>云原生基础设施</td>
+                <td>AWS、Azure、GCP 的 IAM、API Gateway、模型托管和企业数据层</td>
+                <td>Amazon、Microsoft、Alphabet 的长期重估逻辑</td>
+              </tr>
+              <tr>
+                <td>支付清算</td>
+                <td>AP2、x402、银行卡网络、钱包、风控</td>
+                <td>Visa、Mastercard、PayPal、支付宝、微信支付</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="stocks">
+          <span class="kicker">STOCK MAP</span>
+          <h2>六、股价映射：不同阶段对应不同资产</h2>
+          <p>
+            这轮 AI 商业化不是单一利好，而是一条从模型收入、云厂 CapEx、硬件订单、债务融资到折旧回报的股价传导链。
+          </p>
+          <p>
+            不同环节的反应顺序不同，验证指标也不同。
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>阶段</th>
+                <th>市场交易什么</th>
+                <th>主要受益方向</th>
+                <th>核心风险</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="rank">第一阶段</span></td>
+                <td>模型收入爆发</td>
+                <td>Anthropic/OpenAI 生态、云厂、推理算力</td>
+                <td>模型降价、开源分流、财务披露不确定</td>
+              </tr>
+              <tr>
+                <td><span class="rank">第二阶段</span></td>
+                <td>CapEx 上修</td>
+                <td>GPU、服务器、光模块、交换机、电力、液冷</td>
+                <td>订单透支、毛利率下滑、客户议价</td>
+              </tr>
+              <tr>
+                <td><span class="rank">第三阶段</span></td>
+                <td>云收入兑现</td>
+                <td>AWS、Azure、Google Cloud、阿里云、腾讯云</td>
+                <td>折旧压力、FCF 被压、价格战、preview 不及预期</td>
+              </tr>
+              <tr>
+                <td><span class="rank">第四阶段</span></td>
+                <td>AI 债务扩张</td>
+                <td>NVIDIA、Neocloud、IDC、融资链</td>
+                <td>利用率不足、租赁价格下跌、债务风险</td>
+              </tr>
+              <tr>
+                <td><span class="rank">第五阶段</span></td>
+                <td>Agent 交易层</td>
+                <td>Cloudflare、AWS、支付网络、企业 IAM</td>
+                <td>协议标准不确定、监管、安全漏洞</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>配置含义：从满仓硬件链，降到 AI 主线多桶配置</h3>
+          <p>
+            当前不应从 AI 主线撤退，但也不宜继续把组合集中在单一硬件链。更合理的调整，是从“满仓硬件订单弹性”降到“AI 主线多桶配置”。
+          </p>
+          <p>
+            原因在于，市场已经开始交易一个新的风险点：AI 硬件链涨幅较快，但云厂和 AI 买单方的股价、现金流回报尚未同步验证。JPMorgan 将这种分化类比为 1999 年前后的设备商与资本开支方分化；UBS 也指出 AI infrastructure 的回报预期已经明显压过 hyperscalers；BofA 则提示，大厂 AI CapEx 持续上修会让市场更关注折旧、融资和回报压力。
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>方向</th>
+                <th>建议仓位</th>
+                <th>配置逻辑</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>AI 硬件链核心</td>
+                <td>45-55%</td>
+                <td>仍是最强主线，但从满仓降下来，只保留最强瓶颈环节。</td>
+              </tr>
+              <tr>
+                <td>CSP / 云收入验证</td>
+                <td>20-25%</td>
+                <td>从“谁卖设备”转向“谁把 AI 变成收入、利润和 ROIC”。</td>
+              </tr>
+              <tr>
+                <td>存储、内存、电力、液冷、IDC</td>
+                <td>10-15%</td>
+                <td>属于硬件链第二层，但比纯服务器更偏瓶颈，也更能承接 CapEx 扩散。</td>
+              </tr>
+              <tr>
+                <td>Agent 基础设施 / 支付 / 边缘云</td>
+                <td>5-10%</td>
+                <td>Cloudflare、支付网络、API、身份和结算层，属于中期选择权。</td>
+              </tr>
+              <tr>
+                <td>现金或低波动资产</td>
+                <td>10-15%</td>
+                <td>为 AI 硬件链回撤时的再平衡保留资金。</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="callout">
+            执行顺序：先减掉低纯度、低毛利、订单不透明的硬件链标的；再保留光模块、PCB、高速连接、液冷、电力和存储内存等瓶颈资产；最后补入云厂、Agent 基础设施和现金流更稳的底仓资产。
+          </div>
+          <h3>A 股映射：按 CSP CapEx 传导链分层</h3>
+          <p>
+            A 股不能只看服务器和云网安。若以 CSP 资本开支为主线，传导链应从云厂需求、算力硬件、存储内存、网络互联、PCB、半导体设备、电力液冷和 IDC 一起观察。
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>环节</th>
+                <th>代表公司</th>
+                <th>与 CSP 的关系</th>
+                <th>观察重点</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>云厂与运营商</td>
+                <td>阿里巴巴、腾讯控股、中国移动、中国电信、中国联通</td>
+                <td>直接承接模型服务、MaaS、云主机、IDC 和政企 AI 云需求</td>
+                <td>云收入增速、AI 收入占比、CapEx 强度、折旧、云利润率</td>
+              </tr>
+              <tr>
+                <td>AI 服务器与整机柜</td>
+                <td>浪潮信息、工业富联、中科曙光、神州数码、紫光股份</td>
+                <td>给云厂、互联网、运营商和政企数据中心交付服务器、整机柜和系统集成</td>
+                <td>AI 服务器订单、整机柜占比、毛利率、客户集中度、海外限制</td>
+              </tr>
+              <tr>
+                <td>国产算力芯片</td>
+                <td>寒武纪、海光信息、景嘉微、龙芯中科</td>
+                <td>在国产替代、政企私有化和特定行业算力中心中替代部分 GPU/CPU 需求</td>
+                <td>适配生态、客户认证、集群稳定性、软件栈、真实出货和收入确认</td>
+              </tr>
+              <tr>
+                <td>存储与内存链</td>
+                <td>兆易创新、澜起科技、聚辰股份、佰维存储、江波龙、香农芯创</td>
+                <td>AI 服务器需要更高容量 DRAM、SSD、模组、内存接口芯片和供应链配套</td>
+                <td>DDR5 渗透、HBM 外溢、企业级 SSD、库存周期、价格弹性</td>
+              </tr>
+              <tr>
+                <td>光模块与网络互联</td>
+                <td>中际旭创、新易盛、天孚通信、光迅科技、紫光股份、锐捷网络</td>
+                <td>训练集群和推理集群需要高速东西向流量，网络升级是 CSP 扩建刚需</td>
+                <td>800G/1.6T 渗透率、交换机升级、客户认证、价格年降、产能爬坡</td>
+              </tr>
+              <tr>
+                <td>PCB 与高速连接</td>
+                <td>沪电股份、深南电路、胜宏科技、生益电子、沃尔核材、兆龙互连</td>
+                <td>AI 服务器、交换机、加速卡和高速背板提升 PCB 层数、材料和连接器要求</td>
+                <td>AI PCB 占比、高频高速材料、良率、海外客户、单机价值量提升</td>
+              </tr>
+              <tr>
+                <td>半导体设备与材料</td>
+                <td>北方华创、中微公司、拓荆科技、华海清科、盛美上海、芯源微</td>
+                <td>国产算力、存储和先进封装扩产，向上游设备材料传导</td>
+                <td>订单能见度、国产替代率、先进制程/存储/封装设备兑现、交付周期</td>
+              </tr>
+              <tr>
+                <td>电力与液冷</td>
+                <td>英维克、申菱环境、高澜股份、同飞股份、科士达、科华数据、金盘科技</td>
+                <td>高功耗机柜推升制冷、UPS、配电、变压器和微模块数据中心需求</td>
+                <td>液冷渗透率、单机柜功率密度、数据中心电力瓶颈、项目回款</td>
+              </tr>
+              <tr>
+                <td>IDC 与算力租赁</td>
+                <td>润泽科技、数据港、光环新网、奥飞数据、宝信软件</td>
+                <td>承接机柜、电力、网络和算力租赁需求，是 CSP 与 Neocloud 的资产底座</td>
+                <td>上架率、PUE、电力指标、客户锁定、折旧压力、租赁价格</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="callout">
+            阶段判断：短期看服务器、光模块、PCB、液冷和电力订单；中期看云厂收入、MaaS 占比和存储内存需求；长期看 CapEx 能否覆盖折旧并形成 ROIC。A 股弹性主要在硬件和配套设备，云厂收入验证更多通过阿里、腾讯和运营商间接体现。
+          </div>
+        </section>
+
+        <section id="conclusion">
+          <span class="kicker">CONCLUSION</span>
+          <h2>结论：AI 商业化真正的分水岭，是谁能把算力支出变成可持续利润</h2>
+          <p>
+            Anthropic 的盈利预期验证高价值 token 的商业化潜力。AWS、Google Cloud 与阿里云的收入加速，说明 AI 需求正在进入云厂收入表。BofA CapEx 上修与 SemiAnalysis 的 AI 债务框架，则提示产业正在进入更高强度的资产负债表扩张。
+          </p>
+          <p>
+            Agent 协议和支付层进一步把 CSP 与边缘基础设施的价值，延伸到机器请求和交易清算。
+          </p>
+          <p>
+            这四件事合起来，构成新的 AI 商业化定价框架：模型公司决定能力上限，CSP 决定规模化落地，硬件链承接 CapEx，金融结构放大周期，Agent 交易层决定下一代互联网基础设施入口。
+          </p>
+          <div class="risk callout">
+            核心约束：CapEx 越高不等于股价越高。真正重要的是 CapEx 能否变成订单，订单能否变成云收入，云收入能否覆盖折旧和融资成本，并最终形成可持续 ROIC。
+          </div>
+          <h3>资料来源与口径</h3>
+          <ul class="source-list">
+            <li><a href="https://newsletter.semianalysis.com/p/anthropic-3q26-profit-over-1b-the">SemiAnalysis：Anthropic 3Q26 Profit Over $1B</a>，公开页可见标题与摘要，完整模型为付费内容。</li>
+            <li><a href="https://newsletter.semianalysis.com/p/nvidia-gpu-debt-backstop-unleashes">SemiAnalysis：Nvidia GPU Debt Backstop Unleashes the AI Project Trinity</a>，公开页可见标题，详细债务模型为付费内容。</li>
+            <li>BofA Global Research Estimates：Alphabet、Meta、Amazon AWS CapEx 预测更新图表。</li>
+            <li><a href="https://www.businessinsider.com/amazon-q1-earnings-amzn-stock-price-aws-ai-capex-2026-4">Business Insider：Amazon Q1 2026 earnings recap</a>，用于 AWS 收入增速与 CapEx 数据。</li>
+            <li><a href="https://www.businessinsider.com/stock-market-signal-chip-stocks-ai-capex-mag7-jpmorgan-2026-7">Business Insider：JPMorgan warning on AI hardware and hyperscaler divergence</a>，用于 AI 硬件链与 hyperscaler 表现分化讨论。</li>
+            <li><a href="https://www.marketwatch.com/story/ai-infrastructure-stocks-have-overtaken-big-tech-hyperscalers-in-an-extraordinary-shift-says-ubs-research-arm-7c425a02">MarketWatch：UBS on AI infrastructure stocks versus hyperscalers</a>，用于 AI infrastructure 回报预期与 hyperscaler 对比。</li>
+            <li><a href="https://www.barrons.com/articles/bofa-big-tech-ai-spending-warning-b22f1044">Barron's：BofA warning on Big Tech AI spending</a>，用于 hyperscaler CapEx 上修与回报压力讨论。</li>
+            <li><a href="https://www.investopedia.com/how-amazon-makes-money-4587523">Investopedia：How Amazon Makes Money</a>，用于 AWS 经营利润和分部贡献数据。</li>
+            <li><a href="https://www.wsj.com/tech/alphabet-earnings-q1-2026-googl-stock-283553bc">WSJ：Google Profit Jumps as Cloud Business Booms</a>，用于 Google Cloud 收入、backlog 与 CapEx 指引数据。</li>
+            <li><a href="https://apnews.com/article/e83a76c7188e27f69c9c3d7e4f8d9d83">AP News：Alibaba reports 38% jump in AI and cloud revenue</a>，用于阿里云 2026 年 1-3 月收入数据。</li>
+            <li>阿里巴巴 1QFY27 preview：用于 Jun Q 云收入、margin、集团 EBITA 与即时零售亏损预测；该口径为市场预览，非公司已披露正式财报。</li>
+            <li><a href="https://www.tomshardware.com/tech-industry/big-tech/cloudflare-cuts-20-percent-of-its-jobs-due-to-ai-and-its-stock-takes-a-19-percent-spill-1-100-jobs-disappearing-as-company-increased-usage-of-ai-sixfold-over-past-months">Tom's Hardware：Cloudflare Q1 2026 revenue and AI usage</a>，用于 Cloudflare 2026 年一季度收入与 AI 使用量数据。</li>
+            <li><a href="https://www.investors.com/research/the-new-america/cloudflare-stock-revenue-business-model-evolves-artificial-intelligence/">Investor's Business Daily：Cloudflare revenue model shift</a>，用于 Pool of Funds、ACV、AI 客户合同与 Workers 开发者数据。</li>
+            <li><a href="https://developers.cloudflare.com/agents/model-context-protocol/">Cloudflare Agents MCP 文档</a>，用于 Agent 基础设施与 MCP 讨论。</li>
+            <li><a href="https://developers.cloudflare.com/agents/tools/payments/">Cloudflare Agentic Payments 文档</a>，用于 x402/机器支付层讨论。</li>
+            <li><a href="https://openai.com/index/introducing-apps-in-chatgpt/">OpenAI Apps SDK 公告</a>，用于 ChatGPT Apps 与 MCP 入口讨论。</li>
+          </ul>
+          <p class="disclaimer">
+            本文为研究型框架梳理，不构成投资建议。涉及未上市公司、付费报告、推文和模型推演的数据，均需以后续正式财报、监管文件、公司披露和可验证订单为准。
+          </p>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
