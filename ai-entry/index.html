@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI入口重估：真实任务反馈与分发控制投资框架</title>
+  <style>
+    @page { size: A4; margin: 18mm 16mm; }
+    :root {
+      --ink: #101820;
+      --muted: #5d6773;
+      --line: #d9dee7;
+      --light: #f6f8fb;
+      --blue: #173b66;
+      --blue2: #e9f0f8;
+      --green: #1c6046;
+      --red: #8f3434;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 13.5px;
+      line-height: 1.72;
+    }
+    .cover {
+      min-height: 260px;
+      padding: 42px 46px 34px;
+      border-bottom: 5px solid var(--blue);
+      background: #f8fafc;
+    }
+    .kicker {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin-bottom: 22px;
+    }
+    h1 {
+      margin: 0;
+      max-width: 820px;
+      font-size: 32px;
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin-top: 18px;
+      max-width: 860px;
+      color: #384657;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .meta {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 24px;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+    main { padding: 30px 46px 46px; }
+    h2 {
+      margin: 34px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--blue);
+      color: var(--blue);
+      font-size: 21px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+    h3 {
+      margin: 22px 0 8px;
+      color: #243447;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    p { margin: 8px 0 10px; }
+    .lead {
+      margin: 8px 0 18px;
+      padding: 15px 18px;
+      background: var(--blue2);
+      border-left: 4px solid var(--blue);
+      font-size: 14.5px;
+      line-height: 1.78;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0 20px;
+    }
+    .summary-box {
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 14px 15px;
+      min-height: 118px;
+    }
+    .summary-box .label {
+      color: var(--blue);
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .score-table th:nth-child(1),
+    .score-table td:nth-child(1),
+    .score-table th:nth-child(3),
+    .score-table td:nth-child(3),
+    .score-table th:nth-child(4),
+    .score-table td:nth-child(4) {
+      text-align: center;
+      white-space: nowrap;
+    }
+    .score {
+      display: inline-block;
+      min-width: 36px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 800;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 20px;
+      font-size: 12.2px;
+      line-height: 1.55;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      vertical-align: top;
+    }
+    th {
+      background: #eef3f9;
+      color: #1d3048;
+      font-weight: 800;
+      text-align: left;
+    }
+    tr:nth-child(even) td { background: #fbfcfe; }
+    .note {
+      color: var(--muted);
+      font-size: 12.2px;
+      margin-top: -8px;
+    }
+    .formula {
+      margin: 12px 0 18px;
+      padding: 13px 16px;
+      background: #f3f5f7;
+      border: 1px solid var(--line);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12.8px;
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+    .risk {
+      margin: 12px 0 20px;
+      padding: 14px 17px;
+      background: #fff7f7;
+      border-left: 4px solid var(--red);
+    }
+    ol, ul { padding-left: 22px; }
+    li { margin: 5px 0; }
+    .source-list {
+      font-size: 12px;
+      color: #334155;
+    }
+    a { color: #174f90; text-decoration: none; word-break: break-all; }
+    .footer-note {
+      margin-top: 28px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+    @media print {
+      .cover { min-height: 240px; }
+      main { padding: 22px 0 0; }
+      h2, h3 { page-break-after: avoid; }
+      table, .summary-box, .lead, .risk { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <div class="kicker">THEMATIC RESEARCH · AI ENTRY STRATEGY</div>
+    <h1>AI 入口重估：真实任务反馈与分发控制投资框架</h1>
+    <div class="subtitle">从“模型能力”到“用户任务、数据反馈与分发控制”的估值框架。研究范围剔除硬件与算力供给层，聚焦模型、软件、云平台、企业工作流与分发入口。</div>
+    <div class="meta">
+      <div>发布日期：2026-07-10</div>
+      <div>研究口径：6-12 个月主题研究框架</div>
+      <div>适用对象：二级市场投资人、产业研究与战略研究</div>
+      <div>性质说明：研究支持，不构成投资建议</div>
+    </div>
+  </section>
+
+  <main>
+    <h2>一、投资摘要</h2>
+    <p class="lead">本报告将 AI 时代的竞争要素拆分为“门票”与“入口”。门票包括模型能力、资金、工程组织与必要算力资源，决定企业是否具备参与竞争的基础资格；入口包括用户任务、数据反馈与分发控制，决定企业能否形成持续的产品复利、模型复利与商业化闭环。由于硬件层已被剔除，本文重点评估软件入口与平台入口的战略价值。</p>
+
+    <div class="summary-grid">
+      <div class="summary-box">
+        <div class="label">核心判断</div>
+        <div>AI 应用竞争将从单一模型能力竞争，逐步迁移至真实任务反馈入口竞争。高价值入口必须连接执行、验收与商业结果。</div>
+      </div>
+      <div class="summary-box">
+        <div class="label">估值原则</div>
+        <div>入口强度不能直接等同于股票弹性，需要通过 SOTP 评估收入归属、利润贡献、集团体量和市场尚未定价程度。</div>
+      </div>
+      <div class="summary-box">
+        <div class="label">研究优先级</div>
+        <div>美股弹性重点为 META、NET、NOW、PLTR、RDDT，GOOGL 是底牌型锚点；中国重点跟踪阿里、腾讯、美团、金山办公、百度及未上市字节/Kimi。</div>
+      </div>
+    </div>
+
+    <p>普通模型 API 主要沉淀 prompt、token、调用成本与延迟等浅层数据；嵌入开发、办公、企业流程、云网关与协作系统的 agent 产品，则能够获得任务执行、人工验收、流程完成、客户留存和支付转化等高质量反馈。上述反馈是下一阶段模型优化、产品迭代与收入确认的重要基础。</p>
+
+    <h3>1.1 可投资核心结论：100 分制排序</h3>
+    <p>本报告采用 100 分制评估可投资标的的研究优先级。评分不是目标价，也不是短期交易信号，而是基于“入口质量、反馈深度、商业化/SOTP 传导、确定性、估值弹性”的综合排序。</p>
+    <div class="formula">综合得分 =
+入口质量 25%
++ 反馈深度 20%
++ 商业化 / SOTP 传导 20%
++ 确定性 20%
++ 估值弹性 15%</div>
+
+    <table>
+      <thead>
+        <tr><th>评级</th><th>分数区间</th><th>含义</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>A</td><td>85 分以上</td><td>核心研究标的，具备较强主题弹性和可验证路径</td></tr>
+        <tr><td>A-</td><td>80-84 分</td><td>重点配置候选，需跟踪财务或估值触发因素</td></tr>
+        <tr><td>B+</td><td>75-79 分</td><td>入口质量较好，但弹性、确定性或估值传导存在约束</td></tr>
+        <tr><td>B</td><td>70-74 分</td><td>跟踪标的，需等待更强数据或更合适估值位置</td></tr>
+      </tbody>
+    </table>
+
+    <h3>1.2 美股 AI 软件入口子组合</h3>
+    <p>若只看美股软件 / 平台入口，并剔除硬件与纯算力资产，建议将标的分为“高弹性入口股”和“底牌型锚点”两类。高弹性排序强调重新定价可能性；底牌型锚点强调入口厚度和长期确定性。</p>
+    <table class="score-table">
+      <thead>
+        <tr><th>角色</th><th>标的</th><th>得分</th><th>评级</th><th>入口位置</th><th>投资结论</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>高弹性 1</td><td>Meta / META</td><td><span class="score">88</span></td><td>A</td><td>用户分发：社交、多模态、广告反馈、模型追赶</td><td>消费入口重估弹性最高，广告闭环可直接验证 AI 效果；核心风险是资本开支和模型追赶节奏。</td></tr>
+        <tr><td>高弹性 2</td><td>Cloudflare / NET</td><td><span class="score">87</span></td><td>A</td><td>Agent 控制面：AI Gateway、Workers、MCP、机器流量治理</td><td>最接近机器 agent 流量入口，若网关地位被验证，估值叙事弹性强。</td></tr>
+        <tr><td>高弹性 3</td><td>ServiceNow / NOW</td><td><span class="score">85</span></td><td>A</td><td>企业流程：IT、HR、客服、审批 agent</td><td>企业流程入口集中，L4-L5 反馈清晰，AI SKU 对 ARPU / NRR 传导路径较直接。</td></tr>
+        <tr><td>高弹性 4</td><td>Palantir / PLTR</td><td><span class="score">81</span></td><td>A-</td><td>组织决策：Ontology、AIP、复杂业务流程</td><td>组织决策入口稀缺，弹性高；但估值和兑现节奏敏感，需持续验证商业客户扩张和利润质量。</td></tr>
+        <tr><td>高弹性 5</td><td>Reddit / RDDT</td><td><span class="score">76</span></td><td>B+</td><td>人类讨论数据：社区语料、搜索答案、数据授权</td><td>数据独特性强，适合 AI 数据授权与搜索入口重估；但商业化确定性和平台治理仍需验证。</td></tr>
+        <tr><td>底牌锚点</td><td>Alphabet / GOOGL</td><td><span class="score">82</span></td><td>A-</td><td>模型 / 云 / 搜索 / YouTube / Android / Gemini</td><td>入口厚度极强，适合作为框架锚点；短期弹性受搜索自我颠覆和集团体量影响，不宜按高弹性第一排序。</td></tr>
+      </tbody>
+    </table>
+    <p><strong>美股结论：</strong>META 更像消费入口重估，NET 更像机器 agent 控制面，NOW 更像企业流程 agent，PLTR 更像组织决策入口，RDDT 更像人类讨论数据入口，GOOGL 是底牌型锚点而非弹性第一。</p>
+
+    <h3>1.3 跨市场核心组合</h3>
+    <table class="score-table">
+      <thead>
+        <tr><th>排名</th><th>核心标的</th><th>得分</th><th>评级</th><th>核心投资结论</th><th>主要约束</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Meta / META</td><td><span class="score">88</span></td><td>A</td><td>消费入口、广告反馈和多模态分发具备最高重新定价弹性。</td><td>AI 资本开支高，模型追赶和商业化兑现需验证。</td></tr>
+        <tr><td>2</td><td>Cloudflare / NET</td><td><span class="score">87</span></td><td>A</td><td>机器 agent 网关与边缘执行入口具备稀缺性；若 AI Gateway / Workers 成为 agent 流量控制面，估值叙事有望从 CDN/安全扩展至 AI 基础设施入口。</td><td>AI 相关收入贡献仍需披露验证，估值敏感度较高。</td></tr>
+        <tr><td>3</td><td>ServiceNow / NOW</td><td><span class="score">85</span></td><td>A</td><td>企业流程入口集中，IT、HR、客服和审批场景天然连接 L4-L5 反馈，AI SKU 对 ARPU 与 NRR 的传导路径相对清晰。</td><td>估值基数较高，企业 rollout 节奏和实际自动化率需持续跟踪。</td></tr>
+        <tr><td>4</td><td>Alibaba / BABA / 9988</td><td><span class="score">83</span></td><td>A-</td><td>中国上市公司中 AI 云、Qwen 开源生态、钉钉和商家经营工具形成较完整入口组合，具备 SOTP 修复空间。</td><td>云竞争、组织执行与云业务利润率波动仍是主要约束。</td></tr>
+        <tr><td>5</td><td>Palantir / PLTR</td><td><span class="score">81</span></td><td>A-</td><td>复杂组织决策入口稀缺，AIP / Ontology 具备企业 agent 控制层属性。</td><td>估值较敏感，需验证非政府商业客户扩张与利润质量。</td></tr>
+        <tr><td>6</td><td>Tencent / 0700</td><td><span class="score">80</span></td><td>A-</td><td>微信、企业微信和腾讯文档构成国内最厚分发入口，若 AI agent 嵌入微信/企微，入口价值更高。</td><td>集团体量较大，AI 收入单列程度不足，股价弹性可能弱于入口厚度。</td></tr>
+        <tr><td>7</td><td>Meituan / 3690</td><td><span class="score">79</span></td><td>B+</td><td>本地生活交易执行入口稀缺，AI agent 最终若要订、买、送、履约，美团更接近 L5 商业结果。</td><td>AI 不是当前收入主线，竞争与补贴周期会影响估值弹性。</td></tr>
+        <tr><td>8</td><td>Kingsoft Office / 688111</td><td><span class="score">77</span></td><td>B+</td><td>WPS AI 是国内较纯的白领办公入口，公司体量相对小，AI 付费率和 ARPU 对估值弹性直接。</td><td>Kimi 等 AI-native 工作台可能前置化部分文档生成、资料整理和研究初稿入口，需验证 WPS 的存量入口和付费转化能否守住。</td></tr>
+        <tr><td>9</td><td>Reddit / RDDT</td><td><span class="score">76</span></td><td>B+</td><td>人类讨论数据独特，具备 AI 数据授权和搜索答案入口期权。</td><td>商业化持续性、平台治理和 AI 搜索流量影响仍需验证。</td></tr>
+      </tbody>
+    </table>
+    <p><strong>观察名单：</strong>GOOGL、MSFT、SPCX / SpaceX、BIDU / 9888、Moonshot / Kimi。其中 GOOGL 入口极厚但更适合作为底仓型锚点；MSFT 确定性最高但弹性被体量稀释；SPCX / SpaceX 的关键在于 Cursor / SpaceXAI 相关叙事是否已被市场计入；百度需要等待更强的入口数据和云业务验证；Kimi 暂不可直接配置，但对 WPS 等存量办公入口形成前置任务分流压力。</p>
+    <p><strong>投资结论：</strong>若只看“美股 AI 软件入口弹性”，优先级为 META、NET、NOW、PLTR、RDDT，GOOGL 作为底牌型锚点；若只看“中国 AI 入口资产”，排序为阿里、腾讯、美团、金山办公、百度，Kimi / Moonshot 是未上市但需要重点观察的前置任务入口变量；若只看“确定性”，MSFT 和 GOOGL 排名应上移，但弹性不一定最高。</p>
+
+    <h2>二、研究框架：门票与入口</h2>
+    <h3>2.1 核心定义</h3>
+    <table>
+      <thead>
+        <tr><th>维度</th><th>定义</th><th>投资含义</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>门票</td><td>模型能力、资金、工程组织、基础算力资源</td><td>决定企业是否具备参与 AI 竞争的最低条件</td></tr>
+        <tr><td>入口</td><td>用户任务、数据反馈、分发控制、商业闭环</td><td>决定企业能否形成持续复利与差异化壁垒</td></tr>
+        <tr><td>估值传导</td><td>入口资产对收入、利润、估值倍数和 SOTP 的贡献</td><td>决定主题逻辑能否转化为上市公司股价弹性</td></tr>
+      </tbody>
+    </table>
+    <p>AI 时代的入口并不等同于聊天框，而是 AI 能够进入真实任务、参与执行、获得验收并形成复盘数据的工作流位置。入口质量取决于反馈深度、任务频率、结果可验证性、分发控制力与变现能力。</p>
+
+    <h3>2.2 反馈价值分层</h3>
+    <table>
+      <thead>
+        <tr><th>层级</th><th>反馈类型</th><th>典型数据</th><th>投资价值</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>L1</td><td>交互反馈</td><td>点赞、重问、复制、停留</td><td>数据量大但信号较弱</td></tr>
+        <tr><td>L2</td><td>编辑反馈</td><td>文本修改、代码修改、人工采纳</td><td>可用于产品体验与局部能力优化</td></tr>
+        <tr><td>L3</td><td>执行反馈</td><td>命令运行、测试结果、工具调用、部署状态</td><td>可验证性强，适合形成专有评测集</td></tr>
+        <tr><td>L4</td><td>人工验收</td><td>PR 合并、工单关闭、文档采用、审批通过</td><td>高价值标签，反映真实任务完成度</td></tr>
+        <tr><td>L5</td><td>商业结果</td><td>成交、续费、留存、降本、事故减少</td><td>直接连接收入、利润与估值重估</td></tr>
+      </tbody>
+    </table>
+
+    <h2>三、入口类型与竞争路径</h2>
+    <h3>3.1 人类任务入口</h3>
+    <p>人类任务入口指 AI 直接嵌入个人或团队日常工作场景，包括开发工具、办公套件、企业协作、内容生产、搜索与知识管理。该类入口的核心价值在于高频使用、明确任务意图和持续留存。</p>
+
+    <h3>3.2 机器 agent 入口</h3>
+    <p>机器 agent 入口指 AI 在系统层、云平台层或自动化流程中执行任务，包括代码执行、测试、CI/CD、工具调用、权限控制、日志审计、网关路由与交易履约。该类入口的反馈质量通常高于普通人机交互，因为结果更可验证，且更接近业务闭环。</p>
+
+    <h3>3.3 闭源、开源与云厂路径</h3>
+    <table>
+      <thead>
+        <tr><th>路径</th><th>代表公司/产品</th><th>反馈复利机制</th><th>关键观察指标</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>闭源模型路径</td><td>OpenAI、Anthropic、Google</td><td>产品反馈可短链路回流至模型评测、RL、工具调用策略与下一代模型</td><td>活跃用户、任务成功率、企业付费、模型能力迭代</td></tr>
+        <tr><td>开源/开放模型路径</td><td>Qwen、GLM、DeepSeek、Hugging Face、多模型 IDE</td><td>通过模型路由、工具链、私有评测集和行业 workflow 形成产品层复利</td><td>开发者生态、企业部署、模型调用、插件与工具链</td></tr>
+        <tr><td>云厂路径</td><td>Microsoft、Google Cloud、AWS、阿里云、腾讯云、Cloudflare</td><td>通过账号、权限、API、日志、网关、云消费与企业合约形成分发和商业闭环</td><td>AI 云收入、客户数、算力与 API 消费、NRR</td></tr>
+        <tr><td>企业软件路径</td><td>ServiceNow、Salesforce、Atlassian、金山办公</td><td>嵌入既有业务流程，直接连接工单、审批、销售、客服和文档协作</td><td>AI SKU 渗透、ARPU、续费率、流程自动化率</td></tr>
+        <tr><td>终端 / OS 路径</td><td>豆包手机助手、Gemini on Android、Apple Intelligence、Samsung Galaxy AI</td><td>通过系统级权限、语音唤醒、屏幕理解和跨 App 操作形成真实任务入口</td><td>合作机型、激活量、跨 App 成功率、隐私合规、支付/下单等 L5 任务</td></tr>
+      </tbody>
+    </table>
+
+    <h3>3.4 AI 终端入口观察</h3>
+    <p>入口并不只包括软件 App 或 SaaS 工作流，也可能出现在 OS 与终端层。豆包手机助手与中兴/努比亚合作的工程机案例表明，大模型厂商正在尝试从“聊天机器人”进入“系统级 agent”：通过语音唤醒、屏幕理解、跨 App 跳转、比价下单、文件下载、通话与录音等功能，争取更接近真实任务执行的数据反馈。</p>
+    <p>该方向对本文框架的意义在于：若 AI 助手获得系统级权限，其反馈质量可能从普通对话数据上升到 L3-L5 任务数据，包括操作是否成功、用户是否接管、交易是否完成、支付是否转化、隐私授权是否通过等。这类数据比单纯 prompt 更接近商业结果，也更可能成为模型和产品迭代的复利来源。</p>
+    <p><strong>研究口径：</strong>当前仍应将其列为观察变量，而非核心配置假设。截图所称“2026 WAIC 期间开售、备货 8-10 万台、首批 50 万台”等信息，尚未见字节、中兴、努比亚或 WAIC 官方公告级确认。更稳妥的研究结论是：豆包手机助手验证了 AI 入口向终端 / OS 层迁移的方向，但出货量、合作范围、跨 App 权限标准、隐私合规和用户留存仍需后续数据验证。</p>
+
+    <h2>四、海外公司梯度</h2>
+    <table>
+      <thead>
+        <tr><th>梯队</th><th>公司/资产</th><th>入口属性</th><th>投资判断</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>第一梯队：基础模型与开发者入口</td><td>Anthropic、OpenAI、GitHub / Microsoft、Cursor / SpaceXAI</td><td>模型能力强，开发者与 agent 入口深，反馈质量高</td><td>Anthropic、OpenAI 未上市；Microsoft 确定性高但弹性受体量稀释；Cursor 需并入 SpaceX SOTP</td></tr>
+        <tr><td>第二梯队：消费分发与数据入口</td><td>Meta、Alphabet / Google、Reddit</td><td>控制社交、广告、搜索、YouTube、Android、人类讨论数据</td><td>Meta 弹性更高；Google 更适合作为底仓型锚点；Reddit 数据独特但商业化需验证</td></tr>
+        <tr><td>第三梯队：机器 agent 与云网关</td><td>Cloudflare、Google Cloud、AWS、Microsoft Azure</td><td>控制 API、网关、日志、权限、云消费与机器流量</td><td>Cloudflare 对 agent 网关叙事弹性较高；超大云厂确定性高但估值传导分散</td></tr>
+        <tr><td>第四梯队：企业流程与组织决策入口</td><td>ServiceNow、Palantir、Salesforce、Atlassian、Datadog</td><td>控制 IT、客服、销售、研发协作、组织决策和可观测性工作流</td><td>ServiceNow 业务集中度较高；Palantir 决策入口稀缺但估值敏感</td></tr>
+        <tr><td>第五梯队：垂直生产力入口</td><td>Adobe、Intuit、Notion、Figma 等</td><td>垂直任务高频，但反馈闭环深度和模型控制力不一</td><td>适合作为垂直 AI 应用扩散的跟踪样本</td></tr>
+      </tbody>
+    </table>
+
+    <p>海外可投资标的中，Microsoft 具备最高确定性，但入口资产对集团市值的弹性有限；Cloudflare 和 ServiceNow 的绝对入口规模小于 Microsoft，但一旦 agent 网关或企业流程 agent 被验证，对估值叙事的边际影响更直接。SpaceX / SPCX 的关键在于 Cursor、SpaceXAI 与 Grok 相关叙事是否已经被市场充分计入。</p>
+
+    <h2>五、中国公司梯度</h2>
+    <table>
+      <thead>
+        <tr><th>梯队</th><th>公司/资产</th><th>入口属性</th><th>投资判断</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>隐藏第一梯队</td><td>字节：豆包、飞书、Coze、MarsCode</td><td>消费、办公、bot 与开发者入口并存，分发能力强</td><td>未上市，战略价值高但二级市场不可直接配置</td></tr>
+        <tr><td>AI-native 工作台</td><td>Moonshot / Kimi</td><td>长文本、搜索、代码、研究、文档与 agent 工作台</td><td>未上市，但可能前置化部分办公任务入口，若上市需重新评估金山办公排序</td></tr>
+        <tr><td>上市公司第一梯队</td><td>阿里：Qwen、阿里云、钉钉、通义灵码、商家经营工具</td><td>开源模型、云平台、办公协作与商家经营闭环</td><td>AI 云与开源模型生态具备较高 SOTP 重估弹性</td></tr>
+        <tr><td>上市公司第一梯队</td><td>腾讯：微信、企业微信、腾讯文档、CodeBuddy / WorkBuddy、混元</td><td>C 端与 B 端分发入口深，企业协作基础强</td><td>入口厚度突出，但 AI 单项财务贡献仍需更多披露</td></tr>
+        <tr><td>交易执行入口</td><td>美团：本地生活、外卖、到店、履约网络</td><td>本地生活高频交易入口，AI agent 可直接连接订、买、送、履约</td><td>AI 纯度不如软件公司，但入口更接近 L5 商业结果</td></tr>
+        <tr><td>垂直高纯度</td><td>金山办公：WPS AI</td><td>办公文档入口，AI 订阅与 ARPU 提升路径直接</td><td>公司体量相对小，AI 付费率变化对估值弹性更敏感，但需关注 Kimi 等 AI-native 工作台的前置任务分流压力</td></tr>
+        <tr><td>跟踪梯队</td><td>百度、智谱、MiniMax、Moonshot 等</td><td>模型能力或搜索/应用入口较强，但闭环深度不一</td><td>需要持续验证产品留存、企业收入和模型回流效果</td></tr>
+      </tbody>
+    </table>
+
+    <h3>5.1 中国版入口图的处理结论</h3>
+    <p>此前生成的“中国 AI 软件入口梯度图”有必要进入报告，但不建议原图直接放入正文。原因是原图更适合研究讨论，正式报告应转化为可复核的梯度表。其核心逻辑应保留：越靠近高频任务、交易执行、内容反馈和社交分发，入口价值越高。</p>
+    <table>
+      <thead>
+        <tr><th>层级</th><th>代表</th><th>入口价值</th><th>二级市场含义</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>搜索 / 云 / 模型</td><td>百度</td><td>搜索、文心、千帆构成基础入口，但搜索广告重构和云竞争压制弹性</td><td>框架锚点，弹性弱于阿里、腾讯、美团</td></tr>
+        <tr><td>开源 + 云厂</td><td>阿里</td><td>Qwen、阿里云、钉钉、商家经营工具形成模型到云和商业化闭环</td><td>中国上市公司中 AI 云与开源生态重估弹性最清晰</td></tr>
+        <tr><td>办公工作流</td><td>金山办公</td><td>WPS 是存量办公入口，AI 付费传导直接</td><td>高纯度但需下调确定性，Kimi 等 AI-native 工作台可能前置化部分任务入口</td></tr>
+        <tr><td>交易执行</td><td>美团</td><td>本地生活高频交易入口，直接连接订、买、送、履约</td><td>AI 纯度不高，但若 agent 进入真实交易，入口价值很高</td></tr>
+        <tr><td>内容反馈</td><td>字节</td><td>豆包、抖音、剪映、飞书、火山形成内容和办公反馈闭环</td><td>隐藏龙一，但未上市</td></tr>
+        <tr><td>社交分发</td><td>腾讯</td><td>微信、企业微信、腾讯文档和混元构成最厚分发入口</td><td>入口厚度最高，但 AI 财务贡献需要进一步拆分</td></tr>
+        <tr><td>AI-native 工作台</td><td>Kimi / Moonshot</td><td>长文本、搜索、研究、代码、PPT/表格初稿和 agent 任务</td><td>未上市，但构成传统办公软件的前置任务入口变量</td></tr>
+      </tbody>
+    </table>
+
+    <h2>六、SOTP 估值框架</h2>
+    <p>入口资产应通过 SOTP 而非单一产品热度进行估值。建议采用以下公式评估入口对上市公司的边际贡献：</p>
+    <div class="formula">入口资产价值贡献 =
+可触达用户/客户规模
+× 任务频率
+× 反馈深度
+× 付费转化率
+× 收入或利润归属比例
+× 市场尚未定价程度</div>
+
+    <table>
+      <thead>
+        <tr><th>公司</th><th>入口资产</th><th>SOTP 传导逻辑</th><th>核心验证指标</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Meta</td><td>社交分发、广告反馈、多模态内容、开源模型生态</td><td>消费入口和广告反馈闭环最直接，模型追赶若兑现有望提升估值弹性</td><td>AI 广告效果、AI 推荐/创意工具采用、资本开支效率、模型能力追赶</td></tr>
+        <tr><td>Microsoft</td><td>GitHub、Copilot、Office、Azure</td><td>确定性强，但集团体量稀释开发者入口弹性</td><td>Copilot ARPU、GitHub 付费渗透、Azure AI 消费</td></tr>
+        <tr><td>Alphabet / Google</td><td>Search、YouTube、Android、Gemini、Google Cloud</td><td>入口厚度全球领先，但 AI 搜索自我颠覆和集团体量压低短期弹性</td><td>AI Mode 使用、Search monetization、YouTube/Android 分发、Cloud AI 收入</td></tr>
+        <tr><td>SpaceX / SPCX</td><td>Cursor、SpaceXAI、Grok、工程 agent</td><td>Cursor 若并入 SpaceXAI，应评估其对 AI 业务估值的增量贡献及是否已被市场计入</td><td>Cursor 留存、Grok 分发、AI 收入拆分、SPCX 估值隐含假设</td></tr>
+        <tr><td>Cloudflare</td><td>AI Gateway、Workers、MCP、边缘网络</td><td>若成为 agent 流量控制面，估值叙事可能从 CDN/安全扩展至 AI 基础设施入口</td><td>AI Gateway 客户数、Workers AI 用量、企业账单贡献</td></tr>
+        <tr><td>ServiceNow</td><td>IT、HR、客服、审批流程</td><td>企业流程入口集中，AI agent 成功率可直接影响 NRR 与 ARPU</td><td>AI SKU 渗透、流程自动化率、NRR、客户扩张</td></tr>
+        <tr><td>Palantir</td><td>Ontology、AIP、复杂组织决策入口</td><td>决策入口稀缺，若商业客户扩张持续，具备高弹性；但估值对兑现节奏敏感</td><td>AIP 客户扩张、商业收入增速、政府/商业收入结构、利润质量</td></tr>
+        <tr><td>Reddit</td><td>社区讨论数据、数据授权、Reddit Answers</td><td>人类讨论数据具有稀缺性，适合 AI 训练、搜索答案和数据授权重估</td><td>DAU、数据授权收入、AI 搜索流量影响、内容治理质量</td></tr>
+        <tr><td>Alibaba</td><td>Qwen、阿里云、钉钉、商家 agent</td><td>云智能重估与商家经营工具形成双重期权</td><td>AI 云收入、钉钉付费、Qwen 调用、云利润率</td></tr>
+        <tr><td>Tencent</td><td>微信、企业微信、腾讯文档、混元、CodeBuddy / WorkBuddy</td><td>分发入口最厚，但需验证 AI 对广告、企业服务、云业务的实际贡献</td><td>AI MAU、企业微信 AI 渗透、腾讯云 AI 收入</td></tr>
+        <tr><td>Meituan</td><td>本地生活、到店、外卖、履约网络、LongCat 等 AI 能力</td><td>交易执行入口稀缺，若 AI agent 进入本地生活履约，反馈直接连接 L5 商业结果</td><td>AI 订单转化、履约效率、商家工具渗透、补贴强度</td></tr>
+        <tr><td>Kingsoft Office</td><td>WPS AI</td><td>垂直办公入口纯度高，订阅渗透率和 ARPU 对估值敏感，但 Kimi 等 AI-native 工作台可能分流部分前置任务</td><td>AI 付费率、会员 ARPU、政企续费、毛利率、Kimi/豆包等前置任务分流渗透</td></tr>
+        <tr><td>Moonshot / Kimi</td><td>长文本、搜索、研究、代码、PPT/表格初稿、agent 工作台</td><td>未上市，但可能改变办公入口估值框架；若上市或并入大厂，应重新评估金山办公和百度排序</td><td>活跃用户、付费转化、企业客户、agent 任务成功率</td></tr>
+      </tbody>
+    </table>
+
+    <h2>七、投资排序与配置含义</h2>
+    <h3>7.1 按入口战略价值排序</h3>
+    <ol>
+      <li>Anthropic / OpenAI：基础模型与高质量任务反馈入口，但未上市。</li>
+      <li>Meta / Alphabet：消费分发、广告反馈、搜索、YouTube、Android 与多模态入口最厚。</li>
+      <li>GitHub / Microsoft：开发者入口最稳，确定性强。</li>
+      <li>字节：国内隐藏龙一，兼具消费、办公、bot 与开发者入口。</li>
+      <li>Cloudflare / ServiceNow：机器 agent 与企业流程入口具备较高边际弹性。</li>
+      <li>Palantir / Reddit：分别对应组织决策入口与人类讨论数据入口，弹性高但证据和估值约束更强。</li>
+      <li>阿里 / 腾讯 / 美团 / 金山办公：国内上市公司中入口资产最值得持续跟踪。</li>
+    </ol>
+
+    <h3>7.2 按二级市场弹性排序</h3>
+    <table>
+      <thead>
+        <tr><th>优先级</th><th>标的</th><th>主要逻辑</th><th>主要风险</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Meta / META</td><td>消费入口、广告反馈、多模态内容和模型追赶叙事叠加，重估弹性最高</td><td>AI 资本开支高，模型追赶与商业化兑现需验证</td></tr>
+        <tr><td>2</td><td>Cloudflare / NET</td><td>机器 agent 网关期权对估值叙事影响大</td><td>AI 业务收入贡献仍需验证</td></tr>
+        <tr><td>3</td><td>ServiceNow / NOW</td><td>企业流程入口集中，AI SKU 传导较清晰</td><td>估值基数较高，客户推进节奏不确定</td></tr>
+        <tr><td>4</td><td>Palantir / PLTR</td><td>组织决策入口稀缺，AIP / Ontology 具备企业 agent 控制层属性</td><td>估值较敏感，商业客户扩张和利润质量需验证</td></tr>
+        <tr><td>5</td><td>Reddit / RDDT</td><td>人类讨论数据稀缺，具备 AI 数据授权和搜索答案入口期权</td><td>商业化持续性、平台治理和 AI 搜索流量影响需验证</td></tr>
+        <tr><td>6</td><td>Alibaba / BABA / 9988</td><td>AI 云、Qwen、钉钉与商家工具形成 SOTP 修复空间</td><td>云竞争、组织执行与利润率波动</td></tr>
+        <tr><td>7</td><td>Kingsoft Office / 688111</td><td>WPS AI 付费率和 ARPU 弹性较直接</td><td>估值敏感，AI 付费渗透需验证，且需关注 Kimi 等 AI-native 工作台对前置任务入口的分流</td></tr>
+        <tr><td>8</td><td>Tencent / 0700</td><td>入口厚度最高，分发期权大</td><td>AI 收入单列程度不足，集团体量稀释弹性</td></tr>
+        <tr><td>9</td><td>Alphabet / GOOGL</td><td>入口厚度和确定性强，适合作为底牌型锚点</td><td>搜索自我颠覆与集团体量压低短期弹性</td></tr>
+        <tr><td>10</td><td>Microsoft / MSFT</td><td>确定性最强</td><td>市值体量大，单一入口资产弹性有限</td></tr>
+      </tbody>
+    </table>
+
+    <h2>八、风险因素</h2>
+    <div class="risk">
+      <ol>
+        <li>数据合规风险：真实任务反馈涉及代码、文档、客户数据和企业流程，回流训练可能受到隐私、版权、安全和合同限制。</li>
+        <li>商业化低于预期：AI 功能可能被纳入基础套餐，导致用户活跃提升但收入确认有限。</li>
+        <li>反馈闭环不完整：部分开源或多模型产品只能优化产品编排，未必能反哺基础模型。</li>
+        <li>估值传导不充分：入口资产虽强，但若集团体量过大或业务结构复杂，股价弹性可能被稀释。</li>
+        <li>竞争加剧：模型能力趋同、价格下降和云厂补贴可能压缩应用层利润。</li>
+        <li>证据等级差异：部分产品数据、收购细节和企业部署进度仍依赖媒体报道或非连续披露。</li>
+      </ol>
+    </div>
+
+    <h2>九、后续验证清单</h2>
+    <table>
+      <thead>
+        <tr><th>验证方向</th><th>关键指标</th><th>主要来源</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>产品活跃</td><td>MAU/WAU、任务数、企业席位数、插件安装量</td><td>官方披露、开发者社区、企业案例</td></tr>
+        <tr><td>任务验收</td><td>测试通过率、PR 合并率、工单关闭率、审批完成率</td><td>产品案例、客户访谈、平台数据</td></tr>
+        <tr><td>商业化</td><td>AI SKU 收入、ARPU、NRR、云消费、续费率</td><td>财报、电话会、投资者日</td></tr>
+        <tr><td>模型回流</td><td>专有评测集、RL/微调、工具调用改进</td><td>技术报告、官方博客、论文</td></tr>
+        <tr><td>SOTP 贡献</td><td>入口资产收入占比、利润贡献、估值倍数变化</td><td>分部财务、管理层口径、可比公司估值</td></tr>
+        <tr><td>终端落地</td><td>合作机型、实际出货、系统级权限、跨 App 任务成功率、隐私投诉</td><td>官方公告、渠道数据、媒体测评、用户反馈</td></tr>
+      </tbody>
+    </table>
+
+    <h2>十、参考资料</h2>
+    <ul class="source-list">
+      <li>Anthropic Claude Code 文档：<a href="https://code.claude.com/docs/en/overview">https://code.claude.com/docs/en/overview</a></li>
+      <li>GitHub Copilot cloud agent 文档：<a href="https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent">https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent</a></li>
+      <li>OpenAI Codex / Agents 文档：<a href="https://learn.chatgpt.com/docs">https://learn.chatgpt.com/docs</a></li>
+      <li>Cloudflare AI Gateway 文档：<a href="https://developers.cloudflare.com/ai-gateway/">https://developers.cloudflare.com/ai-gateway/</a></li>
+      <li>Hugging Face Inference Providers 文档：<a href="https://huggingface.co/docs/inference-providers/index">https://huggingface.co/docs/inference-providers/index</a></li>
+      <li>AP 关于 SpaceX 收购 Cursor 的报道：<a href="https://apnews.com/article/a5c60fcbaaca262cf107d30f1de899ef">https://apnews.com/article/a5c60fcbaaca262cf107d30f1de899ef</a></li>
+      <li>Axios 关于 SpaceXAI / Grok 4.5 与 Cursor 的报道：<a href="https://www.axios.com/2026/07/08/spacexai-grok-new-model">https://www.axios.com/2026/07/08/spacexai-grok-new-model</a></li>
+      <li>Investor's Business Daily 关于 SpaceXAI / Grok 4.5 的报道：<a href="https://www.investors.com/news/technology/spacex-stock-spcx-grok-ai-models-openai-anthropic-google/">https://www.investors.com/news/technology/spacex-stock-spcx-grok-ai-models-openai-anthropic-google/</a></li>
+      <li>Business Insider 关于 Musk 认可 Anthropic 领先地位的报道：<a href="https://www.businessinsider.com/elon-musk-anthropic-ai-leader-rival-claude-spacexai-2026-7">https://www.businessinsider.com/elon-musk-anthropic-ai-leader-rival-claude-spacexai-2026-7</a></li>
+      <li>Meta 广告生成 AI / 强化学习效果研究：<a href="https://arxiv.org/abs/2507.21983">https://arxiv.org/abs/2507.21983</a></li>
+      <li>AP 关于 Google AI Mode 与搜索入口变化的报道：<a href="https://apnews.com/article/5b0cdc59870508dab856227185cb8e23">https://apnews.com/article/5b0cdc59870508dab856227185cb8e23</a></li>
+      <li>AP 关于 Reddit 用户增长、盈利与数据授权的报道：<a href="https://apnews.com/article/5a9e32159a947094ae801ab107c950da">https://apnews.com/article/5a9e32159a947094ae801ab107c950da</a></li>
+      <li>Business Insider 关于 Palantir AIP 与组织决策入口的报道：<a href="https://www.businessinsider.com/palantir-calls-llms-a-jagged-intelligence-outlines-ai-race-plan-2025-8">https://www.businessinsider.com/palantir-calls-llms-a-jagged-intelligence-outlines-ai-race-plan-2025-8</a></li>
+      <li>Kimi K2 agentic intelligence 技术报告：<a href="https://arxiv.org/abs/2507.20534">https://arxiv.org/abs/2507.20534</a></li>
+      <li>Kimi k1.5 强化学习与长上下文技术报告：<a href="https://arxiv.org/abs/2501.12599">https://arxiv.org/abs/2501.12599</a></li>
+      <li>WPS Office 产品与用户入口资料：<a href="https://www.wps.com/">https://www.wps.com/</a></li>
+      <li>美团 LongCat / AI agent 相关资料：<a href="https://longcat.ai">https://longcat.ai</a></li>
+      <li>21 世纪经济报道关于豆包手机助手与中兴合作的报道：<a href="https://www.21jingji.com/article/20251203/herald/def8be89dff868ca9d313fba578dd94f.html">https://www.21jingji.com/article/20251203/herald/def8be89dff868ca9d313fba578dd94f.html</a></li>
+      <li>证券时报 / 深圳商报关于“豆包 AI 手机”的报道：<a href="https://www.stcn.com/article/detail/3524530.html">https://www.stcn.com/article/detail/3524530.html</a></li>
+      <li>WAIC 世界人工智能大会官网：<a href="https://www.worldaic.com.cn/">https://www.worldaic.com.cn/</a></li>
+      <li>Codex 使用研究：<a href="https://arxiv.org/abs/2606.26959">https://arxiv.org/abs/2606.26959</a></li>
+      <li>Claude Code 架构研究：<a href="https://arxiv.org/abs/2604.14228">https://arxiv.org/abs/2604.14228</a></li>
+      <li>Microsoft 组织级 AI coding agent rollout 研究：<a href="https://arxiv.org/abs/2607.01418">https://arxiv.org/abs/2607.01418</a></li>
+      <li>GLM-5 技术报告：<a href="https://arxiv.org/abs/2602.15763">https://arxiv.org/abs/2602.15763</a></li>
+      <li>腾讯 vs 阿里横纵分析本地产物：outputs/hv_analysis/tencent_alibaba_hv_analysis_20260708.md</li>
+    </ul>
+
+    <p class="footer-note">免责声明：本报告仅用于研究讨论，不构成任何证券买卖建议。涉及未上市公司、媒体报道及部分产品数据的内容，应以官方公告、财报、投资者交流及可复核数据为准。</p>
+  </main>
+</body>
+</html>
