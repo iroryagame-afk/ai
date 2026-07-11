@@ -27,12 +27,12 @@ h2{font-size:24px;border-top:1px solid var(--line);padding-top:24px}
 h3{font-size:18px;color:#23314f}
 p{margin:12px 0}
 blockquote{margin:20px 0;padding:16px 18px;background:#f3faf8;border-left:4px solid var(--accent);border-radius:6px;color:#24403d}
-table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:14px;display:block;overflow-x:auto;white-space:nowrap}
-th,td{border:1px solid var(--line);padding:9px 10px;vertical-align:top}
+table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:14px;table-layout:fixed}
+th,td{border:1px solid var(--line);padding:9px 10px;vertical-align:top;white-space:normal;overflow-wrap:anywhere;word-break:break-word}
 th{background:#f5f7fb;text-align:left;font-weight:700}
 tr:nth-child(even) td{background:#fcfdff}
 code{background:#f2f4f7;border-radius:4px;padding:1px 5px}
-a{color:var(--accent2)}
+a{color:var(--accent2);overflow-wrap:anywhere;word-break:break-word}
 ul,ol{padding-left:1.3em}
 .note{margin-top:16px;color:var(--muted);font-size:13px}
 .toplink{position:fixed;right:18px;bottom:18px;background:var(--ink);color:white;text-decoration:none;border-radius:999px;padding:9px 12px;font-size:13px;box-shadow:0 8px 24px rgba(23,32,51,.18)}
@@ -596,7 +596,7 @@ ul,ol{padding-left:1.3em}
 </tr>
 </tbody>
 </table>
-<h3 id="53-100">5.3 100 分制买入名单</h3>
+<h3 id="53-100">5.3 100 分制买入名单：港股</h3>
 <p>评分维度：创新药纯度 25 分、BD（商务拓展/对外授权）与管线质量 25 分、FPE（未来市盈率/预测市盈率）性价比 20 分、盈利确定性 15 分、目标价空间与交易拥挤度 15 分。</p>
 <table>
 <thead>
@@ -632,104 +632,90 @@ ul,ol{padding-left:1.3em}
 </tr>
 <tr>
 <td style="text-align: right;">4</td>
-<td>恒瑞医药 A/H</td>
-<td style="text-align: right;">82</td>
+<td>恒瑞医药 H</td>
+<td style="text-align: right;">81</td>
 <td>核心底仓</td>
-<td>创新药龙头，BD（商务拓展/对外授权）和研发平台确定性最高</td>
+<td>创新药龙头 H 股映射，BD（商务拓展/对外授权）和研发平台确定性高</td>
 </tr>
 <tr>
 <td style="text-align: right;">5</td>
-<td>药明康德 A</td>
-<td style="text-align: right;">80</td>
-<td>稳健配置</td>
-<td>CXO（医药研发生产外包服务）龙头，FPE（未来市盈率/预测市盈率）20.75，估值合理</td>
-</tr>
-<tr>
-<td style="text-align: right;">6</td>
 <td>信达生物</td>
 <td style="text-align: right;">79</td>
 <td>回调买入</td>
 <td>高纯度创新药平台，FPE（未来市盈率/预测市盈率）53.5 偏高，等回调更舒服</td>
 </tr>
 <tr>
-<td style="text-align: right;">7</td>
+<td style="text-align: right;">6</td>
 <td>荣昌生物 H</td>
 <td style="text-align: right;">78</td>
 <td>进攻仓</td>
 <td>ADC（抗体偶联药物）和自免（自身免疫疾病）弹性强，H 股优于 A 股</td>
 </tr>
 <tr>
-<td style="text-align: right;">8</td>
+<td style="text-align: right;">7</td>
 <td>康方生物</td>
 <td style="text-align: right;">77</td>
 <td>事件驱动仓</td>
 <td>双抗（双特异性抗体）龙头，目标价上行大，但 2026 年预测亏损</td>
 </tr>
 <tr>
-<td style="text-align: right;">9</td>
+<td style="text-align: right;">8</td>
 <td>翰森制药</td>
 <td style="text-align: right;">76</td>
 <td>中线配置</td>
 <td>平台稳健，FPE（未来市盈率/预测市盈率）28.23，不算便宜但确定性较好</td>
 </tr>
 <tr>
-<td style="text-align: right;">10</td>
+<td style="text-align: right;">9</td>
 <td>药明生物</td>
 <td style="text-align: right;">75</td>
 <td>小仓配置</td>
 <td>CXO（医药研发生产外包服务）修复，地缘风险仍压估值</td>
 </tr>
 <tr>
-<td style="text-align: right;">11</td>
+<td style="text-align: right;">10</td>
 <td>诺诚健华 H</td>
 <td style="text-align: right;">74</td>
 <td>观察买入</td>
 <td>BTK（布鲁顿酪氨酸激酶）修复，盈利体量仍小</td>
 </tr>
 <tr>
-<td style="text-align: right;">12</td>
+<td style="text-align: right;">11</td>
 <td>药明合联</td>
 <td style="text-align: right;">73</td>
 <td>等回调</td>
 <td>ADC CXO（抗体偶联药物外包服务）纯度高，但估值不低</td>
 </tr>
 <tr>
-<td style="text-align: right;">13</td>
+<td style="text-align: right;">12</td>
 <td>康龙化成 H</td>
 <td style="text-align: right;">72</td>
 <td>防守观察</td>
 <td>FPE（未来市盈率/预测市盈率）低，但行业弹性弱</td>
 </tr>
 <tr>
-<td style="text-align: right;">14</td>
+<td style="text-align: right;">13</td>
 <td>凯莱英 H</td>
 <td style="text-align: right;">70</td>
 <td>观察</td>
 <td>CDMO（合同研发生产组织）修复，目标价空间一般</td>
 </tr>
 <tr>
-<td style="text-align: right;">15</td>
+<td style="text-align: right;">14</td>
 <td>泰格医药 H</td>
 <td style="text-align: right;">69</td>
 <td>观察</td>
 <td>CRO（合同研究组织）修复，机构覆盖偏少</td>
 </tr>
 <tr>
-<td style="text-align: right;">16</td>
-<td>百济神州 H/A</td>
+<td style="text-align: right;">15</td>
+<td>百济神州 H</td>
 <td style="text-align: right;">68</td>
 <td>好公司不急买</td>
 <td>全球化最强，但 FPE（未来市盈率/预测市盈率）偏高</td>
 </tr>
 <tr>
-<td style="text-align: right;">17</td>
-<td>百利天恒</td>
-<td style="text-align: right;">66</td>
-<td>只做事件</td>
-<td>ADC（抗体偶联药物）BD（商务拓展/对外授权）强，但亏损和波动大</td>
-</tr>
-<tr>
-<td style="text-align: right;">18</td>
+<td style="text-align: right;">16</td>
 <td>科伦博泰</td>
 <td style="text-align: right;">62</td>
 <td>暂不追</td>
@@ -737,13 +723,73 @@ ul,ol{padding-left:1.3em}
 </tr>
 </tbody>
 </table>
-<h3 id="54">5.4 估值后的最终名单</h3>
-<p>核心买入：三生制药、中国生物制药、石药集团、恒瑞医药、药明康德 A。<br />
-进攻买入：信达生物、荣昌生物 H、康方生物。<br />
-观察等待：翰森制药、药明生物、诺诚健华 H、药明合联、康龙化成 H、凯莱英 H、泰格医药 H。<br />
-暂不追：百济神州、百利天恒、科伦博泰。</p>
-<h3 id="55">5.5 重点标的目标价区间</h3>
+<h3 id="54-100-a">5.4 100 分制买入名单：A 股</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">排名</th>
+<th>公司</th>
+<th style="text-align: right;">分数</th>
+<th>操作建议</th>
+<th>关键理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>恒瑞医药 A</td>
+<td style="text-align: right;">82</td>
+<td>核心底仓</td>
+<td>A 股创新药龙头，确定性最高，适合作为创新药主仓</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>药明康德 A</td>
+<td style="text-align: right;">80</td>
+<td>稳健配置</td>
+<td>CXO（医药研发生产外包服务）龙头，FPE（未来市盈率/预测市盈率）20.75，估值合理</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>百济神州 A</td>
+<td style="text-align: right;">68</td>
+<td>好公司不急买</td>
+<td>全球化能力强，但估值要求高，等回调更合适</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>百利天恒</td>
+<td style="text-align: right;">66</td>
+<td>只做事件</td>
+<td>ADC（抗体偶联药物）BD（商务拓展/对外授权）弹性强，但亏损和波动大</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>荣昌生物 A</td>
+<td style="text-align: right;">65</td>
+<td>观察</td>
+<td>质地不差，但相对 H 股赔率较弱</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>诺诚健华 A</td>
+<td style="text-align: right;">64</td>
+<td>观察</td>
+<td>BTK（布鲁顿酪氨酸激酶）修复逻辑存在，但估值和弹性不如 H 股</td>
+</tr>
+</tbody>
+</table>
+<h3 id="55">5.5 估值后的最终名单</h3>
+<p>港股核心买入：三生制药、中国生物制药、石药集团、恒瑞医药 H。<br />
+港股进攻买入：信达生物、荣昌生物 H、康方生物。<br />
+港股观察等待：翰森制药、药明生物、诺诚健华 H、药明合联、康龙化成 H、凯莱英 H、泰格医药 H。<br />
+港股暂不追：百济神州 H、科伦博泰。</p>
+<p>A 股核心买入：恒瑞医药 A、药明康德 A。<br />
+A 股观察等待：百济神州 A、荣昌生物 A、诺诚健华 A。<br />
+A 股事件仓：百利天恒。  </p>
+<h3 id="56">5.6 重点标的目标价区间</h3>
 <p>以下为 6-12 个月研究型目标价，不构成投资建议。</p>
+<p>港股：</p>
 <table>
 <thead>
 <tr>
@@ -777,18 +823,11 @@ ul,ol{padding-left:1.3em}
 <td>估值便宜，重估依赖小核酸（核酸药物技术路线）兑现</td>
 </tr>
 <tr>
-<td>恒瑞医药 A</td>
-<td style="text-align: right;">65 元</td>
-<td style="text-align: right;">77 元</td>
-<td style="text-align: right;">90 元</td>
-<td>基准接近一致预期均值</td>
-</tr>
-<tr>
-<td>药明康德 A</td>
-<td style="text-align: right;">132 元</td>
-<td style="text-align: right;">144 元</td>
-<td style="text-align: right;">160 元</td>
-<td>目标价空间一般，适合稳健仓</td>
+<td>恒瑞医药 H</td>
+<td style="text-align: right;">68 港元</td>
+<td style="text-align: right;">80 港元</td>
+<td style="text-align: right;">92 港元</td>
+<td>H 股流动性较新，适合作为港股核心观察</td>
 </tr>
 <tr>
 <td>信达生物</td>
@@ -810,6 +849,48 @@ ul,ol{padding-left:1.3em}
 <td style="text-align: right;">160 港元</td>
 <td style="text-align: right;">185 港元</td>
 <td>高弹性但亏损口径需要打折</td>
+</tr>
+</tbody>
+</table>
+<p>A 股：</p>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th style="text-align: right;">保守目标价</th>
+<th style="text-align: right;">基准目标价</th>
+<th style="text-align: right;">乐观目标价</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>恒瑞医药 A</td>
+<td style="text-align: right;">65 元</td>
+<td style="text-align: right;">77 元</td>
+<td style="text-align: right;">90 元</td>
+<td>基准接近一致预期均值</td>
+</tr>
+<tr>
+<td>药明康德 A</td>
+<td style="text-align: right;">132 元</td>
+<td style="text-align: right;">144 元</td>
+<td style="text-align: right;">160 元</td>
+<td>目标价空间一般，适合稳健仓</td>
+</tr>
+<tr>
+<td>百济神州 A</td>
+<td style="text-align: right;">285 元</td>
+<td style="text-align: right;">330 元</td>
+<td style="text-align: right;">380 元</td>
+<td>好公司但估值要求高，优先等回调</td>
+</tr>
+<tr>
+<td>百利天恒</td>
+<td style="text-align: right;">330 元</td>
+<td style="text-align: right;">420 元</td>
+<td style="text-align: right;">480 元</td>
+<td>事件弹性强，波动和亏损折价也高</td>
 </tr>
 </tbody>
 </table>
@@ -1073,7 +1154,7 @@ ul,ol{padding-left:1.3em}
 <li>细分赛道检索 traceId：<code>9eb26a8716bcbdebf5bd7737a6d0c5c8-627f90c3-1914-4b11-9735-005ded17408f</code></li>
 <li>第二主线观察检索 traceId：<code>41f73ab75ec908ebef7996ecaf150dab-cc095bf8-2edd-4603-88ac-6451cb839db3</code></li>
 </ul></article>
-    <nav class="toc"><b>目录</b><a href="#ai">开篇提示：创新药正在成为 AI（人工智能）之后的第二主线观察</a><a href="#_1">一句话结论</a><a href="#0">0. 术语说明</a><a href="#_2">核心判断</a><a href="#1">1. 政策链：这次不是单一医保消息</a><a href="#11" style="padding-left:14px">1.1 国家医保/商保目录初审</a><a href="#12-2026" style="padding-left:14px">1.2 2026 版基药目录</a><a href="#13-cgt" style="padding-left:14px">1.3 CGT（细胞与基因治疗）审评优化</a><a href="#2-bd">2. BD（商务拓展/对外授权合作）出海：从偶发大单变成系统性重估</a><a href="#21" style="padding-left:14px">2.1 总量数据</a><a href="#22" style="padding-left:14px">2.2 头部交易样本</a><a href="#23-headline-value" style="padding-left:14px">2.3 不能只看 headline value（公告披露的潜在总交易额）</a><a href="#3">3. 子赛道拆分</a><a href="#31-adcxdc" style="padding-left:14px">3.1 ADC/XDC（抗体偶联药物/广义偶联药物）</a><a href="#32-pd-1-pluspd-1" style="padding-left:14px">3.2 双抗/多抗/PD-1 Plus（PD-1 免疫治疗升级组合）</a><a href="#33-sirna-rna" style="padding-left:14px">3.3 小核酸/siRNA（小干扰 RNA）</a><a href="#34-glp-1" style="padding-left:14px">3.4 GLP-1/代谢/多肽（降糖减重及相关慢病药物）</a><a href="#35" style="padding-left:14px">3.5 自免/慢病</a><a href="#36-cgt" style="padding-left:14px">3.6 CGT/细胞治疗（细胞与基因治疗）</a><a href="#37-cxocdmo" style="padding-left:14px">3.7 CXO/CDMO（医药外包服务/合同研发生产组织）</a><a href="#4">4. 公司分层</a><a href="#5">5. 估值与买入评分</a><a href="#51" style="padding-left:14px">5.1 估值公式</a><a href="#52" style="padding-left:14px">5.2 核心估值表</a><a href="#53-100" style="padding-left:14px">5.3 100 分制买入名单</a><a href="#54" style="padding-left:14px">5.4 估值后的最终名单</a><a href="#55" style="padding-left:14px">5.5 重点标的目标价区间</a><a href="#6">6. 龙一/龙二与相对排序</a><a href="#61" style="padding-left:14px">6.1 综合龙一：恒瑞医药</a><a href="#62" style="padding-left:14px">6.2 全球化龙头：百济神州</a><a href="#63" style="padding-left:14px">6.3 高弹性龙二组：康方、信达、三生</a><a href="#7">7. 交易策略</a><a href="#71" style="padding-left:14px">7.1 当前位置</a><a href="#72" style="padding-left:14px">7.2 三类仓位</a><a href="#73-etf" style="padding-left:14px">7.3 ETF（交易型开放式指数基金）工具</a><a href="#8-6-12">8. 未来 6-12 个月催化日历</a><a href="#9">9. 风险清单</a><a href="#10">10. 最终评级</a><a href="#11-6-12">11. 6-12 个月目标区间</a><a href="#12">12. 结论复盘</a><a href="#_3">来源与证据等级</a></nav>
+    <nav class="toc"><b>目录</b><a href="#ai">开篇提示：创新药正在成为 AI（人工智能）之后的第二主线观察</a><a href="#_1">一句话结论</a><a href="#0">0. 术语说明</a><a href="#_2">核心判断</a><a href="#1">1. 政策链：这次不是单一医保消息</a><a href="#11" style="padding-left:14px">1.1 国家医保/商保目录初审</a><a href="#12-2026" style="padding-left:14px">1.2 2026 版基药目录</a><a href="#13-cgt" style="padding-left:14px">1.3 CGT（细胞与基因治疗）审评优化</a><a href="#2-bd">2. BD（商务拓展/对外授权合作）出海：从偶发大单变成系统性重估</a><a href="#21" style="padding-left:14px">2.1 总量数据</a><a href="#22" style="padding-left:14px">2.2 头部交易样本</a><a href="#23-headline-value" style="padding-left:14px">2.3 不能只看 headline value（公告披露的潜在总交易额）</a><a href="#3">3. 子赛道拆分</a><a href="#31-adcxdc" style="padding-left:14px">3.1 ADC/XDC（抗体偶联药物/广义偶联药物）</a><a href="#32-pd-1-pluspd-1" style="padding-left:14px">3.2 双抗/多抗/PD-1 Plus（PD-1 免疫治疗升级组合）</a><a href="#33-sirna-rna" style="padding-left:14px">3.3 小核酸/siRNA（小干扰 RNA）</a><a href="#34-glp-1" style="padding-left:14px">3.4 GLP-1/代谢/多肽（降糖减重及相关慢病药物）</a><a href="#35" style="padding-left:14px">3.5 自免/慢病</a><a href="#36-cgt" style="padding-left:14px">3.6 CGT/细胞治疗（细胞与基因治疗）</a><a href="#37-cxocdmo" style="padding-left:14px">3.7 CXO/CDMO（医药外包服务/合同研发生产组织）</a><a href="#4">4. 公司分层</a><a href="#5">5. 估值与买入评分</a><a href="#51" style="padding-left:14px">5.1 估值公式</a><a href="#52" style="padding-left:14px">5.2 核心估值表</a><a href="#53-100" style="padding-left:14px">5.3 100 分制买入名单：港股</a><a href="#54-100-a" style="padding-left:14px">5.4 100 分制买入名单：A 股</a><a href="#55" style="padding-left:14px">5.5 估值后的最终名单</a><a href="#56" style="padding-left:14px">5.6 重点标的目标价区间</a><a href="#6">6. 龙一/龙二与相对排序</a><a href="#61" style="padding-left:14px">6.1 综合龙一：恒瑞医药</a><a href="#62" style="padding-left:14px">6.2 全球化龙头：百济神州</a><a href="#63" style="padding-left:14px">6.3 高弹性龙二组：康方、信达、三生</a><a href="#7">7. 交易策略</a><a href="#71" style="padding-left:14px">7.1 当前位置</a><a href="#72" style="padding-left:14px">7.2 三类仓位</a><a href="#73-etf" style="padding-left:14px">7.3 ETF（交易型开放式指数基金）工具</a><a href="#8-6-12">8. 未来 6-12 个月催化日历</a><a href="#9">9. 风险清单</a><a href="#10">10. 最终评级</a><a href="#11-6-12">11. 6-12 个月目标区间</a><a href="#12">12. 结论复盘</a><a href="#_3">来源与证据等级</a></nav>
   </main>
   <a class="toplink" href="#top">回到顶部</a>
 </body>
