@@ -197,6 +197,12 @@
 <script>
   const entries = [
     {
+      date:"07月12日",
+      title:"创新药行业深度研究：AI 后第二主线观察",
+      url:"../innovative-drugs-2026/",
+      tags:["创新药","AI后第二主线","BD出海","医保/商保","PE/FPE","100分制买入名单","港股创新药"]
+    },
+    {
       date:"07月10日",
       title:"AI 入口重估：真实任务反馈与分发控制投资框架",
       url:"../ai-entry/",
@@ -222,6 +228,9 @@
   const resultCount = document.querySelector("#resultCount");
 
   function tagClass(tag) {
+    if (["创新药","AI后第二主线","BD出海"].includes(tag)) return "hot";
+    if (["PE/FPE","100分制买入名单"].includes(tag)) return "report";
+    if (["医保/商保","港股创新药"].includes(tag)) return "watch";
     if (["CXL","Memory","内存墙"].includes(tag)) return "hot";
     if (["CPO类比","产业阶段"].includes(tag)) return "report";
     if (["海外/A股映射"].includes(tag)) return "watch";
