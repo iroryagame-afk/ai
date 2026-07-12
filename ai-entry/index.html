@@ -7,34 +7,53 @@
   <style>
     @page { size: A4; margin: 18mm 16mm; }
     :root {
-      --ink: #101820;
-      --muted: #5d6773;
-      --line: #d9dee7;
+      --ink: #111827;
+      --text: #243244;
+      --muted: #667085;
+      --line: #d8e0ea;
+      --line-strong: #b9c5d4;
+      --screen: #e8edf3;
+      --surface: #ffffff;
       --light: #f6f8fb;
-      --blue: #173b66;
-      --blue2: #e9f0f8;
-      --green: #1c6046;
+      --blue: #123a63;
+      --blue2: #e8f0f9;
+      --blue3: #f2f6fb;
+      --green: #17664a;
+      --green-soft: #eaf6f0;
       --red: #8f3434;
+      --red-soft: #fff1f1;
+      --amber-soft: #fff7e6;
+      --shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
     }
     * { box-sizing: border-box; }
     html {
       -webkit-text-size-adjust: 100%;
       text-size-adjust: 100%;
+      scroll-behavior: smooth;
     }
     body {
       margin: 0;
-      background: #fff;
+      background:
+        linear-gradient(180deg, #f4f7fb 0, var(--screen) 320px, #eef2f6 100%);
       color: var(--ink);
       font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif;
-      font-size: 13.5px;
+      font-size: 14px;
       line-height: 1.72;
       overflow-x: hidden;
+      font-kerning: normal;
+      font-feature-settings: "tnum" 1;
     }
     .cover {
+      max-width: 1180px;
+      margin: 28px auto 0;
       min-height: 260px;
-      padding: 42px 46px 34px;
+      padding: 50px 56px 40px;
+      border: 1px solid var(--line);
       border-bottom: 5px solid var(--blue);
-      background: #f8fafc;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(18, 58, 99, 0.11), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #f5f8fc 58%, #eef4fb 100%);
+      box-shadow: var(--shadow);
     }
     .kicker {
       color: var(--blue);
@@ -46,19 +65,21 @@
     h1 {
       margin: 0;
       max-width: 820px;
-      font-size: 32px;
-      line-height: 1.25;
+      font-size: clamp(2.05rem, 3.6vw, 3.25rem);
+      line-height: 1.12;
       font-weight: 800;
-      letter-spacing: 0;
+      letter-spacing: -0.02em;
       overflow-wrap: anywhere;
       word-break: break-word;
+      text-wrap: balance;
     }
     .subtitle {
       margin-top: 18px;
       max-width: 860px;
       color: #384657;
-      font-size: 16px;
+      font-size: 16.5px;
       line-height: 1.7;
+      text-wrap: pretty;
     }
     .meta {
       margin-top: 32px;
@@ -68,29 +89,83 @@
       color: var(--muted);
       font-size: 12.5px;
     }
-    main { padding: 30px 46px 46px; }
-    h2 {
-      margin: 34px 0 14px;
-      padding-bottom: 8px;
-      border-bottom: 1.5px solid var(--blue);
+    .report-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      overflow-x: auto;
+      padding: 10px 56px;
+      border-right: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+    }
+    .report-nav a {
+      flex: 0 0 auto;
+      padding: 5px 10px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      color: #32445a;
+      font-size: 12px;
+      font-weight: 650;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .report-nav a:hover,
+    .report-nav a:focus-visible {
+      border-color: var(--line-strong);
+      background: var(--blue3);
       color: var(--blue);
-      font-size: 21px;
-      line-height: 1.35;
+      outline: none;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto 44px;
+      padding: 34px 56px 56px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      margin: 44px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--blue);
+      color: var(--blue);
+      font-size: 22px;
+      line-height: 1.32;
       font-weight: 800;
+      scroll-margin-top: 64px;
+      text-wrap: balance;
     }
     h3 {
-      margin: 22px 0 8px;
+      margin: 26px 0 9px;
       color: #243447;
       font-size: 16px;
-      font-weight: 700;
+      font-weight: 760;
+      scroll-margin-top: 64px;
+      text-wrap: balance;
     }
-    p { margin: 8px 0 10px; }
+    p {
+      max-width: 78ch;
+      margin: 8px 0 12px;
+      color: var(--text);
+      text-wrap: pretty;
+    }
     .lead {
       margin: 8px 0 18px;
-      padding: 15px 18px;
+      max-width: none;
+      padding: 17px 20px;
+      border: 1px solid #bed0e4;
       background: var(--blue2);
-      border-left: 4px solid var(--blue);
-      font-size: 14.5px;
+      font-size: 15px;
       line-height: 1.78;
     }
     .summary-grid {
@@ -102,7 +177,7 @@
     .summary-box {
       border: 1px solid var(--line);
       background: #fff;
-      padding: 14px 15px;
+      padding: 16px 17px;
       min-height: 118px;
     }
     .summary-box .label {
@@ -131,23 +206,73 @@
     }
     table {
       width: 100%;
-      border-collapse: collapse;
-      margin: 12px 0 20px;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 14px 0 24px;
+      border: 1px solid var(--line);
       font-size: 12.2px;
       line-height: 1.55;
+      background: #fff;
     }
     th, td {
-      border: 1px solid var(--line);
-      padding: 8px 10px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 9px 11px;
       vertical-align: top;
+      overflow-wrap: anywhere;
     }
+    th:last-child,
+    td:last-child { border-right: 0; }
+    tr:last-child td { border-bottom: 0; }
     th {
-      background: #eef3f9;
+      background: #edf3fa;
       color: #1d3048;
       font-weight: 800;
       text-align: left;
     }
     tr:nth-child(even) td { background: #fbfcfe; }
+    .target-table {
+      font-size: 11.7px;
+      line-height: 1.5;
+      min-width: 1080px;
+    }
+    .target-table th:nth-child(6),
+    .target-table th:nth-child(7),
+    .target-table td:nth-child(6),
+    .target-table td:nth-child(7) {
+      background: var(--green-soft);
+      color: #14543d;
+      font-weight: 760;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .target-table th:nth-child(6),
+    .target-table th:nth-child(7) {
+      color: #0d3f2b;
+    }
+    .target-table th:nth-child(4),
+    .target-table td:nth-child(4) {
+      background: #eef5ff;
+      color: #173d67;
+      font-weight: 760;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .target-table th:nth-child(2),
+    .target-table th:nth-child(3),
+    .target-table th:nth-child(5),
+    .target-table td:nth-child(2),
+    .target-table td:nth-child(3),
+    .target-table td:nth-child(5) {
+      white-space: nowrap;
+    }
+    .table-hint {
+      display: none;
+      margin: -4px 0 8px;
+      color: #486178;
+      font-size: 12px;
+      line-height: 1.5;
+    }
     .note {
       color: var(--muted);
       font-size: 12.2px;
@@ -165,9 +290,10 @@
     }
     .risk {
       margin: 12px 0 20px;
-      padding: 14px 17px;
-      background: #fff7f7;
-      border-left: 4px solid var(--red);
+      max-width: none;
+      padding: 15px 18px;
+      border: 1px solid #efc8c8;
+      background: var(--red-soft);
     }
     ol, ul { padding-left: 22px; }
     li { margin: 5px 0; }
@@ -184,10 +310,28 @@
       font-size: 12px;
     }
     @media print {
-      .cover { min-height: 240px; }
-      main { padding: 22px 0 0; }
+      body {
+        background: #fff;
+        font-size: 13.5px;
+      }
+      .cover {
+        min-height: 240px;
+        margin: 0;
+        border: 0;
+        border-bottom: 5px solid var(--blue);
+        box-shadow: none;
+      }
+      .report-nav { display: none; }
+      main {
+        max-width: none;
+        margin: 0;
+        padding: 22px 0 0;
+        border: 0;
+        box-shadow: none;
+      }
       h2, h3 { page-break-after: avoid; }
       table, .summary-box, .lead, .risk { page-break-inside: avoid; }
+      .table-hint { display: none; }
     }
     @media screen and (max-width: 720px) {
       body {
@@ -195,9 +339,13 @@
         line-height: 1.78;
       }
       .cover {
+        margin: 0;
         min-height: auto;
         padding: 26px 18px 22px;
+        border-right: 0;
+        border-left: 0;
         border-bottom-width: 4px;
+        box-shadow: none;
       }
       .kicker {
         font-size: 11.5px;
@@ -207,8 +355,13 @@
         font-size: 23px;
         line-height: 1.28;
         max-width: calc(100vw - 36px);
-        word-break: break-all;
+        word-break: normal;
         overflow-wrap: anywhere;
+      }
+      .report-nav {
+        padding: 8px 16px;
+        border-right: 0;
+        border-left: 0;
       }
       .cover,
       main,
@@ -218,8 +371,7 @@
       .risk,
       li {
         overflow-wrap: anywhere;
-        word-break: break-all;
-        line-break: anywhere;
+        word-break: normal;
         max-width: 100%;
       }
       .subtitle {
@@ -235,7 +387,11 @@
         font-size: 12px;
       }
       main {
+        margin: 0;
         padding: 22px 16px 34px;
+        border-right: 0;
+        border-left: 0;
+        box-shadow: none;
       }
       h2 {
         margin: 28px 0 12px;
@@ -293,6 +449,43 @@
       .score-table td:nth-child(6) {
         min-width: 190px;
       }
+      .target-table th,
+      .target-table td {
+        min-width: 112px;
+      }
+      .target-table th:first-child,
+      .target-table td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        min-width: 132px;
+        box-shadow: 1px 0 0 var(--line), 8px 0 12px rgba(15, 23, 42, 0.08);
+      }
+      .target-table th:first-child {
+        z-index: 3;
+        background: #edf3fa;
+      }
+      .target-table td:first-child {
+        background: #fff;
+      }
+      .target-table tr:nth-child(even) td:first-child {
+        background: #fbfcfe;
+      }
+      .target-table th:nth-child(5),
+      .target-table td:nth-child(5) {
+        min-width: 240px;
+      }
+      .target-table th:nth-child(8),
+      .target-table td:nth-child(8) {
+        min-width: 260px;
+      }
+      .table-hint {
+        display: block;
+        padding: 8px 10px;
+        border: 1px solid #dbe5ef;
+        background: #f7fafc;
+        border-radius: 8px;
+      }
       .source-list {
         padding-left: 18px;
         font-size: 12px;
@@ -316,8 +509,19 @@
     </div>
   </section>
 
+  <nav class="report-nav" aria-label="报告章节导航">
+    <a href="#summary">研究摘要</a>
+    <a href="#framework">门票与入口</a>
+    <a href="#paths">竞争路径</a>
+    <a href="#sotp">SOTP 框架</a>
+    <a href="#ranking">候选排序</a>
+    <a href="#conclusion">结论配置</a>
+    <a href="#targets">目标区间</a>
+    <a href="#sources">参考资料</a>
+  </nav>
+
   <main>
-    <h2>一、研究摘要</h2>
+    <h2 id="summary">一、研究摘要</h2>
     <p class="lead">本报告将 AI 时代的竞争要素拆分为“门票”与“入口”。门票包括模型能力、资金、工程组织与必要算力资源，决定企业是否具备参与竞争的基础资格；入口包括用户任务、数据反馈与分发控制，决定企业能否形成持续的产品复利、模型复利与商业化闭环。由于硬件层已被剔除，本文重点评估软件入口与平台入口的战略价值。</p>
 
     <div class="summary-grid">
@@ -338,7 +542,7 @@
     <p>普通模型 API 主要沉淀 prompt、token、调用成本与延迟等浅层数据；嵌入开发、办公、企业流程、云网关与协作系统的 agent 产品，则能够获得任务执行、人工验收、流程完成、客户留存和支付转化等高质量反馈。上述反馈是下一阶段模型优化、产品迭代与收入确认的重要基础。</p>
     <p>因此，本文先建立门票、入口、反馈、SOTP 与兑现节奏五层分析框架，再在文末集中给出可投资标的排序、估值框架、目标区间与配置建议，避免用开篇结论替代研究推导。</p>
 
-    <h2>二、研究框架：门票与入口</h2>
+    <h2 id="framework">二、研究框架：门票与入口</h2>
     <h3>2.1 核心定义</h3>
     <table>
       <thead>
@@ -402,7 +606,7 @@
       </tbody>
     </table>
 
-    <h2>三、入口类型与竞争路径</h2>
+    <h2 id="paths">三、入口类型与竞争路径</h2>
     <h3>3.1 人类任务入口</h3>
     <p>人类任务入口指 AI 直接嵌入个人或团队日常工作场景，包括开发工具、办公套件、企业协作、内容生产、搜索与知识管理。该类入口的核心价值在于高频使用、明确任务意图和持续留存。</p>
 
@@ -429,7 +633,7 @@
     <p>该方向对本文框架的意义在于：若 AI 助手获得系统级权限，其反馈质量可能从普通对话数据上升到 L3-L5 任务数据，包括操作是否成功、用户是否接管、交易是否完成、支付是否转化、隐私授权是否通过等。这类数据比单纯 prompt 更接近商业结果，也更可能成为模型和产品迭代的复利来源。</p>
     <p><strong>研究口径：</strong>当前仍应将其列为观察变量，而非核心配置假设。截图所称“2026 WAIC 期间开售、备货 8-10 万台、首批 50 万台”等信息，尚未见字节、中兴、努比亚或 WAIC 官方公告级确认。更稳妥的研究结论是：豆包手机助手验证了 AI 入口向终端 / OS 层迁移的方向，但出货量、合作范围、跨 App 权限标准、隐私合规和用户留存仍需后续数据验证。</p>
 
-    <h2>四、海外公司梯度</h2>
+    <h2 id="global-map">四、海外公司梯度</h2>
     <table>
       <thead>
         <tr><th>梯队</th><th>公司/资产</th><th>入口属性</th><th>投资判断</th></tr>
@@ -447,7 +651,7 @@
 
     <p>海外可投资标的中，Microsoft 具备最高确定性，但入口资产对集团市值的弹性有限；Cloudflare 和大型网安龙头的绝对入口规模小于 Microsoft，但一旦 agent 网关、agent access control 或安全运营自动化被验证，对估值叙事的边际影响更直接。普通 SaaS 可能面临 seat 缩减和工作流重构压力，而网安预算更接近风险预算，安全边际相对更高。网安方向内部可拆为三条验证线：AI 数据中心 / OT 安全，代表公司为 FTNT；agent 身份治理和平台化安全，代表公司为 PANW / OKTA / CyberArk；AI 监测、SOC 自动化和安全遥测，代表公司为 CRWD / DDOG。Hugging Face 未上市，但作为开源模型分发和开发者工具链锚点，应持续观察其对云推理、模型托管和企业私有 Hub 的牵引。SpaceX / SPCX 的关键在于 Cursor、SpaceXAI 与 Grok 相关叙事是否已经被市场充分计入。</p>
 
-    <h2>五、中国公司梯度</h2>
+    <h2 id="china-map">五、中国公司梯度</h2>
     <table>
       <thead>
         <tr><th>梯队</th><th>公司/资产</th><th>入口属性</th><th>投资判断</th></tr>
@@ -480,7 +684,7 @@
       </tbody>
     </table>
 
-    <h2>六、SOTP 估值框架</h2>
+    <h2 id="sotp">六、SOTP 估值框架</h2>
     <p>入口资产应通过 SOTP 而非单一产品热度进行估值。建议采用以下公式评估入口对上市公司的边际贡献：</p>
     <div class="formula">入口资产价值贡献 =
 可触达用户/客户规模
@@ -516,7 +720,7 @@
       </tbody>
     </table>
 
-    <h2>七、候选池与排序维度</h2>
+    <h2 id="ranking">七、候选池与排序维度</h2>
     <p>本节用于说明候选资产的排序维度和跟踪优先级，不作为最终组合结论。最终评分、估值框架、目标区间与配置建议统一放在第十章。</p>
     <h3>7.1 按入口战略价值排序</h3>
     <ol>
@@ -551,7 +755,7 @@
       </tbody>
     </table>
 
-    <h2>八、风险因素</h2>
+    <h2 id="risks">八、风险因素</h2>
     <div class="risk">
       <ol>
         <li>数据合规风险：真实任务反馈涉及代码、文档、客户数据和企业流程，回流训练可能受到隐私、版权、安全和合同限制。</li>
@@ -564,7 +768,7 @@
       </ol>
     </div>
 
-    <h2>九、后续验证清单</h2>
+    <h2 id="checks">九、后续验证清单</h2>
     <table>
       <thead>
         <tr><th>验证方向</th><th>关键指标</th><th>主要来源</th></tr>
@@ -580,7 +784,7 @@
       </tbody>
     </table>
 
-    <h2>十、结论与配置建议</h2>
+    <h2 id="conclusion">十、结论与配置建议</h2>
     <p>本报告的最终结论是：AI 入口重估不应简单等同于“买模型”或“买所有 AI 软件”，而应按“门票、控制面、工作流、数据反馈、商业结果”五层拆分。短期最值得研究的是能在 agent 扩散中拿到新增预算或流量控制权的公司；中期看企业流程和组织决策入口；长期看谁能沉淀 L4-L5 任务验收和商业结果数据。</p>
 
     <h3>10.1 评分方法</h3>
@@ -677,26 +881,27 @@
     </table>
     <p>综上，本报告采用“入口评分 + 估值方法适配 + 价格锚校验”的投资排序框架。完整可审计模型应同时展示当前价、卖方一致目标价、DCF 中枢、SOTP 中枢、最高敏感变量与估值分歧；在数据披露不足的标的上，本报告优先给出研究优先级和验证变量，而不以单点价格替代估值模型。</p>
 
-    <h3>10.5 6-12 个月研究型目标区间</h3>
-    <p>下表采用三档情景区间，而非单点目标价。保守情景对应核心业务稳态估值与 AI 期权折价；基准情景对应现有业务维持增长、AI 入口开始贡献收入或估值倍数；乐观情景对应连续两个季度验证 AI 收入、agent 调用量、安全预算或分部利润率改善。该区间用于组合排序和风险收益比较，不等同于卖方一致预期，也不构成短期交易信号。</p>
-    <table>
+    <h3 id="targets">10.5 6-12 个月研究型目标区间</h3>
+    <p>下表采用三档情景区间，并将评分、当前价、基准目标价和升值空间集中呈现。保守情景对应核心业务稳态估值与 AI 期权折价；基准情景对应现有业务维持增长、AI 入口开始贡献收入或估值倍数；乐观情景对应连续两个季度验证 AI 收入、agent 调用量、安全预算或分部利润率改善。升值空间按“目标区间 / 当前参考价 - 1”计算，用于组合排序和风险收益比较，不等同于卖方一致预期，也不构成短期交易信号。</p>
+    <p class="table-hint">手机端可横向滑动查看三档目标区间、基准升值空间和乐观升值空间；左侧标的列已固定。</p>
+    <table class="target-table">
       <thead>
-        <tr><th>标的</th><th>当前参考价</th><th>保守区间</th><th>基准区间</th><th>乐观区间</th><th>估值口径与关键假设</th></tr>
+        <tr><th>标的</th><th>评分 / 评级</th><th>当前参考价</th><th>基准目标价</th><th>目标区间（保守 / 基准 / 乐观）</th><th>基准空间</th><th>乐观空间</th><th>估值口径与关键假设</th></tr>
       </thead>
       <tbody>
-        <tr><td>Meta / META</td><td>669.21 USD</td><td>720-780</td><td>800-860</td><td>900-980</td><td>广告 FCF 为底，AI 模型、算力与广告生成效率作为增量期权</td></tr>
-        <tr><td>Cloudflare / NET</td><td>268.40 USD</td><td>220-260</td><td>290-340</td><td>360-420</td><td>EV/Sales 与 EV/FCF 交叉验证，关键在 AI Gateway / Workers 能否进入收入确认</td></tr>
-        <tr><td>Palo Alto Networks / PANW</td><td>325.91 USD</td><td>340-370</td><td>390-420</td><td>440-480</td><td>NGS ARR、平台化客户与 CyberArk 协同支撑安全平台估值</td></tr>
-        <tr><td>CrowdStrike / CRWD</td><td>187.18 USD</td><td>185-210</td><td>225-250</td><td>265-300</td><td>ARR 恢复、Falcon Flex、AI SOC 与安全遥测数据决定倍数修复</td></tr>
-        <tr><td>Alibaba / BABA / 9988</td><td>110.20 HKD</td><td>115-125</td><td>135-150</td><td>155-175</td><td>电商利润底 + 阿里云利润率修复 + Qwen / 钉钉 SOTP 期权</td></tr>
-        <tr><td>ServiceNow / NOW</td><td>107.71 USD</td><td>115-125</td><td>130-145</td><td>150-170</td><td>cRPO、AI SKU 渗透、FCF margin 与 workflow moat 共同定价</td></tr>
-        <tr><td>Palantir / PLTR</td><td>126.79 USD</td><td>110-130</td><td>145-170</td><td>185-210</td><td>Rule-of-X 与 EV/FCF；分歧主要来自美国商业收入与 AIP 扩张速度</td></tr>
-        <tr><td>Tencent / 0700</td><td>460.20 HKD</td><td>480-510</td><td>540-580</td><td>610-660</td><td>游戏、广告、金融科技与微信 / 企微 AI 入口的 SOTP 重估</td></tr>
-        <tr><td>Meituan / 3690</td><td>78.70 HKD</td><td>80-90</td><td>95-105</td><td>115-130</td><td>分部利润与竞争补贴为底，AI 价值体现在交易转化和履约效率</td></tr>
-        <tr><td>Kingsoft Office / 688111</td><td>233.76 CNY</td><td>220-245</td><td>270-300</td><td>320-360</td><td>WPS AI 付费率与会员 ARPU 为核心，上方空间需扣除 AI-native 工作台分流风险</td></tr>
-        <tr><td>Reddit / RDDT</td><td>195.34 USD</td><td>180-200</td><td>220-245</td><td>265-300</td><td>广告变现 + 数据授权收入；关键在 AI 搜索流量影响和授权收入持续性</td></tr>
-        <tr><td>Alphabet / GOOGL</td><td>357.18 USD</td><td>365-390</td><td>420-450</td><td>475-520</td><td>搜索 FCF、YouTube 与 Cloud AI 收入支撑，AI Mode 影响搜索货币化为核心变量</td></tr>
-        <tr><td>Microsoft / MSFT</td><td>385.10 USD</td><td>400-425</td><td>450-480</td><td>510-560</td><td>Azure AI、Copilot 渗透、GitHub 与 OpenAI 权益共同驱动集团 FCF</td></tr>
+        <tr><td>Meta / META</td><td>88 / A</td><td>669.21 USD</td><td>830 USD</td><td>720-780 / 800-860 / 900-980</td><td>+20%至+29%</td><td>+34%至+46%</td><td>广告 FCF 为底，AI 模型、算力与广告生成效率作为增量期权</td></tr>
+        <tr><td>Cloudflare / NET</td><td>87 / A</td><td>268.40 USD</td><td>315 USD</td><td>220-260 / 290-340 / 360-420</td><td>+8%至+27%</td><td>+34%至+56%</td><td>EV/Sales 与 EV/FCF 交叉验证，关键在 AI Gateway / Workers 能否进入收入确认</td></tr>
+        <tr><td>Palo Alto Networks / PANW</td><td>86 / A</td><td>325.91 USD</td><td>405 USD</td><td>340-370 / 390-420 / 440-480</td><td>+20%至+29%</td><td>+35%至+47%</td><td>NGS ARR、平台化客户与 CyberArk 协同支撑安全平台估值</td></tr>
+        <tr><td>CrowdStrike / CRWD</td><td>84 / A-</td><td>187.18 USD</td><td>238 USD</td><td>185-210 / 225-250 / 265-300</td><td>+20%至+34%</td><td>+42%至+60%</td><td>ARR 恢复、Falcon Flex、AI SOC 与安全遥测数据决定倍数修复</td></tr>
+        <tr><td>Alibaba / BABA / 9988</td><td>83 / A-</td><td>110.20 HKD</td><td>143 HKD</td><td>115-125 / 135-150 / 155-175</td><td>+23%至+36%</td><td>+41%至+59%</td><td>电商利润底 + 阿里云利润率修复 + Qwen / 钉钉 SOTP 期权</td></tr>
+        <tr><td>ServiceNow / NOW</td><td>83 / A-</td><td>107.71 USD</td><td>138 USD</td><td>115-125 / 130-145 / 150-170</td><td>+21%至+35%</td><td>+39%至+58%</td><td>cRPO、AI SKU 渗透、FCF margin 与 workflow moat 共同定价</td></tr>
+        <tr><td>Palantir / PLTR</td><td>81 / A-</td><td>126.79 USD</td><td>158 USD</td><td>110-130 / 145-170 / 185-210</td><td>+14%至+34%</td><td>+46%至+66%</td><td>Rule-of-X 与 EV/FCF；分歧主要来自美国商业收入与 AIP 扩张速度</td></tr>
+        <tr><td>Tencent / 0700</td><td>80 / A-</td><td>460.20 HKD</td><td>560 HKD</td><td>480-510 / 540-580 / 610-660</td><td>+17%至+26%</td><td>+33%至+43%</td><td>游戏、广告、金融科技与微信 / 企微 AI 入口的 SOTP 重估</td></tr>
+        <tr><td>Meituan / 3690</td><td>79 / B+</td><td>78.70 HKD</td><td>100 HKD</td><td>80-90 / 95-105 / 115-130</td><td>+21%至+33%</td><td>+46%至+65%</td><td>分部利润与竞争补贴为底，AI 价值体现在交易转化和履约效率</td></tr>
+        <tr><td>Kingsoft Office / 688111</td><td>77 / B+</td><td>233.76 CNY</td><td>285 CNY</td><td>220-245 / 270-300 / 320-360</td><td>+16%至+28%</td><td>+37%至+54%</td><td>WPS AI 付费率与会员 ARPU 为核心，上方空间需扣除 AI-native 工作台分流风险</td></tr>
+        <tr><td>Reddit / RDDT</td><td>76 / B+</td><td>195.34 USD</td><td>233 USD</td><td>180-200 / 220-245 / 265-300</td><td>+13%至+25%</td><td>+36%至+54%</td><td>广告变现 + 数据授权收入；关键在 AI 搜索流量影响和授权收入持续性</td></tr>
+        <tr><td>Alphabet / GOOGL</td><td>82 / A-</td><td>357.18 USD</td><td>435 USD</td><td>365-390 / 420-450 / 475-520</td><td>+18%至+26%</td><td>+33%至+46%</td><td>搜索 FCF、YouTube 与 Cloud AI 收入支撑，AI Mode 影响搜索货币化为核心变量</td></tr>
+        <tr><td>Microsoft / MSFT</td><td>82 / A-</td><td>385.10 USD</td><td>465 USD</td><td>400-425 / 450-480 / 510-560</td><td>+17%至+25%</td><td>+32%至+45%</td><td>Azure AI、Copilot 渗透、GitHub 与 OpenAI 权益共同驱动集团 FCF</td></tr>
       </tbody>
     </table>
 
@@ -715,7 +920,7 @@
     <p>按入口评分与估值可验证性综合判断，优先研究顺序仍集中在 <strong>META、NET、PANW、CRWD、BABA / 9988、NOW</strong>。但这不是单纯“空间排序”：PLTR 和 RDDT 的入口叙事强，当前估值对兑现节奏更敏感；GOOGL 和 MSFT 的确定性更高，但弹性被体量稀释；金山办公的 AI 纯度较高，但需要持续观察 Kimi、豆包等 AI-native 工作台对前置办公任务的分流。</p>
     <p>最终建议是采用“核心 + 锚点 + 观察”的组合框架：核心仓重点跟踪 META、NET、PANW、CRWD、BABA / 9988、NOW；锚点仓用 GOOGL、MSFT、腾讯降低框架误判风险；观察仓跟踪 PLTR、RDDT、美团、金山办公等弹性资产。若 agent 调用量、AI 安全预算、企业流程自动化率和 AI SKU 收入连续两个季度低于预期，应下调入口重估权重；若上述指标同时改善，则本框架的 SOTP 估值贡献有继续上修空间。</p>
 
-    <h2>十一、参考资料</h2>
+    <h2 id="sources">十一、参考资料</h2>
     <ul class="source-list">
       <li>Anthropic Claude Code 文档：<a href="https://code.claude.com/docs/en/overview">https://code.claude.com/docs/en/overview</a></li>
       <li>GitHub Copilot cloud agent 文档：<a href="https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent">https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent</a></li>
