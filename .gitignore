@@ -4,3 +4,7 @@
 !.dev.vars.example
 .env*
 !.env.example
+
+# Python validation artifacts
+__pycache__/
+*.py[cod]
