@@ -198,6 +198,12 @@
   const entries = [
     {
       date:"07月12日",
+      title:"全球 AI 算力版图：卡数、季度出货与 GW 排名",
+      url:"../ai-compute-gw/",
+      tags:["AI算力","NVIDIA/ASIC","B200/B300","季度出货","GPU/TPU","GW排名","算力租用"]
+    },
+    {
+      date:"07月12日",
       title:"创新药行业深度研究：AI 后第二主线观察",
       url:"../innovative-drugs-2026/",
       tags:["创新药","AI后第二主线","BD出海","医保/商保","PE/FPE","100分制买入名单","港股创新药"]
@@ -228,6 +234,9 @@
   const resultCount = document.querySelector("#resultCount");
 
   function tagClass(tag) {
+    if (["AI算力","NVIDIA/ASIC","季度出货"].includes(tag)) return "hot";
+    if (["B200/B300","GPU/TPU","GW排名"].includes(tag)) return "report";
+    if (["算力租用"].includes(tag)) return "watch";
     if (["创新药","AI后第二主线","BD出海"].includes(tag)) return "hot";
     if (["PE/FPE","100分制买入名单"].includes(tag)) return "report";
     if (["医保/商保","港股创新药"].includes(tag)) return "watch";
