@@ -10,7 +10,7 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;line-height:1.72}
 header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#f8fbfb 0%,#fff 100%)}
-.wrap{max-width:1120px;margin:0 auto;padding:32px 22px}
+.wrap{max-width:1280px;margin:0 auto;padding:32px 24px}
 .eyebrow{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.04em}
 .hero h1{font-size:34px;line-height:1.22;margin:10px 0 14px}
 .meta{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:14px}
@@ -27,16 +27,33 @@ h2{font-size:24px;border-top:1px solid var(--line);padding-top:24px}
 h3{font-size:18px;color:#23314f}
 p{margin:12px 0}
 blockquote{margin:20px 0;padding:16px 18px;background:#f3faf8;border-left:4px solid var(--accent);border-radius:6px;color:#24403d}
-table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:14px;table-layout:fixed}
-th,td{border:1px solid var(--line);padding:9px 10px;vertical-align:top;white-space:normal;overflow-wrap:anywhere;word-break:break-word}
+table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:13.5px;table-layout:fixed}
+th,td{border:1px solid var(--line);padding:8px 9px;vertical-align:top;white-space:normal;overflow-wrap:break-word;word-break:normal}
 th{background:#f5f7fb;text-align:left;font-weight:700}
 tr:nth-child(even) td{background:#fcfdff}
+.pick-table th:nth-child(1),.pick-table td:nth-child(1){width:5%;text-align:center}
+.pick-table th:nth-child(2),.pick-table td:nth-child(2){width:11%}
+.pick-table th:nth-child(3),.pick-table td:nth-child(3){width:10%;white-space:nowrap}
+.pick-table th:nth-child(4),.pick-table td:nth-child(4){width:9%;white-space:nowrap}
+.pick-table th:nth-child(5),.pick-table td:nth-child(5){width:10%;white-space:nowrap}
+.pick-table th:nth-child(6),.pick-table td:nth-child(6){width:35%}
+.pick-table th:nth-child(7),.pick-table td:nth-child(7){width:6%;text-align:center;white-space:nowrap}
+.pick-table th:nth-child(8),.pick-table td:nth-child(8){width:14%}
+.valuation-table th:nth-child(1),.valuation-table td:nth-child(1){width:9%}
+.valuation-table th:nth-child(2),.valuation-table td:nth-child(2){width:11%}
+.valuation-table th:nth-child(3),.valuation-table td:nth-child(3){width:9%;white-space:nowrap}
+.valuation-table th:nth-child(4),.valuation-table td:nth-child(4){width:8%;white-space:nowrap}
+.valuation-table th:nth-child(5),.valuation-table td:nth-child(5){width:8%;white-space:nowrap}
+.valuation-table th:nth-child(6),.valuation-table td:nth-child(6){width:8%;white-space:nowrap}
+.valuation-table th:nth-child(7),.valuation-table td:nth-child(7){width:9%;white-space:nowrap}
+.valuation-table th:nth-child(8),.valuation-table td:nth-child(8){width:10%;white-space:nowrap}
+.valuation-table th:nth-child(9),.valuation-table td:nth-child(9){width:28%}
 code{background:#f2f4f7;border-radius:4px;padding:1px 5px}
 a{color:var(--accent2);overflow-wrap:anywhere;word-break:break-word}
 ul,ol{padding-left:1.3em}
 .note{margin-top:16px;color:var(--muted);font-size:13px}
 .toplink{position:fixed;right:18px;bottom:18px;background:var(--ink);color:white;text-decoration:none;border-radius:999px;padding:9px 12px;font-size:13px;box-shadow:0 8px 24px rgba(23,32,51,.18)}
-@media(max-width:880px){.hero h1{font-size:28px}.wrap{padding:24px 16px}.toc a{display:block;padding:4px 0;margin-right:0}table{font-size:13px}}
+@media(max-width:880px){.hero h1{font-size:28px}.wrap{padding:24px 12px}.toc a{display:block;padding:4px 0;margin-right:0}table{font-size:12px}th,td{padding:7px 6px}.pick-table th:nth-child(6),.pick-table td:nth-child(6){width:30%}.pick-table th:nth-child(8),.pick-table td:nth-child(8){width:16%}}
 </style>
 </head>
 <body id="top">
@@ -599,7 +616,7 @@ ul,ol{padding-left:1.3em}
 </table>
 <h3 id="53-100">5.3 100 分制买入名单：港股</h3>
 <p>评分维度：创新药纯度 25 分、BD（商务拓展/对外授权）与管线质量 25 分、FPE（未来市盈率/预测市盈率）性价比 20 分、盈利确定性 15 分、目标价空间与交易拥挤度 15 分。</p>
-<table>
+<table class="pick-table">
 <thead>
 <tr>
 <th style="text-align: right;">排名</th>
@@ -776,7 +793,7 @@ ul,ol{padding-left:1.3em}
 </tbody>
 </table>
 <h3 id="54-100-a">5.4 100 分制买入名单：A 股</h3>
-<table>
+<table class="pick-table">
 <thead>
 <tr>
 <th style="text-align: right;">排名</th>
