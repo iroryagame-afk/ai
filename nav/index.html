@@ -4,269 +4,170 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <title>表姐严选资料清单</title>
+  <title>CSN 投研报告导航</title>
   <style>
     :root {
-      --bg:#f3f6f8;
-      --panel:#fff;
-      --text:#172026;
-      --muted:#68737d;
-      --line:#d9dee3;
-      --green:#0f766e;
-      --green-bg:#d9f3ee;
-      --blue:#2563eb;
-      --blue-bg:#dbeafe;
-      --amber:#b45309;
-      --amber-bg:#fef3c7;
-      --gray:#64748b;
-      --gray-bg:#e2e8f0;
+      --bg:#f3f6f8; --panel:#fff; --text:#172026; --muted:#68737d;
+      --line:#d9dee3; --green:#0f766e; --green-bg:#d9f3ee;
+      --blue:#2563eb; --blue-bg:#dbeafe; --amber:#b45309; --amber-bg:#fef3c7;
     }
     * { box-sizing:border-box; }
     body {
-      margin:0;
-      background:linear-gradient(180deg,#edf4f7 0,#f7f9fb 220px,var(--bg) 100%);
-      color:var(--text);
+      margin:0; color:var(--text); line-height:1.5;
+      background:linear-gradient(180deg,#e8f3f5 0,#f7f9fb 260px,var(--bg) 100%);
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-      line-height:1.5;
     }
-    main {
-      width:min(980px,100%);
-      margin:0 auto;
-      padding:14px;
-    }
+    main { width:min(1040px,100%); margin:0 auto; padding:18px 14px; }
     header {
-      display:grid;
-      gap:8px;
-      margin-bottom:12px;
-      padding:14px;
-      background:var(--panel);
-      border:1px solid var(--line);
-      border-left:5px solid var(--green);
-      border-radius:8px;
-      box-shadow:0 8px 18px rgba(23,32,38,.05);
+      display:grid; gap:9px; padding:20px; margin-bottom:12px; background:var(--panel);
+      border:1px solid var(--line); border-left:5px solid var(--green); border-radius:12px;
+      box-shadow:0 10px 26px rgba(23,32,38,.06);
     }
-    h1 {
-      margin:0;
-      font-size:clamp(22px,5vw,30px);
-      letter-spacing:0;
-      line-height:1.15;
-    }
-    .sub {
-      color:var(--muted);
-      font-size:13px;
-    }
+    h1 { margin:0; font-size:clamp(24px,5vw,34px); line-height:1.15; }
+    .sub { color:var(--muted); font-size:14px; }
     .tools {
-      position:sticky;
-      top:0;
-      z-index:5;
-      padding:8px 0;
-      background:rgba(243,246,248,.94);
-      backdrop-filter:blur(10px);
+      position:sticky; top:0; z-index:5; display:grid; gap:9px; padding:10px 0;
+      background:rgba(243,246,248,.94); backdrop-filter:blur(10px);
     }
     input {
-      width:100%;
-      min-height:42px;
-      border:1px solid var(--line);
-      border-radius:8px;
-      background:#fff;
-      color:var(--text);
-      padding:8px 10px;
-      font:inherit;
+      width:100%; min-height:44px; padding:9px 12px; border:1px solid var(--line);
+      border-radius:9px; background:#fff; color:var(--text); font:inherit;
     }
-    .count {
-      margin:0 0 8px;
-      color:var(--muted);
-      font-size:13px;
+    .filters { display:flex; flex-wrap:wrap; gap:7px; }
+    .filter {
+      min-height:36px; padding:6px 12px; border:1px solid var(--line); border-radius:999px;
+      background:#fff; color:var(--muted); font:inherit; font-size:13px; font-weight:800; cursor:pointer;
     }
-    .count strong {
-      color:var(--green);
-      font-size:16px;
-    }
-    .list {
-      display:grid;
-      gap:8px;
-    }
+    .filter.active { border-color:var(--green); background:var(--green); color:#fff; }
+    .count { margin:3px 0 10px; color:var(--muted); font-size:13px; }
+    .count strong { color:var(--green); font-size:17px; }
+    .groups { display:grid; gap:18px; }
+    .group h2 { margin:0 0 8px; font-size:18px; }
+    .list { display:grid; gap:8px; }
     .row {
-      display:grid;
-      grid-template-columns:96px minmax(160px,1fr) 2fr;
-      gap:10px;
-      align-items:start;
-      padding:12px;
-      background:var(--panel);
-      border:1px solid var(--line);
-      border-radius:8px;
-      box-shadow:0 6px 16px rgba(23,32,38,.04);
+      display:grid; grid-template-columns:104px minmax(220px,1fr) 1.6fr; gap:12px;
+      align-items:start; padding:13px; background:var(--panel); border:1px solid var(--line);
+      border-radius:10px; box-shadow:0 6px 16px rgba(23,32,38,.04);
     }
-    .date {
-      color:var(--green);
-      font-weight:900;
-      white-space:nowrap;
-    }
-    .title a {
-      color:#172026;
-      font-weight:900;
-      text-decoration:none;
-    }
-    .title a:hover {
-      color:var(--blue);
-      text-decoration:underline;
-    }
-    .tags {
-      display:flex;
-      flex-wrap:wrap;
-      gap:6px;
-    }
+    .date { color:var(--green); font-weight:900; white-space:nowrap; }
+    .title a { color:var(--text); font-weight:900; text-decoration:none; }
+    .title a:hover { color:var(--blue); text-decoration:underline; }
+    .meta { display:grid; gap:7px; }
+    .category { color:var(--blue); font-size:12px; font-weight:850; }
+    .tags { display:flex; flex-wrap:wrap; gap:6px; }
     .tag {
-      display:inline-flex;
-      align-items:center;
-      min-height:24px;
-      padding:2px 8px;
-      border-radius:999px;
-      background:var(--gray-bg);
-      color:var(--gray);
-      font-size:12px;
-      font-weight:850;
-      white-space:normal;
-      overflow-wrap:anywhere;
+      display:inline-flex; align-items:center; min-height:24px; padding:2px 8px;
+      border-radius:999px; background:var(--blue-bg); color:var(--blue);
+      font-size:12px; font-weight:800; overflow-wrap:anywhere;
     }
-    .tag.hot {
-      background:var(--green-bg);
-      color:var(--green);
-    }
-    .tag.report {
-      background:var(--blue-bg);
-      color:var(--blue);
-    }
-    .tag.watch {
-      background:var(--amber-bg);
-      color:var(--amber);
-    }
+    .tag:nth-child(3n+1) { background:var(--green-bg); color:var(--green); }
+    .tag:nth-child(3n) { background:var(--amber-bg); color:var(--amber); }
     .empty {
-      display:none;
-      padding:18px;
-      text-align:center;
-      color:var(--muted);
-      background:#fff;
-      border:1px dashed #cbd5e1;
-      border-radius:8px;
-      font-weight:800;
+      display:none; padding:20px; text-align:center; color:var(--muted); background:#fff;
+      border:1px dashed #cbd5e1; border-radius:10px; font-weight:800;
     }
-    footer {
-      margin:14px 0 4px;
-      color:var(--muted);
-      font-size:12px;
-      line-height:1.7;
-    }
-    @media (max-width: 680px) {
+    footer { margin:18px 0 4px; color:var(--muted); font-size:12px; line-height:1.7; }
+    @media (max-width:680px) {
       main { padding:10px; }
-      .row {
-        grid-template-columns:1fr;
-        gap:7px;
-      }
-      .date {
-        font-size:14px;
-      }
-      .title a {
-        font-size:17px;
-      }
+      header { padding:16px; }
+      .row { grid-template-columns:1fr; gap:7px; }
+      .title a { font-size:17px; }
     }
   </style>
 </head>
 <body>
 <main>
   <header>
-    <h1>表姐严选资料清单</h1>
-    <div class="sub">按上传日期记录：几月几日上传了什么报告，以及关键标签。后续新增内容直接一行一行往下加。</div>
+    <h1>CSN 投研报告导航</h1>
+    <div class="sub">统一收录已公开的行业、主题策略与公司深度分析；不包含每日选股、资金流等动态更新页。</div>
   </header>
 
-  <section class="tools" aria-label="搜索">
-    <input id="searchInput" type="search" placeholder="搜索：CXL、Memory、内存墙、CPO类比、产业阶段..." autocomplete="off" />
+  <section class="tools" aria-label="报告筛选">
+    <input id="searchInput" type="search" placeholder="搜索报告、公司或标签……" autocomplete="off" />
+    <div class="filters" aria-label="报告分类">
+      <button class="filter active" type="button" data-category="全部">全部</button>
+      <button class="filter" type="button" data-category="行业研究">行业研究</button>
+      <button class="filter" type="button" data-category="主题策略">主题策略</button>
+      <button class="filter" type="button" data-category="公司研究">公司研究</button>
+    </div>
   </section>
 
-  <p class="count">当前显示 <strong id="resultCount">0</strong> 条</p>
-  <section id="list" class="list" aria-label="资料清单"></section>
-  <div id="empty" class="empty">没有匹配到内容。</div>
+  <p class="count">当前显示 <strong id="resultCount">0</strong> 份报告</p>
+  <section id="groups" class="groups" aria-live="polite"></section>
+  <div id="empty" class="empty">没有匹配到报告。</div>
 
-  <footer>
-    仅作为资料索引，不替代实时行情、公告和新闻核验。
-  </footer>
+  <footer>仅收录已公开的非每日更新投研报告；行情、价格和结论仍需按报告数据截止日理解。</footer>
 </main>
 
 <script>
-  const entries = [
-    {
-      date:"07月12日",
-      title:"全球 AI 算力版图：卡数、季度出货与 GW 排名",
-      url:"../ai-compute-gw/",
-      tags:["AI算力","NVIDIA/ASIC","B200/B300","季度出货","GPU/TPU","GW排名","算力租用"]
-    },
-    {
-      date:"07月12日",
-      title:"创新药行业深度研究：AI 后第二主线观察",
-      url:"../innovative-drugs-2026/",
-      tags:["创新药","AI后第二主线","BD出海","医保/商保","PE/FPE","100分制买入名单","港股创新药"]
-    },
-    {
-      date:"07月10日",
-      title:"AI 入口重估：真实任务反馈与分发控制投资框架",
-      url:"../ai-entry/",
-      tags:["AI入口","真实任务反馈","分发控制","Agent","OS终端","SOTP","投资框架"]
-    },
-    {
-      date:"07月03日",
-      title:"A 股人形机器人产业链完整调研报告",
-      url:"../robotics/",
-      tags:["机器人","人形机器人","执行器","丝杠","谐波减速器","A股映射","确定性/弹性/消耗"]
-    },
-    {
-      date:"06月25日",
-      title:"CXL 综合分析报告",
-      url:"../cxl/",
-      tags:["CXL","Memory","内存墙","DDR5","PCIe","CPO类比","产业阶段","海外/A股映射"]
-    }
-  ];
+  const CATEGORY_ORDER = ["主题策略", "行业研究", "公司研究"];
+  let entries = [];
+  let activeCategory = "全部";
 
-  const list = document.querySelector("#list");
+  const groups = document.querySelector("#groups");
   const empty = document.querySelector("#empty");
   const searchInput = document.querySelector("#searchInput");
   const resultCount = document.querySelector("#resultCount");
+  const filters = [...document.querySelectorAll(".filter")];
 
-  function tagClass(tag) {
-    if (["AI算力","NVIDIA/ASIC","季度出货"].includes(tag)) return "hot";
-    if (["B200/B300","GPU/TPU","GW排名"].includes(tag)) return "report";
-    if (["算力租用"].includes(tag)) return "watch";
-    if (["创新药","AI后第二主线","BD出海"].includes(tag)) return "hot";
-    if (["PE/FPE","100分制买入名单"].includes(tag)) return "report";
-    if (["医保/商保","港股创新药"].includes(tag)) return "watch";
-    if (["CXL","Memory","内存墙"].includes(tag)) return "hot";
-    if (["CPO类比","产业阶段"].includes(tag)) return "report";
-    if (["海外/A股映射"].includes(tag)) return "watch";
-    return "";
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>'"]/g, char => ({
+      "&":"&amp;", "<":"&lt;", ">":"&gt;", "'":"&#39;", '"':"&quot;"
+    })[char]);
   }
 
   function render() {
     const keyword = searchInput.value.trim().toLowerCase();
     const filtered = entries.filter(entry => {
-      const text = [entry.date, entry.title, ...entry.tags].join(" ").toLowerCase();
-      return !keyword || text.includes(keyword);
+      const categoryMatches = activeCategory === "全部" || entry.category === activeCategory;
+      const text = [entry.date, entry.title, entry.category, ...entry.tags].join(" ").toLowerCase();
+      return categoryMatches && (!keyword || text.includes(keyword));
     });
 
-    list.innerHTML = filtered.map(entry => `
-      <article class="row">
-        <div class="date">${entry.date}</div>
-        <div class="title"><a href="${entry.url}">${entry.title}</a></div>
-        <div class="tags">${entry.tags.map(tag => `<span class="tag ${tagClass(tag)}">${tag}</span>`).join("")}</div>
-      </article>
-    `).join("");
+    groups.innerHTML = CATEGORY_ORDER.map(category => {
+      const categoryEntries = filtered.filter(entry => entry.category === category);
+      if (!categoryEntries.length) return "";
+      const rows = categoryEntries.map(entry => `
+        <article class="row">
+          <div class="date">${escapeHtml(entry.date)}</div>
+          <div class="title"><a href="${escapeHtml(entry.url)}">${escapeHtml(entry.title)}</a></div>
+          <div class="meta">
+            <div class="category">${escapeHtml(entry.category)}</div>
+            <div class="tags">${entry.tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
+          </div>
+        </article>`).join("");
+      return `<section class="group"><h2>${escapeHtml(category)} · ${categoryEntries.length}</h2><div class="list">${rows}</div></section>`;
+    }).join("");
 
     resultCount.textContent = filtered.length;
+    empty.textContent = "没有匹配到报告。";
     empty.style.display = filtered.length ? "none" : "block";
   }
 
+  async function loadReports() {
+    try {
+      const response = await fetch("reports.json", { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      entries = await response.json();
+      entries.sort((a, b) => b.date.localeCompare(a.date));
+      render();
+    } catch (error) {
+      console.error("Failed to load report manifest", error);
+      entries = [];
+      groups.innerHTML = "";
+      resultCount.textContent = "0";
+      empty.textContent = "报告清单加载失败，请稍后刷新。";
+      empty.style.display = "block";
+    }
+  }
+
   searchInput.addEventListener("input", render);
-  render();
+  filters.forEach(button => button.addEventListener("click", () => {
+    activeCategory = button.dataset.category;
+    filters.forEach(item => item.classList.toggle("active", item === button));
+    render();
+  }));
+  loadReports();
 </script>
 </body>
 </html>
