@@ -1,0 +1,16 @@
+# Repository and deployment metadata
+/.git/
+/.wrangler/
+/.github/
+/.gitignore
+/wrangler.jsonc
+
+# Internal agent instructions, plans, tests, and validation scripts
+/AGENTS.md
+/docs/
+/scripts/
+/tests/
+
+# Generated Python artifacts anywhere in the tree
+**/__pycache__/
+**/*.py[cod]
