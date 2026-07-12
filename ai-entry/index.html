@@ -205,7 +205,11 @@
       text-align: center;
     }
     table {
+      display: block;
       width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       border-collapse: separate;
       border-spacing: 0;
       margin: 14px 0 24px;
@@ -234,7 +238,10 @@
     .target-table {
       font-size: 11.7px;
       line-height: 1.5;
-      min-width: 1080px;
+    }
+    .target-table th,
+    .target-table td {
+      min-width: 112px;
     }
     .target-table th:nth-child(6),
     .target-table th:nth-child(7),
@@ -265,6 +272,14 @@
     .target-table td:nth-child(3),
     .target-table td:nth-child(5) {
       white-space: nowrap;
+    }
+    .target-table th:nth-child(5),
+    .target-table td:nth-child(5) {
+      min-width: 240px;
+    }
+    .target-table th:nth-child(8),
+    .target-table td:nth-child(8) {
+      min-width: 260px;
     }
     .table-hint {
       display: none;
@@ -422,11 +437,6 @@
         font-size: 12px;
       }
       table {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
         border-collapse: separate;
         border-spacing: 0;
         font-size: 12px;
@@ -470,14 +480,6 @@
       }
       .target-table tr:nth-child(even) td:first-child {
         background: #fbfcfe;
-      }
-      .target-table th:nth-child(5),
-      .target-table td:nth-child(5) {
-        min-width: 240px;
-      }
-      .target-table th:nth-child(8),
-      .target-table td:nth-child(8) {
-        min-width: 260px;
       }
       .table-hint {
         display: block;
