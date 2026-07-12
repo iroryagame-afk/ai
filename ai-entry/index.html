@@ -644,29 +644,37 @@
     </table>
     <p><strong>观察名单：</strong>GOOGL、MSFT、SPCX / SpaceX、ZS、FTNT、DDOG、OKTA、RDDT、BIDU / 9888、Moonshot / Kimi。其中 GOOGL 入口极厚但更适合作为底仓型锚点；MSFT 确定性最高但弹性被体量稀释；SPCX / SpaceX 的关键在于 Cursor / SpaceXAI 相关叙事是否已被市场计入；Zscaler 具备 zero trust / SASE 与 agent access 控制逻辑，但近期增长和销售执行分歧较大；FTNT 更偏 AI 数据中心 / OT 安全和安全硬件扩散，DDOG 偏可观测性与安全运营交叉，OKTA 偏身份安全；百度需要等待更强的入口数据和云业务验证；Kimi 暂不可直接配置，但对 WPS 等存量办公入口形成前置任务分流压力。</p>
 
-    <h3>10.4 当前价、目标价与增值空间</h3>
-    <p>本表采用 6-12 个月研究型目标价口径，不等同于卖方一致预期，也不是短期交易信号。当前参考价取自可核验行情快照：美股为 Nasdaq 2026 年 7 月 9 日快照，港股/A 股为新浪行情 2026 年 7 月 10 日收盘后快照。目标价上行空间按“基准目标价 / 当前参考价 - 1”计算；不同币种不做换汇比较，只比较各自上市地价格空间。</p>
+    <h3>10.4 估值交叉验证：DCF、卖方一致预期与 SOTP</h3>
+    <p>上一版“当前价、目标价与增值空间”表只适合作为主题情景锚，不足以构成正式目标价。对投资人而言，更可靠的目标价应至少通过三类方法之一交叉验证：第一，卖方一致预期或可核验的券商目标价；第二，DCF / FCF 模型，明确收入增速、利润率、WACC 和永续增速；第三，SOTP 或可比公司倍数，拆分云、广告、企业软件、安全、数据授权、本地生活等不同资产。若无法取得可靠的一致预期或分部数据，本报告不再硬填精确目标价。</p>
     <table>
       <thead>
-        <tr><th>标的</th><th>当前参考价</th><th>保守目标价</th><th>基准目标价</th><th>乐观目标价</th><th>基准增值空间</th><th>估值口径</th></tr>
+        <tr><th>标的</th><th>当前参考价</th><th>首选估值方法</th><th>外部锚 / 已知校验</th><th>关键变量</th><th>本报告使用方式</th></tr>
       </thead>
       <tbody>
-        <tr><td>Meta（META）</td><td>669.21 USD</td><td>720</td><td>820</td><td>930</td><td>+22.5%</td><td>消费入口重估 + 模型追赶</td></tr>
-        <tr><td>Cloudflare（NET）</td><td>268.40 USD</td><td>285</td><td>330</td><td>390</td><td>+23.0%</td><td>agent 网关与安全控制面</td></tr>
-        <tr><td>Palo Alto Networks（PANW）</td><td>325.91 USD</td><td>345</td><td>390</td><td>450</td><td>+19.7%</td><td>AI security 平台化预算</td></tr>
-        <tr><td>CrowdStrike（CRWD）</td><td>187.18 USD</td><td>190</td><td>225</td><td>270</td><td>+20.2%</td><td>安全遥测与 AI SOC</td></tr>
-        <tr><td>Alibaba（9988.HK）</td><td>110.20 HKD</td><td>115</td><td>135</td><td>160</td><td>+22.5%</td><td>AI 云 + Qwen + 钉钉 SOTP</td></tr>
-        <tr><td>ServiceNow（NOW）</td><td>107.71 USD</td><td>110</td><td>130</td><td>155</td><td>+20.7%</td><td>企业流程 agent</td></tr>
-        <tr><td>Palantir（PLTR）</td><td>126.79 USD</td><td>110</td><td>140</td><td>170</td><td>+10.4%</td><td>组织决策入口，高估值敏感</td></tr>
-        <tr><td>Tencent（0700.HK）</td><td>460.20 HKD</td><td>480</td><td>540</td><td>620</td><td>+17.3%</td><td>微信/企微分发入口</td></tr>
-        <tr><td>Meituan（3690.HK）</td><td>78.70 HKD</td><td>82</td><td>96</td><td>115</td><td>+22.0%</td><td>交易执行入口</td></tr>
-        <tr><td>Kingsoft Office（688111.SH）</td><td>233.76 CNY</td><td>220</td><td>270</td><td>330</td><td>+15.5%</td><td>办公 AI 付费弹性</td></tr>
-        <tr><td>Reddit（RDDT）</td><td>195.34 USD</td><td>180</td><td>220</td><td>270</td><td>+12.6%</td><td>讨论数据与授权期权</td></tr>
-        <tr><td>Alphabet（GOOGL）</td><td>357.18 USD</td><td>365</td><td>420</td><td>480</td><td>+17.6%</td><td>底牌型锚点</td></tr>
-        <tr><td>Microsoft（MSFT）</td><td>385.10 USD</td><td>400</td><td>450</td><td>520</td><td>+16.9%</td><td>确定性强但弹性被体量稀释</td></tr>
+        <tr><td>Meta / META</td><td>669.21 USD</td><td>SOTP + FCF：广告主业、AI 云/模型服务期权、Reality Labs 折价</td><td>需用 FactSet/LSEG/Bloomberg 补齐一致预期；公开资料显示市场开始重新定价其 AI 模型和算力资产</td><td>广告收入增速、AI capex、推理成本、第三方云化收入</td><td>保留核心高弹性，但正式目标价需由广告 FCF 与 AI 期权拆分得出</td></tr>
+        <tr><td>Cloudflare / NET</td><td>268.40 USD</td><td>EV/Sales、EV/FCF 与 AI Gateway / Workers 期权估值</td><td>需补齐卖方一致预期；主题弹性来自 agent 网关是否形成收入披露</td><td>AI Gateway 用量、Workers AI 收入、企业客户渗透、FCF margin</td><td>保留核心高弹性，但不再单独给拍脑袋目标价</td></tr>
+        <tr><td>Palo Alto Networks / PANW</td><td>325.91 USD</td><td>安全平台 EV/ARR + FCF；CyberArk / AI security 并表后 SOTP</td><td>需按 NGS ARR、平台化客户数和并购整合重新建模</td><td>NGS ARR、平台化折扣、CyberArk 协同、FCF margin</td><td>保留核心，目标价应由 ARR 倍数和 FCF 共同约束</td></tr>
+        <tr><td>CrowdStrike / CRWD</td><td>187.18 USD</td><td>EV/ARR + FCF；安全遥测数据与 AI SOC 溢价</td><td>需补齐 Falcon Flex ARR、AIDR 增速和卖方一致预期</td><td>净新增 ARR、客户留存、事故后信任修复、SOC 自动化率</td><td>保留核心，但估值需体现事故折价与平台化修复</td></tr>
+        <tr><td>Alibaba / BABA / 9988</td><td>110.20 HKD</td><td>SOTP：电商、云、Qwen 开源生态、钉钉与本地生活投资</td><td>需使用港股卖方一致预期和分部利润假设；不能与美股软件直接横向比目标价</td><td>阿里云收入增速、云利润率、AI 调用、钉钉商业化</td><td>保留中国核心，目标价应按 SOTP 修复空间计算</td></tr>
+        <tr><td>ServiceNow / NOW</td><td>107.71 USD</td><td>DCF + EV/FCF：订阅收入、cRPO、AI SKU 和 workflow moat</td><td>公开资料显示 BofA 目标价约 130 美元，市场报道的一致预期约 140 美元；公司完成 5-for-1 拆股后价格不可与旧口径直接比较</td><td>cRPO、AI SKU 收入、订阅毛利率、FCF margin、AI 对 SaaS 工作流的替代风险</td><td>保留核心观察，目标价应围绕 130-140 美元外部锚做情景校验</td></tr>
+        <tr><td>Palantir / PLTR</td><td>126.79 USD</td><td>Rule-of-X + EV/FCF；政府与商业业务分部倍数</td><td>公开卖方目标价分歧大，近期可见 175、189.87、195 美元等较乐观目标；说明市场分歧高于单一目标价意义</td><td>美国商业收入、政府合同、FCF margin、AIP 客户扩张</td><td>保留期权属性，估值应展示分歧而非给单点结论</td></tr>
       </tbody>
     </table>
-    <p>从增值空间看，当前更有弹性的组合仍集中在 <strong>NET、META、BABA / 9988、CRWD、PANW、NOW、Meituan</strong>。PLTR、RDDT 的入口弹性较强，但当前估值对兑现节奏更敏感，因此基准空间低于评分排序；GOOGL、MSFT 更适合作为确定性锚点，而非本框架下的高弹性第一选择。</p>
+    <p><strong>中国、锚点与观察资产：</strong></p>
+    <table>
+      <thead>
+        <tr><th>标的</th><th>当前参考价</th><th>首选估值方法</th><th>外部锚 / 已知校验</th><th>关键变量</th><th>本报告使用方式</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Tencent / 0700</td><td>460.20 HKD</td><td>SOTP：游戏、广告、金融科技、云、微信/企微 AI 入口</td><td>需用港股一致预期与分部利润；AI 入口价值更多体现为广告和企业服务重估</td><td>视频号广告、微信 AI 渗透、企微/腾讯文档、云收入</td><td>作为稳健锚点，目标价需按集团 SOTP 而非 AI 单因子</td></tr>
+        <tr><td>Meituan / 3690</td><td>78.70 HKD</td><td>SOTP：外卖、到店、酒店旅游、即时零售与 AI 履约效率</td><td>需补齐港股一致预期、分部利润和竞争补贴假设</td><td>订单增速、UE、补贴强度、AI 转化与履约效率</td><td>作为交易执行入口期权，估值需先看本地生活利润周期</td></tr>
+        <tr><td>Kingsoft Office / 688111</td><td>233.76 CNY</td><td>DCF + PE/PS：WPS 订阅、机构授权、AI 付费率</td><td>需用 A 股一致预期和 AI 付费率假设；Kimi/豆包分流是折价变量</td><td>AI 付费率、会员 ARPU、政企续费、毛利率</td><td>保留观察，目标价需显式扣除 AI-native 工作台分流风险</td></tr>
+        <tr><td>Reddit / RDDT</td><td>195.34 USD</td><td>数据授权 + 广告平台 DCF；社区数据期权</td><td>需补齐数据授权收入、广告变现和 AI 搜索流量影响</td><td>DAU、广告 ARPU、授权收入、内容治理</td><td>保留观察，目标价应以数据授权续约和广告效率验证为前提</td></tr>
+        <tr><td>Alphabet / GOOGL</td><td>357.18 USD</td><td>SOTP + FCF：搜索、YouTube、Cloud、Android、Gemini</td><td>需拆分 AI Mode 对搜索 monetization 的正负影响</td><td>搜索点击变现、Cloud AI 收入、YouTube、TPU/算力成本</td><td>稳健锚点，不按高弹性目标价处理</td></tr>
+        <tr><td>Microsoft / MSFT</td><td>385.10 USD</td><td>SOTP + FCF：Azure、Office/Copilot、GitHub、LinkedIn、OpenAI 权益</td><td>公开资料显示卖方平均目标价可能显著高于旧表；集团体量稀释单一入口弹性</td><td>Azure AI 增速、Copilot 付费、GitHub 变现、AI capex</td><td>稳健锚点，目标价应由集团 FCF 和 Azure/Copilot 渗透率驱动</td></tr>
+      </tbody>
+    </table>
+    <p>因此，本报告的投资排序不再依赖单点目标价，而采用“入口评分 + 估值方法适配 + 外部锚校验”的方式。若后续接入 Bloomberg、FactSet、LSEG、Wind 或东方财富完整一致预期数据，应优先把本表升级为可审计模型：每个标的同时展示当前价、卖方一致目标价、DCF 中枢、SOTP 中枢、最高敏感变量与估值分歧。</p>
 
     <h3>10.5 配置建议</h3>
     <p>6-12 个月研究型组合可分为三档：</p>
@@ -675,12 +683,12 @@
         <tr><th>档位</th><th>标的</th><th>配置含义</th><th>核心验证</th></tr>
       </thead>
       <tbody>
-        <tr><td>高弹性核心</td><td>META、NET、PANW、CRWD、BABA / 9988、NOW</td><td>入口重估与估值弹性兼具，基准目标价空间约 20% 左右</td><td>AI 收入披露、agent 网关用量、安全预算、AI 云增长、AI SKU 渗透</td></tr>
+        <tr><td>高弹性核心</td><td>META、NET、PANW、CRWD、BABA / 9988、NOW</td><td>入口重估弹性与估值可验证性兼具，但需用 DCF / SOTP / 卖方一致预期确认目标价</td><td>AI 收入披露、agent 网关用量、安全预算、AI 云增长、AI SKU 渗透</td></tr>
         <tr><td>稳健锚点</td><td>GOOGL、MSFT、腾讯 / 0700</td><td>入口厚度和确定性强，但集团体量会稀释弹性</td><td>搜索/广告 monetization、Copilot / GitHub 付费、微信/企微 AI 渗透</td></tr>
         <tr><td>期权与观察</td><td>PLTR、RDDT、美团 / 3690、金山办公 / 688111</td><td>入口稀缺或垂直纯度高，但估值、商业化或竞争分流仍需验证</td><td>商业客户扩张、数据授权收入、AI 订单转化、WPS AI 付费率</td></tr>
       </tbody>
     </table>
-    <p>按当前参考价和基准目标价测算，较高增值空间集中在 <strong>NET、META、BABA / 9988、Meituan、NOW、CRWD、PANW</strong>。但这不是单纯“空间排序”：PLTR 和 RDDT 的入口叙事强，当前估值对兑现节奏更敏感；GOOGL 和 MSFT 的确定性更高，但弹性被体量稀释；金山办公的 AI 纯度较高，但需要持续观察 Kimi、豆包等 AI-native 工作台对前置办公任务的分流。</p>
+    <p>按入口评分与估值可验证性综合判断，优先研究顺序仍集中在 <strong>META、NET、PANW、CRWD、BABA / 9988、NOW</strong>。但这不是单纯“空间排序”：PLTR 和 RDDT 的入口叙事强，当前估值对兑现节奏更敏感；GOOGL 和 MSFT 的确定性更高，但弹性被体量稀释；金山办公的 AI 纯度较高，但需要持续观察 Kimi、豆包等 AI-native 工作台对前置办公任务的分流。</p>
     <p>最终建议是采用“核心 + 锚点 + 观察”的组合框架：核心仓重点跟踪 META、NET、PANW、CRWD、BABA / 9988、NOW；锚点仓用 GOOGL、MSFT、腾讯降低框架误判风险；观察仓跟踪 PLTR、RDDT、美团、金山办公等弹性资产。若 agent 调用量、AI 安全预算、企业流程自动化率和 AI SKU 收入连续两个季度低于预期，应下调入口重估权重；若上述指标同时改善，则本框架的 SOTP 估值贡献有继续上修空间。</p>
 
     <h2>十一、参考资料</h2>
@@ -702,6 +710,13 @@
       <li>AP 关于 Reddit 用户增长、盈利与数据授权的报道：<a href="https://apnews.com/article/5a9e32159a947094ae801ab107c950da">https://apnews.com/article/5a9e32159a947094ae801ab107c950da</a></li>
       <li>Business Insider 关于 Palantir AIP 与组织决策入口的报道：<a href="https://www.businessinsider.com/palantir-calls-llms-a-jagged-intelligence-outlines-ai-race-plan-2025-8">https://www.businessinsider.com/palantir-calls-llms-a-jagged-intelligence-outlines-ai-race-plan-2025-8</a></li>
       <li>MarketWatch 关于软件股分化与 AI scaffolding / security 跑赢的报道：<a href="https://www.marketwatch.com/story/software-stocks-have-rarely-seen-such-divergent-performances-heres-how-to-pick-winners-ab154f7d">https://www.marketwatch.com/story/software-stocks-have-rarely-seen-such-divergent-performances-heres-how-to-pick-winners-ab154f7d</a></li>
+      <li>MarketWatch 关于 ServiceNow 2026 年 7 月 10 日收盘价的报道：<a href="https://www.marketwatch.com/data-news/servicenow-inc-stock-underperforms-friday-when-compared-to-competitors-f50aefb9-34434440751c">https://www.marketwatch.com/data-news/servicenow-inc-stock-underperforms-friday-when-compared-to-competitors-f50aefb9-34434440751c</a></li>
+      <li>Investopedia 关于 ServiceNow 目标价与 AI workflow 逻辑的报道：<a href="https://www.investopedia.com/servicenow-stock-has-been-battered-by-ai-disruption-worries-these-experts-think-ai-will-actually-boost-its-business-11977308">https://www.investopedia.com/servicenow-stock-has-been-battered-by-ai-disruption-worries-these-experts-think-ai-will-actually-boost-its-business-11977308</a></li>
+      <li>Barron's 关于 BofA 重启覆盖 ServiceNow 并给出 130 美元目标价的报道：<a href="https://www.barrons.com/articles/servicenow-salesforce-stock-price-ai-7b109396">https://www.barrons.com/articles/servicenow-salesforce-stock-price-ai-7b109396</a></li>
+      <li>MarketWatch 关于 Palantir D.A. Davidson 上调评级和 175 美元目标价的报道：<a href="https://www.marketwatch.com/story/palantirs-stock-bounces-back-as-analyst-cheers-companys-unique-ai-advantage-2f28698d">https://www.marketwatch.com/story/palantirs-stock-bounces-back-as-analyst-cheers-companys-unique-ai-advantage-2f28698d</a></li>
+      <li>MarketWatch 关于 Palantir Mizuho 195 美元目标价的报道：<a href="https://www.marketwatch.com/story/palantirs-stock-is-winning-over-wall-street-another-analyst-just-turned-bullish-4fc7c071">https://www.marketwatch.com/story/palantirs-stock-is-winning-over-wall-street-another-analyst-just-turned-bullish-4fc7c071</a></li>
+      <li>Barron's 关于 Palantir Wolfe Research 189.87 美元目标价的报道：<a href="https://www.barrons.com/articles/palantir-stock-nears-new-low-7ba7feab">https://www.barrons.com/articles/palantir-stock-nears-new-low-7ba7feab</a></li>
+      <li>Investopedia 关于 Microsoft 卖方平均目标价和财报波动预期的报道：<a href="https://www.investopedia.com/here-is-how-much-microsoft-stock-is-expected-to-move-after-earnings-msft-q3-fy2026-11956168">https://www.investopedia.com/here-is-how-much-microsoft-stock-is-expected-to-move-after-earnings-msft-q3-fy2026-11956168</a></li>
       <li>WSJ 关于 AI agent 安全风险和企业防护不足的报道：<a href="https://www.wsj.com/tech/ai/what-happens-when-ai-agents-go-rogue-b233a48b">https://www.wsj.com/tech/ai/what-happens-when-ai-agents-go-rogue-b233a48b</a></li>
       <li>WSJ 关于 Palo Alto Networks 2026 财季增长和 AI 驱动安全需求的报道：<a href="https://www.wsj.com/business/earnings/palo-alto-networks-revenue-rises-as-customers-beef-up-cyber-defenses-d80de2d7">https://www.wsj.com/business/earnings/palo-alto-networks-revenue-rises-as-customers-beef-up-cyber-defenses-d80de2d7</a></li>
       <li>WSJ 关于 CrowdStrike FY2027 Q1 ARR 和收入增长的报道：<a href="https://www.wsj.com/business/earnings/crowdstrike-lifts-outlook-after-swinging-to-first-quarter-profit-1a0b5a57">https://www.wsj.com/business/earnings/crowdstrike-lifts-outlook-after-swinging-to-first-quarter-profit-1a0b5a57</a></li>
