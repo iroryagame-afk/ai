@@ -317,7 +317,7 @@
   </section>
 
   <main>
-    <h2>一、投资摘要</h2>
+    <h2>一、研究摘要</h2>
     <p class="lead">本报告将 AI 时代的竞争要素拆分为“门票”与“入口”。门票包括模型能力、资金、工程组织与必要算力资源，决定企业是否具备参与竞争的基础资格；入口包括用户任务、数据反馈与分发控制，决定企业能否形成持续的产品复利、模型复利与商业化闭环。由于硬件层已被剔除，本文重点评估软件入口与平台入口的战略价值。</p>
 
     <div class="summary-grid">
@@ -330,75 +330,13 @@
         <div>入口强度不能直接等同于股票弹性，需要通过 SOTP 评估收入归属、利润贡献、集团体量和市场尚未定价程度。</div>
       </div>
       <div class="summary-box">
-        <div class="label">研究优先级</div>
-        <div>美股弹性重点为 META、NET、PANW、CRWD、NOW、PLTR，RDDT 下调为数据入口观察；中国重点跟踪阿里、腾讯、美团、金山办公、百度及未上市字节/Kimi。</div>
+        <div class="label">研究路径</div>
+        <div>先建立门票、入口、反馈、SOTP 与兑现节奏五层框架，再在文末集中给出标的排序、估值框架、目标区间与配置建议。</div>
       </div>
     </div>
 
     <p>普通模型 API 主要沉淀 prompt、token、调用成本与延迟等浅层数据；嵌入开发、办公、企业流程、云网关与协作系统的 agent 产品，则能够获得任务执行、人工验收、流程完成、客户留存和支付转化等高质量反馈。上述反馈是下一阶段模型优化、产品迭代与收入确认的重要基础。</p>
-
-    <h3>1.1 可投资核心结论：100 分制排序</h3>
-    <p>本报告采用 100 分制评估可投资标的的研究优先级。评分不是目标价，也不是短期交易信号，而是基于“入口质量、反馈深度、商业化/SOTP 传导、确定性、估值弹性”的综合排序。</p>
-    <div class="formula">综合得分 =
-入口质量 25%
-+ 反馈深度 20%
-+ 商业化 / SOTP 传导 20%
-+ 确定性 20%
-+ 估值弹性 15%</div>
-
-    <table>
-      <thead>
-        <tr><th>评级</th><th>分数区间</th><th>含义</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>A</td><td>85 分以上</td><td>核心研究标的，具备较强主题弹性和可验证路径</td></tr>
-        <tr><td>A-</td><td>80-84 分</td><td>重点配置候选，需跟踪财务或估值触发因素</td></tr>
-        <tr><td>B+</td><td>75-79 分</td><td>入口质量较好，但弹性、确定性或估值传导存在约束</td></tr>
-        <tr><td>B</td><td>70-74 分</td><td>跟踪标的，需等待更强数据或更合适估值位置</td></tr>
-      </tbody>
-    </table>
-
-    <h3>1.2 美股 AI 软件入口子组合</h3>
-    <p>若只看美股软件 / 平台入口，并剔除硬件与纯算力资产，建议将标的分为“高弹性入口股”“安全预算受益股”和“底牌型锚点”三类。高弹性排序强调重新定价可能性；安全预算受益股强调 AI agent 扩散后新增攻击面带来的刚性支出；底牌型锚点强调入口厚度和长期确定性。</p>
-    <table class="score-table">
-      <thead>
-        <tr><th>角色</th><th>标的</th><th>得分</th><th>评级</th><th>入口位置</th><th>投资结论</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>高弹性 1</td><td>Meta / META</td><td><span class="score">88</span></td><td>A</td><td>用户分发：社交、多模态、广告反馈、模型追赶</td><td>消费入口重估弹性最高，广告闭环可直接验证 AI 效果；核心风险是资本开支和模型追赶节奏。</td></tr>
-        <tr><td>高弹性 2</td><td>Cloudflare / NET</td><td><span class="score">87</span></td><td>A</td><td>Agent 控制面：AI Gateway、Workers、MCP、机器流量治理、边缘安全</td><td>最接近机器 agent 流量入口，同时具备网关、安全和边缘执行属性；若网关地位被验证，估值叙事弹性强。</td></tr>
-        <tr><td>安全预算 1</td><td>Palo Alto Networks / PANW</td><td><span class="score">86</span></td><td>A</td><td>AI Security：平台化安全、云安全、身份安全、agent security</td><td>AI agent 扩散提高权限、身份、数据访问和工具调用风险，安全预算刚性高于普通 SaaS；核心风险是并购整合和估值。</td></tr>
-        <tr><td>安全预算 2</td><td>CrowdStrike / CRWD</td><td><span class="score">84</span></td><td>A-</td><td>Endpoint、SOC、threat graph、AI 安全运营</td><td>真实遥测和威胁数据密度高，适合形成 AI 防御反馈闭环；需关注估值、事故后信任修复和竞争。</td></tr>
-        <tr><td>高弹性 3</td><td>ServiceNow（NOW）</td><td><span class="score">83</span></td><td>A-</td><td>企业流程：IT、HR、客服、审批 agent</td><td>企业流程入口集中，L4-L5 反馈清晰；但作为 SaaS 工作流资产，安全边际低于网安方向。</td></tr>
-        <tr><td>高弹性 4</td><td>Palantir / PLTR</td><td><span class="score">81</span></td><td>A-</td><td>组织决策：Ontology、AIP、复杂业务流程</td><td>组织决策入口稀缺，弹性高；但估值和兑现节奏敏感，需持续验证商业客户扩张和利润质量。</td></tr>
-        <tr><td>观察样本</td><td>Reddit / RDDT</td><td><span class="score">76</span></td><td>B+</td><td>人类讨论数据：社区语料、搜索答案、数据授权</td><td>数据独特性强，适合 AI 数据授权与搜索入口重估；但商业化确定性和平台治理仍需验证，暂不列入前五核心。</td></tr>
-        <tr><td>底牌锚点</td><td>Alphabet / GOOGL</td><td><span class="score">82</span></td><td>A-</td><td>模型 / 云 / 搜索 / YouTube / Android / Gemini</td><td>入口厚度极强，适合作为框架锚点；短期弹性受搜索自我颠覆和集团体量影响，不宜按高弹性第一排序。</td></tr>
-      </tbody>
-    </table>
-    <p><strong>美股结论：</strong>META 更像消费入口重估，NET 更像机器 agent 控制面，PANW / CRWD 代表 AI Security / Agent Security 方向，NOW 更像企业流程 agent，PLTR 更像组织决策入口，RDDT 更像人类讨论数据观察样本，GOOGL 是底牌型锚点而非弹性第一。AI Coding 是第一批被验证的高价值生产力场景；AI Security / Agent Security 可能是第二批被机构系统性重估的方向。</p>
-    <p><strong>补充观察：</strong>富途牛牛 2026 年 7 月 7 日文章《算力之外的隐形赢家》将本轮美股网安行情拆为三条主线：AI 数据中心和 OT 安全带动安全硬件需求、agent 普及催生身份安全与 AI 监测需求、企业倾向于向平台型安全公司集中采购。该框架强化了本文对网安方向的判断，但并不改变核心排序：PANW / CRWD 仍是更适合进入核心组合的安全预算标的，FTNT、DDOG、OKTA 更适合作为板块扩散和验证样本。</p>
-
-    <h3>1.3 跨市场核心组合</h3>
-    <table class="score-table">
-      <thead>
-        <tr><th>排名</th><th>核心标的</th><th>得分</th><th>评级</th><th>核心投资结论</th><th>主要约束</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>Meta / META</td><td><span class="score">88</span></td><td>A</td><td>消费入口、广告反馈和多模态分发具备最高重新定价弹性。</td><td>AI 资本开支高，模型追赶和商业化兑现需验证。</td></tr>
-        <tr><td>2</td><td>Cloudflare / NET</td><td><span class="score">87</span></td><td>A</td><td>机器 agent 网关与边缘执行入口具备稀缺性；若 AI Gateway / Workers 成为 agent 流量控制面，估值叙事有望从 CDN/安全扩展至 AI 基础设施入口。</td><td>AI 相关收入贡献仍需披露验证，估值敏感度较高。</td></tr>
-        <tr><td>3</td><td>Palo Alto Networks / PANW</td><td><span class="score">86</span></td><td>A</td><td>平台化网安龙头，身份安全、云安全和 agent security 直接受益于 AI 扩散带来的新攻击面。</td><td>估值不低，并购整合、平台化折扣和销售执行需要持续验证。</td></tr>
-        <tr><td>4</td><td>CrowdStrike / CRWD</td><td><span class="score">84</span></td><td>A-</td><td>Endpoint、SOC 与 threat graph 连接高质量安全遥测数据，AI 安全运营具备真实反馈闭环。</td><td>估值较高，历史事故后的客户信任修复和竞争压力仍需观察。</td></tr>
-        <tr><td>5</td><td>Alibaba / BABA / 9988</td><td><span class="score">83</span></td><td>A-</td><td>中国上市公司中 AI 云、Qwen 开源生态、钉钉和商家经营工具形成较完整入口组合，具备 SOTP 修复空间。</td><td>云竞争、组织执行与云业务利润率波动仍是主要约束。</td></tr>
-        <tr><td>6</td><td>ServiceNow（NOW）</td><td><span class="score">83</span></td><td>A-</td><td>企业流程入口集中，IT、HR、客服和审批场景天然连接 L4-L5 反馈，AI SKU 对 ARPU 与 NRR 的传导路径相对清晰。</td><td>估值基数较高，且普通 SaaS 工作流面临 AI 重构压力。</td></tr>
-        <tr><td>7</td><td>Palantir / PLTR</td><td><span class="score">81</span></td><td>A-</td><td>复杂组织决策入口稀缺，AIP / Ontology 具备企业 agent 控制层属性。</td><td>估值较敏感，需验证非政府商业客户扩张与利润质量。</td></tr>
-        <tr><td>8</td><td>Tencent / 0700</td><td><span class="score">80</span></td><td>A-</td><td>微信、企业微信和腾讯文档构成国内最厚分发入口，若 AI agent 嵌入微信/企微，入口价值更高。</td><td>集团体量较大，AI 收入单列程度不足，股价弹性可能弱于入口厚度。</td></tr>
-        <tr><td>9</td><td>Meituan / 3690</td><td><span class="score">79</span></td><td>B+</td><td>本地生活交易执行入口稀缺，AI agent 最终若要订、买、送、履约，美团更接近 L5 商业结果。</td><td>AI 不是当前收入主线，竞争与补贴周期会影响估值弹性。</td></tr>
-        <tr><td>10</td><td>Kingsoft Office / 688111</td><td><span class="score">77</span></td><td>B+</td><td>WPS AI 是国内较纯的白领办公入口，公司体量相对小，AI 付费率和 ARPU 对估值弹性直接。</td><td>Kimi 等 AI-native 工作台可能前置化部分文档生成、资料整理和研究初稿入口，需验证 WPS 的存量入口和付费转化能否守住。</td></tr>
-        <tr><td>11</td><td>Reddit / RDDT</td><td><span class="score">76</span></td><td>B+</td><td>人类讨论数据独特，具备 AI 数据授权和搜索答案入口期权。</td><td>商业化持续性、平台治理和 AI 搜索流量影响仍需验证。</td></tr>
-      </tbody>
-    </table>
-    <p><strong>观察名单：</strong>GOOGL、MSFT、SPCX / SpaceX、ZS、FTNT、DDOG、OKTA、RDDT、BIDU / 9888、Moonshot / Kimi。其中 GOOGL 入口极厚但更适合作为底仓型锚点；MSFT 确定性最高但弹性被体量稀释；SPCX / SpaceX 的关键在于 Cursor / SpaceXAI 相关叙事是否已被市场计入；Zscaler 具备 zero trust / SASE 与 agent access 控制逻辑，但近期增长和销售执行分歧较大；FTNT 更偏 AI 数据中心 / OT 安全和安全硬件扩散，DDOG 偏可观测性与安全运营交叉，OKTA 偏身份安全；百度需要等待更强的入口数据和云业务验证；Kimi 暂不可直接配置，但对 WPS 等存量办公入口形成前置任务分流压力。</p>
-    <p><strong>投资结论：</strong>若只看“美股 AI 软件入口弹性”，优先级为 META、NET、PANW、CRWD、NOW、PLTR，GOOGL 作为底牌型锚点，RDDT 下调为数据入口观察；若只看“中国 AI 入口资产”，排序为阿里、腾讯、美团、金山办公、百度，Kimi / Moonshot 是未上市但需要重点观察的前置任务入口变量；若只看“确定性”，MSFT、GOOGL 和大型网安龙头排名应上移，但弹性不一定最高。</p>
+    <p>因此，本文先建立门票、入口、反馈、SOTP 与兑现节奏五层分析框架，再在文末集中给出可投资标的排序、估值框架、目标区间与配置建议，避免用开篇结论替代研究推导。</p>
 
     <h2>二、研究框架：门票与入口</h2>
     <h3>2.1 核心定义</h3>
@@ -422,20 +360,20 @@
       </thead>
       <tbody>
         <tr><td>Amazon / AWS</td><td>美国数据中心容量约 9GW</td><td>媒体估算</td><td>电力与自建基础设施领先，是算力门票标杆；但入口弹性分散在 AWS 体量内。</td></tr>
-        <tr><td>Meta</td><td>计划将 AI 计算容量由约 7GW 提升至 14GW by 2027</td><td>媒体报道 / 内部备忘录</td><td>同时具备消费分发入口、广告反馈和大算力投入，是“入口 + 门票”共振样本。</td></tr>
+        <tr><td>Meta</td><td>计划将 AI 计算容量由约 7GW 提升至 14GW by 2027</td><td>媒体报道 / 公司备忘录</td><td>同时具备消费分发入口、广告反馈和大算力投入，是“入口 + 门票”共振样本。</td></tr>
         <tr><td>OpenAI / Oracle / SoftBank Stargate</td><td>Abilene 约 0.9GW；Stargate 规划接近 7GW</td><td>项目报道 / 规划口径</td><td>闭源模型公司补齐算力门票的代表，但大量容量仍依赖合作伙伴与规划兑现。</td></tr>
         <tr><td>xAI / SpaceXAI</td><td>Colossus 早期约 250-400MW；Mississippi 项目宣称 2GW</td><td>媒体报道 / 项目口径</td><td>若 SpaceXAI 叙事成立，算力基础设施可成为 SOTP 资产；需区分投产、在建和远期规划。</td></tr>
         <tr><td>Anthropic</td><td>TeraWulf Kentucky 项目约 401MW IT load，预计 2028 满载</td><td>合同 / 项目报道</td><td>产品入口强，但算力更多依赖云厂、租赁和项目合作；不应按 hyperscaler 口径估值。</td></tr>
         <tr><td>Alphabet / Google</td><td>未披露精确当前 GW；2030 含租赁容量或接近 Amazon</td><td>媒体估算</td><td>算力、电力与 TPU 体系强，但短期估值弹性仍取决于搜索入口是否被 AI 重塑。</td></tr>
         <tr><td>Microsoft</td><td>未披露精确总 GW；持续扩张 Fairwater 等 AI 数据中心</td><td>财报 / 媒体报道</td><td>算力门票确定性高，但 GitHub、Copilot、OpenAI 相关入口对集团市值的边际弹性被体量稀释。</td></tr>
-        <tr><td>阿里 / 腾讯 / 字节 / 百度</td><td>缺少可横向比较的公开 GW 数据</td><td>披露不足</td><td>不建议硬填 GW；更适合跟踪 AI capex、智算中心节点、GPU/芯片合作、云收入和调用量。</td></tr>
+        <tr><td>阿里 / 腾讯 / 字节 / 百度</td><td>缺少可横向比较的公开 GW 数据</td><td>披露不足</td><td>更适合跟踪 AI capex、智算中心节点、GPU/芯片合作、云收入和调用量。</td></tr>
         <tr><td>NOW / PLTR / NET / RDDT / 金山办公</td><td>不适合按 GW 统计</td><td>不适用</td><td>这些公司主要是入口、流程、数据或网关资产，低 GW 不代表入口价值低。</td></tr>
       </tbody>
     </table>
-    <p>结论上，算力与电力容量是 AI 时代的门票变量，而不是入口变量。GW 决定企业能否持续训练、推理、降价和承接大规模需求；但真正影响估值弹性的仍是用户任务、反馈闭环、分发控制和收入归属。本文保留“门票 + 入口”的双层框架：Meta、OpenAI / Stargate、AWS、Google、Microsoft 更偏算力门票领先者；ServiceNow、Palantir、Reddit、金山办公等更偏入口资产，不能简单用 GW 高低衡量。</p>
+    <p>结论上，算力与电力容量是 AI 时代的门票变量，而不是入口变量。GW 决定企业能否持续训练、推理、降价和承接大规模需求；但真正影响估值弹性的仍是用户任务、反馈闭环、分发控制和收入归属。本文保留“门票 + 入口”的双层框架：Meta、OpenAI / Stargate、AWS、Google、Microsoft 更偏算力门票领先者；ServiceNow、Palantir、Reddit、金山办公等更偏入口资产，不宜仅以 GW 高低衡量。</p>
 
     <h3>2.3 入口扩散节奏：不是一张票，而是一道波</h3>
-    <p>参考“Cowork 扩散是一道波”的产业链逻辑，AI 入口也不应被理解为某一个产品或某一张股票，而应被理解为瓶颈逐步迁移后的价值捕获过程。早期市场往往先重估算力、内存、网络和电力等门票变量；当 agent 调用量、工具权限和企业部署开始放大后，才会逐步转向网关、安全、身份、日志、工作流和数据反馈入口；最终真正沉淀超额价值的，是能把任务结果、用户分发和商业闭环留在自己体系内的公司。</p>
+    <p>参考“Cowork 扩散是一道波”的产业链逻辑，AI 入口也不应被理解为某一个产品或某一张股票，而应被理解为瓶颈逐步迁移后的价值捕获过程。早期市场往往先重估算力、内存、网络和电力等门票变量；当 agent 调用量、工具权限和企业部署开始放大后，才会逐步转向网关、安全、身份、日志、工作流和数据反馈入口；最终真正沉淀超额价值的，是能把任务结果、用户分发和商业闭环留在自身体系内的公司。</p>
     <p>本文仍剔除硬件与算力供给层，不把 HBM、GPU、ASIC、电力和散热资产纳入核心股票池；但应把这些瓶颈作为入口兑现节奏的领先指标。如果基础设施扩张停滞，软件入口的商业化节奏也会推迟；如果 agent 负载快速扩散，则机器流量治理、agent security、企业流程和数据反馈入口会依次被重新定价。</p>
     <table>
       <thead>
@@ -448,7 +386,7 @@
         <tr><td>Y5：价值捕获期</td><td>数据反馈、商业结果、分发控制、行业 workflow</td><td>L4-L5 反馈成为壁垒，估值从“AI 功能”转向“结果数据和收入归属”</td><td>META、腾讯、美团、阿里、ServiceNow、Palantir、Reddit 等入口资产需要按 SOTP 重新拆分</td></tr>
       </tbody>
     </table>
-    <p>因此，AI 入口的投资结论不是“买所有 AI 软件”，而是按阶段识别瓶颈迁移：早期看 agent 网关和安全预算的重新定价，中期看企业流程和组织决策入口，后期看谁真正拿到任务结果、商业转化和数据反馈。</p>
+    <p>因此，AI 入口的配置含义不是“买所有 AI 软件”，而是按阶段识别瓶颈迁移：早期看 agent 网关和安全预算的重新定价，中期看企业流程和组织决策入口，后期看谁真正拿到任务结果、商业转化和数据反馈。</p>
 
     <h3>2.4 反馈价值分层</h3>
     <table>
@@ -526,7 +464,7 @@
     </table>
 
     <h3>5.1 中国版入口图的处理结论</h3>
-    <p>此前生成的“中国 AI 软件入口梯度图”有必要进入报告，但不建议原图直接放入正文。原因是原图更适合研究讨论，正式报告应转化为可复核的梯度表。其核心逻辑应保留：越靠近高频任务、交易执行、内容反馈和社交分发，入口价值越高。</p>
+    <p>中国 AI 软件入口梯度更适合以可复核表格呈现：越靠近高频任务、交易执行、内容反馈和社交分发，入口价值越高；越依赖单一模型调用或低频工具使用，估值传导越需要财务数据验证。</p>
     <table>
       <thead>
         <tr><th>层级</th><th>代表</th><th>入口价值</th><th>二级市场含义</th></tr>
@@ -578,7 +516,8 @@
       </tbody>
     </table>
 
-    <h2>七、投资排序与配置含义</h2>
+    <h2>七、候选池与排序维度</h2>
+    <p>本节用于说明候选资产的排序维度和跟踪优先级，不作为最终组合结论。最终评分、估值框架、目标区间与配置建议统一放在第十章。</p>
     <h3>7.1 按入口战略价值排序</h3>
     <ol>
       <li>Anthropic / OpenAI：基础模型与高质量任务反馈入口，但未上市。</li>
@@ -591,7 +530,7 @@
       <li>阿里 / 腾讯 / 美团 / 金山办公：国内上市公司中入口资产最值得持续跟踪。</li>
     </ol>
 
-    <h3>7.2 按二级市场弹性排序</h3>
+    <h3>7.2 按二级市场弹性观察</h3>
     <table>
       <thead>
         <tr><th>优先级</th><th>标的</th><th>主要逻辑</th><th>主要风险</th></tr>
@@ -641,7 +580,142 @@
       </tbody>
     </table>
 
-    <h2>十、参考资料</h2>
+    <h2>十、结论与配置建议</h2>
+    <p>本报告的最终结论是：AI 入口重估不应简单等同于“买模型”或“买所有 AI 软件”，而应按“门票、控制面、工作流、数据反馈、商业结果”五层拆分。短期最值得研究的是能在 agent 扩散中拿到新增预算或流量控制权的公司；中期看企业流程和组织决策入口；长期看谁能沉淀 L4-L5 任务验收和商业结果数据。</p>
+
+    <h3>10.1 评分方法</h3>
+    <p>本报告采用 100 分制评估可投资标的的研究优先级。评分不是目标价，也不是短期交易信号，而是基于“入口质量、反馈深度、商业化/SOTP 传导、确定性、估值弹性”的综合排序。</p>
+    <div class="formula">综合得分 =
+入口质量 25%
++ 反馈深度 20%
++ 商业化 / SOTP 传导 20%
++ 确定性 20%
++ 估值弹性 15%</div>
+    <table>
+      <thead>
+        <tr><th>评级</th><th>分数区间</th><th>含义</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>A</td><td>85 分以上</td><td>核心研究标的，具备较强主题弹性和可验证路径</td></tr>
+        <tr><td>A-</td><td>80-84 分</td><td>重点配置候选，需跟踪财务或估值触发因素</td></tr>
+        <tr><td>B+</td><td>75-79 分</td><td>入口质量较好，但弹性、确定性或估值传导存在约束</td></tr>
+        <tr><td>B</td><td>70-74 分</td><td>跟踪标的，需等待更强数据或更合适估值位置</td></tr>
+      </tbody>
+    </table>
+
+    <h3>10.2 美股 AI 软件入口子组合</h3>
+    <p>若只看美股软件 / 平台入口，并剔除硬件与纯算力资产，建议将标的分为“高弹性入口股”“安全预算受益股”和“底牌型锚点”三类。高弹性排序强调重新定价可能性；安全预算受益股强调 AI agent 扩散后新增攻击面带来的刚性支出；底牌型锚点强调入口厚度和长期确定性。</p>
+    <table class="score-table">
+      <thead>
+        <tr><th>角色</th><th>标的</th><th>得分</th><th>评级</th><th>入口位置</th><th>核心判断</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>高弹性 1</td><td>Meta / META</td><td><span class="score">88</span></td><td>A</td><td>用户分发：社交、多模态、广告反馈、模型追赶</td><td>消费入口重估弹性最高，广告闭环可直接验证 AI 效果；核心风险是资本开支和模型追赶节奏。</td></tr>
+        <tr><td>高弹性 2</td><td>Cloudflare / NET</td><td><span class="score">87</span></td><td>A</td><td>Agent 控制面：AI Gateway、Workers、MCP、机器流量治理、边缘安全</td><td>最接近机器 agent 流量入口，同时具备网关、安全和边缘执行属性；若网关地位被验证，估值叙事弹性强。</td></tr>
+        <tr><td>安全预算 1</td><td>Palo Alto Networks / PANW</td><td><span class="score">86</span></td><td>A</td><td>AI Security：平台化安全、云安全、身份安全、agent security</td><td>AI agent 扩散提高权限、身份、数据访问和工具调用风险，安全预算刚性高于普通 SaaS；核心风险是并购整合和估值。</td></tr>
+        <tr><td>安全预算 2</td><td>CrowdStrike / CRWD</td><td><span class="score">84</span></td><td>A-</td><td>Endpoint、SOC、threat graph、AI 安全运营</td><td>真实遥测和威胁数据密度高，适合形成 AI 防御反馈闭环；需关注估值、事故后信任修复和竞争。</td></tr>
+        <tr><td>高弹性 3</td><td>ServiceNow / NOW</td><td><span class="score">83</span></td><td>A-</td><td>企业流程：IT、HR、客服、审批 agent</td><td>企业流程入口集中，L4-L5 反馈清晰；但作为 SaaS 工作流资产，安全边际低于网安方向。</td></tr>
+        <tr><td>高弹性 4</td><td>Palantir / PLTR</td><td><span class="score">81</span></td><td>A-</td><td>组织决策：Ontology、AIP、复杂业务流程</td><td>组织决策入口稀缺，弹性高；但估值和兑现节奏敏感，需持续验证商业客户扩张和利润质量。</td></tr>
+        <tr><td>观察样本</td><td>Reddit / RDDT</td><td><span class="score">76</span></td><td>B+</td><td>人类讨论数据：社区语料、搜索答案、数据授权</td><td>数据独特性强，适合 AI 数据授权与搜索入口重估；但商业化确定性和平台治理仍需验证，暂不列入前五核心。</td></tr>
+        <tr><td>底牌锚点</td><td>Alphabet / GOOGL</td><td><span class="score">82</span></td><td>A-</td><td>模型 / 云 / 搜索 / YouTube / Android / Gemini</td><td>入口厚度极强，适合作为框架锚点；短期弹性受搜索自我颠覆和集团体量影响，不宜按高弹性第一排序。</td></tr>
+      </tbody>
+    </table>
+    <p><strong>美股结论：</strong>META 更像消费入口重估，NET 更像机器 agent 控制面，PANW / CRWD 代表 AI Security / Agent Security 方向，NOW 更像企业流程 agent，PLTR 更像组织决策入口，RDDT 更像人类讨论数据观察样本，GOOGL 是底牌型锚点而非弹性第一。AI Coding 是第一批被验证的高价值生产力场景；AI Security / Agent Security 可能是第二批被机构系统性重估的方向。</p>
+    <p><strong>补充观察：</strong>富途牛牛 2026 年 7 月 7 日文章《算力之外的隐形赢家》将本轮美股网安行情拆为三条主线：AI 数据中心和 OT 安全带动安全硬件需求、agent 普及催生身份安全与 AI 监测需求、企业倾向于向平台型安全公司集中采购。该框架强化了本文对网安方向的判断，但并不改变核心排序：PANW / CRWD 仍是更适合进入核心组合的安全预算标的，FTNT、DDOG、OKTA 更适合作为板块扩散和验证样本。</p>
+
+    <h3>10.3 跨市场核心组合</h3>
+    <table class="score-table">
+      <thead>
+        <tr><th>排名</th><th>核心标的</th><th>得分</th><th>评级</th><th>核心判断</th><th>主要约束</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Meta / META</td><td><span class="score">88</span></td><td>A</td><td>消费入口、广告反馈和多模态分发具备最高重新定价弹性。</td><td>AI 资本开支高，模型追赶和商业化兑现需验证。</td></tr>
+        <tr><td>2</td><td>Cloudflare / NET</td><td><span class="score">87</span></td><td>A</td><td>机器 agent 网关与边缘执行入口具备稀缺性；若 AI Gateway / Workers 成为 agent 流量控制面，估值叙事有望从 CDN/安全扩展至 AI 基础设施入口。</td><td>AI 相关收入贡献仍需披露验证，估值敏感度较高。</td></tr>
+        <tr><td>3</td><td>Palo Alto Networks / PANW</td><td><span class="score">86</span></td><td>A</td><td>平台化网安龙头，身份安全、云安全和 agent security 直接受益于 AI 扩散带来的新攻击面。</td><td>估值不低，并购整合、平台化折扣和销售执行需要持续验证。</td></tr>
+        <tr><td>4</td><td>CrowdStrike / CRWD</td><td><span class="score">84</span></td><td>A-</td><td>Endpoint、SOC 与 threat graph 连接高质量安全遥测数据，AI 安全运营具备真实反馈闭环。</td><td>估值较高，历史事故后的客户信任修复和竞争压力仍需观察。</td></tr>
+        <tr><td>5</td><td>Alibaba / BABA / 9988</td><td><span class="score">83</span></td><td>A-</td><td>中国上市公司中 AI 云、Qwen 开源生态、钉钉和商家经营工具形成较完整入口组合，具备 SOTP 修复空间。</td><td>云竞争、组织执行与云业务利润率波动仍是主要约束。</td></tr>
+        <tr><td>6</td><td>ServiceNow / NOW</td><td><span class="score">83</span></td><td>A-</td><td>企业流程入口集中，IT、HR、客服和审批场景天然连接 L4-L5 反馈，AI SKU 对 ARPU 与 NRR 的传导路径相对清晰。</td><td>估值基数较高，且普通 SaaS 工作流面临 AI 重构压力。</td></tr>
+        <tr><td>7</td><td>Palantir / PLTR</td><td><span class="score">81</span></td><td>A-</td><td>复杂组织决策入口稀缺，AIP / Ontology 具备企业 agent 控制层属性。</td><td>估值较敏感，需验证非政府商业客户扩张与利润质量。</td></tr>
+        <tr><td>8</td><td>Tencent / 0700</td><td><span class="score">80</span></td><td>A-</td><td>微信、企业微信和腾讯文档构成国内最厚分发入口，若 AI agent 嵌入微信/企微，入口价值更高。</td><td>集团体量较大，AI 收入单列程度不足，股价弹性可能弱于入口厚度。</td></tr>
+        <tr><td>9</td><td>Meituan / 3690</td><td><span class="score">79</span></td><td>B+</td><td>本地生活交易执行入口稀缺，AI agent 最终若要订、买、送、履约，美团更接近 L5 商业结果。</td><td>AI 不是当前收入主线，竞争与补贴周期会影响估值弹性。</td></tr>
+        <tr><td>10</td><td>Kingsoft Office / 688111</td><td><span class="score">77</span></td><td>B+</td><td>WPS AI 是国内较纯的白领办公入口，公司体量相对小，AI 付费率和 ARPU 对估值弹性直接。</td><td>Kimi 等 AI-native 工作台可能前置化部分文档生成、资料整理和研究初稿入口，需验证 WPS 的存量入口和付费转化能否守住。</td></tr>
+        <tr><td>11</td><td>Reddit / RDDT</td><td><span class="score">76</span></td><td>B+</td><td>人类讨论数据独特，具备 AI 数据授权和搜索答案入口期权。</td><td>商业化持续性、平台治理和 AI 搜索流量影响仍需验证。</td></tr>
+      </tbody>
+    </table>
+    <p><strong>观察名单：</strong>GOOGL、MSFT、SPCX / SpaceX、ZS、FTNT、DDOG、OKTA、RDDT、BIDU / 9888、Moonshot / Kimi。其中 GOOGL 入口极厚但更适合作为底仓型锚点；MSFT 确定性最高但弹性被体量稀释；SPCX / SpaceX 的关键在于 Cursor / SpaceXAI 相关叙事是否已被市场计入；Zscaler 具备 zero trust / SASE 与 agent access 控制逻辑，但近期增长和销售执行分歧较大；FTNT 更偏 AI 数据中心 / OT 安全和安全硬件扩散，DDOG 偏可观测性与安全运营交叉，OKTA 偏身份安全；百度需要等待更强的入口数据和云业务验证；Kimi 暂不可直接配置，但对 WPS 等存量办公入口形成前置任务分流压力。</p>
+
+    <h3>10.4 估值交叉验证：DCF、卖方一致预期与 SOTP</h3>
+    <p>本节采用“估值方法适配 + 外部价格锚 + 核心敏感变量”的交叉验证框架。对于大型平台公司，重点采用 SOTP 与 FCF 折现；对于 SaaS 和网安公司，重点采用 EV/ARR、EV/FCF 与 Rule-of-X；对于数据和交易入口资产，重点采用分部收入、授权收入、广告变现和履约效率的情景估值。该框架的目的不是给出脱离模型假设的单点目标价，而是明确每类资产应由哪些变量驱动估值重估。</p>
+    <p><strong>海外核心资产：</strong></p>
+    <table>
+      <thead>
+        <tr><th>标的</th><th>当前参考价</th><th>估值框架</th><th>价格锚与校验口径</th><th>核心敏感变量</th><th>投资含义</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Meta / META</td><td>669.21 USD</td><td>SOTP + FCF：广告主业、AI 云/模型服务期权、Reality Labs 折价</td><td>以 FactSet/LSEG/Bloomberg 一致预期和广告业务 FCF 为基准，AI 模型与算力资产作为增量期权</td><td>广告收入增速、AI capex、推理成本、第三方云化收入</td><td>核心高弹性标的，目标价应由广告 FCF 与 AI 期权共同决定</td></tr>
+        <tr><td>Cloudflare / NET</td><td>268.40 USD</td><td>EV/Sales、EV/FCF 与 AI Gateway / Workers 期权估值</td><td>估值应与卖方一致预期、收入增速和 FCF 路径交叉验证，AI Gateway 收入披露是重估触发点</td><td>AI Gateway 用量、Workers AI 收入、企业客户渗透、FCF margin</td><td>核心高弹性标的，估值取决于 agent 网关能否从叙事进入收入确认</td></tr>
+        <tr><td>Palo Alto Networks / PANW</td><td>325.91 USD</td><td>安全平台 EV/ARR + FCF；CyberArk / AI security 并表后 SOTP</td><td>以 NGS ARR、平台化客户数、并购协同和 FCF margin 共同约束目标价</td><td>NGS ARR、平台化折扣、CyberArk 协同、FCF margin</td><td>核心网安标的，估值更偏确定性预算扩张而非纯主题弹性</td></tr>
+        <tr><td>CrowdStrike / CRWD</td><td>187.18 USD</td><td>EV/ARR + FCF；安全遥测数据与 AI SOC 溢价</td><td>估值应同时反映 Falcon Flex、AIDR 增速、事故后信任修复和平台化订阅恢复</td><td>净新增 ARR、客户留存、事故后信任修复、SOC 自动化率</td><td>核心网安标的，弹性来自安全遥测数据与 AI SOC 的真实反馈闭环</td></tr>
+        <tr><td>ServiceNow / NOW</td><td>107.71 USD</td><td>DCF + EV/FCF：订阅收入、cRPO、AI SKU 和 workflow moat</td><td>公开资料显示 BofA 目标价约 130 美元，市场报道的一致预期约 140 美元；公司已完成 5-for-1 拆股，价格序列应采用拆股后口径</td><td>cRPO、AI SKU 收入、订阅毛利率、FCF margin、AI 对 SaaS 工作流的替代风险</td><td>企业流程入口核心标的，目标价应围绕 130-140 美元外部锚进行情景校验</td></tr>
+        <tr><td>Palantir / PLTR</td><td>126.79 USD</td><td>Rule-of-X + EV/FCF；政府与商业业务分部倍数</td><td>公开卖方目标价分歧较大，近期可见 175、189.87、195 美元等较乐观目标，反映市场对增长持续性的高分歧</td><td>美国商业收入、政府合同、FCF margin、AIP 客户扩张</td><td>期权属性较强，估值应呈现分歧区间而非单一目标价</td></tr>
+      </tbody>
+    </table>
+    <p><strong>中国、锚点与观察资产：</strong></p>
+    <table>
+      <thead>
+        <tr><th>标的</th><th>当前参考价</th><th>估值框架</th><th>价格锚与校验口径</th><th>核心敏感变量</th><th>投资含义</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Alibaba / BABA / 9988</td><td>110.20 HKD</td><td>SOTP：电商、云、Qwen 开源生态、钉钉与本地生活投资</td><td>以港股一致预期、云业务利润率和分部利润假设为基准，美股软件倍数仅作方向参考</td><td>阿里云收入增速、云利润率、AI 调用、钉钉商业化</td><td>中国核心资产，目标价应按云智能与电商主业的 SOTP 修复空间计算</td></tr>
+        <tr><td>Tencent / 0700</td><td>460.20 HKD</td><td>SOTP：游戏、广告、金融科技、云、微信/企微 AI 入口</td><td>以港股一致预期与分部利润为基准，AI 入口价值主要体现为广告和企业服务重估</td><td>视频号广告、微信 AI 渗透、企微/腾讯文档、云收入</td><td>稳健锚点，AI 入口价值应嵌入集团 SOTP 而非单独估值</td></tr>
+        <tr><td>Meituan / 3690</td><td>78.70 HKD</td><td>SOTP：外卖、到店、酒店旅游、即时零售与 AI 履约效率</td><td>以港股一致预期、分部利润和竞争补贴假设为基准，AI 价值体现在交易转化和履约效率</td><td>订单增速、UE、补贴强度、AI 转化与履约效率</td><td>交易执行入口期权，估值首先受本地生活利润周期约束</td></tr>
+        <tr><td>Kingsoft Office / 688111</td><td>233.76 CNY</td><td>DCF + PE/PS：WPS 订阅、机构授权、AI 付费率</td><td>以 A 股一致预期、AI 付费率和会员 ARPU 为基准，Kimi/豆包等前置入口构成估值折价变量</td><td>AI 付费率、会员 ARPU、政企续费、毛利率</td><td>垂直办公入口观察标的，目标价需要显式反映 AI-native 工作台分流风险</td></tr>
+        <tr><td>Reddit / RDDT</td><td>195.34 USD</td><td>数据授权 + 广告平台 DCF；社区数据期权</td><td>以数据授权收入、广告变现和 AI 搜索流量影响为主要校验变量</td><td>DAU、广告 ARPU、授权收入、内容治理</td><td>数据入口观察标的，重估前提是授权收入和广告效率可持续</td></tr>
+        <tr><td>Alphabet / GOOGL</td><td>357.18 USD</td><td>SOTP + FCF：搜索、YouTube、Cloud、Android、Gemini</td><td>以搜索 FCF、Cloud AI 收入和 YouTube 变现为基准，同时评估 AI Mode 对搜索货币化的影响</td><td>搜索点击变现、Cloud AI 收入、YouTube、TPU/算力成本</td><td>稳健锚点，确定性高于弹性，适合作为框架校准资产</td></tr>
+        <tr><td>Microsoft / MSFT</td><td>385.10 USD</td><td>SOTP + FCF：Azure、Office/Copilot、GitHub、LinkedIn、OpenAI 权益</td><td>以 Azure AI 增速、Copilot 付费渗透和集团 FCF 为基准；集团体量会稀释单一入口资产弹性</td><td>Azure AI 增速、Copilot 付费、GitHub 变现、AI capex</td><td>稳健锚点，目标价应由集团 FCF 与 Azure/Copilot 渗透率驱动</td></tr>
+      </tbody>
+    </table>
+    <p>综上，本报告采用“入口评分 + 估值方法适配 + 价格锚校验”的投资排序框架。完整可审计模型应同时展示当前价、卖方一致目标价、DCF 中枢、SOTP 中枢、最高敏感变量与估值分歧；在数据披露不足的标的上，本报告优先给出研究优先级和验证变量，而不以单点价格替代估值模型。</p>
+
+    <h3>10.5 6-12 个月研究型目标区间</h3>
+    <p>下表采用三档情景区间，而非单点目标价。保守情景对应核心业务稳态估值与 AI 期权折价；基准情景对应现有业务维持增长、AI 入口开始贡献收入或估值倍数；乐观情景对应连续两个季度验证 AI 收入、agent 调用量、安全预算或分部利润率改善。该区间用于组合排序和风险收益比较，不等同于卖方一致预期，也不构成短期交易信号。</p>
+    <table>
+      <thead>
+        <tr><th>标的</th><th>当前参考价</th><th>保守区间</th><th>基准区间</th><th>乐观区间</th><th>估值口径与关键假设</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Meta / META</td><td>669.21 USD</td><td>720-780</td><td>800-860</td><td>900-980</td><td>广告 FCF 为底，AI 模型、算力与广告生成效率作为增量期权</td></tr>
+        <tr><td>Cloudflare / NET</td><td>268.40 USD</td><td>220-260</td><td>290-340</td><td>360-420</td><td>EV/Sales 与 EV/FCF 交叉验证，关键在 AI Gateway / Workers 能否进入收入确认</td></tr>
+        <tr><td>Palo Alto Networks / PANW</td><td>325.91 USD</td><td>340-370</td><td>390-420</td><td>440-480</td><td>NGS ARR、平台化客户与 CyberArk 协同支撑安全平台估值</td></tr>
+        <tr><td>CrowdStrike / CRWD</td><td>187.18 USD</td><td>185-210</td><td>225-250</td><td>265-300</td><td>ARR 恢复、Falcon Flex、AI SOC 与安全遥测数据决定倍数修复</td></tr>
+        <tr><td>Alibaba / BABA / 9988</td><td>110.20 HKD</td><td>115-125</td><td>135-150</td><td>155-175</td><td>电商利润底 + 阿里云利润率修复 + Qwen / 钉钉 SOTP 期权</td></tr>
+        <tr><td>ServiceNow / NOW</td><td>107.71 USD</td><td>115-125</td><td>130-145</td><td>150-170</td><td>cRPO、AI SKU 渗透、FCF margin 与 workflow moat 共同定价</td></tr>
+        <tr><td>Palantir / PLTR</td><td>126.79 USD</td><td>110-130</td><td>145-170</td><td>185-210</td><td>Rule-of-X 与 EV/FCF；分歧主要来自美国商业收入与 AIP 扩张速度</td></tr>
+        <tr><td>Tencent / 0700</td><td>460.20 HKD</td><td>480-510</td><td>540-580</td><td>610-660</td><td>游戏、广告、金融科技与微信 / 企微 AI 入口的 SOTP 重估</td></tr>
+        <tr><td>Meituan / 3690</td><td>78.70 HKD</td><td>80-90</td><td>95-105</td><td>115-130</td><td>分部利润与竞争补贴为底，AI 价值体现在交易转化和履约效率</td></tr>
+        <tr><td>Kingsoft Office / 688111</td><td>233.76 CNY</td><td>220-245</td><td>270-300</td><td>320-360</td><td>WPS AI 付费率与会员 ARPU 为核心，上方空间需扣除 AI-native 工作台分流风险</td></tr>
+        <tr><td>Reddit / RDDT</td><td>195.34 USD</td><td>180-200</td><td>220-245</td><td>265-300</td><td>广告变现 + 数据授权收入；关键在 AI 搜索流量影响和授权收入持续性</td></tr>
+        <tr><td>Alphabet / GOOGL</td><td>357.18 USD</td><td>365-390</td><td>420-450</td><td>475-520</td><td>搜索 FCF、YouTube 与 Cloud AI 收入支撑，AI Mode 影响搜索货币化为核心变量</td></tr>
+        <tr><td>Microsoft / MSFT</td><td>385.10 USD</td><td>400-425</td><td>450-480</td><td>510-560</td><td>Azure AI、Copilot 渗透、GitHub 与 OpenAI 权益共同驱动集团 FCF</td></tr>
+      </tbody>
+    </table>
+
+    <h3>10.6 配置建议</h3>
+    <p>6-12 个月研究型组合可分为三档：</p>
+    <table>
+      <thead>
+        <tr><th>档位</th><th>标的</th><th>配置含义</th><th>核心验证</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>高弹性核心</td><td>META、NET、PANW、CRWD、BABA / 9988、NOW</td><td>入口重估弹性与估值可验证性兼具，目标价应通过 DCF / SOTP / 卖方一致预期交叉确认</td><td>AI 收入披露、agent 网关用量、安全预算、AI 云增长、AI SKU 渗透</td></tr>
+        <tr><td>稳健锚点</td><td>GOOGL、MSFT、腾讯 / 0700</td><td>入口厚度和确定性强，但集团体量会稀释弹性</td><td>搜索/广告 monetization、Copilot / GitHub 付费、微信/企微 AI 渗透</td></tr>
+        <tr><td>期权与观察</td><td>PLTR、RDDT、美团 / 3690、金山办公 / 688111</td><td>入口稀缺或垂直纯度高，但估值、商业化或竞争分流仍需验证</td><td>商业客户扩张、数据授权收入、AI 订单转化、WPS AI 付费率</td></tr>
+      </tbody>
+    </table>
+    <p>按入口评分与估值可验证性综合判断，优先研究顺序仍集中在 <strong>META、NET、PANW、CRWD、BABA / 9988、NOW</strong>。但这不是单纯“空间排序”：PLTR 和 RDDT 的入口叙事强，当前估值对兑现节奏更敏感；GOOGL 和 MSFT 的确定性更高，但弹性被体量稀释；金山办公的 AI 纯度较高，但需要持续观察 Kimi、豆包等 AI-native 工作台对前置办公任务的分流。</p>
+    <p>最终建议是采用“核心 + 锚点 + 观察”的组合框架：核心仓重点跟踪 META、NET、PANW、CRWD、BABA / 9988、NOW；锚点仓用 GOOGL、MSFT、腾讯降低框架误判风险；观察仓跟踪 PLTR、RDDT、美团、金山办公等弹性资产。若 agent 调用量、AI 安全预算、企业流程自动化率和 AI SKU 收入连续两个季度低于预期，应下调入口重估权重；若上述指标同时改善，则本框架的 SOTP 估值贡献有继续上修空间。</p>
+
+    <h2>十一、参考资料</h2>
     <ul class="source-list">
       <li>Anthropic Claude Code 文档：<a href="https://code.claude.com/docs/en/overview">https://code.claude.com/docs/en/overview</a></li>
       <li>GitHub Copilot cloud agent 文档：<a href="https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent">https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent</a></li>
@@ -649,6 +723,8 @@
       <li>Cloudflare AI Gateway 文档：<a href="https://developers.cloudflare.com/ai-gateway/">https://developers.cloudflare.com/ai-gateway/</a></li>
       <li>Hugging Face Inference Providers 文档：<a href="https://huggingface.co/docs/inference-providers/index">https://huggingface.co/docs/inference-providers/index</a></li>
       <li>Axios 关于 Hugging Face 2023 年 4.5 亿美元估值融资的报道：<a href="https://www.axios.com/2023/08/24/hugging-face-ai-salesforce-billion">https://www.axios.com/2023/08/24/hugging-face-ai-salesforce-billion</a></li>
+      <li>Nasdaq 美股行情快照接口：<a href="https://api.nasdaq.com/">https://api.nasdaq.com/</a></li>
+      <li>新浪财经行情接口：<a href="https://hq.sinajs.cn/">https://hq.sinajs.cn/</a></li>
       <li>AP 关于 SpaceX 收购 Cursor 的报道：<a href="https://apnews.com/article/a5c60fcbaaca262cf107d30f1de899ef">https://apnews.com/article/a5c60fcbaaca262cf107d30f1de899ef</a></li>
       <li>Axios 关于 SpaceXAI / Grok 4.5 与 Cursor 的报道：<a href="https://www.axios.com/2026/07/08/spacexai-grok-new-model">https://www.axios.com/2026/07/08/spacexai-grok-new-model</a></li>
       <li>Investor's Business Daily 关于 SpaceXAI / Grok 4.5 的报道：<a href="https://www.investors.com/news/technology/spacex-stock-spcx-grok-ai-models-openai-anthropic-google/">https://www.investors.com/news/technology/spacex-stock-spcx-grok-ai-models-openai-anthropic-google/</a></li>
@@ -658,6 +734,13 @@
       <li>AP 关于 Reddit 用户增长、盈利与数据授权的报道：<a href="https://apnews.com/article/5a9e32159a947094ae801ab107c950da">https://apnews.com/article/5a9e32159a947094ae801ab107c950da</a></li>
       <li>Business Insider 关于 Palantir AIP 与组织决策入口的报道：<a href="https://www.businessinsider.com/palantir-calls-llms-a-jagged-intelligence-outlines-ai-race-plan-2025-8">https://www.businessinsider.com/palantir-calls-llms-a-jagged-intelligence-outlines-ai-race-plan-2025-8</a></li>
       <li>MarketWatch 关于软件股分化与 AI scaffolding / security 跑赢的报道：<a href="https://www.marketwatch.com/story/software-stocks-have-rarely-seen-such-divergent-performances-heres-how-to-pick-winners-ab154f7d">https://www.marketwatch.com/story/software-stocks-have-rarely-seen-such-divergent-performances-heres-how-to-pick-winners-ab154f7d</a></li>
+      <li>MarketWatch 关于 ServiceNow 2026 年 7 月 10 日收盘价的报道：<a href="https://www.marketwatch.com/data-news/servicenow-inc-stock-underperforms-friday-when-compared-to-competitors-f50aefb9-34434440751c">https://www.marketwatch.com/data-news/servicenow-inc-stock-underperforms-friday-when-compared-to-competitors-f50aefb9-34434440751c</a></li>
+      <li>Investopedia 关于 ServiceNow 目标价与 AI workflow 逻辑的报道：<a href="https://www.investopedia.com/servicenow-stock-has-been-battered-by-ai-disruption-worries-these-experts-think-ai-will-actually-boost-its-business-11977308">https://www.investopedia.com/servicenow-stock-has-been-battered-by-ai-disruption-worries-these-experts-think-ai-will-actually-boost-its-business-11977308</a></li>
+      <li>Barron's 关于 BofA 重启覆盖 ServiceNow 并给出 130 美元目标价的报道：<a href="https://www.barrons.com/articles/servicenow-salesforce-stock-price-ai-7b109396">https://www.barrons.com/articles/servicenow-salesforce-stock-price-ai-7b109396</a></li>
+      <li>MarketWatch 关于 Palantir D.A. Davidson 上调评级和 175 美元目标价的报道：<a href="https://www.marketwatch.com/story/palantirs-stock-bounces-back-as-analyst-cheers-companys-unique-ai-advantage-2f28698d">https://www.marketwatch.com/story/palantirs-stock-bounces-back-as-analyst-cheers-companys-unique-ai-advantage-2f28698d</a></li>
+      <li>MarketWatch 关于 Palantir Mizuho 195 美元目标价的报道：<a href="https://www.marketwatch.com/story/palantirs-stock-is-winning-over-wall-street-another-analyst-just-turned-bullish-4fc7c071">https://www.marketwatch.com/story/palantirs-stock-is-winning-over-wall-street-another-analyst-just-turned-bullish-4fc7c071</a></li>
+      <li>Barron's 关于 Palantir Wolfe Research 189.87 美元目标价的报道：<a href="https://www.barrons.com/articles/palantir-stock-nears-new-low-7ba7feab">https://www.barrons.com/articles/palantir-stock-nears-new-low-7ba7feab</a></li>
+      <li>Investopedia 关于 Microsoft 卖方平均目标价和财报波动预期的报道：<a href="https://www.investopedia.com/here-is-how-much-microsoft-stock-is-expected-to-move-after-earnings-msft-q3-fy2026-11956168">https://www.investopedia.com/here-is-how-much-microsoft-stock-is-expected-to-move-after-earnings-msft-q3-fy2026-11956168</a></li>
       <li>WSJ 关于 AI agent 安全风险和企业防护不足的报道：<a href="https://www.wsj.com/tech/ai/what-happens-when-ai-agents-go-rogue-b233a48b">https://www.wsj.com/tech/ai/what-happens-when-ai-agents-go-rogue-b233a48b</a></li>
       <li>WSJ 关于 Palo Alto Networks 2026 财季增长和 AI 驱动安全需求的报道：<a href="https://www.wsj.com/business/earnings/palo-alto-networks-revenue-rises-as-customers-beef-up-cyber-defenses-d80de2d7">https://www.wsj.com/business/earnings/palo-alto-networks-revenue-rises-as-customers-beef-up-cyber-defenses-d80de2d7</a></li>
       <li>WSJ 关于 CrowdStrike FY2027 Q1 ARR 和收入增长的报道：<a href="https://www.wsj.com/business/earnings/crowdstrike-lifts-outlook-after-swinging-to-first-quarter-profit-1a0b5a57">https://www.wsj.com/business/earnings/crowdstrike-lifts-outlook-after-swinging-to-first-quarter-profit-1a0b5a57</a></li>
@@ -682,7 +765,6 @@
       <li>Claude Code 架构研究：<a href="https://arxiv.org/abs/2604.14228">https://arxiv.org/abs/2604.14228</a></li>
       <li>Microsoft 组织级 AI coding agent rollout 研究：<a href="https://arxiv.org/abs/2607.01418">https://arxiv.org/abs/2607.01418</a></li>
       <li>GLM-5 技术报告：<a href="https://arxiv.org/abs/2602.15763">https://arxiv.org/abs/2602.15763</a></li>
-      <li>腾讯 vs 阿里横纵分析本地产物：outputs/hv_analysis/tencent_alibaba_hv_analysis_20260708.md</li>
     </ul>
 
     <p class="footer-note">免责声明：本报告仅用于研究讨论，不构成任何证券买卖建议。涉及未上市公司、媒体报道及部分产品数据的内容，应以官方公告、财报、投资者交流及可复核数据为准。</p>
