@@ -434,7 +434,23 @@
     </table>
     <p>结论上，算力与电力容量是 AI 时代的门票变量，而不是入口变量。GW 决定企业能否持续训练、推理、降价和承接大规模需求；但真正影响估值弹性的仍是用户任务、反馈闭环、分发控制和收入归属。本文保留“门票 + 入口”的双层框架：Meta、OpenAI / Stargate、AWS、Google、Microsoft 更偏算力门票领先者；ServiceNow、Palantir、Reddit、金山办公等更偏入口资产，不能简单用 GW 高低衡量。</p>
 
-    <h3>2.3 反馈价值分层</h3>
+    <h3>2.3 入口扩散节奏：不是一张票，而是一道波</h3>
+    <p>参考“Cowork 扩散是一道波”的产业链逻辑，AI 入口也不应被理解为某一个产品或某一张股票，而应被理解为瓶颈逐步迁移后的价值捕获过程。早期市场往往先重估算力、内存、网络和电力等门票变量；当 agent 调用量、工具权限和企业部署开始放大后，才会逐步转向网关、安全、身份、日志、工作流和数据反馈入口；最终真正沉淀超额价值的，是能把任务结果、用户分发和商业闭环留在自己体系内的公司。</p>
+    <p>本文仍剔除硬件与算力供给层，不把 HBM、GPU、ASIC、电力和散热资产纳入核心股票池；但应把这些瓶颈作为入口兑现节奏的领先指标。如果基础设施扩张停滞，软件入口的商业化节奏也会推迟；如果 agent 负载快速扩散，则机器流量治理、agent security、企业流程和数据反馈入口会依次被重新定价。</p>
+    <table>
+      <thead>
+        <tr><th>阶段</th><th>市场先重估的层级</th><th>对 AI 入口框架的含义</th><th>对核心组合的影响</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Y1：门票扩张期</td><td>算力、电力、内存、网络、云资本开支</td><td>入口仍处于验证期，硬件和云资本开支先反映需求强度</td><td>不把硬件纳入核心池，但用 capex、GW、推理成本和模型降价验证 META、GOOGL、MSFT 等门票能力</td></tr>
+        <tr><td>Y2：agent scale-out</td><td>机器流量、API 网关、身份权限、安全审计、可观测性</td><td>agent 从人机对话扩散到工具调用和系统执行，控制面价值上升</td><td>强化 NET、PANW、CRWD、ZS、DDOG、OKTA 等网关与安全预算方向</td></tr>
+        <tr><td>Y3：工作流迁移</td><td>ITSM、CRM、客服、研发协作、组织决策、办公流程</td><td>企业开始重构流程，普通 SaaS 被重估或被压缩，能控制流程和数据闭环者受益</td><td>NOW、PLTR、MSFT、Salesforce、Atlassian、金山办公进入更严格的财务验证期</td></tr>
+        <tr><td>Y5：价值捕获期</td><td>数据反馈、商业结果、分发控制、行业 workflow</td><td>L4-L5 反馈成为壁垒，估值从“AI 功能”转向“结果数据和收入归属”</td><td>META、腾讯、美团、阿里、ServiceNow、Palantir、Reddit 等入口资产需要按 SOTP 重新拆分</td></tr>
+      </tbody>
+    </table>
+    <p>因此，AI 入口的投资结论不是“买所有 AI 软件”，而是按阶段识别瓶颈迁移：早期看 agent 网关和安全预算的重新定价，中期看企业流程和组织决策入口，后期看谁真正拿到任务结果、商业转化和数据反馈。</p>
+
+    <h3>2.4 反馈价值分层</h3>
     <table>
       <thead>
         <tr><th>层级</th><th>反馈类型</th><th>典型数据</th><th>投资价值</th></tr>
@@ -462,12 +478,13 @@
       </thead>
       <tbody>
         <tr><td>闭源模型路径</td><td>OpenAI、Anthropic、Google</td><td>产品反馈可短链路回流至模型评测、RL、工具调用策略与下一代模型</td><td>活跃用户、任务成功率、企业付费、模型能力迭代</td></tr>
-        <tr><td>开源/开放模型路径</td><td>Qwen、GLM、DeepSeek、Hugging Face、多模型 IDE</td><td>通过模型路由、工具链、私有评测集和行业 workflow 形成产品层复利</td><td>开发者生态、企业部署、模型调用、插件与工具链</td></tr>
+        <tr><td>开源/开放模型路径</td><td>Qwen、GLM、DeepSeek、Hugging Face（未上市）、多模型 IDE</td><td>通过模型路由、工具链、私有评测集和行业 workflow 形成产品层复利</td><td>开发者生态、企业部署、模型调用、插件与工具链</td></tr>
         <tr><td>云厂路径</td><td>Microsoft、Google Cloud、AWS、阿里云、腾讯云、Cloudflare</td><td>通过账号、权限、API、日志、网关、云消费与企业合约形成分发和商业闭环</td><td>AI 云收入、客户数、算力与 API 消费、NRR</td></tr>
         <tr><td>企业软件路径</td><td>ServiceNow、Salesforce、Atlassian、金山办公</td><td>嵌入既有业务流程，直接连接工单、审批、销售、客服和文档协作</td><td>AI SKU 渗透、ARPU、续费率、流程自动化率</td></tr>
         <tr><td>终端 / OS 路径</td><td>豆包手机助手、Gemini on Android、Apple Intelligence、Samsung Galaxy AI</td><td>通过系统级权限、语音唤醒、屏幕理解和跨 App 操作形成真实任务入口</td><td>合作机型、激活量、跨 App 成功率、隐私合规、支付/下单等 L5 任务</td></tr>
       </tbody>
     </table>
+    <p>Hugging Face 目前仍是未上市公司，不是可直接配置的二级市场标的。它更适合作为开源模型、数据集、Spaces、Inference Providers 和开发者工具链的生态锚点：若 Hugging Face 的模型托管、企业 Hub、推理路由和数据集分发继续扩张，说明开源/开放模型路径仍具备较强开发者入口价值；但其收益需要通过云厂、芯片厂、模型公司或下游工具链间接体现。</p>
 
     <h3>3.4 AI 终端入口观察</h3>
     <p>入口并不只包括软件 App 或 SaaS 工作流，也可能出现在 OS 与终端层。豆包手机助手与中兴/努比亚合作的工程机案例表明，大模型厂商正在尝试从“聊天机器人”进入“系统级 agent”：通过语音唤醒、屏幕理解、跨 App 跳转、比价下单、文件下载、通话与录音等功能，争取更接近真实任务执行的数据反馈。</p>
@@ -481,6 +498,7 @@
       </thead>
       <tbody>
         <tr><td>第一梯队：基础模型与开发者入口</td><td>Anthropic、OpenAI、GitHub / Microsoft、Cursor / SpaceXAI</td><td>模型能力强，开发者与 agent 入口深，反馈质量高</td><td>Anthropic、OpenAI 未上市；Microsoft 确定性高但弹性受体量稀释；Cursor 需并入 SpaceX SOTP</td></tr>
+        <tr><td>未上市生态锚点：开源与模型分发</td><td>Hugging Face</td><td>开源模型、数据集、Spaces、Inference Providers 和企业 Hub 的开发者入口</td><td>未上市，不构成可直接配置标的；适合作为开源生态强弱和云厂推理分发的观察变量</td></tr>
         <tr><td>第二梯队：AI Security / Agent Security</td><td>Palo Alto Networks、CrowdStrike、Zscaler、Fortinet、Okta、CyberArk / PANW、Datadog、Cloudflare</td><td>控制身份、端点、网络、云安全、SASE、AI 数据中心安全、agent 权限与安全遥测</td><td>AI agent 扩散会扩大攻击面，网安预算刚性高于普通 SaaS；PANW/CRWD 更适合作为核心，FTNT/DDOG/OKTA 更适合作为板块扩散样本，ZS 执行分歧更大</td></tr>
         <tr><td>第三梯队：消费分发与数据入口</td><td>Meta、Alphabet / Google、Reddit</td><td>控制社交、广告、搜索、YouTube、Android、人类讨论数据</td><td>Meta 弹性更高；Google 更适合作为底仓型锚点；Reddit 数据独特但商业化需验证</td></tr>
         <tr><td>第四梯队：机器 agent 与云网关</td><td>Cloudflare、Google Cloud、AWS、Microsoft Azure</td><td>控制 API、网关、日志、权限、云消费与机器流量</td><td>Cloudflare 同时兼具网关与安全属性，对 agent 网关叙事弹性较高；超大云厂确定性高但估值传导分散</td></tr>
@@ -489,7 +507,7 @@
       </tbody>
     </table>
 
-    <p>海外可投资标的中，Microsoft 具备最高确定性，但入口资产对集团市值的弹性有限；Cloudflare 和大型网安龙头的绝对入口规模小于 Microsoft，但一旦 agent 网关、agent access control 或安全运营自动化被验证，对估值叙事的边际影响更直接。普通 SaaS 可能面临 seat 缩减和工作流重构压力，而网安预算更接近风险预算，安全边际相对更高。网安方向内部可拆为三条验证线：AI 数据中心 / OT 安全，代表公司为 FTNT；agent 身份治理和平台化安全，代表公司为 PANW / OKTA / CyberArk；AI 监测、SOC 自动化和安全遥测，代表公司为 CRWD / DDOG。SpaceX / SPCX 的关键在于 Cursor、SpaceXAI 与 Grok 相关叙事是否已经被市场充分计入。</p>
+    <p>海外可投资标的中，Microsoft 具备最高确定性，但入口资产对集团市值的弹性有限；Cloudflare 和大型网安龙头的绝对入口规模小于 Microsoft，但一旦 agent 网关、agent access control 或安全运营自动化被验证，对估值叙事的边际影响更直接。普通 SaaS 可能面临 seat 缩减和工作流重构压力，而网安预算更接近风险预算，安全边际相对更高。网安方向内部可拆为三条验证线：AI 数据中心 / OT 安全，代表公司为 FTNT；agent 身份治理和平台化安全，代表公司为 PANW / OKTA / CyberArk；AI 监测、SOC 自动化和安全遥测，代表公司为 CRWD / DDOG。Hugging Face 未上市，但作为开源模型分发和开发者工具链锚点，应持续观察其对云推理、模型托管和企业私有 Hub 的牵引。SpaceX / SPCX 的关键在于 Cursor、SpaceXAI 与 Grok 相关叙事是否已经被市场充分计入。</p>
 
     <h2>五、中国公司梯度</h2>
     <table>
@@ -543,6 +561,7 @@
         <tr><td>Microsoft</td><td>GitHub、Copilot、Office、Azure</td><td>确定性强，但集团体量稀释开发者入口弹性</td><td>Copilot ARPU、GitHub 付费渗透、Azure AI 消费</td></tr>
         <tr><td>Alphabet / Google</td><td>Search、YouTube、Android、Gemini、Google Cloud</td><td>入口厚度全球领先，但 AI 搜索自我颠覆和集团体量压低短期弹性</td><td>AI Mode 使用、Search monetization、YouTube/Android 分发、Cloud AI 收入</td></tr>
         <tr><td>SpaceX / SPCX</td><td>Cursor、SpaceXAI、Grok、工程 agent</td><td>Cursor 若并入 SpaceXAI，应评估其对 AI 业务估值的增量贡献及是否已被市场计入</td><td>Cursor 留存、Grok 分发、AI 收入拆分、SPCX 估值隐含假设</td></tr>
+        <tr><td>Hugging Face</td><td>Hub、Transformers、Datasets、Spaces、Inference Providers、企业私有 Hub</td><td>未上市，不能直接配置；但它是开源模型分发和开发者工具链的重要锚点，可用于判断开放模型路径对云厂、芯片厂和下游工具的牵引力</td><td>模型数量、下载量、企业 Hub 客户、推理调用、数据集和 Spaces 活跃度</td></tr>
         <tr><td>Cloudflare</td><td>AI Gateway、Workers、MCP、边缘网络</td><td>若成为 agent 流量控制面，估值叙事可能从 CDN/安全扩展至 AI 基础设施入口</td><td>AI Gateway 客户数、Workers AI 用量、企业账单贡献</td></tr>
         <tr><td>Palo Alto Networks</td><td>Prisma、Cortex、CyberArk、云安全、身份安全、agent security</td><td>平台化网安龙头，AI agent 扩散带来的身份、权限、云安全和数据访问风险可转化为更刚性的安全预算</td><td>NGS ARR、平台化客户数、CyberArk 整合、AI agent security 产品采用</td></tr>
         <tr><td>CrowdStrike</td><td>Falcon、Endpoint、SOC、threat graph、Charlotte AI、AIDR、Falcon Flex</td><td>端点与安全运营数据密度高，AI 防御可直接连接告警、拦截、响应和恢复等真实结果反馈；平台化订阅可承接企业集中安全预算</td><td>ARR、净新增 ARR、Falcon Flex ARR、AIDR 增速、SOC 自动化率、客户留存、事故后信任修复</td></tr>
@@ -629,6 +648,7 @@
       <li>OpenAI Codex / Agents 文档：<a href="https://learn.chatgpt.com/docs">https://learn.chatgpt.com/docs</a></li>
       <li>Cloudflare AI Gateway 文档：<a href="https://developers.cloudflare.com/ai-gateway/">https://developers.cloudflare.com/ai-gateway/</a></li>
       <li>Hugging Face Inference Providers 文档：<a href="https://huggingface.co/docs/inference-providers/index">https://huggingface.co/docs/inference-providers/index</a></li>
+      <li>Axios 关于 Hugging Face 2023 年 4.5 亿美元估值融资的报道：<a href="https://www.axios.com/2023/08/24/hugging-face-ai-salesforce-billion">https://www.axios.com/2023/08/24/hugging-face-ai-salesforce-billion</a></li>
       <li>AP 关于 SpaceX 收购 Cursor 的报道：<a href="https://apnews.com/article/a5c60fcbaaca262cf107d30f1de899ef">https://apnews.com/article/a5c60fcbaaca262cf107d30f1de899ef</a></li>
       <li>Axios 关于 SpaceXAI / Grok 4.5 与 Cursor 的报道：<a href="https://www.axios.com/2026/07/08/spacexai-grok-new-model">https://www.axios.com/2026/07/08/spacexai-grok-new-model</a></li>
       <li>Investor's Business Daily 关于 SpaceXAI / Grok 4.5 的报道：<a href="https://www.investors.com/news/technology/spacex-stock-spcx-grok-ai-models-openai-anthropic-google/">https://www.investors.com/news/technology/spacex-stock-spcx-grok-ai-models-openai-anthropic-google/</a></li>
