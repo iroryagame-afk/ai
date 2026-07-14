@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI基础设施五大赢家：瓶颈迁移、产业链纠偏与核心八股三档估值。">
+  <title>AI基础设施五大赢家｜csnpk 行业研究</title>
+  <style>
+    :root{--paper:#F3F7F9;--surface:#fff;--ink:#102B3A;--muted:#5D7280;--line:#D3E0E6;--blue:#0A4267;--blue2:#176B8E;--cyan:#0D8991;--orange:#E8762B;--green:#087A57;--red:#B23A48;}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75}
+    a{color:var(--blue2);text-decoration-thickness:1px;text-underline-offset:3px} a:focus-visible,button:focus-visible{outline:3px solid #E8A66C;outline-offset:3px}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(243,247,249,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .topbar-inner{max-width:1220px;margin:auto;min-height:54px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:800;letter-spacing:.08em;color:var(--blue);text-decoration:none} .meta{font-size:13px;color:var(--muted)}
+    .hero{background:var(--blue);color:white;border-bottom:8px solid var(--orange)}
+    .hero-inner{max-width:1220px;margin:auto;padding:68px 24px 58px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(290px,.55fr);gap:48px;align-items:end}
+    .eyebrow{color:#9FD8E1;font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase} h1{font-size:clamp(38px,6vw,76px);line-height:1.05;margin:14px 0 24px;letter-spacing:-.045em;max-width:860px}
+    .hero-lead{font-size:clamp(18px,2vw,24px);line-height:1.55;max-width:820px;color:#E3F0F4}
+    .hero-panel{border:1px solid #4E7891;padding:24px;background:#103B59} .hero-panel small{color:#A9C8D6} .hero-panel strong{display:block;font-size:32px;margin:6px 0 18px;color:#FFD1AE} .hero-panel p{margin:8px 0;color:#D7E8EE}
+    .decision{max-width:1220px;margin:-1px auto 0;padding:28px 24px 12px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .decision div{background:var(--surface);border-top:3px solid var(--cyan);padding:18px;min-height:112px} .decision b{display:block;font-size:14px;color:var(--muted);margin-bottom:6px} .decision span{font-size:20px;font-weight:800}
+    .bottleneck{max-width:1220px;margin:18px auto 36px;padding:0 24px} .section-kicker{font-size:12px;font-weight:800;letter-spacing:.15em;color:var(--orange)}
+    .bottleneck h2{font-size:30px;margin:6px 0 20px} .stages{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);background:#fff}
+    .stage{position:relative;padding:20px;border-right:1px solid var(--line);min-height:150px} .stage:last-child{border-right:0} .stage i{font-style:normal;color:var(--orange);font-weight:900} .stage b{display:block;font-size:18px;margin:5px 0} .stage small{color:var(--muted)}
+    .valuation-shell{max-width:1220px;margin:0 auto 40px;padding:0 24px} .valuation-shell>h2{font-size:30px;margin:0 0 6px} .valuation-shell>p{color:var(--muted);margin:0 0 18px}
+    .valuation-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px} .valuation-card{background:#fff;border:1px solid var(--line);padding:16px;position:relative} .valuation-card div{display:flex;align-items:center;justify-content:space-between;gap:10px} .valuation-card strong{font-size:22px;color:var(--blue)} .valuation-card span{font-size:12px;color:var(--muted)} .valuation-card p{margin:8px 0;font-size:13px;color:var(--muted)} .valuation-card b{color:var(--ink)} .valuation-card em{font-style:normal;font-size:24px;font-weight:900;color:var(--green)} .valuation-card.negative em{color:var(--red)}
+    .layout{max-width:1220px;margin:auto;padding:0 24px 72px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px;align-items:start}
+    aside{position:sticky;top:78px;max-height:calc(100vh - 100px);overflow:auto;border-top:4px solid var(--orange);background:#fff;padding:16px} aside strong{display:block;margin-bottom:10px} aside a{display:block;text-decoration:none;padding:5px 0;font-size:13px;color:var(--muted)} aside a:hover{color:var(--blue)} .toc-l3{padding-left:12px!important;font-size:12px!important}
+    .report-body{min-width:0;background:#fff;border:1px solid var(--line);padding:clamp(24px,4vw,56px)} .report-body>h1{display:none} .report-body h2{font-size:30px;line-height:1.25;margin:64px 0 18px;padding-top:10px;border-top:1px solid var(--line)} .report-body h2:first-of-type{margin-top:0} .report-body h3{font-size:22px;margin:36px 0 12px;color:var(--blue)} .report-body h4{font-size:17px} .report-body p,.report-body li{font-size:15.5px} .report-body blockquote{margin:20px 0;padding:15px 20px;background:#ECF4F7;border-left:4px solid var(--cyan)} .report-body blockquote p{margin:0} .report-body code{background:#EDF2F4;padding:2px 5px;border-radius:3px;font-size:.92em} .report-body strong{color:#092F49}
+    .table-wrap{width:100%;overflow:auto;margin:20px 0;border:1px solid var(--line)} table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.45} th,td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left} th{background:#EAF2F6;color:var(--blue);font-weight:800;position:sticky;top:0} tbody tr:nth-child(even){background:#F8FAFB} tbody tr:hover{background:#EEF6F7}
+    .footer{background:#092F49;color:#D3E3EA;padding:34px 24px} .footer-inner{max-width:1220px;margin:auto;display:flex;justify-content:space-between;gap:30px} .footer b{color:white} .footer small{max-width:700px}
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.decision{grid-template-columns:repeat(2,1fr)}.stages{grid-template-columns:1fr 1fr}.stage{border-bottom:1px solid var(--line)}.valuation-grid{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:1fr}aside{display:none}}
+    @media(max-width:560px){.topbar-inner{padding:0 16px}.meta{display:none}.hero-inner{padding:46px 16px 42px;gap:24px}h1{font-size:42px}.decision{padding:20px 16px;grid-template-columns:1fr 1fr}.decision div{padding:13px;min-height:98px}.decision span{font-size:16px}.bottleneck,.valuation-shell{padding:0 16px}.stages{grid-template-columns:1fr}.stage{border-right:0}.valuation-grid{grid-template-columns:1fr 1fr}.valuation-card{padding:12px}.valuation-card div{display:block}.valuation-card span{display:block}.layout{padding:0 12px 48px}.report-body{padding:22px 16px}.report-body h2{font-size:25px}.report-body h3{font-size:20px}.report-body p,.report-body li{font-size:15px}.table-wrap{max-width:100%}table{min-width:680px}.footer-inner{display:block}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="topbar-inner"><a class="brand" href="../nav/">CSNPK · RESEARCH</a><span class="meta">2026-07-14 发布｜行情基准 2026-07-10 收盘</span></div></header>
+  <section class="hero"><div class="hero-inner">
+    <div><div class="eyebrow">AI INFRASTRUCTURE · BOTTLENECK MAP</div><h1>AI 基础设施<br>五大赢家</h1><p class="hero-lead">瓶颈不会轮流消失，而会叠加成系统工程。产业上首选电力／液冷、连接和内存；配置上必须把产业地位与估值安全边际分开。</p></div>
+    <div class="hero-panel"><small>最终判断</small><strong>结构性看好<br>估值显著分化</strong><p>不做五篮子等权</p><p>不以高增长替代现金流验证</p><p>ALAB 明确不可追</p></div>
+  </div></section>
+  <section class="decision"><div><b>确定性最高</b><span>电力／液冷</span></div><div><b>业绩弹性最强</b><span>光互联／HBM</span></div><div><b>终局空间最大</b><span>物理 AI</span></div><div><b>最大组合风险</b><span>估值＋融资</span></div></section>
+  <section class="bottleneck"><div class="section-kicker">BOTTLENECK STACK</div><h2>约束从单点升级为五层叠加</h2><div class="stages"><div class="stage"><i>01</i><b>GPU</b><small>算力供给与利用率</small></div><div class="stage"><i>02</i><b>HBM／封装</b><small>带宽、良率与锁单</small></div><div class="stage"><i>03</i><b>互联</b><small>800G → 1.6T</small></div><div class="stage"><i>04</i><b>电力／冷却</b><small>并网、配电、800VDC、液冷</small></div><div class="stage"><i>05</i><b>数据／物理 AI</b><small>推理存储与现实世界闭环</small></div></div></section>
+  <section class="valuation-shell"><h2>核心八股：价格优先于叙事</h2><p>内部基准目标相对 2026-07-10 收盘；6–12 个月研究型区间。</p><div class="valuation-grid"><article class="valuation-card ">
+          <div><strong>AMBA</strong><span>小型成长配置</span></div>
+          <p>现价 <b>$77.30</b></p>
+          <p>基准 <b>$94.83</b></p>
+          <em>+22.7%</em>
+        </article><article class="valuation-card ">
+          <div><strong>VRT</strong><span>观察偏配置</span></div>
+          <p>现价 <b>$318.86</b></p>
+          <p>基准 <b>$359.10</b></p>
+          <em>+12.6%</em>
+        </article><article class="valuation-card ">
+          <div><strong>MU</strong><span>高弹性配置</span></div>
+          <p>现价 <b>$979.30</b></p>
+          <p>基准 <b>$1,068.41</b></p>
+          <em>+9.1%</em>
+        </article><article class="valuation-card ">
+          <div><strong>ETN</strong><span>稳健配置</span></div>
+          <p>现价 <b>$407.28</b></p>
+          <p>基准 <b>$438.20</b></p>
+          <em>+7.6%</em>
+        </article><article class="valuation-card ">
+          <div><strong>CRDO</strong><span>价格偏满</span></div>
+          <p>现价 <b>$257.79</b></p>
+          <p>基准 <b>$266.20</b></p>
+          <em>+3.3%</em>
+        </article><article class="valuation-card ">
+          <div><strong>NBIS</strong><span>等确认，不追</span></div>
+          <p>现价 <b>$219.65</b></p>
+          <p>基准 <b>$220.56</b></p>
+          <em>+0.4%</em>
+        </article><article class="valuation-card negative">
+          <div><strong>MRVL</strong><span>等待回调</span></div>
+          <p>现价 <b>$235.81</b></p>
+          <p>基准 <b>$230.40</b></p>
+          <em>-2.3%</em>
+        </article><article class="valuation-card negative">
+          <div><strong>ALAB</strong><span>不追／等待</span></div>
+          <p>现价 <b>$412.97</b></p>
+          <p>基准 <b>$271.00</b></p>
+          <em>-34.4%</em>
+        </article></div></section>
+  <main class="layout"><aside><strong>报告目录</strong><a class="toc-l2" href="#1">1. 标题、日期、数据截止日与研究范围</a><a class="toc-l2" href="#2">2. 核心总结</a><a class="toc-l2" href="#3">3. 产业/主题定位与当前阶段</a><a class="toc-l3" href="#_1">市场已定价评分</a><a class="toc-l2" href="#4">4. 行业定义、关键术语与研究边界</a><a class="toc-l2" href="#5">5. 核心驱动及证据链</a><a class="toc-l2" href="#6">6. 产业链、利润池和供需结构</a><a class="toc-l3" href="#_2">竞争替代矩阵</a><a class="toc-l2" href="#7">7. 行业专属关键变量</a><a class="toc-l2" href="#8">8. 公司分层、龙一/龙二及相对排序</a><a class="toc-l3" href="#_3">产业地位</a><a class="toc-l3" href="#2026-07-10">当前配置顺位（含2026-07-10估值）</a><a class="toc-l3" href="#_4">事件/业绩弹性</a><a class="toc-l3" href="#_5">投资性分桶</a><a class="toc-l2" href="#9">9. 纯度、弹性、确定性、风险评级</a><a class="toc-l2" href="#10">10. 估值方法、最终评级与三档目标价</a><a class="toc-l3" href="#101">10.1 全量上市标的行情与估值快照</a><a class="toc-l3" href="#102">10.2 外部一致预期与增长空间</a><a class="toc-l3" href="#103">10.3 内部三层估值、反向估值与三档目标</a><a class="toc-l2" href="#11">11. 催化剂、交易节奏、风险和失效条件</a><a class="toc-l2" href="#12">12. 待验证清单</a><a class="toc-l2" href="#13">13. 来源与证据等级</a><a class="toc-l2" href="#_6">最终收口</a><a class="toc-l2" href="#_7">投研复盘模板</a></aside><article class="report-body"><h1 id="ai">AI基础设施五大赢家：横纵行业研究与股票池纠偏</h1>
+<blockquote>
+<p>报告日期：2026-07-13｜行情基准：2026-07-10美股收盘｜市场：美股｜研究周期：3–5年产业、6–12个月配置观察</p>
+</blockquote>
+<h2 id="1">1. 标题、日期、数据截止日与研究范围</h2>
+<p>研究对象为新云/计算、光互联、内存与存储、电力与冷却、物理AI五条产业链。核心问题不是“AI是否增长”，而是增长由谁捕获、谁承担融资与周期风险。全量观察池覆盖原25只标的及VRT、ETN、PWR、GEV四只必要补充标的；SKHY因2026-07-13才进入常规代码交易，仅作产业参照，不进入7月10日行情横比。核心估值池限定为VRT、ETN、MRVL、MU、CRDO、ALAB、AMBA、NBIS八只。价格、市值和外部一致预期来自Nasdaq公开接口，拉取时间为2026-07-13（Asia/Shanghai），对应最近有效交易日2026-07-10；PE TTM由东方财富妙想交叉核验。缺失字段逐格标记，不再以整段<code>未核验</code>代替估值执行层。</p>
+<h2 id="2">2. 核心总结</h2>
+<p>原观点方向正确约7/10，但股票分类混合了云运营商、数据中心地产商、矿商转型、电源器件、传感器和机器人运营商。未来3–5年并非GPU瓶颈依次消失，而是HBM、互联、电力、冷却和数据层级叠加。风险调整后，电力/液冷确定性最高，光互联弹性最强，内存兼具结构成长与强周期，新云受债务和客户集中制约，物理AI终局最大但兑现最慢。估值加入后结论发生变化：AMBA、VRT的基准空间较好；MU具有大上行但强周期；ETN偏稳健；CRDO与NBIS基准情景接近现价；MRVL基准值略低于现价；ALAB需要极乐观盈利才能支撑当前价格，明确不可追。6–12个月研究型判断，不构成投资建议。</p>
+<h2 id="3">3. 产业/主题定位与当前阶段</h2>
+<p>这是“结构成长＋资本开支周期＋局部主题重估”的混合行业。2023年的显性约束是GPU；2024–2025年HBM和集群网络成为吞吐瓶颈；2025–2028年并网、配电、800V直流和液冷成为最慢交付变量；推理扩张继续拉动HBM、容量DRAM、企业SSD和近线数据湖；物理AI则处于封闭场景率先兑现的早期。</p>
+<h3 id="_1">市场已定价评分</h3>
+<p>以2026-07-10收盘及Nasdaq一致预期为基准：光互联4.5/5、内存4/5、新云4/5、电力与液冷4/5、物理AI小盘股3/5。ALAB现价412.97美元，高于292.81美元外部平均目标29.1%，且相当于约152倍FY2027一致EPS，是“极度计价”的代表；CRDO约53倍FY2027 EPS，亦要求高速成长延续。MU约6.4倍FY2027一致EPS，但这是周期高盈利预测，低倍数不等于低风险。VRT约37倍FY2027 EPS，已计入较强订单持续性。已定价变量是AI资本开支、1.6T升级与电力紧缺；可能低估的是配电/冷却交付周期和推理数据层级，可能高估的是新云利用率与通用机器人落地速度。本报告不作“市场主线已经确认”判断。</p>
+<h2 id="4">4. 行业定义、关键术语与研究边界</h2>
+<ul>
+<li>新云：专为AI训练、推理提供GPU算力及软件服务的云平台；数据中心出租和矿商转型须单列。</li>
+<li>Scale-up/Scale-out：机架内/机架间加速器互联与集群扩展。</li>
+<li>HBM：高带宽内存；与容量DRAM、NAND/SSD、HDD的利润驱动不同。</li>
+<li>物理AI：感知、边缘计算、控制、执行、系统集成和运营闭环，不等同于激光雷达。</li>
+</ul>
+<h2 id="5">5. 核心驱动及证据链</h2>
+<table>
+<thead>
+<tr>
+<th>结论</th>
+<th>标签</th>
+<th>证据</th>
+<th>反证/限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>瓶颈由GPU单点转为系统约束</td>
+<td>已确认事实＋推断</td>
+<td>NVIDIA早期H100平台已绑定HBM、NVLink与网络；Arista称网络决定AI作业完成效率</td>
+<td>算法效率和利用率提升可降低单位任务需求</td>
+</tr>
+<tr>
+<td>电力与冷却是更慢变量</td>
+<td>已确认事实＋推断</td>
+<td>IEA预计数据中心用电由2024年约415TWh升至2030年约945TWh；VRT订单高增</td>
+<td>约束高度区域化，不能外推所有电力股受益</td>
+</tr>
+<tr>
+<td>推理扩大内存层级</td>
+<td>已确认事实＋推断</td>
+<td>Micron HBM4、SOCAMM2、PCIe 6 SSD量产</td>
+<td>厂商材料可能高估本环节价值；供给扩张会压缩溢价</td>
+</tr>
+<tr>
+<td>物理AI是长期期权</td>
+<td>证据支持的推断</td>
+<td>NVIDIA生态、工业/仓储部署增加</td>
+<td>伙伴采用不等于规模收入，sim-to-real、安全与ROI仍未解决</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6">6. 产业链、利润池和供需结构</h2>
+<p>利润池优先流向控制稀缺资源且能把订单转成现金流的企业：电力接入/配电/热管理，连接芯片与光器件，HBM与高性能内存。新云收入增速高，但GPU采购、利息、折旧和客户集中会分走利润；机器人小盘公司还要承担研发、制造、运维与融资风险。</p>
+<h3 id="_2">竞争替代矩阵</h3>
+<table>
+<thead>
+<tr>
+<th>环节/公司</th>
+<th>护城河</th>
+<th>替代者/技术</th>
+<th>绕过方式</th>
+<th>验证指标</th>
+<th>估值影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CRWV/NBIS</td>
+<td>GPU供给、软件栈、客户合同</td>
+<td>hyperscaler自建、模型效率</td>
+<td>自研芯片与富余算力外售</td>
+<td>利用率、利息/收入、客户集中</td>
+<td>利用率不及预期压缩EV/Sales</td>
+</tr>
+<tr>
+<td>CRDO/ALAB/MRVL</td>
+<td>SerDes、AEC、retimer、DSP与定制平台</td>
+<td>铜缆改进、CPO、客户自研</td>
+<td>更短连接或集成进ASIC</td>
+<td>800G/1.6T收入、设计赢单</td>
+<td>升级延迟导致高估值回撤</td>
+</tr>
+<tr>
+<td>MU/SKHY</td>
+<td>HBM工艺、良率与客户认证</td>
+<td>扩产、替代供应商</td>
+<td>客户多源化</td>
+<td>HBM份额、ASP、良率</td>
+<td>供给释放触发周期下行</td>
+</tr>
+<tr>
+<td>VRT/ETN</td>
+<td>配电、UPS、液冷与交付</td>
+<td>客户自建、标准化模块</td>
+<td>系统集成内制</td>
+<td>订单、交期、积压转收入</td>
+<td>交付能力决定溢价</td>
+</tr>
+<tr>
+<td>OUST/AEVA</td>
+<td>感知与软件</td>
+<td>摄像头、雷达、低价LiDAR</td>
+<td>多传感融合降低单件价值</td>
+<td>量产收入、毛利、现金消耗</td>
+<td>设计赢单不转收入则去估值</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7">7. 行业专属关键变量</h2>
+<p>本报告组合使用“AI入口约束、半导体/硬科技、周期/资源”模块。</p>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>性质</th>
+<th style="text-align: right;">当前值</th>
+<th>方向</th>
+<th>变化阈值</th>
+<th>下一验证</th>
+<th>映射公司</th>
+<th>影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新云利息费用/收入</td>
+<td>同步</td>
+<td style="text-align: right;">CRWV 2026Q1约26%</td>
+<td>未知</td>
+<td>连续下降至20%以下</td>
+<td>下一季报</td>
+<td>CRWV</td>
+<td>决定现金流质量</td>
+</tr>
+<tr>
+<td>800G/1.6T与AEC收入</td>
+<td>领先</td>
+<td style="text-align: right;">未核验</td>
+<td>上行</td>
+<td>订单/指引下修</td>
+<td>下一季报</td>
+<td>CRDO/ALAB/MRVL</td>
+<td>决定成长溢价</td>
+</tr>
+<tr>
+<td>HBM供需与ASP</td>
+<td>领先</td>
+<td style="text-align: right;">供给偏紧</td>
+<td>上行</td>
+<td>2027产能未被锁定</td>
+<td>季度</td>
+<td>MU/SKHY</td>
+<td>决定周期峰值</td>
+</tr>
+<tr>
+<td>配电/液冷订单与交期</td>
+<td>领先</td>
+<td style="text-align: right;">VRT订单强劲</td>
+<td>上行</td>
+<td>订单增速转负</td>
+<td>季度</td>
+<td>VRT/ETN</td>
+<td>决定结构成长延续</td>
+</tr>
+<tr>
+<td>机器人规模收入/现金消耗</td>
+<td>滞后</td>
+<td style="text-align: right;">多数未成熟</td>
+<td>上行</td>
+<td>连续两个季度经营改善</td>
+<td>季度</td>
+<td>OUST/SERV/AEVA</td>
+<td>决定期权转核心</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8">8. 公司分层、龙一/龙二及相对排序</h2>
+<h3 id="_3">产业地位</h3>
+<p>VRT/ETN（电力系统）＞MRVL（连接平台）＞MU/SKHY（内存）＞CRDO/ALAB（单点高弹性）＞AMBA/SYM/OUST（物理AI）。</p>
+<h3 id="2026-07-10">当前配置顺位（含2026-07-10估值）</h3>
+<p>AMBA、VRT、MU、ETN ＞ CRDO、NBIS ＞ MRVL ＞ ALAB。该顺序是核心八只的风险调整后配置顺位，不是产业地位排名；MU的乐观空间最大但周期尾部风险也最大，ALAB产业位置优秀但估值安全边际最低。其余观察池需在完成公司级三层估值后才进入同一买入排序。</p>
+<h3 id="_4">事件/业绩弹性</h3>
+<p>CRDO、ALAB、SNDK、APLD、OUST ＞ CRWV、LITE、VICR ＞ 平台型龙头。</p>
+<h3 id="_5">投资性分桶</h3>
+<ul>
+<li>核心配置：VRT、ETN、MU、AMBA；MRVL产业核心但当前价格降为等待。</li>
+<li>稳健锚点：ETN、MRVL、STX/WDC（需结合周期估值）。</li>
+<li>高弹性进攻：CRDO、LITE、CRWV、APLD、SNDK、OUST；ALAB因估值过度计价移入观察。</li>
+<li>观察/期权：NBIS、MRVL、ALAB、VICR、HUT、CIFR、SERV、AEVA、POWI。</li>
+<li>不可直接投资但影响格局：开放模型、CPO标准、机器人基础模型和未上市整机厂。</li>
+</ul>
+<h2 id="9">9. 纯度、弹性、确定性、风险评级</h2>
+<p>5为最高；风险5最危险。</p>
+<table>
+<thead>
+<tr>
+<th>标的</th>
+<th>正确归类</th>
+<th style="text-align: right;">纯度</th>
+<th style="text-align: right;">弹性</th>
+<th style="text-align: right;">确定性</th>
+<th style="text-align: right;">风险</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NBIS</td>
+<td>AI云</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td>真AI云，仍需证明扩张回报</td>
+</tr>
+<tr>
+<td>CRWV</td>
+<td>AI云</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td>积压强，债务/利息/集中度最高</td>
+</tr>
+<tr>
+<td>APLD</td>
+<td>AI数据中心出租</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td>合同落地，建设融资风险高</td>
+</tr>
+<tr>
+<td>CIFR/HUT</td>
+<td>矿业＋电力转型期权</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5/4</td>
+<td>不能与AI云等权</td>
+</tr>
+<tr>
+<td>CRDO/ALAB</td>
+<td>高速连接平台</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td>高纯高弹，估值敏感</td>
+</tr>
+<tr>
+<td>MRVL</td>
+<td>定制ASIC＋连接</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td>平台确定性龙一</td>
+</tr>
+<tr>
+<td>LITE/COHR</td>
+<td>光器件/光子平台</td>
+<td style="text-align: right;">4/3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4/3</td>
+<td style="text-align: right;">3</td>
+<td>LITE更纯，COHR更复杂</td>
+</tr>
+<tr>
+<td>MU</td>
+<td>HBM/DRAM/NAND</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td>内存核心；强周期</td>
+</tr>
+<tr>
+<td>DRAM</td>
+<td>Memory ETF</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>不是公司，不能混排</td>
+</tr>
+<tr>
+<td>SNDK</td>
+<td>NAND/企业闪存</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td>周期高弹性</td>
+</tr>
+<tr>
+<td>STX/WDC</td>
+<td>近线HDD/数据湖</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td>不解决HBM带宽瓶颈</td>
+</tr>
+<tr>
+<td>VICR</td>
+<td>机架电源</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td>原电力名单中映射最直接</td>
+</tr>
+<tr>
+<td>POWI/ON/STM/VSH</td>
+<td>功率器件/元件</td>
+<td style="text-align: right;">2/2/2/1</td>
+<td style="text-align: right;">3–4</td>
+<td style="text-align: right;">3–4</td>
+<td style="text-align: right;">2</td>
+<td>多数AI收入未单列</td>
+</tr>
+<tr>
+<td>AMBA</td>
+<td>边缘视觉AI SoC</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td>物理AI纯度高但非整机</td>
+</tr>
+<tr>
+<td>OUST</td>
+<td>LiDAR＋感知</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td>高弹性，仍亏损</td>
+</tr>
+<tr>
+<td>SYM</td>
+<td>仓储自动化系统</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td>商业兑现强，客户集中</td>
+</tr>
+<tr>
+<td>SERV/AEVA</td>
+<td>运营/技术期权</td>
+<td style="text-align: right;">4/3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1/2</td>
+<td style="text-align: right;">5</td>
+<td>仅小仓期权</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10">10. 估值方法、最终评级与三档目标价</h2>
+<h3 id="101">10.1 全量上市标的行情与估值快照</h3>
+<p>统一口径：2026-07-10美股收盘，美元；市值为十亿美元。价格和市值来自Nasdaq，PE TTM来自东方财富妙想。负PE统一改写为<code>N/A（TTM亏损）</code>，没有可靠返回则逐格标<code>未核验</code>。DRAM为ETF，不适用公司PE；SKHY在7月13日切换为常规交易代码，未纳入7月10日横比。</p>
+<table>
+<thead>
+<tr>
+<th>标的</th>
+<th>正确归类</th>
+<th style="text-align: right;">收盘价</th>
+<th style="text-align: right;">市值($bn)</th>
+<th style="text-align: right;">PE TTM</th>
+<th>核验状态/说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NBIS</td>
+<td>AI云</td>
+<td style="text-align: right;">219.65</td>
+<td style="text-align: right;">55.77</td>
+<td style="text-align: right;">68.24x</td>
+<td>已核验；盈利含非核心资产影响</td>
+</tr>
+<tr>
+<td>CRWV</td>
+<td>AI云</td>
+<td style="text-align: right;">88.88</td>
+<td style="text-align: right;">48.49</td>
+<td style="text-align: right;">N/A（TTM亏损）</td>
+<td>已核验价格/市值</td>
+</tr>
+<tr>
+<td>CIFR</td>
+<td>矿业＋电力期权</td>
+<td style="text-align: right;">22.11</td>
+<td style="text-align: right;">9.04</td>
+<td style="text-align: right;">N/A（TTM亏损）</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>APLD</td>
+<td>AI数据中心出租</td>
+<td style="text-align: right;">31.15</td>
+<td style="text-align: right;">8.90</td>
+<td style="text-align: right;">N/A（TTM亏损）</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>HUT</td>
+<td>矿业＋电力期权</td>
+<td style="text-align: right;">102.22</td>
+<td style="text-align: right;">11.51</td>
+<td style="text-align: right;">N/A（TTM亏损）</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>CRDO</td>
+<td>高速连接</td>
+<td style="text-align: right;">257.79</td>
+<td style="text-align: right;">48.07</td>
+<td style="text-align: right;">101.8x</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>ALAB</td>
+<td>PCIe/CXL连接</td>
+<td style="text-align: right;">412.97</td>
+<td style="text-align: right;">70.79</td>
+<td style="text-align: right;">264.5x</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>MRVL</td>
+<td>定制ASIC＋连接</td>
+<td style="text-align: right;">235.81</td>
+<td style="text-align: right;">206.29</td>
+<td style="text-align: right;">81.73x</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>LITE</td>
+<td>光器件</td>
+<td style="text-align: right;">802.01</td>
+<td style="text-align: right;">62.40</td>
+<td style="text-align: right;">141.8x</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>COHR</td>
+<td>光子平台</td>
+<td style="text-align: right;">324.50</td>
+<td style="text-align: right;">63.48</td>
+<td style="text-align: right;">135.4x</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>MU</td>
+<td>HBM/DRAM/NAND</td>
+<td style="text-align: right;">979.30</td>
+<td style="text-align: right;">1,106.01</td>
+<td style="text-align: right;">21.91x</td>
+<td>已核验；强周期口径</td>
+</tr>
+<tr>
+<td>DRAM</td>
+<td>Memory ETF</td>
+<td style="text-align: right;">63.04</td>
+<td style="text-align: right;">N/A</td>
+<td style="text-align: right;">N/A</td>
+<td>BATS ETF，价格已核验</td>
+</tr>
+<tr>
+<td>SNDK</td>
+<td>NAND/企业闪存</td>
+<td style="text-align: right;">1,915.92</td>
+<td style="text-align: right;">283.73</td>
+<td style="text-align: right;">62.95x</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>STX</td>
+<td>近线HDD</td>
+<td style="text-align: right;">910.34</td>
+<td style="text-align: right;">204.12</td>
+<td style="text-align: right;">85.84x</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>WDC</td>
+<td>近线HDD</td>
+<td style="text-align: right;">582.585</td>
+<td style="text-align: right;">200.81</td>
+<td style="text-align: right;">30.84x</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>VICR</td>
+<td>机架电源</td>
+<td style="text-align: right;">272.05</td>
+<td style="text-align: right;">12.40</td>
+<td style="text-align: right;">未核验</td>
+<td>价格/市值已核验</td>
+</tr>
+<tr>
+<td>POWI</td>
+<td>高压GaN</td>
+<td style="text-align: right;">72.07</td>
+<td style="text-align: right;">4.02</td>
+<td style="text-align: right;">241.9x</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>ON</td>
+<td>功率半导体</td>
+<td style="text-align: right;">95.96</td>
+<td style="text-align: right;">37.61</td>
+<td style="text-align: right;">未核验</td>
+<td>价格/市值已核验</td>
+</tr>
+<tr>
+<td>STM</td>
+<td>综合半导体</td>
+<td style="text-align: right;">71.46</td>
+<td style="text-align: right;">63.51</td>
+<td style="text-align: right;">432.1x</td>
+<td>已核验，低盈利导致失真</td>
+</tr>
+<tr>
+<td>VSH</td>
+<td>被动元件</td>
+<td style="text-align: right;">44.67</td>
+<td style="text-align: right;">6.85</td>
+<td style="text-align: right;">2,964x</td>
+<td>已核验，接近零利润导致失真</td>
+</tr>
+<tr>
+<td>AMBA</td>
+<td>边缘视觉AI</td>
+<td style="text-align: right;">77.30</td>
+<td style="text-align: right;">3.39</td>
+<td style="text-align: right;">N/A（TTM亏损）</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>OUST</td>
+<td>LiDAR＋感知</td>
+<td style="text-align: right;">43.28</td>
+<td style="text-align: right;">2.90</td>
+<td style="text-align: right;">N/A（TTM亏损）</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>SYM</td>
+<td>仓储自动化</td>
+<td style="text-align: right;">43.64</td>
+<td style="text-align: right;">26.30</td>
+<td style="text-align: right;">未核验</td>
+<td>价格/市值已核验</td>
+</tr>
+<tr>
+<td>SERV</td>
+<td>配送机器人运营</td>
+<td style="text-align: right;">5.92</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">N/A（TTM亏损）</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>AEVA</td>
+<td>FMCW LiDAR</td>
+<td style="text-align: right;">20.99</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">N/A（TTM亏损）</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>VRT</td>
+<td>电源/液冷系统</td>
+<td style="text-align: right;">318.86</td>
+<td style="text-align: right;">122.48</td>
+<td style="text-align: right;">78.59x</td>
+<td>已核验</td>
+</tr>
+<tr>
+<td>ETN</td>
+<td>配电/电气系统</td>
+<td style="text-align: right;">407.28</td>
+<td style="text-align: right;">158.15</td>
+<td style="text-align: right;">未核验</td>
+<td>价格/市值及FPE已核验</td>
+</tr>
+<tr>
+<td>PWR</td>
+<td>电网/工程交付</td>
+<td style="text-align: right;">658.56</td>
+<td style="text-align: right;">98.82</td>
+<td style="text-align: right;">未核验</td>
+<td>价格/市值已核验</td>
+</tr>
+<tr>
+<td>GEV</td>
+<td>发电/电网设备</td>
+<td style="text-align: right;">1,091.57</td>
+<td style="text-align: right;">293.33</td>
+<td style="text-align: right;">未核验</td>
+<td>价格/市值已核验</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102">10.2 外部一致预期与增长空间</h3>
+<p>Nasdaq目标价接口拉取于2026-07-13。目标增长空间统一按<code>平均目标价÷2026-07-10收盘价-1</code>计算。分析师数量为买入、持有、卖出样本合计；外部目标不等于本报告内部目标。</p>
+<table>
+<thead>
+<tr>
+<th>核心标的</th>
+<th style="text-align: right;">外部均值</th>
+<th style="text-align: right;">低–高目标</th>
+<th style="text-align: right;">样本</th>
+<th style="text-align: right;">外部增值空间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VRT</td>
+<td style="text-align: right;">388.67</td>
+<td style="text-align: right;">338–500</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">+21.9%</td>
+</tr>
+<tr>
+<td>ETN</td>
+<td style="text-align: right;">463.58</td>
+<td style="text-align: right;">392–534</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">+13.8%</td>
+</tr>
+<tr>
+<td>MRVL</td>
+<td style="text-align: right;">270.04</td>
+<td style="text-align: right;">180–385</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">+14.5%</td>
+</tr>
+<tr>
+<td>MU</td>
+<td style="text-align: right;">1,563.93</td>
+<td style="text-align: right;">1,100–2,200</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">+59.7%</td>
+</tr>
+<tr>
+<td>CRDO</td>
+<td style="text-align: right;">275.07</td>
+<td style="text-align: right;">206–350</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">+6.7%</td>
+</tr>
+<tr>
+<td>ALAB</td>
+<td style="text-align: right;">292.81</td>
+<td style="text-align: right;">153–460</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">-29.1%</td>
+</tr>
+<tr>
+<td>AMBA</td>
+<td style="text-align: right;">101.56</td>
+<td style="text-align: right;">90–120</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">+31.4%</td>
+</tr>
+<tr>
+<td>NBIS</td>
+<td style="text-align: right;">252.86</td>
+<td style="text-align: right;">144–287</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">+15.1%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103">10.3 内部三层估值、反向估值与三档目标</h3>
+<p>盈利公司以Nasdaq 2027/2028一致EPS为经营基准，再由本报告独立设置估值倍数；这不是复制外部目标。Nasdaq将其标为<code>Consensus EPS Forecast</code>，未逐家公司明确reported GAAP或non-GAAP口径，因此这些属于外部预测基准，不能冒充公司财报EPS；下一次季报需与公司GAAP/调整后EPS分别对账。AMBA使用FY2026收入3.907亿美元为基线，假设FY2027收入4.8/5.2/5.7亿美元并给予6/8/10倍市销率。NBIS使用公司2026年末ARR指引70–90亿美元，给予5/7/9倍市值/ARR；ARR不是GAAP收入，因此置信度低于PE估值。所有目标均为美元，增长空间相对2026-07-10收盘。</p>
+<table>
+<thead>
+<tr>
+<th>标的</th>
+<th>主估值/当前隐含</th>
+<th style="text-align: right;">保守目标（空间）</th>
+<th style="text-align: right;">基准目标（空间）</th>
+<th style="text-align: right;">乐观目标（空间）</th>
+<th>外部交叉验证</th>
+<th>评级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VRT</td>
+<td>FY27 EPS；现价约37.3x</td>
+<td style="text-align: right;">247.04（-22.5%）</td>
+<td style="text-align: right;">359.10（+12.6%）</td>
+<td style="text-align: right;">460.00（+44.3%）</td>
+<td>外部388.67</td>
+<td>观察偏配置</td>
+</tr>
+<tr>
+<td>ETN</td>
+<td>FY27 EPS；现价约26.0x</td>
+<td style="text-align: right;">345.12（-15.3%）</td>
+<td style="text-align: right;">438.20（+7.6%）</td>
+<td style="text-align: right;">522.88（+28.4%）</td>
+<td>外部463.58</td>
+<td>稳健配置</td>
+</tr>
+<tr>
+<td>MRVL</td>
+<td>FY28 EPS；现价约46.1x</td>
+<td style="text-align: right;">163.10（-30.8%）</td>
+<td style="text-align: right;">230.40（-2.3%）</td>
+<td style="text-align: right;">315.70（+33.9%）</td>
+<td>外部270.04</td>
+<td>等待回调/盈利上修</td>
+</tr>
+<tr>
+<td>MU</td>
+<td>FY27周期EPS；现价约6.4x</td>
+<td style="text-align: right;">665.45（-32.0%）</td>
+<td style="text-align: right;">1,068.41（+9.1%）</td>
+<td style="text-align: right;">1,761.68（+79.9%）</td>
+<td>外部1,563.93</td>
+<td>高弹性配置、严控周期</td>
+</tr>
+<tr>
+<td>CRDO</td>
+<td>FY27 EPS；现价约53.3x</td>
+<td style="text-align: right;">180.00（-30.2%）</td>
+<td style="text-align: right;">266.20（+3.3%）</td>
+<td style="text-align: right;">364.70（+41.5%）</td>
+<td>外部275.07</td>
+<td>好公司、价格偏满</td>
+</tr>
+<tr>
+<td>ALAB</td>
+<td>FY27 EPS；现价约152.4x</td>
+<td style="text-align: right;">137.60（-66.7%）</td>
+<td style="text-align: right;">271.00（-34.4%）</td>
+<td style="text-align: right;">500.50（+21.2%）</td>
+<td>外部292.81</td>
+<td>不追/等待</td>
+</tr>
+<tr>
+<td>AMBA</td>
+<td>FY27 PS；现价约8.7x FY26收入</td>
+<td style="text-align: right;">65.65（-15.1%）</td>
+<td style="text-align: right;">94.83（+22.7%）</td>
+<td style="text-align: right;">129.94（+68.1%）</td>
+<td>外部101.56</td>
+<td>小型成长配置</td>
+</tr>
+<tr>
+<td>NBIS</td>
+<td>市值/2026 ARR；现价约7.0x中枢ARR</td>
+<td style="text-align: right;">137.85（-37.2%）</td>
+<td style="text-align: right;">220.56（+0.4%）</td>
+<td style="text-align: right;">319.01（+45.2%）</td>
+<td>外部252.86</td>
+<td>等确认，不追</td>
+</tr>
+</tbody>
+</table>
+<p>估值 reconciliation：VRT、ETN、AMBA的内部基准值与外部目标方向一致；MU外部目标明显高于内部基准，反映卖方更愿意使用上行周期盈利；MRVL、CRDO内部基准接近或低于现价，说明优质产业位置已大体计价；ALAB内部基准和外部均值都低于现价，是最明确的估值冲突；NBIS基准值接近现价，当前价格已隐含约7倍2026年末ARR中枢，后续回报依赖超额交付而非仅完成指引。</p>
+<p>最终评级：<strong>产业结构性看好，估值上分化；禁止五篮子等权和无差别追涨。</strong></p>
+<h2 id="11">11. 催化剂、交易节奏、风险和失效条件</h2>
+<ul>
+<li>催化剂：800G→1.6T收入、800VDC和液冷订单、HBM4良率与锁单、新云利用率/融资成本、机器人量产收入。</li>
+<li>节奏：核心系统商作底仓；连接和存储在业绩/价格确认后进攻；新云与机器人严格限制期权仓。</li>
+<li>熊市情景：模型效率和自研芯片压低外部算力需求，新云利用率下降；HBM/光扩产导致价格回落；电力项目因并网与审批延期；机器人采用停留在试点。</li>
+<li>失效：VRT/ETN订单转负、CRWV利息/收入继续恶化、光连接指引连续下修、HBM未锁定产能、机器人现金消耗上升但收入不改善。触发时对应分层降级，而非用行业总叙事掩盖公司问题。</li>
+</ul>
+<h2 id="12">12. 待验证清单</h2>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>状态</th>
+<th>所需证据</th>
+<th>优先来源</th>
+<th>下一验证</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>观察池未核验PE TTM</td>
+<td>部分未核验</td>
+<td>ETN/PWR/GEV/ON/SYM等TTM利润口径</td>
+<td>公司财报/专业数据库</td>
+<td>下一季报前</td>
+</tr>
+<tr>
+<td>核心目标的GAAP/non-GAAP差异</td>
+<td>待验证假设</td>
+<td>EPS预测口径与公司指引对账</td>
+<td>公司财报/Nasdaq</td>
+<td>下一季报</td>
+</tr>
+<tr>
+<td>新云客户集中和合同可撤销性</td>
+<td>待验证假设</td>
+<td>10-K、合同披露</td>
+<td>SEC</td>
+<td>下一季报</td>
+</tr>
+<tr>
+<td>光互联供需何时转松</td>
+<td>待验证假设</td>
+<td>交期、订单、库存</td>
+<td>公司IR/供应链</td>
+<td>季度</td>
+</tr>
+<tr>
+<td>物理AI是否由试点转规模</td>
+<td>待验证假设</td>
+<td>重复订单、部署数、毛利</td>
+<td>公司公告</td>
+<td>季度</td>
+</tr>
+</tbody>
+</table>
+<h2 id="13">13. 来源与证据等级</h2>
+<ul>
+<li>[A1] NVIDIA，Hopper GPU需求与供给，2023，公司公告，A级：https://investor.nvidia.com/news/press-release-details/2023/NVIDIA-Hopper-GPUs-Expand-Reach-as-Demand-for-AI-Grows/default.aspx</li>
+<li>[A2] Micron，HBM供需与2026 AI内存/存储产品，公司IR，A级：https://investors.micron.com/news-releases/news-release-details/meiguangzhuanwei-nvidia-vera-rubin-dazaode-hbm4</li>
+<li>[A3] Marvell FY2026 10-K，定制ASIC与互联组合，A级：https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000011/mrvl-20260131.htm</li>
+<li>[A4] CoreWeave 2026Q1，积压、收入、利息和亏损，A级：https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-First-Quarter-2026-Results/</li>
+<li>[A5] Applied Digital 10-Q，HPC租约与建设，A级：https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000030/apld-20260228.htm</li>
+<li>[A6] Vertiv 2025Q4，订单与AI基础设施，A级：https://investors.vertiv.com/news/news-details/2026/Vertiv-Reports-Strong-Fourth-Quarter-with-Organic-Orders-Growth-of-252-and-Diluted-EPS-Growth-of-200-Adjusted-Diluted-EPS-37/</li>
+<li>[A7] IEA《Energy and AI》，数据中心用电，A级：https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai</li>
+<li>[A8] Ambarella FY2026业绩，A级：https://investor.ambarella.com/news-releases/news-release-details/ambarella-inc-announces-fourth-quarter-and-fiscal-year-2026</li>
+<li>[A9] Ouster FY2025业绩，A级：https://investors.ouster.com/news-releases/news-release-details/ouster-announces-results-fourth-quarter-and-full-year-2025</li>
+<li>[A10] Nasdaq公开行情、公司市值、目标价与盈利预测接口，2026-07-13访问，A级行情/B级一致预期：https://api.nasdaq.com/api/quote/MU/info?assetclass=stocks</li>
+<li>[A11] Nasdaq核心标的一致目标接口，2026-07-13访问，B级：https://api.nasdaq.com/api/analyst/MU/targetprice</li>
+<li>[A12] Nebius 2026 ARR指引70–90亿美元，公司IR，A级：https://assets.nebius.com/assets/e59fb92e-9027-473a-8cac-04f9d2e9ea9a/Shareholder%20Letter%20Q4%202025.pdf</li>
+<li>[A13] 本地Nasdaq原始快照，含30只报价和核心8只预测：<code>outputs/ai-infrastructure-2026/nasdaq_snapshot_20260713.json</code>。</li>
+<li>[A14] 东方财富妙想结构化行情工作簿，2026-07-13访问，支持PE TTM交叉核验：<code>miaoxiang/MX_FinData/</code>。</li>
+<li>[B1] 东方财富妙想/券商研究聚合，2026-06至07，B级：支持瓶颈迁移、液冷与物理AI阶段判断；涉及数字仍以A级源为准。</li>
+</ul>
+<h2 id="_6">最终收口</h2>
+<p>AI基础设施的瓶颈没有从GPU整齐轮动到下一站，而是叠加成系统工程。产业上仍首选电力/液冷、连接和内存，但估值加入后必须改变买入顺位：AMBA、VRT、MU、ETN拥有相对更好的风险调整空间；CRDO与NBIS的基准情景基本被计价；MRVL需等待盈利上修或回调；ALAB现价高于外部平均目标且内部基准空间为-34.4%，明确不可追。CRWV/APLD/SNDK/OUST只作为高弹性仓，CIFR/HUT/SERV/AEVA仅作期权。</p>
+<ul>
+<li>产业定位：结构成长叠加资本开支和存储周期。</li>
+<li>四项评级：纯度4/5、弹性5/5、确定性4/5、风险4/5。</li>
+<li>产业龙一：VRT/ETN、MRVL、MU；当前配置顺位：AMBA、VRT、MU、ETN ＞ CRDO、NBIS ＞ MRVL ＞ ALAB。</li>
+<li>最终评级：结构性看好、估值分化、分层配置。</li>
+<li>核心基准目标/空间：AMBA 94.83（+22.7%）、VRT 359.10（+12.6%）、MU 1,068.41（+9.1%）、ETN 438.20（+7.6%）、CRDO 266.20（+3.3%）、NBIS 220.56（+0.4%）、MRVL 230.40（-2.3%）、ALAB 271.00（-34.4%）。各自保守/乐观目标及触发条件见第10节。</li>
+</ul>
+<p>6–12个月研究型判断，不构成投资建议。</p>
+<h2 id="_7">投研复盘模板</h2>
+<ul>
+<li>首次完整估值报告：2026-07-13；计划复盘日：2026-10-13。</li>
+<li>原评级：结构性看好、估值分化、分层配置。</li>
+<li>原目标：见第10节核心八只三档目标；市场已定价评分：各子赛道3–4.5/5。</li>
+<li>核心阈值：电力/液冷订单、1.6T收入、HBM供需、新云利息/收入、机器人量产收入。</li>
+<li>已兑现/未兑现/证据失效/新证据/评级调整：待复盘。</li>
+</ul></article></main>
+  <footer class="footer"><div class="footer-inner"><b>csnpk.com · 行业研究</b><small>本报告为研究记录，不构成投资建议。价格基准为 2026-07-10 美股收盘，并非实时行情；未实际核验字段已在正文逐项标注。</small></div></footer>
+  <script>document.querySelectorAll('.report-body table').forEach(t=>{const w=document.createElement('div');w.className='table-wrap';t.parentNode.insertBefore(w,t);w.appendChild(t)});</script>
+</body></html>
