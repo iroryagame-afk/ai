@@ -1,0 +1,5 @@
+interface:
+  display_name: "A股回撤反弹回测"
+  short_description: "分析A股历次回撤、反弹修复比例与主要价格区间"
+  default_prompt: "Use $a-stock-drawdown-rebound to backtest an A-share stock's drawdowns, rebounds, recovery ratios, and price occupancy zones."
+

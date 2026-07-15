@@ -1,0 +1,24 @@
+{
+  "skill_name": "a-stock-drawdown-rebound",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "回测长江电力历次回撤和反弹的比例，以及主要波动区间。",
+      "expected_output": "使用OpenD完成日线，公开QFQ/HFQ口径、ZigZag阈值、修复比例公式、敏感性和当前未完成周期。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "茅台历史上一般跌多少后会反弹？反弹能修复前面跌幅的多少？",
+      "expected_output": "将历史描述与未来概率分开，给出中位回撤、反弹、修复比例和事后拐点偏差警示。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "中际旭创现在能不能买，明天怎么下单？",
+      "expected_output": "不应使用本Skill做T+1买点，应转交a-stock-position-timing。",
+      "files": []
+    }
+  ]
+}
+
