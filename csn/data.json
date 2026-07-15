@@ -1,7 +1,7 @@
 {
   "title": "表姐严选",
   "dataDate": "2026-07-15",
-  "runTime": "2026-07-15 16:24",
+  "runTime": "2026-07-15 22:20",
   "verifyStatus": "OpenD已连接；已核验 283（新拉取 0，今日缓存 283），失败 17，暂不支持 0；部分未完成实时核验",
   "scope": "核心精选去重后 300 个标的",
   "calcNote": "价格/均线/买点/止损/核心池动态RS=OpenD日K复算",
@@ -9650,7 +9650,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "",
-      "verify": "未完成实时核验：OpenD K线不足：41根",
+      "verify": "未完成实时核验：OpenD K线不足：42根",
       "last_kline_date": "",
       "reason": "来源：核心精选 / 原均线监控；策略动作：等待确认；地位：Chain Bridge；环节：AI·硬科技·自选补充",
       "memo": "Chain Bridge",
@@ -9737,7 +9737,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "",
-      "verify": "未完成实时核验：OpenD K线不足：106根",
+      "verify": "未完成实时核验：OpenD K线不足：107根",
       "last_kline_date": "",
       "reason": "来源：核心精选 / 原均线监控；策略动作：等待确认；地位：ChemoCentryx；环节：自选补充",
       "memo": "ChemoCentryx",
@@ -9824,7 +9824,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "",
-      "verify": "未完成实时核验：OpenD K线不足：56根",
+      "verify": "未完成实时核验：OpenD K线不足：57根",
       "last_kline_date": "",
       "reason": "来源：核心精选 / 原均线监控；策略动作：等待确认；地位：Elbit Medical；环节：自选补充",
       "memo": "Elbit Medical",
@@ -9911,7 +9911,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "",
-      "verify": "未完成实时核验：OpenD K线不足：23根",
+      "verify": "未完成实时核验：OpenD K线不足：24根",
       "last_kline_date": "",
       "reason": "来源：核心精选 / 原均线监控；策略动作：等待确认；地位：Ero Copper；环节：自选补充",
       "memo": "Ero Copper",
@@ -9998,7 +9998,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "",
-      "verify": "未完成实时核验：OpenD K线不足：109根",
+      "verify": "未完成实时核验：OpenD K线不足：110根",
       "last_kline_date": "",
       "reason": "来源：核心精选 / 原均线监控；策略动作：等待确认；地位：Frontier；环节：自选补充",
       "memo": "Frontier",
@@ -10346,7 +10346,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "",
-      "verify": "未完成实时核验：OpenD K线不足：106根",
+      "verify": "未完成实时核验：OpenD K线不足：107根",
       "last_kline_date": "",
       "reason": "来源：核心精选 / 原均线监控；策略动作：等待确认；地位：Shazaming?；环节：自选补充",
       "memo": "Shazaming?",
@@ -10694,7 +10694,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "",
-      "verify": "未完成实时核验：OpenD K线不足：21根",
+      "verify": "未完成实时核验：OpenD K线不足：22根",
       "last_kline_date": "",
       "reason": "来源：核心精选 / 原均线监控；策略动作：等待确认；地位：SPAC ETF；环节：自选补充",
       "memo": "SPAC ETF",
@@ -10955,7 +10955,7 @@
       "ret120": "",
       "market_cap": "",
       "star": "",
-      "verify": "未完成实时核验：OpenD K线不足：27根",
+      "verify": "未完成实时核验：OpenD K线不足：28根",
       "last_kline_date": "",
       "reason": "来源：核心精选 / 原均线监控；地位：Quantinuum；环节：13 量子·加密(打野)；未完成实时均线核验，先作为候选池管理",
       "memo": "Quantinuum",
@@ -26350,5 +26350,28 @@
         "low_from_prev_pct": "-0.86%"
       }
     ]
+  },
+  "timingPolicy": {
+    "generatedAt": "2026-07-15 22:18",
+    "report": "/Users/lingliang/Documents/Codex/股票分析/outputs/model_reviews/csn_timing_next_day_audit_20260715_2218.md",
+    "minSamples": 5,
+    "minWinRate": 0.55,
+    "allowRecommend": false,
+    "raw": {
+      "count": 153,
+      "win_count": 75,
+      "win_rate": 0.49019607843137253,
+      "avg": -0.0006143790849673204,
+      "median": -0.0005,
+      "avg_intraday": -0.0013699346405228758
+    },
+    "timingConfirmed": {
+      "count": 0,
+      "win_count": 0,
+      "win_rate": null,
+      "avg": null,
+      "median": null,
+      "avg_intraday": null
+    }
   }
 }
