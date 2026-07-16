@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
-  <title>CSN 研究与工具汇总</title>
+  <title>CSN 投研报告导航</title>
   <style>
     :root {
       --bg:#f3f6f8; --panel:#fff; --text:#172026; --muted:#68737d;
@@ -25,24 +25,6 @@
     }
     h1 { margin:0; font-size:clamp(24px,5vw,34px); line-height:1.15; }
     .sub { color:var(--muted); font-size:14px; }
-    .skill-section { margin:0 0 18px; padding:16px; border:1px solid #cbd5e1; border-radius:12px; background:#fff; box-shadow:0 10px 26px rgba(23,32,38,.05); }
-    .skill-head { display:flex; align-items:end; justify-content:space-between; gap:12px; margin-bottom:12px; }
-    .skill-head h2 { margin:0; font-size:19px; }
-    .skill-head p { margin:3px 0 0; color:var(--muted); font-size:12px; }
-    .skill-count { color:#6d28d9; font-size:13px; font-weight:900; white-space:nowrap; }
-    .skill-search { margin-bottom:12px; background:#faf7ff; border-color:#ddd6fe; }
-    .skill-groups { display:grid; gap:14px; }
-    .skill-group h3 { margin:0 0 7px; color:#475569; font-size:13px; }
-    .skill-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
-    .skill-card { display:grid; gap:7px; min-height:128px; padding:13px; border:1px solid #e2e8f0; border-radius:10px; background:#fbfcfe; }
-    .skill-card:hover { border-color:#c4b5fd; background:#faf7ff; }
-    .skill-card-head { display:flex; align-items:flex-start; justify-content:space-between; gap:8px; }
-    .skill-card strong { color:#312e81; font-size:13px; overflow-wrap:anywhere; }
-    .skill-card p { margin:0; color:#64748b; font-size:11px; line-height:1.55; }
-    .skill-status { flex:0 0 auto; padding:2px 6px; border-radius:999px; background:#f1f5f9; color:#64748b; font-size:9px; font-weight:900; }
-    .skill-status.public { background:#ede9fe; color:#6d28d9; }
-    .skill-card a { width:max-content; margin-top:auto; color:#6d28d9; font-size:11px; font-weight:900; text-decoration:none; }
-    .skill-card a:hover { text-decoration:underline; }
     .tools {
       position:sticky; top:0; z-index:5; display:grid; gap:9px; padding:10px 0;
       background:rgba(243,246,248,.94); backdrop-filter:blur(10px);
@@ -88,8 +70,6 @@
     @media (max-width:680px) {
       main { padding:10px; }
       header { padding:16px; }
-      .skill-head { align-items:flex-start; flex-direction:column; }
-      .skill-grid { grid-template-columns:1fr; }
       .row { grid-template-columns:1fr; gap:7px; }
       .title a { font-size:17px; }
     }
@@ -98,15 +78,9 @@
 <body>
 <main>
   <header>
-    <h1>CSN 研究与工具汇总</h1>
-    <div class="sub">统一查看自建 Skill 清单，以及已公开的行业与主题策略研究。</div>
+    <h1>CSN 投研报告导航</h1>
+    <div class="sub">统一收录已公开的行业与主题策略研究。</div>
   </header>
-
-  <section class="skill-section" id="skills" aria-labelledby="skillsTitle">
-    <div class="skill-head"><div><h2 id="skillsTitle">我的 Skills</h2><p>来自“整理 skill 名单”对话；GitHub 标签可直接打开公开源码。</p></div><span class="skill-count" id="skillCount">读取中</span></div>
-    <input class="skill-search" id="skillSearch" type="search" placeholder="搜索 Skill 名称、用途或分类……" autocomplete="off">
-    <div class="skill-groups" id="skillGroups"></div>
-  </section>
 
   <section class="tools" aria-label="报告筛选">
     <input id="searchInput" type="search" placeholder="搜索报告、公司或标签……" autocomplete="off" />
@@ -121,14 +95,12 @@
   <section id="groups" class="groups" aria-live="polite"></section>
   <div id="empty" class="empty">没有匹配到报告。</div>
 
-  <footer>Skill 模块区分 GitHub 已公开与仅本地使用；研报区仅收录已公开的非每日更新报告。</footer>
+  <footer>仅收录已公开的非每日更新投研报告；行情、价格和结论仍需按报告数据截止日理解。</footer>
 </main>
 
 <script>
   const CATEGORY_ORDER = ["主题策略", "行业研究"];
-  const SKILL_CATEGORY_ORDER = ["择时与交易", "回撤与形态", "组合与主线", "财报与发布", "写作与维护"];
   let entries = [];
-  let skillEntries = [];
   let activeCategory = "全部";
 
   const groups = document.querySelector("#groups");
@@ -136,9 +108,6 @@
   const searchInput = document.querySelector("#searchInput");
   const resultCount = document.querySelector("#resultCount");
   const filters = [...document.querySelectorAll(".filter")];
-  const skillSearch = document.querySelector("#skillSearch");
-  const skillGroups = document.querySelector("#skillGroups");
-  const skillCount = document.querySelector("#skillCount");
 
   function escapeHtml(value) {
     return String(value).replace(/[&<>'"]/g, char => ({
@@ -191,46 +160,12 @@
     }
   }
 
-  function renderSkills() {
-    const keyword = skillSearch.value.trim().toLowerCase();
-    const filtered = skillEntries.filter(entry =>
-      !keyword || [entry.id, entry.name, entry.category, entry.description, entry.status].join(" ").toLowerCase().includes(keyword)
-    );
-    skillGroups.innerHTML = SKILL_CATEGORY_ORDER.map(category => {
-      const items = filtered.filter(entry => entry.category === category);
-      if (!items.length) return "";
-      const cards = items.map(entry => `
-        <article class="skill-card">
-          <div class="skill-card-head"><strong>${escapeHtml(entry.name)}</strong><span class="skill-status ${entry.url ? "public" : ""}">${escapeHtml(entry.status)}</span></div>
-          <p>${escapeHtml(entry.description)}</p>
-          ${entry.url ? `<a href="${escapeHtml(entry.url)}" target="_blank" rel="noopener">查看源码 ↗</a>` : ""}
-        </article>`).join("");
-      return `<section class="skill-group"><h3>${escapeHtml(category)} · ${items.length}</h3><div class="skill-grid">${cards}</div></section>`;
-    }).join("");
-    skillCount.textContent = `${filtered.length} / ${skillEntries.length}`;
-  }
-
-  async function loadSkills() {
-    try {
-      const response = await fetch("skills.json", { cache: "no-store" });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      skillEntries = await response.json();
-      renderSkills();
-    } catch (error) {
-      console.error("Failed to load skill manifest", error);
-      skillCount.textContent = "加载失败";
-      skillGroups.innerHTML = '<div class="empty" style="display:block">Skill 清单加载失败，请稍后刷新。</div>';
-    }
-  }
-
   searchInput.addEventListener("input", render);
   filters.forEach(button => button.addEventListener("click", () => {
     activeCategory = button.dataset.category;
     filters.forEach(item => item.classList.toggle("active", item === button));
     render();
   }));
-  skillSearch.addEventListener("input", renderSkills);
-  loadSkills();
   loadReports();
 </script>
 </body>
