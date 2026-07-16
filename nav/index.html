@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
-  <title>CSN 投研报告导航</title>
+  <title>CSN 研究与工具汇总</title>
   <style>
     :root {
       --bg:#f3f6f8; --panel:#fff; --text:#172026; --muted:#68737d;
@@ -25,6 +25,39 @@
     }
     h1 { margin:0; font-size:clamp(24px,5vw,34px); line-height:1.15; }
     .sub { color:var(--muted); font-size:14px; }
+    .dynamic-tools { margin:0 0 14px; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:12px; margin:0 0 8px; }
+    .section-head h2 { margin:0; font-size:18px; }
+    .section-head span { color:var(--muted); font-size:12px; }
+    .tool-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    .tool-card {
+      position:relative; display:grid; gap:10px; min-height:150px; padding:17px;
+      color:#eefbf4; text-decoration:none; overflow:hidden; border:1px solid #25463a;
+      border-radius:12px; background:linear-gradient(145deg,#0c1812,#11271b);
+      box-shadow:0 10px 26px rgba(23,32,38,.08); transition:transform .16s,border-color .16s;
+    }
+    .tool-card:nth-child(2) { border-color:#34445f; background:linear-gradient(145deg,#111827,#172238); }
+    .tool-card:hover { transform:translateY(-2px); border-color:#76ef76; }
+    .tool-top { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .tool-icon {
+      width:44px; height:44px; display:grid; place-items:center; border-radius:11px;
+      color:#07100c; background:#76ef76; box-shadow:0 8px 20px rgba(118,239,118,.18);
+    }
+    .tool-card:nth-child(2) .tool-icon { color:#0c1424; background:#7dd3fc; box-shadow:0 8px 20px rgba(125,211,252,.16); }
+    .tool-icon svg { width:25px; height:25px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .tool-cta {
+      display:inline-flex; align-items:center; gap:6px; min-height:34px; padding:6px 11px;
+      border:1px solid rgba(118,239,118,.3); border-radius:8px; color:#b8ff7a;
+      background:rgba(118,239,118,.07); font-size:11px; font-weight:900;
+    }
+    .tool-card:nth-child(2) .tool-cta { border-color:rgba(125,211,252,.3); color:#bae6fd; background:rgba(125,211,252,.07); }
+    .tool-kind { color:#76ef76; font-size:10px; font-weight:900; letter-spacing:.14em; }
+    .tool-card:nth-child(2) .tool-kind { color:#7dd3fc; }
+    .tool-title { font-size:20px; font-weight:900; letter-spacing:-.02em; }
+    .tool-desc { color:#9eb2a5; font-size:12px; line-height:1.6; max-width:48ch; }
+    .tool-card:nth-child(2) .tool-desc { color:#aab6ca; }
+    .tool-tags { display:flex; flex-wrap:wrap; gap:6px; align-self:end; }
+    .tool-tags span { padding:3px 7px; border:1px solid rgba(190,224,200,.16); border-radius:999px; color:#b8c9bd; font-size:10px; }
     .tools {
       position:sticky; top:0; z-index:5; display:grid; gap:9px; padding:10px 0;
       background:rgba(243,246,248,.94); backdrop-filter:blur(10px);
@@ -70,6 +103,7 @@
     @media (max-width:680px) {
       main { padding:10px; }
       header { padding:16px; }
+      .tool-grid { grid-template-columns:1fr; }
       .row { grid-template-columns:1fr; gap:7px; }
       .title a { font-size:17px; }
     }
@@ -78,9 +112,29 @@
 <body>
 <main>
   <header>
-    <h1>CSN 投研报告导航</h1>
-    <div class="sub">统一收录已公开的行业、主题策略与公司深度分析；不包含每日选股、资金流等动态更新页。</div>
+    <h1>CSN 研究与工具汇总</h1>
+    <div class="sub">一个入口访问动态市场工具，以及已公开的行业、主题策略与公司深度分析。</div>
   </header>
+
+  <section class="dynamic-tools" aria-labelledby="dynamicToolsTitle">
+    <div class="section-head"><h2 id="dynamicToolsTitle">动态工具</h2><span>随市场数据更新</span></div>
+    <div class="tool-grid">
+      <a class="tool-card" href="../rs-thrust/">
+        <span class="tool-top"><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17l5-5 4 3 7-8"/><path d="M15 7h5v5"/><path d="M4 21h16"/></svg></span><span class="tool-cta">打开仪表盘 ↗</span></span>
+        <span class="tool-kind">RS THRUST MONITOR</span>
+        <span class="tool-title">正在加速的领导者</span>
+        <span class="tool-desc">从富途美股自选股中筛选相对强度领先、动能仍在加速的股票，支持分组、搜索与多列排序。</span>
+        <span class="tool-tags"><span>RS 仪表盘</span><span>富途自选股</span><span>每日刷新</span></span>
+      </a>
+      <a class="tool-card" href="../us-skew/">
+        <span class="tool-top"><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10h4v10"/><path d="M10 20V4h4v16"/><path d="M16 20v-7h4v7"/><path d="M3 20h18"/></svg></span><span class="tool-cta">打开直方图 ↗</span></span>
+        <span class="tool-kind">US WATCHLIST IV SKEW</span>
+        <span class="tool-title">美股 IV Skew 直方图</span>
+        <span class="tool-desc">观察自选股期权偏斜的横截面分布，识别保护性需求、风险温度与异常偏斜区间。</span>
+        <span class="tool-tags"><span>直方图</span><span>期权偏斜</span><span>风险雷达</span></span>
+      </a>
+    </div>
+  </section>
 
   <section class="tools" aria-label="报告筛选">
     <input id="searchInput" type="search" placeholder="搜索报告、公司或标签……" autocomplete="off" />
@@ -96,7 +150,7 @@
   <section id="groups" class="groups" aria-live="polite"></section>
   <div id="empty" class="empty">没有匹配到报告。</div>
 
-  <footer>仅收录已公开的非每日更新投研报告；行情、价格和结论仍需按报告数据截止日理解。</footer>
+  <footer>动态工具按页面所示日期更新；研报区仅收录已公开的非每日更新报告。行情、价格和结论仍需按各页面数据截止日理解。</footer>
 </main>
 
 <script>
