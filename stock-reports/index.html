@@ -72,7 +72,8 @@
       color: #063e39;
       background: #86efac;
     }
-    article:nth-child(2) .icon { color: #172554; background: #7dd3fc; }
+    article.skew-card .icon { color: #172554; background: #7dd3fc; }
+    article.skill-card .icon { color:#312e81; background:#c4b5fd; }
     .icon svg {
       width: 28px;
       height: 28px;
@@ -89,7 +90,8 @@
       font-weight: 850;
       letter-spacing: .13em;
     }
-    article:nth-child(2) .kind { color: #0369a1; }
+    article.skew-card .kind { color: #0369a1; }
+    article.skill-card .kind { color:#6d28d9; }
     .score {
       margin: 0 0 12px;
       color: var(--warn);
@@ -133,7 +135,7 @@
   <main>
     <header>
       <h1>市场工具汇总</h1>
-      <p class="sub">集中访问每日更新的美股研究仪表盘与风险直方图。</p>
+      <p class="sub">集中访问每日更新的美股研究工具，以及公开发布的 Skill 源码与安装包。</p>
     </header>
 
     <section class="grid" aria-label="报告列表">
@@ -148,7 +150,19 @@
         </div>
       </article>
 
-      <article>
+      <article class="skill-card">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 9l-3 3 3 3"/><path d="M16 9l3 3-3 3"/><path d="M14 5l-4 14"/></svg></div>
+        <p class="kind">GITHUB SKILL LIBRARY</p>
+        <h2>我的投资研究 Skills</h2>
+        <p class="score">公开源码 · 可下载使用</p>
+        <p class="note">集中查看已经上传到 GitHub 的择时、回撤、财报、缠论与提醒类 Skill 源码及配套文件。</p>
+        <div class="links">
+          <a class="pill" href="https://github.com/iroryagame-afk/ai/tree/main/skills" target="_blank" rel="noopener">查看 Skill 源码 ↗</a>
+          <a class="pill" href="https://github.com/iroryagame-afk/ai/tree/main/skill-packages" target="_blank" rel="noopener">下载打包文件 ↗</a>
+        </div>
+      </article>
+
+      <article class="skew-card">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10h4v10"/><path d="M10 20V4h4v16"/><path d="M16 20v-7h4v7"/><path d="M3 20h18"/></svg></div>
         <p class="kind">US WATCHLIST IV SKEW</p>
         <h2>美股 IV Skew 直方图</h2>
