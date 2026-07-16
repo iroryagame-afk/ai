@@ -1,0 +1,17 @@
+[
+  {"id":"a-stock-position-timing","name":"A股择时","category":"择时与交易","description":"A股 T+1 买卖点、支撑压力与次日执行计划。","url":null,"status":"本地"},
+  {"id":"stock-position-timing","name":"美股/港股择时","category":"择时与交易","description":"非A股标的的买卖点、追涨判断与波段执行。","url":"https://github.com/iroryagame-afk/ai/tree/main/skills/stock-position-timing","status":"GitHub"},
+  {"id":"futuapi-confirmed-trade","name":"富途确认交易","category":"择时与交易","description":"预览、确认、下单、撤单及半自动交易授权边界。","url":null,"status":"本地"},
+  {"id":"futuapi-readonly","name":"富途只读兼容层","category":"择时与交易","description":"富途只读行情底层兼容入口，现为 legacy。","url":null,"status":"本地·Legacy"},
+  {"id":"a-stock-drawdown-rebound","name":"A股回撤与反弹回测","category":"回撤与形态","description":"A股历史回撤、反弹修复与价格密集区回测。","url":"https://github.com/iroryagame-afk/ai/tree/main/skills/a-stock-drawdown-rebound","status":"GitHub"},
+  {"id":"stock-drawdown-alerts","name":"跨市场回撤提醒","category":"回撤与形态","description":"回撤概率、ATR、修复梯度、ABC 扩展与富途提醒。","url":"https://github.com/iroryagame-afk/ai/tree/main/skills/stock-drawdown-alerts","status":"GitHub"},
+  {"id":"stock-pattern-scenario-reminders","name":"形态情景与提醒","category":"回撤与形态","description":"头肩、双底、VCP 等结构识别、三情景路径与提醒。","url":null,"status":"本地"},
+  {"id":"chanlun-futu-drawing","name":"缠论富途画图","category":"回撤与形态","description":"使用富途 OpenD 数据生成缠论结构图和买卖点预案。","url":"https://github.com/iroryagame-afk/ai/tree/main/skills/chanlun-futu-drawing","status":"GitHub"},
+  {"id":"holding-review","name":"A股持仓复盘","category":"组合与主线","description":"A股持仓截图复盘、集中度、减仓换仓与执行委托。","url":null,"status":"本地"},
+  {"id":"us-holdings-review","name":"美股持仓复盘","category":"组合与主线","description":"美股与 ETF 持仓检视、释放现金和替换计划。","url":null,"status":"本地"},
+  {"id":"cross-market-mainline","name":"A股/美股主线对比","category":"组合与主线","description":"独立核验两个市场主线并输出强度排名与对比。","url":null,"status":"本地"},
+  {"id":"earnings-sellside-flash","name":"卖方财报快评","category":"财报与发布","description":"业绩预期差、三档目标价、竖屏财报图与提醒同步。","url":"https://github.com/iroryagame-afk/ai/tree/main/skills/earnings-sellside-flash","status":"GitHub"},
+  {"id":"mda100-single-page-publish","name":"mda100 单页发布","category":"财报与发布","description":"mda100 生成、双重校验、GitHub 发布与线上回读。","url":null,"status":"本地"},
+  {"id":"dinapoli-tech-thread","name":"DiNapoli 技术线程","category":"写作与维护","description":"把已核验研究转换为投资或科技主题线程。","url":null,"status":"本地"},
+  {"id":"neat-freak","name":"项目知识收尾","category":"写作与维护","description":"项目规则、文档、记忆和产物的一致性清理。","url":"https://github.com/iroryagame-afk/ai/tree/main/skills/neat-freak","status":"GitHub"}
+]
