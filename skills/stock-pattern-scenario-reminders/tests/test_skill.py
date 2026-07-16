@@ -174,6 +174,24 @@ class PatternSkillTest(unittest.TestCase):
         self.assertEqual(result["status"], "DRY_RUN_NO_FUTU_WRITE")
         self.assertEqual(len(result["stocks"]["US.PLTR"]), 3)
         self.assertTrue(all(row["freq"] == "ALWAYS" for row in result["stocks"]["US.PLTR"]))
+        self.assertEqual(result["stocks"]["US.PLTR"][0]["price"], 139.0)
+
+    def test_new_price_field_and_legacy_value_field_are_both_supported(self):
+        modern = json.loads(json.dumps(self.plan, ensure_ascii=False))
+        for reminder in modern["reminders"]:
+            reminder["price"] = reminder.pop("value")
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "modern.json"
+            path.write_text(json.dumps(modern, ensure_ascii=False), encoding="utf-8")
+            loaded = syncer.load_plans([path])
+        self.assertEqual(syncer.reminder_price(loaded[0]["reminders"][0]), 139.0)
+        self.assertEqual(syncer.reminder_price(self.plan["reminders"][0]), 139.0)
+
+    def test_chart_reminder_write_requires_exact_same_turn_authorization(self):
+        self.assertFalse(renderer.authorize_reminder_write(False, ""))
+        with self.assertRaises(ValueError):
+            renderer.authorize_reminder_write(True, "yes")
+        self.assertTrue(renderer.authorize_reminder_write(True, "WRITE_FUTU_PATTERN_REMINDERS"))
 
     def test_long_note_rejected(self):
         broken = json.loads(json.dumps(self.plan, ensure_ascii=False))

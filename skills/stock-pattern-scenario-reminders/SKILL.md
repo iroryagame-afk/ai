@@ -174,9 +174,9 @@ HOME=.runtime/futu_home .venv/bin/python \
 
 图面形态标题只写最终识别到的正向分类，例如“高位复合顶部破位”或“复合双底候选”。不在图面写“非头肩底”、“不是双底”等排除性判断；被否定的形态只保留在 `assessment.contradictions` 或文字审计中。
 
-### 7. 富途提醒：先计划，后授权
+### 7. 富途提醒：默认预览；同轮授权后随图自动写入
 
-计划 JSON 的 `reminders` 默认只放三条：
+计划 JSON 的 `reminders` 默认只放三条，价格字段统一写 `price`；读取旧计划时兼容 `value`：
 
 1. 向上确认位；
 2. 第一风险位；
@@ -196,7 +196,21 @@ HOME=.runtime/futu_home .venv/bin/python \
   --plan outputs/stock-pattern-analysis/pltr-plan.json
 ```
 
-只有用户明确说“写入、添加、更新富途提醒”后才执行：
+只有用户明确说“写入、添加、更新、自动加富途提醒”后才执行。该指令只授权本轮明确点名的股票；不得跨股票、跨后续轮次沿用。
+
+若本轮同时要求“做图 + 加提醒”，优先使用一条命令：PNG 成功生成后自动写入，随后立即回读。用户已经明确授权时不要重复追问：
+
+```bash
+HOME=.runtime/futu_home .venv/bin/python \
+  .agents/skills/stock-pattern-scenario-reminders/scripts/render_pattern_chart.py \
+  --plan outputs/stock-pattern-analysis/pltr-plan.json \
+  --output-dir outputs/stock-pattern-images \
+  --png \
+  --apply-reminders --confirm WRITE_FUTU_PATTERN_REMINDERS \
+  --reminder-output-dir outputs/futu-reminders
+```
+
+若图已生成，仅补写提醒，执行：
 
 ```bash
 HOME=.runtime/futu_home .venv/bin/python \
@@ -213,6 +227,7 @@ HOME=.runtime/futu_home .venv/bin/python \
 - 频率固定为 `ALWAYS`。
 - 不删除用户其他提醒。
 - 写入后在同一次运行中回读价格和备注；只有全部一致才报告完成。
+- 只写提醒，不下单、不改单、不启用任何自动交易。
 - 触价只代表进入观察区。备注写“观察仓”时，仍需完成 K 线或回踩确认。
 
 ## 输出格式

@@ -80,9 +80,9 @@
     }
   ],
   "reminders": [
-    {"value": 139.0, "direction": "PRICE_UP", "note": "突破139｜不追·回踩136观察仓"},
-    {"value": 123.0, "direction": "PRICE_DOWN", "note": "跌破123｜减仓·收复再看"},
-    {"value": 106.0, "direction": "PRICE_DOWN", "note": "跌破106｜头部失效·止损"}
+    {"price": 139.0, "direction": "PRICE_UP", "note": "突破139｜不追·回踩136观察仓"},
+    {"price": 123.0, "direction": "PRICE_DOWN", "note": "跌破123｜减仓·收复再看"},
+    {"price": 106.0, "direction": "PRICE_DOWN", "note": "跌破106｜头部失效·止损"}
   ],
   "timing_overlay": {
     "market": "US",

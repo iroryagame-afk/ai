@@ -12,6 +12,23 @@ from pathlib import Path
 CONFIRM_TEXT = "WRITE_FUTU_PATTERN_REMINDERS"
 
 
+def reminder_price(reminder: dict) -> float:
+    """Return the canonical reminder price while accepting legacy plans."""
+    raw = reminder.get("price", reminder.get("value"))
+    if raw is None:
+        raise ValueError(f"reminder needs price: {reminder}")
+    return round(float(raw), 4)
+
+
+def normalized_rule(reminder: dict) -> dict:
+    return {
+        "price": reminder_price(reminder),
+        "direction": reminder["direction"],
+        "note": reminder["note"],
+        "freq": "ALWAYS",
+    }
+
+
 def load_plans(paths: list[Path]) -> list[dict]:
     plans = [json.loads(path.read_text(encoding="utf-8")) for path in paths]
     codes = [plan.get("code") for plan in plans]
@@ -27,10 +44,10 @@ def load_plans(paths: list[Path]) -> list[dict]:
             raise ValueError(f"{plan['code']} has more than 3 reminders")
         seen = set()
         for reminder in reminders:
-            value = round(float(reminder["value"]), 4)
-            if value in seen:
-                raise ValueError(f"{plan['code']} duplicate reminder value {value}")
-            seen.add(value)
+            price = reminder_price(reminder)
+            if price in seen:
+                raise ValueError(f"{plan['code']} duplicate reminder price {price}")
+            seen.add(price)
             if reminder.get("direction") not in {"PRICE_UP", "PRICE_DOWN"}:
                 raise ValueError(f"{plan['code']} invalid direction: {reminder}")
             note = str(reminder.get("note", ""))
@@ -44,12 +61,7 @@ def preview(plans: list[dict]) -> dict:
         "status": "DRY_RUN_NO_FUTU_WRITE",
         "stocks": {
             plan["code"]: [
-                {
-                    "value": float(reminder["value"]),
-                    "direction": reminder["direction"],
-                    "note": reminder["note"],
-                    "freq": "ALWAYS",
-                }
+                normalized_rule(reminder)
                 for reminder in plan["reminders"]
             ]
             for plan in plans
@@ -89,13 +101,8 @@ def apply_and_verify(plans: list[dict], host: str, port: int) -> tuple[dict, dic
                 raise RuntimeError(f"{code}: {existing}")
             rows = []
             for reminder in plan["reminders"]:
-                rule = {
-                    "value": round(float(reminder["value"]), 4),
-                    "direction": reminder["direction"],
-                    "note": reminder["note"],
-                    "freq": "ALWAYS",
-                }
-                matches = same_price(existing, rule["value"])
+                rule = normalized_rule(reminder)
+                matches = same_price(existing, rule["price"])
                 reminder_type = getattr(PriceReminderType, rule["direction"])
                 if matches is not None and len(matches):
                     key = matches.iloc[0]["key"]
@@ -105,7 +112,7 @@ def apply_and_verify(plans: list[dict], host: str, port: int) -> tuple[dict, dic
                         key=key,
                         reminder_type=reminder_type,
                         reminder_freq=PriceReminderFreq.ALWAYS,
-                        value=rule["value"],
+                        value=rule["price"],
                         note=rule["note"],
                     )
                     if ret == RET_OK:
@@ -117,16 +124,16 @@ def apply_and_verify(plans: list[dict], host: str, port: int) -> tuple[dict, dic
                         SetPriceReminderOp.ADD,
                         reminder_type=reminder_type,
                         reminder_freq=PriceReminderFreq.ALWAYS,
-                        value=rule["value"],
+                        value=rule["price"],
                         note=rule["note"],
                     )
                     operation = "ADD"
                 if ret != RET_OK:
-                    raise RuntimeError(f"{code} {rule['value']} {operation}: {data}")
+                    raise RuntimeError(f"{code} {rule['price']} {operation}: {data}")
                 rows.append({"op": operation, **rule})
             applied["stocks"][code] = {
                 "current": float(snapshots.loc[code]["last_price"]),
-                "rules": [dict(row) for row in plan["reminders"]],
+                "rules": [normalized_rule(row) for row in plan["reminders"]],
                 "applied": rows,
             }
 
@@ -137,15 +144,17 @@ def apply_and_verify(plans: list[dict], host: str, port: int) -> tuple[dict, dic
                 raise RuntimeError(f"{code} readback: {reminders}")
             checks = []
             for rule in plan["reminders"]:
-                matches = same_price(reminders, float(rule["value"]))
+                price = reminder_price(rule)
+                matches = same_price(reminders, price)
                 exact = matches[matches["note"].astype(str) == rule["note"]] if matches is not None and len(matches) else matches
                 enabled = True
                 if exact is not None and len(exact) and "is_enable" in exact.columns:
                     enabled = bool(exact.iloc[0]["is_enable"])
                 checks.append(
                     {
-                        "value": float(rule["value"]),
+                        "price": price,
                         "note": rule["note"],
+                        "enabled": enabled,
                         "verified": bool(exact is not None and len(exact) and enabled),
                     }
                 )
@@ -153,8 +162,9 @@ def apply_and_verify(plans: list[dict], host: str, port: int) -> tuple[dict, dic
     finally:
         ctx.close()
 
-    readback["verified_count"] = sum(row["verified"] for row in readback["stocks"].values())
-    readback["expected_count"] = len(readback["stocks"])
+    all_checks = [check for stock in readback["stocks"].values() for check in stock["checks"]]
+    readback["verified_count"] = sum(check["verified"] for check in all_checks)
+    readback["expected_count"] = len(all_checks)
     if readback["verified_count"] != readback["expected_count"]:
         raise RuntimeError("Futu reminder readback did not match all planned reminders")
     return applied, readback

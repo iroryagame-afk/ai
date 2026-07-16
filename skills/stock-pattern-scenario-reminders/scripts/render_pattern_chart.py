@@ -8,6 +8,7 @@ import html
 import json
 import subprocess
 import unicodedata
+from datetime import datetime
 from pathlib import Path
 from urllib.parse import quote
 
@@ -31,6 +32,17 @@ TEXT_COLORS = {
     "range": "#9c2f70",
     "bearish": "#ad3d08",
 }
+
+
+REMINDER_CONFIRM_TEXT = "WRITE_FUTU_PATTERN_REMINDERS"
+
+
+def authorize_reminder_write(apply_reminders: bool, confirm: str) -> bool:
+    if not apply_reminders:
+        return False
+    if confirm != REMINDER_CONFIRM_TEXT:
+        raise ValueError(f"reminder write requires exact confirmation: {REMINDER_CONFIRM_TEXT}")
+    return True
 
 
 def validate_plan(plan: dict) -> None:
@@ -389,6 +401,11 @@ def main() -> int:
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--png", action="store_true")
     parser.add_argument("--chrome", type=Path, default=Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"))
+    parser.add_argument("--apply-reminders", action="store_true", help="Write planned Futu reminders after chart render")
+    parser.add_argument("--confirm", default="", help="Exact reminder-write authorization phrase")
+    parser.add_argument("--reminder-output-dir", type=Path, default=Path("outputs/futu-reminders"))
+    parser.add_argument("--futu-host", default="127.0.0.1")
+    parser.add_argument("--futu-port", type=int, default=11111)
     args = parser.parse_args()
 
     plan = json.loads(args.plan.read_text(encoding="utf-8"))
@@ -401,6 +418,28 @@ def main() -> int:
     if args.png:
         render_png(html_path, png_path, args.chrome)
     result = {"html": str(html_path), "png": str(png_path) if args.png else None}
+    try:
+        reminder_authorized = authorize_reminder_write(args.apply_reminders, args.confirm)
+    except ValueError as exc:
+        raise SystemExit(f"Chart created, but {exc}") from exc
+    if reminder_authorized:
+        from sync_pattern_reminders import apply_and_verify, load_plans
+
+        plans = load_plans([args.plan])
+        applied, readback = apply_and_verify(plans, args.futu_host, args.futu_port)
+        args.reminder_output_dir.mkdir(parents=True, exist_ok=True)
+        stamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        applied_path = args.reminder_output_dir / f"{stamp}-pattern-reminders-applied.json"
+        readback_path = args.reminder_output_dir / f"{stamp}-pattern-reminders-readback.json"
+        applied_path.write_text(json.dumps(applied, ensure_ascii=False, indent=2), encoding="utf-8")
+        readback_path.write_text(json.dumps(readback, ensure_ascii=False, indent=2), encoding="utf-8")
+        result["futu_reminders"] = {
+            "status": readback["status"],
+            "applied": str(applied_path),
+            "readback": str(readback_path),
+            "verified_count": readback["verified_count"],
+            "expected_count": readback["expected_count"],
+        }
     print(json.dumps(result, ensure_ascii=False))
     return 0
 
