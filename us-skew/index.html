@@ -256,7 +256,7 @@
       <details>
         <summary>指标怎么计算，应该怎么看</summary>
         <div class="explain-content">
-          <div><h2>实际 Skew</h2><p>每个到期日选择最接近 +0.25 Delta 的 Call 与 −0.25 Delta 的 Put，计算 Put IV − Call IV；再对最近两个有效到期日取平均。</p></div>
+          <div><h2>实际 Skew</h2><p>每个到期日用相邻执行价的 IV 线性插值到 +0.25 Delta Call 与 −0.25 Delta Put，计算 Put IV − Call IV；再对最近两个有效到期日取平均。</p></div>
           <div><h2>自选分位</h2><p>0–100 只表示本次有效自选股之间的横截面位置。它不是原帖的一年历史 Skew Rank，不能跨日期直接比较。</p></div>
           <div><h2>交易含义</h2><p>正值通常对应更高的下行保护溢价；负值可能来自保护需求偏弱或 Call 追价偏热。Skew 描述期权定价结构，不预测股票必涨必跌。</p></div>
         </div>
@@ -268,7 +268,7 @@
       <details>
         <summary>数据质量与使用边界</summary>
         <div class="explain-content">
-          <div><h2>Delta 贴合</h2><p>绿色质量点表示目标 Delta 贴合良好；如果最近合约离 ±0.25 较远，会降为“可用”，避免把近似值说成精确值。</p></div>
+          <div><h2>Delta 插值</h2><p>绿色质量点表示目标 Delta 被相邻两档合约有效包围；包围区间过宽或只能回退到最近合约时，会降级为“可用”或“偏离”。</p></div>
           <div><h2>流动性</h2><p>页面读取选中翼端合约的未平仓量。OI 偏薄时，即使排名很高，也只应当作为提醒，不能单独形成交易结论。</p></div>
           <div><h2>时间边界</h2><p>本页使用最新已核验的期权快照。盘前看到的期权 IV 通常仍是上一交易日收盘附近数据，页面会明确显示时间。</p></div>
         </div>
@@ -293,7 +293,7 @@
     function signed(value,digits=3){const number=Number(value);return `${number>0?'+':''}${number.toFixed(digits)}`;}
     function shortDate(value){return String(value||'').slice(5);}
     function qualityText(row){
-      const delta={good:'Delta贴合',usable:'Delta近似',weak:'Delta偏离'}[row.quality]||row.quality;
+      const delta={good:'25Δ插值',usable:'Delta区间较宽',weak:'Delta回退'}[row.quality]||row.quality;
       const liquidity={good:'OI充足',usable:'OI可用',thin:'OI偏薄'}[row.liquidity]||row.liquidity;
       return `${delta} · ${liquidity}`;
     }
