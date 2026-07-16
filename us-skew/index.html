@@ -48,6 +48,7 @@
     }
     button,select,input { font:inherit; }
     button { color:inherit; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
     .shell { width:min(var(--max),100%); margin:0 auto; padding:28px 24px 44px; }
     .topbar { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; margin-bottom:24px; }
     .brand { display:flex; align-items:center; gap:14px; min-width:0; }
@@ -80,7 +81,7 @@
       display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
       margin-bottom:16px; padding:10px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface);
     }
-    .filter-set,.sort-set,.search-set { display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
+    .filter-set,.sort-set { display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
     .toolbar-label { color:var(--faint); padding:0 4px; }
     .filter-button {
       min-height:36px; padding:7px 11px; border:1px solid transparent; border-radius:8px;
@@ -90,7 +91,18 @@
     .filter-button:focus-visible,.sort-select:focus-visible,.search-input:focus-visible,.gauge-card:focus-visible,summary:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
     .filter-button[aria-pressed="true"] { background:var(--surface-3); border-color:var(--line-strong); }
     .sort-select { min-height:36px; padding:6px 32px 6px 10px; border:1px solid var(--line); border-radius:8px; background:var(--surface-2); color:var(--ink); }
-    .search-input { width:150px; min-height:36px; padding:6px 10px; border:1px solid var(--line); border-radius:8px; background:var(--surface-2); color:var(--ink); }
+    .search-panel {
+      position:sticky; top:10px; z-index:10; display:grid; grid-template-columns:minmax(240px,1fr) auto; gap:8px;
+      margin-bottom:12px; padding:10px; border:1px solid var(--line-strong); border-radius:var(--radius); background:var(--surface);
+    }
+    .search-field { display:grid; grid-template-columns:1fr auto; align-items:center; min-width:0; }
+    .search-input { width:100%; min-height:46px; padding:9px 108px 9px 14px; border:0; border-radius:8px; background:var(--surface-2); color:var(--ink); font-size:1rem; }
+    .search-input::placeholder { color:var(--muted); }
+    .search-shortcut { grid-area:1/1; justify-self:end; margin-right:12px; color:var(--faint); pointer-events:none; }
+    .search-clear { min-width:72px; min-height:46px; padding:9px 13px; border:1px solid var(--line); border-radius:8px; background:var(--surface-2); color:var(--muted); cursor:pointer; }
+    .search-clear:hover { color:var(--ink); border-color:var(--line-strong); }
+    .search-clear:disabled { opacity:.45; cursor:default; }
+    .search-meta { grid-column:1/-1; padding:0 4px; color:var(--muted); font-size:.82rem; }
 
     .selected-panel {
       display:grid; grid-template-columns:minmax(220px,1.25fr) repeat(4,minmax(120px,.62fr)); gap:18px;
@@ -181,9 +193,9 @@
       .summary-item + .summary-item { border-inline-start:0; border-top:1px solid var(--line); }
       .summary-bar { grid-column:1/-1; margin-top:2px; }
       .toolbar { align-items:flex-start; }
-      .filter-set,.sort-set,.search-set { width:100%; }
+      .filter-set,.sort-set { width:100%; }
       .sort-select { flex:1; min-width:0; }
-      .search-input { flex:1; width:auto; }
+      .search-panel { top:6px; grid-template-columns:1fr auto; }
       .gauge-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; }
       .gauge-card { padding:12px 10px 10px; }
       .selected-panel { gap:13px; padding:14px; }
@@ -224,6 +236,12 @@
       </article>
     </section>
 
+    <section class="search-panel" role="search" aria-label="搜索全部可计算标的">
+      <label class="search-field"><span class="sr-only">搜索代码或名称</span><input id="searchInput" class="search-input" type="search" placeholder="搜索全部可计算标的：代码或名称" autocomplete="off" aria-keyshortcuts="/"><span class="search-shortcut" aria-hidden="true">/ 搜索</span></label>
+      <button id="searchClear" class="search-clear" type="button" disabled>清除</button>
+      <span id="searchMeta" class="search-meta">可直接搜索全部可计算标的，不用先切换“可靠池”或“待复核”。</span>
+    </section>
+
     <section class="toolbar" aria-label="筛选和排序">
       <div class="filter-set">
         <span class="toolbar-label">显示</span>
@@ -233,7 +251,6 @@
         <button class="filter-button" type="button" data-filter="low" aria-pressed="false">低 Put Skew</button>
         <button class="filter-button" type="button" data-filter="review" aria-pressed="false">待复核 <span id="reviewCount"></span></button>
       </div>
-      <label class="search-set"><span class="toolbar-label">查找</span><input id="searchInput" class="search-input" type="search" placeholder="代码 / 名称"></label>
       <label class="sort-set"><span class="toolbar-label">排序</span>
         <select id="sortSelect" class="sort-select">
           <option value="rank-desc">可靠池排名：高到低</option>
@@ -328,8 +345,8 @@
       </button>`;
     }
     function visibleRows(){
-      const base=state.filter==='all'?state.rankedRows:state.filter==='review'?state.rows.filter(row=>!row.rank_eligible):state.rankedRows.filter(row=>row.bucket===state.filter);
       const query=state.query.trim().toLowerCase();
+      const base=query?state.rows:state.filter==='all'?state.rankedRows:state.filter==='review'?state.rows.filter(row=>!row.rank_eligible):state.rankedRows.filter(row=>row.bucket===state.filter);
       const rows=query?base.filter(row=>`${row.symbol} ${row.name}`.toLowerCase().includes(query)):[...base];
       if(state.sort==='skew-desc') rows.sort((a,b)=>b.skew-a.skew);
       else if(state.sort==='symbol-asc') rows.sort((a,b)=>a.symbol.localeCompare(b.symbol));
@@ -338,6 +355,10 @@
     }
     function render(){
       const rows=visibleRows();
+      const query=state.query.trim();
+      document.querySelector('#searchMeta').textContent=query?`全局搜索“${query}”：找到 ${rows.length} 只（已忽略当前分类）。`:`直接搜索全部 ${state.rows.length||'—'} 只可计算标的，不用先切换“可靠池”或“待复核”。`;
+      document.querySelector('#searchClear').disabled=!query;
+      empty.textContent=query?`没有找到“${query}”，请尝试股票代码或公司英文名。`:'当前筛选没有标的。';
       grid.innerHTML=rows.map(card).join('');
       empty.style.display=rows.length?'none':'block';
       grid.style.display=rows.length?'grid':'none';
@@ -377,13 +398,21 @@
       render();
     }));
     document.querySelector('#sortSelect').addEventListener('change',event=>{state.sort=event.target.value;render();});
-    document.querySelector('#searchInput').addEventListener('input',event=>{state.query=event.target.value;render();});
+    const searchInput=document.querySelector('#searchInput');
+    const clearSearch=()=>{state.query='';searchInput.value='';render();searchInput.focus();};
+    searchInput.addEventListener('input',event=>{state.query=event.target.value;render();});
+    document.querySelector('#searchClear').addEventListener('click',clearSearch);
+    document.addEventListener('keydown',event=>{
+      if(event.key==='/'&&!/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)){event.preventDefault();searchInput.focus();}
+      else if(event.key==='Escape'&&state.query)clearSearch();
+    });
 
     fetch(`./data.json?v=${Date.now()}`,{cache:'no-store'})
       .then(response=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json();})
       .then(payload=>{
         state.rows=payload.results||[];
         state.rankedRows=state.rows.filter(row=>row.rank_eligible);
+        searchInput.placeholder=`搜索全部 ${state.rows.length} 只：代码或名称`;
         if(!state.rows.length)throw new Error('数据文件没有有效标的');
         const optionTimes=state.rows.flatMap(row=>row.legs.flatMap(leg=>[leg.put.update_time,leg.call.update_time])).filter(Boolean).sort();
         const latest=optionTimes.at(-1)||state.rows[0].underlying_time;
