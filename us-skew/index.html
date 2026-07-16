@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0c111b">
+  <link rel="icon" href="data:,">
+  <title>US Watchlist IV Skew Radar</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg:oklch(0.15 0.025 255);
+      --surface:oklch(0.19 0.026 255);
+      --surface-2:oklch(0.225 0.027 255);
+      --surface-3:oklch(0.255 0.028 255);
+      --ink:oklch(0.95 0.012 250);
+      --muted:oklch(0.72 0.025 250);
+      --faint:oklch(0.54 0.025 250);
+      --line:oklch(0.35 0.035 250 / .62);
+      --line-strong:oklch(0.48 0.05 250 / .72);
+      --hot:oklch(0.72 0.19 28);
+      --hot-soft:oklch(0.28 0.07 28);
+      --mid:oklch(0.76 0.14 230);
+      --mid-soft:oklch(0.28 0.065 230);
+      --low:oklch(0.78 0.17 155);
+      --low-soft:oklch(0.28 0.065 155);
+      --warn:oklch(0.8 0.16 82);
+      --danger:oklch(0.69 0.19 26);
+      --focus:oklch(0.82 0.12 225);
+      --radius:12px;
+      --max:1480px;
+    }
+    * { box-sizing:border-box; }
+    html { background:var(--bg); }
+    body {
+      margin:0;
+      min-width:320px;
+      background:
+        radial-gradient(circle at 18% -8%, oklch(0.32 0.09 240 / .26), transparent 34rem),
+        radial-gradient(circle at 92% 6%, oklch(0.28 0.07 165 / .14), transparent 28rem),
+        var(--bg);
+      color:var(--ink);
+      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-size:14px;
+      line-height:1.5;
+    }
+    button,select,input { font:inherit; }
+    button { color:inherit; }
+    .shell { width:min(var(--max),100%); margin:0 auto; padding:28px 24px 44px; }
+    .topbar { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; margin-bottom:24px; }
+    .brand { display:flex; align-items:center; gap:14px; min-width:0; }
+    .brand-mark {
+      width:42px; height:42px; flex:0 0 auto; display:grid; place-items:center;
+      border:1px solid var(--line-strong); border-radius:10px; background:var(--surface);
+      color:var(--mid); font-variant-numeric:tabular-nums; font-weight:700;
+    }
+    h1 { margin:0; font-size:1.55rem; line-height:1.2; letter-spacing:-.025em; font-weight:700; text-wrap:balance; }
+    .subtitle { margin:5px 0 0; color:var(--muted); max-width:70ch; }
+    .asof { display:flex; align-items:center; gap:9px; color:var(--muted); white-space:nowrap; padding-top:7px; }
+    .status-dot { width:8px; height:8px; border-radius:50%; background:var(--low); box-shadow:0 0 0 4px oklch(0.78 0.17 155 / .12); }
+
+    .summary-strip {
+      display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+      border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--surface); margin-bottom:18px;
+    }
+    .summary-item { padding:16px 18px; min-width:0; }
+    .summary-item + .summary-item { border-inline-start:1px solid var(--line); }
+    .summary-head { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .summary-label { color:var(--muted); }
+    .summary-value { font-size:1.65rem; font-weight:700; font-variant-numeric:tabular-nums; }
+    .summary-bar { height:3px; margin-top:12px; background:var(--surface-3); overflow:hidden; border-radius:999px; }
+    .summary-bar span { display:block; height:100%; width:var(--share); background:var(--tone); }
+    .summary-item[data-bucket="high"] { --tone:var(--hot); }
+    .summary-item[data-bucket="balanced"] { --tone:var(--mid); }
+    .summary-item[data-bucket="low"] { --tone:var(--low); }
+
+    .toolbar {
+      display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      margin-bottom:16px; padding:10px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface);
+    }
+    .filter-set,.sort-set { display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
+    .toolbar-label { color:var(--faint); padding:0 4px; }
+    .filter-button {
+      min-height:36px; padding:7px 11px; border:1px solid transparent; border-radius:8px;
+      background:transparent; cursor:pointer; transition:background-color 180ms ease,border-color 180ms ease,color 180ms ease;
+    }
+    .filter-button:hover { background:var(--surface-2); }
+    .filter-button:focus-visible,.sort-select:focus-visible,.gauge-card:focus-visible,summary:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+    .filter-button[aria-pressed="true"] { background:var(--surface-3); border-color:var(--line-strong); }
+    .sort-select { min-height:36px; padding:6px 32px 6px 10px; border:1px solid var(--line); border-radius:8px; background:var(--surface-2); color:var(--ink); }
+
+    .selected-panel {
+      display:grid; grid-template-columns:minmax(220px,1.25fr) repeat(4,minmax(120px,.62fr)); gap:18px;
+      align-items:center; min-height:88px; padding:16px 18px; margin-bottom:18px;
+      border:1px solid var(--line); border-radius:var(--radius); background:var(--surface);
+    }
+    .selected-name { min-width:0; }
+    .selected-title { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+    .selected-symbol { font-size:1.35rem; font-weight:700; }
+    .selected-company { color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .state-pill,.quality-pill { display:inline-flex; align-items:center; min-height:24px; padding:3px 8px; border-radius:999px; font-size:.78rem; white-space:nowrap; }
+    .state-pill[data-bucket="high"] { background:var(--hot-soft); color:var(--hot); }
+    .state-pill[data-bucket="balanced"] { background:var(--mid-soft); color:var(--mid); }
+    .state-pill[data-bucket="low"] { background:var(--low-soft); color:var(--low); }
+    .selected-note { margin:7px 0 0; color:var(--muted); max-width:65ch; text-wrap:pretty; }
+    .selected-stat { min-width:0; }
+    .selected-stat span { display:block; color:var(--faint); font-size:.78rem; margin-bottom:3px; }
+    .selected-stat strong { display:block; font-size:1rem; font-weight:650; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+
+    .gauge-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
+    .gauge-card {
+      --tone:var(--mid); --soft:var(--mid-soft);
+      position:relative; min-width:0; padding:14px 14px 12px; overflow:hidden;
+      border:1px solid var(--line); border-radius:var(--radius); background:var(--surface);
+      cursor:pointer; text-align:start; transition:transform 180ms cubic-bezier(.22,1,.36,1),border-color 180ms ease,background-color 180ms ease;
+    }
+    .gauge-card[data-bucket="high"] { --tone:var(--hot); --soft:var(--hot-soft); }
+    .gauge-card[data-bucket="balanced"] { --tone:var(--mid); --soft:var(--mid-soft); }
+    .gauge-card[data-bucket="low"] { --tone:var(--low); --soft:var(--low-soft); }
+    .gauge-card:hover { transform:translateY(-2px); border-color:var(--line-strong); background:var(--surface-2); }
+    .gauge-card[aria-pressed="true"] { border-color:var(--tone); background:color-mix(in oklch,var(--surface) 78%,var(--soft)); }
+    .gauge-head { display:flex; align-items:flex-start; justify-content:space-between; gap:8px; min-height:42px; }
+    .ticker { display:block; font-size:1.05rem; font-weight:700; letter-spacing:.01em; }
+    .company { display:block; margin-top:2px; color:var(--faint); font-size:.76rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:18ch; }
+    .quality-dot { width:8px; height:8px; flex:0 0 auto; margin-top:6px; border-radius:50%; background:var(--low); }
+    .quality-dot[data-quality="caution"] { background:var(--warn); }
+    .dial { display:block; width:100%; height:auto; margin:1px auto -2px; }
+    .dial-track,.dial-progress { fill:none; stroke-width:9; stroke-linecap:round; }
+    .dial-track { stroke:var(--surface-3); }
+    .dial-progress { stroke:var(--tone); stroke-dasharray:var(--rank) 100; }
+    .dial-tick { stroke:var(--line-strong); stroke-width:1.25; }
+    .dial-needle { stroke:var(--tone); stroke-width:2; transform-origin:70px 66px; transform:rotate(var(--angle)); transition:transform 260ms cubic-bezier(.22,1,.36,1); }
+    .dial-hub { fill:var(--tone); }
+    .rank-number { fill:var(--ink); font-size:24px; font-weight:700; text-anchor:middle; font-variant-numeric:tabular-nums; }
+    .rank-label { fill:var(--faint); font-size:8px; text-anchor:middle; }
+    .card-foot { display:flex; align-items:center; justify-content:space-between; gap:8px; color:var(--muted); font-size:.76rem; }
+    .skew-value { color:var(--ink); font-variant-numeric:tabular-nums; }
+    .warning-mark { color:var(--warn); }
+    .empty { display:none; padding:40px 18px; border:1px solid var(--line); border-radius:var(--radius); color:var(--muted); text-align:center; }
+
+    .explain { margin-top:20px; border-top:1px solid var(--line); }
+    .explain details { border-bottom:1px solid var(--line); }
+    .explain summary { list-style:none; cursor:pointer; padding:15px 2px; font-weight:650; }
+    .explain summary::-webkit-details-marker { display:none; }
+    .explain summary::after { content:"＋"; float:right; color:var(--faint); }
+    .explain details[open] summary::after { content:"−"; }
+    .explain-content { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; padding:0 2px 18px; color:var(--muted); }
+    .explain-content h2 { margin:0 0 7px; color:var(--ink); font-size:.92rem; font-weight:650; }
+    .explain-content p { margin:0; max-width:70ch; text-wrap:pretty; }
+    .contract-table { width:100%; border-collapse:collapse; grid-column:1/-1; }
+    .contract-table th,.contract-table td { padding:8px 10px; border-bottom:1px solid var(--line); text-align:start; font-variant-numeric:tabular-nums; }
+    .contract-table th { color:var(--faint); font-size:.76rem; font-weight:600; }
+    .contract-table td { color:var(--muted); }
+    footer { margin-top:22px; display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; color:var(--faint); font-size:.76rem; }
+    .error { display:none; padding:18px; border:1px solid var(--danger); border-radius:var(--radius); color:var(--danger); background:oklch(0.23 0.05 26); }
+
+    @media (max-width:1100px) {
+      .gauge-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+      .selected-panel { grid-template-columns:minmax(240px,1.4fr) repeat(2,minmax(130px,.6fr)); }
+      .selected-name { grid-row:span 2; }
+    }
+    @media (max-width:820px) {
+      .shell { padding:20px 16px 36px; }
+      .topbar { display:grid; }
+      .asof { padding-top:0; }
+      .gauge-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+      .selected-panel { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .selected-name { grid-column:1/-1; grid-row:auto; }
+      .explain-content { grid-template-columns:1fr; }
+    }
+    @media (max-width:580px) {
+      .shell { padding:16px 12px 30px; }
+      .brand { align-items:flex-start; }
+      h1 { font-size:1.28rem; }
+      .summary-strip { grid-template-columns:1fr; }
+      .summary-item { display:grid; grid-template-columns:1fr auto; align-items:center; gap:8px; padding:11px 13px; }
+      .summary-item + .summary-item { border-inline-start:0; border-top:1px solid var(--line); }
+      .summary-bar { grid-column:1/-1; margin-top:2px; }
+      .toolbar { align-items:flex-start; }
+      .filter-set,.sort-set { width:100%; }
+      .sort-select { flex:1; min-width:0; }
+      .gauge-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; }
+      .gauge-card { padding:12px 10px 10px; }
+      .selected-panel { gap:13px; padding:14px; }
+      .company { max-width:13ch; }
+      .contract-scroll { overflow-x:auto; grid-column:1/-1; }
+      .contract-table { min-width:660px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      *,*::before,*::after { scroll-behavior:auto!important; transition-duration:.01ms!important; animation-duration:.01ms!important; animation-iteration-count:1!important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">25Δ</div>
+        <div>
+          <h1>US Watchlist · Put/Call IV Skew</h1>
+          <p class="subtitle">富途美股自选股的近端期权保护需求雷达</p>
+        </div>
+      </div>
+      <div class="asof"><span class="status-dot" aria-hidden="true"></span><span id="asOfText">正在读取数据…</span></div>
+    </header>
+
+    <section class="summary-strip" aria-label="Skew 分组汇总">
+      <article class="summary-item" data-bucket="high">
+        <div class="summary-head"><span class="summary-label">Put 避险相对偏高</span><strong id="highCount" class="summary-value">—</strong></div>
+        <div class="summary-bar"><span id="highBar"></span></div>
+      </article>
+      <article class="summary-item" data-bucket="balanced">
+        <div class="summary-head"><span class="summary-label">相对平衡</span><strong id="balancedCount" class="summary-value">—</strong></div>
+        <div class="summary-bar"><span id="balancedBar"></span></div>
+      </article>
+      <article class="summary-item" data-bucket="low">
+        <div class="summary-head"><span class="summary-label">Put 避险相对偏低</span><strong id="lowCount" class="summary-value">—</strong></div>
+        <div class="summary-bar"><span id="lowBar"></span></div>
+      </article>
+    </section>
+
+    <section class="toolbar" aria-label="筛选和排序">
+      <div class="filter-set">
+        <span class="toolbar-label">显示</span>
+        <button class="filter-button" type="button" data-filter="all" aria-pressed="true">全部</button>
+        <button class="filter-button" type="button" data-filter="high" aria-pressed="false">高 Put Skew</button>
+        <button class="filter-button" type="button" data-filter="balanced" aria-pressed="false">平衡</button>
+        <button class="filter-button" type="button" data-filter="low" aria-pressed="false">低 Put Skew</button>
+      </div>
+      <label class="sort-set"><span class="toolbar-label">排序</span>
+        <select id="sortSelect" class="sort-select">
+          <option value="rank-desc">自选分位：高到低</option>
+          <option value="skew-desc">实际 Skew：高到低</option>
+          <option value="symbol-asc">代码：A–Z</option>
+        </select>
+      </label>
+    </section>
+
+    <section id="selectedPanel" class="selected-panel" aria-live="polite">
+      <div class="selected-name">
+        <div class="selected-title"><strong id="selectedSymbol" class="selected-symbol">—</strong><span id="selectedCompany" class="selected-company"></span><span id="selectedState" class="state-pill" data-bucket="balanced">—</span></div>
+        <p id="selectedNote" class="selected-note">选择任一标的查看解释。</p>
+      </div>
+      <div class="selected-stat"><span>自选分位</span><strong id="selectedRank">—</strong></div>
+      <div class="selected-stat"><span>实际 Skew</span><strong id="selectedSkew">—</strong></div>
+      <div class="selected-stat"><span>到期样本</span><strong id="selectedExpiry">—</strong></div>
+      <div class="selected-stat"><span>质量 / 流动性</span><strong id="selectedQuality">—</strong></div>
+    </section>
+
+    <div id="errorBox" class="error" role="alert"></div>
+    <section id="gaugeGrid" class="gauge-grid" aria-label="自选股 Skew 仪表盘"></section>
+    <div id="emptyBox" class="empty">当前筛选没有标的。</div>
+
+    <section class="explain" aria-label="指标说明">
+      <details>
+        <summary>指标怎么计算，应该怎么看</summary>
+        <div class="explain-content">
+          <div><h2>实际 Skew</h2><p>每个到期日选择最接近 +0.25 Delta 的 Call 与 −0.25 Delta 的 Put，计算 Put IV − Call IV；再对最近两个有效到期日取平均。</p></div>
+          <div><h2>自选分位</h2><p>0–100 只表示本次有效自选股之间的横截面位置。它不是原帖的一年历史 Skew Rank，不能跨日期直接比较。</p></div>
+          <div><h2>交易含义</h2><p>正值通常对应更高的下行保护溢价；负值可能来自保护需求偏弱或 Call 追价偏热。Skew 描述期权定价结构，不预测股票必涨必跌。</p></div>
+        </div>
+      </details>
+      <details id="contractDetails">
+        <summary>当前选中标的的合约明细</summary>
+        <div class="explain-content"><div class="contract-scroll"><table class="contract-table"><thead><tr><th>到期日</th><th>DTE</th><th>Put IV / Δ / OI</th><th>Call IV / Δ / OI</th><th>单期 Skew</th></tr></thead><tbody id="contractRows"></tbody></table></div></div>
+      </details>
+      <details>
+        <summary>数据质量与使用边界</summary>
+        <div class="explain-content">
+          <div><h2>Delta 贴合</h2><p>绿色质量点表示目标 Delta 贴合良好；如果最近合约离 ±0.25 较远，会降为“可用”，避免把近似值说成精确值。</p></div>
+          <div><h2>流动性</h2><p>页面读取选中翼端合约的未平仓量。OI 偏薄时，即使排名很高，也只应当作为提醒，不能单独形成交易结论。</p></div>
+          <div><h2>时间边界</h2><p>本页使用最新已核验的期权快照。盘前看到的期权 IV 通常仍是上一交易日收盘附近数据，页面会明确显示时间。</p></div>
+        </div>
+      </details>
+    </section>
+
+    <footer><span>数据源：Futu OpenD（只读）</span><span>研究型期权情绪观察，不构成投资建议</span></footer>
+  </main>
+  <script>
+    const labels={high:'Put 避险相对偏高',balanced:'相对平衡',low:'Put 避险相对偏低'};
+    const notes={
+      high:'Put 相对 Call 的隐波溢价在本次自选股中偏高，说明下行保护需求相对更强；不代表股价必跌。',
+      balanced:'Put 与 Call 的相对隐波处于本次自选股的中间区域，暂未出现明显的单边倾斜。',
+      low:'Put 相对 Call 的隐波溢价在本次自选股中偏低，可能是保护需求偏弱或 Call 追价更热；不代表股价必涨。'
+    };
+    const state={rows:[],filter:'all',sort:'rank-desc',selected:null};
+    const grid=document.querySelector('#gaugeGrid');
+    const empty=document.querySelector('#emptyBox');
+    const errorBox=document.querySelector('#errorBox');
+
+    function escapeHtml(value){return String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));}
+    function signed(value,digits=3){const number=Number(value);return `${number>0?'+':''}${number.toFixed(digits)}`;}
+    function shortDate(value){return String(value||'').slice(5);}
+    function qualityText(row){
+      const delta={good:'Delta贴合',usable:'Delta近似',weak:'Delta偏离'}[row.quality]||row.quality;
+      const liquidity={good:'OI充足',usable:'OI可用',thin:'OI偏薄'}[row.liquidity]||row.liquidity;
+      return `${delta} · ${liquidity}`;
+    }
+    function caution(row){return row.quality!=='good'||row.liquidity==='thin'||row.legs.length<2;}
+    function angle(rank){return -118+Number(rank)*2.36;}
+    function ticks(){
+      return Array.from({length:13},(_,index)=>{const degrees=-118+index*(236/12);return `<line class="dial-tick" x1="70" y1="14" x2="70" y2="19" transform="rotate(${degrees} 70 66)"/>`;}).join('');
+    }
+    function card(row){
+      const rank=Math.round(Number(row.watchlist_percentile));
+      const warn=caution(row);
+      return `<button type="button" class="gauge-card" data-symbol="${escapeHtml(row.symbol)}" data-bucket="${escapeHtml(row.bucket)}" aria-pressed="${state.selected?.symbol===row.symbol}" aria-label="${escapeHtml(row.symbol)}，自选分位 ${rank}，实际 Skew ${signed(row.skew)}，${escapeHtml(qualityText(row))}" style="--rank:${Math.max(1,rank)};--angle:${angle(rank)}deg">
+        <span class="gauge-head"><span><span class="ticker">${escapeHtml(row.symbol)}</span><span class="company">${escapeHtml(row.name)}</span></span><span class="quality-dot" data-quality="${warn?'caution':'good'}" aria-label="${escapeHtml(qualityText(row))}"></span></span>
+        <svg class="dial" viewBox="0 0 140 104" role="img" aria-label="自选分位 ${rank}">
+          <path class="dial-track" pathLength="100" d="M22 82 A54 54 0 1 1 118 82"/>
+          <path class="dial-progress" pathLength="100" d="M22 82 A54 54 0 1 1 118 82"/>
+          ${ticks()}
+          <line class="dial-needle" x1="70" y1="66" x2="70" y2="27"/>
+          <circle class="dial-hub" cx="70" cy="66" r="3.5"/>
+          <text class="rank-number" x="70" y="66">${rank}</text>
+          <text class="rank-label" x="70" y="78">自选分位</text>
+        </svg>
+        <span class="card-foot"><span>Skew <span class="skew-value">${signed(row.skew)} pt</span></span><span class="${warn?'warning-mark':''}">${warn?'需复核':'数据完整'}</span></span>
+      </button>`;
+    }
+    function visibleRows(){
+      const rows=state.filter==='all'?[...state.rows]:state.rows.filter(row=>row.bucket===state.filter);
+      if(state.sort==='skew-desc') rows.sort((a,b)=>b.skew-a.skew);
+      else if(state.sort==='symbol-asc') rows.sort((a,b)=>a.symbol.localeCompare(b.symbol));
+      else rows.sort((a,b)=>b.watchlist_percentile-a.watchlist_percentile);
+      return rows;
+    }
+    function render(){
+      const rows=visibleRows();
+      grid.innerHTML=rows.map(card).join('');
+      empty.style.display=rows.length?'none':'block';
+      grid.style.display=rows.length?'grid':'none';
+      grid.querySelectorAll('.gauge-card').forEach(button=>button.addEventListener('click',()=>selectRow(state.rows.find(row=>row.symbol===button.dataset.symbol))));
+    }
+    function selectRow(row){
+      if(!row)return;
+      state.selected=row;
+      document.querySelector('#selectedSymbol').textContent=row.symbol;
+      document.querySelector('#selectedCompany').textContent=row.name;
+      const statePill=document.querySelector('#selectedState');
+      statePill.textContent=labels[row.bucket]; statePill.dataset.bucket=row.bucket;
+      let note=notes[row.bucket];
+      if(row.liquidity==='thin')note='当前选中翼端合约 OI 偏薄，排名只能作为提示，不能单独形成交易结论。';
+      else if(row.legs.length<2)note='当前只有一个有效到期日样本，不能与双到期平均的标的等量比较。';
+      else if(row.symbol==='TSM')note='两个到期日的 Skew 方向分化明显，近端事件和期限结构影响较大，平均值不代表稳定趋势。';
+      document.querySelector('#selectedNote').textContent=note;
+      document.querySelector('#selectedRank').textContent=Number(row.watchlist_percentile).toFixed(1);
+      document.querySelector('#selectedSkew').textContent=`${signed(row.skew)} pt`;
+      document.querySelector('#selectedExpiry').textContent=row.legs.map(leg=>shortDate(leg.expiry)).join(' / ');
+      document.querySelector('#selectedQuality').textContent=qualityText(row);
+      document.querySelector('#contractRows').innerHTML=row.legs.map(leg=>`<tr><td>${escapeHtml(leg.expiry)}</td><td>${escapeHtml(leg.dte)}</td><td>${escapeHtml(leg.put.iv.toFixed(3))} / ${escapeHtml(leg.put.delta.toFixed(3))} / ${escapeHtml(leg.put.open_interest)}</td><td>${escapeHtml(leg.call.iv.toFixed(3))} / ${escapeHtml(leg.call.delta.toFixed(3))} / ${escapeHtml(leg.call.open_interest)}</td><td>${signed(leg.skew)} pt</td></tr>`).join('');
+      render();
+    }
+    function setCounts(rows){
+      const total=rows.length||1;
+      ['high','balanced','low'].forEach(bucket=>{
+        const count=rows.filter(row=>row.bucket===bucket).length;
+        document.querySelector(`#${bucket}Count`).textContent=count;
+        document.querySelector(`#${bucket}Bar`).style.setProperty('--share',`${count/total*100}%`);
+      });
+    }
+    document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+      state.filter=button.dataset.filter;
+      document.querySelectorAll('[data-filter]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+      render();
+    }));
+    document.querySelector('#sortSelect').addEventListener('change',event=>{state.sort=event.target.value;render();});
+
+    fetch(`./data.json?v=${Date.now()}`,{cache:'no-store'})
+      .then(response=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json();})
+      .then(payload=>{
+        state.rows=payload.results||[];
+        if(!state.rows.length)throw new Error('数据文件没有有效标的');
+        const optionTimes=state.rows.flatMap(row=>row.legs.flatMap(leg=>[leg.put.update_time,leg.call.update_time])).filter(Boolean).sort();
+        const latest=optionTimes.at(-1)||state.rows[0].underlying_time;
+        document.querySelector('#asOfText').textContent=`OpenD 已核验 · 期权快照 ${latest}`;
+        setCounts(state.rows);
+        selectRow(state.rows.find(row=>row.symbol==='MRVL')||state.rows[0]);
+      })
+      .catch(error=>{
+        errorBox.style.display='block';
+        errorBox.textContent=`数据读取失败：${error.message}`;
+        document.querySelector('#asOfText').textContent='未完成数据核验';
+      });
+  </script>
+</body>
+</html>
