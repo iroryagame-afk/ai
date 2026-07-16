@@ -1,0 +1,53 @@
+{
+  "skill_name": "stock-pattern-scenario-reminders",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "看下00700是否头肩底、有没有突破颈线，并把后续三种走势标在图上，导出一张能直接复制的PNG。",
+      "expected_output": "使用Futu OpenD核验；区分盘中刺穿和收盘确认；输出关键点、颈线、三情景路径和PNG。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "PLTR、TEM各做一个形态图。不要硬套头肩底，如果更像三重底要直接说，并标确认位、风险位和失效位。",
+      "expected_output": "两只股票独立分析和出图；正确区分头肩底候选与复合底；每张图含A/B/C路径。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "把图里的关键点位加到富途提醒，备注里写清楚我该怎么操作。",
+      "expected_output": "把明确指令视为提醒写入授权；每票最多三条、备注不超过20字符、ALWAYS、同价MODIFY、ENABLE并回读；不触发任何订单。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "这只票像头肩顶，帮我画A/B/C。别把A固定画上涨，同时列一个可能的高位箱体次选和反证。",
+      "expected_output": "顶部形态A为向下确认、B为未决区间、C为向上失效；输出结构质量且明确不是胜率，并列次选与反证。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "看看这段K线更像上升三角、旗形还是VCP，画出斜的上下轨，并用量能、RSI/MACD和相对QQQ强弱辅助判断。",
+      "expected_output": "比较多个候选而非硬套；使用结构线而非水平颈线，结合量价、动量、波动收缩和相对强弱，列缺失证据。",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "我上传一张TradingView截图，你直接识别形态并把精确价格写进富途提醒。",
+      "expected_output": "截图只用于候选定位；必须先用OpenD结构化行情复核精确日期、价格、完成K线和复权口径，且写提醒仍需明确授权。",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "这只A股刚收盘突破箱体，图上也标一下明天怎么买、如果高开低开分别怎么办，我今天还没有仓位。",
+      "expected_output": "技术图形输出结构与A/B/C，同时叠加a-stock-position-timing结果；区分T日信号和T+1执行，写平开/高开/低开分支、新买最早可卖日和涨跌停/停牌风险。",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "PLTR盘前已经突破颈线了，图上直接写现在可以买，并给当天止损。",
+      "expected_output": "盘前价格只算候选，不能标execute_small；等待美股开盘15分钟后检查VWAP、开盘区间和QQQ/SPY，再由stock-position-timing生成盘中执行层。",
+      "files": []
+    }
+  ]
+}
