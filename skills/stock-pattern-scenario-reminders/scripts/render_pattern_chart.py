@@ -7,6 +7,7 @@ import argparse
 import html
 import json
 import subprocess
+import unicodedata
 from pathlib import Path
 from urllib.parse import quote
 
@@ -21,6 +22,14 @@ COLORS = {
     "grid": "#e8edf2",
     "text": "#17212b",
     "muted": "#7a8692",
+}
+
+TEXT_COLORS = {
+    "history": "#1269b5",
+    "neckline": "#a94c00",
+    "bullish": "#187c4d",
+    "range": "#9c2f70",
+    "bearish": "#ad3d08",
 }
 
 
@@ -74,12 +83,81 @@ def validate_plan(plan: dict) -> None:
             raise ValueError(f"Futu note exceeds 20 characters: {reminder['note']}")
 
 
-def svg_text(x, y, text, *, anchor="start", size=14, weight=400, fill=None) -> str:
+def svg_text(x, y, text, *, anchor="start", size=14, weight=400, fill=None, halo=False) -> str:
+    halo_attrs = ' stroke="#ffffff" stroke-width="4" paint-order="stroke" stroke-linejoin="round"' if halo else ""
     return (
         f'<text x="{x:.1f}" y="{y:.1f}" text-anchor="{anchor}" '
-        f'font-size="{size}" font-weight="{weight}" fill="{fill or COLORS["text"]}">'
+        f'font-size="{size}" font-weight="{weight}" fill="{fill or COLORS["text"]}"{halo_attrs}>'
         f"{html.escape(str(text))}</text>"
     )
+
+
+def text_units(text: str) -> float:
+    """Approximate rendered width: CJK counts as 1em, Latin/digits as 0.55em."""
+    units = 0.0
+    for char in str(text):
+        units += 1.0 if unicodedata.east_asian_width(char) in {"W", "F", "A"} else 0.55
+    return units
+
+
+def wrap_text(text: str, *, max_units: float = 16.5, max_lines: int = 2) -> list[str]:
+    """Wrap compact chart labels without splitting them into an unrelated fixed panel."""
+    source = str(text).strip()
+    if not source:
+        return []
+    lines: list[str] = []
+    current = ""
+    current_units = 0.0
+    index = 0
+    while index < len(source):
+        char = source[index]
+        char_units = text_units(char)
+        if current and current_units + char_units > max_units:
+            lines.append(current.rstrip())
+            current = ""
+            current_units = 0.0
+            if len(lines) == max_lines:
+                remainder = source[index:]
+                if remainder:
+                    last = lines[-1]
+                    while last and text_units(last + "…") > max_units:
+                        last = last[:-1]
+                    lines[-1] = last.rstrip() + "…"
+                return lines
+        current += char
+        current_units += char_units
+        index += 1
+    if current:
+        lines.append(current.rstrip())
+    return lines[:max_lines]
+
+
+def resolve_label_tops(blocks: list[dict], *, top: float, bottom: float, gap: float = 8) -> dict[str, float]:
+    """Place variable-height scenario blocks near path endpoints without collisions."""
+    ordered = sorted(blocks, key=lambda row: (float(row["desired_center"]), row["id"]))
+    available = bottom - top
+    required = sum(float(row["height"]) for row in ordered) + gap * max(len(ordered) - 1, 0)
+    if required > available:
+        raise ValueError("scenario labels exceed the available future-label track")
+
+    placed = []
+    cursor = top
+    for row in ordered:
+        height = float(row["height"])
+        desired_top = float(row["desired_center"]) - height / 2
+        actual_top = max(cursor, min(desired_top, bottom - height))
+        placed.append({"id": row["id"], "top": actual_top, "height": height})
+        cursor = actual_top + height + gap
+
+    overflow = placed[-1]["top"] + placed[-1]["height"] - bottom if placed else 0
+    if overflow > 0:
+        for row in placed:
+            row["top"] -= overflow
+    if placed and placed[0]["top"] < top:
+        shift = top - placed[0]["top"]
+        for row in placed:
+            row["top"] += shift
+    return {row["id"]: row["top"] for row in placed}
 
 
 def render_svg(plan: dict) -> str:
@@ -150,7 +228,7 @@ def render_svg(plan: dict) -> str:
         pieces.append(f'<rect x="{left}" y="{band_y:.1f}" width="{future_right-left}" height="{band_h:.1f}" fill="{COLORS["neckline"]}" opacity="0.16"/>')
         middle = (float(decision_zone["low"]) + float(decision_zone["high"])) / 2
         pieces.append(f'<line x1="{left}" y1="{y_price(middle):.1f}" x2="{future_right}" y2="{y_price(middle):.1f}" stroke="{COLORS["neckline"]}" stroke-width="2" stroke-dasharray="8 5"/>')
-        pieces.append(svg_text(future_right - 6, y_price(middle) - 8, decision_zone.get("label", "决策区"), anchor="end", size=13, weight=500))
+        pieces.append(svg_text(left + 8, y_price(middle) - 8, decision_zone.get("label", "决策区"), size=13, weight=500, fill=TEXT_COLORS["neckline"], halo=True))
 
     history_points = " ".join(f"{x_hist(i):.1f},{y_price(float(row['close'])):.1f}" for i, row in enumerate(history))
     pieces.append(f'<polygon points="{history_points} {history_right:.1f},{plot_bottom:.1f} {left:.1f},{plot_bottom:.1f}" fill="{COLORS["history"]}" opacity="0.08"/>')
@@ -193,20 +271,63 @@ def render_svg(plan: dict) -> str:
     pieces.append(f'<line x1="{history_right+18}" y1="{plot_top}" x2="{history_right+18}" y2="{plot_bottom}" stroke="{COLORS["grid"]}" stroke-width="2" stroke-dasharray="2 7"/>')
     pieces.append(svg_text(history_right + 30, plot_top + 16, "未来路径", size=12, fill=COLORS["muted"]))
 
-    scenario_label_positions = {"A": 125, "B": 300, "C": 405}
+    future_path_right = 1120
+    label_left = 1150
+    label_right = 1356
+    scenario_draws = []
     for scenario in scenarios:
         path = [float(value) for value in scenario["path"]]
         path[0] = float(plan["current"])
         points = []
         for index, value in enumerate(path):
-            px = history_right + index * (future_right - history_right) / max(len(path) - 1, 1)
+            px = history_right + index * (future_path_right - history_right) / max(len(path) - 1, 1)
             points.append((px, y_price(value)))
         color = COLORS[scenario["kind"]]
         pieces.append(f'<polyline points="{" ".join(f"{x:.1f},{y:.1f}" for x,y in points)}" fill="none" stroke="{color}" stroke-width="4" stroke-dasharray="9 6" stroke-linejoin="round"/>')
-        label_y = scenario_label_positions[scenario["id"]]
-        pieces.append(svg_text(1015, label_y, f"{scenario['id']} {scenario['label']}", size=14, weight=500))
-        pieces.append(svg_text(1015, label_y + 20, scenario.get("trigger", ""), size=12, fill=COLORS["muted"]))
-        pieces.append(svg_text(1015, label_y + 40, scenario.get("targets_label", ""), size=12, weight=500))
+        trigger_lines = wrap_text(scenario.get("trigger", ""), max_units=16.5, max_lines=2)
+        target_lines = wrap_text(scenario.get("targets_label", ""), max_units=16.5, max_lines=2)
+        block_height = 40 + 16 * len(trigger_lines) + 16 * len(target_lines)
+        scenario_draws.append(
+            {
+                "scenario": scenario,
+                "points": points,
+                "color": color,
+                "text_color": TEXT_COLORS[scenario["kind"]],
+                "trigger_lines": trigger_lines,
+                "target_lines": target_lines,
+                "height": block_height,
+                "desired_center": points[-1][1],
+            }
+        )
+
+    label_tops = resolve_label_tops(
+        [{"id": row["scenario"]["id"], "height": row["height"], "desired_center": row["desired_center"]} for row in scenario_draws],
+        top=plot_top + 30,
+        bottom=plot_bottom - 4,
+        gap=8,
+    )
+    for row in scenario_draws:
+        scenario = row["scenario"]
+        top = label_tops[scenario["id"]]
+        center = top + row["height"] / 2
+        end_x, end_y = row["points"][-1]
+        color = row["color"]
+        text_color = row["text_color"]
+        pieces.append(f'<g data-scenario-label="{html.escape(scenario["id"])}" data-kind="{html.escape(scenario["kind"])}">')
+        pieces.append(f'<title>{html.escape(scenario.get("trigger", ""))} | {html.escape(scenario.get("targets_label", ""))}</title>')
+        pieces.append(f'<line x1="{end_x:.1f}" y1="{end_y:.1f}" x2="{label_left-8:.1f}" y2="{center:.1f}" stroke="{color}" stroke-width="2"/>')
+        pieces.append(f'<circle cx="{end_x:.1f}" cy="{end_y:.1f}" r="5" fill="{color}" stroke="#ffffff" stroke-width="2"/>')
+        pieces.append(f'<rect x="{label_left-8:.1f}" y="{top:.1f}" width="{label_right-label_left+8:.1f}" height="{row["height"]:.1f}" rx="8" fill="#ffffff" stroke="{color}" stroke-opacity="0.45"/>')
+        pieces.append(svg_text(label_left + 4, top + 19, f"{scenario['id']} {scenario['label']}", size=14, weight=600, fill=text_color))
+        cursor_y = top + 39
+        for line in row["trigger_lines"]:
+            pieces.append(svg_text(label_left + 4, cursor_y, line, size=12, fill=text_color))
+            cursor_y += 16
+        cursor_y += 2
+        for line in row["target_lines"]:
+            pieces.append(svg_text(label_left + 4, cursor_y, line, size=12, weight=600, fill=text_color))
+            cursor_y += 16
+        pieces.append("</g>")
 
     tick_indices = sorted(set([0, len(history) // 4, len(history) // 2, len(history) * 3 // 4, len(history) - 1]))
     for index in tick_indices:
@@ -219,8 +340,11 @@ def render_svg(plan: dict) -> str:
     lx = 360
     for label, color in legend:
         pieces.append(f'<line x1="{lx}" y1="522" x2="{lx+28}" y2="522" stroke="{color}" stroke-width="4"/>')
-        pieces.append(svg_text(lx + 38, 527, label, size=12, fill=COLORS["muted"]))
-        lx += 190
+        legend_text_color = TEXT_COLORS["history"] if color == COLORS["history"] else next(
+            TEXT_COLORS[kind] for kind in ("bullish", "range", "bearish") if COLORS[kind] == color
+        )
+        pieces.append(svg_text(lx + 38, 527, label, size=12, weight=500, fill=legend_text_color))
+        lx += max(170, min(220, 68 + text_units(label) * 9))
     pieces.append("</svg>")
     return "\n".join(pieces)
 

@@ -49,6 +49,10 @@ class PatternSkillTest(unittest.TestCase):
         self.assertIn("A 有效突破", svg)
         self.assertIn("B 区间整理", svg)
         self.assertIn("C 形态失效", svg)
+        self.assertIn('data-scenario-label="A"', svg)
+        self.assertIn(renderer.TEXT_COLORS["bullish"], svg)
+        self.assertIn(renderer.TEXT_COLORS["range"], svg)
+        self.assertIn(renderer.TEXT_COLORS["bearish"], svg)
         with tempfile.TemporaryDirectory() as tmp:
             output = Path(tmp) / "chart.html"
             output.write_text(renderer.standalone_html(svg), encoding="utf-8")
@@ -67,6 +71,20 @@ class PatternSkillTest(unittest.TestCase):
         broken["scenarios"][2]["kind"] = "bullish"
         with self.assertRaises(ValueError):
             renderer.validate_plan(broken)
+
+    def test_scenario_labels_follow_endpoint_order_without_overlap(self):
+        blocks = [
+            {"id": "A", "height": 72, "desired_center": 410},
+            {"id": "B", "height": 72, "desired_center": 280},
+            {"id": "C", "height": 72, "desired_center": 160},
+        ]
+        tops = renderer.resolve_label_tops(blocks, top=100, bottom=450, gap=8)
+        self.assertLess(tops["C"], tops["B"])
+        self.assertLess(tops["B"], tops["A"])
+        self.assertGreaterEqual(tops["B"], tops["C"] + 80)
+        self.assertGreaterEqual(tops["A"], tops["B"] + 80)
+        self.assertGreaterEqual(min(tops.values()), 100)
+        self.assertLessEqual(max(tops.values()) + 72, 450)
 
     def test_chart_status_rejects_negative_pattern_labels(self):
         broken = json.loads(json.dumps(self.plan, ensure_ascii=False))
