@@ -62,6 +62,19 @@
     .asof { display:flex; align-items:center; gap:9px; color:var(--muted); white-space:nowrap; padding-top:7px; }
     .status-dot { width:8px; height:8px; border-radius:50%; background:var(--low); box-shadow:0 0 0 4px oklch(0.78 0.17 155 / .12); }
 
+    .quick-guide {
+      display:flex; align-items:center; gap:10px 18px; flex-wrap:wrap;
+      margin:-8px 0 18px; padding:11px 14px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface);
+    }
+    .guide-title { color:var(--ink); font-weight:700; }
+    .guide-item { display:inline-flex; align-items:center; gap:7px; color:var(--muted); }
+    .guide-dot { width:9px; height:9px; flex:0 0 auto; border-radius:50%; background:var(--tone); }
+    .guide-item[data-tone="hot"] { --tone:var(--hot); }
+    .guide-item[data-tone="mid"] { --tone:var(--mid); }
+    .guide-item[data-tone="low"] { --tone:var(--low); }
+    .guide-item strong { color:var(--ink); font-weight:650; }
+    .guide-note { margin-left:auto; color:var(--faint); font-size:.82rem; }
+
     .summary-strip {
       display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
       border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--surface); margin-bottom:18px;
@@ -179,6 +192,9 @@
       .shell { padding:20px 16px 36px; }
       .topbar { display:grid; }
       .asof { padding-top:0; }
+      .quick-guide { align-items:flex-start; margin-top:-4px; }
+      .guide-item { width:100%; }
+      .guide-note { margin-left:0; }
       .gauge-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
       .selected-panel { grid-template-columns:repeat(2,minmax(0,1fr)); }
       .selected-name { grid-column:1/-1; grid-row:auto; }
@@ -220,6 +236,14 @@
       </div>
       <div class="asof"><span class="status-dot" aria-hidden="true"></span><span id="asOfText">正在读取数据…</span></div>
     </header>
+
+    <section class="quick-guide" aria-label="仪表盘三色使用说明">
+      <span class="guide-title">怎么用</span>
+      <span class="guide-item" data-tone="hot"><span class="guide-dot" aria-hidden="true"></span><strong>红色</strong>避险偏高，先查风险</span>
+      <span class="guide-item" data-tone="mid"><span class="guide-dot" aria-hidden="true"></span><strong>蓝色</strong>定价平衡，继续观察</span>
+      <span class="guide-item" data-tone="low"><span class="guide-dot" aria-hidden="true"></span><strong>绿色</strong>避险偏低，留意 Call 追价</span>
+      <span class="guide-note">只反映期权相对定价，不是买卖信号。</span>
+    </section>
 
     <section class="summary-strip" aria-label="Skew 分组汇总">
       <article class="summary-item" data-bucket="high">
