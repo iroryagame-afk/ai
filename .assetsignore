@@ -1,0 +1,19 @@
+# Repository and deployment internals must never be public assets.
+**/.git
+**/.git/**
+**/.wrangler
+**/.wrangler/**
+**/node_modules
+**/node_modules/**
+**/.DS_Store
+
+# Local secrets and private key material.
+**/.env
+**/.env.*
+**/.dev.vars
+**/.dev.vars.*
+**/*.pem
+**/*.key
+
+# Deployment configuration is not website content.
+wrangler.jsonc
