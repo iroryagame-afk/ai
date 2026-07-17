@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
+  <base target="_blank" />
   <title>CSN 投研报告导航</title>
   <style>
     :root {
@@ -102,9 +103,9 @@
 
   <nav class="market-links" aria-label="市场工具入口">
     <strong>市场工具</strong>
-    <a class="market-link" href="../rs-thrust/"><span class="market-icon" aria-hidden="true">▥</span><span class="market-copy"><b>相对强度加速图 ↗</b><small>找正在加速的强势股</small></span></a>
-    <a class="market-link" href="../us-skew/"><span class="market-icon" aria-hidden="true">⌁</span><span class="market-copy"><b>期权风险分布图 ↗</b><small>看保护需求与风险温度</small></span></a>
-    <a class="market-link csn-link" href="../csn/"><span class="market-icon" aria-hidden="true">★</span><span class="market-copy"><b>表姐严选 ↗</b><small>A股核心池每日筛选</small></span></a>
+    <a class="market-link" href="../rs-thrust/" rel="noopener"><span class="market-icon" aria-hidden="true">▥</span><span class="market-copy"><b>相对强度加速图 ↗</b><small>找正在加速的强势股</small></span></a>
+    <a class="market-link" href="../us-skew/" rel="noopener"><span class="market-icon" aria-hidden="true">⌁</span><span class="market-copy"><b>期权风险分布图 ↗</b><small>看保护需求与风险温度</small></span></a>
+    <a class="market-link csn-link" href="../csn/" rel="noopener"><span class="market-icon" aria-hidden="true">★</span><span class="market-copy"><b>表姐严选 ↗</b><small>美股核心池每日筛选</small></span></a>
   </nav>
 
   <section class="tools" aria-label="报告筛选">
@@ -154,7 +155,7 @@
       const rows = categoryEntries.map(entry => `
         <article class="row">
           <div class="date">${escapeHtml(entry.date)}</div>
-          <div class="title"><a href="${escapeHtml(entry.url)}">${escapeHtml(entry.title)}</a></div>
+          <div class="title"><a href="${escapeHtml(entry.url)}" rel="noopener">${escapeHtml(entry.title)}</a></div>
           <div class="meta">
             <div class="category">${escapeHtml(entry.category)}</div>
             <div class="tags">${entry.tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
