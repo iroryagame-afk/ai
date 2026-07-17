@@ -34,11 +34,14 @@
     .market-link {
       display:inline-flex; align-items:center; gap:7px; min-height:36px; padding:7px 11px;
       border:1px solid #a7d8cf; border-radius:8px; color:#0f766e; background:#e9f8f5;
-      font-size:13px; font-weight:900; text-decoration:none;
+      text-decoration:none;
     }
     .market-link + .market-link { border-color:#bfdbfe; color:#1d4ed8; background:#eff6ff; }
     .market-link:hover { filter:brightness(.97); text-decoration:underline; }
     .market-icon { font-size:15px; line-height:1; }
+    .market-copy { display:grid; gap:1px; }
+    .market-copy b { font-size:13px; line-height:1.2; }
+    .market-copy small { color:var(--muted); font-size:10px; font-weight:700; }
     .tools {
       position:sticky; top:0; z-index:5; display:grid; gap:9px; padding:10px 0;
       background:rgba(243,246,248,.94); backdrop-filter:blur(10px);
@@ -98,8 +101,8 @@
 
   <nav class="market-links" aria-label="市场工具入口">
     <strong>市场工具</strong>
-    <a class="market-link" href="../rs-thrust/"><span class="market-icon" aria-hidden="true">▥</span>RS Thrust 直方图 ↗</a>
-    <a class="market-link" href="../us-skew/"><span class="market-icon" aria-hidden="true">⌁</span>IV Skew 仪表盘 ↗</a>
+    <a class="market-link" href="../rs-thrust/"><span class="market-icon" aria-hidden="true">▥</span><span class="market-copy"><b>相对强度加速图 ↗</b><small>找正在加速的强势股</small></span></a>
+    <a class="market-link" href="../us-skew/"><span class="market-icon" aria-hidden="true">⌁</span><span class="market-copy"><b>期权风险分布图 ↗</b><small>看保护需求与风险温度</small></span></a>
   </nav>
 
   <section class="tools" aria-label="报告筛选">
