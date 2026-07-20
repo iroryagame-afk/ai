@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kimi K3政策真实性、公有云与私有化部署、受益公司排序、部署成本和技术位置汇总。">
+  <meta property="og:title" content="Kimi K3：谁真正受益，谁只是概念？">
+  <meta property="og:description" content="政策真实性 × 公有云/私有化 × 部署成本 × 技术位置">
+  <meta property="og:image" content="./kimi-k3-investment-map.png">
+  <title>Kimi K3：谁真正受益，谁只是概念？</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f2f2f0;
+      --ink: #24211f;
+      --teal: #1f7453;
+      --line: rgba(36, 33, 31, .16);
+      --card: rgba(255, 255, 255, .84);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(rgba(31,116,83,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(31,116,83,.045) 1px, transparent 1px),
+        var(--paper);
+      background-size: 24px 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+    a { color: inherit; }
+    .shell {
+      width: min(1100px, calc(100% - 24px));
+      margin: 0 auto;
+      padding: 22px 0 48px;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    .brand {
+      font-weight: 800;
+      letter-spacing: .06em;
+    }
+    .actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.72);
+      text-decoration: none;
+      font-weight: 650;
+    }
+    .button.primary {
+      color: white;
+      background: var(--teal);
+      border-color: var(--teal);
+    }
+    .hero {
+      margin-bottom: 14px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: 0 14px 45px rgba(36,33,31,.08);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 42px);
+      line-height: 1.16;
+      letter-spacing: -.03em;
+    }
+    .subtitle {
+      margin: 0;
+      color: rgba(36,33,31,.68);
+      line-height: 1.65;
+    }
+    .figure {
+      margin: 0;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 20px 65px rgba(36,33,31,.1);
+    }
+    .figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 11px;
+    }
+    .notes {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .panel {
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--card);
+      line-height: 1.65;
+    }
+    .panel h2 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+    .panel p, .panel ul { margin: 0; }
+    .panel ul { padding-left: 20px; }
+    .sources a {
+      text-decoration-color: rgba(31,116,83,.45);
+      text-underline-offset: 3px;
+    }
+    .stamp {
+      display: inline-block;
+      margin-top: 10px;
+      color: rgba(36,33,31,.58);
+      font-size: 12px;
+    }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 12px, 1100px); padding-top: 10px; }
+      .topbar { padding: 0 4px; }
+      .hero { padding: 15px; border-radius: 14px; }
+      .figure { padding: 3px; border-radius: 12px; }
+      .figure img { border-radius: 9px; }
+      .notes { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <nav class="topbar" aria-label="页面导航">
+      <span class="brand">CSNPK · 主题策略</span>
+      <span class="actions">
+        <a class="button" href="../nav/">返回研究导航</a>
+        <a class="button primary" href="./kimi-k3-investment-map.png" download>下载高清图</a>
+      </span>
+    </nav>
+
+    <header class="hero">
+      <h1>Kimi K3：谁真正受益，谁只是概念？</h1>
+      <p class="subtitle">政策真实性 × 公有云/私有化 × 部署成本 × 技术位置。数据截至 2026-07-20 收盘。</p>
+    </header>
+
+    <figure class="figure">
+      <a href="./kimi-k3-investment-map.png" title="打开原始尺寸">
+        <img src="./kimi-k3-investment-map.png" alt="Kimi K3投资受益、部署成本和技术位置总览">
+      </a>
+    </figure>
+
+    <section class="notes">
+      <article class="panel">
+        <h2>使用说明</h2>
+        <ul>
+          <li>“已上线”与“具备部署能力”严格分开，后者不代表已经获得 K3 订单。</li>
+          <li>技术目标是条件式量度目标，不是基本面估值或收益承诺。</li>
+          <li>私有化成本是按模型规模推导的工程预算框架，不是服务器厂商报价。</li>
+        </ul>
+      </article>
+      <article class="panel sources">
+        <h2>核心核验来源</h2>
+        <ul>
+          <li><a href="https://www.axios.com/2026/07/20/ai-us-china-open-source-kimi" target="_blank" rel="noreferrer">Axios：美国限制讨论</a></li>
+          <li><a href="https://cloud.tencent.com/document/product/1823/130675" target="_blank" rel="noreferrer">腾讯云 TokenHub 产品动态</a></li>
+          <li><a href="https://help.aliyun.com/zh/model-studio/model-pricing" target="_blank" rel="noreferrer">阿里云百炼模型价格</a></li>
+        </ul>
+        <span class="stamp">研究用途，不构成投资建议。</span>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
