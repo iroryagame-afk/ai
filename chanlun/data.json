@@ -1,0 +1,168 @@
+{
+  "source": "Futu OpenD",
+  "sessionDate": "2026-07-20",
+  "checksPassed": 339,
+  "checksTotal": 339,
+  "generatedAt": "2026-07-20T18:16:25.467920+08:00",
+  "indexes": [
+    {
+      "code": "SH.000001",
+      "fileCode": "SH_000001",
+      "name": "上证指数",
+      "latestKlineTime": "2026-07-20 15:00:00",
+      "lastPrice": 3796.2814,
+      "dayOpen": 3791.6616,
+      "dayHigh": 3831.6593,
+      "dayLow": 3741.1099,
+      "prevClose": 3764.1547,
+      "image": "/chanlun/SH_000001_30m_5m_1m_combined_chanlun.png",
+      "signals": [
+        {
+          "timeframe": "30m",
+          "signal": "B?观察；等待底分型确认后再判断1B",
+          "zone": "暂在中枢下沿下方（ZD 4073.73）",
+          "divergence": "底背驰观察：未完成笔创新极值，MACD暂缩至前段9%",
+          "center": {
+            "start": 26,
+            "end": 39,
+            "zd": 4073.7319,
+            "zg": 4103.9259,
+            "confirmed": true
+          }
+        },
+        {
+          "timeframe": "5m",
+          "signal": "1B候选；稳健等突破前高后的2B",
+          "zone": "暂在中枢下沿下方（ZD 3837.88）",
+          "divergence": "底背驰候选：价格创新极值，MACD力度缩至前段46%",
+          "center": {
+            "start": 58,
+            "end": 61,
+            "zd": 3837.8795,
+            "zg": 3854.168,
+            "confirmed": true
+          }
+        },
+        {
+          "timeframe": "1m",
+          "signal": "后续回踩不进中枢，再观察3B",
+          "zone": "暂在中枢上沿上方（ZG 3764.89）",
+          "divergence": "MACD未形成同向背驰确认",
+          "center": {
+            "start": 61,
+            "end": 66,
+            "zd": 3750.1404,
+            "zg": 3764.8901,
+            "confirmed": true
+          }
+        }
+      ]
+    },
+    {
+      "code": "SZ.399006",
+      "fileCode": "SZ_399006",
+      "name": "创业板指",
+      "latestKlineTime": "2026-07-20 15:00:00",
+      "lastPrice": 3443.1015,
+      "dayOpen": 3504.1162,
+      "dayHigh": 3550.5941,
+      "dayLow": 3338.2134,
+      "prevClose": 3428.6298,
+      "image": "/chanlun/SZ_399006_30m_5m_1m_combined_chanlun.png",
+      "signals": [
+        {
+          "timeframe": "30m",
+          "signal": "B?观察；等待底分型确认后再判断1B",
+          "zone": "暂在中枢下沿下方（ZD 3824.33）",
+          "divergence": "底背驰观察：未完成笔创新极值，MACD暂缩至前段24%",
+          "center": {
+            "start": 38,
+            "end": 42,
+            "zd": 3824.3295,
+            "zg": 3905.3115,
+            "confirmed": true
+          }
+        },
+        {
+          "timeframe": "5m",
+          "signal": "1B候选；稳健等突破前高后的2B",
+          "zone": "暂在中枢下沿下方（ZD 3487.99）",
+          "divergence": "底背驰候选：价格创新极值，MACD力度缩至前段81%",
+          "center": {
+            "start": 56,
+            "end": 65,
+            "zd": 3487.9913,
+            "zg": 3527.6345,
+            "confirmed": true
+          }
+        },
+        {
+          "timeframe": "1m",
+          "signal": "后续回踩不进中枢，再观察3B",
+          "zone": "暂在中枢上沿上方（ZG 3433.79）",
+          "divergence": "MACD未形成同向背驰确认",
+          "center": {
+            "start": 58,
+            "end": 62,
+            "zd": 3375.597,
+            "zg": 3433.7932,
+            "confirmed": true
+          }
+        }
+      ]
+    },
+    {
+      "code": "SH.000688",
+      "fileCode": "SH_000688",
+      "name": "科创50",
+      "latestKlineTime": "2026-07-20 15:00:00",
+      "lastPrice": 1718.6895,
+      "dayOpen": 1764.5933,
+      "dayHigh": 1776.0733,
+      "dayLow": 1646.3869,
+      "prevClose": 1715.4044,
+      "image": "/chanlun/SH_000688_30m_5m_1m_combined_chanlun.png",
+      "signals": [
+        {
+          "timeframe": "30m",
+          "signal": "1B候选；稳健等突破前高后的2B",
+          "zone": "暂在中枢下沿下方（ZD 1976.92）",
+          "divergence": "底背驰候选：价格创新极值，MACD力度缩至前段27%",
+          "center": {
+            "start": 30,
+            "end": 39,
+            "zd": 1976.9228,
+            "zg": 1982.9062,
+            "confirmed": true
+          }
+        },
+        {
+          "timeframe": "5m",
+          "signal": "1B候选；稳健等突破前高后的2B",
+          "zone": "暂在中枢下沿下方（ZD 1770.07）",
+          "divergence": "底背驰候选：价格创新极值，MACD力度缩至前段8%",
+          "center": {
+            "start": 57,
+            "end": 61,
+            "zd": 1770.0727,
+            "zg": 1793.4035,
+            "confirmed": true
+          }
+        },
+        {
+          "timeframe": "1m",
+          "signal": "后续回踩不进中枢，再观察3B",
+          "zone": "暂在中枢上沿上方（ZG 1680.26）",
+          "divergence": "MACD未形成同向背驰确认",
+          "center": {
+            "start": 61,
+            "end": 66,
+            "zd": 1657.1475,
+            "zg": 1680.2576,
+            "confirmed": true
+          }
+        }
+      ]
+    }
+  ]
+}
