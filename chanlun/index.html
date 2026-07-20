@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="300">
+  <title>A股三指数缠论复盘</title>
+  <style>
+    :root {
+      --bg: #0f1722;
+      --panel: #ffffff;
+      --text: #162033;
+      --muted: #64748b;
+      --line: #d7dfeb;
+      --accent: #ea4b71;
+      --accent-2: #2878c8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(40,120,200,0.18), transparent 26%),
+        linear-gradient(180deg, #0f1722 0%, #131d2c 22%, #eef2f8 22%, #eef2f8 100%);
+      color: var(--text);
+    }
+    .wrap {
+      width: min(1440px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+    header {
+      color: #f8fafc;
+      padding: 22px 8px 28px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 42px;
+      line-height: 1.08;
+    }
+    .sub {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      color: #c5d0de;
+      font-size: 16px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 18px 42px rgba(15, 23, 34, 0.08);
+    }
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 30px;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .price-box {
+      min-width: 140px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: #f5f8fc;
+      border: 1px solid #e3e9f3;
+      text-align: right;
+    }
+    .price-box span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .price-box strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 28px;
+      color: var(--accent);
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #f8fbff;
+    }
+    .signals {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+    }
+    .signals li {
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      background: linear-gradient(180deg, #fafcff 0%, #f5f8fc 100%);
+    }
+    .signals b {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: var(--accent-2);
+    }
+    .signals span {
+      display: block;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+    .signals em {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-style: normal;
+    }
+    footer {
+      margin-top: 18px;
+      padding: 0 8px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+    @media (max-width: 960px) {
+      .signals { grid-template-columns: 1fr; }
+      .card-head { flex-direction: column; }
+      .price-box { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>A股三指数缠论复盘</h1>
+      <div class="sub">
+        <span class="badge">交易日 2026-07-17</span>
+        <span class="badge">339/339 校验通过</span>
+        <span class="badge">页面每 300 秒自动刷新</span>
+      </div>
+    </header>
+    <div class="grid">
+      <section class="card">
+              <div class="card-head">
+                <div>
+                  <h2>上证指数</h2>
+                  <p>SH.000001 · 最新已核验收盘 2026-07-17 15:00:00</p>
+                </div>
+                <div class="price-box">
+                  <span>收盘</span>
+                  <strong>3764.15</strong>
+                </div>
+              </div>
+              <img src="SH_000001_30m_5m_1m_combined_chanlun.png?v=1784473150" alt="上证指数 合并图">
+              <ul class="signals">
+                <li><b>30m</b><span>反抽不回中枢警惕3S</span><em>最近中枢下方（ZD 4073.73）</em></li>
+<li><b>5m</b><span>反抽不回中枢警惕3S</span><em>最近中枢下方（ZD 3837.88）</em></li>
+<li><b>1m</b><span>反抽不回中枢警惕3S</span><em>最近中枢下方（ZD 3780.67）</em></li>
+              </ul>
+            </section>
+<section class="card">
+              <div class="card-head">
+                <div>
+                  <h2>创业板指</h2>
+                  <p>SZ.399006 · 最新已核验收盘 2026-07-17 15:00:00</p>
+                </div>
+                <div class="price-box">
+                  <span>收盘</span>
+                  <strong>3428.63</strong>
+                </div>
+              </div>
+              <img src="SZ_399006_30m_5m_1m_combined_chanlun.png?v=1784473150" alt="创业板指 合并图">
+              <ul class="signals">
+                <li><b>30m</b><span>反抽不回中枢警惕3S</span><em>最近中枢下方（ZD 3824.33）</em></li>
+<li><b>5m</b><span>1B候选；稳健等突破前高后的2B</span><em>最近中枢下方（ZD 3713.78）</em></li>
+<li><b>1m</b><span>反抽不回中枢警惕3S</span><em>最近中枢下方（ZD 3506.72）</em></li>
+              </ul>
+            </section>
+<section class="card">
+              <div class="card-head">
+                <div>
+                  <h2>科创50</h2>
+                  <p>SH.000688 · 最新已核验收盘 2026-07-17 15:00:00</p>
+                </div>
+                <div class="price-box">
+                  <span>收盘</span>
+                  <strong>1715.40</strong>
+                </div>
+              </div>
+              <img src="SH_000688_30m_5m_1m_combined_chanlun.png?v=1784473150" alt="科创50 合并图">
+              <ul class="signals">
+                <li><b>30m</b><span>1B候选；稳健等突破前高后的2B</span><em>最近中枢下方（ZD 1976.92）</em></li>
+<li><b>5m</b><span>反抽不回中枢警惕3S</span><em>最近中枢下方（ZD 1908.18）</em></li>
+<li><b>1m</b><span>反抽不回中枢警惕3S</span><em>最近中枢下方（ZD 1722.89）</em></li>
+              </ul>
+            </section>
+    </div>
+    <footer>数据源：Futu OpenD 已核验。自动刷新只刷新页面显示；新交易日内容需由复盘脚本产出并更新 latest 页面。</footer>
+  </main>
+</body>
+</html>
