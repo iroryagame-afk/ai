@@ -1,0 +1,53 @@
+{
+  "source": "HISTORICAL_STATS_VERIFIED_FUTU_OPEND_THROUGH_2026-07-15; CURRENT_CYCLE_PUBLIC_DAILY_BARS_THROUGH_2026-07-20",
+  "method": {
+    "price_basis": "daily_close",
+    "trigger": 0.05,
+    "bottom_confirmation_rebound": 0.05,
+    "regime": "bull",
+    "unit": "trading_days"
+  },
+  "current": {
+    "peak_date": "2026-06-22",
+    "peak": 655.01,
+    "trough_date": "2026-07-17",
+    "trough": 521.81,
+    "max_drawdown_pct": -20.34,
+    "latest_date": "2026-07-20",
+    "latest_close": 524.14,
+    "latest_drawdown_pct": -19.98,
+    "days_to_trough": 18,
+    "days_since_peak": 19,
+    "days_since_trough": 1,
+    "bucket": ">=20%",
+    "state": "bottom_unconfirmed"
+  },
+  "stats": {
+    "5%-10%": {
+      "n": 62,
+      "bottom_p25": 4.0,
+      "bottom_median": 6.0,
+      "bottom_p75": 12.0,
+      "recovery_median": 19.0,
+      "recovery_p75": 36.0
+    },
+    "10%-20%": {
+      "n": 37,
+      "bottom_p25": 7.0,
+      "bottom_median": 14.0,
+      "bottom_p75": 18.0,
+      "recovery_median": 58.5,
+      "recovery_p75": 139.5
+    },
+    ">=20%": {
+      "n": 2,
+      "bottom_p25": 30.0,
+      "bottom_median": 40.0,
+      "bottom_p75": 50.0,
+      "recovery_median": 293.5,
+      "recovery_p75": 297.8
+    }
+  },
+  "audit_note": "The time backtest uses daily closes. The 2026-07-17 intraday low of 498.54 remains a separate price-risk line and is not substituted into the close-based duration sample.",
+  "bias_warning": "Trough dates are retrospective endpoints confirmed only after a 5% rebound; they are not real-time buy signals. The >=20% bull sample has only two observations."
+}

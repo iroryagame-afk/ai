@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="科技股回调见底研究框架：SOXX价格、市场宽度、盈利预期、财报催化与韩国去杠杆的多源审计。">
+  <link rel="canonical" href="https://csnpk.com/tech-bottom-signals/">
+  <title>科技股回调见底框架｜投资决策简报</title>
+  <style>
+    :root{
+      --paper:#f6f7f9;--surface:#ffffff;--ink:#121926;--muted:#657083;--line:#dce1e8;
+      --navy:#102a43;--blue:#2457d6;--blue-soft:#eaf0ff;--red:#bd2c36;--red-soft:#fff0f1;
+      --amber:#9a5b00;--amber-soft:#fff6df;--green:#167052;--green-soft:#e9f8f1;
+      --shadow:0 8px 28px rgba(18,25,38,.07);--radius:14px;--max:1180px
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.72 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:3px}
+    a:hover{color:#183f9e}
+    .shell{max-width:var(--max);margin:auto;padding:0 28px 72px}
+    .masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 0;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.02em}
+    .brand-mark{display:grid;place-items:center;width:30px;height:30px;background:var(--navy);color:#fff;border-radius:8px;font-size:13px}
+    .mast-meta{display:flex;align-items:center;gap:18px;color:var(--muted);font-size:12px}
+    .mast-meta b{color:var(--ink)}
+    .jump{position:sticky;top:0;z-index:10;margin:0 -28px;padding:0 28px;background:rgba(246,247,249,.94);border-bottom:1px solid rgba(220,225,232,.86);backdrop-filter:blur(10px)}
+    .jump-inner{max-width:var(--max);margin:auto;display:flex;gap:22px;overflow-x:auto;scrollbar-width:none}
+    .jump-inner::-webkit-scrollbar{display:none}
+    .jump a{flex:0 0 auto;padding:12px 0;color:var(--muted);font-size:12px;font-weight:700;text-decoration:none}
+    .jump a:hover{color:var(--blue)}
+    .hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);gap:56px;padding:72px 0 58px;align-items:end}
+    .kicker{margin:0 0 15px;color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.12em}
+    .hero h1{max-width:780px;margin:0;font-size:clamp(40px,6vw,72px);line-height:1.05;letter-spacing:-.04em}
+    .hero h1 span{color:var(--red)}
+    .dek{max-width:720px;margin:25px 0 0;color:#3e4a5e;font-size:18px;line-height:1.75}
+    .decision-box{padding:24px;background:var(--navy);color:#fff;border-radius:var(--radius)}
+    .decision-box small{display:block;margin-bottom:8px;color:#a9c1d6;font-weight:700}
+    .decision-box strong{display:block;font-size:26px;line-height:1.25;letter-spacing:-.02em}
+    .decision-box p{margin:13px 0 0;color:#d6e2ec;font-size:13px}
+    .stamp-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .stamp{padding:17px 18px;border-right:1px solid var(--line)}
+    .stamp:last-child{border-right:0}
+    .stamp span{display:block;color:var(--muted);font-size:11px}
+    .stamp b{display:block;margin-top:3px;font-size:13px}
+    section{padding:62px 0 0;scroll-margin-top:42px}
+    .section-head{display:grid;grid-template-columns:210px minmax(0,1fr);gap:42px;margin-bottom:28px;align-items:start}
+    .section-label{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.08em}
+    h2{max-width:800px;margin:0;font-size:clamp(28px,4vw,42px);line-height:1.16;letter-spacing:-.035em}
+    .section-intro{max-width:72ch;margin:14px 0 0;color:var(--muted);font-size:16px}
+    .rule-band{display:grid;grid-template-columns:repeat(3,1fr);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .rule{position:relative;padding:28px 26px 26px;border-right:1px solid var(--line)}
+    .rule:last-child{border-right:0}
+    .rule-num{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px;color:var(--muted);font-size:12px;font-weight:800}
+    .rule-num b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--blue-soft);color:var(--blue)}
+    .rule h3{margin:0 0 10px;font-size:19px;line-height:1.35}
+    .rule .threshold{margin:0 0 14px;color:var(--navy);font-size:24px;font-weight:850;line-height:1.25;letter-spacing:-.02em}
+    .rule p{margin:0;color:var(--muted);font-size:13px}
+    .state{display:inline-flex;align-items:center;gap:7px}
+    .state::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+    .state.wait{color:var(--amber)}.state.fail{color:var(--red)}.state.safe{color:var(--green)}
+    .matrix{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .matrix-row{display:grid;grid-template-columns:160px 1.15fr 130px 1.35fr;gap:22px;padding:21px 24px;border-bottom:1px solid var(--line);align-items:start}
+    .matrix-row:last-child{border-bottom:0}
+    .matrix-row.head{padding-top:13px;padding-bottom:13px;background:#f0f3f7;color:var(--muted);font-size:11px;font-weight:800}
+    .matrix-row p{margin:0}
+    .matrix-axis{font-weight:800;color:var(--navy)}
+    .matrix-fact,.matrix-read{color:#465266;font-size:13px}
+    .tag{display:inline-flex;width:max-content;padding:4px 9px;border-radius:999px;font-size:11px;font-weight:800;line-height:1.4}
+    .tag.red{background:var(--red-soft);color:var(--red)}.tag.amber{background:var(--amber-soft);color:var(--amber)}
+    .tag.green{background:var(--green-soft);color:var(--green)}.tag.blue{background:var(--blue-soft);color:var(--blue)}
+    .method-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px}
+    .method-note{padding:28px;background:var(--navy);color:#fff;border-radius:var(--radius)}
+    .method-note h3{margin:0 0 12px;font-size:23px}
+    .method-note p{margin:0;color:#d3e0eb}
+    .method-note .symbol{display:block;margin-bottom:24px;color:#89b4ff;font-size:44px;font-weight:900;letter-spacing:-.04em}
+    .method-list{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    .method-item{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:22px 24px;border-bottom:1px solid var(--line)}
+    .method-item:last-child{border-bottom:0}
+    .method-item b{color:var(--blue)}
+    .method-item p{margin:0;color:#465266}
+    .event-summary{display:grid;grid-template-columns:.78fr 1.22fr;gap:24px;margin-bottom:22px}
+    .event-thesis{padding:28px;background:var(--amber-soft);border-radius:var(--radius)}
+    .event-thesis small{display:block;color:var(--amber);font-weight:850}
+    .event-thesis strong{display:block;margin:10px 0 12px;color:var(--navy);font-size:27px;line-height:1.25;letter-spacing:-.025em}
+    .event-thesis p{margin:0;color:#5f5135}
+    .event-logic{display:grid;grid-template-columns:repeat(3,1fr);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    .event-logic div{padding:22px;border-right:1px solid var(--line)}.event-logic div:last-child{border-right:0}
+    .event-logic b{display:block;color:var(--blue);font-size:12px}.event-logic span{display:block;margin-top:6px;font-size:14px;line-height:1.55}
+    .earnings-list{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .earnings-head,.earnings-row{display:grid;grid-template-columns:105px 1.05fr 1fr 1.25fr 92px;gap:18px;align-items:start;padding:18px 22px;border-bottom:1px solid var(--line)}
+    .earnings-head{padding-top:12px;padding-bottom:12px;background:#f0f3f7;color:var(--muted);font-size:11px;font-weight:800}
+    .earnings-row:last-child{border-bottom:0}.earnings-row h3{margin:0;color:var(--navy);font-size:17px}.earnings-row p{margin:0;color:#4d596c;font-size:13px}
+    .earnings-row p b{color:var(--ink)}
+    .check{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:4px 8px;border:1px solid #c7d0db;border-radius:8px;color:var(--muted);font-size:11px;font-weight:850;background:#fff}
+    .event-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .event-case{padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+    .event-case b{display:block;margin-bottom:8px}.event-case p{margin:0;color:var(--muted);font-size:13px}.event-case.positive b{color:var(--green)}.event-case.mixed b{color:var(--amber)}.event-case.negative b{color:var(--red)}
+    .korea-summary{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}
+    .thesis{padding:30px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+    .thesis h3{margin:0 0 13px;font-size:24px;letter-spacing:-.02em}
+    .thesis p{margin:0 0 16px;color:#465266}
+    .thesis p:last-child{margin-bottom:0}
+    .snapshot{display:grid;grid-template-columns:1fr 1fr;align-content:start;background:#edf2f8;border-radius:var(--radius);overflow:hidden}
+    .snapshot-item{padding:25px;border-right:1px solid #d6dee8;border-bottom:1px solid #d6dee8}
+    .snapshot-item:nth-child(2n){border-right:0}.snapshot-item:nth-last-child(-n+2){border-bottom:0}
+    .snapshot-item span{display:block;color:var(--muted);font-size:11px}
+    .snapshot-item strong{display:block;margin-top:5px;color:var(--navy);font-size:22px;line-height:1.2}
+    .gate-list{margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    .gate-row{display:grid;grid-template-columns:56px 160px 1fr 105px;gap:18px;padding:20px 24px;border-bottom:1px solid var(--line);align-items:start}
+    .gate-row:last-child{border-bottom:0}
+    .gate-icon{display:grid;place-items:center;width:30px;height:30px;border:1px solid #cbd3df;border-radius:50%;color:var(--muted);font-size:12px;font-weight:800}
+    .gate-row h3{margin:3px 0 0;font-size:15px}.gate-row p{margin:0;color:#526074;font-size:13px}
+    .ladder{display:grid;grid-template-columns:1fr 1.5fr;gap:38px;padding:34px;background:var(--navy);color:#fff;border-radius:var(--radius)}
+    .ladder-copy h3{margin:0 0 12px;font-size:27px;line-height:1.25}
+    .ladder-copy p{margin:0;color:#cbd9e5}
+    .price-map{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-items:end;padding-top:30px}
+    .price-map::before{content:"";position:absolute;left:7%;right:7%;top:66px;height:2px;background:#49637b}
+    .price-stop{position:relative;text-align:center;z-index:1}
+    .price-stop i{display:block;width:16px;height:16px;margin:28px auto 17px;border:4px solid var(--navy);border-radius:50%;background:#8fb6ff;box-shadow:0 0 0 2px #8fb6ff}
+    .price-stop.active i{background:#ffd071;box-shadow:0 0 0 2px #ffd071}
+    .price-stop strong{display:block;font-size:25px;letter-spacing:-.02em}
+    .price-stop span{display:block;margin-top:3px;color:#aebfd0;font-size:11px}
+    .level-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .level-note{padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+    .level-note b{display:block;margin-bottom:7px;color:var(--navy);font-size:15px}.level-note p{margin:0;color:var(--muted);font-size:13px}.level-note code{font:700 12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--blue);background:var(--blue-soft);padding:2px 5px;border-radius:5px}
+    .journey{margin-top:22px;border-top:1px solid var(--line)}
+    .journey-row{display:grid;grid-template-columns:112px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
+    .journey-step{color:var(--blue);font-size:12px;font-weight:800}.journey-row h3{margin:0 0 6px;font-size:17px}.journey-row p{max-width:78ch;margin:0;color:var(--muted)}
+    .timeline-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
+    .timeline-card{padding:21px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+    .timeline-card small{display:block;color:var(--muted);font-weight:750}.timeline-card strong{display:block;margin:7px 0 8px;color:var(--navy);font-size:22px;line-height:1.25}.timeline-card p{margin:0;color:var(--muted);font-size:13px}
+    .timeline-card.current{border-color:#9eb5eb;background:var(--blue-soft)}.timeline-card.current strong{color:var(--blue)}
+    .timeline-shell{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overscroll-behavior-inline:contain}
+    .timeline-shell svg{display:block;width:100%;height:auto;aspect-ratio:1100/630;background:#fff}
+    .timeline-scroll-tip{display:none;margin:8px 2px 0;color:var(--muted);font-size:11px}
+    .timeline-audit{display:grid;grid-template-columns:150px 1fr;gap:24px;margin-top:16px;padding:20px 22px;background:var(--amber-soft);border-radius:var(--radius)}
+    .timeline-audit b{color:var(--amber)}.timeline-audit p{margin:0;color:#5f5135;font-size:13px}
+    .fundamental{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px}
+    .fundamental-thesis{font-size:21px;line-height:1.55;letter-spacing:-.015em}
+    .fundamental-thesis strong{color:var(--blue)}
+    .fact-list{border-top:1px solid var(--line)}
+    .fact{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
+    .fact b{color:var(--navy)}.fact p{margin:0;color:#465266}
+    .audit-list{display:grid;grid-template-columns:1fr 1fr;gap:0 42px;margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+    .audit-list li{display:grid;grid-template-columns:28px 1fr;gap:13px;padding:19px 0;border-bottom:1px solid var(--line);color:#465266}
+    .audit-list b{color:var(--ink)}.audit-no{color:var(--blue);font-size:12px;font-weight:900}
+    .decision-final{display:grid;grid-template-columns:1.15fr .85fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .decision-main{padding:36px}
+    .decision-main .statusline{color:var(--red);font-size:12px;font-weight:900;letter-spacing:.08em}
+    .decision-main h3{margin:12px 0;font-size:34px;line-height:1.18;letter-spacing:-.035em}
+    .decision-main p{max-width:60ch;margin:0;color:var(--muted)}
+    .action-list{padding:23px 30px;background:#f0f3f7}
+    .action{display:grid;grid-template-columns:76px 1fr;gap:13px;padding:15px 0;border-bottom:1px solid #d7dee7}
+    .action:last-child{border-bottom:0}.action b{color:var(--blue);font-size:12px}.action p{margin:0;font-size:13px}
+    details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+    summary{cursor:pointer;padding:18px 22px;font-weight:800;list-style:none}
+    summary::-webkit-details-marker{display:none}summary::after{content:"＋";float:right;color:var(--blue)}details[open] summary::after{content:"－"}
+    .sources{margin:0;padding:0 38px 22px 42px;color:var(--muted);font-size:13px}.sources li{margin:8px 0}
+    footer{display:flex;justify-content:space-between;gap:28px;margin-top:50px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
+    footer p{max-width:76ch;margin:0}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media(max-width:900px){
+      .hero,.method-grid,.event-summary,.korea-summary,.ladder,.fundamental,.decision-final{grid-template-columns:1fr}.hero{gap:30px;padding:50px 0 42px}.decision-box{max-width:520px}
+      .stamp-row{grid-template-columns:1fr 1fr}.stamp:nth-child(2){border-right:0}.stamp:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .section-head{grid-template-columns:1fr;gap:7px}.rule-band{grid-template-columns:1fr}.rule{border-right:0;border-bottom:1px solid var(--line)}.rule:last-child{border-bottom:0}
+      .matrix-row{grid-template-columns:125px 1fr 105px}.matrix-row .matrix-read{grid-column:2/-1}.matrix-row.head{display:none}
+      .earnings-head{display:none}.earnings-row{grid-template-columns:95px 1fr 90px}.earnings-row p:last-of-type{grid-column:2/-1}.event-cases,.level-notes,.timeline-summary{grid-template-columns:1fr}
+      .audit-list{grid-template-columns:1fr}.price-map{min-height:170px}
+    }
+    @media(max-width:620px){
+      .shell{padding:0 18px 54px}.masthead{align-items:flex-start}.mast-meta{display:block;text-align:right}.mast-meta span{display:block}.jump{margin:0 -18px;padding:0 18px}
+      .hero h1{font-size:39px}.dek{font-size:16px}.stamp{padding:14px 10px}.stamp b{font-size:12px}
+      section{padding-top:48px}.section-intro{font-size:14px}.matrix-row{grid-template-columns:1fr;gap:8px;padding:18px}.matrix-row .matrix-read{grid-column:auto}
+      .method-item{grid-template-columns:1fr;gap:4px}.snapshot-item{padding:18px}.snapshot-item strong{font-size:18px}
+      .event-logic{grid-template-columns:1fr}.event-logic div{border-right:0;border-bottom:1px solid var(--line)}.event-logic div:last-child{border-bottom:0}.earnings-row{grid-template-columns:1fr;gap:7px}.earnings-row p:last-of-type{grid-column:auto}.check{width:max-content}
+      .gate-row{grid-template-columns:38px 1fr 80px;gap:10px;padding:17px}.gate-row p{grid-column:2/-1}.ladder{padding:25px 20px}.price-map{gap:3px}.price-stop strong{font-size:20px}
+      .journey-row,.fact,.timeline-audit{grid-template-columns:1fr;gap:5px}.decision-main{padding:27px}.decision-main h3{font-size:29px}.action-list{padding:14px 22px}
+      .timeline-shell svg{width:760px;min-width:760px;height:435px;aspect-ratio:auto}.timeline-scroll-tip{display:block}
+      footer{display:block}footer p+span{display:block;margin-top:12px}
+    }
+    @media print{body{background:#fff}.jump{display:none}.shell{max-width:none}.hero{padding-top:40px}.matrix,.rule-band,.decision-final{box-shadow:none}section{break-inside:avoid}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="masthead">
+      <div class="brand"><span class="brand-mark">TS</span><span>TECH SELLOFF MONITOR</span></div>
+      <div class="mast-meta"><span><b>数据截点</b> 2026-07-20 收盘</span><span><b>审计状态</b> 多源复核</span></div>
+    </header>
+  </div>
+
+  <nav class="jump" aria-label="页面目录">
+    <div class="jump-inner">
+      <a href="#framework">判定框架</a><a href="#evidence">证据矩阵</a><a href="#method">指标选择</a><a href="#earnings">财报触发</a><a href="#korea">风险修正</a><a href="#path">价格路径</a><a href="#timing">历史时间</a><a href="#fundamental">产业验证</a><a href="#decision">行动结论</a>
+    </div>
+  </nav>
+
+  <main class="shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="kicker">科技股回调 · 投资决策简报</p>
+        <h1>交易性低点正在形成，<br><span>中期底部仍待确认</span></h1>
+        <p class="dek">当前最合理的基准判断，是把7月17日定义为候选低点，而不是确认底。真正值得提高仓位的信号，需要价格止跌、市场宽度修复与盈利预期稳定三者形成闭环。</p>
+      </div>
+      <aside class="decision-box">
+        <small>当前投资结论</small>
+        <strong>等待确认，<br>不追首轮反弹</strong>
+        <p>先观察 SOXX 能否守住498.54（7月17日盘中低点），再验证550—555（前支撑转阻力区）与579—584（50%修复位、MA20及前平台共振区）。</p>
+      </aside>
+    </header>
+
+    <div class="stamp-row" aria-label="报告元数据">
+      <div class="stamp"><span>市场阶段</span><b>候选低点</b></div>
+      <div class="stamp"><span>趋势确认</span><b>尚未通过</b></div>
+      <div class="stamp"><span>产业基本面</span><b>未见崩塌</b></div>
+      <div class="stamp"><span>综合置信度</span><b>中高</b></div>
+    </div>
+
+    <section id="framework">
+      <div class="section-head">
+        <div class="section-label">CORE FRAMEWORK</div>
+        <div><h2>底部判断只看三道门</h2><p class="section-intro">把高度相关的指标合并计票，避免把同一轮去杠杆、同一组均线或同一日反弹重复包装成多项证据。</p></div>
+      </div>
+      <div class="rule-band">
+        <article class="rule">
+          <div class="rule-num"><b>1</b><span class="state wait">必要门 · 尚未通过</span></div>
+          <h3>先证明不再下跌</h3>
+          <p class="threshold">498.54 上方<br>连续 5 日不创新低</p>
+          <p>SOXX 不出现新的盘中或收盘低点；若利空落地仍不破低，信号更强。当前只有一个完整交易日。</p>
+        </article>
+        <article class="rule">
+          <div class="rule-num"><b>2</b><span class="state fail">确认门 · 未通过</span></div>
+          <h3>趋势与盈利同时修复</h3>
+          <p class="threshold">宽度 ≥ 60%<br>盈利下修停止</p>
+          <p>SOXX先收复550—555（前支撑转阻力区），再站稳579—584（50%反弹位约576.78、当时MA20约581.7及前平台的共振区）；QQQ、SMH同步，硬科技多数成分站回MA20，未来四周EPS下修不再扩散。</p>
+        </article>
+        <article class="rule">
+          <div class="rule-num"><b>3</b><span class="state safe">失效门 · 未触发</span></div>
+          <h3>明确候选底何时作废</h3>
+          <p class="threshold">连续 2 日收破<br>498.54</p>
+          <p>或周线收破该位，候选底失效；跌破约 482 后假底风险显著上升。若叠加 CapEx 或盈利下修，则转向基本面下行框架。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="evidence">
+      <div class="section-head">
+        <div class="section-label">EVIDENCE MATRIX</div>
+        <div><h2>反弹已经发生，趋势修复尚未发生</h2><p class="section-intro">当前的主要矛盾，是强产业数据与弱市场宽度并存。这更像估值压缩和仓位清算，而不是已经完成的趋势反转。</p></div>
+      </div>
+      <div class="matrix" role="table" aria-label="科技股见底证据矩阵">
+        <div class="matrix-row head" role="row"><div>独立证据轴</div><div>最新事实</div><div>状态</div><div>投资含义</div></div>
+        <div class="matrix-row" role="row"><div class="matrix-axis">SOXX 价格</div><p class="matrix-fact">收524.14，较655.01高点约−20%；7月17日盘中低点498.54。</p><span class="tag amber">止跌尝试</span><p class="matrix-read">498.54是实际低点；550—555是前支撑转阻力区；579—584由50%修复位、当时MA20与前平台共同定义。</p></div>
+        <div class="matrix-row" role="row"><div class="matrix-axis">美股硬科技宽度</div><p class="matrix-fact">30 个科技样本中 23 个上涨，但仅 5 个站上 MA20；剔除软件与云后仅 1/25 站上。</p><span class="tag red">趋势未过</span><p class="matrix-read">单日普涨不是趋势修复，必须看到多数硬科技成分重新站上 MA20。</p></div>
+        <div class="matrix-row" role="row"><div class="matrix-axis">A股科技宽度</div><p class="matrix-fact">全A 1740 涨 / 3710 跌；电子 45/469，半导体 18/163。</p><span class="tag red">极弱</span><p class="matrix-read">电子与半导体上涨宽度需同步超过 50%，代表指数应先后收复 10 日与 20 日线。</p></div>
+        <div class="matrix-row" role="row"><div class="matrix-axis">跨市场杠杆</div><p class="matrix-fact">韩国传统信用融资 33.362 万亿韩元；R2 30.87%；杠杆 ETF 五日仍净申购。</p><span class="tag amber">未出清</span><p class="matrix-read">亚洲存储链压力仍在，但它是置信度修正项，不是全球科技股底部的硬门槛。</p></div>
+        <div class="matrix-row" role="row"><div class="matrix-axis">利率与美元</div><p class="matrix-fact">同日可核验：美国 10 年名义利率 4.57%、实际利率 2.35%；韩国政策利率 2.75%。</p><span class="tag red">估值压制</span><p class="matrix-read">观察实际利率是否停止创新高，以及 SOXX / QQQ 相对 SPY 的弱势是否收敛。</p></div>
+        <div class="matrix-row" role="row"><div class="matrix-axis">波动率</div><p class="matrix-fact">VIX 18.65，期限结构 18.65 → 19.60 → 20.41 → 21.29。</p><span class="tag blue">中性</span><p class="matrix-read">仅说明没有广义 SPX 系统性恐慌，无法单独判断科技板块是否完成投降。</p></div>
+        <div class="matrix-row" role="row"><div class="matrix-axis">产业基本面</div><p class="matrix-fact">全球芯片销售创新高，TSMC 6 月收入同比 +67.9%，NVIDIA 与 Micron 业绩指引仍强。</p><span class="tag green">未崩塌</span><p class="matrix-read">可排除需求全面坍塌，但不代表所有细分行业的盈利预期已经见底。</p></div>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="section-head">
+        <div class="section-label">INDEX SELECTION</div>
+        <div><h2>为何主判 SOXX，而非直接用纳斯达克指数</h2><p class="section-intro">本轮回调的压力中心在 AI 硬件、半导体与存储链。主指标应尽量贴近风险源，综合指数则用于检验风险是否扩散。</p></div>
+      </div>
+      <div class="method-grid">
+        <article class="method-note"><span class="symbol">SOXX</span><h3>风险源指标</h3><p>半导体资本开支、HBM、设备与 AI 算力链在 SOXX 中权重更直接，因此对本轮科技股去估值与去杠杆更敏感，底部信号也更有针对性。</p></article>
+        <div class="method-list">
+          <div class="method-item"><b>QQQ</b><p>成分包含大型平台、软件、消费互联网等，业务与现金流更分散。它适合判断大型成长股整体趋势，但可能被少数超级权重股“托住”。</p></div>
+          <div class="method-item"><b>纳指综合</b><p>覆盖面更广，混合了大量非核心科技公司。它适合观察市场广度，却会稀释半导体这一轮风险源的价格信号。</p></div>
+          <div class="method-item"><b>组合用法</b><p><strong>SOXX 主判、SMH 互证、QQQ 确认。</strong>若 SOXX 先止跌而 QQQ/SMH 随后站回 MA20，才说明修复从局部扩散到科技主线。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="earnings">
+      <div class="section-head">
+        <div class="section-label">EARNINGS CATALYST</div>
+        <div><h2>财报可以触发确认，但不能替代确认</h2><p class="section-intro">GOOGL、INTC 与 NOW 分别验证 AI 资本开支回报、服务器与制造周期、企业软件需求。财报数字只是第一层；业务指标、前瞻指引，以及财报后 SOXX 的价格与宽度反应才决定是否升级底部判断。</p></div>
+      </div>
+      <div class="event-summary">
+        <article class="event-thesis"><small>事件权重</small><strong>GOOGL 决定方向<br>INTC 验证硬件扩散</strong><p>GOOGL 对 AI 风险偏好和 QQQ 影响更大；INTC 对服务器 CPU、18A 与 Foundry 拐点更直接。二者同时通过，才可能把局部反弹升级为行业确认。</p></article>
+        <div class="event-logic">
+          <div><b>第一层</b><span>实际值超过卖方一致预期。</span></div>
+          <div><b>第二层</b><span>关键业务指标超过“真正 Beat 线”。</span></div>
+          <div><b>第三层</b><span>前瞻上修，且 SOXX/宽度用价格确认。</span></div>
+        </div>
+      </div>
+      <div class="earnings-list" aria-label="关键科技财报验收清单">
+        <div class="earnings-head"><div>公司</div><div>卖方一致预期</div><div>耳语预期</div><div>真正 Beat 线</div><div>状态</div></div>
+        <div class="earnings-row">
+          <h3>GOOGL</h3>
+          <p>Q2 EPS 约 <b>$2.90</b>，营收约 <b>$116.9B</b>；7月22日盘后。</p>
+          <p><b>无可靠公开值。</b>旧清单中的 $3.32 未完成来源核验，不作为硬门。</p>
+          <p>营收 ≥<b>$118B</b>；Cloud 约 ≥<b>$22.2B</b> / 增速维持约 63%；经营利润率约 ≥<b>35.3%</b>；CapEx 增加须由 Cloud 增长与订单转化支撑。</p>
+          <span class="check">□ 待公布</span>
+        </div>
+        <div class="earnings-row">
+          <h3>INTC</h3>
+          <p>市场共识约 EPS <b>$0.22</b>、营收 <b>$14.4B</b>；公司原指引营收 $13.8–14.8B、非 GAAP EPS $0.20。</p>
+          <p><b>无可靠公开值。</b>不把社交媒体或单一聚合站数字当成可交易事实。</p>
+          <p>营收 &gt;<b>$14.5B</b>、非 GAAP 毛利率 &gt;<b>39.5%</b>；DCAI 强势能覆盖 PC 疲软；Q3 指引继续上移且 Foundry 亏损收窄。</p>
+          <span class="check">□ 待公布</span>
+        </div>
+        <div class="earnings-row">
+          <h3>NOW</h3>
+          <p>公司 Q2 指引：订阅收入 <b>$3.815–3.820B</b>、cRPO 恒汇率增速约 <b>19.5%</b>、非 GAAP 经营利润率 26.5%。</p>
+          <p><b>无可靠公开值。</b>GAAP 与 non-GAAP EPS 口径不混用。</p>
+          <p>订阅收入越过 <b>$3.82B</b>；cRPO 恒汇率增速 ≥<b>20.5%</b>；全年订阅收入或利润率至少一项上修，且不是单靠降本 Beat。</p>
+          <span class="check">□ 待公布</span>
+        </div>
+      </div>
+      <div class="event-cases">
+        <article class="event-case positive"><b>✓ 强触发：升级为“试探底”</b><p>GOOGL与INTC的核心业务和前瞻多数通过；财报后SOXX收复550—555前支撑转阻力区，硬科技上涨宽度超过60%。</p></article>
+        <article class="event-case mixed"><b>△ 混合触发：仅事件反弹</b><p>EPS/营收Beat，但Cloud、毛利率或指引未过线；SOXX仍低于550—555结构反压区，或多数硬科技仍在MA20下方。</p></article>
+        <article class="event-case negative"><b>✕ 负触发：候选底受损</b><p>GOOGL 的 Cloud/CapEx 回报或 INTC 的收入、毛利率与 Q3 指引明显 Miss；若 SOXX 同时连续收破 498.54，候选底失效。</p></article>
+      </div>
+    </section>
+
+    <section id="korea">
+      <div class="section-head">
+        <div class="section-label">RISK MODIFIER</div>
+        <div><h2>韩国杠杆是亚洲存储链的放大器</h2><p class="section-intro">它影响底部置信度，但不主导全球科技股见底结论。30/28/27 万亿及 R2&lt;28% 都只是研究观察线，并无充分历史样本证明其为必要条件。</p></div>
+      </div>
+      <div class="korea-summary">
+        <article class="thesis">
+          <h3>核心判断：压力仍在，权重应降级</h3>
+          <p>传统信用融资已从峰值回落，但杠杆可能迁移至线上贷款、P2P、杠杆 ETF 或单股产品；只看 KOFIA 余额可能低估总杠杆。</p>
+          <p>韩国单股杠杆产品推出不足两个月便遭监管收紧，历史流量不足以完成见底回测。其正确用途，是校准亚洲存储链的风险偏好，而不是替代 SOXX 的价格和盈利信号。</p>
+        </article>
+        <div class="snapshot" aria-label="韩国杠杆快照">
+          <div class="snapshot-item"><span>传统信用融资</span><strong>33.362 万亿</strong></div>
+          <div class="snapshot-item"><span>较峰值下降</span><strong>约 13.6%</strong></div>
+          <div class="snapshot-item"><span>R2</span><strong>30.87%</strong></div>
+          <div class="snapshot-item"><span>四门完整通过</span><strong>约 0 / 4</strong></div>
+        </div>
+      </div>
+      <div class="gate-list" aria-label="韩国阶段性出清四门标准">
+        <div class="gate-row"><span class="gate-icon">01</span><h3>融资数据门</h3><p>融资较峰值去化 ≥20%（约 ≤30.91 万亿），连续 3 个观测不反弹，且 R2 ≤30%。</p><span class="tag red">未通过</span></div>
+        <div class="gate-row"><span class="gate-icon">02</span><h3>杠杆迁移门</h3><p>杠杆 ETF 五日流量连续 3 个滚动窗口净赎回，且份额同步下降，不能只看价格下跌造成的 AUM 缩水。</p><span class="tag red">未通过</span></div>
+        <div class="gate-row"><span class="gate-icon">03</span><h3>投降门</h3><p>强平五日均值连续 3 个观测下降，每日强平 / 未收比回落至 3% 以下，且没有迁移至其他贷款。</p><span class="tag red">未通过</span></div>
+        <div class="gate-row"><span class="gate-icon">04</span><h3>价格外汇门</h3><p>KOSPI、三星电子与 SK 海力士连续 3 日不创新低；USD/KRW 低于 1500；外资 3 日累计停止净卖。</p><span class="tag amber">仅单日改善</span></div>
+      </div>
+    </section>
+
+    <section id="path">
+      <div class="section-head">
+        <div class="section-label">PRICE PATH</div>
+        <div><h2>从候选低点到中期确信底</h2><p class="section-intro">点位不是预测目标，而是一组递进式验证门槛；越靠后，胜率与成本同时上升。</p></div>
+      </div>
+      <div class="ladder">
+        <div class="ladder-copy"><h3>价格只负责开门，<br>宽度与盈利负责确认</h3><p>所有点位必须能还原来源：实际低点、前期结构、回撤公式或动态均线。均线会移动，因此579—584只代表本次数据截点下的共振区。</p></div>
+        <div class="price-map" aria-label="SOXX价格门槛图">
+          <div class="price-stop active"><i></i><strong>498.54</strong><span>7/17盘中低点</span></div>
+          <div class="price-stop"><i></i><strong>550–555</strong><span>前支撑转阻力区</span></div>
+          <div class="price-stop"><i></i><strong>579–584</strong><span>50%修复＋MA20＋前平台</span></div>
+        </div>
+      </div>
+      <div class="level-notes" aria-label="SOXX关键点位计算依据">
+        <article class="level-note"><b>498.54｜实际价格低点</b><p>2026年7月17日盘中最低价，不是模型推导值。它承担候选底的防守与失效基准。</p></article>
+        <article class="level-note"><b>550–555｜前支撑转阻力</b><p>主要依据是6月10日收551.66、7月13日收553.61及7月16日开555.27形成的结构密集区。辅助验证：本轮跌幅的1/3反弹位为 <code>498.54+(655.01−498.54)/3=550.70</code>。标准0.382反弹位其实是558.31，并非552。</p></article>
+        <article class="level-note"><b>579–584｜三项共振区</b><p>50%反弹位为 <code>498.54+(655.01−498.54)×0.5=576.78</code>；附近还有6月12日低578.53/收584.11、7月6日低580.48/收581.51，以及本次审计截点记录的动态MA20约581.7。故使用区间，不使用单点。</p></article>
+      </div>
+      <div class="journey">
+        <div class="journey-row"><div class="journey-step">当前｜候选底</div><div><h3>放量探低后缩量企稳</h3><p>7月17日触及 498.54，7月20日缩量上涨 0.45%。缩量既可能是卖压衰竭，也可能是买盘不足，单独无法定性。</p></div></div>
+        <div class="journey-row"><div class="journey-step">阶段一｜观察底</div><div><h3>五日不创新低</h3><p>498.54 上方连续五个交易日不再创新低，并在坏消息下表现钝化，才获得初步时间确认。</p></div></div>
+        <div class="journey-row"><div class="journey-step">阶段二｜试探底</div><div><h3>收复550—555结构反压区，宽度改善</h3><p>SOXX收复前支撑转阻力区并保持1—2日；硬科技单日上涨宽度超过60%，A股科技宽度同步改善。</p></div></div>
+        <div class="journey-row"><div class="journey-step">阶段三｜确信底</div><div><h3>MA20、宽度与盈利形成闭环</h3><p>SOXX站稳579—584共振区两日；该区由50%修复位、动态MA20和前平台共同定义。QQQ、SMH同步，至少60%硬科技样本站上MA20，未来四周盈利下修停止扩散。</p></div></div>
+      </div>
+    </section>
+
+    <section id="timing">
+      <div class="section-head">
+        <div class="section-label">DRAWDOWN TIMING</div>
+        <div><h2>旧图的方法成立，但本轮档位已经重置</h2><p class="section-intro">历史时间回测继续使用日收盘价：从局部高点回撤5%触发事件，最低点反弹5%后才作事后确认。盘中低点只用于风险控制，不混入收盘价样本。</p></div>
+      </div>
+      <div class="timeline-summary">
+        <article class="timeline-card"><small>旧快照｜截至7月15日</small><strong>10%–20%档</strong><p>旧图以551.69为最低收盘、峰后第16日，7/14/18日是当时所属档的P25/中位数/P75。后续新低已使这组“本轮定位”失效。</p></article>
+        <article class="timeline-card current"><small>当前快照｜截至7月20日</small><strong>≥20%档｜峰后第19日</strong><p>655.01峰值至7月17日最低收盘521.81，收盘口径最大回撤约20.34%；低点出现在峰后第18个交易日。</p></article>
+        <article class="timeline-card"><small>实时底部确认</small><strong>尚未通过</strong><p>7月20日收524.14，仅较最低收盘反弹约0.45%，未达到本Skill设定的“低点后反弹5%”事后确认门槛。</p></article>
+      </div>
+      <div class="timeline-shell">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 630" role="img" aria-label="SOXX高点回撤：历史见底与修复时间">
+          <rect width="100%" height="100%" fill="#fff"/>
+          <text x="150" y="38" font-size="24" font-weight="700" fill="#20242a">SOXX高点回撤：历史见底与修复时间</text>
+          <text x="150" y="66" font-size="15" fill="#69717d">横轴：交易日；底部区间=P25—P75；圆点=中位数；橙线=峰值至修复中位数—P75</text>
+          <circle cx="150" cy="92" r="7" fill="#3498f5"/><text x="164" y="97" font-size="14">蓝色：本次回撤所在档</text>
+          <circle cx="370" cy="92" r="7" fill="#57c776"/><text x="384" y="97" font-size="14">绿色：其他历史回撤档</text>
+          <line x1="600" y1="92" x2="640" y2="92" stroke="#f47b35" stroke-width="6"/><text x="650" y="97" font-size="14">橙色：修复前高耗时</text>
+          <g stroke="#e5e7eb" fill="none">
+            <line x1="150" y1="135" x2="150" y2="580"/><line x1="240.7" y1="135" x2="240.7" y2="580"/><line x1="331.3" y1="135" x2="331.3" y2="580"/>
+            <line x1="422" y1="135" x2="422" y2="580"/><line x1="512.7" y1="135" x2="512.7" y2="580"/><line x1="603.3" y1="135" x2="603.3" y2="580"/>
+            <line x1="694" y1="135" x2="694" y2="580"/><line x1="784.7" y1="135" x2="784.7" y2="580"/><line x1="875.3" y1="135" x2="875.3" y2="580"/><line x1="966" y1="135" x2="966" y2="580"/>
+          </g>
+          <g fill="#7b8189" font-size="14" text-anchor="middle">
+            <text x="150" y="610">0日</text><text x="240.7" y="610">30日</text><text x="331.3" y="610">60日</text><text x="422" y="610">90日</text><text x="512.7" y="610">120日</text>
+            <text x="603.3" y="610">150日</text><text x="694" y="610">180日</text><text x="784.7" y="610">210日</text><text x="875.3" y="610">240日</text><text x="966" y="610">270日</text>
+          </g>
+          <g stroke="#e5e7eb" stroke-width="4"><line x1="150" y1="190" x2="1050" y2="190"/><line x1="150" y1="340" x2="1050" y2="340"/><line x1="150" y1="490" x2="1050" y2="490"/></g>
+          <g fill="#20242a" font-size="20" text-anchor="end"><text x="130" y="196">5%–10%</text><text x="130" y="346">10%–20%</text><text x="130" y="496">≥20%</text></g>
+          <g fill="#8a9098" font-size="14" text-anchor="end"><text x="130" y="224">n=62</text><text x="130" y="374">n=37</text><text x="130" y="524">n=2</text></g>
+          <line x1="162.1" y1="190" x2="186.3" y2="190" stroke="#57c776" stroke-width="20" stroke-linecap="round"/><circle cx="168.1" cy="190" r="7" fill="#fff" stroke="#57c776" stroke-width="4"/><text x="162.1" y="166" font-size="15">4 / 6 / 12日</text>
+          <line x1="207.4" y1="232" x2="258.8" y2="232" stroke="#f47b35" stroke-width="7"/><circle cx="207.4" cy="232" r="7" fill="#f47b35"/><text x="221.4" y="238" font-size="15">修复 19→36日</text>
+          <line x1="171.2" y1="340" x2="204.4" y2="340" stroke="#57c776" stroke-width="20" stroke-linecap="round"/><circle cx="192.3" cy="340" r="7" fill="#fff" stroke="#57c776" stroke-width="4"/><text x="171.2" y="316" font-size="15">7 / 14 / 18日</text>
+          <line x1="326.8" y1="382" x2="571.6" y2="382" stroke="#f47b35" stroke-width="7"/><circle cx="326.8" cy="382" r="7" fill="#f47b35"/><text x="340.8" y="388" font-size="15">修复 58.5→139.5日</text>
+          <line x1="240.7" y1="490" x2="301.1" y2="490" stroke="#3498f5" stroke-width="20" stroke-linecap="round"/><circle cx="270.9" cy="490" r="7" fill="#fff" stroke="#3498f5" stroke-width="4"/><text x="240.7" y="466" font-size="15">30 / 40 / 50日</text>
+          <line x1="1037" y1="532" x2="1050" y2="532" stroke="#f47b35" stroke-width="7"/><circle cx="1037" cy="532" r="7" fill="#f47b35"/><text x="1018" y="555" text-anchor="end" font-size="15">修复 293.5→297.8日</text>
+          <line x1="207.4" y1="452" x2="207.4" y2="555" stroke="#111827" stroke-width="2" stroke-dasharray="6 5"/><text x="215.4" y="448" font-size="14" font-weight="700">本次：峰后19日</text>
+          <text x="150" y="582" font-size="13" fill="#8a9098">注意：历史底部为上涨5%后回看确认，不是实时见底信号。</text>
+        </svg>
+      </div>
+      <p class="timeline-scroll-tip">手机端可横向滑动查看完整修复时间轴 →</p>
+      <div class="timeline-audit"><b>读图边界</b><p>蓝色是本轮所在的≥20%档；其牛市历史样本只有2次，30/40/50日分别是P25/中位数/P75，样本极小，不能当作“必然第30日以后见底”。498.54仍是7月17日盘中风险低点；时间图采用当日最低收盘521.81，两种口径服务于不同问题。橙色修复期同样只有2个样本，只作压力测试，不作日期预测。</p></div>
+    </section>
+
+    <section id="fundamental">
+      <div class="section-head">
+        <div class="section-label">FUNDAMENTAL CHECK</div>
+        <div><h2>目前更像估值与仓位冲击，而非产业崩塌</h2><p class="section-intro">一手产业数据仍强，但强基本面只能提供估值锚，不能自动生成短期买点。</p></div>
+      </div>
+      <div class="fundamental">
+        <div class="fundamental-thesis">基准情景仍是：<strong>强基本面之上的估值压缩、利率冲击、持仓拥挤与杠杆清算。</strong>真正改变结论的，将是盈利与资本开支连续下修。</div>
+        <div class="fact-list">
+          <div class="fact"><b>全球芯片</b><p>2026年5月销售 1206 亿美元，环比 +9.2%、同比 +104.1%，创月度纪录。</p></div>
+          <div class="fact"><b>TSMC</b><p>6月收入 4426.8 亿新台币，同比 +67.9%；上半年累计同比 +35.6%。</p></div>
+          <div class="fact"><b>NVIDIA</b><p>FY2027 Q1 数据中心收入 752 亿美元，同比 +92%；下一季度收入指引 910 亿美元。</p></div>
+          <div class="fact"><b>Micron</b><p>FY2026 Q3 云内存与核心数据中心收入、毛利率显著提升；下一季度收入指引 500 亿美元。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="audit">
+      <div class="section-head">
+        <div class="section-label">RED-TEAM REVIEW</div>
+        <div><h2>审计后的六项关键修正</h2><p class="section-intro">结论经过因子去重、口径统一与反方检验；以下修正决定了哪些信号可以进入最终框架。</p></div>
+      </div>
+      <ol class="audit-list">
+        <li><span class="audit-no">01</span><span><b>韩国融资阈值降级：</b>由必要门改为亚洲存储链置信度修正项。</span></li>
+        <li><span class="audit-no">02</span><span><b>高相关指标合并：</b>融资、R2、强平和 ETF 流向统一为杠杆轴。</span></li>
+        <li><span class="audit-no">03</span><span><b>VIX 解释收窄：</b>正常期限结构只排除广义市场系统性恐慌。</span></li>
+        <li><span class="audit-no">04</span><span><b>利率口径统一：</b>采用同日可核验的名义 4.57%、实际 2.35%。</span></li>
+        <li><span class="audit-no">05</span><span><b>均线改为动态区域：</b>不再把 581.7 写成固定单点。</span></li>
+        <li><span class="audit-no">06</span><span><b>低量反弹保持中性：</b>结合突破持续性与市场宽度再判断。</span></li>
+      </ol>
+    </section>
+
+    <section id="decision">
+      <div class="section-head">
+        <div class="section-label">PORTFOLIO ACTION</div>
+        <div><h2>行动顺序：关注、试探、再提高确信度</h2><p class="section-intro">当前尚不具备追涨条件。执行重点不是猜最低点，而是在每道门通过后逐级提高风险预算。</p></div>
+      </div>
+      <div class="decision-final">
+        <div class="decision-main"><div class="statusline">CURRENT STANCE · WAIT</div><h3>等待确认，<br>不追首轮反弹</h3><p>498.54是7月17日实际低点防守门；550—555是前支撑转阻力的初步修复区；579—584是50%修复位、动态MA20与前平台共振确认区。中期底最终由“价格宽度＋盈利预期”共同决定。</p></div>
+        <div class="action-list">
+          <div class="action"><b>提高关注</b><p>SOXX 完成五日不创新低，且对利空表现钝化。</p></div>
+          <div class="action"><b>小仓试探</b><p>收复550—555前支撑转阻力区并保持，硬科技宽度明显改善。</p></div>
+          <div class="action"><b>升级确信</b><p>站稳579—584共振区（50%修复＋MA20＋前平台），宽度与盈利轴同时通过。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <details>
+        <summary>主要一手来源与数据口径</summary>
+        <ul class="sources">
+          <li><a href="https://www.fsc.go.kr/eng/pr010101/87354">韩国金融委：单股杠杆产品管理措施（2026-07-16）</a></li>
+          <li><a href="https://freesis.kofia.or.kr/stat/FreeSIS.do?parentDivId=MSIS10000000000000&amp;serviceId=STATSCU0100000060">KOFIA FreeSIS：韩国信用融资与投资者存管金</a></li>
+          <li><a href="https://www.bok.or.kr/eng/bbs/E0000634/view.do?depth=400069&amp;menuNo=400069&amp;nttId=11062944&amp;oldMenuNo=400007&amp;programType=newsDataEng&amp;relate=Y">韩国央行：2026年7月货币政策决定</a></li>
+          <li><a href="https://www.cboe.com/tradable-products/vix/term-structure">Cboe：VIX 期限结构</a></li>
+          <li><a href="https://www.federalreserve.gov/RELEASES/H15/default.htm">美联储 H.15：名义与实际国债收益率</a></li>
+          <li><a href="https://www.federalreserve.gov/monetarypolicy/2026-07-mpr-part1.htm">美联储：2026年7月货币政策报告</a></li>
+          <li><a href="https://www.semiconductors.org/global-semiconductor-sales-increase-9-2-month-to-month-in-may/">SIA / WSTS：2026年5月全球半导体销售</a></li>
+          <li><a href="https://investor.tsmc.com/english/monthly-revenue/2026">TSMC：2026年月度收入</a></li>
+          <li><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx">NVIDIA：FY2027 第一季度业绩</a></li>
+          <li><a href="https://investors.micron.com/news-releases/news-release-details/micron-technology-inc-reports-record-results-third-quarter">Micron：FY2026 第三季度业绩</a></li>
+          <li><a href="https://alphabet2025ir.q4web.com/investor/news/news-details/2026/Alphabet-Announces-Date-of-Second-Quarter-2026-Financial-Results-Conference-Call-2026-2h_R0kzZHY/default.aspx">Alphabet：2026年第二季度财报日期公告</a></li>
+          <li><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/googexhibit991q12026.htm">Alphabet：2026年第一季度业绩与 Cloud 基准</a></li>
+          <li><a href="https://www.intc.com/news-events/press-releases/detail/1767/intel-reports-first-quarter-2026-financial-results">Intel：2026年第一季度业绩及第二季度公司指引</a></li>
+          <li><a href="https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-First-Quarter-2026-Financial-Results/default.aspx">ServiceNow：2026年第一季度业绩及第二季度公司指引</a></li>
+          <li><a href="https://stockanalysis.com/etf/soxx/history/">SOXX历史行情：峰值、前期结构与收盘数据</a></li>
+          <li><a href="https://www.marketbeat.com/stocks/NASDAQ/SOXX/chart/">SOXX历史行情：2026年7月17日盘中低点与成交量</a></li>
+          <li><a href="./soxx_drawdown_historical_summary.json">SOXX历史回撤统计底稿：Futu OpenD核验快照（截至2026年7月15日）</a></li>
+          <li><a href="./soxx_drawdown_timeline_20260720.json">本轮时间图审计底稿：当前档位、收盘价口径与样本边界</a></li>
+        </ul>
+      </details>
+    </section>
+
+    <footer>
+      <p>研究用途，不构成投资建议。Futu OpenD 用于 2026-07-20 完整收盘与技术结构核验；韩国杠杆统计与市场价格日期不同，已分开标注。历史 ZigZag 与回撤分位存在回看偏差，未作为实时买点。</p>
+      <span>FINAL AUDITED · 2026.07.21</span>
+    </footer>
+  </main>
+</body>
+</html>
