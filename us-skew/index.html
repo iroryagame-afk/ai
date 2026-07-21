@@ -118,6 +118,13 @@
     .focus-chart-legend span { display:inline-flex; align-items:center; gap:6px; }
     .legend-line { width:20px; border-top:2px dashed currentColor; }
     .legend-dot { width:7px; height:7px; border-radius:50%; background:var(--warn); }
+    .benchmark-notes { display:flex; align-items:baseline; gap:8px 22px; flex-wrap:wrap; margin:0; padding-top:10px; border-top:1px solid var(--line); }
+    .benchmark-notes div { display:flex; align-items:baseline; gap:7px; }
+    .benchmark-notes dt { font-weight:700; font-variant-numeric:tabular-nums; }
+    .benchmark-notes dd { margin:0; color:var(--muted); font-size:.8rem; }
+    .benchmark-notes div:first-child dt { color:var(--mid); }
+    .benchmark-notes div:nth-child(2) dt { color:var(--low); }
+    .benchmark-note { margin:5px 0 10px; color:var(--faint); font-size:.76rem; }
 
     .toolbar {
       display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
@@ -300,6 +307,11 @@
         </div>
         <span class="snapshot-pill">当前快照</span>
       </div>
+      <dl class="benchmark-notes" aria-label="SPY 与 QQQ 基准说明">
+        <div><dt>SPY</dt><dd>标普500 ETF，代表美股大盘的保护定价</dd></div>
+        <div><dt>QQQ</dt><dd>纳指100 ETF，代表科技成长股的保护定价</dd></div>
+      </dl>
+      <p class="benchmark-note">虚线用于比较个股 Skew 相对强弱，不是指数涨跌预测。</p>
       <div id="focusChart" class="focus-chart-scroll" aria-live="polite"></div>
       <div class="focus-chart-legend" aria-label="图例">
         <span style="color:var(--warn)"><i class="legend-dot" aria-hidden="true"></i>黄点：数据需复核</span>
