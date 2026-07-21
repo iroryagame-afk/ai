@@ -96,6 +96,8 @@
     .focus-chart-head { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom:12px; }
     .focus-chart h2 { margin:0; font-size:1.05rem; letter-spacing:-.01em; }
     .focus-chart-copy { margin:4px 0 0; color:var(--muted); font-size:.84rem; }
+    .focus-chart-interpretation { display:block; max-width:75ch; margin-top:4px; color:var(--muted); text-wrap:pretty; }
+    .focus-chart-interpretation strong { color:var(--ink); font-weight:650; }
     .snapshot-pill { flex:0 0 auto; padding:5px 9px; border:1px solid var(--line); border-radius:999px; color:var(--mid); background:var(--mid-soft); font-size:.76rem; }
     .focus-chart-scroll { overflow-x:auto; padding-bottom:3px; }
     .focus-chart-svg { display:block; width:100%; min-width:760px; height:auto; }
@@ -303,7 +305,7 @@
       <div class="focus-chart-head">
         <div>
           <h2 id="focusChartTitle">AI / 半导体 25Δ Skew 横向对比</h2>
-          <p class="focus-chart-copy">Put IV − Call IV（vol pt）：向右表示下行保护更贵，向左表示 Call 相对更贵；点击标的可查看合约明细。</p>
+          <p class="focus-chart-copy">Put IV − Call IV（vol pt）：向右表示下行保护更贵，向左表示 Call 相对更贵；点击标的可查看合约明细。<span class="focus-chart-interpretation"><strong>怎么理解：</strong>高正值更接近“下行保护被集中追价”。若基本面没有同步恶化，它可能反映市场恐慌过度、存在反向反弹机会；不只等于“空头数量很多”，也不是单独的买入信号。</span></p>
         </div>
         <span class="snapshot-pill">当前快照</span>
       </div>
