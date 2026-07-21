@@ -90,6 +90,35 @@
     .summary-item[data-bucket="balanced"] { --tone:var(--mid); }
     .summary-item[data-bucket="low"] { --tone:var(--low); }
 
+    .focus-chart {
+      margin-bottom:18px; padding:18px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface);
+    }
+    .focus-chart-head { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom:12px; }
+    .focus-chart h2 { margin:0; font-size:1.05rem; letter-spacing:-.01em; }
+    .focus-chart-copy { margin:4px 0 0; color:var(--muted); font-size:.84rem; }
+    .snapshot-pill { flex:0 0 auto; padding:5px 9px; border:1px solid var(--line); border-radius:999px; color:var(--mid); background:var(--mid-soft); font-size:.76rem; }
+    .focus-chart-scroll { overflow-x:auto; padding-bottom:3px; }
+    .focus-chart-svg { display:block; width:100%; min-width:760px; height:auto; }
+    .focus-grid { stroke:var(--line); stroke-width:1; }
+    .focus-zero { stroke:var(--line-strong); stroke-width:1.3; }
+    .focus-benchmark { stroke-width:1.5; stroke-dasharray:5 5; }
+    .focus-benchmark-label,.focus-axis-label,.focus-row-value,.focus-row-name { font-variant-numeric:tabular-nums; }
+    .focus-benchmark-label { font-size:11px; font-weight:650; }
+    .focus-axis-label { fill:var(--faint); font-size:10px; }
+    .focus-row { cursor:pointer; }
+    .focus-row:focus-visible { outline:none; }
+    .focus-row:focus-visible .focus-row-bar { stroke:var(--focus); stroke-width:2; }
+    .focus-row:hover .focus-row-hit,.focus-row:focus-visible .focus-row-hit { fill:var(--surface-2); }
+    .focus-row-hit { fill:transparent; }
+    .focus-row-name { fill:var(--ink); font-size:12px; font-weight:650; }
+    .focus-row-value { fill:var(--muted); font-size:11px; }
+    .focus-row-bar { rx:3; }
+    .focus-review-dot { fill:var(--warn); }
+    .focus-chart-legend { display:flex; gap:10px 18px; flex-wrap:wrap; margin-top:10px; color:var(--faint); font-size:.76rem; }
+    .focus-chart-legend span { display:inline-flex; align-items:center; gap:6px; }
+    .legend-line { width:20px; border-top:2px dashed currentColor; }
+    .legend-dot { width:7px; height:7px; border-radius:50%; background:var(--warn); }
+
     .toolbar {
       display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
       margin-bottom:16px; padding:10px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface);
@@ -195,6 +224,9 @@
       .quick-guide { align-items:flex-start; margin-top:-4px; }
       .guide-item { width:100%; }
       .guide-note { margin-left:0; }
+      .focus-chart { padding:14px; }
+      .focus-chart-head { display:grid; gap:8px; }
+      .snapshot-pill { justify-self:start; }
       .gauge-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
       .selected-panel { grid-template-columns:repeat(2,minmax(0,1fr)); }
       .selected-name { grid-column:1/-1; grid-row:auto; }
@@ -258,6 +290,22 @@
         <div class="summary-head"><span class="summary-label">Put 避险相对偏低</span><strong id="lowCount" class="summary-value">—</strong></div>
         <div class="summary-bar"><span id="lowBar"></span></div>
       </article>
+    </section>
+
+    <section class="focus-chart" aria-labelledby="focusChartTitle">
+      <div class="focus-chart-head">
+        <div>
+          <h2 id="focusChartTitle">AI / 半导体 25Δ Skew 横向对比</h2>
+          <p class="focus-chart-copy">Put IV − Call IV（vol pt）：向右表示下行保护更贵，向左表示 Call 相对更贵；点击标的可查看合约明细。</p>
+        </div>
+        <span class="snapshot-pill">当前快照</span>
+      </div>
+      <div id="focusChart" class="focus-chart-scroll" aria-live="polite"></div>
+      <div class="focus-chart-legend" aria-label="图例">
+        <span style="color:var(--warn)"><i class="legend-dot" aria-hidden="true"></i>黄点：数据需复核</span>
+        <span><i class="legend-line" aria-hidden="true"></i>虚线：SPY / QQQ / 可靠 AI 池均值</span>
+        <span>颜色沿用页面红 / 蓝 / 绿分位</span>
+      </div>
     </section>
 
     <section class="search-panel" role="search" aria-label="搜索全部可计算标的">
@@ -332,6 +380,7 @@
       low:'Put 相对 Call 的隐波溢价在本次自选股中偏低，可能是保护需求偏弱或 Call 追价更热；不代表股价必涨。'
     };
     const state={rows:[],rankedRows:[],filter:'all',sort:'rank-desc',query:'',selected:null};
+    const focusSymbols=['SNDK','SKHY','AXTI','MU','WDC','AEHR','COHR','AMAT','LRCX','ONTO','ANET','AMD','AVGO','ASML','INTC','NVDA','AAOI','WOLF','LITE','STM','CBRS','MRVL','CRDO'];
     const grid=document.querySelector('#gaugeGrid');
     const empty=document.querySelector('#emptyBox');
     const errorBox=document.querySelector('#errorBox');
@@ -416,6 +465,55 @@
         document.querySelector(`#${bucket}Bar`).style.setProperty('--share',`${count/total*100}%`);
       });
     }
+    function renderFocusChart(){
+      const target=document.querySelector('#focusChart');
+      const bySymbol=new Map(state.rows.map(row=>[row.symbol,row]));
+      const rows=focusSymbols.map(symbol=>bySymbol.get(symbol)).filter(Boolean).sort((a,b)=>b.skew-a.skew);
+      const spy=bySymbol.get('SPY');
+      const qqq=bySymbol.get('QQQ');
+      const reliable=rows.filter(row=>row.rank_eligible);
+      const aiMean=reliable.length?reliable.reduce((sum,row)=>sum+Number(row.skew),0)/reliable.length:null;
+      if(!rows.length){target.textContent='当前快照没有可用的 AI / 半导体标的。';return;}
+      const rankedSkews=state.rankedRows.map(row=>Number(row.skew)).sort((a,b)=>a-b);
+      const lowCut=rankedSkews[Math.floor((rankedSkews.length-1)/3)];
+      const highCut=rankedSkews[Math.floor((rankedSkews.length-1)*2/3)];
+      const refs=[spy&&{name:'SPY',value:Number(spy.skew),color:'var(--mid)'},qqq&&{name:'QQQ',value:Number(qqq.skew),color:'var(--low)'},aiMean!==null&&{name:'AI池均值',value:aiMean,color:'var(--warn)'}].filter(Boolean);
+      const values=[0,...rows.map(row=>Number(row.skew)),...refs.map(ref=>ref.value)];
+      const rawMin=Math.min(...values),rawMax=Math.max(...values),padding=Math.max(2,(rawMax-rawMin)*.08);
+      const min=Math.floor(rawMin-padding),max=Math.ceil(rawMax+padding);
+      const width=980,labelWidth=92,plotLeft=labelWidth+24,plotRight=width-70,plotWidth=plotRight-plotLeft;
+      const top=52,rowHeight=29,height=top+rows.length*rowHeight+30;
+      const x=value=>plotLeft+(Number(value)-min)/(max-min)*plotWidth;
+      const zeroX=x(0);
+      const tone=value=>value>=highCut?'var(--hot)':value<=lowCut?'var(--low)':'var(--mid)';
+      const tickLines=Array.from({length:5},(_,index)=>{
+        const value=min+(max-min)*index/4,px=x(value);
+        return `<line class="focus-grid" x1="${px}" y1="${top-8}" x2="${px}" y2="${height-24}"/><text class="focus-axis-label" x="${px}" y="${height-7}" text-anchor="middle">${signed(value,0)}</text>`;
+      }).join('');
+      const refLines=refs.map((ref,index)=>{
+        const px=x(ref.value),anchor=px>plotRight-95?'end':px<plotLeft+70?'start':'middle';
+        const tx=anchor==='end'?px-4:anchor==='start'?px+4:px;
+        return `<line class="focus-benchmark" x1="${px}" y1="${top-22}" x2="${px}" y2="${height-24}" style="stroke:${ref.color}"/><text class="focus-benchmark-label" x="${tx}" y="${16+index*13}" text-anchor="${anchor}" style="fill:${ref.color}">${escapeHtml(ref.name)} ${signed(ref.value,1)}</text>`;
+      }).join('');
+      const bars=rows.map((row,index)=>{
+        const y=top+index*rowHeight,barY=y+4,barX=Math.min(zeroX,x(row.skew)),barWidth=Math.max(2,Math.abs(x(row.skew)-zeroX));
+        const valueX=row.skew>=0?Math.min(plotRight+7,x(row.skew)+7):Math.max(plotLeft-7,x(row.skew)-7);
+        const valueAnchor=row.skew>=0?'start':'end';
+        return `<g class="focus-row" data-symbol="${escapeHtml(row.symbol)}" tabindex="0" role="button" aria-label="${escapeHtml(row.symbol)}，Skew ${signed(row.skew)}${row.rank_eligible?'':'，数据需复核'}">
+          <rect class="focus-row-hit" x="0" y="${y}" width="${width}" height="${rowHeight-1}" rx="4"/>
+          <text class="focus-row-name" x="${labelWidth}" y="${y+17}" text-anchor="end">${escapeHtml(row.symbol)}</text>
+          ${row.rank_eligible?'':`<circle class="focus-review-dot" cx="${labelWidth+8}" cy="${y+13}" r="3"/>`}
+          <rect class="focus-row-bar" x="${barX}" y="${barY}" width="${barWidth}" height="18" style="fill:${tone(Number(row.skew))};opacity:${row.rank_eligible?'.9':'.62'}"/>
+          <text class="focus-row-value" x="${valueX}" y="${y+17}" text-anchor="${valueAnchor}">${signed(row.skew,1)}</text>
+        </g>`;
+      }).join('');
+      target.innerHTML=`<svg class="focus-chart-svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="focusChartSvgTitle focusChartSvgDesc"><title id="focusChartSvgTitle">AI 与半导体股票 25 Delta Skew 横向对比</title><desc id="focusChartSvgDesc">横轴为 Put IV 减 Call IV，虚线为 SPY、QQQ 和可靠 AI 池均值，黄点代表数据需复核。</desc>${tickLines}<line class="focus-zero" x1="${zeroX}" y1="${top-8}" x2="${zeroX}" y2="${height-24}"/>${refLines}${bars}</svg>`;
+      target.querySelectorAll('.focus-row').forEach(group=>{
+        const open=()=>{selectRow(bySymbol.get(group.dataset.symbol));document.querySelector('#selectedPanel').scrollIntoView({behavior:'smooth',block:'center'});};
+        group.addEventListener('click',open);
+        group.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();open();}});
+      });
+    }
     document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
       state.filter=button.dataset.filter;
       document.querySelectorAll('[data-filter]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
@@ -438,11 +536,12 @@
         state.rankedRows=state.rows.filter(row=>row.rank_eligible);
         searchInput.placeholder=`搜索全部 ${state.rows.length} 只：代码或名称`;
         if(!state.rows.length)throw new Error('数据文件没有有效标的');
-        const optionTimes=state.rows.flatMap(row=>row.legs.flatMap(leg=>[leg.put.update_time,leg.call.update_time])).filter(Boolean).sort();
+        const optionTimes=state.rows.flatMap(row=>row.legs.flatMap(leg=>[leg.put.update_time,leg.call.update_time]).flatMap(value=>String(value||'').split('|'))).filter(Boolean).sort();
         const latest=optionTimes.at(-1)||state.rows[0].underlying_time;
         document.querySelector('#asOfText').textContent=`OpenD 已核验 · ${payload.watchlist_total}项自选 · ${payload.rank_eligible}只可靠池 · ${latest}`;
         document.querySelector('#reviewCount').textContent=`(${state.rows.length-state.rankedRows.length})`;
         setCounts(state.rankedRows);
+        renderFocusChart();
         selectRow(state.rankedRows.find(row=>row.symbol==='MRVL')||state.rankedRows[0]);
       })
       .catch(error=>{
