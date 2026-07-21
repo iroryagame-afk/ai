@@ -304,7 +304,7 @@
         <summary>指标怎么计算，应该怎么看</summary>
         <div class="explain-content">
           <div><h2>实际 Skew</h2><p>每个到期日用相邻执行价的 IV 线性插值到 +0.25 Delta Call 与 −0.25 Delta Put，计算 Put IV − Call IV；再对最近两个有效到期日取平均。</p></div>
-          <div><h2>可靠池排名</h2><p>从267项自选中自动排除非股票/ETF，再仅对双到期、25Δ结构良好且 OI 不偏薄的标的排名。它不是一年历史 Skew Rank。</p></div>
+          <div><h2>可靠池排名</h2><p>从全部自选中自动排除非股票/ETF，再仅对双到期、25Δ结构良好且 OI 不偏薄的标的排名。它不是一年历史 Skew Rank。</p></div>
           <div><h2>交易含义</h2><p>正值通常对应更高的下行保护溢价；负值可能来自保护需求偏弱或 Call 追价偏热。Skew 描述期权定价结构，不预测股票必涨必跌。</p></div>
         </div>
       </details>
