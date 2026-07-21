@@ -1,6 +1,6 @@
 # 全球 AI 算力版图深度调研
 
-> 研究日期：2026-07-10；芯片口径校准：2026-07-12
+> 研究日期：2026-07-10；芯片口径校准：2026-07-12；智谱算力消息核验：2026-07-21
 > 方法：`deep-research` 7 阶段协议
 > 核心原则：卡、GW、供应方收入、需求方成本、建设 CapEx 分表
 
@@ -52,6 +52,8 @@ Google、AWS、Microsoft、Meta 和 Oracle 没有披露同口径当前自有总�
 | 5 | **Anthropic** | 可直接识别至少 **0.3GW** SpaceXAI 短租 | AWS/Google 当前 active GW 未拆出，实际明显高于该下限 |
 
 AWS、Google、Microsoft 的全公司 AI active GW 均未披露，不能进入同口径实数排名。
+
+> **2026-07-21 智谱（Z.ai）更新：**彭博援引知情人士称，智谱已完成一座约 **1GW 设计取电规模**、全部采用国产 AI 芯片的数据中心，并已开始**部分运营**。第一财经同日明确称智谱官方截至发稿尚未回应。由于实际 active IT load、投运比例、地点、芯片型号与公司是否拥有全部资产均未披露，本报告把它列为**中可信媒体报道**，不把 1GW 计入“当前运营 GW”排名，也不表述为 1GW 已全面投运。
 
 ### 0.5 目标/可见 GW 排名：不是当前运营
 
@@ -163,6 +165,7 @@ AWS、Google、Microsoft 的全公司 AI active GW 均未披露，不能进入�
 | **OpenAI** | Abilene 约 **0.8-1.0GW 级**部分投运 | headline 承诺约 **23GW** | 未见可比自有 GW | Stargate 10 + NVIDIA 5 + AMD 6 + AWS 2 | 多年云/园区合同 | 未单列 | **23GW 存在重叠**，不是去重物理容量；S09-S12 |
 | **Oracle OCI** | AI active 未披露 | OpenAI 合作额外 **4.5GW** | OCI/Stargate 供给 | N/A | N/A | N/A | 与 OpenAI 是一笔交易，行业求和只算一次 |
 | **TeraWulf** | Anthropic 项目 **0GW** | **0.401GW critical IT load** | 机房建设 | N/A | 20 年长租 | N/A | 2027H2 首期、2028 年初满载；S13 |
+| **智谱（Z.ai）** | 媒体称已**部分运营**，实际 active MW 未披露 | 媒体称数据中心设计取电约 **1GW** | 建设/资产归属未披露 | 媒体称全部采用国产 AI 芯片，型号与数量未披露 | N/A | N/A | **公司未回应、单一知情人士口径**；不按 1GW active 排名；S29-S30 |
 | **Google** | 整体数据中心电力估算 5.2GW，非纯 AI active | Vizag 官方 **1GW** | TPU/园区自建 | N/A | N/A | SpaceXAI **110k GPU**，MW 未披露 | 媒体 5GW 仅作园区远期上限；S02/S21/S22 |
 | **AWS** | 整体数据中心电力估算 10.6GW，非纯 AI active | 公司 AI 总目标未披露 | Project Rainier 等 | Anthropic 最高 5GW、OpenAI Trainium 2GW，可能共享扩建 | N/A | N/A | 客户侧会重复出现；S10/S19 |
 | **Microsoft** | 整体数据中心电力估算 5.5GW，非纯 AI active | 公司 AI 总目标未披露 | Fairwater 等自建 | Neocloud 外采至少约 0.5GW 已披露项目 | N/A | N/A | 官方 Fairwater 不支持公司总 GW 反推；S19/S24 |
@@ -336,9 +339,11 @@ SpaceXAI 因同时是模型公司、资产方和算力出租方，不强行塞�
 25. [CNBC：Jensen Huang 披露过去四季度出货 600 万颗 Blackwell](https://www.cnbc.com/2025/10/28/nvidia-jensen-huang-gtc-washington-dc-ai.html)
 26. [Epoch AI：AI Chip Sales 数据集与方法说明](https://epoch.ai/data/ai-chip-sales)
 27. [Omdia：Google TPU 需求与采购金额估算](https://omdia.tech.informa.com/pr/2024/dec/omdia-demand-for-googles-tpu-chips-accelerates-challenging-nvidias-dominance)
+28. [Bloomberg：智谱约 1GW 国产芯片数据中心（知情人士口径）](https://www.bloomberg.com/news/articles/2026-07-20/z-ai-completes-giant-data-center-with-chinese-chips-to-train-ai)
+29. [第一财经：智谱官方截至发稿暂未回应](https://www.yicai.com/news/103284607.html)
 
 ### 新增官方芯片部署来源
 
-28. [AWS：Project Rainier 近 50 万颗 Trainium2 已运行](https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster)
+30. [AWS：Project Rainier 近 50 万颗 Trainium2 已运行](https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster)
 
-> 完整来源分级与证据对应关系见 `03_source_catalog.csv` 和 `04_evidence_ledger.csv`；25-28 号芯片校准来源及季度/产品出货的模型估算状态已回写台账。
+> 完整来源分级与证据对应关系见 `source_catalog.csv` 和 `evidence_ledger.csv`；智谱 1GW 消息按“媒体报道、公司未确认、部分投运比例未披露”回写台账。
