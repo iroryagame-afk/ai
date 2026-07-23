@@ -1,0 +1,488 @@
+{
+  "mode": "close_only",
+  "methodologyVersion": "yanpan-close-v1",
+  "markets": {
+    "CN": {
+      "displayName": "A股",
+      "status": "verified_close",
+      "asOf": "2026-07-23",
+      "generatedAt": "2026-07-23T15:48:01+08:00",
+      "timezone": "Asia/Shanghai",
+      "source": "Futu OpenD",
+      "coverage": {
+        "valid": 14,
+        "total": 14,
+        "ratio": 1
+      },
+      "groups": {
+        "ETF": {
+          "score": -40,
+          "label": "中性偏恐",
+          "fear": 1,
+          "neutral": 7,
+          "greed": 0,
+          "rows": [
+            {
+              "code": "SH.515790",
+              "name": "光伏ETF",
+              "score": -66,
+              "close": 0.839,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -29.3,
+                "priceVsMa20Atr": -62.78,
+                "ma20VsMa60Atr": -100,
+                "momentum20": -83.83,
+                "drawdown20": -100,
+                "volumeImpulse": -5.11
+              }
+            },
+            {
+              "code": "SH.512660",
+              "name": "军工ETF",
+              "score": -54,
+              "close": 1.101,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -26.84,
+                "priceVsMa20Atr": -59.88,
+                "ma20VsMa60Atr": -59.7,
+                "momentum20": -63.1,
+                "drawdown20": -100,
+                "volumeImpulse": -15.62
+              }
+            },
+            {
+              "code": "SZ.159915",
+              "name": "创业板ETF",
+              "score": -45,
+              "close": 3.597,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -18.89,
+                "priceVsMa20Atr": -54.08,
+                "ma20VsMa60Atr": -11.1,
+                "momentum20": -90.78,
+                "drawdown20": -100,
+                "volumeImpulse": -18.45
+              }
+            },
+            {
+              "code": "SH.510500",
+              "name": "中证500ETF",
+              "score": -41,
+              "close": 7.737,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -22.61,
+                "priceVsMa20Atr": -65.34,
+                "ma20VsMa60Atr": -8.92,
+                "momentum20": -67.09,
+                "drawdown20": -96.41,
+                "volumeImpulse": 53.5
+              }
+            },
+            {
+              "code": "SH.512480",
+              "name": "半导体ETF",
+              "score": -35,
+              "close": 1.106,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -16.63,
+                "priceVsMa20Atr": -61.17,
+                "ma20VsMa60Atr": 47.64,
+                "momentum20": -100,
+                "drawdown20": -100,
+                "volumeImpulse": 1.44
+              }
+            },
+            {
+              "code": "SZ.159995",
+              "name": "芯片ETF",
+              "score": -33,
+              "close": 1.262,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -16.13,
+                "priceVsMa20Atr": -58.52,
+                "ma20VsMa60Atr": 45.34,
+                "momentum20": -100,
+                "drawdown20": -100,
+                "volumeImpulse": 33.96
+              }
+            },
+            {
+              "code": "SH.588000",
+              "name": "科创50ETF",
+              "score": -27,
+              "close": 1.888,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -11.78,
+                "priceVsMa20Atr": -47.42,
+                "ma20VsMa60Atr": 39.86,
+                "momentum20": -66.57,
+                "drawdown20": -100,
+                "volumeImpulse": -2.11
+              }
+            },
+            {
+              "code": "SH.510300",
+              "name": "沪深300ETF",
+              "score": -17,
+              "close": 4.787,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -4.2,
+                "priceVsMa20Atr": -13.19,
+                "ma20VsMa60Atr": -13.58,
+                "momentum20": -25.85,
+                "drawdown20": -30.82,
+                "volumeImpulse": -61.19
+              }
+            }
+          ]
+        },
+        "个股": {
+          "score": -4,
+          "label": "中性偏恐",
+          "fear": 0,
+          "neutral": 6,
+          "greed": 0,
+          "rows": [
+            {
+              "code": "SZ.002475",
+              "name": "立讯精密",
+              "score": -37,
+              "close": 61.19,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -6.57,
+                "priceVsMa20Atr": -9.86,
+                "ma20VsMa60Atr": -49.29,
+                "momentum20": -88.12,
+                "drawdown20": -86.07,
+                "volumeImpulse": -27.3
+              }
+            },
+            {
+              "code": "SH.688981",
+              "name": "中芯国际",
+              "score": -13,
+              "close": 145.09,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -3.77,
+                "priceVsMa20Atr": -17.57,
+                "ma20VsMa60Atr": 34.55,
+                "momentum20": -37.52,
+                "drawdown20": -100,
+                "volumeImpulse": 24.33
+              }
+            },
+            {
+              "code": "SZ.300750",
+              "name": "宁德时代",
+              "score": -9,
+              "close": 385.99,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": 4.58,
+                "priceVsMa20Atr": 24.59,
+                "ma20VsMa60Atr": -57.67,
+                "momentum20": -19.79,
+                "drawdown20": -11.91,
+                "volumeImpulse": -3.03
+              }
+            },
+            {
+              "code": "SZ.300059",
+              "name": "东方财富",
+              "score": -3,
+              "close": 20.28,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": 4.7,
+                "priceVsMa20Atr": -1.26,
+                "ma20VsMa60Atr": 23.07,
+                "momentum20": -19.66,
+                "drawdown20": -36.36,
+                "volumeImpulse": -32.49
+              }
+            },
+            {
+              "code": "SZ.002594",
+              "name": "比亚迪",
+              "score": 13,
+              "close": 92.65,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": 12.1,
+                "priceVsMa20Atr": 46.35,
+                "ma20VsMa60Atr": -42.61,
+                "momentum20": 63.56,
+                "drawdown20": -11.66,
+                "volumeImpulse": -38.18
+              }
+            },
+            {
+              "code": "SH.600519",
+              "name": "贵州茅台",
+              "score": 22,
+              "close": 1292.01,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": 21.1,
+                "priceVsMa20Atr": 65.82,
+                "ma20VsMa60Atr": -32.81,
+                "momentum20": 45.58,
+                "drawdown20": -17.82,
+                "volumeImpulse": 32.87
+              }
+            }
+          ]
+        }
+      },
+      "errors": []
+    },
+    "HK": {
+      "displayName": "港股",
+      "status": "pending",
+      "asOf": null,
+      "generatedAt": null,
+      "timezone": "Asia/Hong_Kong",
+      "source": "Futu OpenD",
+      "groups": {
+        "ETF": {
+          "score": 0,
+          "label": "等待生成",
+          "fear": 0,
+          "neutral": 0,
+          "greed": 0,
+          "rows": []
+        },
+        "个股": {
+          "score": 0,
+          "label": "等待生成",
+          "fear": 0,
+          "neutral": 0,
+          "greed": 0,
+          "rows": []
+        }
+      },
+      "errors": []
+    },
+    "US": {
+      "displayName": "美股",
+      "status": "pending",
+      "asOf": null,
+      "generatedAt": null,
+      "timezone": "America/New_York",
+      "source": "Futu OpenD",
+      "groups": {
+        "ETF": {
+          "score": 0,
+          "label": "等待生成",
+          "fear": 0,
+          "neutral": 0,
+          "greed": 0,
+          "rows": []
+        },
+        "个股": {
+          "score": 0,
+          "label": "等待生成",
+          "fear": 0,
+          "neutral": 0,
+          "greed": 0,
+          "rows": []
+        }
+      },
+      "errors": []
+    },
+    "KR": {
+      "displayName": "韩股",
+      "status": "verified_close",
+      "asOf": "2026-07-23",
+      "generatedAt": "2026-07-23T16:44:08+09:00",
+      "timezone": "Asia/Seoul",
+      "source": "KRX 日线（经 FinanceDataReader）",
+      "coverage": {
+        "valid": 10,
+        "total": 10,
+        "ratio": 1
+      },
+      "groups": {
+        "ETF": {
+          "score": -42,
+          "label": "中性偏恐",
+          "fear": 0,
+          "neutral": 4,
+          "greed": 0,
+          "rows": [
+            {
+              "code": "229200.KQ",
+              "name": "KODEX KOSDAQ 150",
+              "score": -57,
+              "close": 13400,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -19.63,
+                "priceVsMa20Atr": -35.32,
+                "ma20VsMa60Atr": -93.74,
+                "momentum20": -89.21,
+                "drawdown20": -100,
+                "volumeImpulse": -26.96
+              }
+            },
+            {
+              "code": "069500.KS",
+              "name": "KODEX 200",
+              "score": -38,
+              "close": 113230,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -11.37,
+                "priceVsMa20Atr": -31.57,
+                "ma20VsMa60Atr": -6.9,
+                "momentum20": -90.18,
+                "drawdown20": -100,
+                "volumeImpulse": -43.7
+              }
+            },
+            {
+              "code": "102110.KS",
+              "name": "TIGER 200",
+              "score": -38,
+              "close": 113310,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -11.4,
+                "priceVsMa20Atr": -31.79,
+                "ma20VsMa60Atr": -6.74,
+                "momentum20": -90.18,
+                "drawdown20": -100,
+                "volumeImpulse": -53.59
+              }
+            },
+            {
+              "code": "305720.KS",
+              "name": "KODEX 2차전지산업",
+              "score": -37,
+              "close": 14025,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -7,
+                "priceVsMa20Atr": 8.5,
+                "ma20VsMa60Atr": -100,
+                "momentum20": -46.7,
+                "drawdown20": -84.11,
+                "volumeImpulse": -47.95
+              }
+            }
+          ]
+        },
+        "个股": {
+          "score": -23,
+          "label": "中性偏恐",
+          "fear": 0,
+          "neutral": 6,
+          "greed": 0,
+          "rows": [
+            {
+              "code": "005380.KS",
+              "name": "现代汽车",
+              "score": -56,
+              "close": 432000,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -25,
+                "priceVsMa20Atr": -29.4,
+                "ma20VsMa60Atr": -100,
+                "momentum20": -75.64,
+                "drawdown20": -94.1,
+                "volumeImpulse": -27.04
+              }
+            },
+            {
+              "code": "005930.KS",
+              "name": "三星电子",
+              "score": -38,
+              "close": 270000,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -9.26,
+                "priceVsMa20Atr": -28.42,
+                "ma20VsMa60Atr": -6.58,
+                "momentum20": -100,
+                "drawdown20": -100,
+                "volumeImpulse": -45.29
+              }
+            },
+            {
+              "code": "000660.KS",
+              "name": "SK海力士",
+              "score": -36,
+              "close": 1919000,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -12.02,
+                "priceVsMa20Atr": -41.54,
+                "ma20VsMa60Atr": 18.33,
+                "momentum20": -100,
+                "drawdown20": -100,
+                "volumeImpulse": -33.49
+              }
+            },
+            {
+              "code": "051910.KS",
+              "name": "LG化学",
+              "score": -36,
+              "close": 271500,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -8.73,
+                "priceVsMa20Atr": 6.37,
+                "ma20VsMa60Atr": -100,
+                "momentum20": -43.7,
+                "drawdown20": -79,
+                "volumeImpulse": -21.45
+              }
+            },
+            {
+              "code": "035720.KS",
+              "name": "Kakao",
+              "score": 2,
+              "close": 37150,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": 7.21,
+                "priceVsMa20Atr": 37.83,
+                "ma20VsMa60Atr": -84.75,
+                "momentum20": 46.32,
+                "drawdown20": 0,
+                "volumeImpulse": 20.66
+              }
+            },
+            {
+              "code": "035420.KS",
+              "name": "NAVER",
+              "score": 26,
+              "close": 220000,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": 19.66,
+                "priceVsMa20Atr": 85.99,
+                "ma20VsMa60Atr": -63.84,
+                "momentum20": 51.65,
+                "drawdown20": 0,
+                "volumeImpulse": 91.57
+              }
+            }
+          ]
+        }
+      },
+      "errors": []
+    }
+  }
+}
