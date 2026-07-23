@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T09:01:18.658Z",
+  "generatedAt": "2026-07-23T09:07:08.377Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -64,9 +64,9 @@
   },
   "skew": {
     "asOf": "2026-07-22",
-    "median25d": 2.26,
-    "valid": 15,
-    "highCount": 6,
+    "median25d": 1.72,
+    "valid": 16,
+    "highCount": 7,
     "status": "verified_close"
   },
   "breadth": {
@@ -94,8 +94,8 @@
         "belowMa20": 62.5,
         "sentimentScore": 6,
         "putCallTotal": 1.01,
-        "skewHighCount": 6,
-        "skewValid": 15
+        "skewHighCount": 7,
+        "skewValid": 16
       },
       "label": "回调中段"
     }

@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#0c111b">
   <link rel="icon" href="data:,">
-  <title>US Watchlist IV Skew Radar</title>
+  <title>US Daily Core IV Skew Radar</title>
   <style>
     :root {
       color-scheme: dark;
@@ -273,7 +273,7 @@
         <div class="brand-mark" aria-hidden="true">25Δ</div>
         <div>
           <h1>US Watchlist · Put/Call IV Skew</h1>
-          <p class="subtitle">富途美股自选股的近端期权保护需求雷达</p>
+          <p class="subtitle">每日核心风险池的近端期权保护需求雷达 · 约2分钟刷新</p>
         </div>
       </div>
       <div class="asof"><span class="status-dot" aria-hidden="true"></span><span id="asOfText">正在读取数据…</span></div>
@@ -367,7 +367,7 @@
         <summary>指标怎么计算，应该怎么看</summary>
         <div class="explain-content">
           <div><h2>实际 Skew</h2><p>每个到期日用相邻执行价的 IV 线性插值到 +0.25 Delta Call 与 −0.25 Delta Put，计算 Put IV − Call IV；再对最近两个有效到期日取平均。</p></div>
-          <div><h2>可靠池排名</h2><p>从全部自选中自动排除非股票/ETF，再仅对双到期、25Δ结构良好且 OI 不偏薄的标的排名。它不是一年历史 Skew Rank。</p></div>
+          <div><h2>每日核心池排名</h2><p>覆盖宽基、半导体、巨头科技与高贝塔龙头；仅对双到期、25Δ结构良好且 OI 不偏薄的标的排名。它不是全自选池或一年历史 Skew Rank。</p></div>
           <div><h2>交易含义</h2><p>正值通常对应更高的下行保护溢价；负值可能来自保护需求偏弱或 Call 追价偏热。Skew 描述期权定价结构，不预测股票必涨必跌。</p></div>
         </div>
       </details>
@@ -390,9 +390,9 @@
   <script>
     const labels={high:'Put 避险相对偏高',balanced:'相对平衡',low:'Put 避险相对偏低',review:'不参与排名'};
     const notes={
-      high:'Put 相对 Call 的隐波溢价在本次自选股中偏高，说明下行保护需求相对更强；不代表股价必跌。',
-      balanced:'Put 与 Call 的相对隐波处于本次自选股的中间区域，暂未出现明显的单边倾斜。',
-      low:'Put 相对 Call 的隐波溢价在本次自选股中偏低，可能是保护需求偏弱或 Call 追价更热；不代表股价必涨。'
+      high:'Put 相对 Call 的隐波溢价在每日核心池中偏高，说明下行保护需求相对更强；不代表股价必跌。',
+      balanced:'Put 与 Call 的相对隐波处于每日核心池的中间区域，暂未出现明显的单边倾斜。',
+      low:'Put 相对 Call 的隐波溢价在每日核心池中偏低，可能是保护需求偏弱或 Call 追价更热；不代表股价必涨。'
     };
     const state={rows:[],rankedRows:[],filter:'all',sort:'rank-desc',query:'',selected:null};
     const focusSymbols=['SNDK','SKHY','AXTI','MU','WDC','AEHR','COHR','AMAT','LRCX','ONTO','ANET','AMD','AVGO','ASML','INTC','NVDA','AAOI','WOLF','LITE','STM','CBRS','MRVL','CRDO'];
@@ -553,7 +553,7 @@
         if(!state.rows.length)throw new Error('数据文件没有有效标的');
         const optionTimes=state.rows.flatMap(row=>row.legs.flatMap(leg=>[leg.put.update_time,leg.call.update_time]).flatMap(value=>String(value||'').split('|'))).filter(Boolean).sort();
         const latest=optionTimes.at(-1)||state.rows[0].underlying_time;
-        document.querySelector('#asOfText').textContent=`OpenD 已核验 · ${payload.watchlist_total}项自选 · ${payload.rank_eligible}只可靠池 · ${latest}`;
+        document.querySelector('#asOfText').textContent=`OpenD 已核验 · ${payload.requested}只每日核心 · ${payload.rank_eligible}只可靠池 · ${latest}`;
         document.querySelector('#reviewCount').textContent=`(${state.rows.length-state.rankedRows.length})`;
         setCounts(state.rankedRows);
         renderFocusChart();
