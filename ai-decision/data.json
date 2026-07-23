@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T08:29:04.284Z",
+  "generatedAt": "2026-07-23T08:45:25.579Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -75,5 +75,27 @@
     "aShareUp": 3996,
     "aShareDown": 1143,
     "aShareMainNetYi": -222.47
+  },
+  "correction": {
+    "cn": {
+      "score": 52,
+      "components": {
+        "deleveraging": 76.8,
+        "belowMa20": 57.4,
+        "sentimentStress": 18.3,
+        "fearShare": 5.6
+      },
+      "label": "回调中段"
+    },
+    "us": {
+      "score": 47,
+      "components": {
+        "belowMa20": 62.5,
+        "sentimentStress": 0,
+        "putCallStress": 74.3,
+        "skewHighShare": 40
+      },
+      "label": "回调中段"
+    }
   }
 }
