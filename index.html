@@ -2,15 +2,144 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>表姐严选</title>
-  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <meta http-equiv="refresh" content="0; url=csn/?v=20260622">
-  <link rel="canonical" href="csn/">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CSNPK公开研究台：mda100市场决策与表姐严选量化筛选。">
+  <title>CSNPK公开研究台</title>
+  <style>
+    :root {
+      --bg:#f5f7fa; --surface:#fff; --ink:#101828; --muted:#526071;
+      --line:#d9e1ea; --navy:#0f1f33; --blue:#2563eb; --teal:#0f766e;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+    .hero { background:var(--navy); color:#fff; padding:64px max(22px,calc((100vw - 1180px)/2)) 56px; }
+    .hero h1 { max-width:760px; margin:0; font-size:48px; line-height:1.08; letter-spacing:-.03em; text-wrap:balance; }
+    .hero p { max-width:72ch; margin:18px 0 0; color:#c5d4e5; font-size:17px; line-height:1.75; text-wrap:pretty; }
+    .status { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+    .status span { padding:6px 10px; border:1px solid #38516d; border-radius:999px; color:#dbe7f4; font-size:13px; font-weight:750; }
+    main { width:min(1180px,calc(100vw - 28px)); margin:28px auto 64px; }
+    .route { display:grid; grid-template-columns:180px minmax(0,1fr) auto; gap:24px; align-items:center;
+      padding:26px 4px; border-bottom:1px solid var(--line); }
+    .route:first-child { border-top:1px solid var(--line); }
+    .route-label { color:var(--muted); font-size:13px; font-weight:800; }
+    .route h2 { margin:0 0 8px; font-size:25px; letter-spacing:-.02em; }
+    .route p { max-width:72ch; margin:0; color:var(--muted); line-height:1.7; }
+    .route a { display:inline-flex; align-items:center; min-height:42px; padding:9px 15px; border-radius:8px;
+      color:#fff; background:var(--blue); text-decoration:none; font-weight:850; white-space:nowrap; }
+    .route.csn a { background:var(--teal); }
+    .route a:hover { filter:brightness(.94); }
+    .route a:focus-visible { outline:3px solid #7db4ff; outline-offset:3px; }
+    .boundary { margin-top:30px; padding:18px 0; border-top:1px solid var(--line); color:var(--muted); line-height:1.7; }
+    .boundary strong { color:var(--ink); }
+    footer { width:min(1180px,calc(100vw - 28px)); margin:0 auto 30px; color:#667085; font-size:12px; }
+    @media (max-width:760px) {
+      .hero { padding:42px 18px 38px; }
+      .hero h1 { font-size:36px; }
+      .route { grid-template-columns:1fr; gap:10px; padding:24px 2px; }
+      .route a { width:max-content; }
+    }
+    @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+  </style>
+<style id="unified-a-share-design">
+    :root {
+      --research-bg:#f5f7fa;
+      --research-surface:#ffffff;
+      --research-ink:#111827;
+      --research-muted:#526071;
+      --research-line:#d9e1ea;
+      --research-brand:#123c69;
+      --research-accent:#0f766e;
+      --research-focus:#2563eb;
+      --z-sticky:20;
+    }
+    html { scroll-behavior:smooth; }
+    body { background:var(--research-bg); color:var(--research-ink); }
+    .research-platform-bar {
+      position:sticky; top:0; z-index:var(--z-sticky);
+      display:flex; align-items:center; justify-content:space-between; gap:18px;
+      min-height:52px; padding:8px max(18px,calc((100vw - 1480px)/2));
+      background:#0f1f33; color:#fff; border-bottom:1px solid #27415f;
+    }
+    .research-platform-brand {
+      display:flex; align-items:baseline; gap:9px; color:#fff; text-decoration:none;
+      font-weight:900; letter-spacing:-.01em; white-space:nowrap;
+    }
+    .research-platform-brand span { color:#b8c9dc; font-size:12px; font-weight:700; }
+    .research-platform-nav { display:flex; align-items:center; gap:4px; }
+    .research-platform-nav a {
+      display:inline-flex; align-items:center; min-height:34px; padding:6px 11px;
+      border-radius:7px; color:#cbd8e7; text-decoration:none; font-size:13px; font-weight:800;
+    }
+    .research-platform-nav a:hover { background:#1b3552; color:#fff; }
+    .research-platform-nav a[aria-current="page"] { background:#fff; color:#123c69; }
+    .research-platform-nav a:focus-visible,
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
+    summary:focus-visible { outline:3px solid #7db4ff; outline-offset:2px; }
+    .top { border-bottom:0 !important; }
+    .top h1, h1, h2, h3 { text-wrap:balance; }
+    p, .lead { text-wrap:pretty; }
+    section, .panel, .metric, .kpi, .step, .setup-card, .whole-market-stat,
+    .flow-summary-card, .radar-status-item, .detail-item {
+      border-radius:10px !important;
+      box-shadow:none !important;
+    }
+    .rec-review, .panel, .spotlight, .backtest-panel, .detail-grid,
+    td[data-label="标的"] { border-left-width:1px !important; }
+    .table-wrap, .candidate-table-wrap { scrollbar-gutter:stable; }
+    table { font-variant-numeric:tabular-nums; }
+    tbody tr { transition:background-color 180ms ease-out; }
+    @media (max-width:760px) {
+      .research-platform-bar { position:static; align-items:flex-start; padding:10px; }
+      .research-platform-brand span { display:none; }
+      .research-platform-nav { overflow-x:auto; max-width:68vw; }
+      .research-platform-nav a { white-space:nowrap; }
+      .system-nav { overflow-x:auto; }
+      .system-nav a { flex:0 0 auto !important; white-space:nowrap; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *, *::before, *::after { transition-duration:.01ms !important; animation-duration:.01ms !important; }
+    }
+  </style>
+
 </head>
 <body>
-  <p><a href="csn/?v=20260622">打开表姐严选</a></p>
+
+  <div class="research-platform-bar" data-design="A_SHARE_RESEARCH_DESIGN_V1">
+    <a class="research-platform-brand" href="./">
+      CSNPK 研究台 <span>公开研究视图 · 不含个人持仓</span>
+    </a>
+    <nav class="research-platform-nav" aria-label="公开研究系统">
+      <a href="./" aria-current="page">总览</a>
+      <a href="./mda100/">mda100</a>
+      <a href="./csn/">表姐严选</a>
+      <a href="./nav/">全部报告</a>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <h1>一张入口，分清市场判断与个股筛选</h1>
+    <p>mda100 先回答“当前市场适不适合进攻、主线在哪里”；表姐严选再回答“哪些标的通过量化筛选、处于什么阶段”。两套系统共享核验边界，但不把评分直接当作买点。</p>
+    <div class="status">
+      <span>公开研究视图</span><span>来源日期原样展示</span><span>不含个人持仓评估</span>
+    </div>
+  </header>
+  <main>
+    <section class="route">
+      <div class="route-label">A股市场 → 主线 → 候选</div>
+      <div><h2>mda100</h2><p>聚合全A资金闸门、行业轮动、核心池评分、新闻排雷与次日操作纪律，适合先形成市场级判断。</p></div>
+      <a href="./mda100/">进入 mda100</a>
+    </section>
+    <section class="route csn">
+      <div class="route-label">核心池 → 核验 → 筛选</div>
+      <div><h2>表姐严选</h2><p>面向核心池的搜索、分层、动态RS、阶段与买点/止损核验，适合从大量标的中快速收敛观察名单。</p></div>
+      <a href="./csn/">进入表姐严选</a>
+    </section>
+    <aside class="boundary">
+      <strong>公开边界：</strong>页面只呈现市场、行业、股票池和候选研究。个人账户、成本、仓位、盈亏和持仓评估不进入 csnpk.com 公共产物。
+    </aside>
+  </main>
+  <footer>A_SHARE_RESEARCH_DESIGN_V1 · 研究页面不构成投资建议</footer>
 </body>
 </html>

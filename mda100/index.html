@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mda100 A股智能投研服务</title>
+  <style>
+    :root {
+      --ink:#121826; --muted:#607089; --line:#dfe7f2; --navy:#152033;
+      --blue:#2457d6; --red:#b42318; --green:#087443; --orange:#9a3412;
+      --bg:#f5f7fb; --soft:#fffaf5; --card:#ffffff; --row:#f8fafc;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif; font-size:15px; }
+    .top { background:#111827; color:white; padding:30px 36px 26px; border-bottom:4px solid #2457d6; }
+    .top h1 { margin:0 0 8px; font-size:36px; letter-spacing:0; }
+    .top p { margin:0; color:#dbe7ff; font-size:17px; line-height:1.65; max-width:1180px; }
+    .nav { display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
+    .nav a { color:white; text-decoration:none; border:1px solid rgba(255,255,255,.28); border-radius:8px; padding:9px 14px; font-weight:750; background:rgba(255,255,255,.07); }
+    .nav a:first-child { background:#2457d6; border-color:#5b8cff; }
+    .verify { margin-top:20px; display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:8px; background:#dcfce7; color:#14532d; font-weight:800; }
+    .wrap { width:min(1680px, calc(100vw - 28px)); margin:18px auto 52px; }
+    .kpis { display:grid; grid-template-columns:repeat(6, minmax(118px,1fr)); gap:12px; margin-bottom:16px; }
+    .kpi { background:white; border:1px solid var(--line); border-radius:8px; padding:14px 16px; box-shadow:none; }
+    .kpi span { display:block; color:var(--muted); font-weight:700; margin-bottom:8px; }
+    .kpi strong { font-size:26px; }
+    .rec-review { margin:16px 0; padding:20px 22px 18px; border:1px solid #cbd5e1; border-left:1px solid #2563eb; border-radius:0 14px 14px 0; background:#eff6ff; box-shadow:none; }
+    .rec-review.negative { border-left-color:#dc2626; background:#fff7f7; }
+    .rec-review.positive { border-left-color:#2563eb; background:#eff6ff; }
+    .rec-review-head { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; }
+    .rec-review h2 { margin:0 0 8px; color:#2563eb; font-size:20px; }
+    .rec-review.negative h2 { color:#dc2626; }
+    .rec-review-head p { margin:0; color:#475569; font-weight:900; font-size:16px; }
+    .rec-review-head p span { color:#94a3b8; margin:0 6px; }
+    .rec-review-head > strong { color:#2563eb; font-size:46px; line-height:1; letter-spacing:0; font-variant-numeric:tabular-nums; }
+    .rec-review.negative .rec-review-head > strong { color:#dc2626; }
+    .rec-review-metrics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:18px 0; }
+    .rec-review-metrics div { background:white; border:1px solid #bfdbfe; border-radius:10px; padding:12px 14px; }
+    .rec-review.negative .rec-review-metrics div { border-color:#fecaca; }
+    .rec-review-metrics b { display:block; color:#0f172a; font-size:20px; line-height:1.1; font-variant-numeric:tabular-nums; }
+    .rec-review-metrics span { display:block; margin-top:6px; color:#64748b; font-size:13px; font-weight:900; }
+    .rec-review p { margin:8px 0 0; color:#475569; font-size:15px; font-weight:750; }
+    .rec-review.muted-review { display:flex; gap:12px; align-items:center; color:#64748b; background:#f8fafc; border-left-color:#94a3b8; }
+    section { background:white; border:1px solid var(--line); border-radius:8px; padding:20px; margin:14px 0; box-shadow:none; }
+    section.priority-section { border-color:#bfdbfe; background:#f8fbff; box-shadow:none; }
+    h2 { font-size:24px; margin:0 0 12px; }
+    h3 { margin:0 0 8px; font-size:20px; }
+    .lead { color:#354258; line-height:1.8; margin:0 0 18px; }
+    .setup-grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px; }
+    .setup-card { border:1px solid #fecaca; background:#fff7f7; border-radius:8px; padding:16px; }
+    .setup-card p { color:#334155; line-height:1.7; margin:8px 0; }
+    table { width:100%; max-width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border:1px solid var(--line); border-radius:8px; }
+    th { background:var(--navy); color:white; text-align:left; font-size:13px; padding:11px 12px; white-space:nowrap; }
+    td { border-top:1px solid #e8edf5; padding:11px 12px; vertical-align:top; font-size:13px; line-height:1.5; overflow-wrap:anywhere; word-break:break-word; }
+    tr:nth-child(even) td { background:var(--row); }
+    .stock strong { display:block; font-size:15px; margin-bottom:4px; }
+    code { display:inline-block; background:#edf2f7; border-radius:6px; padding:2px 6px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:800; white-space:nowrap; word-break:keep-all; overflow-wrap:normal; }
+    .score { display:inline-grid; place-items:center; width:36px; height:36px; border-radius:10px; font-weight:900; }
+    .score-5 { background:#fee2e2; color:#b91c1c; border:1px solid #fecaca; }
+    .score-4 { background:#dbeafe; color:#1d4ed8; border:1px solid #bfdbfe; }
+    .score-3 { background:#ccfbf1; color:#0f766e; border:1px solid #99f6e4; }
+    .score-2 { background:#fef3c7; color:#a16207; border:1px solid #fde68a; }
+    .score-1,.score-0 { background:#eef2f7; color:#475569; border:1px solid #cbd5e1; }
+    .score100 { display:inline-flex; flex:0 0 50px; align-items:center; justify-content:center; width:50px; min-width:50px; max-width:50px; height:32px; padding:0; box-sizing:border-box; border-radius:9px; font-size:14px; font-weight:950; line-height:1; white-space:nowrap; word-break:keep-all; overflow-wrap:normal; font-variant-numeric:tabular-nums; }
+    .score100.elite { background:#fee2e2; color:#b91c1c; border:1px solid #fecaca; box-shadow:none; }
+    .score100.strong { background:#dbeafe; color:#1d4ed8; border:1px solid #bfdbfe; }
+    .score100.good { background:#ccfbf1; color:#0f766e; border:1px solid #99f6e4; }
+    .score100.mid { background:#fef3c7; color:#a16207; border:1px solid #fde68a; }
+    .score100.low,.score100.weak { background:#eef2f7; color:#475569; border:1px solid #cbd5e1; }
+    .pill,.action,.mini-tag,.s-tag { display:inline-flex; align-items:center; border-radius:999px; padding:4px 9px; font-weight:850; white-space:nowrap; }
+    .pill.up { background:#ffe4e6; color:#a2161a; border:1px solid #fecdd3; }
+    .pill.down { background:#dcfce7; color:#166534; border:1px solid #bbf7d0; }
+    .pill.muted { background:#eef2f7; color:#64748b; }
+    .bias-temp { display:inline-flex; align-items:center; justify-content:center; min-width:70px; border-radius:999px; padding:4px 9px; font-weight:900; white-space:nowrap; font-variant-numeric:tabular-nums; }
+    .bias-temp.stage { min-width:0; white-space:normal; line-height:1.35; text-align:center; }
+    .bias-temp.scorching { background:#7f1d1d; color:#fff; border:1px solid #991b1b; box-shadow:none; }
+    .bias-temp.hot { background:#ffedd5; color:#c2410c; border:1px solid #fdba74; }
+    .bias-temp.warm { background:#fef3c7; color:#a16207; border:1px solid #fcd34d; }
+    .bias-temp.cool { background:#cffafe; color:#0e7490; border:1px solid #67e8f9; }
+    .bias-temp.cold { background:#dbeafe; color:#1d4ed8; border:1px solid #93c5fd; }
+    .bias-delta { display:inline-flex; min-width:58px; justify-content:center; border-radius:999px; padding:3px 8px; font-weight:900; font-variant-numeric:tabular-nums; }
+    .bias-delta.warming { color:#c2410c; background:#fff7ed; }
+    .bias-delta.cooling { color:#1d4ed8; background:#eff6ff; }
+    .bias-delta.steady { color:#64748b; background:#f1f5f9; }
+    .bias-legend { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; }
+    .bias-legend .bias-temp { min-width:0; padding:3px 8px; font-size:11px; }
+    .action.buy { background:#fee2e2; color:#b91c1c; border:1px solid #fecaca; }
+    .action.hold { background:#dbeafe; color:#1d4ed8; border:1px solid #bfdbfe; }
+    .action.sell { background:#ffedd5; color:#c2410c; border:1px solid #fed7aa; }
+    .action.watch { background:#e2e8f0; color:#334155; border:1px solid #cbd5e1; }
+    .mini-tag { background:#f1f5f9; color:#475569; border:1px solid #e2e8f0; font-size:12px; margin:4px 4px 0 0; }
+    .s-tag { background:#fff1f2; color:#be123c; border:1px solid #fecdd3; }
+    .pool-badge { display:inline-grid; place-items:center; width:34px; height:34px; border-radius:999px; font-weight:950; }
+    .pool-badge.core { background:#fee2e2; color:#b91c1c; border:1px solid #fecaca; }
+    .pool-badge.wild { background:#dbeafe; color:#1d4ed8; border:1px solid #bfdbfe; }
+    .vertical-badge { display:inline-flex; align-items:center; max-width:100%; border-radius:999px; padding:5px 10px; background:#ecfeff; color:#155e75; border:1px solid #a5f3fc; font-weight:900; white-space:normal; line-height:1.35; }
+    .structure-tags,.buy-signals { display:flex; flex-wrap:wrap; gap:6px; margin-top:7px; }
+    .structure-badge,.structure-bonus,.bias-badge { display:inline-flex; align-items:center; border-radius:999px; padding:4px 9px; font-size:12px; font-weight:900; line-height:1.25; }
+    .structure-badge.edge { background:#ecfeff; color:#155e75; border:1px solid #a5f3fc; }
+    .structure-badge.bottleneck { background:#fff7ed; color:#9a3412; border:1px solid #fed7aa; }
+    .structure-bonus { background:#fef3c7; color:#92400e; border:1px solid #fde68a; }
+    .bias-badge.overheat { background:#fee2e2; color:#b91c1c; border:1px solid #fecaca; }
+    .bias-badge.healthy { background:#dcfce7; color:#166534; border:1px solid #bbf7d0; }
+    .bias-badge.near { background:#e0f2fe; color:#075985; border:1px solid #bae6fd; }
+    .bias-badge.filter { background:#fef3c7; color:#92400e; border:1px solid #fde68a; }
+    .bias-badge.weak,.bias-badge.muted { background:#eef2f7; color:#475569; border:1px solid #cbd5e1; }
+    .overlay-badges { display:flex; flex-wrap:wrap; gap:5px; margin-top:6px; }
+    .multi-temp { display:flex; flex-direction:column; gap:6px; margin-top:7px; }
+    .ema-distance-chips { display:flex; flex-wrap:wrap; gap:5px; }
+    .temp-summary { font-size:11px; line-height:1.35; }
+    .model-chip { display:inline-flex; align-items:center; max-width:100%; border-radius:999px; padding:4px 8px; font-size:11px; font-weight:900; line-height:1.25; white-space:normal; word-break:keep-all; overflow-wrap:anywhere; }
+    .model-chip.stage-good { background:#dcfce7; color:#166534; border:1px solid #bbf7d0; }
+    .model-chip.stage-watch { background:#e0f2fe; color:#075985; border:1px solid #bae6fd; }
+    .model-chip.stage-hot { background:#fee2e2; color:#b91c1c; border:1px solid #fecaca; }
+    .model-chip.stage-risk { background:#ffedd5; color:#c2410c; border:1px solid #fed7aa; }
+    .model-chip.stage-neutral { background:#eef2f7; color:#475569; border:1px solid #cbd5e1; }
+    .subtle { color:#52627a; margin-top:6px; }
+    .cell-main { font-weight:750; color:#1f2937; }
+    .compact-text { display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; }
+    .muted-text { color:#94a3b8; }
+    .two-col { display:grid; grid-template-columns:1.05fr .95fr; gap:18px; }
+    .workflow { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .step { background:#f8fafc; border:1px solid var(--line); border-radius:16px; padding:16px; }
+    .note { border:1px solid #fed7aa; background:#fff7ed; color:#7c2d12; border-radius:8px; padding:13px 16px; margin:14px 0; line-height:1.7; }
+    .decision-note { border-color:#bfdbfe; background:#eff6ff; color:#1e3a8a; font-weight:850; }
+    .radar-meta { display:flex; flex-wrap:wrap; gap:8px 24px; margin:12px 0 18px; padding:12px 0; border-top:1px solid #dbeafe; border-bottom:1px solid #dbeafe; }
+    .radar-meta > div { flex:1 1 260px; min-width:0; }
+    .radar-meta strong { display:block; color:#52627a; font-size:12px; margin-bottom:4px; }
+    .radar-meta span { color:#1f2937; font-weight:750; line-height:1.5; }
+    .whole-market-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:10px 0; }
+    .whole-market-stat { border:1px solid #dbeafe; background:#f8fbff; border-radius:8px; padding:13px 14px; }
+    .whole-market-stat span { display:block; color:#64748b; font-size:12px; font-weight:850; margin-bottom:6px; }
+    .whole-market-stat strong { display:block; color:#0f172a; font-size:20px; line-height:1.2; font-variant-numeric:tabular-nums; }
+    .whole-market-stat.positive { border-color:#fecaca; background:#fff7f7; }
+    .whole-market-stat.positive strong { color:#b91c1c; }
+    .whole-market-stat.negative { border-color:#bfdbfe; background:#eff6ff; }
+    .whole-market-stat.negative strong { color:#1d4ed8; }
+    .whole-market-stat.gate { border-color:#fed7aa; background:#fff7ed; }
+    .whole-market-stat.gate strong { color:#9a3412; }
+    .market-source-note { color:#52627a; font-size:12px; line-height:1.6; margin:4px 0 18px; }
+    .market-flow-summary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:10px 0 12px; }
+    .flow-summary-card { border:1px solid #dbeafe; background:#f8fbff; border-radius:8px; padding:12px 14px; min-width:0; }
+    .flow-summary-card span { display:block; color:#64748b; font-size:12px; font-weight:900; margin-bottom:6px; }
+    .flow-summary-card strong { display:block; color:#1f2937; font-size:13px; line-height:1.65; }
+    .flow-summary-card.inflow { border-color:#fecaca; background:#fff7f7; }
+    .flow-summary-card.inflow span { color:#b91c1c; }
+    .flow-summary-card.outflow { border-color:#bfdbfe; background:#eff6ff; }
+    .flow-summary-card.outflow span { color:#1d4ed8; }
+    .flow-summary-card.style { border-color:#fed7aa; background:#fff7ed; }
+    .flow-summary-card.style span { color:#9a3412; }
+    .industry-details { margin:0 0 20px; border:1px solid #e2e8f0; border-radius:8px; background:#fbfdff; }
+    .industry-details summary { cursor:pointer; padding:10px 13px; color:#1d4ed8; font-size:12px; font-weight:900; user-select:none; }
+    .industry-details .industry-fund-grid { padding:0 12px 12px; margin:0; }
+    .industry-fund-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:10px 0 20px; }
+    .industry-fund-block { min-width:0; }
+    .industry-fund-block h4 { margin:0 0 7px; font-size:13px; }
+    .industry-fund-block.inflow h4 { color:#b91c1c; }
+    .industry-fund-block.outflow h4 { color:#1d4ed8; }
+    .industry-fund-block th,.industry-fund-block td { padding:8px 9px; font-size:12px; }
+    .radar-status-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:12px 0 18px; }
+    .radar-status-item { border:1px solid #e2e8f0; background:#fbfdff; border-radius:8px; padding:12px; }
+    .radar-status-item > div { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+    .radar-status-item strong { color:#1f2937; }
+    .radar-status-item p { margin:8px 0 0; color:#64748b; font-size:12px; line-height:1.55; }
+    .status-badge { display:inline-flex; align-items:center; border-radius:999px; padding:3px 8px; font-size:11px; font-weight:900; white-space:nowrap; }
+    .status-badge.ok { background:#dcfce7; color:#166534; border:1px solid #bbf7d0; }
+    .status-badge.warn { background:#fff7ed; color:#c2410c; border:1px solid #fed7aa; }
+    .status-badge.muted { background:#eef2f7; color:#475569; border:1px solid #cbd5e1; }
+    .mainline-card-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; margin-top:18px; border-top:1px solid #dbeafe; }
+    .mainline-card { padding:16px 20px 0 0; }
+    .mainline-card + .mainline-card { border-left:1px solid #dbeafe; padding-left:20px; padding-right:0; }
+    .mainline-head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:12px; }
+    .mainline-label { display:inline-flex; border:1px solid #bfdbfe; background:#eff6ff; color:#1d4ed8; border-radius:999px; padding:3px 8px; font-size:11px; font-weight:900; margin-bottom:6px; }
+    .mainline-head h3 { margin:0; color:#111827; }
+    .replay-badge { display:inline-flex; align-items:center; border-radius:999px; padding:4px 9px; background:#fef3c7; color:#92400e; border:1px solid #fde68a; font-size:12px; font-weight:900; white-space:nowrap; }
+    .mainline-grid { display:grid; grid-template-columns:1fr; gap:8px; }
+    .mainline-grid > div { border-top:1px solid #edf2f7; padding-top:8px; }
+    .mainline-grid h4 { margin:0 0 4px; color:#52627a; font-size:12px; }
+    .mainline-grid p { margin:0; color:#334155; font-size:12px; line-height:1.6; }
+    .validation-box { margin-top:12px; border:1px solid #e2e8f0; background:#f8fafc; border-radius:8px; padding:0; }
+    .validation-box summary { cursor:pointer; padding:9px 11px; font-weight:900; color:#1d4ed8; user-select:none; }
+    .validation-box ul { margin:0; padding:0 14px 12px 26px; color:#334155; font-size:12px; line-height:1.65; }
+    .focus-note { border:1px solid #fecaca; background:#fff1f2; color:#991b1b; border-radius:8px; padding:13px 16px; margin:18px 0 12px; line-height:1.7; font-weight:800; }
+    .algo-link { display:flex; align-items:center; justify-content:space-between; gap:16px; border:1px solid #bfdbfe; background:#eff6ff; border-radius:8px; padding:14px 16px; margin:14px 0 18px; }
+    .algo-link strong { display:block; color:#1e3a8a; font-size:17px; margin-bottom:4px; }
+    .algo-link span { color:#475569; line-height:1.55; }
+    .algo-link a { display:inline-flex; align-items:center; justify-content:center; text-decoration:none; border-radius:999px; padding:9px 14px; background:#1d4ed8; color:white; font-weight:900; white-space:nowrap; }
+    .pool-focus-block { margin:16px 0 22px; }
+    .pool-focus-title { display:flex; align-items:baseline; gap:12px; margin-bottom:8px; }
+    .pool-focus-title h3 { margin:0; }
+    .pool-focus-title p { margin:0; color:#64748b; font-weight:750; }
+    .buy-focus-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,520px)); gap:14px; margin:12px 0 22px; align-items:start; }
+    .buy-card { position:relative; border:1px solid #fecaca; background:linear-gradient(180deg,#fff8f8,#fffdf9); border-radius:8px; padding:16px; box-shadow:none; }
+    .buy-rank { position:absolute; right:16px; top:14px; color:#be123c; font-size:14px; font-weight:950; background:#ffe4e6; border:1px solid #fecdd3; border-radius:999px; padding:4px 9px; }
+    .buy-head { display:flex; justify-content:space-between; gap:18px; align-items:flex-start; padding-right:52px; }
+    .buy-head h3 { margin:0 0 7px; font-size:22px; }
+    .buy-vertical { margin:12px 0 4px; }
+    .buy-line { display:flex; align-items:center; gap:10px; margin:14px 0 12px; font-weight:850; color:#334155; }
+    .buy-card p { margin:7px 0; color:#334155; line-height:1.55; }
+    .empty-focus { border:1px dashed #cbd5e1; background:#f8fafc; color:#64748b; border-radius:8px; padding:18px; margin:12px 0 22px; }
+    .trade-tier { display:inline-flex; align-items:center; border-radius:999px; padding:5px 10px; font-weight:900; white-space:nowrap; }
+    .trade-tier.focus { background:#dc2626; color:white; box-shadow:none; }
+    .trade-tier.hot { background:#fee2e2; color:#b91c1c; border:1px solid #fecaca; }
+    .trade-tier.watch { background:#dbeafe; color:#1d4ed8; border:1px solid #bfdbfe; }
+    .trade-tier.setup { background:#fff1f2; color:#be123c; border:1px solid #fecdd3; }
+    .focus-row td { background:#fff7ed !important; }
+    .anti { display:inline-flex; align-items:center; border-radius:999px; padding:5px 10px; font-weight:900; white-space:nowrap; }
+    .anti.strong { background:#fee2e2; color:#b91c1c; border:1px solid #fecaca; }
+    .anti.mid { background:#ffedd5; color:#c2410c; border:1px solid #fed7aa; }
+    .anti.weak { background:#fef3c7; color:#a16207; border:1px solid #fde68a; }
+    .anti.muted { background:#eef2f7; color:#64748b; border:1px solid #cbd5e1; }
+    .filter-panel { display:flex; flex-wrap:wrap; align-items:end; gap:14px; border:1px solid #dbeafe; background:#f8fbff; border-radius:8px; padding:14px; margin:18px 0 14px; }
+    .filter-field { display:flex; flex-direction:column; gap:7px; min-width:260px; flex:1 1 320px; }
+    .filter-field label,.filter-group-title { color:#52627a; font-size:13px; font-weight:850; }
+    .filter-field input { height:42px; border:1px solid #cbd5e1; border-radius:12px; padding:0 13px; font-size:15px; outline:none; background:white; }
+    .filter-field input:focus { border-color:#93c5fd; box-shadow:0 0 0 3px rgba(59,130,246,.14); }
+    .filter-group { display:flex; flex-direction:column; gap:7px; }
+    .filter-checks { display:flex; flex-wrap:wrap; gap:8px; }
+    .filter-check { display:inline-flex; align-items:center; gap:7px; height:42px; border:1px solid #cbd5e1; background:white; border-radius:999px; padding:0 13px; font-weight:900; color:#334155; cursor:pointer; user-select:none; }
+    .filter-check input { width:16px; height:16px; accent-color:#2457d6; }
+    .filter-check.score95 { border-color:#fecaca; background:#fff1f2; color:#b91c1c; }
+    .filter-check.score90 { border-color:#bfdbfe; background:#eff6ff; color:#1d4ed8; }
+    .filter-check.score85 { border-color:#99f6e4; background:#f0fdfa; color:#0f766e; }
+    .filter-check.setup { border-color:#fecdd3; background:#fff1f2; color:#be123c; }
+    .filter-check.core { border-color:#fecaca; background:#fff1f2; color:#b91c1c; }
+    .filter-check.wild { border-color:#bfdbfe; background:#eff6ff; color:#1d4ed8; }
+    .filter-check.buy { border-color:#fecaca; background:#fff1f2; color:#b91c1c; }
+    .filter-check.watch { border-color:#cbd5e1; background:#f8fafc; color:#334155; }
+    .filter-check.sell { border-color:#fed7aa; background:#fff7ed; color:#c2410c; }
+    .filter-count { margin-left:auto; height:42px; display:inline-flex; align-items:center; border-radius:999px; padding:0 15px; background:#eef2f7; color:#334155; font-weight:900; }
+    .candidate-table-wrap { width:100%; max-width:100%; overflow-x:visible; border-radius:12px; }
+    .candidate-table-wrap table { margin:0; }
+    .candidate-table { table-layout:fixed; width:100%; min-width:0; font-size:12px; }
+    .candidate-table th,.candidate-table td { padding:10px 10px; overflow-wrap:anywhere; word-break:break-word; }
+    .candidate-table th { white-space:normal; line-height:1.35; }
+    .candidate-table th:nth-child(1),.candidate-table td:nth-child(1) { width:10%; min-width:0; }
+    .candidate-table th:nth-child(2),.candidate-table td:nth-child(2) { width:21%; min-width:0; }
+    .candidate-table th:nth-child(3),.candidate-table td:nth-child(3) { width:8%; min-width:0; text-align:center; }
+    .candidate-table th:nth-child(4),.candidate-table td:nth-child(4) { width:18%; min-width:0; }
+    .candidate-table th:nth-child(5),.candidate-table td:nth-child(5) { width:24%; min-width:0; }
+    .candidate-table th:nth-child(6),.candidate-table td:nth-child(6) { width:13%; min-width:0; }
+    .candidate-table th:nth-child(7),.candidate-table td:nth-child(7) { width:6%; min-width:72px; text-align:center; }
+    .candidate-table .stock strong { font-size:14px; }
+    .candidate-table .vertical-badge { white-space:normal; line-height:1.35; }
+    .candidate-table .subtle { line-height:1.46; }
+    .candidate-table .pool-line { display:flex; align-items:flex-start; gap:8px; flex-wrap:wrap; }
+    .candidate-table .score-cell .score100 { margin-bottom:4px; }
+    .row-details { position:relative; }
+    .row-details summary { display:inline-flex; align-items:center; justify-content:center; cursor:pointer; border:1px solid #cbd5e1; background:#f8fafc; color:#334155; border-radius:999px; padding:5px 10px; font-weight:900; user-select:none; white-space:nowrap; }
+    .row-details[open] summary { background:#eff6ff; color:#1d4ed8; border-color:#bfdbfe; }
+    .detail-grid { position:fixed; right:32px; top:18vh; z-index:50; width:min(760px, calc(100vw - 64px)); max-height:70vh; overflow:auto; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; padding:14px; text-align:left; background:white; border:1px solid #cbd5e1; border-radius:8px; box-shadow:none; }
+    .detail-grid h4 { margin:0 0 6px; font-size:13px; color:#334155; }
+    .detail-grid p { margin:0; line-height:1.55; color:#334155; }
+    .detail-grid > div { min-width:0; }
+    .full-score-table { table-layout:fixed; width:100%; min-width:1460px; font-size:12px; }
+    .full-score-table th,.full-score-table td { padding:8px 8px; font-size:12px; line-height:1.42; overflow-wrap:anywhere; word-break:break-word; }
+    .full-score-table th { white-space:normal; }
+    .full-score-table .stock strong { font-size:13px; margin-bottom:2px; }
+    .full-score-table code { font-size:11px; padding:1px 5px; }
+    .full-score-table .score { width:28px; height:28px; border-radius:8px; font-size:13px; }
+    .full-score-table .score100 { width:44px; min-width:44px; max-width:44px; height:28px; border-radius:8px; font-size:13px; }
+    .full-score-table .pill { padding:4px 8px; font-size:12px; }
+    .full-score-table .bias-badge { display:inline-block; max-width:100%; white-space:normal; word-break:break-word; overflow-wrap:anywhere; padding:4px 7px; font-size:12px; line-height:1.42; border-radius:10px; }
+    .full-score-table .subtle { margin-top:3px; font-size:11px; line-height:1.35; }
+    .full-score-table th:nth-child(1),.full-score-table td:nth-child(1) { width:48px; text-align:center; }
+    .full-score-table th:nth-child(2),.full-score-table td:nth-child(2) { width:118px; }
+    .full-score-table th:nth-child(3),.full-score-table td:nth-child(3) { width:190px; }
+    .full-score-table th:nth-child(4),.full-score-table td:nth-child(4) { width:70px; text-align:center; }
+    .full-score-table th:nth-child(5),.full-score-table td:nth-child(5) { width:86px; text-align:center; }
+    .full-score-table th:nth-child(6),.full-score-table td:nth-child(6) { width:80px; text-align:center; }
+    .full-score-table th:nth-child(7),.full-score-table td:nth-child(7) { width:190px; }
+    .full-score-table th:nth-child(8),.full-score-table td:nth-child(8) { width:430px; }
+    .full-score-table th:nth-child(9),.full-score-table td:nth-child(9) { width:260px; }
+    .holding-snapshot { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 16px; color:#52627a; font-weight:800; }
+    .holding-snapshot span { display:inline-flex; align-items:center; border:1px solid #dbeafe; background:#eff6ff; color:#1d4ed8; border-radius:999px; padding:5px 10px; }
+    .holding-table { table-layout:fixed; width:100%; min-width:1520px; font-size:13px; }
+    .holding-table th,.holding-table td { padding:10px 10px; font-size:13px; line-height:1.48; overflow-wrap:anywhere; word-break:break-word; }
+    .holding-table th { white-space:normal; }
+    .holding-table .stock strong { font-size:15px; }
+    .holding-table .subtle { font-size:12px; line-height:1.42; }
+    .holding-table th:nth-child(1),.holding-table td:nth-child(1) { width:170px; }
+    .holding-table th:nth-child(2),.holding-table td:nth-child(2) { width:120px; text-align:center; }
+	    .holding-table th:nth-child(3),.holding-table td:nth-child(3) { width:96px; text-align:center; }
+	    .holding-table th:nth-child(4),.holding-table td:nth-child(4) { width:420px; }
+	    .holding-table th:nth-child(5),.holding-table td:nth-child(5) { width:360px; }
+	    .holding-table th:nth-child(6),.holding-table td:nth-child(6) { width:354px; }
+	    .memory-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:12px 0 16px; }
+	    .memory-card { border:1px solid #dbeafe; background:white; border-radius:8px; padding:14px; }
+	    .memory-card span { display:block; color:#52627a; font-size:13px; font-weight:850; margin-bottom:6px; }
+	    .memory-card strong { font-size:20px; color:#152033; line-height:1.25; }
+	    .memory-table { table-layout:fixed; width:100%; min-width:1180px; font-size:13px; }
+	    .memory-table th,.memory-table td { padding:10px 10px; font-size:13px; line-height:1.48; overflow-wrap:anywhere; word-break:break-word; }
+	    .memory-table th:nth-child(1),.memory-table td:nth-child(1) { width:160px; }
+	    .memory-table th:nth-child(2),.memory-table td:nth-child(2) { width:112px; }
+	    .memory-table th:nth-child(3),.memory-table td:nth-child(3) { width:96px; text-align:center; }
+	    .memory-table th:nth-child(4),.memory-table td:nth-child(4) { width:170px; }
+	    .memory-table th:nth-child(5),.memory-table td:nth-child(5) { width:96px; text-align:center; }
+	    .memory-table th:nth-child(6),.memory-table td:nth-child(6) { width:220px; }
+	    .memory-table th:nth-child(7),.memory-table td:nth-child(7) { width:326px; }
+    /* Visual polish: keep the main page scannable; move dense judgment detail behind "展开". */
+    body { background:#f6f8fb; font-size:14px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+    .top { padding:28px 40px 24px; background:linear-gradient(180deg,#111827,#172033); border-bottom:1px solid #263449; }
+    .top h1 { font-size:34px; line-height:1.15; text-wrap:balance; }
+    .top p { max-width:1040px; color:#cbd7ee; font-size:16px; }
+    .wrap { width:min(1440px, calc(100vw - 40px)); }
+    section { padding:18px; margin:16px 0; border-color:#e2e8f0; box-shadow:none; }
+    h2 { font-size:22px; line-height:1.25; text-wrap:balance; }
+    h3 { font-size:18px; line-height:1.3; }
+    .lead { font-size:14px; line-height:1.7; color:#475569; }
+    .kpis { grid-template-columns:repeat(6,minmax(0,1fr)); gap:10px; }
+    .kpi { padding:12px 14px; border-radius:8px; }
+    .kpi span { margin-bottom:6px; font-size:12px; }
+    .kpi strong { font-size:23px; font-variant-numeric:tabular-nums; }
+    table { border-radius:8px; border-color:#e2e8f0; }
+    th { padding:10px 10px; background:#172033; font-size:12px; letter-spacing:0; }
+    td { padding:10px 10px; font-size:12px; line-height:1.48; }
+    tr:nth-child(even) td { background:#f9fafc; }
+    tr:hover td { background:#f8fbff; }
+    .stock strong { font-size:14px; line-height:1.3; }
+    code { padding:2px 6px; border-radius:6px; color:#1e293b; background:#eef3f8; font-size:12px; }
+    .pill,.action,.mini-tag,.s-tag,.trade-tier,.anti { padding:4px 8px; font-size:12px; line-height:1.15; }
+    .score100 { width:46px; min-width:46px; max-width:46px; height:30px; border-radius:8px; font-size:13px; }
+    .pool-badge { width:28px; height:28px; font-size:12px; }
+    .vertical-badge { padding:4px 8px; border-radius:8px; font-size:12px; line-height:1.3; }
+    .structure-tags,.buy-signals,.overlay-badges,.ema-distance-chips { gap:4px; }
+    .structure-badge,.structure-bonus,.bias-badge,.model-chip { padding:3px 7px; border-radius:8px; font-size:11px; line-height:1.25; font-weight:800; }
+    .model-chip { color:#475569; background:#f1f5f9; border-color:#dbe3ee; }
+    .model-chip.stage-good { background:#eefbf4; color:#167043; border-color:#ccefdc; }
+    .model-chip.stage-watch { background:#eff6ff; color:#1d4f8f; border-color:#d4e6ff; }
+    .model-chip.stage-hot { background:#fff1f2; color:#b42318; border-color:#ffd6d9; }
+    .model-chip.stage-risk { background:#fff7ed; color:#a04408; border-color:#fedfc0; }
+    .model-chip.stage-neutral { background:#f1f5f9; color:#52627a; border-color:#dbe3ee; }
+    .subtle { color:#64748b; margin-top:5px; }
+    .compact-text { -webkit-line-clamp:3; }
+    .temp-summary { color:#7a889d; font-size:11px; line-height:1.35; }
+    .filter-panel { gap:12px; padding:12px; border-radius:8px; background:#f8fbff; }
+    .filter-field input { height:38px; border-radius:8px; font-size:14px; }
+    .filter-field input:focus-visible,.filter-check:focus-within,.row-details summary:focus-visible,.nav a:focus-visible,.algo-link a:focus-visible { outline:2px solid #60a5fa; outline-offset:2px; }
+    .filter-check { height:38px; padding:0 11px; border-radius:8px; font-size:12px; }
+    .filter-count { height:38px; border-radius:8px; font-size:12px; }
+    .candidate-table-wrap { overflow-x:visible; border:1px solid #e2e8f0; border-radius:8px; background:#fff; }
+    .candidate-table-wrap table { border:0; border-radius:0; }
+    .candidate-table,.full-score-table,.holding-table,.memory-table { table-layout:fixed; width:100%; min-width:0; }
+    .candidate-table th:nth-child(1),.candidate-table td:nth-child(1) { width:11%; }
+    .candidate-table th:nth-child(2),.candidate-table td:nth-child(2) { width:19%; }
+    .candidate-table th:nth-child(3),.candidate-table td:nth-child(3) { width:7%; }
+    .candidate-table th:nth-child(4),.candidate-table td:nth-child(4) { width:16%; }
+    .candidate-table th:nth-child(5),.candidate-table td:nth-child(5) { width:24%; }
+    .candidate-table th:nth-child(6),.candidate-table td:nth-child(6) { width:15%; }
+    .candidate-table th:nth-child(7),.candidate-table td:nth-child(7) { width:8%; min-width:0; }
+    .candidate-table .structure-tags .structure-badge:nth-child(n+3),
+    .candidate-table .structure-tags .structure-bonus:nth-child(n+3) { display:none; }
+    .candidate-table .tech-cell > strong { display:block; margin:5px 0 6px; color:#263449; font-size:12px; }
+    .candidate-table .tech-cell .bias-badge,.full-score-table .bias-badge { max-width:100%; white-space:normal; }
+    .row-details summary { width:100%; min-height:30px; border-radius:8px; padding:5px 8px; font-size:12px; }
+    .detail-grid { right:40px; top:12vh; width:min(720px, calc(100vw - 80px)); grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; padding:16px; border-radius:8px; }
+    .detail-grid > div { padding:10px; border:1px solid #eef2f7; border-radius:8px; background:#fbfdff; }
+    .detail-grid h4 { font-size:12px; margin-bottom:7px; color:#52627a; }
+    .detail-grid p { font-size:12px; line-height:1.65; }
+    .full-score-table th:nth-child(1),.full-score-table td:nth-child(1) { width:4%; }
+    .full-score-table th:nth-child(2),.full-score-table td:nth-child(2) { width:10%; }
+    .full-score-table th:nth-child(3),.full-score-table td:nth-child(3) { width:16%; }
+    .full-score-table th:nth-child(4),.full-score-table td:nth-child(4) { width:6%; }
+    .full-score-table th:nth-child(5),.full-score-table td:nth-child(5) { width:7%; }
+    .full-score-table th:nth-child(6),.full-score-table td:nth-child(6) { width:7%; }
+    .full-score-table th:nth-child(7),.full-score-table td:nth-child(7) { width:17%; }
+    .full-score-table th:nth-child(8),.full-score-table td:nth-child(8) { width:19%; }
+    .full-score-table th:nth-child(9),.full-score-table td:nth-child(9) { width:14%; }
+    .full-score-table .subtle { font-size:11px; }
+    .holding-table th:nth-child(1),.holding-table td:nth-child(1) { width:15%; }
+    .holding-table th:nth-child(2),.holding-table td:nth-child(2) { width:9%; }
+    .holding-table th:nth-child(3),.holding-table td:nth-child(3) { width:8%; }
+    .holding-table th:nth-child(4),.holding-table td:nth-child(4) { width:28%; }
+    .holding-table th:nth-child(5),.holding-table td:nth-child(5) { width:18%; }
+    .holding-table th:nth-child(6),.holding-table td:nth-child(6) { width:22%; }
+    .memory-table th:nth-child(1),.memory-table td:nth-child(1) { width:14%; }
+    .memory-table th:nth-child(2),.memory-table td:nth-child(2) { width:12%; }
+    .memory-table th:nth-child(3),.memory-table td:nth-child(3) { width:10%; }
+    .memory-table th:nth-child(4),.memory-table td:nth-child(4) { width:14%; }
+    .memory-table th:nth-child(5),.memory-table td:nth-child(5) { width:10%; }
+    .memory-table th:nth-child(6),.memory-table td:nth-child(6) { width:16%; }
+    .memory-table th:nth-child(7),.memory-table td:nth-child(7) { width:24%; }
+	    @media (max-width: 980px) {
+	      .top { padding:26px 20px; }
+	      .top h1 { font-size:32px; }
+	      .kpis,.memory-grid { grid-template-columns:repeat(2,1fr); }
+	      .rec-review-head { flex-direction:column; }
+	      .rec-review-head > strong { font-size:38px; }
+	      .rec-review-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
+	      .setup-grid,.two-col,.workflow,.buy-focus-grid,.radar-meta,.radar-status-grid,.whole-market-grid,.market-flow-summary,.industry-fund-grid,.mainline-card-grid { grid-template-columns:1fr; }
+      .mainline-card { padding:16px 0; }
+      .mainline-card + .mainline-card { border-left:0; border-top:1px solid #dbeafe; padding-left:0; }
+      .algo-link { align-items:flex-start; flex-direction:column; }
+      .filter-panel { align-items:stretch; }
+      .filter-count { margin-left:0; justify-content:center; }
+      section { padding:16px; }
+      table { display:table; overflow-x:visible; }
+      .candidate-table-wrap { overflow-x:visible; }
+      .candidate-table { min-width:0; }
+      .candidate-table th,.candidate-table td { padding:8px 7px; font-size:11px; }
+      .candidate-table th:nth-child(1),.candidate-table td:nth-child(1) { width:16%; }
+      .candidate-table th:nth-child(2),.candidate-table td:nth-child(2) { width:20%; }
+      .candidate-table th:nth-child(3),.candidate-table td:nth-child(3) { width:10%; }
+      .candidate-table th:nth-child(4),.candidate-table td:nth-child(4) { width:18%; }
+      .candidate-table th:nth-child(5),.candidate-table td:nth-child(5) { width:20%; }
+      .candidate-table th:nth-child(6),.candidate-table td:nth-child(6) { width:10%; }
+      .candidate-table th:nth-child(7),.candidate-table td:nth-child(7) { width:6%; min-width:54px; }
+      .detail-grid { left:16px; right:16px; top:14vh; width:auto; grid-template-columns:1fr; max-height:76vh; overflow:auto; }
+      .full-score-table { min-width:0; }
+	      .holding-table { min-width:0; }
+	      .memory-table { min-width:0; }
+	    }
+  </style>
+
+  <style id="unified-a-share-design">
+    :root {
+      --research-bg:#f5f7fa;
+      --research-surface:#ffffff;
+      --research-ink:#111827;
+      --research-muted:#526071;
+      --research-line:#d9e1ea;
+      --research-brand:#123c69;
+      --research-accent:#0f766e;
+      --research-focus:#2563eb;
+      --z-sticky:20;
+    }
+    html { scroll-behavior:smooth; }
+    body { background:var(--research-bg); color:var(--research-ink); }
+    .research-platform-bar {
+      position:sticky; top:0; z-index:var(--z-sticky);
+      display:flex; align-items:center; justify-content:space-between; gap:18px;
+      min-height:52px; padding:8px max(18px,calc((100vw - 1480px)/2));
+      background:#0f1f33; color:#fff; border-bottom:1px solid #27415f;
+    }
+    .research-platform-brand {
+      display:flex; align-items:baseline; gap:9px; color:#fff; text-decoration:none;
+      font-weight:900; letter-spacing:-.01em; white-space:nowrap;
+    }
+    .research-platform-brand span { color:#b8c9dc; font-size:12px; font-weight:700; }
+    .research-platform-nav { display:flex; align-items:center; gap:4px; }
+    .research-platform-nav a {
+      display:inline-flex; align-items:center; min-height:34px; padding:6px 11px;
+      border-radius:7px; color:#cbd8e7; text-decoration:none; font-size:13px; font-weight:800;
+    }
+    .research-platform-nav a:hover { background:#1b3552; color:#fff; }
+    .research-platform-nav a[aria-current="page"] { background:#fff; color:#123c69; }
+    .research-platform-nav a:focus-visible,
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
+    summary:focus-visible { outline:3px solid #7db4ff; outline-offset:2px; }
+    .top { border-bottom:0 !important; }
+    .top h1, h1, h2, h3 { text-wrap:balance; }
+    p, .lead { text-wrap:pretty; }
+    section, .panel, .metric, .kpi, .step, .setup-card, .whole-market-stat,
+    .flow-summary-card, .radar-status-item, .detail-item {
+      border-radius:10px !important;
+      box-shadow:none !important;
+    }
+    .rec-review, .panel, .spotlight, .backtest-panel, .detail-grid,
+    td[data-label="标的"] { border-left-width:1px !important; }
+    .table-wrap, .candidate-table-wrap { scrollbar-gutter:stable; }
+    table { font-variant-numeric:tabular-nums; }
+    tbody tr { transition:background-color 180ms ease-out; }
+    @media (max-width:760px) {
+      .research-platform-bar { position:static; align-items:flex-start; padding:10px; }
+      .research-platform-brand span { display:none; }
+      .research-platform-nav { overflow-x:auto; max-width:68vw; }
+      .research-platform-nav a { white-space:nowrap; }
+      .system-nav { overflow-x:auto; }
+      .system-nav a { flex:0 0 auto !important; white-space:nowrap; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *, *::before, *::after { transition-duration:.01ms !important; animation-duration:.01ms !important; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="research-platform-bar" data-design="A_SHARE_RESEARCH_DESIGN_V1">
+    <a class="research-platform-brand" href="../">
+      CSNPK 研究台 <span>公开研究视图 · 不含个人持仓</span>
+    </a>
+    <nav class="research-platform-nav" aria-label="公开研究系统">
+      <a href="../">总览</a>
+      <a href="../mda100/" aria-current="page">mda100</a>
+      <a href="../csn/">表姐严选</a>
+      <a href="../nav/">全部报告</a>
+    </nav>
+  </div>
+
+  <header class="top">
+    <h1>mda100 A股智能投研服务</h1>
+    <p>把市场闸门、主线强弱、候选排序与次日操作纪律放在同一张公开研究页中；不展示任何个人账户或持仓评估。</p>
+    <nav class="nav">
+	      <a href="#mainline">主线雷达</a>
+	      <a href="#select">MD50选股</a>
+	      <a href="#fullscores">全量评分</a>
+      <a href="#qveris">新股票初评</a>
+      <a href="#algorithm">当前算法说明</a>
+    </nav>
+    <div class="verify">二次确认 DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH · Report 2026-07-23 = Index 2026-07-23</div>
+  </header>
+  <main class="wrap">
+    <div class="kpis"><div class="kpi"><span>md50核心池</span><strong>50/50</strong></div><div class="kpi"><span>行情覆盖</span><strong>100.0%</strong></div><div class="kpi"><span>上涨/下跌</span><strong>13/37</strong></div><div class="kpi"><span>平均分</span><strong>8.1</strong></div><div class="kpi"><span>95分+</span><strong>0</strong></div><div class="kpi"><span>90分+</span><strong>1</strong></div></div>
+
+    <section class="rec-review negative">
+      <div class="rec-review-head">
+        <div>
+          <h2>昨日推荐回看</h2>
+          <p>2026-07-22 推荐 <span>|</span> 2026-07-23 表现</p>
+        </div>
+        <strong>-4.95%</strong>
+      </div>
+      <div class="rec-review-metrics">
+        <div><b>2</b><span>推荐数</span></div>
+        <div><b>-4.95%</b><span>中位数</span></div>
+        <div><b>0/2</b><span>胜率</span></div>
+        <div><b>0%</b><span>正收益占比</span></div>
+      </div>
+      <p><b>Top：</b>北方华创 -3.14% / 中芯国际 -6.75%</p>
+      <p><b>Bottom：</b>中芯国际 -6.75% / 北方华创 -3.14%</p>
+    </section>
+
+
+    <section id="mainline" class="priority-section">
+      <h2>一、主线雷达</h2>
+      <p class="lead">先看全A总资金、成交额与涨跌宽度，再看行业资金分配；代表ETF只用于确认风格位置和温度，不代替大盘判断。</p>
+
+      <div class="radar-meta">
+        <div><strong>数据日期</strong><span>2026-07-23</span></div>
+        <div><strong>核验覆盖</strong><span>行情 103/103 已核验；新闻 106只股票池已核验；全A总闸门、行业资金和ETF风格已核验。</span></div>
+        <div><strong>数据边界</strong><span>全A/行业资金：东方财富延迟行业资金快照（主域风控回退）；ETF订单流：Futu OpenD；订单流均不等于外部净增资金或ETF净申购。</span></div>
+      </div>
+
+        <h3>全A市场资金总闸门</h3>
+        <div class="whole-market-grid">
+          <div class="whole-market-stat negative"><span>全A主力净流入</span><strong>-222.47亿</strong></div>
+          <div class="whole-market-stat"><span>全A成交额</span><strong>22,095亿</strong></div>
+          <div class="whole-market-stat"><span>市场宽度</span><strong>4260涨 / 1208跌</strong></div>
+          <div class="whole-market-stat gate"><span>总闸门</span><strong>存量分化</strong></div>
+        </div>
+        <div class="market-source-note">主力净占比 -1.01%；全A订单流覆盖 5882/5882；Futu沪深全A交叉核验 21,945亿。</div>
+
+      <h3>大盘资金流向摘要（全A行业）</h3><div class="market-flow-summary"><div class="flow-summary-card inflow"><span>主要流入</span><strong>电力设备 +111.67亿；有色金属 +65.68亿；电网设备 +53.93亿</strong></div><div class="flow-summary-card outflow"><span>主要流出</span><strong>电子 -233.06亿；半导体 -198.03亿；通信 -92.06亿</strong></div><div class="flow-summary-card style"><span>风格前三</span><strong>高股息/银行 79.0分；周期资源 69.1分；工业制造/防守 54.5分</strong></div></div><details class="industry-details"><summary>展开全A行业净流入 / 净流出 TOP5 明细</summary><div class="industry-fund-grid"><div class="industry-fund-block inflow"><h4>净流入 TOP5</h4><div class="table-scroll"><table><thead><tr><th>行业</th><th>主力净额</th><th>净占比</th><th>涨跌</th><th>涨/跌</th></tr></thead><tbody><tr><td><strong>电力设备</strong></td><td>+111.67亿</td><td>+5.89%</td><td>+4.60%</td><td>378/32</td></tr><tr><td><strong>有色金属</strong></td><td>+65.68亿</td><td>+4.16%</td><td>+3.51%</td><td>140/4</td></tr><tr><td><strong>电网设备</strong></td><td>+53.93亿</td><td>+9.57%</td><td>+6.57%</td><td>139/4</td></tr><tr><td><strong>电池</strong></td><td>+37.29亿</td><td>+5.27%</td><td>+4.28%</td><td>100/6</td></tr><tr><td><strong>能源金属</strong></td><td>+18.96亿</td><td>+9.03%</td><td>+6.42%</td><td>11/0</td></tr></tbody></table></div></div><div class="industry-fund-block outflow"><h4>净流出 TOP5</h4><div class="table-scroll"><table><thead><tr><th>行业</th><th>主力净额</th><th>净占比</th><th>涨跌</th><th>涨/跌</th></tr></thead><tbody><tr><td><strong>电子</strong></td><td>-233.06亿</td><td>-3.64%</td><td>-0.93%</td><td>209/299</td></tr><tr><td><strong>半导体</strong></td><td>-198.03亿</td><td>-5.52%</td><td>-3.26%</td><td>17/163</td></tr><tr><td><strong>通信</strong></td><td>-92.06亿</td><td>-5.39%</td><td>+0.95%</td><td>90/40</td></tr><tr><td><strong>通信设备</strong></td><td>-87.51亿</td><td>-5.61%</td><td>+0.74%</td><td>61/30</td></tr><tr><td><strong>计算机</strong></td><td>-67.48亿</td><td>-4.65%</td><td>+0.57%</td><td>224/133</td></tr></tbody></table></div></div></div></details>
+      <h3>大盘风格轮动确认（行业宽度主判，代表ETF辅助）</h3><p class="subtle">综合分优先使用全A行业涨跌与上涨宽度；代表ETF只补充乖离率、成交温度和订单流确认，不代替大盘资金。</p><div class="table-scroll"><table><thead><tr><th>市场风格</th><th>综合分</th><th>综合结论</th><th>行业涨跌</th><th>行业上涨宽度</th><th>代表ETF乖离 / 3日变化</th><th>代表ETF成交温度</th><th>代表ETF订单流</th></tr></thead><tbody><tr><td><strong>高股息/银行</strong></td><td>79.0</td><td><strong>进攻闸门打开</strong><div class="subtle">价值流震荡区</div></td><td>+1.75%</td><td>100.0%</td><td><span class="bias-temp warm">+3.34%</span><div class="subtle">3日 <span class="bias-delta steady">-0.68</span></div></td><td>0.91x</td><td>+0.28亿</td></tr><tr><td><strong>周期资源</strong></td><td>69.1</td><td><strong>轮动确认/观察</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+3.27%</td><td>100.0%</td><td><span class="bias-temp warm">+3.00%</span><div class="subtle">3日 <span class="bias-delta warming">+6.08</span></div></td><td>1.12x</td><td>-0.07亿</td></tr><tr><td><strong>工业制造/防守</strong></td><td>54.5</td><td><strong>中性</strong><div class="subtle">深跌修复，仍待确认</div></td><td>+2.71%</td><td>66.7%</td><td><span class="bias-temp cold">-5.77%</span><div class="subtle">3日 <span class="bias-delta warming">+7.64</span></div></td><td>0.79x</td><td>+0.32亿</td></tr><tr><td><strong>消费</strong></td><td>48.7</td><td><strong>中性</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+1.89%</td><td>0.0%</td><td><span class="bias-temp warm">+1.26%</span><div class="subtle">3日 <span class="bias-delta steady">-0.88</span></div></td><td>0.74x</td><td>+0.17亿</td></tr><tr><td><strong>医药</strong></td><td>48.2</td><td><strong>中性</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+0.52%</td><td>0.0%</td><td><span class="bias-temp warm">+3.19%</span><div class="subtle">3日 <span class="bias-delta steady">-1.00</span></div></td><td>0.68x</td><td>+0.16亿</td></tr><tr><td><strong>科技成长</strong></td><td>33.8</td><td><strong>防守/降低新增仓位</strong><div class="subtle">深跌修复，仍待确认</div></td><td>+0.12%</td><td>33.3%</td><td><span class="bias-temp cold">-6.89%</span><div class="subtle">3日 <span class="bias-delta warming">+6.17</span></div></td><td>0.86x</td><td>+0.90亿</td></tr></tbody></table></div><div class="bias-legend"><span class="bias-temp scorching">极热</span><span class="bias-temp hot">热</span><span class="bias-temp warm">温</span><span class="bias-temp cool">偏冷</span><span class="bias-temp cold">冷</span></div><div class="note">代表ETF乖离率=(ln收盘价−EMA20(ln收盘价))×100；3日变化判断修复/恶化；银行与红利按±5%震荡区逆向观察。该列只做风格确认。</div>
+      <div class="mainline-card-grid">
+            <article class="mainline-card">
+              <div class="mainline-head">
+                <h3>全A大盘风险结论（资金与涨跌宽度）</h3>
+              </div>
+              <div class="mainline-grid">
+                <div><h4>结论</h4><p>全A总闸门为“存量分化”；当日风格优先级为 高股息/银行 79.0分、周期资源 69.1分、工业制造/防守 54.5分。</p></div>
+                <div><h4>依据</h4><p>全A主力净流入 -222.47亿，成交额 22,095亿，4260只上涨、1208只下跌。 行业主要流入：电力设备 +111.67亿、有色金属 +65.68亿、电网设备 +53.93亿；主要流出：电子 -233.06亿、半导体 -198.03亿、通信 -92.06亿。</p></div>
+                <div><h4>约束</h4><p>全A下跌家数占比 22%；总资金未转正前，新增仓位继续从严。</p></div>
+                <div><h4>明日验证</h4><p>看全A主力净额能否转正；看上涨家数能否超过下跌家数；看宽基与科创方向能否同步收复短均线。</p></div>
+              </div>
+            </article>
+
+            <article class="mainline-card">
+              <div class="mainline-head">
+                <h3>MD50核心池候选排序（仅研究优先级）</h3>
+              </div>
+              <div class="mainline-grid">
+                <div><h4>结论</h4><p>高分排序只决定研究优先级，不直接产生买点。</p></div>
+                <div><h4>依据</h4><p>本次100分制靠前标的为：红板科技 100分、中科曙光 98分、中芯国际 91分、浪潮信息 68分、拓荆科技 63分。 当日涨幅靠前：红板科技 +6.2%、风华高科 +4.6%、工业富联 +3.6%、信维通信 +3.3%、三环集团 +2.5%。</p></div>
+                <div><h4>约束</h4><p>最多保留3个候选，高开不追。</p></div>
+                <div><h4>明日验证</h4><p>是否回踩关键线后获得承接；是否出现放量确认；是否守住各自失效线。</p></div>
+              </div>
+            </article>
+            </div>
+
+    </section>
+
+    <section id="select">
+      <h2>二、MD50选股服务</h2>
+      <p class="lead">基于 2026-07-23 收盘后 Futu OpenD 已核验行情，按 100 分制筛选次一交易日优先研究和布局的 A 股候选。新版股票池收缩为 md50：只保留 AI 科技链中各细分环节的龙一/龙二，PCB、电子料、光通信按产业链环节拆分，MLCC 仅保留龙一龙二。模型以技术图形、K线和成交量为主；新闻资讯只做排雷、解释和确认，不再把正面新闻作为主要加分项，避免追到已经 price in 的小作文。</p>
+      <div class="note">新闻扫描：news_scan_20260723_163500.json · 2026-07-23T16:35:00 · 已匹配本次复盘</div>
+      <div class="algo-link">
+        <div>
+          <strong>当前算法说明</strong>
+          <span>S形态、结构标签、反人性、多周期温度、排序口径和新闻排雷统一收在本页下方，主入口只保留一个 HTML 和一个 Markdown。</span>
+        </div>
+        <a href="#algorithm">查看说明</a>
+      </div>
+      <h3>今日建议买入</h3>
+
+    <div class="pool-focus-block">
+      <div class="pool-focus-title">
+        <h3>必选池建议买入（最多3只）</h3>
+        <p>核心资产容错更高：允许围绕关键支撑、假破位修复和缩量回踩做低吸预案。</p>
+      </div>
+      <div class="empty-focus">本次没有达到“建议买入”条件的前三候选，高分票先按观察低吸处理。</div>
+    </div>
+
+
+    <div class="pool-focus-block">
+      <div class="pool-focus-title">
+        <h3>打野池建议买入（最多3只）</h3>
+        <p>阶段性机会要求更严：必须右侧确认、量价承接，不做高位追涨。</p>
+      </div>
+      <div class="empty-focus">本次没有达到“建议买入”条件的前三候选，高分票先按观察低吸处理。</div>
+    </div>
+
+      <h3>高分候选池</h3>
+      <p class="lead">数量已经收紧，这里只展示高分和 S 形态的候选；更细的条件筛选移到下方全量评分区。</p>
+      <div class="candidate-table-wrap">
+        <table class="candidate-table">
+          <thead>
+            <tr><th>股票</th><th>池/垂类</th><th>评分</th><th>层级/多周期温度</th><th>新闻修正 / 关键新闻</th><th>次日操作</th><th>详情</th></tr>
+          </thead>
+          <tbody id="candidateRows"><tr data-score="91" data-special="0" data-pool="core" data-action="sell" data-search="中芯国际 688981 zhongxinguoji zxgj 必选池 晶圆制造 / 先进成熟制程 破位观望 弱修 近30；近50；缩量；量价险；破位风险；低吸观察 极值反转 中性 -0.1；多空交织：1条利好 vs 1条利空；涨价/供给紧"><td class="stock"><strong>中芯国际</strong><code>688981</code></td><td class="vertical-cell"><div class="pool-line"><span class="pool-badge core" title="必选池">必</span><span class="vertical-badge">晶圆制造 / 先进成熟制程</span></div></td><td class="score-cell"><span class="score100 strong">91</span><div class="subtle">技术 76</div></td><td class="tech-cell"><div><span class="trade-tier watch">观察低吸</span></div><strong>破位观望</strong><span class="bias-badge filter" title="20EMA乖离-5%-0%，刚跌穿/弱修复，需站回关键线。">20乖 -3.5% · 弱修</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.6% / 10:-5.6% / 20:-4.8% / 55:+3.4% / 200:+17.0%</div></td><td class="news-cell"><div class="cell-main">中性 -0.1；多空交织：1条利好 vs 1条利空；涨价/供给紧</div><div class="subtle compact-text">恒指收涨1.28%，恒科指涨0.65%。成交额居前个股中，腾讯控股涨1.04%，中芯国际跌2.95%，华虹宏力跌7.49%，智谱跌0.34%，阿里巴巴-W涨1.14%。；港股芯片股震荡走低，华虹宏力(01347.HK)跌超6%，天数智芯(09903.HK)、中芯国际(00981.HK)、英诺赛科(02577.HK)、中兴通讯(00763.HK)、兆易创新(03986.HK)等个股跟跌。</div></td><td class="next-action-cell"><span class="action watch">不买</span><div class="subtle compact-text">不追高；等待回踩关键线、站回5/10/20日线或量价承接后再评估。</div></td><td class="details-cell"><details class="row-details"><summary>展开</summary><div class="detail-grid"><div><h4>策略标签</h4><span class="trade-tier watch">观察低吸</span> <span class="muted-text">-</span> <span class="anti strong">极值反转</span> <span class="pill down">-6.8%</span></div><div><h4>多周期温度</h4><strong>破位观望</strong><div class="multi-temp"><span class="bias-badge filter" title="20EMA乖离-5%-0%，刚跌穿/弱修复，需站回关键线。">20乖 -3.5% · 弱修</span><div class="ema-distance-chips"><span class="model-chip stage-risk" title="短线纪律，强趋势股优先看是否跌破/站回5日线。">E5 -2.6%</span><span class="model-chip stage-risk" title="短线确认，表姐严选买点A和清仓纪律的重要参考。">E10 -5.6%</span><span class="model-chip stage-watch" title="常规回踩/趋势温度，过热时不追，贴线时看承接。">E20 -4.8%</span><span class="model-chip stage-good" title="中期防守线，跌破后进入二阶段警戒。">E55 +3.4%</span><span class="model-chip stage-good" title="大阶段温度，30%-50%偏热，70%以上危险，100%以上极端。">E200 +17.0%</span></div><div class="overlay-badges"><span class="model-chip stage-good">二阶段推进 · 斜率5.35%</span><span class="model-chip stage-risk">A6弱 1/5</span><span class="model-chip stage-risk">RS偏弱 · 39%</span><span class="model-chip stage-hot" title="爆量阳底部被跌破，按N字结构失效处理">N字失效 · 152.10-163.31</span><span class="model-chip stage-neutral" title="ATR扩展用于判断追高风险、回踩深度和动作树。">ATR10 -0.47 / ATR50 0.34 / 波动9.7%</span><span class="model-chip stage-neutral">等待收复EMA10</span></div></div><div class="subtle"><span class="mini-tag">近30</span><span class="mini-tag">近50</span><span class="mini-tag">缩量</span><span class="mini-tag">量价险</span><span class="mini-tag">破位风险</span></div></div><div><h4>资讯排雷</h4><div class="cell-main">中性 -0.1；多空交织：1条利好 vs 1条利空；涨价/供给紧</div><div class="subtle">恒指收涨1.28%，恒科指涨0.65%。成交额居前个股中，腾讯控股涨1.04%，中芯国际跌2.95%，华虹宏力跌7.49%，智谱跌0.34%，阿里巴巴-W涨1.14%。；港股芯片股震荡走低，华虹宏力(01347.HK)跌超6%，天数智芯(09903.HK)、中芯国际(00981.HK)、英诺赛科(02577.HK)、中兴通讯(00763.HK)、兆易创新(03986.HK)等个股跟跌。</div></div><div><h4>核心理由</h4><p>20日线向上；回踩30日线附近；回踩50日线附近；靠近50日线观察；30日线辅助买点；缩量回踩</p></div><div><h4>操作纪律</h4><p>不追高；等待回踩关键线、站回5/10/20日线或量价承接后再评估。</p><p class="subtle">买入区：145.57-150.00；防守位：147.9</p></div></div></details></td></tr></tbody>
+        </table>
+      </div>
+	    </section>
+
+	    <section id="fullscores">
+	      <h2>三、全量100池评分</h2>
+      <p class="lead">这里展示本次 Futu OpenD 已核验的全量股票池评分。它用于观察强弱和候选扩散，不等同于“建议买入”；真正的交易建议仍以上方 md50 龙一/龙二收敛清单为主。</p>
+
+      <div class="filter-panel" id="fullScoreFilter">
+        <div class="filter-field">
+          <label for="fullScoreSearch">快速搜索</label>
+          <input id="fullScoreSearch" name="fullScoreSearch" type="search" autocomplete="off" placeholder="代码 / 拼音 / 汉字 / 垂类…">
+        </div>
+        <div class="filter-group">
+          <div class="filter-group-title">池子</div>
+          <div class="filter-checks">
+            <label class="filter-check core"><input type="checkbox" value="core" data-kind="pool">必选池</label>
+            <label class="filter-check wild"><input type="checkbox" value="wild" data-kind="pool">打野池</label>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-group-title">评分 / 形态</div>
+          <div class="filter-checks">
+            <label class="filter-check score95"><input type="checkbox" value="95" data-kind="score">95+</label>
+            <label class="filter-check score90"><input type="checkbox" value="90" data-kind="score">90+</label>
+            <label class="filter-check score85"><input type="checkbox" value="85" data-kind="score">85+</label>
+            <label class="filter-check setup"><input type="checkbox" value="S" data-kind="special">S形态</label>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-group-title">操作</div>
+          <div class="filter-checks">
+            <label class="filter-check buy"><input type="checkbox" value="buy" data-kind="action">买入</label>
+            <label class="filter-check watch"><input type="checkbox" value="watch" data-kind="action">观察</label>
+            <label class="filter-check sell"><input type="checkbox" value="sell" data-kind="action">卖出</label>
+          </div>
+        </div>
+        <div class="filter-count" id="fullScoreCount">显示 0 / 0</div>
+      </div>
+
+      <div class="candidate-table-wrap">
+        <table class="full-score-table">
+          <thead><tr><th>排名</th><th>股票</th><th>主题</th><th>技术档</th><th>100分</th><th>涨跌</th><th>多周期温度</th><th>新闻修正 / 关键新闻</th><th>观察动作</th></tr></thead>
+          <tbody id="fullScoreRows"><tr data-score="100" data-special="0" data-pool="wild" data-action="watch" data-search="红板科技 603459 hongbankeji hbkj 打野池 pcb制造 / pcb pcb制造 pcb制造 底部修复确认 全球优势:ai pcb 贴线 二阶段推进 a6弱 rs待核 中性 +0.0；16条中性新闻 回踩30日线附近；5日/ema5企稳；站回10日/ema10，短线确认；站回20日/ema20，趋势修复；站回50日/ema50，中期支撑修复；30日线辅助买点；n字放量确认；爆量阳后回踩再放量转强，作为右侧确认"><td>1</td><td class="stock"><strong>红板科技</strong><code>603459</code></td><td><span class="pool-badge wild" title="打野池">野</span> PCB制造 / PCB<div class="subtle">PCB制造</div></td><td><span class="score score-4">4</span></td><td><span class="score100 elite">100</span><div class="subtle">技术 86</div></td><td><span class="pill up">6.2%</span></td><td><span class="bias-badge near" title="20EMA乖离0%-5%，贴线健康，适合看承接和低吸确认。">20乖 +1.2% · 贴线</span><div class="subtle temp-summary">E5/10/20/55/200：5:+9.6% / 10:+4.0% / 20:-2.5% / 55:+3.0% / 200:+23.0%</div></td><td>中性 +0.0；16条中性新闻</td><td>强候选<div class="subtle">回踩30日线附近；5日/EMA5企稳；站回10日/EMA10，短线确认；站回20日/EMA20，趋势修复；站回50日/EMA50，中期支撑修复；30日线辅助买点；N字放量确认；爆量</div></td></tr>
+<tr data-score="98" data-special="0" data-pool="wild" data-action="watch" data-search="中科曙光 603019 zhongkeshuguang zksg 打野池 ai服务器/hpc算力基础设施 / ai服务器 ai服务器/hpc算力基础设施 ai服务器 弱修复观察 贴线 二阶段启动 a6弱 rs偏弱 偏利好 +0.4；重大合同/长协等1条利好；重大合同/长协 20日线向上；强势曲线；回踩20日线附近；5日/ema5企稳；10日/ema10企稳；缩量回踩"><td>2</td><td class="stock"><strong>中科曙光</strong><code>603019</code></td><td><span class="pool-badge wild" title="打野池">野</span> AI服务器/HPC算力基础设施 / AI服务器<div class="subtle">AI服务器/HPC算力基础设施</div></td><td><span class="score score-4">4</span></td><td><span class="score100 elite">98</span><div class="subtle">技术 86</div></td><td><span class="pill down">-4.2%</span></td><td><span class="bias-badge near" title="20EMA乖离0%-5%，贴线健康，适合看承接和低吸确认。">20乖 +1.1% · 贴线</span><div class="subtle temp-summary">E5/10/20/55/200：5:+2.6% / 10:-0.9% / 20:-0.7% / 55:+4.4% / 200:+7.0%</div></td><td>偏利好 +0.4；重大合同/长协等1条利好；重大合同/长协</td><td>强候选<div class="subtle">20日线向上；强势曲线；回踩20日线附近；5日/EMA5企稳；10日/EMA10企稳；缩量回踩</div></td></tr>
+<tr data-score="91" data-special="0" data-pool="core" data-action="sell" data-search="中芯国际 688981 zhongxinguoji zxgj 必选池 晶圆代工 / 半导体制造 晶圆代工 半导体制造 破位观望 弱修 二阶段推进 a6弱 rs偏弱 中性 -0.1；多空交织：1条利好 vs 1条利空；涨价/供给紧 20日线向上；回踩30日线附近；回踩50日线附近；靠近50日线观察；30日线辅助买点；缩量回踩"><td>3</td><td class="stock"><strong>中芯国际</strong><code>688981</code></td><td><span class="pool-badge core" title="必选池">必</span> 晶圆代工 / 半导体制造<div class="subtle">晶圆代工</div></td><td><span class="score score-4">4</span></td><td><span class="score100 strong">91</span><div class="subtle">技术 76</div></td><td><span class="pill down">-6.8%</span></td><td><span class="bias-badge filter" title="20EMA乖离-5%-0%，刚跌穿/弱修复，需站回关键线。">20乖 -3.5% · 弱修</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.6% / 10:-5.6% / 20:-4.8% / 55:+3.4% / 200:+17.0%</div></td><td>中性 -0.1；多空交织：1条利好 vs 1条利空；涨价/供给紧</td><td>强候选<div class="subtle">20日线向上；回踩30日线附近；回踩50日线附近；靠近50日线观察；30日线辅助买点；缩量回踩</div></td></tr>
+<tr data-score="68" data-special="0" data-pool="wild" data-action="sell" data-search="浪潮信息 000977 langchaoxinxi lcxx 打野池 ai服务器/算力基础设施 / ai服务器 ai服务器/算力基础设施 ai服务器 多头持仓趋势 健康 二阶段偏热 a6强 rs中性 中性 +0.0；8条中性新闻 均线多头；20日线向上；强势曲线；强趋势不等20日线"><td>4</td><td class="stock"><strong>浪潮信息</strong><code>000977</code></td><td><span class="pool-badge wild" title="打野池">野</span> AI服务器/算力基础设施 / AI服务器<div class="subtle">AI服务器/算力基础设施</div></td><td><span class="score score-3">3</span></td><td><span class="score100 low">68</span><div class="subtle">技术 63</div></td><td><span class="pill down">-2.8%</span></td><td><span class="bias-badge healthy" title="20EMA乖离5%-12%，趋势健康，强势股可持有但不追高。">20乖 +10.5% · 健康</span><div class="subtle temp-summary">E5/10/20/55/200：5:+3.3% / 10:+2.8% / 20:+12.9% / 55:+21.0% / 200:+31.8%</div></td><td>中性 +0.0；8条中性新闻</td><td>弱观察<div class="subtle">均线多头；20日线向上；强势曲线；强趋势不等20日线</div></td></tr>
+<tr data-score="63" data-special="0" data-pool="core" data-action="sell" data-search="拓荆科技 688072 tuojingkeji tjkj 必选池 薄膜沉积设备 / 半导体设备 薄膜沉积设备 半导体设备 弱修复观察 贴线 末端过热 a6弱 rs顶15% 利空 -1.2；多空交织：2条利好 vs 6条利空；机构看好/调入指数 20日线向上；回踩20日线附近；5日/ema5企稳；缩量回踩"><td>5</td><td class="stock"><strong>拓荆科技</strong><code>688072</code></td><td><span class="pool-badge core" title="必选池">必</span> 薄膜沉积设备 / 半导体设备<div class="subtle">薄膜沉积设备</div></td><td><span class="score score-3">3</span></td><td><span class="score100 low">63</span><div class="subtle">技术 69</div></td><td><span class="pill down">-6.1%</span></td><td><span class="bias-badge near" title="20EMA乖离0%-5%，贴线健康，适合看承接和低吸确认。">20乖 +1.6% · 贴线</span><div class="subtle temp-summary">E5/10/20/55/200：5:+2.2% / 10:-3.0% / 20:-0.4% / 55:+17.4% / 200:+68.6%</div></td><td>利空 -1.2；多空交织：2条利好 vs 6条利空；机构看好/调入指数</td><td>弱观察<div class="subtle">20日线向上；回踩20日线附近；5日/EMA5企稳；缩量回踩</div></td></tr>
+<tr data-score="46" data-special="0" data-pool="wild" data-action="sell" data-search="精测电子 300567 jingcedianzi jcdz 打野池 量测检测设备 / 半导体设备 量测检测设备 半导体设备 破位观望 破位 二阶段偏热 a6弱 rs顶15% 利好 +1.0；多空交织：4条利好 vs 3条利空；减持/质押 / 资本运作(正向) 20日线向上；回踩50日线附近；缩量回踩"><td>6</td><td class="stock"><strong>精测电子</strong><code>300567</code></td><td><span class="pool-badge wild" title="打野池">野</span> 量测检测设备 / 半导体设备<div class="subtle">量测检测设备</div></td><td><span class="score score-2">2</span></td><td><span class="score100 weak">46</span><div class="subtle">技术 42</div></td><td><span class="pill down">-4.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -11.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-5.4% / 10:-13.9% / 20:-16.0% / 55:+0.3% / 200:+42.9%</div></td><td>利好 +1.0；多空交织：4条利好 vs 3条利空；减持/质押 / 资本运作(正向)</td><td>暂不优先<div class="subtle">20日线向上；回踩50日线附近；缩量回踩</div></td></tr>
+<tr data-score="40" data-special="0" data-pool="core" data-action="sell" data-search="北方华创 002371 beifanghuachuang bfhc 必选池 前道半导体设备 / 半导体设备 前道半导体设备 半导体设备 破位观望 弱修 二阶段偏热 a6弱 rs偏强 利好 +0.9；业绩预增/盈利等4条利好；业绩预增/盈利 瓶颈供给；5日/ema5企稳；10日/ema10企稳"><td>7</td><td class="stock"><strong>北方华创</strong><code>002371</code></td><td><span class="pool-badge core" title="必选池">必</span> 前道半导体设备 / 半导体设备<div class="subtle">前道半导体设备</div></td><td><span class="score score-2">2</span></td><td><span class="score100 weak">40</span><div class="subtle">技术 39</div></td><td><span class="pill down">-3.1%</span></td><td><span class="bias-badge filter" title="20EMA乖离-5%-0%，刚跌穿/弱修复，需站回关键线。">20乖 -1.7% · 弱修</span><div class="subtle temp-summary">E5/10/20/55/200：5:+2.7% / 10:+0.2% / 20:-6.5% / 55:+6.2% / 200:+33.6%</div></td><td>利好 +0.9；业绩预增/盈利等4条利好；业绩预增/盈利</td><td>暂不优先<div class="subtle">瓶颈供给；5日/EMA5企稳；10日/EMA10企稳</div></td></tr>
+<tr data-score="39" data-special="0" data-pool="wild" data-action="sell" data-search="通富微电 002156 tongfuweidian tfwd 打野池 封测/高性能计算封装 / 先进封装 封测/高性能计算封装 先进封装 破位观望 弱修 二阶段偏热 a6弱 rs中性 利好 +0.6；多空交织：3条利好 vs 1条利空；资本运作(正向) / 业绩预增/盈利 回踩30日线附近；5日/ema5企稳；30日线辅助买点"><td>8</td><td class="stock"><strong>通富微电</strong><code>002156</code></td><td><span class="pool-badge wild" title="打野池">野</span> 封测/高性能计算封装 / 先进封装<div class="subtle">封测/高性能计算封装</div></td><td><span class="score score-2">2</span></td><td><span class="score100 weak">39</span><div class="subtle">技术 34</div></td><td><span class="pill down">-6.8%</span></td><td><span class="bias-badge filter" title="20EMA乖离-5%-0%，刚跌穿/弱修复，需站回关键线。">20乖 -1.0% · 弱修</span><div class="subtle temp-summary">E5/10/20/55/200：5:+1.1% / 10:-3.4% / 20:-1.7% / 55:+6.0% / 200:+32.6%</div></td><td>利好 +0.6；多空交织：3条利好 vs 1条利空；资本运作(正向) / 业绩预增/盈利</td><td>暂不优先<div class="subtle">回踩30日线附近；5日/EMA5企稳；30日线辅助买点</div></td></tr>
+<tr data-score="37" data-special="0" data-pool="core" data-action="sell" data-search="华海清科 688120 huahaiqingke hhqk 必选池 cmp设备 / 半导体设备 cmp设备 半导体设备 破位观望 弱修 末端过热 a6弱 rs顶15% 偏利好 +0.2；多空交织：2条利好 vs 1条利空；机构看好/调入指数 瓶颈供给；20日线向上；5日/ema5企稳；30日线辅助买点"><td>9</td><td class="stock"><strong>华海清科</strong><code>688120</code></td><td><span class="pool-badge core" title="必选池">必</span> CMP设备 / 半导体设备<div class="subtle">CMP设备</div></td><td><span class="score score-2">2</span></td><td><span class="score100 weak">37</span><div class="subtle">技术 41</div></td><td><span class="pill down">-5.3%</span></td><td><span class="bias-badge filter" title="20EMA乖离-5%-0%，刚跌穿/弱修复，需站回关键线。">20乖 -4.0% · 弱修</span><div class="subtle temp-summary">E5/10/20/55/200：5:+1.4% / 10:-7.1% / 20:-10.0% / 55:+10.6% / 200:+57.2%</div></td><td>偏利好 +0.2；多空交织：2条利好 vs 1条利空；机构看好/调入指数</td><td>暂不优先<div class="subtle">瓶颈供给；20日线向上；5日/EMA5企稳；30日线辅助买点</div></td></tr>
+<tr data-score="31" data-special="0" data-pool="core" data-action="sell" data-search="源杰科技 688498 yuanjiekeji yjkj 必选池 高速激光器芯片 / 光通信 高速激光器芯片 光通信 破位观望 全球优势:高速激光器；供给瓶颈:inp/激光器 破位 末端过热 a6弱 rs顶5% 利好 +0.5；多空交织：2条利好 vs 1条利空；涨价/供给紧 / 业绩预增/盈利 回踩50日线附近；缩量回踩；n字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认"><td>10</td><td class="stock"><strong>源杰科技</strong><code>688498</code></td><td><span class="pool-badge core" title="必选池">必</span> 高速激光器芯片 / 光通信<div class="subtle">高速激光器芯片</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">31</span><div class="subtle">技术 18</div></td><td><span class="pill up">2.1%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -9.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.8% / 10:-10.0% / 20:-13.0% / 55:+0.1% / 200:+56.3%</div></td><td>利好 +0.5；多空交织：2条利好 vs 1条利空；涨价/供给紧 / 业绩预增/盈利</td><td>暂不优先<div class="subtle">回踩50日线附近；缩量回踩；N字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认</div></td></tr>
+<tr data-score="28" data-special="0" data-pool="core" data-action="sell" data-search="雅克科技 002409 yakekeji ykkj 必选池 前驱体/电子材料 / 半导体材料 前驱体/电子材料 半导体材料 破位观望 破位 二阶段偏热 a6弱 rs偏强 中性 -0.1；澄清/否认(中性偏负)等1条利空 回踩50日线附近；5日/ema5企稳；缩量回踩；六氟化钨澄清降权"><td>11</td><td class="stock"><strong>雅克科技</strong><code>002409</code></td><td><span class="pool-badge core" title="必选池">必</span> 前驱体/电子材料 / 半导体材料<div class="subtle">前驱体/电子材料</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">28</span><div class="subtle">技术 21</div></td><td><span class="pill down">-0.5%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -10.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+3.8% / 10:-8.5% / 20:-18.7% / 55:+0.2% / 200:+38.3%</div></td><td>中性 -0.1；澄清/否认(中性偏负)等1条利空</td><td>暂不优先<div class="subtle">回踩50日线附近；5日/EMA5企稳；缩量回踩；六氟化钨澄清降权</div></td></tr>
+<tr data-score="23" data-special="0" data-pool="wild" data-action="sell" data-search="芯源微 688037 xinyuanwei xyw 打野池 涂胶显影/清洗设备 / 半导体设备 涂胶显影/清洗设备 半导体设备 破位观望 弱修 二阶段偏热 a6弱 rs偏强 偏利好 +0.4；重大合同/长协等1条利好；重大合同/长协 20日线向上；5日/ema5企稳"><td>12</td><td class="stock"><strong>芯源微</strong><code>688037</code></td><td><span class="pool-badge wild" title="打野池">野</span> 涂胶显影/清洗设备 / 半导体设备<div class="subtle">涂胶显影/清洗设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">23</span><div class="subtle">技术 24</div></td><td><span class="pill down">-4.9%</span></td><td><span class="bias-badge filter" title="20EMA乖离-5%-0%，刚跌穿/弱修复，需站回关键线。">20乖 -4.8% · 弱修</span><div class="subtle temp-summary">E5/10/20/55/200：5:+0.5% / 10:-5.8% / 20:-10.8% / 55:+7.1% / 200:+46.7%</div></td><td>偏利好 +0.4；重大合同/长协等1条利好；重大合同/长协</td><td>暂不优先<div class="subtle">20日线向上；5日/EMA5企稳</div></td></tr>
+<tr data-score="16" data-special="0" data-pool="core" data-action="sell" data-search="中微公司 688012 zhongweigongsi zwgs 必选池 刻蚀/mocvd设备 / 半导体设备 刻蚀/mocvd设备 半导体设备 破位观望 弱修 二阶段偏热 a6弱 rs偏强 偏利好 +0.3；多空交织：4条利好 vs 1条利空；机构看好/调入指数 瓶颈供给；5日/ema5企稳"><td>13</td><td class="stock"><strong>中微公司</strong><code>688012</code></td><td><span class="pool-badge core" title="必选池">必</span> 刻蚀/MOCVD设备 / 半导体设备<div class="subtle">刻蚀/MOCVD设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">16</span><div class="subtle">技术 17</div></td><td><span class="pill down">-4.5%</span></td><td><span class="bias-badge filter" title="20EMA乖离-5%-0%，刚跌穿/弱修复，需站回关键线。">20乖 -3.5% · 弱修</span><div class="subtle temp-summary">E5/10/20/55/200：5:+0.4% / 10:-3.1% / 20:-8.8% / 55:+7.4% / 200:+43.3%</div></td><td>偏利好 +0.3；多空交织：4条利好 vs 1条利空；机构看好/调入指数</td><td>暂不优先<div class="subtle">瓶颈供给；5日/EMA5企稳</div></td></tr>
+<tr data-score="14" data-special="0" data-pool="wild" data-action="sell" data-search="长飞光纤 601869 zhangfeiguangxian zfgx 打野池 光纤光缆 / 光通信 光纤光缆 光通信 破位观望 全球优势:光纤光缆；供给瓶颈:光纤供给 破位 二阶段预警-跌破55 a6弱 rs顶15% 利好 +0.6；涨价/供给紧等2条利好；涨价/供给紧 涨价/供货紧张；瓶颈供给；n字量价低吸；爆量阳后缩量回踩至半分位附近，底部未破"><td>14</td><td class="stock"><strong>长飞光纤</strong><code>601869</code></td><td><span class="pool-badge wild" title="打野池">野</span> 光纤光缆 / 光通信<div class="subtle">光纤光缆</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">14</span><div class="subtle">技术 18</div></td><td><span class="pill down">-2.7%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -14.5% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-4.9% / 10:-8.6% / 20:-18.0% / 55:-14.2% / 200:+23.6%</div></td><td>利好 +0.6；涨价/供给紧等2条利好；涨价/供给紧</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给；N字量价低吸；爆量阳后缩量回踩至半分位附近，底部未破</div></td></tr>
+<tr data-score="13" data-special="0" data-pool="core" data-action="sell" data-search="工业富联 601138 gongyefulian gyfl 必选池 ai服务器/云基础设施 / ai服务器 ai服务器/云基础设施 ai服务器 弱修复观察 弱修 二阶段预警-跌破55 a6弱 rs偏弱 偏利好 +0.2；技术突破/国产替代等1条利好；技术突破/国产替代 5日/ema5企稳；站回10日/ema10，短线确认"><td>15</td><td class="stock"><strong>工业富联</strong><code>601138</code></td><td><span class="pool-badge core" title="必选池">必</span> AI服务器/云基础设施 / AI服务器<div class="subtle">AI服务器/云基础设施</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">13</span><div class="subtle">技术 30</div></td><td><span class="pill up">3.6%</span></td><td><span class="bias-badge filter" title="20EMA乖离-5%-0%，刚跌穿/弱修复，需站回关键线。">20乖 -2.5% · 弱修</span><div class="subtle temp-summary">E5/10/20/55/200：5:+5.3% / 10:+1.4% / 20:-2.8% / 55:-5.2% / 200:+0.9%</div></td><td>偏利好 +0.2；技术突破/国产替代等1条利好；技术突破/国产替代</td><td>暂不优先<div class="subtle">5日/EMA5企稳；站回10日/EMA10，短线确认</div></td></tr>
+<tr data-score="13" data-special="0" data-pool="core" data-action="sell" data-search="中船特气 688146 zhongchuanteqi zctq 必选池 电子特气 / 半导体材料 电子特气 半导体材料 破位观望 破位 二阶段预警-跌破55 a6弱 rs顶5% 利好 +0.7；业绩预增/盈利等2条利好；业绩预增/盈利 涨价/供货紧张；瓶颈供给；n字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认"><td>16</td><td class="stock"><strong>中船特气</strong><code>688146</code></td><td><span class="pool-badge core" title="必选池">必</span> 电子特气 / 半导体材料<div class="subtle">电子特气</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">13</span><div class="subtle">技术 18</div></td><td><span class="pill up">2.4%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -18.2% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.3% / 10:-9.7% / 20:-26.8% / 55:-6.5% / 200:+69.5%</div></td><td>利好 +0.7；业绩预增/盈利等2条利好；业绩预增/盈利</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给；N字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认</div></td></tr>
+<tr data-score="12" data-special="0" data-pool="wild" data-action="sell" data-search="兴森科技 002436 xingsenkeji xskj 打野池 ic载板/封装基板 / pcb封装基板 ic载板/封装基板 pcb封装基板 破位观望 全球优势:ic载板；供给瓶颈:封装基板 破位 二阶段预警-跌破55 a6弱 rs中性 利好 +1.4；业绩预增/盈利等6条利好；资本运作(正向) 瓶颈供给；5日/ema5企稳；n字量价低吸；爆量阳后缩量回踩至半分位附近，底部未破"><td>17</td><td class="stock"><strong>兴森科技</strong><code>002436</code></td><td><span class="pool-badge wild" title="打野池">野</span> IC载板/封装基板 / PCB封装基板<div class="subtle">IC载板/封装基板</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">12</span><div class="subtle">技术 21</div></td><td><span class="pill down">-0.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -11.2% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+3.8% / 10:-4.7% / 20:-16.2% / 55:-9.5% / 200:+16.6%</div></td><td>利好 +1.4；业绩预增/盈利等6条利好；资本运作(正向)</td><td>暂不优先<div class="subtle">瓶颈供给；5日/EMA5企稳；N字量价低吸；爆量阳后缩量回踩至半分位附近，底部未破</div></td></tr>
+<tr data-score="12" data-special="0" data-pool="wild" data-action="sell" data-search="长电科技 600584 zhangdiankeji zdkj 打野池 封测/先进封装 / 先进封装 封测/先进封装 先进封装 破位观望 破位 二阶段偏热 a6弱 rs偏强 偏利好 +0.4；多空交织：2条利好 vs 1条利空；技术突破/国产替代 / 机构看好/调入指数 无明显买点"><td>18</td><td class="stock"><strong>长电科技</strong><code>600584</code></td><td><span class="pool-badge wild" title="打野池">野</span> 封测/先进封装 / 先进封装<div class="subtle">封测/先进封装</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">12</span><div class="subtle">技术 14</div></td><td><span class="pill down">-5.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -9.4% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.4% / 10:-9.4% / 20:-14.4% / 55:+0.2% / 200:+37.3%</div></td><td>偏利好 +0.4；多空交织：2条利好 vs 1条利空；技术突破/国产替代 / 机构看好/调入指数</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="11" data-special="0" data-pool="wild" data-action="sell" data-search="风华高科 000636 fenghuagaoke fhgk 打野池 mlcc整机/被动元件 / mlcc mlcc整机/被动元件 mlcc 破位观望 破位 二阶段预警-跌破55 a6弱 rs顶15% 利好 +0.5；业绩预增/盈利等2条利好 涨价/供货紧张；瓶颈供给；n字放量确认；爆量阳后回踩再放量转强，作为右侧确认"><td>19</td><td class="stock"><strong>风华高科</strong><code>000636</code></td><td><span class="pool-badge wild" title="打野池">野</span> MLCC整机/被动元件 / MLCC<div class="subtle">MLCC整机/被动元件</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">11</span><div class="subtle">技术 18</div></td><td><span class="pill up">4.6%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -20.3% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-0.6% / 10:-13.0% / 20:-26.5% / 55:-16.4% / 200:+27.3%</div></td><td>利好 +0.5；业绩预增/盈利等2条利好</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给；N字放量确认；爆量阳后回踩再放量转强，作为右侧确认</div></td></tr>
+<tr data-score="11" data-special="0" data-pool="wild" data-action="sell" data-search="南亚新材 688519 nanyaxincai nyxc 打野池 ccl覆铜板 / pcb材料 ccl覆铜板 pcb材料 破位观望 全球优势:ccl；供给瓶颈:高速覆铜板 破位 二阶段预警-跌破55 a6弱 rs顶15% 利好 +1.1；业绩预增/盈利等5条利好；资本运作(正向) / 机构看好/调入指数 / 业绩预增/盈利 瓶颈供给；n字放量确认；爆量阳后回踩再放量转强，作为右侧确认"><td>20</td><td class="stock"><strong>南亚新材</strong><code>688519</code></td><td><span class="pool-badge wild" title="打野池">野</span> CCL覆铜板 / PCB材料<div class="subtle">CCL覆铜板</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">11</span><div class="subtle">技术 18</div></td><td><span class="pill up">1.2%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -24.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-6.7% / 10:-21.8% / 20:-29.8% / 55:-17.8% / 200:+29.3%</div></td><td>利好 +1.1；业绩预增/盈利等5条利好；资本运作(正向) / 机构看好/调入指数 / 业绩预增/盈利</td><td>暂不优先<div class="subtle">瓶颈供给；N字放量确认；爆量阳后回踩再放量转强，作为右侧确认</div></td></tr>
+<tr data-score="11" data-special="0" data-pool="wild" data-action="sell" data-search="亨通光电 600487 hengtongguangdian htgd 打野池 光纤光缆/海缆 / 光通信 光纤光缆/海缆 光通信 破位观望 全球优势:光纤光缆；供给瓶颈:保偏/北美订单 破位 200日线下 a6弱 rs偏强 利好 +0.9；重大合同/长协等3条利好 涨价/供货紧张；瓶颈供给；n字量价低吸；爆量阳后缩量回踩至半分位附近，底部未破"><td>21</td><td class="stock"><strong>亨通光电</strong><code>600487</code></td><td><span class="pool-badge wild" title="打野池">野</span> 光纤光缆/海缆 / 光通信<div class="subtle">光纤光缆/海缆</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">11</span><div class="subtle">技术 18</div></td><td><span class="pill up">1.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -25.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.6% / 10:-13.5% / 20:-29.5% / 55:-29.4% / 200:-0.8%</div></td><td>利好 +0.9；重大合同/长协等3条利好</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给；N字量价低吸；爆量阳后缩量回踩至半分位附近，底部未破</div></td></tr>
+<tr data-score="11" data-special="0" data-pool="wild" data-action="sell" data-search="光迅科技 002281 guangxunkeji gxkj 打野池 光器件/光模块 / 光通信 光器件/光模块 光通信 破位观望 全球优势:光模块/光器件；供给瓶颈:光互连国产替代 破位 二阶段预警-跌破55 a6弱 rs顶15% 中性 +0.1；多空交织：1条利好 vs 1条利空；业绩预增/盈利 / 解禁/限售 5日/ema5企稳；n字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认"><td>22</td><td class="stock"><strong>光迅科技</strong><code>002281</code></td><td><span class="pool-badge wild" title="打野池">野</span> 光器件/光模块 / 光通信<div class="subtle">光器件/光模块</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">11</span><div class="subtle">技术 21</div></td><td><span class="pill down">-0.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -9.5% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+2.5% / 10:-6.5% / 20:-12.1% / 55:-5.8% / 200:+38.4%</div></td><td>中性 +0.1；多空交织：1条利好 vs 1条利空；业绩预增/盈利 / 解禁/限售</td><td>暂不优先<div class="subtle">5日/EMA5企稳；N字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认</div></td></tr>
+<tr data-score="10" data-special="0" data-pool="core" data-action="sell" data-search="华虹公司 688347 huahonggongsi hhgs 必选池 特色工艺晶圆代工 / 半导体制造 特色工艺晶圆代工 半导体制造 破位观望 贴线 严重乖离 a6弱 rs顶5% 偏利空 -0.4；利空/风险事件等1条利空 均线多头；20日线向上；回踩20日线附近；5/10日金叉"><td>23</td><td class="stock"><strong>华虹公司</strong><code>688347</code></td><td><span class="pool-badge core" title="必选池">必</span> 特色工艺晶圆代工 / 半导体制造<div class="subtle">特色工艺晶圆代工</div></td><td><span class="score score-2">2</span></td><td><span class="score100 weak">10</span><div class="subtle">技术 38</div></td><td><span class="pill down">-12.6%</span></td><td><span class="bias-badge near" title="20EMA乖离0%-5%，贴线健康，适合看承接和低吸确认。">20乖 +2.2% · 贴线</span><div class="subtle temp-summary">E5/10/20/55/200：5:-3.6% / 10:-2.6% / 20:+0.6% / 55:+24.3% / 200:+91.0%</div></td><td>偏利空 -0.4；利空/风险事件等1条利空</td><td>暂不优先<div class="subtle">均线多头；20日线向上；回踩20日线附近；5/10日金叉</div></td></tr>
+<tr data-score="9" data-special="0" data-pool="wild" data-action="sell" data-search="华兴源创 688001 huaxingyuanchuang hxyc 打野池 检测设备/显示测试 / 半导体设备 检测设备/显示测试 半导体设备 破位观望 破位 二阶段预警-跌破55 a6弱 rs中性 利好 +1.2；资本运作(正向)等6条利好；资本运作(正向) n字量价低吸；爆量阳后缩量回踩至半分位附近，底部未破"><td>24</td><td class="stock"><strong>华兴源创</strong><code>688001</code></td><td><span class="pool-badge wild" title="打野池">野</span> 检测设备/显示测试 / 半导体设备<div class="subtle">检测设备/显示测试</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">9</span><div class="subtle">技术 18</div></td><td><span class="pill down">-4.7%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -19.2% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-4.2% / 10:-12.0% / 20:-23.7% / 55:-20.2% / 200:+4.7%</div></td><td>利好 +1.2；资本运作(正向)等6条利好；资本运作(正向)</td><td>暂不优先<div class="subtle">N字量价低吸；爆量阳后缩量回踩至半分位附近，底部未破</div></td></tr>
+<tr data-score="7" data-special="0" data-pool="wild" data-action="sell" data-search="博迁新材 605376 boqianxincai bqxc 打野池 mlcc镍粉 / mlcc材料 mlcc镍粉 mlcc材料 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 偏利好 +0.4；多空交织：4条利好 vs 1条利空；机构看好/调入指数 / 涨价/供给紧 涨价/供货紧张；瓶颈供给；站回5日/ema5，短线修复；n字放量确认；爆量阳后回踩再放量转强，作为右侧确认"><td>25</td><td class="stock"><strong>博迁新材</strong><code>605376</code></td><td><span class="pool-badge wild" title="打野池">野</span> MLCC镍粉 / MLCC材料<div class="subtle">MLCC镍粉</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">7</span><div class="subtle">技术 21</div></td><td><span class="pill up">1.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -19.8% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+1.2% / 10:-11.5% / 20:-28.0% / 55:-18.1% / 200:+18.4%</div></td><td>偏利好 +0.4；多空交织：4条利好 vs 1条利空；机构看好/调入指数 / 涨价/供给紧</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给；站回5日/EMA5，短线修复；N字放量确认；爆量阳后回踩再放量转强，作为右侧确认</div></td></tr>
+<tr data-score="7" data-special="0" data-pool="wild" data-action="sell" data-search="华懋科技 603306 huamaokeji hmkj 打野池 光刻胶/电子材料 / 半导体材料 光刻胶/电子材料 半导体材料 破位观望 破位 200日线下 a6弱 rs偏弱 利好 +1.1；机构看好/调入指数等6条利好；机构看好/调入指数 瓶颈供给；n字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认"><td>26</td><td class="stock"><strong>华懋科技</strong><code>603306</code></td><td><span class="pool-badge wild" title="打野池">野</span> 光刻胶/电子材料 / 半导体材料<div class="subtle">光刻胶/电子材料</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">7</span><div class="subtle">技术 18</div></td><td><span class="pill down">-3.6%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -19.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.7% / 10:-11.2% / 20:-22.9% / 55:-27.4% / 200:-17.0%</div></td><td>利好 +1.1；机构看好/调入指数等6条利好；机构看好/调入指数</td><td>暂不优先<div class="subtle">瓶颈供给；N字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认</div></td></tr>
+<tr data-score="5" data-special="0" data-pool="wild" data-action="sell" data-search="中天科技 600522 zhongtiankeji ztkj 打野池 光纤光缆/海缆 / 光通信 光纤光缆/海缆 光通信 破位观望 全球优势:光互连 破位 二阶段预警-跌破55 a6弱 rs中性 利好 +1.4；重大合同/长协等6条利好；机构看好/调入指数 / 资本运作(正向) 瓶颈供给；n字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认"><td>27</td><td class="stock"><strong>中天科技</strong><code>600522</code></td><td><span class="pool-badge wild" title="打野池">野</span> 光纤光缆/海缆 / 光通信<div class="subtle">光纤光缆/海缆</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">5</span><div class="subtle">技术 18</div></td><td><span class="pill up">1.5%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -21.1% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-0.6% / 10:-11.6% / 20:-26.4% / 55:-23.8% / 200:+2.0%</div></td><td>利好 +1.4；重大合同/长协等6条利好；机构看好/调入指数 / 资本运作(正向)</td><td>暂不优先<div class="subtle">瓶颈供给；N字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认</div></td></tr>
+<tr data-score="5" data-special="0" data-pool="core" data-action="sell" data-search="华特气体 688268 huateqiti htqt 必选池 电子特气 / 半导体材料 电子特气 半导体材料 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 利好 +1.0；业绩预增/盈利等3条利好；业绩预增/盈利 涨价/供货紧张；瓶颈供给；n字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认"><td>28</td><td class="stock"><strong>华特气体</strong><code>688268</code></td><td><span class="pool-badge core" title="必选池">必</span> 电子特气 / 半导体材料<div class="subtle">电子特气</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">5</span><div class="subtle">技术 18</div></td><td><span class="pill down">-1.4%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -22.5% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-4.7% / 10:-17.0% / 20:-29.3% / 55:-20.3% / 200:+15.8%</div></td><td>利好 +1.0；业绩预增/盈利等3条利好；业绩预增/盈利</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给；N字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认</div></td></tr>
+<tr data-score="5" data-special="0" data-pool="wild" data-action="sell" data-search="杰美特 300868 jiemeite jmt 打野池 消费电子配件/低纯度映射 / 待核验 消费电子配件/低纯度映射 待核验 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 利好 +0.9；涨价/供给紧等4条利好；资本运作(正向) 瓶颈供给；n字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认"><td>29</td><td class="stock"><strong>杰美特</strong><code>300868</code></td><td><span class="pool-badge wild" title="打野池">野</span> 消费电子配件/低纯度映射 / 待核验<div class="subtle">消费电子配件/低纯度映射</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">5</span><div class="subtle">技术 18</div></td><td><span class="pill down">-2.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -28.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-3.3% / 10:-20.5% / 20:-35.2% / 55:-28.4% / 200:+7.6%</div></td><td>利好 +0.9；涨价/供给紧等4条利好；资本运作(正向)</td><td>暂不优先<div class="subtle">瓶颈供给；N字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认</div></td></tr>
+<tr data-score="3" data-special="0" data-pool="wild" data-action="sell" data-search="欧科亿 688308 oukeyi oky 打野池 数控刀具/硬质合金 / pcb耗材 数控刀具/硬质合金 pcb耗材 破位观望 全球优势:硬质合金刀具；供给瓶颈:微钻耗材 破位 二阶段预警-跌破55 a6弱 rs偏强 中性 +0.0；16条中性新闻 瓶颈供给；n字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认"><td>30</td><td class="stock"><strong>欧科亿</strong><code>688308</code></td><td><span class="pool-badge wild" title="打野池">野</span> 数控刀具/硬质合金 / PCB耗材<div class="subtle">数控刀具/硬质合金</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">3</span><div class="subtle">技术 18</div></td><td><span class="pill up">1.1%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -23.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-0.2% / 10:-10.8% / 20:-29.2% / 55:-25.9% / 200:+8.9%</div></td><td>中性 +0.0；16条中性新闻</td><td>暂不优先<div class="subtle">瓶颈供给；N字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认</div></td></tr>
+<tr data-score="2" data-special="0" data-pool="core" data-action="sell" data-search="中际旭创 300308 zhongjixuchuang zjxc 必选池 高速光模块/cpo / 光通信 高速光模块/cpo 光通信 破位观望 全球优势:高速光模块；供给瓶颈:1.6t/cpo光互连 弱修 二阶段预警-跌破55 a6弱 rs偏强 利好 +0.8；多空交织：4条利好 vs 1条利空；资本运作(正向) 5日/ema5企稳"><td>31</td><td class="stock"><strong>中际旭创</strong><code>300308</code></td><td><span class="pool-badge core" title="必选池">必</span> 高速光模块/CPO / 光通信<div class="subtle">高速光模块/CPO</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">2</span><div class="subtle">技术 17</div></td><td><span class="pill up">1.1%</span></td><td><span class="bias-badge filter" title="20EMA乖离-5%-0%，刚跌穿/弱修复，需站回关键线。">20乖 -4.5% · 弱修</span><div class="subtle temp-summary">E5/10/20/55/200：5:+2.1% / 10:-1.8% / 20:-5.5% / 55:-1.3% / 200:+33.3%</div></td><td>利好 +0.8；多空交织：4条利好 vs 1条利空；资本运作(正向)</td><td>暂不优先<div class="subtle">5日/EMA5企稳</div></td></tr>
+<tr data-score="1" data-special="0" data-pool="wild" data-action="sell" data-search="半导体设备etf国泰 159516 bandaotishebeiguotai bdtsbgt 打野池 前道半导体设备 / 半导体设备 前道半导体设备 半导体设备 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 利好 +1.5；涨价/供给紧等16条利好；机构看好/调入指数 回踩50日线附近；5日/ema5企稳；缩量回踩"><td>32</td><td class="stock"><strong>半导体设备ETF国泰</strong><code>159516</code></td><td><span class="pool-badge wild" title="打野池">野</span> 前道半导体设备 / 半导体设备<div class="subtle">前道半导体设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">1</span><div class="subtle">技术 21</div></td><td><span class="pill down">-3.6%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -8.4% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+1.2% / 10:-6.9% / 20:-14.8% / 55:-0.2% / 200:+33.5%</div></td><td>利好 +1.5；涨价/供给紧等16条利好；机构看好/调入指数</td><td>暂不优先<div class="subtle">回踩50日线附近；5日/EMA5企稳；缩量回踩</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="信维通信 300136 xinweitongxin xwtx 打野池 射频/天线/连接器 / 连接器/射频 射频/天线/连接器 连接器/射频 破位观望 破位 200日线下 a6弱 rs偏弱 偏利好 +0.3；多空交织：2条利好 vs 1条利空；技术突破/国产替代 瓶颈供给；站回5日/ema5，短线修复"><td>33</td><td class="stock"><strong>信维通信</strong><code>300136</code></td><td><span class="pool-badge wild" title="打野池">野</span> 射频/天线/连接器 / 连接器/射频<div class="subtle">射频/天线/连接器</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill up">3.3%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -21.2% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+0.1% / 10:-13.7% / 20:-26.8% / 55:-26.9% / 200:-8.1%</div></td><td>偏利好 +0.3；多空交织：2条利好 vs 1条利空；技术突破/国产替代</td><td>暂不优先<div class="subtle">瓶颈供给；站回5日/EMA5，短线修复</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="三环集团 300408 sanhuanjituan shjt 必选池 电子陶瓷/mlcc / mlcc材料 电子陶瓷/mlcc mlcc材料 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 利好 +1.4；多空交织：9条利好 vs 2条利空；资本运作(正向) / 减持/质押 涨价/供货紧张；瓶颈供给；站回5日/ema5，短线修复"><td>34</td><td class="stock"><strong>三环集团</strong><code>300408</code></td><td><span class="pool-badge core" title="必选池">必</span> 电子陶瓷/MLCC / MLCC材料<div class="subtle">电子陶瓷/MLCC</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill up">2.5%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -12.4% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+4.3% / 10:-3.0% / 20:-18.5% / 55:-10.7% / 200:+27.1%</div></td><td>利好 +1.4；多空交织：9条利好 vs 2条利空；资本运作(正向) / 减持/质押</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给；站回5日/EMA5，短线修复</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="贵研铂业 600459 guiyanboye gyby 打野池 贵金属/电子材料 / 电子材料 贵金属/电子材料 电子材料 破位观望 破位 200日线下 a6弱 rs偏弱 利好 +0.8；重大合同/长协等2条利好；重大合同/长协 站回5日/ema5，短线修复"><td>35</td><td class="stock"><strong>贵研铂业</strong><code>600459</code></td><td><span class="pool-badge wild" title="打野池">野</span> 贵金属/电子材料 / 电子材料<div class="subtle">贵金属/电子材料</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill up">1.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -11.6% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+3.2% / 10:-2.5% / 20:-16.9% / 55:-16.3% / 200:-10.4%</div></td><td>利好 +0.8；重大合同/长协等2条利好；重大合同/长协</td><td>暂不优先<div class="subtle">站回5日/EMA5，短线修复</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="云南锗业 002428 yunnanzheye ynzy 必选池 稀有金属锗/磷化铟/化合物半导体 / 半导体材料 稀有金属锗/磷化铟/化合物半导体 半导体材料 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 偏利空 -0.2；减持/质押等1条利空 涨价/供货紧张；瓶颈供给"><td>36</td><td class="stock"><strong>云南锗业</strong><code>002428</code></td><td><span class="pool-badge core" title="必选池">必</span> 稀有金属锗/磷化铟/化合物半导体 / 半导体材料<div class="subtle">稀有金属锗/磷化铟/化合物半导体</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill up">1.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -14.5% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+4.0% / 10:-7.2% / 20:-20.8% / 55:-13.8% / 200:+22.1%</div></td><td>偏利空 -0.2；减持/质押等1条利空</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="沪电股份 002463 hudiangufen hdgf 打野池 高速pcb/ai服务器板 / pcb制造 高速pcb/ai服务器板 pcb制造 破位观望 全球优势:ai服务器pcb；供给瓶颈:高层高速pcb 破位 二阶段预警-跌破55 a6弱 rs中性 中性 +0.0；16条中性新闻 涨价/供货紧张；瓶颈供给"><td>37</td><td class="stock"><strong>沪电股份</strong><code>002463</code></td><td><span class="pool-badge wild" title="打野池">野</span> 高速PCB/AI服务器板 / PCB制造<div class="subtle">高速PCB/AI服务器板</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill up">1.3%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -10.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.8% / 10:-8.2% / 20:-12.2% / 55:-7.0% / 200:+18.7%</div></td><td>中性 +0.0；16条中性新闻</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="剑桥科技 603083 jianqiaokeji jqkj 打野池 光模块/通信设备 / 光通信 光模块/通信设备 光通信 破位观望 全球优势:光互连 破位 二阶段预警-跌破55 a6弱 rs中性 中性 +0.1；多空交织：3条利好 vs 2条利空；业绩预增/盈利 / 技术突破/国产替代 站回5日/ema5，短线修复"><td>38</td><td class="stock"><strong>剑桥科技</strong><code>603083</code></td><td><span class="pool-badge wild" title="打野池">野</span> 光模块/通信设备 / 光通信<div class="subtle">光模块/通信设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill up">1.2%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -11.9% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+0.4% / 10:-7.7% / 20:-16.2% / 55:-11.0% / 200:+13.9%</div></td><td>中性 +0.1；多空交织：3条利好 vs 2条利空；业绩预增/盈利 / 技术突破/国产替代</td><td>暂不优先<div class="subtle">站回5日/EMA5，短线修复</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="澜起科技 688008 lanqikeji lqkj 必选池 内存接口/ai互联芯片 / 存储芯片 内存接口/ai互联芯片 存储芯片 破位观望 破位 二阶段预警-跌破55 a6弱 rs中性 利空 -1.1；利空/风险事件等3条利空 5日/ema5企稳"><td>39</td><td class="stock"><strong>澜起科技</strong><code>688008</code></td><td><span class="pool-badge core" title="必选池">必</span> 内存接口/AI互联芯片 / 存储芯片<div class="subtle">内存接口/AI互联芯片</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 12</div></td><td><span class="pill up">1.1%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -6.1% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+8.2% / 10:-1.8% / 20:-11.1% / 55:-4.6% / 200:+21.6%</div></td><td>利空 -1.1；利空/风险事件等3条利空</td><td>暂不优先<div class="subtle">5日/EMA5企稳</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="国瓷材料 300285 guocicailiao gccl 必选池 mlcc瓷粉/电子陶瓷粉体 / mlcc材料 mlcc瓷粉/电子陶瓷粉体 mlcc材料 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 利好 +0.8；多空交织：4条利好 vs 1条利空；涨价/供给紧 涨价/供货紧张；瓶颈供给；5日/ema5企稳"><td>40</td><td class="stock"><strong>国瓷材料</strong><code>300285</code></td><td><span class="pool-badge core" title="必选池">必</span> MLCC瓷粉/电子陶瓷粉体 / MLCC材料<div class="subtle">MLCC瓷粉/电子陶瓷粉体</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill up">1.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -12.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+5.8% / 10:-2.9% / 20:-21.8% / 55:-6.8% / 200:+34.7%</div></td><td>利好 +0.8；多空交织：4条利好 vs 1条利空；涨价/供给紧</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给；5日/EMA5企稳</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="英维克 002837 yingweike ywk 打野池 温控/液冷 / 数据中心 温控/液冷 数据中心 破位观望 破位 200日线下 a6弱 rs偏弱 中性 +0.0；16条中性新闻 站回5日/ema5，短线修复"><td>41</td><td class="stock"><strong>英维克</strong><code>002837</code></td><td><span class="pool-badge wild" title="打野池">野</span> 温控/液冷 / 数据中心<div class="subtle">温控/液冷</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill up">1.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -9.4% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+2.3% / 10:-5.2% / 20:-12.4% / 55:-14.6% / 200:-12.6%</div></td><td>中性 +0.0；16条中性新闻</td><td>暂不优先<div class="subtle">站回5日/EMA5，短线修复</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="长盈通 688143 zhangyingtong zyt 打野池 保偏光纤/cpo器件 / 光通信 保偏光纤/cpo器件 光通信 破位观望 全球优势:保偏光纤；供给瓶颈:保偏光纤 破位 二阶段预警-跌破55 a6弱 rs偏强 偏利空 -0.5；多空交织：1条利好 vs 4条利空；澄清/否认(中性偏负) / 机构看好/调入指数 涨价/供货紧张；瓶颈供给；n字量价低吸；爆量阳后缩量回踩至半分位附近，底部未破"><td>42</td><td class="stock"><strong>长盈通</strong><code>688143</code></td><td><span class="pool-badge wild" title="打野池">野</span> 保偏光纤/CPO器件 / 光通信<div class="subtle">保偏光纤/CPO器件</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 18</div></td><td><span class="pill up">1.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -24.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.1% / 10:-13.6% / 20:-28.6% / 55:-25.5% / 200:+9.9%</div></td><td>偏利空 -0.5；多空交织：1条利好 vs 4条利空；澄清/否认(中性偏负) / 机构看好/调入指数</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给；N字量价低吸；爆量阳后缩量回踩至半分位附近，底部未破</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="佰维存储 688525 baiweicunchu bwcc 打野池 存储模组/存储芯片 / 存储 存储模组/存储芯片 存储 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏弱 利好 +1.5；重大合同/长协等9条利好；资本运作(正向) 无明显买点"><td>43</td><td class="stock"><strong>佰维存储</strong><code>688525</code></td><td><span class="pool-badge wild" title="打野池">野</span> 存储模组/存储芯片 / 存储<div class="subtle">存储模组/存储芯片</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill up">0.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -24.3% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.1% / 10:-15.3% / 20:-32.9% / 55:-25.0% / 200:+4.8%</div></td><td>利好 +1.5；重大合同/长协等9条利好；资本运作(正向)</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="泰晶科技 603738 taijingkeji tjkj 打野池 石英晶振 / 电子元器件 石英晶振 电子元器件 破位观望 破位 二阶段预警-跌破55 a6弱 rs中性 偏利空 -0.2；多空交织：2条利好 vs 3条利空；业绩预增/盈利 / 机构看好/调入指数 / 减持/质押 无明显买点"><td>44</td><td class="stock"><strong>泰晶科技</strong><code>603738</code></td><td><span class="pool-badge wild" title="打野池">野</span> 石英晶振 / 电子元器件<div class="subtle">石英晶振</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill up">0.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -24.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-0.3% / 10:-13.0% / 20:-30.4% / 55:-27.5% / 200:+0.2%</div></td><td>偏利空 -0.2；多空交织：2条利好 vs 3条利空；业绩预增/盈利 / 机构看好/调入指数 / 减持/质押</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="民爆光电 301362 minbaoguangdian mbgd 打野池 led照明/pcb钻针第二曲线 / 待核验 led照明/pcb钻针第二曲线 待核验 破位观望 全球优势:ai pcb 破位 二阶段预警-跌破55 a6弱 rs顶5% 中性 -0.1；澄清/否认(中性偏负)等1条利空 瓶颈供给；站回5日/ema5，短线修复"><td>45</td><td class="stock"><strong>民爆光电</strong><code>301362</code></td><td><span class="pool-badge wild" title="打野池">野</span> LED照明/PCB钻针第二曲线 / 待核验<div class="subtle">LED照明/PCB钻针第二曲线</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill up">0.7%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -19.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+0.3% / 10:-9.7% / 20:-21.7% / 55:-22.0% / 200:+16.5%</div></td><td>中性 -0.1；澄清/否认(中性偏负)等1条利空</td><td>暂不优先<div class="subtle">瓶颈供给；站回5日/EMA5，短线修复</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="洁美科技 002859 jiemeikeji jmkj 打野池 mlcc制程材料 / mlcc材料 mlcc制程材料 mlcc材料 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 偏利好 +0.2；多空交织：2条利好 vs 1条利空 涨价/供货紧张；瓶颈供给；站回5日/ema5，短线修复"><td>46</td><td class="stock"><strong>洁美科技</strong><code>002859</code></td><td><span class="pool-badge wild" title="打野池">野</span> MLCC制程材料 / MLCC材料<div class="subtle">MLCC制程材料</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill up">0.5%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -18.5% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+0.1% / 10:-9.9% / 20:-25.7% / 55:-17.1% / 200:+14.2%</div></td><td>偏利好 +0.2；多空交织：2条利好 vs 1条利空</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给；站回5日/EMA5，短线修复</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="鼎泰高科 301377 dingtaigaoke dtgk 打野池 pcb钻针/刀具 / pcb耗材 pcb钻针/刀具 pcb耗材 破位观望 全球优势:pcb钻针；供给瓶颈:钻针/硬质合金 破位 二阶段预警-跌破55 a6弱 rs顶15% 利空 -0.8；利空/风险事件等2条利空 瓶颈供给"><td>47</td><td class="stock"><strong>鼎泰高科</strong><code>301377</code></td><td><span class="pool-badge wild" title="打野池">野</span> PCB钻针/刀具 / PCB耗材<div class="subtle">PCB钻针/刀具</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill up">0.2%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -12.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-0.3% / 10:-7.5% / 20:-16.1% / 55:-4.4% / 200:+50.8%</div></td><td>利空 -0.8；利空/风险事件等2条利空</td><td>暂不优先<div class="subtle">瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="德科立 688205 dekeli dkl 打野池 edfa/pump laser/光器件 / 光通信 edfa/pump laser/光器件 光通信 破位观望 全球优势:edfa/pump laser；供给瓶颈:光放大器 破位 200日线下 a6弱 rs偏弱 利好 +0.7；业绩预增/盈利等2条利好；业绩预增/盈利 站回5日/ema5，短线修复"><td>48</td><td class="stock"><strong>德科立</strong><code>688205</code></td><td><span class="pool-badge wild" title="打野池">野</span> EDFA/Pump Laser/光器件 / 光通信<div class="subtle">EDFA/Pump Laser/光器件</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill up">0.1%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -19.4% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+0.1% / 10:-9.9% / 20:-20.4% / 55:-32.0% / 200:-25.8%</div></td><td>利好 +0.7；业绩预增/盈利等2条利好；业绩预增/盈利</td><td>暂不优先<div class="subtle">站回5日/EMA5，短线修复</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="中材科技 002080 zhongcaikeji zckj 打野池 玻纤/复合材料 / 玻纤复材 玻纤/复合材料 玻纤复材 破位观望 全球优势:玻纤/电子布；供给瓶颈:高端玻纤 破位 200日线下 a6弱 rs偏弱 中性 +0.0；多空交织：2条利好 vs 2条利空；机构看好/调入指数 无明显买点"><td>49</td><td class="stock"><strong>中材科技</strong><code>002080</code></td><td><span class="pool-badge wild" title="打野池">野</span> 玻纤/复合材料 / 玻纤复材<div class="subtle">玻纤/复合材料</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill up">0.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -23.2% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-3.6% / 10:-16.3% / 20:-30.0% / 55:-24.6% / 200:-4.1%</div></td><td>中性 +0.0；多空交织：2条利好 vs 2条利空；机构看好/调入指数</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="通信etf国泰 515880 tongxinguotai txgt 打野池 其他/待归类 / 其他 其他/待归类 其他 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏弱 利好 +1.5；资本运作(正向)等16条利好；机构看好/调入指数 站回5日/ema5，短线修复"><td>50</td><td class="stock"><strong>通信ETF国泰</strong><code>515880</code></td><td><span class="pool-badge wild" title="打野池">野</span> 其他/待归类 / 其他<div class="subtle">其他/待归类</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill up">0.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -10.1% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+0.2% / 10:-6.0% / 20:-12.2% / 55:-11.2% / 200:+7.0%</div></td><td>利好 +1.5；资本运作(正向)等16条利好；机构看好/调入指数</td><td>暂不优先<div class="subtle">站回5日/EMA5，短线修复</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="深南电路 002916 shennandianlu sndl 打野池 pcb/封装基板 / pcb封装基板 pcb/封装基板 pcb封装基板 破位观望 全球优势:pcb/封装基板；供给瓶颈:abf/封装基板 破位 二阶段预警-跌破55 a6弱 rs中性 偏利好 +0.2；多空交织：2条利好 vs 1条利空；涨价/供给紧 / 业绩预增/盈利 涨价/供货紧张；瓶颈供给；站回5日/ema5，短线修复"><td>51</td><td class="stock"><strong>深南电路</strong><code>002916</code></td><td><span class="pool-badge wild" title="打野池">野</span> PCB/封装基板 / PCB封装基板<div class="subtle">PCB/封装基板</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill down">-0.1%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -11.6% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+0.2% / 10:-7.6% / 20:-15.7% / 55:-10.0% / 200:+14.2%</div></td><td>偏利好 +0.2；多空交织：2条利好 vs 1条利空；涨价/供给紧 / 业绩预增/盈利</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给；站回5日/EMA5，短线修复</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="大族数控 301200 dazushukong dzsk 打野池 pcb激光钻孔设备 / pcb设备 pcb激光钻孔设备 pcb设备 破位观望 全球优势:ai pcb 破位 二阶段预警-跌破55 a6弱 rs中性 偏利空 -0.5；多空交织：1条利好 vs 2条利空；减持/质押 瓶颈供给；站回5日/ema5，短线修复；n字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认"><td>52</td><td class="stock"><strong>大族数控</strong><code>301200</code></td><td><span class="pool-badge wild" title="打野池">野</span> PCB激光钻孔设备 / PCB设备<div class="subtle">PCB激光钻孔设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 21</div></td><td><span class="pill down">-0.2%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -15.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+0.6% / 10:-11.1% / 20:-20.4% / 55:-11.4% / 200:+24.2%</div></td><td>偏利空 -0.5；多空交织：1条利好 vs 2条利空；减持/质押</td><td>暂不优先<div class="subtle">瓶颈供给；站回5日/EMA5，短线修复；N字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="蓝特光学 688127 lanteguangxue ltgx 打野池 玻璃晶圆/光学元件 / 玻璃基板 玻璃晶圆/光学元件 玻璃基板 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏弱 利空 -0.8；多空交织：2条利好 vs 4条利空；资本运作(正向) 无明显买点"><td>53</td><td class="stock"><strong>蓝特光学</strong><code>688127</code></td><td><span class="pool-badge wild" title="打野池">野</span> 玻璃晶圆/光学元件 / 玻璃基板<div class="subtle">玻璃晶圆/光学元件</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-0.2%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -16.2% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-0.7% / 10:-9.9% / 20:-20.5% / 55:-20.3% / 200:+0.2%</div></td><td>利空 -0.8；多空交织：2条利好 vs 4条利空；资本运作(正向)</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="生益电子 688183 shengyidianzi sydz 打野池 pcb制造 / pcb/ccl/设备/耗材/铜箔 pcb制造 pcb制造 破位观望 全球优势:ai服务器pcb；供给瓶颈:高阶服务器板 破位 200日线下 a6弱 rs偏弱 利好 +1.1；多空交织：4条利好 vs 1条利空；业绩预增/盈利 涨价/供货紧张；瓶颈供给"><td>54</td><td class="stock"><strong>生益电子</strong><code>688183</code></td><td><span class="pool-badge wild" title="打野池">野</span> PCB制造 / PCB/CCL/设备/耗材/铜箔<div class="subtle">PCB制造</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-0.3%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -13.9% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-4.6% / 10:-12.1% / 20:-15.5% / 55:-13.9% / 200:-1.9%</div></td><td>利好 +1.1；多空交织：4条利好 vs 1条利空；业绩预增/盈利</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="福晶科技 002222 fujingkeji fjkj 打野池 激光光学晶体 / 光学材料 激光光学晶体 光学材料 破位观望 破位 200日线下 a6弱 rs偏弱 中性 +0.0；16条中性新闻 无明显买点"><td>55</td><td class="stock"><strong>福晶科技</strong><code>002222</code></td><td><span class="pool-badge wild" title="打野池">野</span> 激光光学晶体 / 光学材料<div class="subtle">激光光学晶体</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-0.4%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -20.4% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.1% / 10:-11.4% / 20:-22.7% / 55:-30.1% / 200:-21.3%</div></td><td>中性 +0.0；16条中性新闻</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="胜宏科技 300476 shenghongkeji shkj 打野池 高速pcb/ai服务器板 / pcb制造 高速pcb/ai服务器板 pcb制造 破位观望 全球优势:ai服务器pcb；供给瓶颈:高层高速pcb 破位 200日线下 a6弱 rs偏弱 利空 -1.2；多空交织：1条利好 vs 4条利空；技术突破/国产替代 涨价/供货紧张；瓶颈供给；站回5日/ema5，短线修复"><td>56</td><td class="stock"><strong>胜宏科技</strong><code>300476</code></td><td><span class="pool-badge wild" title="打野池">野</span> 高速PCB/AI服务器板 / PCB制造<div class="subtle">高速PCB/AI服务器板</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill down">-0.6%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -13.8% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+0.8% / 10:-7.0% / 20:-15.3% / 55:-21.6% / 200:-20.3%</div></td><td>利空 -1.2；多空交织：1条利好 vs 4条利空；技术突破/国产替代</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给；站回5日/EMA5，短线修复</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="石英股份 603688 shiyinggufen sygf 必选池 高纯石英材料 / 半导体材料 高纯石英材料 半导体材料 破位观望 破位 200日线下 a6弱 rs偏弱 中性 +0.1；多空交织：1条利好 vs 1条利空 涨价/供货紧张；瓶颈供给"><td>57</td><td class="stock"><strong>石英股份</strong><code>603688</code></td><td><span class="pool-badge core" title="必选池">必</span> 高纯石英材料 / 半导体材料<div class="subtle">高纯石英材料</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-0.6%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -20.8% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-0.9% / 10:-12.1% / 20:-25.6% / 55:-25.7% / 200:-11.8%</div></td><td>中性 +0.1；多空交织：1条利好 vs 1条利空</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="中钨高新 000657 zhongwugaoxin zwgx 打野池 pcb钻针/硬质合金刀具 / pcb耗材 pcb钻针/硬质合金刀具 pcb耗材 破位观望 全球优势:钨/硬质合金；供给瓶颈:pcb钻针上游 破位 二阶段预警-跌破55 a6弱 rs偏弱 利好 +1.5；业绩预增/盈利等7条利好；资本运作(正向) / 涨价/供给紧 瓶颈供给；六氟化钨仅上游钨粉影子"><td>58</td><td class="stock"><strong>中钨高新</strong><code>000657</code></td><td><span class="pool-badge wild" title="打野池">野</span> PCB钻针/硬质合金刀具 / PCB耗材<div class="subtle">PCB钻针/硬质合金刀具</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-0.6%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -19.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.5% / 10:-11.0% / 20:-24.4% / 55:-19.7% / 200:+8.7%</div></td><td>利好 +1.5；业绩预增/盈利等7条利好；资本运作(正向) / 涨价/供给紧</td><td>暂不优先<div class="subtle">瓶颈供给；六氟化钨仅上游钨粉影子</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="生益科技 600183 shengyikeji sykj 必选池 ccl覆铜板 / pcb材料 ccl覆铜板 pcb材料 破位观望 全球优势:高端ccl；供给瓶颈:m9/高速覆铜板 破位 二阶段预警-跌破55 a6弱 rs偏强 利好 +0.8；多空交织：4条利好 vs 1条利空；解禁/限售 / 技术突破/国产替代 涨价/供货紧张；瓶颈供给"><td>59</td><td class="stock"><strong>生益科技</strong><code>600183</code></td><td><span class="pool-badge core" title="必选池">必</span> CCL覆铜板 / PCB材料<div class="subtle">CCL覆铜板</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-0.7%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -12.8% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.6% / 10:-8.9% / 20:-16.1% / 55:-6.8% / 200:+33.2%</div></td><td>利好 +0.8；多空交织：4条利好 vs 1条利空；解禁/限售 / 技术突破/国产替代</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="联瑞新材 688300 lianruixincai lrxc 打野池 球形硅微粉/电子填料 / 半导体材料 球形硅微粉/电子填料 半导体材料 破位观望 全球优势:电子填料；供给瓶颈:球形硅微粉 破位 二阶段预警-跌破55 a6弱 rs偏强 中性 +0.0；16条中性新闻 涨价/供货紧张；瓶颈供给"><td>60</td><td class="stock"><strong>联瑞新材</strong><code>688300</code></td><td><span class="pool-badge wild" title="打野池">野</span> 球形硅微粉/电子填料 / 半导体材料<div class="subtle">球形硅微粉/电子填料</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-0.7%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -24.4% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.6% / 10:-15.5% / 20:-30.6% / 55:-23.3% / 200:+11.8%</div></td><td>中性 +0.0；16条中性新闻</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="宏和科技 603256 honghekeji hhkj 打野池 电子级玻璃纤维布 / pcb玻纤布 电子级玻璃纤维布 pcb玻纤布 破位观望 全球优势:电子布；供给瓶颈:低dk/t-glass 破位 二阶段预警-跌破55 a6弱 rs顶5% 利空 -0.9；多空交织：2条利好 vs 4条利空；机构看好/调入指数 瓶颈供给"><td>61</td><td class="stock"><strong>宏和科技</strong><code>603256</code></td><td><span class="pool-badge wild" title="打野池">野</span> 电子级玻璃纤维布 / PCB玻纤布<div class="subtle">电子级玻璃纤维布</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-0.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -19.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-0.4% / 10:-11.6% / 20:-25.9% / 55:-17.3% / 200:+31.6%</div></td><td>利空 -0.9；多空交织：2条利好 vs 4条利空；机构看好/调入指数</td><td>暂不优先<div class="subtle">瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="三孚股份 603938 sanfugufen sfgf 打野池 光纤上游材料 / 光纤材料 光纤上游材料 光纤材料 破位观望 全球优势:光互连 破位 二阶段预警-跌破55 a6弱 rs中性 偏利好 +0.4；业绩预增/盈利等2条利好；机构看好/调入指数 涨价/供货紧张；瓶颈供给"><td>62</td><td class="stock"><strong>三孚股份</strong><code>603938</code></td><td><span class="pool-badge wild" title="打野池">野</span> 光纤上游材料 / 光纤材料<div class="subtle">光纤上游材料</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-0.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -18.3% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.5% / 10:-9.3% / 20:-25.9% / 55:-16.5% / 200:+18.6%</div></td><td>偏利好 +0.4；业绩预增/盈利等2条利好；机构看好/调入指数</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="沃格光电 603773 wogeguangdian wggd 打野池 玻璃基板/光电玻璃 / 玻璃基板 玻璃基板/光电玻璃 玻璃基板 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 利空 -1.5；多空交织：1条利好 vs 6条利空；业绩下滑/亏损 / 利空/风险事件 无明显买点"><td>63</td><td class="stock"><strong>沃格光电</strong><code>603773</code></td><td><span class="pool-badge wild" title="打野池">野</span> 玻璃基板/光电玻璃 / 玻璃基板<div class="subtle">玻璃基板/光电玻璃</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-1.1%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -24.1% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-0.0% / 10:-12.5% / 20:-30.1% / 55:-24.1% / 200:+13.9%</div></td><td>利空 -1.5；多空交织：1条利好 vs 6条利空；业绩下滑/亏损 / 利空/风险事件</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="东威科技 688700 dongweikeji dwkj 打野池 pcb电镀/vcp设备 / pcb设备 pcb电镀/vcp设备 pcb设备 破位观望 全球优势:ai pcb 破位 200日线下 a6弱 rs偏弱 利好 +0.8；多空交织：3条利好 vs 2条利空；重大合同/长协 / 减持/质押 瓶颈供给"><td>64</td><td class="stock"><strong>东威科技</strong><code>688700</code></td><td><span class="pool-badge wild" title="打野池">野</span> PCB电镀/VCP设备 / PCB设备<div class="subtle">PCB电镀/VCP设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-1.3%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -19.5% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.5% / 10:-10.9% / 20:-22.7% / 55:-24.0% / 200:-5.6%</div></td><td>利好 +0.8；多空交织：3条利好 vs 2条利空；重大合同/长协 / 减持/质押</td><td>暂不优先<div class="subtle">瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="泰金新能 688813 taijinxinneng tjxn 打野池 阴极辊/铜箔设备 / pcb铜箔设备 阴极辊/铜箔设备 pcb铜箔设备 破位观望 全球优势:ai pcb 破位 二阶段预警-跌破55 a6弱 rs待核 中性 +0.0；16条中性新闻 瓶颈供给"><td>65</td><td class="stock"><strong>泰金新能</strong><code>688813</code></td><td><span class="pool-badge wild" title="打野池">野</span> 阴极辊/铜箔设备 / PCB铜箔设备<div class="subtle">阴极辊/铜箔设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-1.5%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -22.8% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-3.8% / 10:-15.2% / 20:-28.9% / 55:-20.9% / 200:+18.5%</div></td><td>中性 +0.0；16条中性新闻</td><td>暂不优先<div class="subtle">瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="德福科技 301511 defukeji dfkj 打野池 铜箔材料 / pcb铜箔 铜箔材料 pcb铜箔 破位观望 全球优势:铜箔；供给瓶颈:高速铜箔 破位 二阶段预警-跌破55 a6弱 rs顶15% 偏利空 -0.2；多空交织：1条利好 vs 1条利空；机构看好/调入指数 / 减持/质押 瓶颈供给"><td>66</td><td class="stock"><strong>德福科技</strong><code>301511</code></td><td><span class="pool-badge wild" title="打野池">野</span> 铜箔材料 / PCB铜箔<div class="subtle">铜箔材料</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-1.6%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -27.9% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-5.4% / 10:-18.8% / 20:-33.2% / 55:-28.5% / 200:+7.5%</div></td><td>偏利空 -0.2；多空交织：1条利好 vs 1条利空；机构看好/调入指数 / 减持/质押</td><td>暂不优先<div class="subtle">瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="天承科技 688603 tianchengkeji tckj 打野池 pcb电子化学品 / pcb材料 pcb电子化学品 pcb材料 破位观望 全球优势:ai pcb 破位 200日线下 a6弱 rs偏弱 利空 -0.7；多空交织：2条利好 vs 6条利空；业绩预增/盈利 涨价/供货紧张；瓶颈供给"><td>67</td><td class="stock"><strong>天承科技</strong><code>688603</code></td><td><span class="pool-badge wild" title="打野池">野</span> PCB电子化学品 / PCB材料<div class="subtle">PCB电子化学品</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-1.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -25.1% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.8% / 10:-14.5% / 20:-30.8% / 55:-29.2% / 200:-10.7%</div></td><td>利空 -0.7；多空交织：2条利好 vs 6条利空；业绩预增/盈利</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="光库科技 300620 guangkukeji gkkj 打野池 铌酸锂/光纤器件 / 光通信 铌酸锂/光纤器件 光通信 破位观望 全球优势:光器件；供给瓶颈:铌酸锂/光纤器件 破位 二阶段预警-跌破55 a6弱 rs中性 利好 +0.9；业绩预增/盈利等3条利好；技术突破/国产替代 无明显买点"><td>68</td><td class="stock"><strong>光库科技</strong><code>300620</code></td><td><span class="pool-badge wild" title="打野池">野</span> 铌酸锂/光纤器件 / 光通信<div class="subtle">铌酸锂/光纤器件</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.1%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -18.2% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.0% / 10:-10.7% / 20:-21.9% / 55:-20.0% / 200:+5.8%</div></td><td>利好 +0.9；业绩预增/盈利等3条利好；技术突破/国产替代</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="国际复材 301526 guojifucai gjfc 打野池 玻璃纤维/电子布上游 / pcb玻纤布 玻璃纤维/电子布上游 pcb玻纤布 破位观望 全球优势:玻纤/电子布；供给瓶颈:t-glass/低dk 破位 二阶段预警-跌破55 a6弱 rs顶5% 偏利好 +0.4；多空交织：2条利好 vs 1条利空；业绩预增/盈利 瓶颈供给"><td>69</td><td class="stock"><strong>国际复材</strong><code>301526</code></td><td><span class="pool-badge wild" title="打野池">野</span> 玻璃纤维/电子布上游 / PCB玻纤布<div class="subtle">玻璃纤维/电子布上游</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.1%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -22.1% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-6.0% / 10:-17.7% / 20:-30.4% / 55:-13.2% / 200:+41.6%</div></td><td>偏利好 +0.4；多空交织：2条利好 vs 1条利空；业绩预增/盈利</td><td>暂不优先<div class="subtle">瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="天岳先进 688234 tianyuexianjin tyxj 打野池 sic衬底 / 半导体材料 sic衬底 半导体材料 破位观望 破位 200日线下 a6弱 rs偏弱 偏利空 -0.2；多空交织：1条利好 vs 1条利空；机构看好/调入指数 瓶颈供给"><td>70</td><td class="stock"><strong>天岳先进</strong><code>688234</code></td><td><span class="pool-badge wild" title="打野池">野</span> SiC衬底 / 半导体材料<div class="subtle">SiC衬底</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.2%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -22.9% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.8% / 10:-16.1% / 20:-28.6% / 55:-25.8% / 200:-11.2%</div></td><td>偏利空 -0.2；多空交织：1条利好 vs 1条利空；机构看好/调入指数</td><td>暂不优先<div class="subtle">瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="新易盛 300502 xinyisheng xys 必选池 高速光模块/cpo / 光通信 高速光模块/cpo 光通信 破位观望 全球优势:高速光模块；供给瓶颈:1.6t/cpo光互连 破位 二阶段预警-跌破55 a6弱 rs偏强 偏利好 +0.3；机构看好/调入指数等2条利好 无明显买点"><td>71</td><td class="stock"><strong>新易盛</strong><code>300502</code></td><td><span class="pool-badge core" title="必选池">必</span> 高速光模块/CPO / 光通信<div class="subtle">高速光模块/CPO</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.3%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -5.8% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.5% / 10:-5.3% / 20:-6.8% / 55:-0.5% / 200:+29.7%</div></td><td>偏利好 +0.3；机构看好/调入指数等2条利好</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="天孚通信 300394 tianfutongxin tftx 必选池 光器件/光引擎 / 光通信 光器件/光引擎 光通信 破位观望 全球优势:精密光器件；供给瓶颈:cpo光引擎 破位 200日线下 a6弱 rs中性 利好 +1.0；业绩预增/盈利等3条利好；业绩预增/盈利 无明显买点"><td>72</td><td class="stock"><strong>天孚通信</strong><code>300394</code></td><td><span class="pool-badge core" title="必选池">必</span> 光器件/光引擎 / 光通信<div class="subtle">光器件/光引擎</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.5%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -15.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.3% / 10:-11.4% / 20:-16.7% / 55:-20.0% / 200:-3.0%</div></td><td>利好 +1.0；业绩预增/盈利等3条利好；业绩预增/盈利</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="联芸科技 688449 lianyunkeji lykj 打野池 存储模组/存储设备 / 存储 存储模组/存储设备 存储 破位观望 破位 200日线下 a6弱 rs偏弱 利空 -1.2；利空/风险事件等4条利空 无明显买点"><td>73</td><td class="stock"><strong>联芸科技</strong><code>688449</code></td><td><span class="pool-badge wild" title="打野池">野</span> 存储模组/存储设备 / 存储<div class="subtle">存储模组/存储设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.6%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -18.1% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.8% / 10:-13.0% / 20:-23.3% / 55:-19.1% / 200:-6.0%</div></td><td>利空 -1.2；利空/风险事件等4条利空</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="优刻得-w 688158 youkede ykd 打野池 云计算/idc / 算力基础设施 云计算/idc 算力基础设施 破位观望 破位 200日线下 a6弱 rs偏弱 利空 -0.6；多空交织：1条利好 vs 4条利空；减持/质押 无明显买点"><td>74</td><td class="stock"><strong>优刻得-W</strong><code>688158</code></td><td><span class="pool-badge wild" title="打野池">野</span> 云计算/IDC / 算力基础设施<div class="subtle">云计算/IDC</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.6%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -10.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.2% / 10:-7.6% / 20:-10.4% / 55:-18.1% / 200:-14.6%</div></td><td>利空 -0.6；多空交织：1条利好 vs 4条利空；减持/质押</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="绿的谐波 688017 lvdexiebo ldxb 必选池 谐波减速器 / 机器人 谐波减速器 机器人 破位观望 破位 二阶段预警-跌破55 a6弱 rs中性 利空 -1.1；利空/风险事件等3条利空 瓶颈供给"><td>75</td><td class="stock"><strong>绿的谐波</strong><code>688017</code></td><td><span class="pool-badge core" title="必选池">必</span> 谐波减速器 / 机器人<div class="subtle">谐波减速器</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.7%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -15.3% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.4% / 10:-12.3% / 20:-20.0% / 55:-10.8% / 200:+18.3%</div></td><td>利空 -1.1；利空/风险事件等3条利空</td><td>暂不优先<div class="subtle">瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="南大光电 300346 nandaguangdian ndgd 必选池 光刻胶/电子特气/mo源 / 半导体材料 光刻胶/电子特气/mo源 半导体材料 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏弱 中性 +0.0；多空交织：1条利好 vs 1条利空；技术突破/国产替代 涨价/供货紧张；瓶颈供给"><td>76</td><td class="stock"><strong>南大光电</strong><code>300346</code></td><td><span class="pool-badge core" title="必选池">必</span> 光刻胶/电子特气/MO源 / 半导体材料<div class="subtle">光刻胶/电子特气/MO源</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.7%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -17.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.8% / 10:-12.7% / 20:-25.5% / 55:-15.9% / 200:+0.9%</div></td><td>中性 +0.0；多空交织：1条利好 vs 1条利空；技术突破/国产替代</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="沪硅产业 688126 huguichanye hgcy 必选池 半导体硅片 / 半导体材料 半导体硅片 半导体材料 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏弱 中性 +0.0；多空交织：1条利好 vs 1条利空 瓶颈供给"><td>77</td><td class="stock"><strong>沪硅产业</strong><code>688126</code></td><td><span class="pool-badge core" title="必选池">必</span> 半导体硅片 / 半导体材料<div class="subtle">半导体硅片</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -16.2% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.1% / 10:-13.5% / 20:-22.4% / 55:-12.8% / 200:+3.8%</div></td><td>中性 +0.0；多空交织：1条利好 vs 1条利空</td><td>暂不优先<div class="subtle">瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="深科技 000021 shenkeji skj 打野池 存储封测/电子制造 / 存储 存储封测/电子制造 存储 破位观望 破位 二阶段预警-跌破55 a6弱 rs中性 偏利好 +0.3；涨价/供给紧等2条利好；机构看好/调入指数 5日/ema5企稳"><td>78</td><td class="stock"><strong>深科技</strong><code>000021</code></td><td><span class="pool-badge wild" title="打野池">野</span> 存储封测/电子制造 / 存储<div class="subtle">存储封测/电子制造</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill down">-2.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -14.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+1.7% / 10:-12.2% / 20:-22.7% / 55:-9.6% / 200:+15.8%</div></td><td>偏利好 +0.3；涨价/供给紧等2条利好；机构看好/调入指数</td><td>暂不优先<div class="subtle">5日/EMA5企稳</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="富创精密 688409 fuchuangjingmi fcjm 必选池 设备精密零部件 / 半导体设备零部件 设备精密零部件 半导体设备零部件 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 中性 +0.1；多空交织：2条利好 vs 2条利空；减持/质押 / 业绩预增/盈利 n字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认"><td>79</td><td class="stock"><strong>富创精密</strong><code>688409</code></td><td><span class="pool-badge core" title="必选池">必</span> 设备精密零部件 / 半导体设备零部件<div class="subtle">设备精密零部件</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 18</div></td><td><span class="pill down">-2.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -15.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.4% / 10:-13.5% / 20:-23.5% / 55:-4.8% / 200:+41.5%</div></td><td>中性 +0.1；多空交织：2条利好 vs 2条利空；减持/质押 / 业绩预增/盈利</td><td>暂不优先<div class="subtle">N字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="罗博特科 300757 luoboteke lbtk 必选池 cpo自动化设备 / 光通信设备 cpo自动化设备 光通信设备 破位观望 全球优势:光互连 破位 200日线下 a6弱 rs偏弱 偏利空 -0.4；多空交织：2条利好 vs 5条利空 瓶颈供给；5日/ema5企稳；n字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认"><td>80</td><td class="stock"><strong>罗博特科</strong><code>300757</code></td><td><span class="pool-badge core" title="必选池">必</span> CPO自动化设备 / 光通信设备<div class="subtle">CPO自动化设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 21</div></td><td><span class="pill down">-2.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -13.6% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+1.1% / 10:-6.9% / 20:-15.1% / 55:-19.4% / 200:-1.5%</div></td><td>偏利空 -0.4；多空交织：2条利好 vs 5条利空</td><td>暂不优先<div class="subtle">瓶颈供给；5日/EMA5企稳；N字缩量等待；爆量阳后缩量回调且底部未破，等待半分位或再次放量确认</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="新莱应材 300260 xinlaiyingcai xlyc 打野池 洁净管阀/真空流体系统 / 半导体零部件 洁净管阀/真空流体系统 半导体零部件 破位观望 破位 200日线下 a6弱 rs偏弱 利好 +0.6；重大合同/长协等2条利好 无明显买点"><td>81</td><td class="stock"><strong>新莱应材</strong><code>300260</code></td><td><span class="pool-badge wild" title="打野池">野</span> 洁净管阀/真空流体系统 / 半导体零部件<div class="subtle">洁净管阀/真空流体系统</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -23.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-4.0% / 10:-17.2% / 20:-31.0% / 55:-21.5% / 200:-6.2%</div></td><td>利好 +0.6；重大合同/长协等2条利好</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="龙芯中科 688047 longxinzhongke lxzk 打野池 自主cpu/基础处理器 / cpu/基础芯片 自主cpu/基础处理器 cpu/基础芯片 破位观望 破位 200日线下 a6弱 rs偏弱 中性 +0.0；16条中性新闻 无明显买点"><td>82</td><td class="stock"><strong>龙芯中科</strong><code>688047</code></td><td><span class="pool-badge wild" title="打野池">野</span> 自主CPU/基础处理器 / CPU/基础芯片<div class="subtle">自主CPU/基础处理器</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -14.8% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-3.0% / 10:-11.1% / 20:-17.8% / 55:-20.9% / 200:-22.3%</div></td><td>中性 +0.0；16条中性新闻</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="烽火通信 600498 fenghuotongxin fhtx 打野池 光通信设备/光纤光缆 / 光通信 光通信设备/光纤光缆 光通信 破位观望 全球优势:光互连 破位 200日线下 a6弱 rs偏弱 偏利好 +0.3；多空交织：3条利好 vs 1条利空 涨价/供货紧张；瓶颈供给"><td>83</td><td class="stock"><strong>烽火通信</strong><code>600498</code></td><td><span class="pool-badge wild" title="打野池">野</span> 光通信设备/光纤光缆 / 光通信<div class="subtle">光通信设备/光纤光缆</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -25.1% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.3% / 10:-14.2% / 20:-30.0% / 55:-31.4% / 200:-17.4%</div></td><td>偏利好 +0.3；多空交织：3条利好 vs 1条利空</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="致尚科技 301486 zhishangkeji zskj 打野池 光纤连接器/精密组件 / 连接器/精密组件 光纤连接器/精密组件 连接器/精密组件 破位观望 全球优势:光互连 破位 200日线下 a6弱 rs偏弱 偏利空 -0.2；多空交织：1条利好 vs 2条利空；解禁/限售 无明显买点"><td>84</td><td class="stock"><strong>致尚科技</strong><code>301486</code></td><td><span class="pool-badge wild" title="打野池">野</span> 光纤连接器/精密组件 / 连接器/精密组件<div class="subtle">光纤连接器/精密组件</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -20.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-5.0% / 10:-14.4% / 20:-20.5% / 55:-27.6% / 200:-15.3%</div></td><td>偏利空 -0.2；多空交织：1条利好 vs 2条利空；解禁/限售</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="兴福电子 688545 xingfudianzi xfdz 必选池 湿电子化学品 / 半导体材料 湿电子化学品 半导体材料 破位观望 破位 二阶段预警-跌破55 a6弱 rs中性 偏利空 -0.3；多空交织：1条利好 vs 3条利空；减持/质押 / 业绩预增/盈利 涨价/供货紧张；瓶颈供给"><td>85</td><td class="stock"><strong>兴福电子</strong><code>688545</code></td><td><span class="pool-badge core" title="必选池">必</span> 湿电子化学品 / 半导体材料<div class="subtle">湿电子化学品</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-2.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -21.9% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.8% / 10:-16.6% / 20:-29.1% / 55:-18.7% / 200:+14.3%</div></td><td>偏利空 -0.3；多空交织：1条利好 vs 3条利空；减持/质押 / 业绩预增/盈利</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="太辰光 300570 taichenguang tcg 打野池 光连接器/光器件 / 光通信 光连接器/光器件 光通信 破位观望 全球优势:光连接器；供给瓶颈:光互连连接器 破位 200日线下 a6弱 rs偏弱 偏利好 +0.5；涨价/供给紧等2条利好；涨价/供给紧 无明显买点"><td>86</td><td class="stock"><strong>太辰光</strong><code>300570</code></td><td><span class="pool-badge wild" title="打野池">野</span> 光连接器/光器件 / 光通信<div class="subtle">光连接器/光器件</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-3.1%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -24.1% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-4.4% / 10:-18.1% / 20:-29.1% / 55:-24.1% / 200:-5.2%</div></td><td>偏利好 +0.5；涨价/供给紧等2条利好；涨价/供给紧</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="江波龙 301308 jiangbolong jbl 打野池 嵌入式存储/企业级存储 / 存储 嵌入式存储/企业级存储 存储 破位观望 破位 200日线下 a6弱 rs偏弱 偏利空 -0.5；多空交织：1条利好 vs 3条利空；减持/质押 / 澄清/否认(中性偏负) 无明显买点"><td>87</td><td class="stock"><strong>江波龙</strong><code>301308</code></td><td><span class="pool-badge wild" title="打野池">野</span> 嵌入式存储/企业级存储 / 存储<div class="subtle">嵌入式存储/企业级存储</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-3.2%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -25.2% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-4.0% / 10:-17.6% / 20:-32.1% / 55:-26.9% / 200:-1.4%</div></td><td>偏利空 -0.5；多空交织：1条利好 vs 3条利空；减持/质押 / 澄清/否认(中性偏负)</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="安集科技 688019 anjikeji ajkj 必选池 cmp抛光液/湿电子化学品 / 半导体材料 cmp抛光液/湿电子化学品 半导体材料 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏弱 利空 -0.8；减持/质押等3条利空；减持/质押 瓶颈供给"><td>88</td><td class="stock"><strong>安集科技</strong><code>688019</code></td><td><span class="pool-badge core" title="必选池">必</span> CMP抛光液/湿电子化学品 / 半导体材料<div class="subtle">CMP抛光液/湿电子化学品</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-3.5%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -9.2% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-0.2% / 10:-8.4% / 20:-15.0% / 55:-3.3% / 200:+17.9%</div></td><td>利空 -0.8；减持/质押等3条利空；减持/质押</td><td>暂不优先<div class="subtle">瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="华正新材 603186 huazhengxincai hzxc 打野池 ccl覆铜板 / pcb材料 ccl覆铜板 pcb材料 破位观望 全球优势:ccl；供给瓶颈:高速覆铜板 破位 二阶段预警-跌破55 a6弱 rs偏强 利空 -0.7；多空交织：1条利好 vs 4条利空；减持/质押 涨价/供货紧张；瓶颈供给"><td>89</td><td class="stock"><strong>华正新材</strong><code>603186</code></td><td><span class="pool-badge wild" title="打野池">野</span> CCL覆铜板 / PCB材料<div class="subtle">CCL覆铜板</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-3.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -21.4% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-7.6% / 10:-16.0% / 20:-26.6% / 55:-15.2% / 200:+31.5%</div></td><td>利空 -0.7；多空交织：1条利好 vs 4条利空；减持/质押</td><td>暂不优先<div class="subtle">涨价/供货紧张；瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="华海诚科 688535 huahaichengke hhck 打野池 环氧塑封料/封装材料 / 先进封装材料 环氧塑封料/封装材料 先进封装材料 破位观望 全球优势:封装填料；供给瓶颈:电子填料 破位 二阶段预警-跌破55 a6弱 rs偏弱 利空 -1.4；减持/质押等6条利空 瓶颈供给"><td>90</td><td class="stock"><strong>华海诚科</strong><code>688535</code></td><td><span class="pool-badge wild" title="打野池">野</span> 环氧塑封料/封装材料 / 先进封装材料<div class="subtle">环氧塑封料/封装材料</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-3.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -23.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-3.8% / 10:-19.4% / 20:-31.5% / 55:-21.7% / 200:+0.5%</div></td><td>利空 -1.4；减持/质押等6条利空</td><td>暂不优先<div class="subtle">瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="北京君正 300223 beijingjunzheng bjjz 打野池 存储芯片/soc / 存储芯片 存储芯片/soc 存储芯片 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏弱 利好 +0.8；多空交织：4条利好 vs 2条利空；涨价/供给紧 无明显买点"><td>91</td><td class="stock"><strong>北京君正</strong><code>300223</code></td><td><span class="pool-badge wild" title="打野池">野</span> 存储芯片/SoC / 存储芯片<div class="subtle">存储芯片/SoC</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-3.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -18.6% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-2.1% / 10:-13.7% / 20:-27.2% / 55:-13.8% / 200:+12.3%</div></td><td>利好 +0.8；多空交织：4条利好 vs 2条利空；涨价/供给紧</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="兆易创新 603986 zhaoyichuangxin zycx 必选池 存储芯片/mcu / 存储芯片 存储芯片/mcu 存储芯片 破位观望 破位 二阶段预警-跌破55 a6弱 rs中性 利好 +1.2；重大合同/长协等3条利好；重大合同/长协 无明显买点"><td>92</td><td class="stock"><strong>兆易创新</strong><code>603986</code></td><td><span class="pool-badge core" title="必选池">必</span> 存储芯片/MCU / 存储芯片<div class="subtle">存储芯片/MCU</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-3.8%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -18.2% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.4% / 10:-11.8% / 20:-26.1% / 55:-13.7% / 200:+22.7%</div></td><td>利好 +1.2；重大合同/长协等3条利好；重大合同/长协</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="华天科技 002185 huatiankeji htkj 打野池 封测/先进封装 / 先进封装 封测/先进封装 先进封装 破位观望 破位 二阶段预警-跌破55 a6弱 rs中性 偏利空 -0.4；多空交织：2条利好 vs 2条利空；资本运作(正向) 无明显买点"><td>93</td><td class="stock"><strong>华天科技</strong><code>002185</code></td><td><span class="pool-badge wild" title="打野池">野</span> 封测/先进封装 / 先进封装<div class="subtle">封测/先进封装</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-4.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -12.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.8% / 10:-15.4% / 20:-16.7% / 55:-6.1% / 200:+17.1%</div></td><td>偏利空 -0.4；多空交织：2条利好 vs 2条利空；资本运作(正向)</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="芯碁微装 688630 xinqiweizhuang xqwz 打野池 ldi曝光设备 / pcb设备 ldi曝光设备 pcb设备 破位观望 全球优势:ai pcb 破位 二阶段预警-跌破55 a6弱 rs偏强 中性 +0.2；机构看好/调入指数等1条利好；机构看好/调入指数 瓶颈供给；5日/ema5企稳"><td>94</td><td class="stock"><strong>芯碁微装</strong><code>688630</code></td><td><span class="pool-badge wild" title="打野池">野</span> LDI曝光设备 / PCB设备<div class="subtle">LDI曝光设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 17</div></td><td><span class="pill down">-4.2%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -9.8% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+1.5% / 10:-5.8% / 20:-15.3% / 55:-2.2% / 200:+43.8%</div></td><td>中性 +0.2；机构看好/调入指数等1条利好；机构看好/调入指数</td><td>暂不优先<div class="subtle">瓶颈供给；5日/EMA5企稳</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="寒武纪 688256 hanwuji hwj 必选池 ai训练/推理芯片 / ai芯片 ai训练/推理芯片 ai芯片 破位观望 破位 二阶段预警-跌破55 a6弱 rs中性 偏利好 +0.5；多空交织：3条利好 vs 1条利空；机构看好/调入指数 / 减持/质押 无明显买点"><td>95</td><td class="stock"><strong>寒武纪</strong><code>688256</code></td><td><span class="pool-badge core" title="必选池">必</span> AI训练/推理芯片 / AI芯片<div class="subtle">AI训练/推理芯片</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-4.7%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -6.8% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-1.0% / 10:-4.9% / 20:-9.4% / 55:-2.6% / 200:+18.7%</div></td><td>偏利好 +0.5；多空交织：3条利好 vs 1条利空；机构看好/调入指数 / 减持/质押</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="德明利 001309 demingli dml 打野池 存储控制/存储模组 / 存储 存储控制/存储模组 存储 破位观望 破位 200日线下 a6弱 rs偏弱 中性 +0.1；机构看好/调入指数等1条利好；机构看好/调入指数 无明显买点"><td>96</td><td class="stock"><strong>德明利</strong><code>001309</code></td><td><span class="pool-badge wild" title="打野池">野</span> 存储控制/存储模组 / 存储<div class="subtle">存储控制/存储模组</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-4.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -33.5% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-10.1% / 10:-26.7% / 20:-41.4% / 55:-33.7% / 200:-3.0%</div></td><td>中性 +0.1；机构看好/调入指数等1条利好；机构看好/调入指数</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="东山精密 002384 dongshanjingmi dsjm 必选池 pcb/fpc制造 / pcb制造 pcb/fpc制造 pcb制造 破位观望 全球优势:pcb/fpc制造；供给瓶颈:ai服务器板 破位 二阶段预警-跌破55 a6弱 rs顶15% 利好 +0.8；技术突破/国产替代等4条利好；资本运作(正向) 瓶颈供给"><td>97</td><td class="stock"><strong>东山精密</strong><code>002384</code></td><td><span class="pool-badge core" title="必选池">必</span> PCB/FPC制造 / PCB制造<div class="subtle">PCB/FPC制造</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-5.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -12.8% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-7.3% / 10:-13.4% / 20:-14.2% / 55:-7.0% / 200:+35.0%</div></td><td>利好 +0.8；技术突破/国产替代等4条利好；资本运作(正向)</td><td>暂不优先<div class="subtle">瓶颈供给</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="华大九天 301269 huadajiutian hdjt 打野池 eda设计工具 / eda eda设计工具 eda 破位观望 破位 200日线下 a6弱 rs偏弱 中性 +0.0；16条中性新闻 无明显买点"><td>98</td><td class="stock"><strong>华大九天</strong><code>301269</code></td><td><span class="pool-badge wild" title="打野池">野</span> EDA设计工具 / EDA<div class="subtle">EDA设计工具</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-5.2%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -12.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-3.5% / 10:-11.2% / 20:-15.5% / 55:-11.0% / 200:-10.7%</div></td><td>中性 +0.0；16条中性新闻</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="裕太微-u 688515 yutaiwei ytw 打野池 以太网phy芯片 / 通信芯片 以太网phy芯片 通信芯片 破位观望 破位 200日线下 a6弱 rs偏弱 利空 -1.1；多空交织：1条利好 vs 4条利空 n字量价低吸；爆量阳后缩量回踩至半分位附近，底部未破"><td>99</td><td class="stock"><strong>裕太微-U</strong><code>688515</code></td><td><span class="pool-badge wild" title="打野池">野</span> 以太网PHY芯片 / 通信芯片<div class="subtle">以太网PHY芯片</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 18</div></td><td><span class="pill down">-5.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -19.3% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:+3.4% / 10:-10.2% / 20:-24.8% / 55:-22.7% / 200:-5.0%</div></td><td>利空 -1.1；多空交织：1条利好 vs 4条利空</td><td>暂不优先<div class="subtle">N字量价低吸；爆量阳后缩量回踩至半分位附近，底部未破</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="海光信息 688041 haiguangxinxi hgxx 必选池 dcu/gpgpu算力芯片 / ai芯片 dcu/gpgpu算力芯片 ai芯片 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏弱 偏利好 +0.4；重大合同/长协等1条利好；重大合同/长协 回踩50日线附近；缩量回踩"><td>100</td><td class="stock"><strong>海光信息</strong><code>688041</code></td><td><span class="pool-badge core" title="必选池">必</span> DCU/GPGPU算力芯片 / AI芯片<div class="subtle">DCU/GPGPU算力芯片</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 18</div></td><td><span class="pill down">-5.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -5.2% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-3.3% / 10:-5.3% / 20:-7.6% / 55:-0.8% / 200:+16.9%</div></td><td>偏利好 +0.4；重大合同/长协等1条利好；重大合同/长协</td><td>暂不优先<div class="subtle">回踩50日线附近；缩量回踩</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="盛美上海 688082 shengmeishanghai smsh 必选池 清洗/电镀设备 / 半导体设备 清洗/电镀设备 半导体设备 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 利空 -1.5；减持/质押等8条利空；减持/质押 无明显买点"><td>101</td><td class="stock"><strong>盛美上海</strong><code>688082</code></td><td><span class="pool-badge core" title="必选池">必</span> 清洗/电镀设备 / 半导体设备<div class="subtle">清洗/电镀设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-6.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -14.9% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-3.4% / 10:-13.2% / 20:-21.2% / 55:-4.7% / 200:+30.2%</div></td><td>利空 -1.5；减持/质押等8条利空；减持/质押</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="概伦电子 688206 gailundianzi gldz 打野池 器件建模/eda工具 / eda 器件建模/eda工具 eda 破位观望 破位 200日线下 a6弱 rs偏弱 偏利好 +0.2；资本运作(正向)等1条利好；资本运作(正向) 无明显买点"><td>102</td><td class="stock"><strong>概伦电子</strong><code>688206</code></td><td><span class="pool-badge wild" title="打野池">野</span> 器件建模/EDA工具 / EDA<div class="subtle">器件建模/EDA工具</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-6.3%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -18.1% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-5.9% / 10:-18.9% / 20:-22.4% / 55:-15.7% / 200:-9.1%</div></td><td>偏利好 +0.2；资本运作(正向)等1条利好；资本运作(正向)</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-score="0" data-special="0" data-pool="wild" data-action="sell" data-search="芯原股份 688521 xinyuangufen xygf 打野池 半导体ip/定制芯片 / 芯片设计服务 半导体ip/定制芯片 芯片设计服务 破位观望 破位 200日线下 a6弱 rs偏弱 利好 +1.3；多空交织：7条利好 vs 4条利空；涨价/供给紧 / 重大合同/长协 / 业绩预增/盈利 无明显买点"><td>103</td><td class="stock"><strong>芯原股份</strong><code>688521</code></td><td><span class="pool-badge wild" title="打野池">野</span> 半导体IP/定制芯片 / 芯片设计服务<div class="subtle">半导体IP/定制芯片</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-6.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -16.0% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-4.2% / 10:-10.6% / 20:-22.6% / 55:-16.1% / 200:-2.7%</div></td><td>利好 +1.3；多空交织：7条利好 vs 4条利空；涨价/供给紧 / 重大合同/长协 / 业绩预增/盈利</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+	    <section id="algorithm">
+      <h2>四、当前算法说明</h2>
+      <p class="lead">这部分只保留稳定口径：先看全市场资金闸门，再看个股图形、S形态、量价确认、反人性修复和新闻排雷；新闻不替代买点。</p>
+      <div class="setup-grid">
+        <article class="setup-card">
+          <div class="s-tag">S-平台突破</div>
+          <h3>长期放量横盘后放量突破</h3>
+          <p>长期横盘积累换手，放量突破平台上沿，代表筹码完成再分配，可能进入主升浪。</p>
+          <small>来源：10192025真正的干货：实战中我最喜欢的setup 1.md</small>
+        </article>
+
+        <article class="setup-card">
+          <div class="s-tag">S-缺口支撑</div>
+          <h3>重大利好跳空后回踩缺口不破</h3>
+          <p>基本面再定价形成缺口，回踩缺口上下沿不破，支撑强度通常高于普通均线。</p>
+          <small>来源：10192025真正的干货：实战中我最喜欢的setup 1.md</small>
+        </article>
+        </div>
+      <div class="workflow">
+        <div class="step"><h3>排序口径</h3><p>最终分 &gt; S标记 &gt; 反人性/错杀修复 &gt; 二阶段健康度 &gt; 动态RS &gt; 技术分 &gt; 追高风险 &gt; 新闻排雷。</p></div>
+        <div class="step"><h3>资金闸门</h3><p>先判断科技成长、周期资源、高股息防守、消费医药等风格谁在吸金，再决定候选池进攻性。</p></div>
+        <div class="step"><h3>交易边界</h3><p>强票也必须服从买点、支撑位、成交量和风控位；未完成新闻核验时必须明确标注。</p></div>
+      </div>
+    </section>
+
+	    <section id="qveris">
+	      <h2>五、新股票 / qveris 初评入口</h2>
+      <div class="workflow">
+        <div class="step"><h3>1. 输入</h3><p>你给股票截图、代码或一段自媒体线索。系统先识别股票和所属细分赛道。</p></div>
+        <div class="step"><h3>2. qveris 初评</h3><p>按 discover → inspect → call 顺序调用能力，先看公司业务、新闻事件、同赛道对手和初步风险。</p></div>
+        <div class="step"><h3>3. 纳入模型</h3><p>通过初评的股票进入 md50 候选扩展区，只有成为细分环节龙一/龙二后才进入正式 md50 核心池。</p></div>
+      </div>
+    </section>
+
+  </main>
+  <script>
+    (() => {
+      const normalize = (value) => String(value || "").trim().toLowerCase();
+      function initFilter(panelId, searchId, rowSelector, countId) {
+        const panel = document.getElementById(panelId);
+        const search = document.getElementById(searchId);
+        const rows = Array.from(document.querySelectorAll(rowSelector));
+        const checks = panel ? Array.from(panel.querySelectorAll("input[type='checkbox']")) : [];
+        const count = document.getElementById(countId);
+        function applyFilter() {
+        const query = normalize(search && search.value);
+        const selectedScores = new Set(checks.filter((item) => item.checked && item.dataset.kind === "score").map((item) => item.value));
+        const selectedPools = new Set(checks.filter((item) => item.checked && item.dataset.kind === "pool").map((item) => item.value));
+        const selectedActions = new Set(checks.filter((item) => item.checked && item.dataset.kind === "action").map((item) => item.value));
+        const needSpecial = checks.some((item) => item.checked && item.dataset.kind === "special");
+        let visible = 0;
+        rows.forEach((row) => {
+          const rowScore = Number(row.dataset.score || "0");
+          const scoreOk = !selectedScores.size || Array.from(selectedScores).some((score) => rowScore >= Number(score));
+          const poolOk = !selectedPools.size || selectedPools.has(row.dataset.pool);
+          const actionOk = !selectedActions.size || selectedActions.has(row.dataset.action);
+          const specialOk = !needSpecial || row.dataset.special === "1";
+          const queryOk = !query || normalize(row.dataset.search).includes(query);
+          const ok = scoreOk && poolOk && actionOk && specialOk && queryOk;
+          row.style.display = ok ? "" : "none";
+          if (ok) visible += 1;
+        });
+        if (count) count.textContent = `显示 ${visible} / ${rows.length}`;
+      }
+        if (search) search.addEventListener("input", applyFilter);
+        checks.forEach((item) => item.addEventListener("change", applyFilter));
+        applyFilter();
+      }
+      initFilter("fullScoreFilter", "fullScoreSearch", "#fullScoreRows tr", "fullScoreCount");
+    })();
+  </script>
+</body>
+</html>
