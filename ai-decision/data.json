@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T09:07:08.377Z",
+  "generatedAt": "2026-07-24T06:43:07.648Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -25,8 +25,8 @@
       "aboveMa20Pct": 37.5,
       "fear": 0,
       "greed": 0,
-      "spy1dPct": -0.12,
-      "qqq1dPct": -0.51,
+      "spy1dPct": -1.23,
+      "qqq1dPct": -1.9,
       "coverage": {
         "valid": 22,
         "total": 22,
@@ -36,9 +36,9 @@
   },
   "deleveraging": {
     "aShare": {
-      "asOf": "2026-07-21",
-      "currentTn": 2.698,
-      "progressToBasicPct": 76.8,
+      "asOf": "2026-07-23",
+      "currentTn": 2.688805,
+      "progressToBasicPct": 79,
       "basicTn": 2.6
     },
     "korea": {
@@ -78,9 +78,9 @@
   },
   "correction": {
     "cn": {
-      "score": 52,
+      "score": 53,
       "components": {
-        "deleveraging": 76.8,
+        "deleveraging": 79,
         "belowMa20": 57.4,
         "sentimentScore": -11,
         "fearCount": 3,
