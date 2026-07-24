@@ -229,7 +229,7 @@
     section, .panel, .metric, .kpi, .step, .setup-card, .whole-market-stat,
     .flow-summary-card, .radar-status-item, .detail-item {
       border-radius:10px !important;
-      box-shadow:none;
+      box-shadow:none !important;
     }
     .rec-review, .panel, .spotlight, .backtest-panel, .detail-grid,
     td[data-label="标的"] { border-left-width:1px !important; }
@@ -241,6 +241,8 @@
       .research-platform-brand span { display:none; }
       .research-platform-nav { overflow-x:auto; max-width:68vw; }
       .research-platform-nav a { white-space:nowrap; }
+      .system-nav { overflow-x:auto; }
+      .system-nav a { flex:0 0 auto !important; white-space:nowrap; }
     }
     @media (prefers-reduced-motion:reduce) {
       html { scroll-behavior:auto; }
@@ -252,14 +254,14 @@
 <body>
 
   <div class="research-platform-bar" data-design="A_SHARE_RESEARCH_DESIGN_V1">
-    <a class="research-platform-brand" href="../a-share/">
+    <a class="research-platform-brand" href="https://csnpk.com/">
       CSNPK 研究台 <span>公开研究视图 · 不含个人持仓</span>
     </a>
-    <nav class="research-platform-nav" aria-label="A股研究系统">
-      <a href="../a-share/">总览</a>
-      <a href="../mda100/">mda100</a>
-      <a href="../csn/" aria-current="page">表姐严选</a>
-      <a href="../nav/">全部报告</a>
+    <nav class="research-platform-nav" aria-label="公开研究系统">
+      <a href="https://csnpk.com/">总览</a>
+      <a href="https://csnpk.com/mda100/">mda100</a>
+      <a href="https://csnpk.com/csn/" aria-current="page">表姐严选</a>
+      <a href="https://csnpk.com/nav/">全部报告</a>
     </nav>
   </div>
 
