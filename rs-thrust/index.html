@@ -367,7 +367,6 @@ footer p{margin:0}
           <a href="../us-skew/" data-key="us-skew"><b>期权风险分布图</b><small>看保护需求与风险温度</small></a>
           <a href="../ai-decision/" data-key="ai-decision"><b>每日市场进度</b><small>A股与美股的回调出清进度</small></a>
           <a href="../korea-deleveraging/" data-key="korea-deleveraging"><b>韩国去杠杆监控</b><small>总仓位、层次与出清进度</small></a>
-          <a href="../earnings/" data-key="earnings"><b>财报验收台</b><small>预期门槛、实际打勾与股价反馈</small></a>
         </div>
       </div>
       <div class="csn-item" data-group="research">
@@ -378,12 +377,12 @@ footer p{margin:0}
 </nav>
 <script>
 /* 当前页高亮：在页面里把 window.CSN_PAGE_KEY 设为 mda100 / csn / rs-thrust /
-   us-skew / ai-decision / korea-deleveraging / earnings / nav 之一（需在本脚本前定义） */
+   us-skew / ai-decision / korea-deleveraging / nav 之一（需在本脚本前定义） */
 (function () {
   var key = window.CSN_PAGE_KEY;
   if (!key) return;
   var group = { mda100: "stocks", csn: "stocks", "rs-thrust": "tools", "us-skew": "tools",
-    "ai-decision": "tools", "korea-deleveraging": "tools", earnings: "tools", nav: "research" }[key];
+    "ai-decision": "tools", "korea-deleveraging": "tools", nav: "research" }[key];
   document.querySelectorAll(".csn-item").forEach(function (item) {
     if (item.dataset.group === group) item.classList.add("active");
   });
