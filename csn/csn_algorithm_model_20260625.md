@@ -1,4 +1,4 @@
-# 表姐严选：当前算法模型说明
+# 美股严选：当前算法模型说明
 
 生成时间：2026-06-25  
 对应脚本：`scripts/generate_ai_chain_overnight_html.py`  

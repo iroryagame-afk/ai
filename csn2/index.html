@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>表姐严选</title>
+  <title>美股严选</title>
   <style>
     :root {
       --ink:#17212b; --muted:#65727f; --line:#d7e1ea; --bg:#f4f8fb;
@@ -14,7 +14,7 @@
     * { box-sizing:border-box; }
     body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:var(--bg); }
     .page { max-width:1480px; margin:0 auto; padding:22px 24px 48px; }
-    .system-nav { display:flex; align-items:center; gap:8px; width:max-content; max-width:100%; margin:10px 0 14px; padding:5px; border:1px solid #cfe0e8; border-radius:10px; background:#fff; box-shadow:0 8px 20px rgba(20,60,70,.05); }
+    .system-nav { display:flex; align-items:center; gap:8px; width:max-content; max-width:100%; margin:10px 0 14px; padding:5px; border:1px solid #cfe0e8; border-radius:10px; background:#fff; box-shadow:none; }
     .system-nav a { display:inline-flex; align-items:center; min-height:34px; padding:6px 13px; border-radius:8px; color:#3b5262; text-decoration:none; font-weight:900; font-size:14px; }
     .system-nav a.active { background:#17212b; color:#fff; }
     .system-intro { display:flex; gap:10px; align-items:flex-start; margin:10px 0 0; padding:10px 12px; border:1px solid #d7e8ee; border-radius:8px; background:#fbfdff; color:#4d6473; font-size:14px; line-height:1.65; font-weight:650; }
@@ -24,8 +24,8 @@
     .meta { color:var(--muted); font-size:15px; line-height:1.65; }
     .notice { border:1px solid #9fded6; background:#effcfa; color:#31545b; padding:12px 14px; border-radius:8px; margin:14px 0 14px; font-weight:650; }
     .summary { display:grid; grid-template-columns:minmax(260px,1.25fr) repeat(6,minmax(132px,1fr)); gap:12px; margin-bottom:10px; }
-    .hero, .metric { border:1px solid #9fded6; border-radius:8px; padding:15px 16px; min-height:104px; box-shadow:0 8px 22px rgba(20,60,70,.06); }
-    .hero { display:grid; align-content:center; gap:10px; background:linear-gradient(135deg,#e6f8f4 0%,#f8fffd 100%); border-left:7px solid var(--teal); }
+    .hero, .metric { border:1px solid #9fded6; border-radius:8px; padding:15px 16px; min-height:104px; box-shadow:none; }
+    .hero { display:grid; align-content:center; gap:10px; background:linear-gradient(135deg,#e6f8f4 0%,#f8fffd 100%); border-left:1px solid var(--teal); }
     .hero .eyebrow, .metric .label { color:var(--teal); font-size:14px; font-weight:900; margin-bottom:6px; }
     .hero .headline { font-size:30px; line-height:1.08; font-weight:950; letter-spacing:0; }
     .hero .switch-chip { display:inline-flex; width:max-content; max-width:100%; align-items:center; min-height:30px; padding:4px 10px; border-radius:999px; background:#d9f3ee; color:#0f766e; font-size:15px; font-weight:950; }
@@ -93,12 +93,88 @@
       .code { font-size:22px; }
     }
   </style>
+
+  <style id="unified-a-share-design">
+    :root {
+      --research-bg:#f5f7fa;
+      --research-surface:#ffffff;
+      --research-ink:#111827;
+      --research-muted:#526071;
+      --research-line:#d9e1ea;
+      --research-brand:#123c69;
+      --research-accent:#0f766e;
+      --research-focus:#2563eb;
+      --z-sticky:20;
+    }
+    html { scroll-behavior:smooth; }
+    body { background:var(--research-bg); color:var(--research-ink); }
+    .research-platform-bar {
+      position:sticky; top:0; z-index:var(--z-sticky);
+      display:flex; align-items:center; justify-content:space-between; gap:18px;
+      min-height:52px; padding:8px max(18px,calc((100vw - 1480px)/2));
+      background:#0f1f33; color:#fff; border-bottom:1px solid #27415f;
+    }
+    .research-platform-brand {
+      display:flex; align-items:baseline; gap:9px; color:#fff; text-decoration:none;
+      font-weight:900; letter-spacing:-.01em; white-space:nowrap;
+    }
+    .research-platform-brand span { color:#b8c9dc; font-size:12px; font-weight:700; }
+    .research-platform-nav { display:flex; align-items:center; gap:4px; }
+    .research-platform-nav a {
+      display:inline-flex; align-items:center; min-height:34px; padding:6px 11px;
+      border-radius:7px; color:#cbd8e7; text-decoration:none; font-size:13px; font-weight:800;
+    }
+    .research-platform-nav a:hover { background:#1b3552; color:#fff; }
+    .research-platform-nav a[aria-current="page"] { background:#fff; color:#123c69; }
+    .research-platform-nav a:focus-visible,
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
+    summary:focus-visible { outline:3px solid #7db4ff; outline-offset:2px; }
+    .top { border-bottom:0 !important; }
+    .top h1, h1, h2, h3 { text-wrap:balance; }
+    p, .lead { text-wrap:pretty; }
+    section, .panel, .metric, .kpi, .step, .setup-card, .whole-market-stat,
+    .flow-summary-card, .radar-status-item, .detail-item {
+      border-radius:10px !important;
+      box-shadow:none !important;
+    }
+    .rec-review, .panel, .spotlight, .backtest-panel, .detail-grid,
+    td[data-label="标的"] { border-left-width:1px !important; }
+    .table-wrap, .candidate-table-wrap { scrollbar-gutter:stable; }
+    table { font-variant-numeric:tabular-nums; }
+    tbody tr { transition:background-color 180ms ease-out; }
+    @media (max-width:760px) {
+      .research-platform-bar { position:static; align-items:flex-start; padding:10px; }
+      .research-platform-brand span { display:none; }
+      .research-platform-nav { overflow-x:auto; max-width:68vw; }
+      .research-platform-nav a { white-space:nowrap; }
+      .system-nav { overflow-x:auto; }
+      .system-nav a { flex:0 0 auto !important; white-space:nowrap; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *, *::before, *::after { transition-duration:.01ms !important; animation-duration:.01ms !important; }
+    }
+  </style>
+
 </head>
 <body>
+
+  <div class="research-platform-bar" data-design="A_SHARE_RESEARCH_DESIGN_V1">
+    <a class="research-platform-brand" href="https://csnpk.com/">
+      CSNPK 研究台 <span>公开研究视图 · 不含个人持仓</span>
+    </a>
+    <nav class="research-platform-nav" aria-label="公开研究系统">
+      <a href="https://csnpk.com/">总览</a>
+      <a href="https://csnpk.com/mda100/">A股严选</a>
+      <a href="https://csnpk.com/csn/" aria-current="page">美股严选</a>
+      <a href="https://csnpk.com/nav/">全部报告</a>
+    </nav>
+  </div>
+
   <div class="page">
     <div class="topbar">
       <div>
-        <h1>表姐严选</h1>
+        <h1>美股严选</h1>
         <nav class="system-nav" aria-label="系统切换">
           <a href="../csn/">系统A</a>
           <a class="active" href="../csn2/">系统B</a>

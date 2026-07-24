@@ -1,6 +1,82 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-store"><title>表姐严选 · 美股热门榜</title>
-<style>:root{--bg:#f4f7f8;--panel:#fff;--text:#142126;--muted:#6b7780;--line:#dce4e7;--green:#087f5b;--red:#c92a2a;--blue:#175cd3}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.55 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}.wrap{max-width:1540px;margin:auto;padding:24px}.hero,.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 24px #18323b0d}.hero{padding:22px 24px;margin-bottom:14px}h1{font-size:26px;margin:0 0 7px}.sub,.muted{color:var(--muted)}.nav{margin-top:10px}a{color:var(--blue);text-decoration:none;margin-right:16px}.kpis,.markets{display:grid;grid-template-columns:repeat(4,minmax(120px,1fr));gap:10px;margin-top:15px}.kpi,.market{padding:12px;background:#f7faf9;border-radius:11px}.kpi b,.market strong{display:block;font-size:20px}.market span{font-weight:700}.market small{display:block;color:var(--muted)}.up{color:var(--green)}.down{color:var(--red)}.gate{margin-top:12px;padding:11px 13px;border-radius:10px;background:#edf4ff;color:#184a91}.controls{display:flex;flex-wrap:wrap;gap:9px;align-items:end;padding:14px;margin-bottom:12px}label{display:flex;flex-direction:column;gap:4px;color:var(--muted);font-size:12px}input,select,button{border:1px solid #cdd8dc;border-radius:9px;background:#fff;padding:9px 10px;font:inherit}input[type=search]{min-width:220px}button{cursor:pointer}button.active{background:#123c35;color:#fff;border-color:#123c35}.result{margin-left:auto;color:var(--muted)}.tablebox{overflow:auto;max-height:72vh}table{width:100%;border-collapse:separate;border-spacing:0;min-width:1650px}th,td{padding:10px 9px;border-bottom:1px solid #edf1f2;white-space:nowrap;text-align:right}th{position:sticky;top:0;background:#eef5f3;z-index:2;cursor:pointer;color:#34434a}th:first-child,td:first-child,th:nth-child(2),td:nth-child(2),th:nth-child(3),td:nth-child(3),th:nth-child(4),td:nth-child(4){text-align:left}.tag{display:inline-block;border-radius:999px;padding:2px 7px;font-size:12px;background:#e8f1ff;color:#164ca2;margin:1px}.yes{background:#dff5eb;color:var(--green)}.no{background:#f1f3f5;color:#7b858b}.warn{background:#fff0d3;color:#9b5d00}.explain{padding:17px 19px;margin-top:13px}.explain h2{font-size:17px;margin:0 0 8px}.explain ul{margin:6px 0;padding-left:20px;color:#46545a}@media(max-width:760px){.wrap{padding:12px}.kpis,.markets{grid-template-columns:1fr 1fr}.result{width:100%;margin-left:0}}</style></head><body><main class="wrap">
-<section class="hero"><h1>表姐严选 · 美股热门榜</h1><div class="sub">隔夜数据：2026-07-20 ｜ 运行时间：2026-07-21 18:53 ｜ OpenD已连接；全市场五榜取数，最终发布100，回补扫描已核验113，剔除/失败7</div><nav class="nav"><a href="../" target="_blank" rel="noopener">返回表姐严选</a><a href="../../nav/" target="_blank" rel="noopener">返回汇总页</a></nav><div class="kpis"><div class="kpi"><b>2,933</b><span>富途全市场合格股</span></div><div class="kpi"><b>240</b><span>五类榜单去重</span></div><div class="kpi"><b>100</b><span>页面热门候选</span></div><div class="kpi"><b>50</b><span>重点名单</span></div></div><div class="markets"><div class="market"><b>SPY</b><strong>742.09</strong><span class="down">-0.16%</span><small>MA50 743.44 · MA200 693.85</small></div><div class="market"><b>QQQ</b><strong>696.06</strong><span class="up">+0.10%</span><small>MA50 718.54 · MA200 640.01</small></div><div class="market"><b>SOXX</b><strong>524.14</strong><span class="up">+0.45%</span><small>MA50 566.58 · MA200 391.87</small></div><div class="market"><b>IWM</b><strong>292.31</strong><span class="down">-0.59%</span><small>MA50 290.05 · MA200 262.67</small></div></div><div class="gate"><b>科技股偏谨慎：QQQ低于MA50</b> · 保留强势股，不追高</div></section>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-store"><title>美股严选 · 热门榜</title>
+<style>:root{--bg:#f4f7f8;--panel:#fff;--text:#142126;--muted:#6b7780;--line:#dce4e7;--green:#087f5b;--red:#c92a2a;--blue:#175cd3}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.55 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}.wrap{max-width:1540px;margin:auto;padding:24px}.hero,.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:none;margin-bottom:14px}h1{font-size:26px;margin:0 0 7px}.sub,.muted{color:var(--muted)}.nav{margin-top:10px}a{color:var(--blue);text-decoration:none;margin-right:16px}.kpis,.markets{display:grid;grid-template-columns:repeat(4,minmax(120px,1fr));gap:10px;margin-top:15px}.kpi,.market{padding:12px;background:#f7faf9;border-radius:11px}.kpi b,.market strong{display:block;font-size:20px}.market span{font-weight:700}.market small{display:block;color:var(--muted)}.up{color:var(--green)}.down{color:var(--red)}.gate{margin-top:12px;padding:11px 13px;border-radius:10px;background:#edf4ff;color:#184a91}.controls{display:flex;flex-wrap:wrap;gap:9px;align-items:end;padding:14px;margin-bottom:12px}label{display:flex;flex-direction:column;gap:4px;color:var(--muted);font-size:12px}input,select,button{border:1px solid #cdd8dc;border-radius:9px;background:#fff;padding:9px 10px;font:inherit}input[type=search]{min-width:220px}button{cursor:pointer}button.active{background:#123c35;color:#fff;border-color:#123c35}.result{margin-left:auto;color:var(--muted)}.tablebox{overflow:auto;max-height:72vh}table{width:100%;border-collapse:separate;border-spacing:0;min-width:1650px}th,td{padding:10px 9px;border-bottom:1px solid #edf1f2;white-space:nowrap;text-align:right}th{position:sticky;top:0;background:#eef5f3;z-index:2;cursor:pointer;color:#34434a}th:first-child,td:first-child,th:nth-child(2),td:nth-child(2),th:nth-child(3),td:nth-child(3),th:nth-child(4),td:nth-child(4){text-align:left}.tag{display:inline-block;border-radius:999px;padding:2px 7px;font-size:12px;background:#e8f1ff;color:#164ca2;margin:1px}.yes{background:#dff5eb;color:var(--green)}.no{background:#f1f3f5;color:#7b858b}.warn{background:#fff0d3;color:#9b5d00}.explain{padding:17px 19px;margin-top:13px}.explain h2{font-size:17px;margin:0 0 8px}.explain ul{margin:6px 0;padding-left:20px;color:#46545a}@media(max-width:760px){.wrap{padding:12px}.kpis,.markets{grid-template-columns:1fr 1fr}.result{width:100%;margin-left:0}}</style>
+  <style id="unified-a-share-design">
+    :root {
+      --research-bg:#f5f7fa;
+      --research-surface:#ffffff;
+      --research-ink:#111827;
+      --research-muted:#526071;
+      --research-line:#d9e1ea;
+      --research-brand:#123c69;
+      --research-accent:#0f766e;
+      --research-focus:#2563eb;
+      --z-sticky:20;
+    }
+    html { scroll-behavior:smooth; }
+    body { background:var(--research-bg); color:var(--research-ink); }
+    .research-platform-bar {
+      position:sticky; top:0; z-index:var(--z-sticky);
+      display:flex; align-items:center; justify-content:space-between; gap:18px;
+      min-height:52px; padding:8px max(18px,calc((100vw - 1480px)/2));
+      background:#0f1f33; color:#fff; border-bottom:1px solid #27415f;
+    }
+    .research-platform-brand {
+      display:flex; align-items:baseline; gap:9px; color:#fff; text-decoration:none;
+      font-weight:900; letter-spacing:-.01em; white-space:nowrap;
+    }
+    .research-platform-brand span { color:#b8c9dc; font-size:12px; font-weight:700; }
+    .research-platform-nav { display:flex; align-items:center; gap:4px; }
+    .research-platform-nav a {
+      display:inline-flex; align-items:center; min-height:34px; padding:6px 11px;
+      border-radius:7px; color:#cbd8e7; text-decoration:none; font-size:13px; font-weight:800;
+    }
+    .research-platform-nav a:hover { background:#1b3552; color:#fff; }
+    .research-platform-nav a[aria-current="page"] { background:#fff; color:#123c69; }
+    .research-platform-nav a:focus-visible,
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
+    summary:focus-visible { outline:3px solid #7db4ff; outline-offset:2px; }
+    .top { border-bottom:0 !important; }
+    .top h1, h1, h2, h3 { text-wrap:balance; }
+    p, .lead { text-wrap:pretty; }
+    section, .panel, .metric, .kpi, .step, .setup-card, .whole-market-stat,
+    .flow-summary-card, .radar-status-item, .detail-item {
+      border-radius:10px !important;
+      box-shadow:none !important;
+    }
+    .rec-review, .panel, .spotlight, .backtest-panel, .detail-grid,
+    td[data-label="标的"] { border-left-width:1px !important; }
+    .table-wrap, .candidate-table-wrap { scrollbar-gutter:stable; }
+    table { font-variant-numeric:tabular-nums; }
+    tbody tr { transition:background-color 180ms ease-out; }
+    @media (max-width:760px) {
+      .research-platform-bar { position:static; align-items:flex-start; padding:10px; }
+      .research-platform-brand span { display:none; }
+      .research-platform-nav { overflow-x:auto; max-width:68vw; }
+      .research-platform-nav a { white-space:nowrap; }
+      .system-nav { overflow-x:auto; }
+      .system-nav a { flex:0 0 auto !important; white-space:nowrap; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *, *::before, *::after { transition-duration:.01ms !important; animation-duration:.01ms !important; }
+    }
+  </style>
+
+</head><body>
+
+  <div class="research-platform-bar" data-design="A_SHARE_RESEARCH_DESIGN_V1">
+    <a class="research-platform-brand" href="https://csnpk.com/">
+      CSNPK 研究台 <span>公开研究视图 · 不含个人持仓</span>
+    </a>
+    <nav class="research-platform-nav" aria-label="公开研究系统">
+      <a href="https://csnpk.com/">总览</a>
+      <a href="https://csnpk.com/mda100/">A股严选</a>
+      <a href="https://csnpk.com/csn/" aria-current="page">美股严选</a>
+      <a href="https://csnpk.com/nav/">全部报告</a>
+    </nav>
+  </div>
+<main class="wrap">
+<section class="hero"><h1>美股严选 · 热门榜</h1><div class="sub">隔夜数据：2026-07-20 ｜ 运行时间：2026-07-21 18:53 ｜ OpenD已连接；全市场五榜取数，最终发布100，回补扫描已核验113，剔除/失败7</div><nav class="nav"><a href="../" target="_blank" rel="noopener">返回美股严选</a><a href="../../nav/" target="_blank" rel="noopener">返回汇总页</a></nav><div class="kpis"><div class="kpi"><b>2,933</b><span>富途全市场合格股</span></div><div class="kpi"><b>240</b><span>五类榜单去重</span></div><div class="kpi"><b>100</b><span>页面热门候选</span></div><div class="kpi"><b>50</b><span>重点名单</span></div></div><div class="markets"><div class="market"><b>SPY</b><strong>742.09</strong><span class="down">-0.16%</span><small>MA50 743.44 · MA200 693.85</small></div><div class="market"><b>QQQ</b><strong>696.06</strong><span class="up">+0.10%</span><small>MA50 718.54 · MA200 640.01</small></div><div class="market"><b>SOXX</b><strong>524.14</strong><span class="up">+0.45%</span><small>MA50 566.58 · MA200 391.87</small></div><div class="market"><b>IWM</b><strong>292.31</strong><span class="down">-0.59%</span><small>MA50 290.05 · MA200 262.67</small></div></div><div class="gate"><b>科技股偏谨慎：QQQ低于MA50</b> · 保留强势股，不追高</div></section>
 <section class="panel controls"><label>搜索代码/名称<input id="search" type="search" placeholder="如 NVDA / NVIDIA"></label><label>最低市值($B)<input id="minCap" type="number" min="0" step="0.5" value="2"></label><button data-mode="focus" class="active">重点名单</button><button data-mode="all">全部热门</button><button data-mode="rank5">5日涨幅榜</button><button data-mode="rank20">20日涨幅榜</button><button data-mode="rank60">60日趋势榜</button><button data-mode="rankVolume">量比榜</button><button data-mode="rank52High">52周高位榜</button><button data-mode="watchlist">自选重合</button><button data-mode="ma">站上5/20/60日线</button><span class="result" id="result"></span></section>
 <section class="panel tablebox"><table><thead><tr><th data-key="hotRank">综合排名</th><th data-key="code">代码</th><th data-key="name">公司</th><th data-key="sourceTags">入选来源</th><th data-key="hotScore">热度分</th><th data-key="marketCapBillionUsd">市值($B)</th><th data-key="ret5">5日涨幅</th><th data-key="ret20">20日涨幅</th><th data-key="ret60">60日涨幅</th><th data-key="volumeRatio">量比</th><th data-key="distance52High">距52周高</th><th data-key="price">收盘价</th><th data-key="aboveMa5">高于MA5</th><th data-key="aboveMa20">高于MA20</th><th data-key="aboveMa60">高于MA60</th><th data-key="newHigh5">5日新高</th><th data-key="newHigh20">20日新高</th><th data-key="newHigh55">55日新高</th><th data-key="verify">核验</th></tr></thead><tbody id="tbody"></tbody></table></section>
 <section class="panel explain"><h2>这张表怎么看</h2><ul><li><b>入选来源</b>：富途全市场 5/20/60 日涨幅、量比、52 周高位五类榜单的并集；“富途自选”只表示该股同时在你的自选中。</li><li><b>热度分</b>：综合各榜排名，20日动量权重最高；用于排序，不是收益率或买入信号。</li><li><b>重点名单</b>：市值≥20亿美元、非明显生物医药、OpenD核验且收盘价同时高于MA5/20/60。</li><li><b>隔夜环境</b>：SPY/QQQ/SOXX/IWM 均为富途 OpenD 最新完整日K；页面会因大盘或半导体跌破关键均线而降级。</li></ul><div class="muted">表格支持点击表头排序和按榜单筛选。基本面附件仅作可选补充，日常刷新不再依赖Excel。</div></section></main>
