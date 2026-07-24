@@ -3,7 +3,205 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A股严选</title>
+  <title>A股严选 · CSN 投研</title>
+  <style id="csn-base">
+/* ============================================================
+   CSN 投研 · 统一设计系统（B 方向：精致浅色研报风）
+   用法：每个页面把本文件内容内联进 <style>，页面专属样式追加其后。
+   ============================================================ */
+
+:root {
+  /* 纸质浅色基底 */
+  --paper: #f6f4ee;          /* 页面底色：暖米白纸感 */
+  --panel: #fffefa;          /* 卡片面板 */
+  --panel-2: #faf8f2;        /* 次级面板 */
+  --ink: #1f2430;            /* 主文字 */
+  --ink-2: #494f5e;          /* 次文字 */
+  --muted: #8b90a0;          /* 弱提示 */
+  --hairline: #e3ded1;       /* 发丝线 */
+  --hairline-strong: #cfc8b6;
+
+  /* 机构研报配色 */
+  --accent: #173a5e;         /* 研究所蓝（主强调） */
+  --accent-soft: #eaf0f6;    /* 蓝底 */
+  --cinnabar: #b5452e;       /* 朱砂红（点睛/活跃态） */
+  --cinnabar-soft: #f9ece7;
+  --gold: #96702a;           /* 印章金（徽标/标签） */
+  --gold-soft: #f5eeda;
+  --jade: #2f6b4f;           /* 青玉（正向/确认） */
+  --jade-soft: #e9f2ec;
+
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow-card: 0 1px 2px rgba(31,36,48,.05), 0 8px 24px rgba(31,36,48,.06);
+  --shadow-lift: 0 2px 4px rgba(31,36,48,.06), 0 16px 40px rgba(31,36,48,.10);
+
+  --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 细腻纸面纹理（极轻，不影响性能） */
+body::before {
+  content: "";
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(1200px 500px at 50% -180px, rgba(23,58,94,.05), transparent 70%),
+    linear-gradient(180deg, rgba(255,255,255,.5), transparent 120px);
+}
+
+a { color: var(--accent); }
+a:hover { color: #0f2c49; }
+
+::selection { background: rgba(181,69,46,.18); }
+
+/* ============ 顶部统一导航 ============ */
+.csn-topnav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,254,250,.88);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  backdrop-filter: blur(14px) saturate(1.4);
+  border-bottom: 1px solid var(--hairline);
+}
+.csn-topnav-inner {
+  width: min(1180px, 100%); margin: 0 auto;
+  display: flex; align-items: stretch; gap: 18px;
+  padding: 0 20px; min-height: 58px;
+}
+.csn-brand {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; color: var(--ink); flex: none;
+}
+.csn-brand-seal {
+  width: 30px; height: 30px; border-radius: 7px; flex: none;
+  background: var(--cinnabar); color: #fff;
+  font-family: var(--serif); font-weight: 700; font-size: 14px;
+  display: grid; place-items: center; letter-spacing: 0;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.25);
+}
+.csn-brand-name { font-family: var(--serif); font-size: 17px; font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
+.csn-brand-sub { font-size: 10px; letter-spacing: .22em; color: var(--muted); font-family: var(--mono); text-transform: uppercase; margin-top: 1px; }
+
+.csn-menu { display: flex; align-items: stretch; margin-left: auto; }
+.csn-item { position: relative; display: flex; align-items: stretch; }
+.csn-item > a, .csn-item > button {
+  display: flex; align-items: center; gap: 6px;
+  padding: 0 16px; border: 0; background: none; cursor: pointer;
+  font: 600 14px/1 var(--sans); color: var(--ink-2); text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.csn-item > a:hover, .csn-item > button:hover { color: var(--ink); }
+.csn-item.active > a, .csn-item.active > button { color: var(--cinnabar); border-bottom-color: var(--cinnabar); }
+.csn-caret { font-size: 9px; color: var(--muted); transition: transform .18s ease; }
+.csn-item:hover .csn-caret, .csn-item:focus-within .csn-caret { transform: rotate(180deg); }
+
+.csn-drop {
+  position: absolute; top: calc(100% + 1px); left: 50%; transform: translate(-50%, 6px);
+  min-width: 250px; padding: 8px;
+  background: var(--panel); border: 1px solid var(--hairline); border-radius: 12px;
+  box-shadow: var(--shadow-lift);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .16s ease, transform .16s ease, visibility .16s;
+}
+.csn-item:hover .csn-drop, .csn-item:focus-within .csn-drop {
+  opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0);
+}
+.csn-drop a {
+  display: block; padding: 9px 11px; border-radius: 8px; text-decoration: none; color: var(--ink);
+}
+.csn-drop a:hover { background: var(--panel-2); }
+.csn-drop a b { display: block; font-size: 13.5px; font-weight: 650; }
+.csn-drop a small { display: block; font-size: 11.5px; color: var(--muted); margin-top: 2px; line-height: 1.45; }
+.csn-drop a.current b::after { content: "· 当前"; color: var(--cinnabar); font-size: 11px; margin-left: 4px; }
+
+/* ============ 页面骨架 ============ */
+.csn-page { position: relative; z-index: 1; width: min(1180px, 100%); margin: 0 auto; padding: 34px 20px 60px; }
+
+.csn-kicker {
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 600 11px/1 var(--mono); letter-spacing: .24em; text-transform: uppercase;
+  color: var(--gold);
+}
+.csn-kicker::before { content: ""; width: 22px; height: 1px; background: var(--gold); }
+
+.csn-title {
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(26px, 4.6vw, 40px); line-height: 1.22;
+  margin: 12px 0 10px; letter-spacing: .01em; color: var(--ink);
+}
+.csn-lede { color: var(--ink-2); font-size: 15px; max-width: 720px; margin: 0; }
+
+.csn-section-head {
+  display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  margin: 44px 0 18px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--hairline);
+}
+.csn-section-head h2 {
+  font-family: var(--serif); font-size: 22px; font-weight: 700; margin: 0;
+}
+.csn-section-head .en { font: 600 11px/1 var(--mono); letter-spacing: .2em; color: var(--muted); text-transform: uppercase; }
+.csn-section-head .more { margin-left: auto; font-size: 13px; color: var(--muted); }
+
+/* ============ 卡片与标签 ============ */
+.csn-card {
+  background: var(--panel); border: 1px solid var(--hairline);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-card);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.csn-card.hoverable:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); border-color: var(--hairline-strong); }
+
+.csn-tag {
+  display: inline-flex; align-items: center; min-height: 24px;
+  padding: 3px 9px; border-radius: 999px;
+  font: 600 12px/1 var(--sans);
+  background: var(--accent-soft); color: var(--accent);
+  border: 1px solid transparent;
+}
+.csn-tag.gold { background: var(--gold-soft); color: var(--gold); }
+.csn-tag.red  { background: var(--cinnabar-soft); color: var(--cinnabar); }
+.csn-tag.jade { background: var(--jade-soft); color: var(--jade); }
+/* 语义规则：股票代码/英文代号 → 蓝；行业/产业链 → 金；宏观主题 → 朱砂；正向确认 → 青玉 */
+
+.csn-mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* ============ 动效 ============ */
+@keyframes csnRise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.csn-rise { animation: csnRise .5s cubic-bezier(.2,.7,.3,1) both; }
+.csn-rise.d1 { animation-delay: .05s; } .csn-rise.d2 { animation-delay: .12s; }
+.csn-rise.d3 { animation-delay: .19s; } .csn-rise.d4 { animation-delay: .26s; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* ============ 响应式 ============ */
+@media (max-width: 760px) {
+  .csn-topnav-inner { padding: 0 12px; gap: 8px; }
+  .csn-brand-sub { display: none !important; }
+  .csn-menu { min-width: 0; overflow-x: auto; overflow-y: hidden; }
+  .csn-brand-name { font-size: 15px; }
+  .csn-item > a, .csn-item > button { padding: 0 10px; font-size: 13px; }
+  .csn-drop { left: auto; right: 0; transform: translate(0, 6px); min-width: 220px; }
+  .csn-item:hover .csn-drop, .csn-item:focus-within .csn-drop { transform: none; }
+  .csn-page { padding: 24px 14px 48px; }
+}
+  </style>
+
   <style>
     :root {
       --ink:#121826; --muted:#607089; --line:#dfe7f2; --navy:#152033;
@@ -426,25 +624,6 @@
     }
     html { scroll-behavior:smooth; }
     body { background:var(--research-bg); color:var(--research-ink); }
-    .research-platform-bar {
-      position:sticky; top:0; z-index:var(--z-sticky);
-      display:flex; align-items:center; justify-content:space-between; gap:18px;
-      min-height:52px; padding:8px max(18px,calc((100vw - 1480px)/2));
-      background:#0f1f33; color:#fff; border-bottom:1px solid #27415f;
-    }
-    .research-platform-brand {
-      display:flex; align-items:baseline; gap:9px; color:#fff; text-decoration:none;
-      font-weight:900; letter-spacing:-.01em; white-space:nowrap;
-    }
-    .research-platform-brand span { color:#b8c9dc; font-size:12px; font-weight:700; }
-    .research-platform-nav { display:flex; align-items:center; gap:4px; }
-    .research-platform-nav a {
-      display:inline-flex; align-items:center; min-height:34px; padding:6px 11px;
-      border-radius:7px; color:#cbd8e7; text-decoration:none; font-size:13px; font-weight:800;
-    }
-    .research-platform-nav a:hover { background:#1b3552; color:#fff; }
-    .research-platform-nav a[aria-current="page"] { background:#fff; color:#123c69; }
-    .research-platform-nav a:focus-visible,
     a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
     summary:focus-visible { outline:3px solid #7db4ff; outline-offset:2px; }
     .top { border-bottom:0 !important; }
@@ -461,10 +640,6 @@
     table { font-variant-numeric:tabular-nums; }
     tbody tr { transition:background-color 180ms ease-out; }
     @media (max-width:760px) {
-      .research-platform-bar { position:static; align-items:flex-start; padding:10px; }
-      .research-platform-brand span { display:none; }
-      .research-platform-nav { overflow-x:auto; max-width:68vw; }
-      .research-platform-nav a { white-space:nowrap; }
       .system-nav { overflow-x:auto; }
       .system-nav a { flex:0 0 auto !important; white-space:nowrap; }
     }
@@ -474,35 +649,212 @@
     }
   </style>
 
+  <style id="csn-page-overrides">
+    /* ============================================================
+       mda100 页面专属覆盖层：接入 CSN 统一设计系统（浅色研报风）
+       只覆盖视觉 token / 包装，不动数据组件的语义配色（A股红涨绿跌保持原样）
+       ============================================================ */
+    body { background: var(--paper); color: var(--ink); font-family: var(--sans); }
+
+    /* 页头 / 锚点 tab / 页脚与主容器同宽 */
+    .mda-head, .mda-tabs-inner, .mda-footer, .wrap {
+      width: min(1440px, calc(100vw - 40px)); margin-left: auto; margin-right: auto;
+    }
+    .wrap { position: relative; z-index: 1; margin-top: 0; margin-bottom: 40px; }
+
+    /* 新页头 */
+    .mda-head { position: relative; z-index: 1; padding: 36px 0 4px; }
+    .mda-head .csn-title { margin-bottom: 12px; }
+    .mda-head .csn-lede { max-width: 860px; }
+    .verify {
+      margin-top: 18px; display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 12px; border-radius: 999px;
+      background: var(--gold-soft); color: var(--gold);
+      border: 1px solid rgba(150,112,42,.3);
+      font: 600 12px/1.45 var(--mono); letter-spacing: .02em;
+    }
+
+    /* 页内锚点 sticky tab 条（贴在统一导航下方） */
+    .mda-tabs {
+      position: sticky; top: 59px; z-index: 90;
+      margin: 16px 0 0; padding: 10px 0;
+      background: rgba(246,244,238,.92);
+      -webkit-backdrop-filter: blur(12px) saturate(1.3);
+      backdrop-filter: blur(12px) saturate(1.3);
+      border-bottom: 1px solid var(--hairline);
+    }
+    .mda-tabs-inner { display: flex; gap: 8px; flex-wrap: wrap; }
+    .mda-tabs a {
+      display: inline-flex; align-items: center; min-height: 34px;
+      padding: 6px 14px; border-radius: 999px;
+      border: 1px solid var(--hairline); background: var(--panel);
+      color: var(--ink-2); text-decoration: none; font-size: 13px; font-weight: 650;
+      transition: color .15s ease, border-color .15s ease, background .15s ease;
+    }
+    .mda-tabs a:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+
+    /* 区块统一为卡片 + 衬线标题 + 发丝线 */
+    section {
+      background: var(--panel); border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-card);
+    }
+    section.priority-section { background: var(--panel); border-color: var(--hairline-strong); }
+    section[id] { scroll-margin-top: 132px; }
+    section:not(.rec-review) > h2 {
+      font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--ink);
+      margin: 0 0 14px; padding-bottom: 12px; border-bottom: 1px solid var(--hairline);
+    }
+    .lead { color: var(--ink-2); }
+
+    /* KPI 卡片 */
+    .kpis { margin-top: 22px; }
+    .kpi {
+      background: var(--panel); border: 1px solid var(--hairline);
+      border-radius: var(--radius); box-shadow: var(--shadow-card);
+    }
+    .kpi span { color: var(--muted); }
+    .kpi strong { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--ink); }
+
+    /* 昨日推荐回看：保留正/负语义，换成研报配色 */
+    .rec-review { border-color: var(--hairline); background: var(--accent-soft); }
+    .rec-review.negative { border-left-color: var(--cinnabar); background: var(--cinnabar-soft); }
+    .rec-review.positive { border-left-color: var(--accent); background: var(--accent-soft); }
+    .rec-review h2 { font-family: var(--serif); }
+    .rec-review-head > strong { font-family: var(--mono); }
+
+    /* 发丝线表格：浅色表头 */
+    table { border-color: var(--hairline); }
+    th {
+      background: var(--panel-2); color: var(--ink-2);
+      border-bottom: 1px solid var(--hairline);
+      font-size: 12px; letter-spacing: .02em;
+    }
+    td { border-top-color: var(--hairline); }
+    tr:nth-child(even) td { background: var(--panel-2); }
+    tr:hover td { background: var(--accent-soft); }
+    .candidate-table-wrap { border-color: var(--hairline); background: var(--panel); }
+    code { background: var(--accent-soft); color: var(--accent); }
+
+    /* 筛选面板 */
+    .filter-panel { background: var(--panel-2); border-color: var(--hairline); }
+    .filter-field input { background: var(--panel); border-color: var(--hairline-strong); }
+    .filter-check { background: var(--panel); border-color: var(--hairline-strong); }
+
+    /* 行详情浮层：浮到 sticky 导航之上 */
+    .detail-grid {
+      z-index: 120; background: var(--panel);
+      border-color: var(--hairline-strong); box-shadow: var(--shadow-lift);
+    }
+
+    /* 页脚：数据来源 / 免责声明 */
+    .mda-footer {
+      position: relative; z-index: 1;
+      margin-top: 4px; padding: 18px 0 36px;
+      border-top: 1px solid var(--hairline);
+      color: var(--muted); font-size: 12px; line-height: 1.7;
+      display: flex; flex-direction: column; gap: 4px;
+    }
+
+    @media (max-width: 760px) {
+      .mda-head, .mda-tabs-inner, .mda-footer, .wrap { width: calc(100vw - 28px); }
+      .mda-tabs { overflow-x: auto; }
+      .mda-tabs-inner { flex-wrap: nowrap; }
+      .mda-tabs a { flex: 0 0 auto; white-space: nowrap; }
+      .verify {
+        display: grid;
+        width: 100%;
+        max-width: 100%;
+        gap: 3px;
+        font-size: 11px;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: break-all;
+      }
+    }
+  </style>
+
 </head>
 <body>
-
-  <div class="research-platform-bar" data-design="A_SHARE_RESEARCH_DESIGN_V1">
-    <a class="research-platform-brand" href="https://csnpk.com/">
-      CSNPK 研究台 <span>公开研究视图 · 不含个人持仓</span>
+<script>window.CSN_PAGE_KEY = "mda100";</script>
+<!--
+  CSN 投研 · 统一顶部导航片段
+  用法：原样内联到每个页面 <body> 最前面。
+  当前页标记：给对应的 .csn-item 加 class="csn-item active"，
+  并给下拉里的对应 <a> 加 class="current"。
+  路径基准：各页面位于同级目录（/mda100/、/csn/ 等），故统一用 ../ 相对路径；
+  首页 index.html 位于站点根，用 ./ 路径（首页专用片段见注释末尾）。
+-->
+<nav class="csn-topnav" aria-label="全站导航">
+  <div class="csn-topnav-inner">
+    <a class="csn-brand" href="../index.html">
+      <span class="csn-brand-seal">研</span>
+      <span>
+        <span class="csn-brand-name">CSN 投研</span>
+        <span class="csn-brand-sub" style="display:block">Research Desk</span>
+      </span>
     </a>
-    <nav class="research-platform-nav" aria-label="公开研究系统">
-      <a href="https://csnpk.com/">总览</a>
-      <a href="https://csnpk.com/mda100/" aria-current="page">A股严选</a>
-      <a href="https://csnpk.com/csn/">美股严选</a>
-      <a href="https://csnpk.com/nav/">全部报告</a>
-    </nav>
+    <div class="csn-menu">
+      <div class="csn-item" data-group="stocks">
+        <button type="button" aria-haspopup="true">股票 <span class="csn-caret">▼</span></button>
+        <div class="csn-drop">
+          <a href="../mda100/" data-key="mda100"><b>A股严选</b><small>主线雷达 · MD50 选股 · 全量评分</small></a>
+          <a href="../csn/" data-key="csn"><b>美股严选</b><small>核心池每日筛选 · 交易确认</small></a>
+        </div>
+      </div>
+      <div class="csn-item" data-group="tools">
+        <button type="button" aria-haspopup="true">工具 <span class="csn-caret">▼</span></button>
+        <div class="csn-drop">
+          <a href="../rs-thrust/" data-key="rs-thrust"><b>相对强度加速图</b><small>找正在加速的强势股</small></a>
+          <a href="../us-skew/" data-key="us-skew"><b>期权风险分布图</b><small>看保护需求与风险温度</small></a>
+          <a href="../ai-decision/" data-key="ai-decision"><b>每日市场进度</b><small>A股与美股的回调出清进度</small></a>
+          <a href="../korea-deleveraging/" data-key="korea-deleveraging"><b>韩国去杠杆监控</b><small>总仓位、层次与出清进度</small></a>
+          <a href="../earnings/" data-key="earnings"><b>财报验收台</b><small>预期门槛、实际打勾与股价反馈</small></a>
+        </div>
+      </div>
+      <div class="csn-item" data-group="research">
+        <a href="../nav/">调研</a>
+      </div>
+    </div>
   </div>
+</nav>
+<script>
+/* 当前页高亮：在页面里把 window.CSN_PAGE_KEY 设为 mda100 / csn / rs-thrust /
+   us-skew / ai-decision / korea-deleveraging / earnings / nav 之一（需在本脚本前定义） */
+(function () {
+  var key = window.CSN_PAGE_KEY;
+  if (!key) return;
+  var group = { mda100: "stocks", csn: "stocks", "rs-thrust": "tools", "us-skew": "tools",
+    "ai-decision": "tools", "korea-deleveraging": "tools", earnings: "tools", nav: "research" }[key];
+  document.querySelectorAll(".csn-item").forEach(function (item) {
+    if (item.dataset.group === group) item.classList.add("active");
+  });
+  var link = document.querySelector('.csn-drop a[data-key="' + key + '"]');
+  if (link) link.classList.add("current");
+})();
+</script>
 
-  <header class="top">
-    <h1>A股严选</h1>
-    <p>把市场闸门、主线强弱、候选排序与次日操作纪律放在同一张公开研究页中；不展示任何个人账户或持仓评估。</p>
-    <nav class="nav">
-	      <a href="#mainline">主线雷达</a>
-	      <a href="#select">MD50选股</a>
-	      <a href="#fullscores">全量评分</a>
+  <header class="mda-head csn-rise d1">
+    <div class="csn-kicker">CN A-SHARE SELECTION</div>
+    <h1 class="csn-title">A股严选</h1>
+    <p class="csn-lede">把市场闸门、主线强弱、候选排序与次日操作纪律放在同一张公开研究页中；不展示任何个人账户或持仓评估。</p>
+    <div class="verify">
+      <span>二次确认</span>
+      <strong>DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH</strong>
+      <span>Report 2026-07-24 = Index 2026-07-24</span>
+    </div>
+  </header>
+
+  <nav class="mda-tabs csn-rise d2" aria-label="页内锚点导航">
+    <div class="mda-tabs-inner">
+      <a href="#mainline">主线雷达</a>
+      <a href="#select">MD50选股</a>
+      <a href="#fullscores">全量评分</a>
       <a href="#qveris">新股票初评</a>
       <a href="#algorithm">当前算法说明</a>
-    </nav>
-    <div class="verify">二次确认 DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH · Report 2026-07-24 = Index 2026-07-24</div>
-  </header>
+    </div>
+  </nav>
   <main class="wrap">
-    <div class="kpis"><div class="kpi"><span>md50核心池</span><strong>50/50</strong></div><div class="kpi"><span>行情覆盖</span><strong>100.0%</strong></div><div class="kpi"><span>上涨/下跌</span><strong>19/31</strong></div><div class="kpi"><span>平均分</span><strong>18.4</strong></div><div class="kpi"><span>95分+</span><strong>3</strong></div><div class="kpi"><span>90分+</span><strong>6</strong></div></div>
+    <div class="kpis csn-rise d3"><div class="kpi"><span>md50核心池</span><strong>50/50</strong></div><div class="kpi"><span>行情覆盖</span><strong>100.0%</strong></div><div class="kpi"><span>上涨/下跌</span><strong>19/31</strong></div><div class="kpi"><span>平均分</span><strong>18.4</strong></div><div class="kpi"><span>95分+</span><strong>3</strong></div><div class="kpi"><span>90分+</span><strong>6</strong></div></div>
     <section class="rec-review muted-review"><strong>昨日推荐回看</strong><span>2026-07-23 推荐未在 2026-07-24 复盘表中匹配到表现</span></section>
 
     <section id="mainline" class="priority-section">
@@ -801,6 +1153,11 @@
     </section>
 
   </main>
+  <footer class="mda-footer">
+    <span>公开研究视图 · 不含个人持仓 ｜ 数据日期 2026-07-23 ｜ 新闻扫描 news_scan_20260723_163500.json（2026-07-23T16:35:00）</span>
+    <span>行情：Futu OpenD 已核验；行业资金：东方财富延迟行业资金快照；ETF订单流：Futu OpenD。订单流均不等于外部净增资金或ETF净申购。</span>
+    <span>仅供研究参考，不构成投资建议。</span>
+  </footer>
   <script>
     (() => {
       const normalize = (value) => String(value || "").trim().toLowerCase();
