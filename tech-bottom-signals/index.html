@@ -137,6 +137,18 @@
     .timeline-scroll-tip{display:none;margin:8px 2px 0;color:var(--muted);font-size:11px}
     .timeline-audit{display:grid;grid-template-columns:150px 1fr;gap:24px;margin-top:16px;padding:20px 22px;background:var(--amber-soft);border-radius:var(--radius)}
     .timeline-audit b{color:var(--amber)}.timeline-audit p{margin:0;color:#5f5135;font-size:13px}
+    .risk-overview{display:grid;grid-template-columns:.78fr 1.22fr;gap:24px;margin-bottom:18px}
+    .risk-summary{padding:28px;background:var(--red-soft);border:1px solid #f0c7cb;border-radius:var(--radius)}
+    .risk-summary small{display:block;color:var(--red);font-weight:850}.risk-summary strong{display:block;margin:9px 0 12px;color:var(--navy);font-size:27px;line-height:1.25}
+    .risk-summary p{margin:0;color:#68464a;font-size:13px}
+    .risk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .risk-card{padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+    .risk-card-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.risk-card h3{margin:0;color:var(--navy);font-size:16px}
+    .risk-card strong{display:block;margin:10px 0 5px;font-size:22px;line-height:1.25}.risk-card p{margin:0;color:var(--muted);font-size:12px}
+    .risk-logic{display:grid;grid-template-columns:repeat(3,1fr);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .risk-rule{padding:22px;border-right:1px solid var(--line)}.risk-rule:last-child{border-right:0}.risk-rule b{display:block;margin-bottom:7px;color:var(--blue)}.risk-rule p{margin:0;color:#4d596c;font-size:13px}
+    .verify-note{display:grid;grid-template-columns:150px 1fr;gap:24px;margin-top:16px;padding:19px 22px;background:#edf2f8;border-radius:var(--radius)}
+    .verify-note b{color:var(--navy)}.verify-note p{margin:0;color:#526074;font-size:13px}
     .fundamental{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px}
     .fundamental-thesis{font-size:21px;line-height:1.55;letter-spacing:-.015em}
     .fundamental-thesis strong{color:var(--blue)}
@@ -162,11 +174,12 @@
     footer p{max-width:76ch;margin:0}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
     @media(max-width:900px){
-      .hero,.method-grid,.event-summary,.korea-summary,.ladder,.fundamental,.decision-final{grid-template-columns:1fr}.hero{gap:30px;padding:50px 0 42px}.decision-box{max-width:520px}
+      .hero,.method-grid,.event-summary,.korea-summary,.ladder,.fundamental,.decision-final,.risk-overview{grid-template-columns:1fr}.hero{gap:30px;padding:50px 0 42px}.decision-box{max-width:520px}
       .stamp-row{grid-template-columns:1fr 1fr}.stamp:nth-child(2){border-right:0}.stamp:nth-child(-n+2){border-bottom:1px solid var(--line)}
       .section-head{grid-template-columns:1fr;gap:7px}.rule-band{grid-template-columns:1fr}.rule{border-right:0;border-bottom:1px solid var(--line)}.rule:last-child{border-bottom:0}
       .matrix-row{grid-template-columns:125px 1fr 105px}.matrix-row .matrix-read{grid-column:2/-1}.matrix-row.head{display:none}
-      .earnings-head{display:none}.earnings-row{grid-template-columns:95px 1fr 90px}.earnings-row p:last-of-type{grid-column:2/-1}.event-cases,.level-notes,.timeline-summary{grid-template-columns:1fr}
+      .earnings-head{display:none}.earnings-row{grid-template-columns:95px 1fr 90px}.earnings-row p:last-of-type{grid-column:2/-1}.event-cases,.level-notes,.timeline-summary,.risk-logic{grid-template-columns:1fr}
+      .risk-rule{border-right:0;border-bottom:1px solid var(--line)}.risk-rule:last-child{border-bottom:0}
       .audit-list{grid-template-columns:1fr}.price-map{min-height:170px}
     }
     @media(max-width:620px){
@@ -176,7 +189,8 @@
       .method-item{grid-template-columns:1fr;gap:4px}.snapshot-item{padding:18px}.snapshot-item strong{font-size:18px}
       .event-logic{grid-template-columns:1fr}.event-logic div{border-right:0;border-bottom:1px solid var(--line)}.event-logic div:last-child{border-bottom:0}.earnings-row{grid-template-columns:1fr;gap:7px}.earnings-row p:last-of-type{grid-column:auto}.check{width:max-content}
       .gate-row{grid-template-columns:38px 1fr 80px;gap:10px;padding:17px}.gate-row p{grid-column:2/-1}.ladder{padding:25px 20px}.price-map{gap:3px}.price-stop strong{font-size:20px}
-      .journey-row,.fact,.timeline-audit{grid-template-columns:1fr;gap:5px}.decision-main{padding:27px}.decision-main h3{font-size:29px}.action-list{padding:14px 22px}
+      .journey-row,.fact,.timeline-audit,.verify-note{grid-template-columns:1fr;gap:5px}.decision-main{padding:27px}.decision-main h3{font-size:29px}.action-list{padding:14px 22px}
+      .risk-grid{grid-template-columns:1fr}
       .timeline-shell svg{width:760px;min-width:760px;height:435px;aspect-ratio:auto}.timeline-scroll-tip{display:block}
       footer{display:block}footer p+span{display:block;margin-top:12px}
     }
@@ -187,13 +201,13 @@
   <div class="shell">
     <header class="masthead">
       <div class="brand"><span class="brand-mark">TS</span><span>TECH SELLOFF MONITOR</span></div>
-      <div class="mast-meta"><span><b>数据截点</b> 2026-07-20 收盘</span><span><b>审计状态</b> 多源复核</span></div>
+      <div class="mast-meta"><span><b>价格截点</b> 2026-07-20 收盘</span><span><b>外围刷新</b> 2026-07-24</span></div>
     </header>
   </div>
 
   <nav class="jump" aria-label="页面目录">
     <div class="jump-inner">
-      <a href="#framework">判定框架</a><a href="#evidence">证据矩阵</a><a href="#method">指标选择</a><a href="#earnings">财报触发</a><a href="#korea">风险修正</a><a href="#path">价格路径</a><a href="#timing">历史时间</a><a href="#fundamental">产业验证</a><a href="#decision">行动结论</a>
+      <a href="#framework">判定框架</a><a href="#evidence">证据矩阵</a><a href="#method">指标选择</a><a href="#earnings">财报触发</a><a href="#korea">风险修正</a><a href="#external-risk">事件干扰</a><a href="#path">价格路径</a><a href="#timing">历史时间</a><a href="#fundamental">产业验证</a><a href="#decision">行动结论</a>
     </div>
   </nav>
 
@@ -347,6 +361,49 @@
       </div>
     </section>
 
+    <section id="external-risk">
+      <div class="section-head">
+        <div class="section-label">EVENT RISK OVERLAY</div>
+        <div><h2>CPI可以改善预期，但战争与油价可能覆盖第一反应</h2><p class="section-intro">这一层只负责调整仓位上限、确认速度和隔夜风险，不改写历史回撤分位、时间样本或原有价格失效线。事件标题不能直接生成买点。</p></div>
+      </div>
+      <div class="risk-overview">
+        <article class="risk-summary">
+          <small>综合外围门控｜红色</small>
+          <strong>候选底可以观察，<br>暂不升级确信底</strong>
+          <p>战争和能源价格正在抬高通胀与跳空风险；VIX尚未进入极端恐慌区，却在单日明显上升。当前更像“事件风险压制风险预算”，不是新的历史回撤档位。</p>
+        </article>
+        <div class="risk-grid" aria-label="外围风险核验快照">
+          <article class="risk-card">
+            <div class="risk-card-head"><h3>美伊冲突</h3><span class="tag red">升级</span></div>
+            <strong>连续第13夜空袭</strong>
+            <p>截至7月23日，AP援引美军说法报道新一轮打击及航运冲突。未找到同日完整CENTCOM原文，故按权威媒体核验，不冒充官方原文。</p>
+          </article>
+          <article class="risk-card">
+            <div class="risk-card-head"><h3>布伦特原油</h3><span class="tag red">冲击</span></div>
+            <strong>约100美元｜单日&gt;6%</strong>
+            <p>AP截至7月23日的市场报道。EIA官方日度数据发布更慢，页面将即时行情与官方周度/日度序列分开标注。</p>
+          </article>
+          <article class="risk-card">
+            <div class="risk-card-head"><h3>VIX</h3><span class="tag amber">升温</span></div>
+            <strong>18.70｜+12.38%</strong>
+            <p>Cboe截至7月23日。绝对水平仍低于20附近，但单日上升说明保护需求增强，不能把它解释为已完成恐慌出清。</p>
+          </article>
+          <article class="risk-card">
+            <div class="risk-card-head"><h3>下一次CPI</h3><span class="tag blue">已核验</span></div>
+            <strong>8月12日 08:30 ET</strong>
+            <p>BLS官方日程；对应7月数据，距7月24日还有19个自然日。公布前不追盘前涨幅，不新增确信仓。</p>
+          </article>
+        </div>
+      </div>
+      <div class="risk-logic" aria-label="CPI与外围风险组合规则">
+        <article class="risk-rule"><b>CPI双低＋油价回落</b><p>等开盘30—60分钟；守住前收或重新站回开盘价/VWAP后，最多先做1/3试仓。仍需SOXX价格门通过。</p></article>
+        <article class="risk-rule"><b>CPI双低＋战争/油价继续升级</b><p>宏观利好被能源通胀与跳空风险部分抵消，不追盘前；候选底不自动升级，隔夜仓位继续受限。</p></article>
+        <article class="risk-rule"><b>CPI双高＋油价继续上冲</b><p>风险共振，优先降低高弹性仓与杠杆；不接第一波下跌，重新站回前收/开盘价后再评估。</p></article>
+      </div>
+      <div class="verify-note"><b>解除红色门控</b><p>至少需要看到冲突降级、油价连续回落、VIX不再扩张，并且SOXX重新通过550—555与579—584价格门。任何单一新闻都不够；富途原有回撤提醒不删除，也不会因为CPI或战争自动下单。</p></div>
+      <div class="verify-note"><b>行情核验边界</b><p>2026年7月24日检查时，本机OpenD端口未连接，SOXX最新完成K线未完成实时核验，因此本页价格与时间轴仍保留2026年7月20日审计截点；外围事件层已刷新至7月23—24日。</p></div>
+    </section>
+
     <section id="path">
       <div class="section-head">
         <div class="section-label">PRICE PATH</div>
@@ -456,6 +513,7 @@
       <div class="decision-final">
         <div class="decision-main"><div class="statusline">CURRENT STANCE · WAIT</div><h3>等待确认，<br>不追首轮反弹</h3><p>498.54是7月17日实际低点防守门；550—555是前支撑转阻力的初步修复区；579—584是50%修复位、动态MA20与前平台共振确认区。中期底最终由“价格宽度＋盈利预期”共同决定。</p></div>
         <div class="action-list">
+          <div class="action"><b>风险上限</b><p>战争与油价门控为红色时，不新增确信仓；即使CPI双低，也先等开盘后价格确认。</p></div>
           <div class="action"><b>提高关注</b><p>SOXX 完成五日不创新低，且对利空表现钝化。</p></div>
           <div class="action"><b>小仓试探</b><p>收复550—555前支撑转阻力区并保持，硬科技宽度明显改善。</p></div>
           <div class="action"><b>升级确信</b><p>站稳579—584共振区（50%修复＋MA20＋前平台），宽度与盈利轴同时通过。</p></div>
@@ -471,6 +529,11 @@
           <li><a href="https://freesis.kofia.or.kr/stat/FreeSIS.do?parentDivId=MSIS10000000000000&amp;serviceId=STATSCU0100000060">KOFIA FreeSIS：韩国信用融资与投资者存管金</a></li>
           <li><a href="https://www.bok.or.kr/eng/bbs/E0000634/view.do?depth=400069&amp;menuNo=400069&amp;nttId=11062944&amp;oldMenuNo=400007&amp;programType=newsDataEng&amp;relate=Y">韩国央行：2026年7月货币政策决定</a></li>
           <li><a href="https://www.cboe.com/tradable-products/vix/term-structure">Cboe：VIX 期限结构</a></li>
+          <li><a href="https://www.cboe.com/tradable-products/vix">Cboe：VIX现货18.70及2026-07-23日变动</a></li>
+          <li><a href="https://www.bls.gov/schedule/news_release/cpi.htm">BLS：CPI官方发布日程，下一次为2026-08-12 08:30 ET</a></li>
+          <li><a href="https://www.eia.gov/petroleum/supply/weekly/index.php">EIA：Weekly Petroleum Status Report</a></li>
+          <li><a href="https://apnews.com/article/iran-us-hormuz-strait-war-60d46bf8c83c43a8f2268b7b87627c55">AP：2026-07-23美伊冲突、航运与布伦特油价报道</a></li>
+          <li><a href="https://www.un.org/en/node/245508">联合国：美伊冲突、霍尔木兹航运与能源风险</a></li>
           <li><a href="https://www.federalreserve.gov/RELEASES/H15/default.htm">美联储 H.15：名义与实际国债收益率</a></li>
           <li><a href="https://www.federalreserve.gov/monetarypolicy/2026-07-mpr-part1.htm">美联储：2026年7月货币政策报告</a></li>
           <li><a href="https://www.semiconductors.org/global-semiconductor-sales-increase-9-2-month-to-month-in-may/">SIA / WSTS：2026年5月全球半导体销售</a></li>
@@ -485,13 +548,14 @@
           <li><a href="https://www.marketbeat.com/stocks/NASDAQ/SOXX/chart/">SOXX历史行情：2026年7月17日盘中低点与成交量</a></li>
           <li><a href="./soxx_drawdown_historical_summary.json">SOXX历史回撤统计底稿：Futu OpenD核验快照（截至2026年7月15日）</a></li>
           <li><a href="./soxx_drawdown_timeline_20260720.json">本轮时间图审计底稿：当前档位、收盘价口径与样本边界</a></li>
+          <li><a href="./event_risk_overlay_20260724.json">事件干扰层审计底稿：CPI、战争、油价、VIX与核验边界</a></li>
         </ul>
       </details>
     </section>
 
     <footer>
-      <p>研究用途，不构成投资建议。Futu OpenD 用于 2026-07-20 完整收盘与技术结构核验；韩国杠杆统计与市场价格日期不同，已分开标注。历史 ZigZag 与回撤分位存在回看偏差，未作为实时买点。</p>
-      <span>FINAL AUDITED · 2026.07.21</span>
+      <p>研究用途，不构成投资建议。Futu OpenD 用于 2026-07-20 完整收盘与技术结构核验；2026-07-24复核时OpenD未连接，因此没有把旧价格冒充实时行情。外围事件层使用BLS、Cboe、EIA、联合国及AP来源，历史 ZigZag 与回撤分位仍只作回看研究。</p>
+      <span>EVENT OVERLAY · 2026.07.24</span>
     </footer>
   </main>
 </body>

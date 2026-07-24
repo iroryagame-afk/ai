@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-07-24T00:00:00+08:00",
+  "scope": "tech-bottom-signals event risk overlay",
+  "overall_gate": "RED",
+  "price_layer": {
+    "status": "NOT_REFRESHED",
+    "reason": "Futu OpenD port 127.0.0.1:11111 was not connected on 2026-07-24",
+    "last_audited_close_date": "2026-07-20"
+  },
+  "cpi": {
+    "status": "VERIFIED_BLS_OFFICIAL",
+    "next_release": "2026-08-12 08:30 ET",
+    "reference_month": "2026-07",
+    "source": "https://www.bls.gov/schedule/news_release/cpi.htm"
+  },
+  "geopolitics": {
+    "status": "VERIFIED_SECONDARY_SOURCE",
+    "level": "RED",
+    "as_of": "2026-07-23",
+    "fact": "AP reported the thirteenth night of U.S. strikes and escalating shipping conflict",
+    "boundary": "No matching complete July 23 CENTCOM original release was found",
+    "source": "https://apnews.com/article/iran-us-hormuz-strait-war-60d46bf8c83c43a8f2268b7b87627c55"
+  },
+  "brent": {
+    "status": "VERIFIED_SECONDARY_MARKET_REPORT",
+    "level": "RED",
+    "as_of": "2026-07-23",
+    "value": "about USD 100/bbl",
+    "daily_change": "more than +6%",
+    "source": "https://apnews.com/article/iran-us-hormuz-strait-war-60d46bf8c83c43a8f2268b7b87627c55",
+    "official_slow_source": "https://www.eia.gov/petroleum/supply/weekly/index.php"
+  },
+  "vix": {
+    "status": "VERIFIED_CBOE",
+    "level": "AMBER",
+    "as_of": "2026-07-23",
+    "spot": 18.7,
+    "daily_change_pct": 12.38,
+    "source": "https://www.cboe.com/tradable-products/vix"
+  },
+  "decision_effect": {
+    "historical_drawdown_stats_changed": false,
+    "existing_futu_reminders_changed": false,
+    "automatic_ordering": false,
+    "stance": "Keep candidate-bottom status; cap risk budget until event risk eases and SOXX price gates are reverified"
+  }
+}
