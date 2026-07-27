@@ -18,7 +18,7 @@
   --panel-2: #faf8f2;        /* 次级面板 */
   --ink: #1f2430;            /* 主文字 */
   --ink-2: #494f5e;          /* 次文字 */
-  --muted: #8b90a0;          /* 弱提示 */
+  --muted: #6f7587;          /* 弱提示 */
   --hairline: #e3ded1;       /* 发丝线 */
   --hairline-strong: #cfc8b6;
 
@@ -28,12 +28,14 @@
   --cinnabar: #b5452e;       /* 朱砂红（点睛/活跃态） */
   --cinnabar-soft: #f9ece7;
   --gold: #96702a;           /* 印章金（徽标/标签） */
+  --gold-deep: #856327;      /* 印章金加深（小字场景） */
   --gold-soft: #f5eeda;
   --jade: #2f6b4f;           /* 青玉（正向/确认） */
   --jade-soft: #e9f2ec;
 
   --radius: 10px;
   --radius-lg: 14px;
+  --nav-h: 59px;             /* 吸顶导航高度，sticky 工具条统一参照 */
   --shadow-card: 0 1px 2px rgba(31,36,48,.05), 0 8px 24px rgba(31,36,48,.06);
   --shadow-lift: 0 2px 4px rgba(31,36,48,.06), 0 16px 40px rgba(31,36,48,.10);
 
@@ -67,6 +69,8 @@ body::before {
 
 a { color: var(--accent); }
 a:hover { color: #0f2c49; }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 
 ::selection { background: rgba(181,69,46,.18); }
 
@@ -112,7 +116,7 @@ a:hover { color: #0f2c49; }
 
 .csn-drop {
   position: absolute; top: calc(100% + 1px); left: 50%; transform: translate(-50%, 6px);
-  width: 280px; min-width: 280px; padding: 8px;
+  min-width: 250px; padding: 8px;
   background: var(--panel); border: 1px solid var(--hairline); border-radius: 12px;
   box-shadow: var(--shadow-lift);
   opacity: 0; visibility: hidden; pointer-events: none;
@@ -122,11 +126,11 @@ a:hover { color: #0f2c49; }
   opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0);
 }
 .csn-drop a {
-  display: block; min-height: 58px; padding: 9px 11px; border-radius: 8px; text-decoration: none; color: var(--ink);
+  display: block; padding: 9px 11px; border-radius: 8px; text-decoration: none; color: var(--ink);
 }
 .csn-drop a:hover { background: var(--panel-2); }
-.csn-drop a b { display: block; font-size: 13.5px; font-weight: 650; }
-.csn-drop a small { display: block; font-size: 11.5px; color: var(--muted); margin-top: 2px; line-height: 1.45; white-space: nowrap; }
+.csn-drop a b { display: block; font-size: 13.5px; font-weight: 600; }
+.csn-drop a small { display: block; font-size: 11.5px; color: var(--muted); margin-top: 2px; line-height: 1.45; }
 .csn-drop a.current b::after { content: "· 当前"; color: var(--cinnabar); font-size: 11px; margin-left: 4px; }
 
 /* ============ 页面骨架 ============ */
@@ -135,9 +139,9 @@ a:hover { color: #0f2c49; }
 .csn-kicker {
   display: inline-flex; align-items: center; gap: 8px;
   font: 600 11px/1 var(--mono); letter-spacing: .24em; text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-deep);
 }
-.csn-kicker::before { content: ""; width: 22px; height: 1px; background: var(--gold); }
+.csn-kicker::before { content: ""; width: 22px; height: 1px; background: var(--gold-deep); }
 
 .csn-title {
   font-family: var(--serif); font-weight: 700;
@@ -172,7 +176,7 @@ a:hover { color: #0f2c49; }
   background: var(--accent-soft); color: var(--accent);
   border: 1px solid transparent;
 }
-.csn-tag.gold { background: var(--gold-soft); color: var(--gold); }
+.csn-tag.gold { background: var(--gold-soft); color: var(--gold-deep); }
 .csn-tag.red  { background: var(--cinnabar-soft); color: var(--cinnabar); }
 .csn-tag.jade { background: var(--jade-soft); color: var(--jade); }
 /* 语义规则：股票代码/英文代号 → 蓝；行业/产业链 → 金；宏观主题 → 朱砂；正向确认 → 青玉 */
@@ -197,7 +201,7 @@ a:hover { color: #0f2c49; }
   .csn-menu { min-width: 0; overflow-x: auto; overflow-y: hidden; }
   .csn-brand-name { font-size: 15px; }
   .csn-item > a, .csn-item > button { padding: 0 10px; font-size: 13px; }
-  .csn-drop { left: auto; right: 0; width: min(280px, calc(100vw - 24px)); min-width: 0; transform: translate(0, 6px); }
+  .csn-drop { left: auto; right: 0; transform: translate(0, 6px); min-width: 220px; }
   .csn-item:hover .csn-drop, .csn-item:focus-within .csn-drop { transform: none; }
   .csn-page { padding: 24px 14px 48px; }
 }
@@ -213,12 +217,12 @@ a:hover { color: #0f2c49; }
 }
 .head-stats strong {
   font-family: var(--mono); font-variant-numeric: tabular-nums;
-  color: var(--gold); font-size: 20px; font-weight: 700;
+  color: var(--gold-deep); font-size: 20px; font-weight: 700;
 }
 
 /* 搜索 + 筛选工具条（吸顶在统一导航之下） */
 .tools {
-  position: sticky; top: 59px; z-index: 50;
+  position: sticky; top: var(--nav-h); z-index: 50;
   display: grid; gap: 10px; padding: 12px 0 10px; margin-top: 18px;
   background: rgba(246,244,238,.92);
   -webkit-backdrop-filter: blur(10px) saturate(1.3);
@@ -271,7 +275,7 @@ a:hover { color: #0f2c49; }
 .cat-block + .cat-block { margin-top: 18px; }
 .cat-head {
   margin: 0 0 8px; font-size: 12px; font-weight: 600;
-  letter-spacing: .14em; color: var(--gold);
+  letter-spacing: .14em; color: var(--gold-deep);
 }
 
 /* 报告白卡片 */
@@ -293,7 +297,7 @@ a:hover { color: #0f2c49; }
 .report-date {
   padding-top: 3px;
   font-family: var(--mono); font-variant-numeric: tabular-nums;
-  font-size: 13px; font-weight: 600; color: var(--gold); white-space: nowrap;
+  font-size: 13px; font-weight: 600; color: var(--gold-deep); white-space: nowrap;
 }
 .new-badge {
   display: inline-block; margin-left: 7px; padding: 2px 6px;
@@ -307,11 +311,15 @@ a:hover { color: #0f2c49; }
 }
 .report-title a { color: var(--ink); text-decoration: none; }
 .report-title a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+/* 整卡可点：标题链接的 ::after 铺满卡片；标签层保持在其上 */
+.report-title a.stretched-link::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; border-radius: var(--radius-lg);
+}
+.report-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; position: relative; z-index: 2; }
 .report-cat {
   margin-top: 4px; font-size: 12px; font-weight: 600;
   letter-spacing: .06em; color: var(--accent);
 }
-.report-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
 .report-arrow {
   align-self: center; color: var(--hairline-strong);
   font-size: 16px; transition: color .15s ease, transform .15s ease;
@@ -332,7 +340,6 @@ footer {
 }
 
 @media (max-width: 680px) {
-  .tools { top: 53px; }
   .report-card { grid-template-columns: 1fr; gap: 8px; padding: 15px; }
   .report-date { padding-top: 0; }
   .report-arrow { display: none; }
@@ -340,15 +347,6 @@ footer {
   </style>
 </head>
 <body>
-<script>window.CSN_PAGE_KEY = "nav";</script>
-<!--
-  CSN 投研 · 统一顶部导航片段
-  用法：原样内联到每个页面 <body> 最前面。
-  当前页标记：给对应的 .csn-item 加 class="csn-item active"，
-  并给下拉里的对应 <a> 加 class="current"。
-  路径基准：各页面位于同级目录（/mda100/、/csn/ 等），故统一用 ../ 相对路径；
-  首页 index.html 位于站点根，用 ./ 路径（首页专用片段见注释末尾）。
--->
 <nav class="csn-topnav" aria-label="全站导航">
   <div class="csn-topnav-inner">
     <a class="csn-brand" href="../index.html">
@@ -384,21 +382,6 @@ footer {
     </div>
   </div>
 </nav>
-<script>
-/* 当前页高亮：在页面里把 window.CSN_PAGE_KEY 设为 mda100 / csn / rs-thrust /
-   rotation / us-skew / ai-decision / korea-deleveraging / nav 之一（需在本脚本前定义） */
-(function () {
-  var key = window.CSN_PAGE_KEY;
-  if (!key) return;
-  var group = { mda100: "stocks", csn: "stocks", "rs-thrust": "tools", rotation: "tools", "us-skew": "tools",
-    "ai-decision": "tools", "korea-deleveraging": "tools", nav: "research" }[key];
-  document.querySelectorAll(".csn-item").forEach(function (item) {
-    if (item.dataset.group === group) item.classList.add("active");
-  });
-  var link = document.querySelector('.csn-drop a[data-key="' + key + '"]');
-  if (link) link.classList.add("current");
-})();
-</script>
 
 <main class="csn-page">
   <header class="page-head csn-rise d1">
@@ -411,9 +394,9 @@ footer {
   <section class="tools csn-rise d2" aria-label="报告筛选">
     <input id="searchInput" type="search" placeholder="搜索报告、公司或标签……" autocomplete="off" />
     <div class="filters" aria-label="报告分类">
-      <button class="filter active" type="button" data-category="全部">全部</button>
-      <button class="filter" type="button" data-category="行业研究">行业研究</button>
-      <button class="filter" type="button" data-category="主题策略">主题策略</button>
+      <button class="filter active" type="button" data-category="全部" aria-pressed="true">全部</button>
+      <button class="filter" type="button" data-category="主题策略" aria-pressed="false">主题策略</button>
+      <button class="filter" type="button" data-category="行业研究" aria-pressed="false">行业研究</button>
     </div>
   </section>
 
@@ -473,7 +456,7 @@ footer {
       <article class="report-card">
         <div class="report-date">${escapeHtml(entry.date)}${badge}</div>
         <div class="report-main">
-          <h3 class="report-title"><a href="${escapeHtml(entry.url)}" target="_blank" rel="noopener">${escapeHtml(entry.title)}</a></h3>
+          <h3 class="report-title"><a class="stretched-link" href="${escapeHtml(entry.url)}" target="_blank" rel="noopener">${escapeHtml(entry.title)}</a></h3>
           <div class="report-cat">${escapeHtml(entry.category)}</div>
           <div class="report-tags">${tags}</div>
         </div>
@@ -534,10 +517,15 @@ footer {
   searchInput.addEventListener("input", render);
   filters.forEach(button => button.addEventListener("click", () => {
     activeCategory = button.dataset.category;
-    filters.forEach(item => item.classList.toggle("active", item === button));
+    filters.forEach(item => {
+      const isActive = item === button;
+      item.classList.toggle("active", isActive);
+      item.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
     render();
   }));
   loadReports();
 </script>
+
 </body>
 </html>

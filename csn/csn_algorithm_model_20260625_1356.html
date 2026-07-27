@@ -2,11 +2,16 @@
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>美股严选算法说明 2026-06-25 13:56</title>
 <style>
-:root{--bg:#f4f8f7;--panel:#fff;--text:#142028;--muted:#667985;--green:#0f766e;--line:#d7e4e1;--soft:#e7f7f3}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}main{max-width:980px;margin:0 auto;padding:24px 16px 56px}article{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px;box-shadow:0 16px 40px rgba(20,32,40,.08)}h1{margin:0 0 14px;font-size:30px;line-height:1.25}h2{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);font-size:22px}h3{margin-top:22px;font-size:18px}p,li{font-size:15px}blockquote{margin:18px 0;padding:12px 16px;border-left:5px solid var(--green);background:var(--soft);border-radius:8px}code{padding:2px 5px;border-radius:5px;background:#edf2f1;font-family:"SFMono-Regular",Consolas,monospace;font-size:.92em}pre{overflow:auto;padding:14px;border-radius:10px;background:#132026;color:#e8fffa}pre code{padding:0;background:transparent;color:inherit}table{width:100%;border-collapse:collapse;margin:14px 0 20px;background:#fff}th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;font-size:14px}th{background:#eaf3f1;text-align:left}.footer{margin-top:22px;color:var(--muted);font-size:13px}@media(max-width:640px){article{padding:18px 14px}h1{font-size:24px}h2{font-size:19px}th,td{font-size:13px}}
-</style></head><body><main><article><h1>美股严选：当前算法模型说明（2026-06-25 13:56）</h1>
-<p>生成时间：2026-06-25 13:56  </p>
-<p>对应脚本：<code>scripts/generate_ai_chain_overnight_html.py</code>  </p>
-<p>线上页面：<code>https://csnpk.com/csn/</code></p>
+:root{--bg:#f4f8f7;--panel:#fff;--text:#142028;--muted:#6f7587;--green:#0f766e;--line:#d7e4e1;--soft:#e7f7f3;--cinnabar:#b5452e}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}a{color:var(--green)}:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:4px}.topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(12px) saturate(1.3);backdrop-filter:blur(12px) saturate(1.3);border-bottom:1px solid var(--line)}.topbar-inner{max-width:980px;margin:0 auto;padding:0 16px;min-height:44px;display:flex;align-items:center;gap:12px}.topbar a{text-decoration:none}.topbar .back{color:var(--green);font-size:13px;font-weight:600}.topbar .back:hover{text-decoration:underline;text-underline-offset:3px}.topbar .brand{margin-left:auto;color:var(--muted);font-size:12px;letter-spacing:.08em}main{max-width:980px;margin:0 auto;padding:24px 16px 56px}article{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:26px;box-shadow:0 16px 40px rgba(20,32,40,.08)}h1{margin:0 0 14px;font-size:30px;line-height:1.25}h2{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);font-size:22px}h3{margin-top:22px;font-size:18px}p,li{font-size:15px}.meta{color:var(--muted);font-size:12px}blockquote{margin:18px 0;padding:12px 16px;border-left:5px solid var(--green);background:var(--soft);border-radius:10px}code{padding:2px 5px;border-radius:5px;background:var(--soft);font-family:"SFMono-Regular",Consolas,monospace;font-size:.92em}pre{overflow:auto;padding:14px;border-radius:10px;background:#132026;color:#e8fffa}pre code{padding:0;background:transparent;color:inherit}table{width:100%;border-collapse:collapse;margin:14px 0 20px;background:#fff}th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;font-size:14px}th{background:var(--soft);text-align:left}.table-scroll{overflow-x:auto}.table-scroll table{min-width:760px}.table-scroll th:nth-child(n+2):nth-child(-n+8),.table-scroll td:nth-child(n+2):nth-child(-n+8){text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}.deduct-table th:nth-child(3),.deduct-table td:nth-child(3){text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}.neg{color:var(--cinnabar);font-weight:600}.footer{margin-top:22px;color:var(--muted);font-size:13px}@media(max-width:640px){article{padding:18px 14px}h1{font-size:24px}h2{font-size:19px}th,td{font-size:13px}}
+</style></head><body>
+<nav class="topbar" aria-label="返回导航">
+  <div class="topbar-inner">
+    <a class="back" href="./">← 返回美股严选</a>
+    <a class="brand" href="https://csnpk.com/">CSN 投研</a>
+  </div>
+</nav>
+<main><article><h1>美股严选：当前算法模型说明（2026-06-25 13:56）</h1>
+<p class="meta">生成时间：2026-06-25 13:56 ｜ 对应脚本：<code>scripts/generate_ai_chain_overnight_html.py</code> ｜ 线上页面：<code>https://csnpk.com/csn/</code></p>
 <blockquote><p>当前版本已移除 A6 算法。页面不再计算 A6 分、不再用 A6 参与模型评分、不再显示 A6 筛选按钮或 A6 明细。</p></blockquote>
 <h2>1. 股票池范围</h2>
 <p>当前页面只使用 Excel 附件中的 <code>核心精选</code> 去重股票池。</p>
@@ -121,6 +126,7 @@
 <h2>10. 模型权重</h2>
 <p>最终分数：</p>
 <pre><code>模型分 = clamp(正向分 - min(风险扣分, 模型风险上限), 0, 100)</code></pre>
+<div class="table-scroll">
 <table>
 <thead><tr><th>模型</th><th>阶段</th><th>买点</th><th>RS</th><th>产业</th><th>群里重点</th><th>波动</th><th>风险上限</th><th>适用场景</th></tr></thead><tbody>
 <tr><td>主升优先</td><td>30</td><td>25</td><td>20</td><td>10</td><td>5</td><td>0</td><td>10</td><td>默认排序，找二阶段趋势好、买点不差的票</td></tr>
@@ -128,20 +134,21 @@
 <tr><td>核心仓</td><td>25</td><td>10</td><td>20</td><td>30</td><td>5</td><td>0</td><td>10</td><td>找产业地位更硬、适合核心跟踪的票</td></tr>
 <tr><td>进攻弹性</td><td>15</td><td>30</td><td>30</td><td>10</td><td>5</td><td>10</td><td>15</td><td>数据仍计算，主界面隐藏</td></tr>
 </tbody></table>
+</div>
 <h2>11. 风险扣分</h2>
-<table>
+<table class="deduct-table">
 <thead><tr><th>风险项</th><th>条件</th><th>扣分</th></tr></thead><tbody>
-<tr><td>扩展10危险</td><td>扩展10 &gt;= 7</td><td>-6</td></tr>
-<tr><td>扩展10偏高</td><td>扩展10 &gt;= 4</td><td>-3</td></tr>
-<tr><td>扩展50危险</td><td>扩展50 &gt;= 8</td><td>-6</td></tr>
-<tr><td>扩展50偏高</td><td>扩展50 &gt;= 5</td><td>-3</td></tr>
-<tr><td>九转衰竭</td><td>abs(九转) &gt;= 9</td><td>-4</td></tr>
-<tr><td>ATR过高</td><td>ATR% &gt;= 10</td><td>-6</td></tr>
-<tr><td>ATR偏高</td><td>ATR% &gt;= 7</td><td>-3</td></tr>
-<tr><td>跳空过大</td><td>跳空幅度 &gt;= 8%</td><td>-4</td></tr>
-<tr><td>阶段危险</td><td>三阶段危险 / 极端扩展</td><td>-8</td></tr>
-<tr><td>二阶段破55警戒</td><td>二阶段警戒·破55</td><td>-5</td></tr>
-<tr><td>风险分类</td><td>category = 风险/剔除</td><td>-8</td></tr>
+<tr><td>扩展10危险</td><td>扩展10 &gt;= 7</td><td><span class="neg">-6</span></td></tr>
+<tr><td>扩展10偏高</td><td>扩展10 &gt;= 4</td><td><span class="neg">-3</span></td></tr>
+<tr><td>扩展50危险</td><td>扩展50 &gt;= 8</td><td><span class="neg">-6</span></td></tr>
+<tr><td>扩展50偏高</td><td>扩展50 &gt;= 5</td><td><span class="neg">-3</span></td></tr>
+<tr><td>九转衰竭</td><td>abs(九转) &gt;= 9</td><td><span class="neg">-4</span></td></tr>
+<tr><td>ATR过高</td><td>ATR% &gt;= 10</td><td><span class="neg">-6</span></td></tr>
+<tr><td>ATR偏高</td><td>ATR% &gt;= 7</td><td><span class="neg">-3</span></td></tr>
+<tr><td>跳空过大</td><td>跳空幅度 &gt;= 8%</td><td><span class="neg">-4</span></td></tr>
+<tr><td>阶段危险</td><td>三阶段危险 / 极端扩展</td><td><span class="neg">-8</span></td></tr>
+<tr><td>二阶段破55警戒</td><td>二阶段警戒·破55</td><td><span class="neg">-5</span></td></tr>
+<tr><td>风险分类</td><td>category = 风险/剔除</td><td><span class="neg">-8</span></td></tr>
 </tbody></table>
 <h2>12. 页面默认逻辑</h2>
 <p>默认打开页面时：</p>
@@ -164,4 +171,5 @@ AND 主升优先模型分 &gt;= 55</code></pre>
 <li>A6强筛选按钮。</li>
 <li>模型拆分中的 A6 贡献项。</li>
 <li>表格详情中的 A6 明细。</li>
-</ul><p class="footer">文件生成时间：2026-06-25 13:56 ｜ UTF-8 HTML 版。</p></article></main></body></html>
+</ul><p class="footer">文件生成时间：2026-06-25 13:56 ｜ UTF-8 HTML 版。</p></article></main>
+</body></html>

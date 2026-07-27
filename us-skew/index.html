@@ -20,7 +20,7 @@
   --panel-2: #faf8f2;        /* 次级面板 */
   --ink: #1f2430;            /* 主文字 */
   --ink-2: #494f5e;          /* 次文字 */
-  --muted: #8b90a0;          /* 弱提示 */
+  --muted: #6f7587;          /* 弱提示 */
   --hairline: #e3ded1;       /* 发丝线 */
   --hairline-strong: #cfc8b6;
 
@@ -42,6 +42,24 @@
   --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* us-skew 页面专属（原第二层 :root 并入，变量名不变，JS 的 var(...) 引用零改动） */
+  --surface:#fffefa;        /* 面板 = 白卡 */
+  --surface-2:#faf8f2;      /* 次级面板 */
+  --surface-3:#ece8db;      /* 描边/进度槽 */
+  --faint:#8b90a0;          /* 最弱提示（比 --muted 更浅） */
+  --line:#e3ded1;           /* 网格/发丝线 */
+  --line-strong:#c6bfab;
+  --hot:#b5452e;            /* 朱砂：避险偏高 */
+  --hot-soft:#f9ece7;
+  --mid:#173a5e;            /* 研究所蓝：平衡 */
+  --mid-soft:#eaf0f6;
+  --low:#2f6b4f;            /* 青玉：避险偏低 */
+  --low-soft:#e9f2ec;
+  --warn:#96702a;           /* 金：需复核 */
+  --warn-soft:#f5eeda;
+  --danger:#b5452e;
+  --focus:#173a5e;
 }
 
 * { box-sizing: border-box; }
@@ -114,7 +132,7 @@ a:hover { color: #0f2c49; }
 
 .csn-drop {
   position: absolute; top: calc(100% + 1px); left: 50%; transform: translate(-50%, 6px);
-  width: 280px; min-width: 280px; padding: 8px;
+  min-width: 250px; padding: 8px;
   background: var(--panel); border: 1px solid var(--hairline); border-radius: 12px;
   box-shadow: var(--shadow-lift);
   opacity: 0; visibility: hidden; pointer-events: none;
@@ -124,11 +142,11 @@ a:hover { color: #0f2c49; }
   opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0);
 }
 .csn-drop a {
-  display: block; min-height: 58px; padding: 9px 11px; border-radius: 8px; text-decoration: none; color: var(--ink);
+  display: block; padding: 9px 11px; border-radius: 8px; text-decoration: none; color: var(--ink);
 }
 .csn-drop a:hover { background: var(--panel-2); }
 .csn-drop a b { display: block; font-size: 13.5px; font-weight: 650; }
-.csn-drop a small { display: block; font-size: 11.5px; color: var(--muted); margin-top: 2px; line-height: 1.45; white-space: nowrap; }
+.csn-drop a small { display: block; font-size: 11.5px; color: var(--muted); margin-top: 2px; line-height: 1.45; }
 .csn-drop a.current b::after { content: "· 当前"; color: var(--cinnabar); font-size: 11px; margin-left: 4px; }
 
 /* ============ 页面骨架 ============ */
@@ -199,37 +217,18 @@ a:hover { color: #0f2c49; }
   .csn-menu { min-width: 0; overflow-x: auto; overflow-y: hidden; }
   .csn-brand-name { font-size: 15px; }
   .csn-item > a, .csn-item > button { padding: 0 10px; font-size: 13px; }
-  .csn-drop { left: auto; right: 0; width: min(280px, calc(100vw - 24px)); min-width: 0; transform: translate(0, 6px); }
+  .csn-drop { left: auto; right: 0; transform: translate(0, 6px); min-width: 220px; }
   .csn-item:hover .csn-drop, .csn-item:focus-within .csn-drop { transform: none; }
   .csn-page { padding: 24px 14px 48px; }
 }
   </style>
   <style id="csn-page-styles">
     /* ============================================================
-       us-skew 页面专属样式：原深色 oklch 主题 → 浅色研报风
-       变量名保持原样（--hot/--mid/--low/--warn/--surface 等），
-       因此 JS 里所有 var(...) 引用与 SVG 绘制逻辑零改动。
+       us-skew 页面专属样式：浅色研报风适配
+       页面专属变量已并入上方基础层变量表（--hot/--mid/--low/--warn/
+       --surface 等名称不变），因此 JS 里所有 var(...) 引用与 SVG
+       绘制逻辑零改动。
        ============================================================ */
-    :root {
-      --surface:#fffefa;        /* 面板 = 白卡 */
-      --surface-2:#faf8f2;      /* 次级面板 */
-      --surface-3:#ece8db;      /* 描边/进度槽 */
-      --muted:#565d6d;          /* 次文字（加深，保证浅底可读） */
-      --faint:#6d7484;          /* 弱提示 */
-      --line:#e3ded1;           /* 网格/发丝线 */
-      --line-strong:#c6bfab;
-      --hot:#b5452e;            /* 朱砂：避险偏高 */
-      --hot-soft:#f9ece7;
-      --mid:#173a5e;            /* 研究所蓝：平衡 */
-      --mid-soft:#eaf0f6;
-      --low:#2f6b4f;            /* 青玉：避险偏低 */
-      --low-soft:#e9f2ec;
-      --warn:#96702a;           /* 金：需复核 */
-      --warn-soft:#f5eeda;
-      --danger:#b5452e;
-      --focus:#173a5e;
-      --radius:12px;
-    }
     body { font-size:14px; line-height:1.5; min-width:320px; }
     button,select,input { font:inherit; }
     button { color:inherit; }
@@ -245,6 +244,7 @@ a:hover { color: #0f2c49; }
     }
     .asof { display:flex; align-items:center; gap:9px; color:var(--ink-2); font-variant-numeric:tabular-nums; font-size:.86rem; }
     .status-dot { width:8px; height:8px; flex:0 0 auto; border-radius:50%; background:var(--low); box-shadow:0 0 0 4px rgba(47,107,79,.14); }
+    .status-dot.err { background:var(--danger); box-shadow:0 0 0 4px rgba(181,69,46,.14); }
     .head-meta-sub { color:var(--muted); font-size:.82rem; margin-left:auto; }
 
     /* ===== 三色使用说明 ===== */
@@ -385,7 +385,7 @@ a:hover { color: #0f2c49; }
     .gauge-card[data-bucket="balanced"] { --tone:var(--mid); --soft:var(--mid-soft); }
     .gauge-card[data-bucket="low"] { --tone:var(--low); --soft:var(--low-soft); }
     .gauge-card:hover { transform:translateY(-2px); border-color:var(--line-strong); background:var(--surface-2); }
-    .gauge-card[aria-pressed="true"] { border-color:var(--tone); background:color-mix(in oklch,var(--panel) 72%,var(--soft)); }
+    .gauge-card[aria-pressed="true"] { border-color:var(--tone); background:var(--soft); }
     .gauge-head { display:flex; align-items:flex-start; justify-content:space-between; gap:8px; min-height:42px; }
     .ticker { display:block; font-size:1.05rem; font-weight:700; letter-spacing:.01em; font-family:var(--mono); }
     .company { display:block; margin-top:2px; color:var(--faint); font-size:.76rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:18ch; }
@@ -439,6 +439,7 @@ a:hover { color: #0f2c49; }
       .guide-note { margin-left:0; }
       .head-meta-sub { margin-left:0; width:100%; }
       .focus-chart { padding:14px; }
+      .focus-chart-svg { min-width:640px; }
       .focus-chart-head { display:grid; gap:8px; }
       .snapshot-pill { justify-self:start; }
       .gauge-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
@@ -461,9 +462,6 @@ a:hover { color: #0f2c49; }
       .company { max-width:13ch; }
       .contract-scroll { overflow-x:auto; grid-column:1/-1; }
       .contract-table { min-width:660px; }
-    }
-    @media (prefers-reduced-motion:reduce) {
-      *,*::before,*::after { scroll-behavior:auto!important; transition-duration:.01ms!important; animation-duration:.01ms!important; animation-iteration-count:1!important; }
     }
   </style>
 </head>
@@ -514,11 +512,11 @@ a:hover { color: #0f2c49; }
 </nav>
 <script>
 /* 当前页高亮：在页面里把 window.CSN_PAGE_KEY 设为 mda100 / csn / rs-thrust /
-   rotation / us-skew / ai-decision / korea-deleveraging / nav 之一（需在本脚本前定义） */
+   us-skew / ai-decision / korea-deleveraging / nav 之一（需在本脚本前定义） */
 (function () {
   var key = window.CSN_PAGE_KEY;
   if (!key) return;
-  var group = { mda100: "stocks", csn: "stocks", "rs-thrust": "tools", rotation: "tools", "us-skew": "tools",
+  var group = { mda100: "stocks", csn: "stocks", "rs-thrust": "tools", "us-skew": "tools",
     "ai-decision": "tools", "korea-deleveraging": "tools", nav: "research" }[key];
   document.querySelectorAll(".csn-item").forEach(function (item) {
     if (item.dataset.group === group) item.classList.add("active");
@@ -577,8 +575,10 @@ a:hover { color: #0f2c49; }
       <p class="benchmark-note">虚线用于比较个股 Skew 相对强弱，不是指数涨跌预测。</p>
       <div id="focusChart" class="focus-chart-scroll" aria-live="polite"></div>
       <div class="focus-chart-legend" aria-label="图例">
-        <span style="color:var(--warn)"><i class="legend-dot" aria-hidden="true"></i>黄点：数据需复核</span>
-        <span><i class="legend-line" aria-hidden="true"></i>虚线：SPY / QQQ / 可靠 AI 池均值</span>
+        <span style="color:var(--warn)"><i class="legend-dot" aria-hidden="true"></i>金点：数据需复核</span>
+        <span style="color:var(--mid)"><i class="legend-line" aria-hidden="true"></i>虚线：SPY</span>
+        <span style="color:var(--low)"><i class="legend-line" aria-hidden="true"></i>虚线：QQQ</span>
+        <span style="color:var(--warn)"><i class="legend-line" aria-hidden="true"></i>虚线：可靠 AI 池均值</span>
         <span>颜色沿用页面红 / 蓝 / 绿分位</span>
       </div>
     </section>
@@ -645,7 +645,7 @@ a:hover { color: #0f2c49; }
       </details>
     </section>
 
-    <footer class="page-foot"><span>数据源：Futu OpenD（只读）</span><span>研究型期权情绪观察，不构成投资建议</span></footer>
+    <footer class="page-foot"><span>CSN 投研 · US IV Skew Radar</span><span>数据源：Futu OpenD（只读）</span><span>研究型期权情绪观察，不构成投资建议</span></footer>
   </main>
   <script>
     const labels={high:'Put 避险相对偏高',balanced:'相对平衡',low:'Put 避险相对偏低',review:'不参与排名'};
@@ -823,7 +823,9 @@ a:hover { color: #0f2c49; }
         errorBox.style.display='block';
         errorBox.textContent=`数据读取失败：${error.message}`;
         document.querySelector('#asOfText').textContent='未完成数据核验';
+        document.querySelector('.status-dot').classList.add('err');
       });
   </script>
+
 </body>
 </html>

@@ -16,7 +16,7 @@ header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#f8
 .hero h1{font-size:34px;line-height:1.22;margin:10px 0 14px}
 .meta{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:14px}
 .pill{border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:#fff}
-.content{min-width:0}
+.content,.content *{min-width:0;overflow-wrap:anywhere}
 .toc{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;background:#fbfdfc;padding:14px 16px;margin:0 0 24px;font-size:13px;color:var(--muted)}
 .toc b{display:block;color:var(--ink);margin-bottom:8px}
 .toc a{display:inline-block;color:var(--muted);text-decoration:none;padding:4px 10px 4px 0;margin-right:8px}
@@ -57,8 +57,20 @@ ul,ol{padding-left:1.3em}
 .toplink{position:fixed;right:18px;bottom:18px;background:var(--ink);color:white;text-decoration:none;border-radius:999px;padding:9px 12px;font-size:13px;box-shadow:0 8px 24px rgba(23,32,51,.18)}
 @media(max-width:880px){.hero h1{font-size:28px}.wrap{padding:24px 12px}.toc a{display:block;padding:4px 0;margin-right:0}.toc a.sub{padding-left:12px}table{font-size:11.8px}th,td{padding:6px 5px}}
   </style>
+<style id="csn-unify">
+:root{--csn-paper:#f6f4ee;--csn-panel:#fffefa;--csn-ink:#1f2430;--csn-ink-2:#494f5e;--csn-muted:#6f7587;--csn-line:#e3ded1;--csn-accent:#173a5e;--csn-cinnabar:#b5452e;--csn-gold:#96702a;--csn-jade:#2f6b4f;--csn-serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;--csn-sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;--csn-mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace}
+.csn-backbar{box-sizing:border-box;height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 20px;background:var(--csn-paper);border-bottom:1px solid var(--csn-line);font-family:var(--csn-sans);position:relative;z-index:70}
+.csn-backbar a{text-decoration:none}
+.csn-bb-back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--csn-ink-2);padding:6px 10px;border-radius:8px}
+.csn-bb-back:hover{color:var(--csn-accent);background:rgba(23,58,94,.06)}
+.csn-bb-brand{display:inline-flex;align-items:center;gap:8px;color:var(--csn-ink)}
+.csn-bb-seal{width:22px;height:22px;border-radius:5px;background:var(--csn-cinnabar);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--csn-serif);font-size:12px;line-height:1}
+.csn-bb-name{font-family:var(--csn-serif);font-size:15px;letter-spacing:.06em}
+.csn-footnote{margin:0;padding:18px 20px 28px;border-top:1px solid var(--csn-line);background:var(--csn-paper);color:var(--csn-muted);font:12px/1.7 var(--csn-sans);text-align:center}
+</style>
 </head>
 <body id="top">
+  <div class="csn-backbar"><a class="csn-bb-back" href="../nav/">← 报告目录</a><a class="csn-bb-brand" href="https://csnpk.com/" target="_blank" rel="noreferrer noopener"><span class="csn-bb-seal">研</span><span class="csn-bb-name">CSN 投研</span></a></div>
   <header>
     <div class="wrap hero">
       <div class="eyebrow">CSNPK Research · Innovative Drugs</div>
@@ -73,7 +85,7 @@ ul,ol{padding-left:1.3em}
   </header>
   <main class="wrap">
     <nav class="toc"><b>目录</b><a href="#ai">开篇提示：创新药正在成为 AI（人工智能）之后的第二主线观察</a><a href="#section">一句话结论</a><a href="#section-2">核心判断</a><a href="#1">1. 政策链：这次不是单一医保消息</a><a class="sub" href="#1-1">1.1 国家医保/商保目录初审</a><a class="sub" href="#1-2-2026">1.2 2026 版基药目录</a><a class="sub" href="#1-3-cgt">1.3 CGT（细胞与基因治疗）审评优化</a><a href="#2-bd">2. BD（商务拓展/对外授权合作）出海：从偶发大单变成系统性重估</a><a class="sub" href="#2-1">2.1 总量数据</a><a class="sub" href="#2-2">2.2 头部交易样本</a><a class="sub" href="#2-3-headline-value">2.3 需拆解 headline value（公告披露的潜在总交易额）</a><a href="#3">3. 子赛道拆分</a><a class="sub" href="#3-1-adc-xdc">3.1 ADC/XDC（抗体偶联药物/广义偶联药物）</a><a class="sub" href="#3-2-pd-1-plus-pd-1">3.2 双抗/多抗/PD-1 Plus（PD-1 免疫治疗升级组合）</a><a class="sub" href="#3-3-sirna-rna">3.3 小核酸/siRNA（小干扰 RNA）</a><a class="sub" href="#3-4-glp-1">3.4 GLP-1/代谢/多肽（降糖减重及相关慢病药物）</a><a class="sub" href="#3-5">3.5 自免/慢病</a><a class="sub" href="#3-6-cgt">3.6 CGT/细胞治疗（细胞与基因治疗）</a><a class="sub" href="#3-7-cxo-cdmo">3.7 CXO/CDMO（医药外包服务/合同研发生产组织）</a><a href="#4">4. 公司分层</a><a href="#5">5. 龙头梯队与相对排序</a><a class="sub" href="#5-1">5.1 综合龙头：恒瑞医药</a><a class="sub" href="#5-2">5.2 全球化龙头：百济神州</a><a class="sub" href="#5-3">5.3 高弹性第二梯队：康方、信达、三生</a><a class="sub" href="#5-4">5.4 当前配置优先级与龙头地位的差异</a><a href="#6">6. 估值与配置评分</a><a class="sub" href="#6-1">6.1 评分口径与估值公式</a><a class="sub" href="#6-2">6.2 分市场估值与配置名单</a><a href="#7">7. 配置与交易策略</a><a class="sub" href="#7-1">7.1 当前位置</a><a class="sub" href="#7-2">7.2 三类配置结构</a><a class="sub" href="#7-3-etf">7.3 ETF（交易型开放式指数基金）工具</a><a href="#8-6-12">8. 未来 6-12 个月催化日历</a><a href="#9">9. 风险清单</a><a href="#10">10. 最终评级与目标区间</a><a href="#section-3">附录：术语说明（备查）</a><a href="#section-4">来源与证据等级</a></nav>
-    <article class="content"><h1>创新药行业深度研究（2026-07-12 更新）</h1>
+    <article class="content"><h2>创新药行业深度研究（2026-07-12 更新）</h2>
 <blockquote>
 <p>研究口径：以中国 A/H（A 股和 H 股，即内地与香港上市股票）创新药和创新药产业链为主，兼顾全球 MNC（跨国大型药企）需求、港股流动性、CXO（医药研发生产外包服务总称）传导，以及 Futu OpenD（富途开放行情服务）与机构预测数据下的 PE（市盈率）/FPE（未来市盈率/预测市盈率）估值。时间维度为 6-12 个月，不构成投资建议。</p>
 </blockquote>
@@ -1132,6 +1144,7 @@ ul,ol{padding-left:1.3em}
 <li>第二主线观察检索 traceId：<code>41f73ab75ec908ebef7996ecaf150dab-cc095bf8-2edd-4603-88ac-6451cb839db3</code></li>
 </ul></article>
   </main>
+  <footer class="csn-footnote">研究参考，不构成投资建议；数据与结论以报告标注截止日为准。</footer>
   <a class="toplink" href="#top">返回顶部</a>
 </body>
 </html>
