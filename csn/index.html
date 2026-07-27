@@ -68,23 +68,28 @@
     .summary-row { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(320px,.55fr); gap:10px; align-items:stretch; }
     .panel,.metric { background:var(--panel); border:1px solid var(--line); border-radius:var(--radius-lg); padding:14px; box-shadow:var(--shadow-card); }
     .panel { border-top:3px solid var(--accent); }
-    .spotlight { display:grid; align-content:start; min-height:82px; background:linear-gradient(135deg,var(--panel),var(--jade-soft)); border-color:var(--line); border-top-color:var(--jade); color:var(--text); }
-    .spotlight-head { display:grid; gap:6px; }
-    .spotlight-title span { display:block; color:var(--green); font-size:12px; font-weight:850; }
-    .spotlight-title strong { display:block; font-size:28px; line-height:1.08; margin-top:2px; }
-    .watchlist-meta { color:#0f766e; font-size:13px; font-weight:800; }
-    .watchlist-text { max-width:92ch; margin:10px 0 0; color:#172026; font-size:15px; line-height:1.8; white-space:normal; overflow-wrap:anywhere; word-break:break-word; }
-    .policy-note { color:#64748b; font-size:13px; font-weight:750; }
-    .backtest-panel { border-left-color:var(--blue); background:linear-gradient(135deg,#f7fbff,#edf4ff); }
-    .backtest-head { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
-    .backtest-head span { display:block; color:var(--blue); font-size:12px; font-weight:850; }
-    .backtest-head strong { color:var(--blue); font-size:26px; line-height:1; white-space:nowrap; }
-    .backtest-meta { margin-top:5px; color:#475569; font-size:12px; font-weight:750; }
-    .backtest-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:6px; margin-top:9px; }
-    .backtest-grid div { min-width:0; padding:7px 6px; border:1px solid #cfe0f5; border-radius:8px; background:#fff; }
-    .backtest-grid b { display:block; color:#172026; font-size:14px; line-height:1.1; white-space:nowrap; }
-    .backtest-grid span { display:block; margin-top:3px; color:#64748b; font-size:10px; font-weight:800; }
-    .backtest-panel p { margin:9px 0 0; color:#475569; font-size:12px; line-height:1.65; overflow-wrap:anywhere; }
+    .status-card { display:grid; gap:10px; align-content:start; min-height:186px; padding:16px 16px 14px; background:linear-gradient(135deg,var(--panel),var(--panel-2)); color:var(--text); }
+    .spotlight { border-top-color:var(--cinnabar); }
+    .spotlight.tone-ok { border-top-color:var(--jade); }
+    .backtest-panel { border-top-color:var(--accent); background:linear-gradient(135deg,#f7fbff,#edf4ff); }
+    .status-kicker { color:var(--gold); font:800 12px/1 var(--sans); letter-spacing:0; }
+    .status-value { color:var(--ink); font-family:var(--serif); font-size:31px; font-weight:800; line-height:1.08; letter-spacing:0; }
+    .status-card.tone-warn .status-value { color:var(--cinnabar); }
+    .status-value.tone-down { color:var(--cinnabar); font-family:var(--mono); font-size:29px; font-weight:900; text-align:right; }
+    .status-meta { color:var(--ink-2); font:800 13px/1.35 var(--mono); }
+    .status-rule { height:1px; background:var(--line); margin:1px 0; }
+    .status-stats { display:flex; flex-wrap:wrap; gap:8px 14px; align-items:flex-end; }
+    .status-stats div:not(.status-pill) { min-width:88px; }
+    .status-stats b { display:block; color:var(--ink); font-family:var(--mono); font-size:16px; font-weight:900; line-height:1.1; font-variant-numeric:tabular-nums; white-space:nowrap; }
+    .status-stats span { display:block; margin-top:4px; color:var(--muted); font-size:11px; font-weight:800; line-height:1.2; }
+    .status-pill { display:inline-flex; align-items:center; min-height:26px; padding:5px 10px; border-radius:999px; font-size:12px; font-weight:900; line-height:1; white-space:nowrap; }
+    .status-pill.warn { background:var(--cinnabar-soft); color:var(--cinnabar); border:1px solid #edc8bd; }
+    .status-pill.ok { background:var(--jade-soft); color:var(--jade); border:1px solid #b9d4c4; }
+    .status-footnote { display:grid; gap:5px; margin-top:1px; padding:9px 10px; border-radius:10px; background:rgba(255,255,255,.56); color:#526078; font-size:12px; font-weight:650; line-height:1.65; overflow-wrap:anywhere; word-break:break-word; }
+    .watchlist-text { max-width:92ch; white-space:normal; }
+    .status-footnote b,.status-stats b.up { color:var(--jade); }
+    .status-footnote b.down,.status-stats b.down { color:var(--cinnabar); }
+    .status-footnote b.flat,.status-stats b.flat { color:var(--muted); }
     .metric { position:relative; overflow:hidden; min-height:92px; align-self:start; }
     .metric::after { content:none; }
     .metric span { color:rgba(23,32,38,.68); font-size:12px; font-weight:750; }
@@ -274,30 +279,36 @@
     </div>
     <section class="summary">
       <div class="summary-row">
-        <div class="panel spotlight">
-          <div class="spotlight-head">
-            <div class="spotlight-title">
-              <span>核心池 · 已核验</span>
-              <strong>每日推荐股票</strong>
-            </div>
-            <div class="watchlist-meta">28 只｜买入观察28</div>
+        <div class="panel status-card spotlight tone-warn">
+          <div class="status-kicker">核心池 · 已核验</div>
+          <div class="status-value">每日推荐股票</div>
+          <div class="status-meta">28 只｜买入观察28</div>
+          <div class="status-rule"></div>
+          <div class="status-stats">
+            <div><b>28</b><span>推荐数</span></div>
+            <div><b class="down">49.02%</b><span>CSN原始次日胜率</span></div>
+            <div><b>0</b><span>确认样本</span></div>
+            <div><b>55%</b><span>门槛</span></div>
+            <div class="status-pill warn">未通过 · 观察提醒</div>
           </div>
-          <p class="watchlist-text"><b>AI相关</b>｜美股：CRSR、SNOW、HPE、AAPL、LLY、DDOG、VSAT、LSF、D、MTCH、ANET<br><b>老登股</b>｜美股：ALRS、IFS、DAR、LNG、PRI、AMBP、ATI、IX、NUE、MT、KOD、MSM、TRNO、ILMN、IRM、MOG.A、BGC<br><span class="policy-note">择时审计：CSN原始次日胜率 49.02%，美股择时确认样本 0，门槛 55%；未通过，仅作观察提醒</span></p>
+          <div class="status-footnote watchlist-text"><b>AI相关</b>｜美股：CRSR、SNOW、HPE、AAPL、LLY、DDOG、VSAT、LSF、D、MTCH、ANET<br><b>老登股</b>｜美股：ALRS、IFS、DAR、LNG、PRI、AMBP、ATI、IX、NUE、MT、KOD、MSM、TRNO、ILMN、IRM、MOG.A、BGC</div>
         </div>
         
-        <div class="panel backtest-panel">
-          <div class="backtest-head">
-            <span>昨日推荐回看</span>
-            <strong>-1.52%</strong>
-          </div>
-          <div class="backtest-meta">2026-07-24 推荐 ｜ 2026-07-24 表现</div>
-          <div class="backtest-grid">
+        <div class="panel status-card backtest-panel">
+          <div class="status-kicker">昨日推荐回看</div>
+          <div class="status-value tone-down">-1.52%</div>
+          <div class="status-meta">2026-07-24 推荐 ｜ 2026-07-24 表现</div>
+          <div class="status-rule"></div>
+          <div class="status-stats">
             <div><b>17</b><span>推荐数</span></div>
-            <div><b>-0.50%</b><span>中位数</span></div>
+            <div><b class="down">-0.50%</b><span>中位数</span></div>
             <div><b>6/17</b><span>胜率</span></div>
-            <div><b>-1.73%</b><span>日内均值</span></div>
+            <div><b class="down">-1.73%</b><span>日内均值</span></div>
           </div>
-          <p>Top：ALRS 1.65% / OHI 1.47% / LLY 0.86%<br>Bottom：CLSK -6.98% / AROC -5.86% / AMAT -4.72%</p>
+          <div class="status-footnote">
+            <div>Top：<span>ALRS <b class="up">1.65%</b></span> / <span>OHI <b class="up">1.47%</b></span> / <span>LLY <b class="up">0.86%</b></span></div>
+            <div>Bottom：<span>CLSK <b class="down">-6.98%</b></span> / <span>AROC <b class="down">-5.86%</b></span> / <span>AMAT <b class="down">-4.72%</b></span></div>
+          </div>
         </div>
       </div>
     </section>
