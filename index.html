@@ -127,6 +127,74 @@ h1.hero-title em { font-style: normal; color: var(--cinnabar); }
 .hero-stat b { font-family: var(--serif); font-size: 26px; font-weight: 700; display: block; line-height: 1.1; }
 .hero-stat span { font-size: 12px; color: var(--muted); letter-spacing: .06em; }
 
+/* ===== 多工具共振强烈推荐 ===== */
+.confluence {
+  margin: 32px 0 10px; padding: 22px;
+  border: 1px solid #dbc9a2; border-top: 3px solid var(--gold);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #fffdf7 0%, #fbf4e3 100%);
+  box-shadow: var(--shadow-card);
+}
+.confluence[hidden] { display: none; }
+.confluence-head {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 18px;
+  padding-bottom: 14px; border-bottom: 1px solid rgba(150,112,42,.22);
+}
+.confluence-title { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.confluence-title h2 { margin: 0; font-family: var(--serif); font-size: 24px; }
+.confluence-title .flag {
+  padding: 5px 9px; border-radius: 999px;
+  background: var(--cinnabar); color: #fff;
+  font: 700 11px/1 var(--sans); letter-spacing: .08em;
+}
+.confluence-head p { margin: 7px 0 0; color: var(--ink-2); font-size: 13px; }
+.confluence-total {
+  min-width: 72px; text-align: center; color: var(--cinnabar);
+  font-family: var(--serif); font-size: 28px; font-weight: 700; line-height: 1;
+}
+.confluence-total small { display: block; margin-top: 5px; color: var(--muted); font: 600 11px/1.2 var(--sans); }
+.confluence-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+.confluence-card {
+  min-width: 0; padding: 16px; border: 1px solid rgba(150,112,42,.22);
+  border-radius: 12px; background: rgba(255,255,255,.78);
+}
+.confluence-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.confluence-kind { display: block; color: var(--gold); font: 700 10px/1 var(--mono); letter-spacing: .1em; }
+.confluence-card h3 { margin: 7px 0 0; font: 700 23px/1.1 var(--serif); }
+.confluence-card h3 small {
+  display: block; overflow: hidden; margin-top: 5px; color: var(--ink-2);
+  font: 600 12px/1.35 var(--sans); text-overflow: ellipsis; white-space: nowrap;
+}
+.confluence-count { color: var(--cinnabar); font: 700 22px/1 var(--serif); text-align: center; }
+.confluence-count small { display: block; margin-top: 4px; color: var(--muted); font: 600 9px/1 var(--sans); white-space: nowrap; }
+.confluence-note {
+  overflow: hidden; margin: 10px 0 0; color: var(--ink-2); font-size: 11.5px;
+  text-overflow: ellipsis; white-space: nowrap;
+}
+.confluence-tools { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+.confluence-tool {
+  padding: 4px 7px; border: 1px solid var(--hairline); border-radius: 999px;
+  color: var(--ink-2); background: var(--panel); text-decoration: none; font-size: 10.5px; font-weight: 700;
+}
+.confluence-tool.red { border-color: #e7b8ac; background: var(--cinnabar-soft); color: #923622; }
+.confluence-tool.jade { border-color: #bad3c3; background: var(--jade-soft); color: var(--jade); }
+.confluence-tool.gold { border-color: #dbc9a2; background: var(--gold-soft); color: #76561e; }
+.confluence-reasons { display: grid; gap: 6px; margin: 12px 0 0; padding: 0; list-style: none; }
+.confluence-reasons li { display: grid; gap: 1px; font-size: 11px; }
+.confluence-reasons b { color: var(--ink-2); }
+.confluence-reasons span { color: var(--muted); }
+.confluence-card footer {
+  margin-top: 12px; padding-top: 9px; border-top: 1px solid var(--hairline);
+  color: var(--muted); font: 600 10px/1.2 var(--mono);
+}
+.confluence-extra { display: none; }
+.confluence.expanded .confluence-extra { display: block; }
+.confluence-toggle {
+  display: block; margin: 16px auto 0; padding: 9px 14px;
+  border: 1px solid #cdb77e; border-radius: 999px; background: rgba(255,255,255,.7);
+  color: #76561e; cursor: pointer; font: 700 12px/1 var(--sans);
+}
+
 /* ===== 卡片网格 ===== */
 .grid { display: grid; gap: 14px; }
 .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
@@ -176,7 +244,7 @@ footer.site-footer {
   color: var(--muted); font-size: 12px; line-height: 1.8;
 }
 
-@media (max-width: 900px) { .grid.cols-3 { grid-template-columns: repeat(2, 1fr); } .research-card { grid-template-columns: 1fr; } .research-card .latest { border-left: 0; border-top: 1px solid var(--hairline); } }
+@media (max-width: 900px) { .grid.cols-3, .confluence-list { grid-template-columns: repeat(2, 1fr); } .research-card { grid-template-columns: 1fr; } .research-card .latest { border-left: 0; border-top: 1px solid var(--hairline); } }
 @media (max-width: 760px) {
   .csn-topnav-inner { padding: 0 12px; gap: 8px; }
   .csn-brand-sub { display: none !important; }
@@ -186,8 +254,10 @@ footer.site-footer {
   .csn-drop { left: auto; right: 0; transform: translate(0, 6px); min-width: 220px; }
   .csn-item:hover .csn-drop, .csn-item:focus-within .csn-drop { transform: none; }
   .csn-page { padding: 24px 14px 48px; }
-  .grid.cols-2, .grid.cols-3 { grid-template-columns: 1fr; }
+  .grid.cols-2, .grid.cols-3, .confluence-list { grid-template-columns: 1fr; }
   .hero { padding-top: 36px; }
+  .confluence { padding: 16px 14px; }
+  .confluence-head { align-items: flex-start; }
 }
 </style>
 </head>
@@ -239,6 +309,21 @@ footer.site-footer {
       <div class="hero-stat"><b id="reportCount">12</b><span>公开调研报告</span></div>
     </div>
     <div class="hero-rule csn-rise d4"><span>STOCKS · TOOLS · RESEARCH</span></div>
+  </section>
+
+  <section class="confluence csn-rise d4" id="strongRecommendations" aria-label="多工具共振强烈推荐" hidden>
+    <div class="confluence-head">
+      <div>
+        <div class="confluence-title">
+          <span class="flag">强烈推荐</span>
+          <h2>多工具共振</h2>
+        </div>
+        <p id="confluenceStatus">正在核对美股严选、RS Thrust 与轮动雷达……</p>
+      </div>
+      <strong class="confluence-total"><span id="confluenceCount">—</span><small>当前标的</small></strong>
+    </div>
+    <div class="confluence-list" id="confluenceList"></div>
+    <button class="confluence-toggle" id="confluenceToggle" type="button" hidden></button>
   </section>
 
   <section aria-label="股票">
@@ -348,5 +433,6 @@ footer.site-footer {
     });
 })();
 </script>
+<script src="./home-confluence.js"></script>
 </body>
 </html>
