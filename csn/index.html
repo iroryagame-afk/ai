@@ -9,33 +9,69 @@
   <title>表姐严选</title>
   <style>
     :root {
-      --bg:#f3f6f8; --panel:#fff; --text:#172026; --muted:#68737d; --line:#d9dee3;
-      --green:#0f766e; --green-bg:#d9f3ee; --blue:#2563eb; --blue-bg:#dbeafe;
-      --amber:#b45309; --amber-bg:#fef3c7; --red:#b91c1c; --red-bg:#fee2e2;
-      --violet:#5b21b6; --violet-bg:#ede9fe; --gray:#64748b; --gray-bg:#e2e8f0;
-      --ink:#172026; --chip:#eef2f5;
+      --paper:#f6f4ee; --panel:#fffefa; --panel-2:#faf8f2;
+      --text:#1f2430; --ink:#1f2430; --ink-2:#494f5e; --muted:#8b90a0;
+      --line:#e3ded1; --line-strong:#cfc8b6;
+      --accent:#173a5e; --accent-soft:#eaf0f6;
+      --cinnabar:#b5452e; --cinnabar-soft:#f9ece7;
+      --gold:#96702a; --gold-soft:#f5eeda;
+      --jade:#2f6b4f; --jade-soft:#e9f2ec;
+      --green:#2f6b4f; --green-bg:#e9f2ec; --blue:#173a5e; --blue-bg:#eaf0f6;
+      --amber:#96702a; --amber-bg:#f5eeda; --red:#b5452e; --red-bg:#f9ece7;
+      --violet:#5f4b7a; --violet-bg:#eee9f4; --gray:#6f7480; --gray-bg:#f0eee8;
+      --bg:var(--paper); --chip:var(--panel-2);
+      --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+      --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+      --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+      --radius:10px; --radius-lg:14px;
+      --shadow-card:0 1px 2px rgba(31,36,48,.05),0 8px 24px rgba(31,36,48,.06);
+      --shadow-lift:0 2px 4px rgba(31,36,48,.06),0 16px 40px rgba(31,36,48,.10);
     }
     * { box-sizing:border-box; }
-    body { margin:0; background:
-      linear-gradient(180deg,#edf4f7 0,#f7f9fb 220px,var(--bg) 100%);
-      color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.45; }
-    main { width:min(1480px,100%); margin:0 auto; padding:22px 24px 48px; }
-    header { display:grid; gap:10px; margin-bottom:10px; }
-    .system-nav { display:flex; align-items:center; gap:8px; width:max-content; max-width:100%; margin:10px 0 14px; padding:5px; border:1px solid #cfe0e8; border-radius:10px; background:#fff; box-shadow:0 8px 20px rgba(23,32,38,.05); }
-    .system-nav a { display:inline-flex; align-items:center; min-height:34px; padding:6px 13px; border-radius:8px; color:#3b5262; text-decoration:none; font-weight:900; font-size:14px; }
-    .system-nav a.active { background:#172026; color:#fff; }
-    .system-intro { display:flex; gap:10px; align-items:flex-start; margin:10px 0 0; padding:10px 12px; border:1px solid #d7e8ee; border-radius:8px; background:#fbfdff; color:#4d6473; font-size:14px; line-height:1.65; font-weight:650; }
-    .system-intro strong { color:var(--green); white-space:nowrap; }
-    h1 { margin:0; font-size:42px; line-height:1.05; letter-spacing:0; }
-    .sub { display:grid; gap:3px; color:var(--muted); font-size:15px; line-height:1.65; overflow-wrap:anywhere; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--text); font-family:var(--sans); line-height:1.5; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+    body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:0; background:radial-gradient(1200px 500px at 50% -180px,rgba(23,58,94,.05),transparent 70%),linear-gradient(180deg,rgba(255,255,255,.5),transparent 120px); }
+    a { color:var(--accent); }
+    .csn-topnav { position:sticky; top:0; z-index:100; background:rgba(255,254,250,.88); -webkit-backdrop-filter:blur(14px) saturate(1.4); backdrop-filter:blur(14px) saturate(1.4); border-bottom:1px solid var(--line); }
+    .csn-topnav-inner { width:min(1180px,100%); margin:0 auto; display:flex; align-items:stretch; gap:18px; padding:0 20px; min-height:58px; }
+    .csn-brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); flex:none; }
+    .csn-brand-seal { width:30px; height:30px; border-radius:7px; flex:none; background:var(--cinnabar); color:#fff; font-family:var(--serif); font-weight:700; font-size:14px; display:grid; place-items:center; box-shadow:inset 0 0 0 1px rgba(255,255,255,.25); }
+    .csn-brand-name { display:block; font-family:var(--serif); font-size:17px; font-weight:700; letter-spacing:.02em; white-space:nowrap; }
+    .csn-brand-sub { display:block; margin-top:1px; color:var(--muted); font:600 10px/1 var(--mono); letter-spacing:.22em; text-transform:uppercase; }
+    .csn-menu { display:flex; align-items:stretch; margin-left:auto; }
+    .csn-item { position:relative; display:flex; align-items:stretch; }
+    .csn-item>a,.csn-item>button { display:flex; align-items:center; gap:6px; padding:0 16px; border:0; border-bottom:2px solid transparent; background:none; cursor:pointer; color:var(--ink-2); text-decoration:none; font:600 14px/1 var(--sans); }
+    .csn-item>a:hover,.csn-item>button:hover { color:var(--ink); }
+    .csn-item.active>a,.csn-item.active>button { color:var(--cinnabar); border-bottom-color:var(--cinnabar); }
+    .csn-caret { color:var(--muted); font-size:9px; transition:transform .18s ease; }
+    .csn-item:hover .csn-caret,.csn-item:focus-within .csn-caret { transform:rotate(180deg); }
+    .csn-drop { position:absolute; top:calc(100% + 1px); left:50%; transform:translate(-50%,6px); min-width:250px; padding:8px; background:var(--panel); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow-lift); opacity:0; visibility:hidden; pointer-events:none; transition:opacity .16s ease,transform .16s ease,visibility .16s; }
+    .csn-item:hover .csn-drop,.csn-item:focus-within .csn-drop { opacity:1; visibility:visible; pointer-events:auto; transform:translate(-50%,0); }
+    .csn-drop a { display:block; padding:9px 11px; border-radius:8px; text-decoration:none; color:var(--ink); }
+    .csn-drop a:hover { background:var(--panel-2); }
+    .csn-drop a b { display:block; font-size:13.5px; font-weight:650; }
+    .csn-drop a small { display:block; margin-top:2px; color:var(--muted); font-size:11.5px; line-height:1.45; }
+    .csn-drop a.current b::after { content:"· 当前"; color:var(--cinnabar); font-size:11px; margin-left:4px; }
+    main { position:relative; z-index:1; width:min(1480px,100%); margin:0 auto; padding:30px 24px 48px; }
+    header { display:grid; gap:16px; margin-bottom:14px; }
+    .page-headline { display:grid; gap:12px; }
+    .csn-kicker { display:inline-flex; align-items:center; gap:8px; color:var(--gold); font:600 11px/1 var(--mono); letter-spacing:.24em; text-transform:uppercase; }
+    .csn-kicker::before { content:""; width:22px; height:1px; background:var(--gold); }
+    .system-nav { display:flex; align-items:center; gap:6px; width:max-content; max-width:100%; margin:2px 0 4px; padding:5px; border:1px solid var(--line); border-radius:12px; background:rgba(255,254,250,.82); box-shadow:var(--shadow-card); }
+    .system-nav a { display:inline-flex; align-items:center; min-height:34px; padding:6px 13px; border-radius:8px; color:var(--ink-2); text-decoration:none; font-weight:750; font-size:14px; }
+    .system-nav a.active { background:var(--cinnabar-soft); color:var(--cinnabar); }
+    .system-intro { display:flex; gap:10px; align-items:flex-start; margin:4px 0 0; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); background:var(--panel); color:var(--ink-2); box-shadow:var(--shadow-card); font-size:14px; line-height:1.65; font-weight:650; }
+    .system-intro strong { color:var(--gold); white-space:nowrap; }
+    h1 { margin:0; font-family:var(--serif); font-size:clamp(34px,4.8vw,52px); line-height:1.12; letter-spacing:.01em; }
+    .sub { display:grid; gap:3px; max-width:980px; color:var(--ink-2); font-size:14px; line-height:1.7; overflow-wrap:anywhere; }
     .sub-line { display:block; }
-    .doc-link { display:inline-flex; align-items:center; width:max-content; max-width:100%; margin-top:3px; padding:4px 9px; border:1px solid #99d7cc; border-radius:999px; background:#e9f8f5; color:#0f766e; font-weight:850; text-decoration:none; }
-    .doc-link:hover { background:#d9f3ee; border-color:#65c3b5; }
+    .doc-link { display:inline-flex; align-items:center; width:max-content; max-width:100%; margin-top:3px; padding:4px 9px; border:1px solid var(--line); border-radius:999px; background:var(--accent-soft); color:var(--accent); font-weight:750; text-decoration:none; }
+    .doc-link:hover { background:var(--panel); border-color:var(--line-strong); }
     .summary { display:grid; gap:10px; }
     .summary-row { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(320px,.55fr); gap:10px; align-items:stretch; }
-    .panel,.metric { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; box-shadow:0 8px 18px rgba(23,32,38,.05); }
-    .panel { border-left:5px solid var(--blue); }
-    .spotlight { display:grid; align-content:start; min-height:82px; background:linear-gradient(135deg,#e9f8f5,#d9f3ee); border-color:#9adbd0; border-left:5px solid var(--green); color:var(--text); }
+    .panel,.metric { background:var(--panel); border:1px solid var(--line); border-radius:var(--radius-lg); padding:14px; box-shadow:var(--shadow-card); }
+    .panel { border-top:3px solid var(--accent); }
+    .spotlight { display:grid; align-content:start; min-height:82px; background:linear-gradient(135deg,var(--panel),var(--jade-soft)); border-color:var(--line); border-top-color:var(--jade); color:var(--text); }
     .spotlight-head { display:grid; gap:6px; }
     .spotlight-title span { display:block; color:var(--green); font-size:12px; font-weight:850; }
     .spotlight-title strong { display:block; font-size:28px; line-height:1.08; margin-top:2px; }
@@ -53,7 +89,7 @@
     .backtest-grid span { display:block; margin-top:3px; color:#64748b; font-size:10px; font-weight:800; }
     .backtest-panel p { margin:9px 0 0; color:#475569; font-size:12px; line-height:1.65; overflow-wrap:anywhere; }
     .metric { position:relative; overflow:hidden; min-height:92px; align-self:start; }
-    .metric::after { content:""; position:absolute; inset:auto -20px -28px auto; width:70px; height:70px; border-radius:50%; opacity:.18; background:currentColor; }
+    .metric::after { content:none; }
     .metric span { color:rgba(23,32,38,.68); font-size:12px; font-weight:750; }
     .metric strong { display:block; margin-top:6px; font-size:26px; line-height:1.1; }
     .metric.action { color:var(--green); background:linear-gradient(135deg,#f3fffb,#d9f3ee); border-color:#a7e4d8; }
@@ -62,7 +98,7 @@
     .metric.total { color:var(--violet); background:linear-gradient(135deg,#faf7ff,#ede9fe); border-color:#ddd6fe; }
     .metric.cover { color:#0369a1; background:linear-gradient(135deg,#f0f9ff,#e0f2fe); border-color:#bae6fd; }
     .freq-badge { display:inline-flex; align-items:center; min-height:20px; margin-left:6px; padding:1px 6px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:12px; font-weight:900; vertical-align:middle; }
-    .controls { position:sticky; top:0; z-index:5; display:grid; grid-template-columns:minmax(260px,2fr) repeat(4,minmax(124px,1fr)); gap:8px; background:rgba(243,246,248,.94); backdrop-filter:blur(10px); padding:8px 0; }
+    .controls { position:sticky; top:58px; z-index:5; display:grid; grid-template-columns:minmax(260px,2fr) repeat(4,minmax(124px,1fr)); gap:8px; background:rgba(246,244,238,.94); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); padding:8px 0; }
     input,select,button { min-height:38px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--text); padding:7px 10px; font:inherit; }
     button { cursor:pointer; font-weight:750; font-size:14px; border-color:#cbd5e1; background:#fff; }
     button:hover { border-color:#94a3b8; background:#f8fafc; }
@@ -153,6 +189,13 @@
       .summary-row { grid-template-columns:1fr; }
     }
     @media (max-width: 760px) {
+      .csn-topnav-inner { padding:0 12px; gap:8px; }
+      .csn-brand-sub { display:none !important; }
+      .csn-menu { min-width:0; overflow-x:auto; overflow-y:hidden; }
+      .csn-brand-name { font-size:15px; }
+      .csn-item>a,.csn-item>button { padding:0 10px; font-size:13px; }
+      .csn-drop { left:auto; right:0; transform:translate(0,6px); min-width:220px; }
+      .csn-item:hover .csn-drop,.csn-item:focus-within .csn-drop { transform:none; }
       main { padding:14px 10px 32px; }
       .system-nav { width:100%; }
       .system-nav a { flex:1; justify-content:center; }
@@ -162,6 +205,7 @@
       .summary-row .panel { grid-column:1/-1; }
       .watchlist-text { font-size:14px; line-height:1.75; }
       .controls { grid-template-columns:1fr 1fr; }
+      .controls > * { min-width:0; width:100%; }
       .controls input { grid-column:1/-1; }
       .result-bar { display:grid; }
       .table-wrap { max-height:none; overflow:visible; background:transparent; border:0; box-shadow:none; }
@@ -189,9 +233,39 @@
   </style>
 </head>
 <body>
+<nav class="csn-topnav" aria-label="全站导航">
+  <div class="csn-topnav-inner">
+    <a class="csn-brand" href="../">
+      <span class="csn-brand-seal">研</span>
+      <span>
+        <span class="csn-brand-name">CSN 投研</span>
+        <span class="csn-brand-sub">Research Desk</span>
+      </span>
+    </a>
+    <div class="csn-menu">
+      <div class="csn-item active">
+        <button type="button" aria-haspopup="true">股票 <span class="csn-caret">▼</span></button>
+        <div class="csn-drop">
+          <a href="../mda100/"><b>A股严选</b><small>主线雷达 · MD50 选股 · 全量评分</small></a>
+          <a class="current" href="./"><b>表姐严选</b><small>核心池每日筛选 · OpenD 核验</small></a>
+        </div>
+      </div>
+      <div class="csn-item">
+        <button type="button" aria-haspopup="true">工具 <span class="csn-caret">▼</span></button>
+        <div class="csn-drop">
+          <a href="../rs-thrust/"><b>相对强度加速图</b><small>找正在加速的强势股</small></a>
+          <a href="../us-skew/"><b>期权风险分布图</b><small>看保护需求与风险温度</small></a>
+          <a href="../ai-decision/"><b>每日市场进度</b><small>A股与美股的回调出清进度</small></a>
+        </div>
+      </div>
+      <div class="csn-item"><a href="../nav/">报告</a></div>
+    </div>
+  </div>
+</nav>
 <main>
   <header>
-    <div>
+    <div class="page-headline">
+      <span class="csn-kicker">CSN EQUITY SCREEN</span>
       <h1>表姐严选</h1>
       <nav class="system-nav" aria-label="系统切换">
         <a class="active" href="../csn/">核心池筛选</a>
