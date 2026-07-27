@@ -112,7 +112,7 @@ a:hover { color: #0f2c49; }
 
 .csn-drop {
   position: absolute; top: calc(100% + 1px); left: 50%; transform: translate(-50%, 6px);
-  min-width: 250px; padding: 8px;
+  width: 280px; min-width: 280px; padding: 8px;
   background: var(--panel); border: 1px solid var(--hairline); border-radius: 12px;
   box-shadow: var(--shadow-lift);
   opacity: 0; visibility: hidden; pointer-events: none;
@@ -122,11 +122,11 @@ a:hover { color: #0f2c49; }
   opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0);
 }
 .csn-drop a {
-  display: block; padding: 9px 11px; border-radius: 8px; text-decoration: none; color: var(--ink);
+  display: block; min-height: 58px; padding: 9px 11px; border-radius: 8px; text-decoration: none; color: var(--ink);
 }
 .csn-drop a:hover { background: var(--panel-2); }
 .csn-drop a b { display: block; font-size: 13.5px; font-weight: 650; }
-.csn-drop a small { display: block; font-size: 11.5px; color: var(--muted); margin-top: 2px; line-height: 1.45; }
+.csn-drop a small { display: block; font-size: 11.5px; color: var(--muted); margin-top: 2px; line-height: 1.45; white-space: nowrap; }
 .csn-drop a.current b::after { content: "· 当前"; color: var(--cinnabar); font-size: 11px; margin-left: 4px; }
 
 /* ============ 页面骨架 ============ */
@@ -197,7 +197,7 @@ a:hover { color: #0f2c49; }
   .csn-menu { min-width: 0; overflow-x: auto; overflow-y: hidden; }
   .csn-brand-name { font-size: 15px; }
   .csn-item > a, .csn-item > button { padding: 0 10px; font-size: 13px; }
-  .csn-drop { left: auto; right: 0; transform: translate(0, 6px); min-width: 220px; }
+  .csn-drop { left: auto; right: 0; width: min(280px, calc(100vw - 24px)); min-width: 0; transform: translate(0, 6px); }
   .csn-item:hover .csn-drop, .csn-item:focus-within .csn-drop { transform: none; }
   .csn-page { padding: 24px 14px 48px; }
 }
@@ -362,8 +362,8 @@ footer {
       <div class="csn-item" data-group="stocks">
         <button type="button" aria-haspopup="true">股票 <span class="csn-caret">▼</span></button>
         <div class="csn-drop">
-          <a href="../mda100/" data-key="mda100"><b>A股严选</b><small>主线雷达 · MD50 选股 · 全量评分</small></a>
-          <a href="../csn/" data-key="csn"><b>美股严选</b><small>核心池每日筛选 · 热门股扫描</small></a>
+          <a href="../mda100/" data-key="mda100"><b>A股严选</b><small>主线雷达 · MD50选股 · 全量评分</small></a>
+          <a href="../csn/" data-key="csn"><b>核心池筛选</b><small>300只核心池 · OpenD核验</small></a>
           <a href="../csn/hot/" data-key="csn-hot"><b>美股热门榜</b><small>全市场热榜 · 板块轮动 · 技术核验</small></a>
         </div>
       </div>
