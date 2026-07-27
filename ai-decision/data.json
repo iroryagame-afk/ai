@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-07-27T04:31:55.251Z",
+  "generatedAt": "2026-07-27T04:47:58.142Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
     "cn": {
-      "asOf": "2026-07-23",
-      "score": -11,
+      "asOf": "2026-07-24",
+      "score": -19,
       "label": "中性偏恐",
       "valid": 54,
-      "aboveMa20Pct": 42.6,
-      "fear": 3,
+      "aboveMa20Pct": 22.2,
+      "fear": 5,
       "greed": 0,
       "coverage": {
-        "valid": 55,
+        "valid": 60,
         "total": 60,
-        "ratio": 0.9167
+        "ratio": 1
       }
     },
     "kr": {
-      "asOf": "2026-07-23",
-      "score": -42,
+      "asOf": "2026-07-24",
+      "score": -50,
       "label": "中性偏恐",
       "valid": 4,
       "aboveMa20Pct": 0,
-      "fear": 0,
+      "fear": 1,
       "greed": 0,
       "coverage": {
         "valid": 10,
@@ -32,11 +32,11 @@
       }
     },
     "us": {
-      "asOf": "2026-07-22",
-      "score": 6,
+      "asOf": "2026-07-24",
+      "score": 1,
       "label": "中性偏热",
       "valid": 16,
-      "aboveMa20Pct": 37.5,
+      "aboveMa20Pct": 43.8,
       "fear": 0,
       "greed": 0,
       "spy1dPct": 0.1,
@@ -65,22 +65,22 @@
   },
   "putCall": {
     "source": "Cboe Global Markets",
-    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-07-22",
-    "asOf": "2026-07-22",
-    "total": 1.01,
-    "totalPrevious": 0.92,
-    "equity": 0.67,
-    "equityPrevious": 0.65,
-    "previousAsOf": "2026-07-21",
+    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-07-24",
+    "asOf": "2026-07-24",
+    "total": 0.99,
+    "totalPrevious": 0.88,
+    "equity": 0.79,
+    "equityPrevious": 0.61,
+    "previousAsOf": "2026-07-23",
     "status": "verified_official",
-    "totalChange": 0.09,
-    "equityChange": 0.02
+    "totalChange": 0.11,
+    "equityChange": 0.18
   },
   "skew": {
-    "asOf": "2026-07-22",
-    "median25d": 1.72,
-    "valid": 16,
-    "highCount": 7,
+    "asOf": "2026-07-24",
+    "median25d": 5.19,
+    "valid": 11,
+    "highCount": 5,
     "status": "verified_close"
   },
   "breadth": {
@@ -92,35 +92,35 @@
   },
   "correction": {
     "cn": {
-      "score": 53,
+      "score": 62,
       "components": {
         "deleveraging": 79,
-        "belowMa20": 57.4,
-        "sentimentScore": -11,
-        "fearCount": 3,
+        "belowMa20": 77.8,
+        "sentimentScore": -19,
+        "fearCount": 5,
         "sampleCount": 54
       },
       "label": "回调中段"
     },
     "kr": {
-      "score": 71,
+      "score": 76,
       "components": {
         "deleveraging": 68.2,
         "belowMa20": 100,
-        "sentimentScore": -42,
-        "fearCount": 0,
+        "sentimentScore": -50,
+        "fearCount": 1,
         "sampleCount": 4
       },
       "label": "出清接近基本位"
     },
     "us": {
-      "score": 47,
+      "score": 44,
       "components": {
-        "belowMa20": 62.5,
-        "sentimentScore": 6,
-        "putCallTotal": 1.01,
-        "skewHighCount": 7,
-        "skewValid": 16
+        "belowMa20": 56.3,
+        "sentimentScore": 1,
+        "putCallTotal": 0.99,
+        "skewHighCount": 5,
+        "skewValid": 11
       },
       "label": "回调中段"
     }
