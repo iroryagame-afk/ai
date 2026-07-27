@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T04:47:58.142Z",
+  "generatedAt": "2026-07-27T06:43:27.683Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -56,9 +56,9 @@
       "basicTn": 2.6
     },
     "korea": {
-      "asOf": "2026-07-23",
-      "currentTn": 32.749,
-      "progressToBasicPct": 68.2,
+      "asOf": "2026-07-24",
+      "currentTn": 32.672,
+      "progressToBasicPct": 69,
       "basicTn": 30,
       "etfFiveDayFlowTn": null
     }
@@ -103,9 +103,9 @@
       "label": "回调中段"
     },
     "kr": {
-      "score": 76,
+      "score": 77,
       "components": {
-        "deleveraging": 68.2,
+        "deleveraging": 69,
         "belowMa20": 100,
         "sentimentScore": -50,
         "fearCount": 1,
