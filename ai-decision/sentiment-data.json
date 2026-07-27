@@ -1,0 +1,1782 @@
+{
+  "mode": "close_only",
+  "methodologyVersion": "yanpan-close-v1",
+  "markets": {
+    "CN": {
+      "displayName": "A股",
+      "status": "verified_with_gaps",
+      "asOf": "2026-07-23",
+      "generatedAt": "2026-07-23T16:25:45+08:00",
+      "timezone": "Asia/Shanghai",
+      "source": "Futu OpenD",
+      "coverage": {
+        "valid": 55,
+        "total": 60,
+        "ratio": 0.9167
+      },
+      "groups": {
+        "ETF": {
+          "score": -11,
+          "label": "中性偏恐",
+          "fear": 3,
+          "neutral": 51,
+          "greed": 0,
+          "rows": [
+            {
+              "code": "SH.515790",
+              "name": "光伏ETF",
+              "score": -66,
+              "close": 0.839,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 2.32,
+              "components": {
+                "rsi14": -29.3,
+                "priceVsMa20Atr": -62.78,
+                "ma20VsMa60Atr": -100,
+                "momentum20": -83.83,
+                "drawdown20": -100,
+                "volumeImpulse": -5.11
+              }
+            },
+            {
+              "code": "SH.512100",
+              "name": "中证1000ETF",
+              "score": -64,
+              "close": 2.914,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 0.8,
+              "components": {
+                "rsi14": -35.42,
+                "priceVsMa20Atr": -89.06,
+                "ma20VsMa60Atr": -35.6,
+                "momentum20": -91.76,
+                "drawdown20": -100,
+                "volumeImpulse": -40.67
+              }
+            },
+            {
+              "code": "SH.563300",
+              "name": "中证2000ETF",
+              "score": -63,
+              "close": 1.299,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 1.88,
+              "components": {
+                "rsi14": -38.52,
+                "priceVsMa20Atr": -90.85,
+                "ma20VsMa60Atr": -42.52,
+                "momentum20": -97.33,
+                "drawdown20": -100,
+                "volumeImpulse": 48.76
+              }
+            },
+            {
+              "code": "SH.515030",
+              "name": "新能源车ETF",
+              "score": -59,
+              "close": 1.608,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 3.61,
+              "components": {
+                "rsi14": -22.42,
+                "priceVsMa20Atr": -50.06,
+                "ma20VsMa60Atr": -100,
+                "momentum20": -74.38,
+                "drawdown20": -97.06,
+                "volumeImpulse": -4.76
+              }
+            },
+            {
+              "code": "SH.512660",
+              "name": "军工ETF",
+              "score": -54,
+              "close": 1.101,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 1.66,
+              "components": {
+                "rsi14": -26.84,
+                "priceVsMa20Atr": -59.88,
+                "ma20VsMa60Atr": -59.7,
+                "momentum20": -63.1,
+                "drawdown20": -100,
+                "volumeImpulse": -15.62
+              }
+            },
+            {
+              "code": "SH.562500",
+              "name": "机器人ETF",
+              "score": -53,
+              "close": 0.954,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -0.73,
+              "components": {
+                "rsi14": -31.18,
+                "priceVsMa20Atr": -78.51,
+                "ma20VsMa60Atr": -30.26,
+                "momentum20": -81.95,
+                "drawdown20": -100,
+                "volumeImpulse": 46.39
+              }
+            },
+            {
+              "code": "SZ.159915",
+              "name": "创业板ETF",
+              "score": -45,
+              "close": 3.597,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 0.31,
+              "components": {
+                "rsi14": -18.89,
+                "priceVsMa20Atr": -54.08,
+                "ma20VsMa60Atr": -11.1,
+                "momentum20": -90.78,
+                "drawdown20": -100,
+                "volumeImpulse": -18.45
+              }
+            },
+            {
+              "code": "SH.515050",
+              "name": "5G通信ETF",
+              "score": -42,
+              "close": 1.057,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -0.38,
+              "components": {
+                "rsi14": -19.85,
+                "priceVsMa20Atr": -57.42,
+                "ma20VsMa60Atr": 4.46,
+                "momentum20": -100,
+                "drawdown20": -100,
+                "volumeImpulse": 35.85
+              }
+            },
+            {
+              "code": "SH.510500",
+              "name": "中证500ETF",
+              "score": -41,
+              "close": 7.737,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -0.04,
+              "components": {
+                "rsi14": -22.61,
+                "priceVsMa20Atr": -65.34,
+                "ma20VsMa60Atr": -8.92,
+                "momentum20": -67.09,
+                "drawdown20": -96.41,
+                "volumeImpulse": 53.5
+              }
+            },
+            {
+              "code": "SH.512480",
+              "name": "半导体ETF",
+              "score": -35,
+              "close": 1.106,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -3.99,
+              "components": {
+                "rsi14": -16.63,
+                "priceVsMa20Atr": -61.17,
+                "ma20VsMa60Atr": 47.64,
+                "momentum20": -100,
+                "drawdown20": -100,
+                "volumeImpulse": 1.44
+              }
+            },
+            {
+              "code": "SZ.159869",
+              "name": "游戏ETF",
+              "score": -35,
+              "close": 1.026,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -2.1,
+              "components": {
+                "rsi14": -21.73,
+                "priceVsMa20Atr": -39.75,
+                "ma20VsMa60Atr": -39.62,
+                "momentum20": -33.21,
+                "drawdown20": -60.82,
+                "volumeImpulse": -7.79
+              }
+            },
+            {
+              "code": "SZ.159995",
+              "name": "芯片ETF",
+              "score": -33,
+              "close": 1.262,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -3.81,
+              "components": {
+                "rsi14": -16.13,
+                "priceVsMa20Atr": -58.52,
+                "ma20VsMa60Atr": 45.34,
+                "momentum20": -100,
+                "drawdown20": -100,
+                "volumeImpulse": 33.96
+              }
+            },
+            {
+              "code": "SH.515230",
+              "name": "软件ETF",
+              "score": -32,
+              "close": 0.675,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -1.03,
+              "components": {
+                "rsi14": -12.24,
+                "priceVsMa20Atr": -10.67,
+                "ma20VsMa60Atr": -95.34,
+                "momentum20": -27.31,
+                "drawdown20": -36.41,
+                "volumeImpulse": 18.67
+              }
+            },
+            {
+              "code": "SH.510210",
+              "name": "上证指数ETF",
+              "score": -29,
+              "close": 0.982,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 0.72,
+              "components": {
+                "rsi14": -14.18,
+                "priceVsMa20Atr": -32.29,
+                "ma20VsMa60Atr": -40.91,
+                "momentum20": -25.15,
+                "drawdown20": -31.07,
+                "volumeImpulse": -44.59
+              }
+            },
+            {
+              "code": "SH.520830",
+              "name": "沙特ETF",
+              "score": -29,
+              "close": 0.88,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 0.57,
+              "components": {
+                "rsi14": -19.13,
+                "priceVsMa20Atr": -24.63,
+                "ma20VsMa60Atr": -100,
+                "momentum20": -11.65,
+                "drawdown20": -8.97,
+                "volumeImpulse": 100
+              }
+            },
+            {
+              "code": "SH.588000",
+              "name": "科创50ETF",
+              "score": -27,
+              "close": 1.888,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -3.43,
+              "components": {
+                "rsi14": -11.78,
+                "priceVsMa20Atr": -47.42,
+                "ma20VsMa60Atr": 39.86,
+                "momentum20": -66.57,
+                "drawdown20": -100,
+                "volumeImpulse": -2.11
+              }
+            },
+            {
+              "code": "SZ.159529",
+              "name": "标普消费ETF",
+              "score": -27,
+              "close": 1.262,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -0.55,
+              "components": {
+                "rsi14": -24.26,
+                "priceVsMa20Atr": -51.7,
+                "ma20VsMa60Atr": -24.12,
+                "momentum20": -6.65,
+                "drawdown20": -26.38,
+                "volumeImpulse": 4.01
+              }
+            },
+            {
+              "code": "SH.513000",
+              "name": "日本ETF",
+              "score": -24,
+              "close": 2.273,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 0.58,
+              "components": {
+                "rsi14": -10.75,
+                "priceVsMa20Atr": -46.5,
+                "ma20VsMa60Atr": 39.34,
+                "momentum20": -62.04,
+                "drawdown20": -64.39,
+                "volumeImpulse": -33.15
+              }
+            },
+            {
+              "code": "SZ.159687",
+              "name": "亚太精选ETF",
+              "score": -23,
+              "close": 1.809,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 1.29,
+              "components": {
+                "rsi14": -5.07,
+                "priceVsMa20Atr": -10.6,
+                "ma20VsMa60Atr": -16.84,
+                "momentum20": -45.25,
+                "drawdown20": -56.96,
+                "volumeImpulse": -71.89
+              }
+            },
+            {
+              "code": "SZ.159819",
+              "name": "人工智能ETF",
+              "score": -23,
+              "close": 1.929,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -2.53,
+              "components": {
+                "rsi14": -9.08,
+                "priceVsMa20Atr": -31.37,
+                "ma20VsMa60Atr": 15.46,
+                "momentum20": -57.57,
+                "drawdown20": -90.5,
+                "volumeImpulse": 27.71
+              }
+            },
+            {
+              "code": "SH.513730",
+              "name": "东南亚科技ETF",
+              "score": -19,
+              "close": 1.142,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -0.17,
+              "components": {
+                "rsi14": -12.83,
+                "priceVsMa20Atr": -25.69,
+                "ma20VsMa60Atr": -45.24,
+                "momentum20": -4.34,
+                "drawdown20": -15.95,
+                "volumeImpulse": 41.49
+              }
+            },
+            {
+              "code": "SZ.164824",
+              "name": "印度ETF",
+              "score": -19,
+              "close": 1.274,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -0.08,
+              "components": {
+                "rsi14": -19.83,
+                "priceVsMa20Atr": -59.01,
+                "ma20VsMa60Atr": 18.68,
+                "momentum20": -15.59,
+                "drawdown20": -23.72,
+                "volumeImpulse": 41.27
+              }
+            },
+            {
+              "code": "SH.511380",
+              "name": "可转债ETF",
+              "score": -18,
+              "close": 13.8,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 0.12,
+              "components": {
+                "rsi14": -7.88,
+                "priceVsMa20Atr": -13.56,
+                "ma20VsMa60Atr": -47.61,
+                "momentum20": -3.31,
+                "drawdown20": -10.74,
+                "volumeImpulse": -26.26
+              }
+            },
+            {
+              "code": "SH.515800",
+              "name": "中证800ETF",
+              "score": -18,
+              "close": 1.3,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 0.39,
+              "components": {
+                "rsi14": -11.27,
+                "priceVsMa20Atr": -32.51,
+                "ma20VsMa60Atr": -10.21,
+                "momentum20": -37.37,
+                "drawdown20": -48.94,
+                "volumeImpulse": 100
+              }
+            },
+            {
+              "code": "SH.510300",
+              "name": "沪深300ETF",
+              "score": -17,
+              "close": 4.787,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 0.46,
+              "components": {
+                "rsi14": -4.2,
+                "priceVsMa20Atr": -13.19,
+                "ma20VsMa60Atr": -13.58,
+                "momentum20": -25.85,
+                "drawdown20": -30.82,
+                "volumeImpulse": -61.19
+              }
+            },
+            {
+              "code": "SZ.159941",
+              "name": "纳指100ETF",
+              "score": -15,
+              "close": 1.589,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 0.13,
+              "components": {
+                "rsi14": -7.42,
+                "priceVsMa20Atr": -28.1,
+                "ma20VsMa60Atr": 7.3,
+                "momentum20": -20.52,
+                "drawdown20": -25.42,
+                "volumeImpulse": -32.55
+              }
+            },
+            {
+              "code": "SH.513030",
+              "name": "德国ETF",
+              "score": -10,
+              "close": 1.771,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 0.51,
+              "components": {
+                "rsi14": -3.08,
+                "priceVsMa20Atr": -9.75,
+                "ma20VsMa60Atr": -14.44,
+                "momentum20": 6.58,
+                "drawdown20": -29.85,
+                "volumeImpulse": -32.64
+              }
+            },
+            {
+              "code": "SH.518880",
+              "name": "黄金ETF",
+              "score": -10,
+              "close": 8.56,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 0,
+              "components": {
+                "rsi14": -2.91,
+                "priceVsMa20Atr": 33,
+                "ma20VsMa60Atr": -100,
+                "momentum20": 16.47,
+                "drawdown20": -8.61,
+                "volumeImpulse": 14.93
+              }
+            },
+            {
+              "code": "SZ.159509",
+              "name": "纳指科技ETF",
+              "score": -9,
+              "close": 2.604,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 0,
+              "components": {
+                "rsi14": -4.49,
+                "priceVsMa20Atr": -7.48,
+                "ma20VsMa60Atr": -5.05,
+                "momentum20": -15.08,
+                "drawdown20": -23.7,
+                "volumeImpulse": -17.29
+              }
+            },
+            {
+              "code": "SH.513080",
+              "name": "法国ETF",
+              "score": -2,
+              "close": 1.747,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 0.75,
+              "components": {
+                "rsi14": 0.9,
+                "priceVsMa20Atr": 0.6,
+                "ma20VsMa60Atr": -1.71,
+                "momentum20": 1.15,
+                "drawdown20": -15.65,
+                "volumeImpulse": -19.58
+              }
+            },
+            {
+              "code": "SH.513130",
+              "name": "恒生科技ETF",
+              "score": -2,
+              "close": 0.585,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 0.34,
+              "components": {
+                "rsi14": 0.36,
+                "priceVsMa20Atr": 13.54,
+                "ma20VsMa60Atr": -33.15,
+                "momentum20": 31.82,
+                "drawdown20": -20.97,
+                "volumeImpulse": -31.51
+              }
+            },
+            {
+              "code": "SH.513400",
+              "name": "道琼斯ETF",
+              "score": -2,
+              "close": 1.292,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": 0.16,
+              "components": {
+                "rsi14": -4.93,
+                "priceVsMa20Atr": -40.98,
+                "ma20VsMa60Atr": 80.51,
+                "momentum20": -3.46,
+                "drawdown20": -32.4,
+                "volumeImpulse": -47.41
+              }
+            },
+            {
+              "code": "SH.513850",
+              "name": "美国50ETF",
+              "score": 1,
+              "close": 1.755,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 0.17,
+              "components": {
+                "rsi14": 0.57,
+                "priceVsMa20Atr": 3.84,
+                "ma20VsMa60Atr": 9.64,
+                "momentum20": 2,
+                "drawdown20": -16.31,
+                "volumeImpulse": -21.29
+              }
+            },
+            {
+              "code": "SH.513500",
+              "name": "标普500ETF",
+              "score": 2,
+              "close": 2.524,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 0.04,
+              "components": {
+                "rsi14": 1.44,
+                "priceVsMa20Atr": 11.38,
+                "ma20VsMa60Atr": 3.24,
+                "momentum20": 1.19,
+                "drawdown20": -13.71,
+                "volumeImpulse": -16.67
+              }
+            },
+            {
+              "code": "SH.513290",
+              "name": "纳指生物科技ETF",
+              "score": 3,
+              "close": 1.584,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -0.94,
+              "components": {
+                "rsi14": -4.45,
+                "priceVsMa20Atr": -44.61,
+                "ma20VsMa60Atr": 84.87,
+                "momentum20": 10.31,
+                "drawdown20": -78.37,
+                "volumeImpulse": 83.93
+              }
+            },
+            {
+              "code": "SH.513330",
+              "name": "恒生互联网ETF",
+              "score": 4,
+              "close": 0.384,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 1.05,
+              "components": {
+                "rsi14": 3.5,
+                "priceVsMa20Atr": 24.77,
+                "ma20VsMa60Atr": -45.6,
+                "momentum20": 61.4,
+                "drawdown20": -23.45,
+                "volumeImpulse": -24.83
+              }
+            },
+            {
+              "code": "SZ.159502",
+              "name": "标普生物科技ETF",
+              "score": 4,
+              "close": 1.527,
+              "date": "2026-07-23",
+              "aboveMa20": false,
+              "return1dPct": -0.97,
+              "components": {
+                "rsi14": -2.87,
+                "priceVsMa20Atr": -47.92,
+                "ma20VsMa60Atr": 100,
+                "momentum20": 2.96,
+                "drawdown20": -77.89,
+                "volumeImpulse": 81.06
+              }
+            },
+            {
+              "code": "SZ.159865",
+              "name": "养殖ETF",
+              "score": 4,
+              "close": 0.531,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 0.57,
+              "components": {
+                "rsi14": 6.35,
+                "priceVsMa20Atr": 24.57,
+                "ma20VsMa60Atr": -48.02,
+                "momentum20": 55.44,
+                "drawdown20": -15.93,
+                "volumeImpulse": -22.2
+              }
+            },
+            {
+              "code": "SH.513050",
+              "name": "中概互联网ETF",
+              "score": 5,
+              "close": 1.095,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 1.2,
+              "components": {
+                "rsi14": 4.53,
+                "priceVsMa20Atr": 26.83,
+                "ma20VsMa60Atr": -37.76,
+                "momentum20": 63.27,
+                "drawdown20": -29.11,
+                "volumeImpulse": -29.38
+              }
+            },
+            {
+              "code": "SH.512690",
+              "name": "酒ETF",
+              "score": 8,
+              "close": 0.425,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": -1.16,
+              "components": {
+                "rsi14": 12.5,
+                "priceVsMa20Atr": 54.7,
+                "ma20VsMa60Atr": -70.43,
+                "momentum20": 36.62,
+                "drawdown20": -10.8,
+                "volumeImpulse": 26.48
+              }
+            },
+            {
+              "code": "SH.512880",
+              "name": "证券ETF",
+              "score": 9,
+              "close": 1.128,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 1.26,
+              "components": {
+                "rsi14": 8.33,
+                "priceVsMa20Atr": 3.96,
+                "ma20VsMa60Atr": 54.74,
+                "momentum20": -9.14,
+                "drawdown20": -27.21,
+                "volumeImpulse": -22.87
+              }
+            },
+            {
+              "code": "SH.510050",
+              "name": "上证50ETF",
+              "score": 12,
+              "close": 3.084,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": -0.06,
+              "components": {
+                "rsi14": 10.29,
+                "priceVsMa20Atr": 23.1,
+                "ma20VsMa60Atr": 7.37,
+                "momentum20": 4.09,
+                "drawdown20": -1.08,
+                "volumeImpulse": 27.35
+              }
+            },
+            {
+              "code": "SH.520870",
+              "name": "巴西ETF",
+              "score": 14,
+              "close": 1.13,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 2.91,
+              "components": {
+                "rsi14": 15.92,
+                "priceVsMa20Atr": 60.73,
+                "ma20VsMa60Atr": -48.69,
+                "momentum20": 34.03,
+                "drawdown20": 0,
+                "volumeImpulse": -16.34
+              }
+            },
+            {
+              "code": "SH.512170",
+              "name": "医疗ETF",
+              "score": 16,
+              "close": 0.325,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": -0.61,
+              "components": {
+                "rsi14": 13.5,
+                "priceVsMa20Atr": 25.81,
+                "ma20VsMa60Atr": 2.28,
+                "momentum20": 38.08,
+                "drawdown20": -16.02,
+                "volumeImpulse": 28.33
+              }
+            },
+            {
+              "code": "SZ.159928",
+              "name": "消费ETF",
+              "score": 16,
+              "close": 0.67,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": -0.45,
+              "components": {
+                "rsi14": 18.21,
+                "priceVsMa20Atr": 59.47,
+                "ma20VsMa60Atr": -55.1,
+                "momentum20": 49.18,
+                "drawdown20": -5.92,
+                "volumeImpulse": 15.8
+              }
+            },
+            {
+              "code": "SH.513630",
+              "name": "港股红利ETF",
+              "score": 17,
+              "close": 1.599,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 1.2,
+              "components": {
+                "rsi14": 31.47,
+                "priceVsMa20Atr": 100,
+                "ma20VsMa60Atr": -100,
+                "momentum20": 39.11,
+                "drawdown20": 0,
+                "volumeImpulse": -43.66
+              }
+            },
+            {
+              "code": "SH.513060",
+              "name": "恒生医疗ETF",
+              "score": 22,
+              "close": 0.54,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 0,
+              "components": {
+                "rsi14": 16.82,
+                "priceVsMa20Atr": 30.33,
+                "ma20VsMa60Atr": 6.79,
+                "momentum20": 74.47,
+                "drawdown20": -12.12,
+                "volumeImpulse": -28.08
+              }
+            },
+            {
+              "code": "SZ.159920",
+              "name": "恒生ETF",
+              "score": 22,
+              "close": 1.494,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 1.36,
+              "components": {
+                "rsi14": 22.55,
+                "priceVsMa20Atr": 79.79,
+                "ma20VsMa60Atr": -46.89,
+                "momentum20": 48.86,
+                "drawdown20": 0,
+                "volumeImpulse": -31.41
+              }
+            },
+            {
+              "code": "SH.512800",
+              "name": "银行ETF",
+              "score": 24,
+              "close": 0.803,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 0.5,
+              "components": {
+                "rsi14": 20.74,
+                "priceVsMa20Atr": 68.75,
+                "ma20VsMa60Atr": -16.94,
+                "momentum20": 33.2,
+                "drawdown20": -4.13,
+                "volumeImpulse": 2.18
+              }
+            },
+            {
+              "code": "SH.513120",
+              "name": "香港创新药ETF",
+              "score": 25,
+              "close": 1.194,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 0.51,
+              "components": {
+                "rsi14": 17.24,
+                "priceVsMa20Atr": 28.44,
+                "ma20VsMa60Atr": 19.31,
+                "momentum20": 84.15,
+                "drawdown20": -15.81,
+                "volumeImpulse": -21.21
+              }
+            },
+            {
+              "code": "SZ.159992",
+              "name": "创新药ETF",
+              "score": 25,
+              "close": 0.877,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": -0.34,
+              "components": {
+                "rsi14": 17.05,
+                "priceVsMa20Atr": 19.86,
+                "ma20VsMa60Atr": 38.44,
+                "momentum20": 63.62,
+                "drawdown20": -25.58,
+                "volumeImpulse": 30.65
+              }
+            },
+            {
+              "code": "SH.512010",
+              "name": "医药ETF",
+              "score": 26,
+              "close": 0.377,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 0,
+              "components": {
+                "rsi14": 23.6,
+                "priceVsMa20Atr": 32.81,
+                "ma20VsMa60Atr": 29.37,
+                "momentum20": 52.79,
+                "drawdown20": -3.52,
+                "volumeImpulse": -33.29
+              }
+            },
+            {
+              "code": "SH.510880",
+              "name": "A股红利ETF",
+              "score": 27,
+              "close": 3.28,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 0.83,
+              "components": {
+                "rsi14": 26.31,
+                "priceVsMa20Atr": 92.32,
+                "ma20VsMa60Atr": -45.98,
+                "momentum20": 45.58,
+                "drawdown20": 0,
+                "volumeImpulse": -12.62
+              }
+            },
+            {
+              "code": "SZ.159518",
+              "name": "标普油气ETF",
+              "score": 44,
+              "close": 1.227,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 2.34,
+              "components": {
+                "rsi14": 32.92,
+                "priceVsMa20Atr": 100,
+                "ma20VsMa60Atr": -27.11,
+                "momentum20": 100,
+                "drawdown20": 0,
+                "volumeImpulse": 26.03
+              }
+            }
+          ]
+        },
+        "个股": {
+          "score": -9,
+          "label": "中性偏恐",
+          "fear": 0,
+          "neutral": 1,
+          "greed": 0,
+          "rows": [
+            {
+              "code": "SZ.300750",
+              "name": "宁德时代",
+              "score": -9,
+              "close": 385.99,
+              "date": "2026-07-23",
+              "aboveMa20": true,
+              "return1dPct": 3.69,
+              "components": {
+                "rsi14": 4.58,
+                "priceVsMa20Atr": 24.59,
+                "ma20VsMa60Atr": -57.67,
+                "momentum20": -19.79,
+                "drawdown20": -11.91,
+                "volumeImpulse": -3.03
+              }
+            }
+          ]
+        }
+      },
+      "errors": [
+        "SH.600519: Get Historical Candlestick request failed due to high frequency. Maximum 60 times per 30 seconds.",
+        "SH.688981: Get Historical Candlestick request failed due to high frequency. Maximum 60 times per 30 seconds.",
+        "SZ.300059: Get Historical Candlestick request failed due to high frequency. Maximum 60 times per 30 seconds.",
+        "SZ.002475: Get Historical Candlestick request failed due to high frequency. Maximum 60 times per 30 seconds.",
+        "SZ.002594: Get Historical Candlestick request failed due to high frequency. Maximum 60 times per 30 seconds.",
+        "SH.600519: KeyError: 'SH.600519'",
+        "SH.688981: KeyError: 'SH.688981'",
+        "SZ.300059: KeyError: 'SZ.300059'",
+        "SZ.002475: KeyError: 'SZ.002475'",
+        "SZ.002594: KeyError: 'SZ.002594'"
+      ]
+    },
+    "HK": {
+      "displayName": "港股",
+      "status": "verified_close",
+      "asOf": "2026-07-27",
+      "generatedAt": "2026-07-27T16:22:48+08:00",
+      "timezone": "Asia/Hong_Kong",
+      "source": "Futu OpenD",
+      "coverage": {
+        "valid": 10,
+        "total": 10,
+        "ratio": 1
+      },
+      "groups": {
+        "ETF": {
+          "score": 12,
+          "label": "中性偏热",
+          "fear": 0,
+          "neutral": 4,
+          "greed": 0,
+          "rows": [
+            {
+              "code": "HK.03033",
+              "name": "南方恒生科技",
+              "score": 4,
+              "close": 4.616,
+              "date": "2026-07-27",
+              "aboveMa20": true,
+              "return1dPct": 1.63,
+              "components": {
+                "rsi14": 2.63,
+                "priceVsMa20Atr": 13.19,
+                "ma20VsMa60Atr": -26.41,
+                "momentum20": 52.15,
+                "drawdown20": -18.53,
+                "volumeImpulse": -12.61
+              }
+            },
+            {
+              "code": "HK.03067",
+              "name": "安硕恒生科技",
+              "score": 4,
+              "close": 9.905,
+              "date": "2026-07-27",
+              "aboveMa20": true,
+              "return1dPct": 1.54,
+              "components": {
+                "rsi14": 2.23,
+                "priceVsMa20Atr": 12.13,
+                "ma20VsMa60Atr": -26.22,
+                "momentum20": 51.81,
+                "drawdown20": -17.37,
+                "volumeImpulse": -13.96
+              }
+            },
+            {
+              "code": "HK.02828",
+              "name": "恒生中国企业",
+              "score": 18,
+              "close": 85.96,
+              "date": "2026-07-27",
+              "aboveMa20": true,
+              "return1dPct": 0.99,
+              "components": {
+                "rsi14": 16.79,
+                "priceVsMa20Atr": 56.94,
+                "ma20VsMa60Atr": -41.03,
+                "momentum20": 62.71,
+                "drawdown20": -0.47,
+                "volumeImpulse": -21.87
+              }
+            },
+            {
+              "code": "HK.02800",
+              "name": "盈富基金",
+              "score": 21,
+              "close": 25.7,
+              "date": "2026-07-27",
+              "aboveMa20": true,
+              "return1dPct": 1.1,
+              "components": {
+                "rsi14": 20.25,
+                "priceVsMa20Atr": 66.71,
+                "ma20VsMa60Atr": -32.92,
+                "momentum20": 56.76,
+                "drawdown20": 0,
+                "volumeImpulse": -44.4
+              }
+            }
+          ]
+        },
+        "个股": {
+          "score": 20,
+          "label": "中性偏热",
+          "fear": 0,
+          "neutral": 6,
+          "greed": 0,
+          "rows": [
+            {
+              "code": "HK.00700",
+              "name": "腾讯控股",
+              "score": -9,
+              "close": 443,
+              "date": "2026-07-27",
+              "aboveMa20": false,
+              "return1dPct": 1.93,
+              "components": {
+                "rsi14": -6.92,
+                "priceVsMa20Atr": -20.14,
+                "ma20VsMa60Atr": 4.91,
+                "momentum20": 37.88,
+                "drawdown20": -56.47,
+                "volumeImpulse": -59.6
+              }
+            },
+            {
+              "code": "HK.09988",
+              "name": "阿里巴巴-W",
+              "score": 5,
+              "close": 111,
+              "date": "2026-07-27",
+              "aboveMa20": true,
+              "return1dPct": 0.91,
+              "components": {
+                "rsi14": 2.35,
+                "priceVsMa20Atr": 22.41,
+                "ma20VsMa60Atr": -50.86,
+                "momentum20": 100,
+                "drawdown20": -34.19,
+                "volumeImpulse": -49.22
+              }
+            },
+            {
+              "code": "HK.01211",
+              "name": "比亚迪股份",
+              "score": 20,
+              "close": 88.55,
+              "date": "2026-07-27",
+              "aboveMa20": true,
+              "return1dPct": -0.11,
+              "components": {
+                "rsi14": 10.92,
+                "priceVsMa20Atr": 34.33,
+                "ma20VsMa60Atr": -36.92,
+                "momentum20": 100,
+                "drawdown20": -17.59,
+                "volumeImpulse": 52.54
+              }
+            },
+            {
+              "code": "HK.00941",
+              "name": "中国移动",
+              "score": 26,
+              "close": 82.5,
+              "date": "2026-07-27",
+              "aboveMa20": true,
+              "return1dPct": 0.92,
+              "components": {
+                "rsi14": 43.36,
+                "priceVsMa20Atr": 100,
+                "ma20VsMa60Atr": -67.32,
+                "momentum20": 32.95,
+                "drawdown20": 0,
+                "volumeImpulse": -29.3
+              }
+            },
+            {
+              "code": "HK.01810",
+              "name": "小米集团-W",
+              "score": 33,
+              "close": 28.68,
+              "date": "2026-07-27",
+              "aboveMa20": true,
+              "return1dPct": 7.34,
+              "components": {
+                "rsi14": 27.81,
+                "priceVsMa20Atr": 74.14,
+                "ma20VsMa60Atr": -42.35,
+                "momentum20": 100,
+                "drawdown20": 0,
+                "volumeImpulse": 25.66
+              }
+            },
+            {
+              "code": "HK.03690",
+              "name": "美团-W",
+              "score": 42,
+              "close": 89.3,
+              "date": "2026-07-27",
+              "aboveMa20": true,
+              "return1dPct": 3,
+              "components": {
+                "rsi14": 30.44,
+                "priceVsMa20Atr": 73.06,
+                "ma20VsMa60Atr": 5.84,
+                "momentum20": 100,
+                "drawdown20": 0,
+                "volumeImpulse": 5.65
+              }
+            }
+          ]
+        }
+      },
+      "errors": []
+    },
+    "US": {
+      "displayName": "美股",
+      "status": "verified_close",
+      "asOf": "2026-07-22",
+      "generatedAt": "2026-07-23T04:24:09-04:00",
+      "timezone": "America/New_York",
+      "source": "Futu OpenD",
+      "coverage": {
+        "valid": 22,
+        "total": 22,
+        "ratio": 1
+      },
+      "groups": {
+        "ETF": {
+          "score": 6,
+          "label": "中性偏热",
+          "fear": 0,
+          "neutral": 16,
+          "greed": 0,
+          "rows": [
+            {
+              "code": "US.XLY",
+              "name": "可选消费ETF",
+              "score": -18,
+              "close": 114.02,
+              "date": "2026-07-22",
+              "aboveMa20": false,
+              "return1dPct": -0.74,
+              "components": {
+                "rsi14": -15.37,
+                "priceVsMa20Atr": -38.15,
+                "ma20VsMa60Atr": -16.35,
+                "momentum20": 1.14,
+                "drawdown20": -22.98,
+                "volumeImpulse": 15.51
+              }
+            },
+            {
+              "code": "US.XLC",
+              "name": "通信服务ETF",
+              "score": -16,
+              "close": 109.2,
+              "date": "2026-07-22",
+              "aboveMa20": false,
+              "return1dPct": -0.75,
+              "components": {
+                "rsi14": -12.37,
+                "priceVsMa20Atr": -11.02,
+                "ma20VsMa60Atr": -55.07,
+                "momentum20": 9,
+                "drawdown20": -24.58,
+                "volumeImpulse": 41.07
+              }
+            },
+            {
+              "code": "US.SMH",
+              "name": "半导体ETF",
+              "score": -15,
+              "close": 586.91,
+              "date": "2026-07-22",
+              "aboveMa20": false,
+              "return1dPct": 0.48,
+              "components": {
+                "rsi14": -3.17,
+                "priceVsMa20Atr": -15.94,
+                "ma20VsMa60Atr": 17.47,
+                "momentum20": -28.25,
+                "drawdown20": -70.11,
+                "volumeImpulse": -53.32
+              }
+            },
+            {
+              "code": "US.QQQ",
+              "name": "纳斯达克100ETF",
+              "score": -8,
+              "close": 705.35,
+              "date": "2026-07-22",
+              "aboveMa20": false,
+              "return1dPct": -0.51,
+              "components": {
+                "rsi14": -6.59,
+                "priceVsMa20Atr": -21.52,
+                "ma20VsMa60Atr": 5.82,
+                "momentum20": -5.82,
+                "drawdown20": -28.11,
+                "volumeImpulse": 38.96
+              }
+            },
+            {
+              "code": "US.XLK",
+              "name": "信息技术ETF",
+              "score": -4,
+              "close": 180.27,
+              "date": "2026-07-22",
+              "aboveMa20": false,
+              "return1dPct": -0.28,
+              "components": {
+                "rsi14": -3.22,
+                "priceVsMa20Atr": -11.93,
+                "ma20VsMa60Atr": 13.86,
+                "momentum20": -10.64,
+                "drawdown20": -35.87,
+                "volumeImpulse": 45.56
+              }
+            },
+            {
+              "code": "US.XLB",
+              "name": "材料ETF",
+              "score": -3,
+              "close": 50.82,
+              "date": "2026-07-22",
+              "aboveMa20": false,
+              "return1dPct": 1.44,
+              "components": {
+                "rsi14": -0.32,
+                "priceVsMa20Atr": -3.1,
+                "ma20VsMa60Atr": -3.37,
+                "momentum20": -0.49,
+                "drawdown20": -15.25,
+                "volumeImpulse": -6.27
+              }
+            },
+            {
+              "code": "US.XLI",
+              "name": "工业ETF",
+              "score": 0,
+              "close": 178.85,
+              "date": "2026-07-22",
+              "aboveMa20": false,
+              "return1dPct": 0.11,
+              "components": {
+                "rsi14": -3.86,
+                "priceVsMa20Atr": -29.35,
+                "ma20VsMa60Atr": 58.62,
+                "momentum20": 1.96,
+                "drawdown20": -24.11,
+                "volumeImpulse": -35.19
+              }
+            },
+            {
+              "code": "US.XLP",
+              "name": "必选消费ETF",
+              "score": 1,
+              "close": 84.38,
+              "date": "2026-07-22",
+              "aboveMa20": true,
+              "return1dPct": 0.38,
+              "components": {
+                "rsi14": 2.57,
+                "priceVsMa20Atr": 2.65,
+                "ma20VsMa60Atr": 12.06,
+                "momentum20": 3.94,
+                "drawdown20": -11.11,
+                "volumeImpulse": -39.76
+              }
+            },
+            {
+              "code": "US.IWM",
+              "name": "罗素2000ETF",
+              "score": 6,
+              "close": 293.79,
+              "date": "2026-07-22",
+              "aboveMa20": false,
+              "return1dPct": -0.93,
+              "components": {
+                "rsi14": -0.29,
+                "priceVsMa20Atr": -21.76,
+                "ma20VsMa60Atr": 63.84,
+                "momentum20": -2.59,
+                "drawdown20": -14.78,
+                "volumeImpulse": 14.34
+              }
+            },
+            {
+              "code": "US.SPY",
+              "name": "标普500ETF",
+              "score": 11,
+              "close": 747.41,
+              "date": "2026-07-22",
+              "aboveMa20": true,
+              "return1dPct": -0.12,
+              "components": {
+                "rsi14": 4.02,
+                "priceVsMa20Atr": 8.2,
+                "ma20VsMa60Atr": 26.34,
+                "momentum20": 9.43,
+                "drawdown20": -6.66,
+                "volumeImpulse": 32.46
+              }
+            },
+            {
+              "code": "US.XLRE",
+              "name": "房地产ETF",
+              "score": 13,
+              "close": 45.01,
+              "date": "2026-07-22",
+              "aboveMa20": true,
+              "return1dPct": -0.42,
+              "components": {
+                "rsi14": 9.35,
+                "priceVsMa20Atr": 17.08,
+                "ma20VsMa60Atr": 30.33,
+                "momentum20": 4.14,
+                "drawdown20": -6.6,
+                "volumeImpulse": 16.86
+              }
+            },
+            {
+              "code": "US.XLU",
+              "name": "公用事业ETF",
+              "score": 15,
+              "close": 45.93,
+              "date": "2026-07-22",
+              "aboveMa20": true,
+              "return1dPct": 2.25,
+              "components": {
+                "rsi14": 15.08,
+                "priceVsMa20Atr": 21.03,
+                "ma20VsMa60Atr": 27.23,
+                "momentum20": 9.54,
+                "drawdown20": -3.9,
+                "volumeImpulse": -1.43
+              }
+            },
+            {
+              "code": "US.DIA",
+              "name": "道琼斯ETF",
+              "score": 17,
+              "close": 521.47,
+              "date": "2026-07-22",
+              "aboveMa20": false,
+              "return1dPct": -0.01,
+              "components": {
+                "rsi14": 6.52,
+                "priceVsMa20Atr": -10.23,
+                "ma20VsMa60Atr": 89.9,
+                "momentum20": 4.84,
+                "drawdown20": -10.66,
+                "volumeImpulse": 13.49
+              }
+            },
+            {
+              "code": "US.XLV",
+              "name": "医疗ETF",
+              "score": 23,
+              "close": 159.43,
+              "date": "2026-07-22",
+              "aboveMa20": false,
+              "return1dPct": -0.51,
+              "components": {
+                "rsi14": 7.51,
+                "priceVsMa20Atr": -8.55,
+                "ma20VsMa60Atr": 95.67,
+                "momentum20": 23.82,
+                "drawdown20": -20.31,
+                "volumeImpulse": 46.96
+              }
+            },
+            {
+              "code": "US.XLE",
+              "name": "能源ETF",
+              "score": 33,
+              "close": 59.2,
+              "date": "2026-07-22",
+              "aboveMa20": true,
+              "return1dPct": 1.2,
+              "components": {
+                "rsi14": 36.13,
+                "priceVsMa20Atr": 100,
+                "ma20VsMa60Atr": -38.01,
+                "momentum20": 43.52,
+                "drawdown20": 0,
+                "volumeImpulse": -1.51
+              }
+            },
+            {
+              "code": "US.XLF",
+              "name": "金融ETF",
+              "score": 38,
+              "close": 56.05,
+              "date": "2026-07-22",
+              "aboveMa20": true,
+              "return1dPct": -0.11,
+              "components": {
+                "rsi14": 25.15,
+                "priceVsMa20Atr": 34.08,
+                "ma20VsMa60Atr": 100,
+                "momentum20": 20.14,
+                "drawdown20": -8.22,
+                "volumeImpulse": 25.26
+              }
+            }
+          ]
+        },
+        "个股": {
+          "score": 3,
+          "label": "中性偏热",
+          "fear": 0,
+          "neutral": 6,
+          "greed": 0,
+          "rows": [
+            {
+              "code": "US.GOOGL",
+              "name": "谷歌A",
+              "score": -31,
+              "close": 342.09,
+              "date": "2026-07-22",
+              "aboveMa20": false,
+              "return1dPct": -1.46,
+              "components": {
+                "rsi14": -18.88,
+                "priceVsMa20Atr": -39.63,
+                "ma20VsMa60Atr": -45.32,
+                "momentum20": -5.84,
+                "drawdown20": -51.82,
+                "volumeImpulse": -18.59
+              }
+            },
+            {
+              "code": "US.AMZN",
+              "name": "亚马逊",
+              "score": -7,
+              "close": 244.85,
+              "date": "2026-07-22",
+              "aboveMa20": true,
+              "return1dPct": -1.09,
+              "components": {
+                "rsi14": -3.21,
+                "priceVsMa20Atr": 6.45,
+                "ma20VsMa60Atr": -51.69,
+                "momentum20": 22.94,
+                "drawdown20": -26.44,
+                "volumeImpulse": 38.85
+              }
+            },
+            {
+              "code": "US.MSFT",
+              "name": "微软",
+              "score": -4,
+              "close": 390.34,
+              "date": "2026-07-22",
+              "aboveMa20": true,
+              "return1dPct": -1.86,
+              "components": {
+                "rsi14": -1.61,
+                "priceVsMa20Atr": 17.62,
+                "ma20VsMa60Atr": -56.55,
+                "momentum20": 21.93,
+                "drawdown20": -19.8,
+                "volumeImpulse": 35.45
+              }
+            },
+            {
+              "code": "US.META",
+              "name": "Meta",
+              "score": 11,
+              "close": 627.17,
+              "date": "2026-07-22",
+              "aboveMa20": true,
+              "return1dPct": -2.58,
+              "components": {
+                "rsi14": 3.08,
+                "priceVsMa20Atr": 13.64,
+                "ma20VsMa60Atr": 7.62,
+                "momentum20": 57.78,
+                "drawdown20": -52.98,
+                "volumeImpulse": 43.68
+              }
+            },
+            {
+              "code": "US.NVDA",
+              "name": "英伟达",
+              "score": 12,
+              "close": 212.06,
+              "date": "2026-07-22",
+              "aboveMa20": true,
+              "return1dPct": 2.3,
+              "components": {
+                "rsi14": 12.4,
+                "priceVsMa20Atr": 43.66,
+                "ma20VsMa60Atr": -30.26,
+                "momentum20": 30.04,
+                "drawdown20": -1.38,
+                "volumeImpulse": 1.24
+              }
+            },
+            {
+              "code": "US.AAPL",
+              "name": "苹果",
+              "score": 39,
+              "close": 325.89,
+              "date": "2026-07-22",
+              "aboveMa20": true,
+              "return1dPct": -0.56,
+              "components": {
+                "rsi14": 25.1,
+                "priceVsMa20Atr": 65.06,
+                "ma20VsMa60Atr": 39.24,
+                "momentum20": 53.67,
+                "drawdown20": -15.68,
+                "volumeImpulse": 40.35
+              }
+            }
+          ]
+        }
+      },
+      "errors": []
+    },
+    "KR": {
+      "displayName": "韩股",
+      "status": "verified_close",
+      "asOf": "2026-07-23",
+      "generatedAt": "2026-07-23T16:44:08+09:00",
+      "timezone": "Asia/Seoul",
+      "source": "KRX 日线（经 FinanceDataReader）",
+      "coverage": {
+        "valid": 10,
+        "total": 10,
+        "ratio": 1
+      },
+      "groups": {
+        "ETF": {
+          "score": -42,
+          "label": "中性偏恐",
+          "fear": 0,
+          "neutral": 4,
+          "greed": 0,
+          "rows": [
+            {
+              "code": "229200.KQ",
+              "name": "KODEX KOSDAQ 150",
+              "score": -57,
+              "close": 13400,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -19.63,
+                "priceVsMa20Atr": -35.32,
+                "ma20VsMa60Atr": -93.74,
+                "momentum20": -89.21,
+                "drawdown20": -100,
+                "volumeImpulse": -26.96
+              }
+            },
+            {
+              "code": "069500.KS",
+              "name": "KODEX 200",
+              "score": -38,
+              "close": 113230,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -11.37,
+                "priceVsMa20Atr": -31.57,
+                "ma20VsMa60Atr": -6.9,
+                "momentum20": -90.18,
+                "drawdown20": -100,
+                "volumeImpulse": -43.7
+              }
+            },
+            {
+              "code": "102110.KS",
+              "name": "TIGER 200",
+              "score": -38,
+              "close": 113310,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -11.4,
+                "priceVsMa20Atr": -31.79,
+                "ma20VsMa60Atr": -6.74,
+                "momentum20": -90.18,
+                "drawdown20": -100,
+                "volumeImpulse": -53.59
+              }
+            },
+            {
+              "code": "305720.KS",
+              "name": "KODEX 2차전지산업",
+              "score": -37,
+              "close": 14025,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -7,
+                "priceVsMa20Atr": 8.5,
+                "ma20VsMa60Atr": -100,
+                "momentum20": -46.7,
+                "drawdown20": -84.11,
+                "volumeImpulse": -47.95
+              }
+            }
+          ]
+        },
+        "个股": {
+          "score": -23,
+          "label": "中性偏恐",
+          "fear": 0,
+          "neutral": 6,
+          "greed": 0,
+          "rows": [
+            {
+              "code": "005380.KS",
+              "name": "现代汽车",
+              "score": -56,
+              "close": 432000,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -25,
+                "priceVsMa20Atr": -29.4,
+                "ma20VsMa60Atr": -100,
+                "momentum20": -75.64,
+                "drawdown20": -94.1,
+                "volumeImpulse": -27.04
+              }
+            },
+            {
+              "code": "005930.KS",
+              "name": "三星电子",
+              "score": -38,
+              "close": 270000,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -9.26,
+                "priceVsMa20Atr": -28.42,
+                "ma20VsMa60Atr": -6.58,
+                "momentum20": -100,
+                "drawdown20": -100,
+                "volumeImpulse": -45.29
+              }
+            },
+            {
+              "code": "000660.KS",
+              "name": "SK海力士",
+              "score": -36,
+              "close": 1919000,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -12.02,
+                "priceVsMa20Atr": -41.54,
+                "ma20VsMa60Atr": 18.33,
+                "momentum20": -100,
+                "drawdown20": -100,
+                "volumeImpulse": -33.49
+              }
+            },
+            {
+              "code": "051910.KS",
+              "name": "LG化学",
+              "score": -36,
+              "close": 271500,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": -8.73,
+                "priceVsMa20Atr": 6.37,
+                "ma20VsMa60Atr": -100,
+                "momentum20": -43.7,
+                "drawdown20": -79,
+                "volumeImpulse": -21.45
+              }
+            },
+            {
+              "code": "035720.KS",
+              "name": "Kakao",
+              "score": 2,
+              "close": 37150,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": 7.21,
+                "priceVsMa20Atr": 37.83,
+                "ma20VsMa60Atr": -84.75,
+                "momentum20": 46.32,
+                "drawdown20": 0,
+                "volumeImpulse": 20.66
+              }
+            },
+            {
+              "code": "035420.KS",
+              "name": "NAVER",
+              "score": 26,
+              "close": 220000,
+              "date": "2026-07-23",
+              "components": {
+                "rsi14": 19.66,
+                "priceVsMa20Atr": 85.99,
+                "ma20VsMa60Atr": -63.84,
+                "momentum20": 51.65,
+                "drawdown20": 0,
+                "volumeImpulse": 91.57
+              }
+            }
+          ]
+        }
+      },
+      "errors": []
+    }
+  }
+}
