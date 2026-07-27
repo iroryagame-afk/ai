@@ -158,7 +158,7 @@
       item.rankScore = csnScore + rsScore + rotationScore;
       return item;
     }).filter(function (item) {
-      return item.toolCount >= 2;
+      return item.toolCount === Object.keys(SOURCES).length;
     }).sort(function (a, b) {
       return b.toolCount - a.toolCount ||
         Number(b.crossModel) - Number(a.crossModel) ||
@@ -207,13 +207,20 @@
 
     var standardItems = items.filter(function (item) { return !item.tactical; });
     var tacticalItems = items.filter(function (item) { return item.tactical; });
+    if (!items.length) {
+      section.hidden = true;
+      list.innerHTML = "";
+      tacticalSection.hidden = true;
+      tacticalList.innerHTML = "";
+      return;
+    }
     section.hidden = false;
     count.textContent = standardItems.length;
     if (!standardItems.length) {
-      status.textContent = "当前没有满足同日、至少两个工具的普通股票或ETF。";
+      status.textContent = "本期三工具共振仅出现在高风险战术产品中。";
       list.innerHTML = "";
     } else {
-      status.textContent = "3工具优先于2工具；仅作研究优先级，不等于买点。";
+      status.textContent = "仅展示三个工具同日共同命中；研究优先级不等于买点。";
       list.innerHTML = standardItems.map(function (item, index) {
         return card(item, index, false);
       }).join("");
@@ -247,11 +254,8 @@
 
   function fail(message) {
     var section = document.getElementById("strongRecommendations");
-    var status = document.getElementById("confluenceStatus");
-    if (section && status) {
-      section.hidden = false;
-      status.textContent = "数据源未完整通过，强烈推荐区暂停：" + message;
-    }
+    if (section) section.hidden = true;
+    console.warn("三工具共振区暂停：" + message);
   }
 
   Promise.all([
