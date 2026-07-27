@@ -148,6 +148,13 @@
     .flow-summary-card.outflow span { color:#1d4ed8; }
     .flow-summary-card.style { border-color:#fed7aa; background:#fff7ed; }
     .flow-summary-card.style span { color:#9a3412; }
+    .style-layer-grid { display:grid; gap:18px; margin:12px 0; }
+    .style-layer { min-width:0; }
+    .style-layer h4 { margin:0 0 5px; font-size:16px; color:#0f172a; }
+    .style-layer > .subtle { margin:0 0 9px; }
+    .style-rotation-scroll { overflow-x:auto; }
+    .style-rotation-table { min-width:980px; }
+    .table-scroll-hint { display:none; color:#64748b; font-size:11px; padding:7px 10px; }
     .radar-status-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:12px 0 18px; }
     .radar-status-item { border:1px solid #e2e8f0; background:#fbfdff; border-radius:8px; padding:12px; }
     .radar-status-item > div { display:flex; align-items:center; justify-content:space-between; gap:8px; }
@@ -387,6 +394,9 @@
       section { padding:16px; }
       table { display:table; overflow-x:visible; }
       .candidate-table-wrap { overflow-x:visible; }
+      .style-rotation-scroll { overflow-x:auto; }
+      .style-rotation-table { min-width:860px; }
+      .style-rotation-scroll .table-scroll-hint { display:block; }
       .candidate-table { min-width:0; }
       .candidate-table th,.candidate-table td { padding:8px 7px; font-size:11px; }
       .candidate-table th:nth-child(1),.candidate-table td:nth-child(1) { width:16%; }
@@ -966,6 +976,26 @@ a { color: var(--accent); }
     .candidate-table-wrap table { border:0 !important; }
 
     /* Style rotation matrix */
+    #mainline .style-layer-grid {
+      display:grid;
+      gap:var(--space-5);
+      margin:var(--space-4) 0;
+    }
+    #mainline .style-layer {
+      min-width:0;
+      padding-top:var(--space-3);
+      border-top:1px solid var(--hairline);
+    }
+    #mainline .style-layer h4 {
+      margin:0 0 4px;
+      color:var(--ink);
+      font-family:var(--serif);
+      font-size:18px;
+      font-weight:500;
+    }
+    #mainline .style-layer > .subtle {
+      margin:0 0 10px;
+    }
     #mainline .style-rotation-scroll {
       position:relative;
       border-color:var(--hairline-strong) !important;
@@ -1369,10 +1399,8 @@ a { color: var(--accent); }
           <button type="button" aria-haspopup="true">工具 <span class="csn-caret">▼</span></button>
           <div class="csn-drop">
             <a href="../rs-thrust/" data-file-href="../rs-thrust/index.html"><b>相对强度加速图</b><small>找正在加速的强势股</small></a>
-            <a href="../rotation/" data-file-href="../rotation/index.html"><b>轮动加速度雷达</b><small>看顶部衰竭与底部修复</small></a>
             <a href="../us-skew/" data-file-href="../us-skew/index.html"><b>期权风险分布图</b><small>看保护需求与风险温度</small></a>
             <a href="../ai-decision/" data-file-href="../ai-decision/index.html"><b>每日市场进度</b><small>A股与美股的回调出清进度</small></a>
-            <a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>猎龙者每日信号表</b><small>美股机会、风险警报与历史信号</small></a>
           </div>
         </div>
         <div class="csn-item"><a href="../nav/" data-file-href="../nav/index.html">调研</a></div>
@@ -1455,7 +1483,7 @@ a { color: var(--accent); }
 
       <div class="radar-meta">
         <div><strong>数据日期</strong><span>2026-07-27</span></div>
-        <div><strong>核验覆盖</strong><span>行情 103/103 已核验；新闻 106只股票池已核验；全A总闸门、行业资金和ETF风格已核验。</span></div>
+        <div><strong>核验覆盖</strong><span>行情 103/103 已核验；新闻 106只股票池已核验；全A总闸门、行业资金、5类市值风格和9类行业风格已核验。</span></div>
         <div><strong>数据边界</strong><span>全A/行业资金：东方财富延迟行业资金快照（主域风控回退）；ETF订单流：Futu OpenD；订单流均不等于外部净增资金或ETF净申购。</span></div>
       </div>
 
@@ -1468,15 +1496,15 @@ a { color: var(--accent); }
         </div>
         <div class="market-source-note">主力净占比 +4.36%；全A订单流覆盖 5883/5883；Futu沪深全A交叉核验 20,760亿。</div>
 
-      <h3>大盘资金流向摘要（全A行业）</h3><div class="market-flow-summary" data-layout="MDA_MARKET_MATRIX_V1"><article class="flow-summary-card inflow"><span class="flow-summary-label">主要流入</span><ol class="flow-rank-list"><li><span class="flow-rank-name">电子</span><strong class="flow-rank-value">+726.85亿</strong></li><li><span class="flow-rank-name">半导体</span><strong class="flow-rank-value">+622.67亿</strong></li><li><span class="flow-rank-name">元件</span><strong class="flow-rank-value">+63.91亿</strong></li></ol></article><article class="flow-summary-card outflow"><span class="flow-summary-label">主要流出</span><ol class="flow-rank-list"><li><span class="flow-rank-name">计算机</span><strong class="flow-rank-value">-15.47亿</strong></li><li><span class="flow-rank-name">计算机设备</span><strong class="flow-rank-value">-15.23亿</strong></li><li><span class="flow-rank-name">石油石化</span><strong class="flow-rank-value">-12.41亿</strong></li></ol></article><article class="flow-summary-card style"><span class="flow-summary-label">风格前三</span><ol class="flow-rank-list"><li><span class="flow-rank-name">高股息/银行</span><strong class="flow-rank-value">79.1分</strong></li><li><span class="flow-rank-name">医药</span><strong class="flow-rank-value">76.9分</strong></li><li><span class="flow-rank-name">消费</span><strong class="flow-rank-value">76.0分</strong></li></ol></article></div>
-      <h3>大盘风格轮动确认（行业宽度主判，代表ETF辅助）</h3><p class="subtle">综合分优先使用全A行业涨跌与上涨宽度；代表ETF只补充乖离率、成交温度和订单流确认，不代替大盘资金。</p><div class="table-scroll style-rotation-scroll" data-layout="MDA_MARKET_MATRIX_V1"><div class="table-scroll-hint" aria-hidden="true">← 左右滑动查看完整指标 →</div><table class="style-rotation-table" aria-label="大盘风格轮动确认"><thead><tr><th>市场风格</th><th>综合分</th><th>综合结论</th><th>行业涨跌</th><th>行业上涨宽度</th><th>代表ETF乖离 / 3日变化</th><th>代表ETF成交温度</th><th>代表ETF订单流</th></tr></thead><tbody><tr><td><strong>高股息/银行</strong></td><td>79.1</td><td><strong>进攻闸门打开</strong><div class="subtle">价值流震荡区</div></td><td>+1.32%</td><td>100.0%</td><td><span class="bias-temp warm">+2.26%</span><div class="subtle">3日 <span class="bias-delta steady">-0.82</span></div></td><td>0.73x</td><td>+0.28亿</td></tr><tr><td><strong>医药</strong></td><td>76.9</td><td><strong>进攻闸门打开</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+3.58%</td><td>100.0%</td><td><span class="bias-temp warm">+1.46%</span><div class="subtle">3日 <span class="bias-delta cooling">-2.45</span></div></td><td>0.60x</td><td>+0.53亿</td></tr><tr><td><strong>消费</strong></td><td>76.0</td><td><strong>进攻闸门打开</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+3.03%</td><td>100.0%</td><td><span class="bias-temp warm">+0.44%</span><div class="subtle">3日 <span class="bias-delta cooling">-1.61</span></div></td><td>0.68x</td><td>+0.11亿</td></tr><tr><td><strong>周期资源</strong></td><td>57.2</td><td><strong>轮动确认/观察</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+2.30%</td><td>100.0%</td><td><span class="bias-temp warm">+0.27%</span><div class="subtle">3日 <span class="bias-delta steady">-1.17</span></div></td><td>0.67x</td><td>-0.30亿</td></tr><tr><td><strong>科技成长</strong></td><td>55.5</td><td><strong>轮动确认/观察</strong><div class="subtle">跌穿企稳</div></td><td>+3.50%</td><td>100.0%</td><td><span class="bias-temp cool">-4.60%</span><div class="subtle">3日 <span class="bias-delta steady">+0.59</span></div></td><td>0.74x</td><td>+1.17亿</td></tr><tr><td><strong>工业制造/防守</strong></td><td>45.7</td><td><strong>中性</strong><div class="subtle">早期修复，待转正</div></td><td>+3.21%</td><td>100.0%</td><td><span class="bias-temp cool">-4.52%</span><div class="subtle">3日 <span class="bias-delta warming">+2.81</span></div></td><td>0.99x</td><td>-0.23亿</td></tr></tbody></table></div><div class="bias-legend"><span class="bias-temp scorching">极热</span><span class="bias-temp hot">热</span><span class="bias-temp warm">温</span><span class="bias-temp cool">偏冷</span><span class="bias-temp cold">冷</span></div><div class="note">代表ETF乖离率=(ln收盘价−EMA20(ln收盘价))×100；3日变化判断修复/恶化；银行与红利按±5%震荡区逆向观察。该列只做风格确认。</div>
+      <h3>大盘资金流向摘要（全A行业）</h3><div class="market-flow-summary"><div class="flow-summary-card inflow"><span>主要流入 TOP5</span><strong>电子 +726.85亿；半导体 +622.67亿；元件 +63.91亿；电力设备 +50.31亿；建筑材料 +37.08亿</strong></div><div class="flow-summary-card outflow"><span>主要流出 TOP5</span><strong>计算机 -15.47亿；计算机设备 -15.23亿；石油石化 -12.41亿；非银金融 -5.11亿；银行Ⅱ -3.37亿</strong></div><div class="flow-summary-card style"><span>行业风格前三</span><strong>高股息/银行 76.6分；医药 76.4分；消费 75.0分</strong></div></div>
+      <h3>大盘风格轮动确认（市值风格 + 行业风格）</h3><p class="subtle">两层分开排序，避免把市值风险偏好与行业轮动混成一个榜单。</p><div class="style-layer-grid"><section class="style-layer"><h4>市值与风险风格（5类）</h4><p class="subtle">大盘、中盘、小微盘、科创创业与红利价值使用同组代表ETF的涨跌和上涨宽度确认风险偏好。</p><div class="table-scroll style-rotation-scroll" data-layout="MDA_MARKET_MATRIX_V1"><div class="table-scroll-hint" aria-hidden="true">← 左右滑动查看完整指标 →</div><table class="style-rotation-table" aria-label="市值与风险风格（5类）"><thead><tr><th>风格</th><th>综合分</th><th>综合结论</th><th>参考涨跌</th><th>上涨宽度</th><th>代表ETF乖离 / 3日变化</th><th>代表ETF成交温度</th><th>代表ETF订单流</th></tr></thead><tbody><tr><td><strong>红利价值</strong></td><td>78.6</td><td><strong>进攻闸门打开</strong><div class="subtle">价值流震荡区</div></td><td>+0.33%</td><td>100.0%</td><td><span class="bias-temp warm">+2.01%</span><div class="subtle">3日 <span class="bias-delta steady">-1.15</span></div></td><td>0.69x</td><td>+0.28亿</td></tr><tr><td><strong>中盘</strong></td><td>66.4</td><td><strong>轮动确认/观察</strong><div class="subtle">跌穿企稳</div></td><td>+2.45%</td><td>100.0%</td><td><span class="bias-temp cool">-3.89%</span><div class="subtle">3日 <span class="bias-delta steady">+1.28</span></div></td><td>0.87x</td><td>+2.71亿</td></tr><tr><td><strong>小微盘</strong></td><td>64.3</td><td><strong>轮动确认/观察</strong><div class="subtle">深跌修复，仍待确认</div></td><td>+3.77%</td><td>100.0%</td><td><span class="bias-temp cold">-6.03%</span><div class="subtle">3日 <span class="bias-delta warming">+4.41</span></div></td><td>0.93x</td><td>+2.87亿</td></tr><tr><td><strong>大盘核心</strong></td><td>62.2</td><td><strong>轮动确认/观察</strong><div class="subtle">跌穿坚守</div></td><td>+0.82%</td><td>100.0%</td><td><span class="bias-temp cool">-0.37%</span><div class="subtle">3日 <span class="bias-delta steady">-0.32</span></div></td><td>0.56x</td><td>+0.35亿</td></tr><tr><td><strong>科创/创业成长</strong></td><td>56.8</td><td><strong>轮动确认/观察</strong><div class="subtle">早期修复，待转正</div></td><td>+2.45%</td><td>100.0%</td><td><span class="bias-temp cool">-3.97%</span><div class="subtle">3日 <span class="bias-delta warming">+1.51</span></div></td><td>0.82x</td><td>+1.17亿</td></tr></tbody></table></div></section><section class="style-layer"><h4>行业风格（9类）</h4><p class="subtle">行业涨跌和匹配行业真实成分上涨宽度主判；代表ETF只补充乖离、成交温度和订单流。</p><div class="table-scroll style-rotation-scroll" data-layout="MDA_MARKET_MATRIX_V1"><div class="table-scroll-hint" aria-hidden="true">← 左右滑动查看完整指标 →</div><table class="style-rotation-table" aria-label="行业风格（9类）"><thead><tr><th>风格</th><th>综合分</th><th>综合结论</th><th>参考涨跌</th><th>上涨宽度</th><th>代表ETF乖离 / 3日变化</th><th>代表ETF成交温度</th><th>代表ETF订单流</th></tr></thead><tbody><tr><td><strong>高股息/银行</strong></td><td>76.6</td><td><strong>进攻闸门打开</strong><div class="subtle">价值流震荡区</div></td><td>+1.41%</td><td>90.2%</td><td><span class="bias-temp warm">+2.61%</span><div class="subtle">3日 <span class="bias-delta steady">+0.06</span></div></td><td>0.55x</td><td>+0.41亿</td></tr><tr><td><strong>医药</strong></td><td>76.4</td><td><strong>进攻闸门打开</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+3.58%</td><td>97.8%</td><td><span class="bias-temp warm">+1.46%</span><div class="subtle">3日 <span class="bias-delta cooling">-2.45</span></div></td><td>0.60x</td><td>+0.53亿</td></tr><tr><td><strong>消费</strong></td><td>75.0</td><td><strong>进攻闸门打开</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+3.03%</td><td>96.0%</td><td><span class="bias-temp warm">+0.44%</span><div class="subtle">3日 <span class="bias-delta cooling">-1.61</span></div></td><td>0.68x</td><td>+0.11亿</td></tr><tr><td><strong>农业防守</strong></td><td>74.3</td><td><strong>进攻闸门打开</strong><div class="subtle">偏强，未进主线</div></td><td>+2.04%</td><td>94.8%</td><td><span class="bias-temp warm">+0.82%</span><div class="subtle">3日 <span class="bias-delta steady">-1.03</span></div></td><td>0.43x</td><td>+0.05亿</td></tr><tr><td><strong>地产基建</strong></td><td>72.6</td><td><strong>进攻闸门打开</strong><div class="subtle">跌穿企稳</div></td><td>+2.87%</td><td>94.9%</td><td><span class="bias-temp cool">-1.59%</span><div class="subtle">3日 <span class="bias-delta steady">+0.54</span></div></td><td>0.88x</td><td>+0.09亿</td></tr><tr><td><strong>券商/非银</strong></td><td>66.0</td><td><strong>轮动确认/观察</strong><div class="subtle">跌穿坚守</div></td><td>+1.59%</td><td>89.3%</td><td><span class="bias-temp cool">-0.56%</span><div class="subtle">3日 <span class="bias-delta steady">-0.68</span></div></td><td>0.53x</td><td>+0.26亿</td></tr><tr><td><strong>周期资源</strong></td><td>55.8</td><td><strong>轮动确认/观察</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+2.30%</td><td>94.6%</td><td><span class="bias-temp warm">+0.27%</span><div class="subtle">3日 <span class="bias-delta steady">-1.17</span></div></td><td>0.67x</td><td>-0.30亿</td></tr><tr><td><strong>科技成长</strong></td><td>47.5</td><td><strong>中性</strong><div class="subtle">止损区，回避</div></td><td>+3.50%</td><td>93.6%</td><td><span class="bias-temp cold">-6.57%</span><div class="subtle">3日 <span class="bias-delta steady">+1.21</span></div></td><td>0.52x</td><td>-0.09亿</td></tr><tr><td><strong>工业制造/国防</strong></td><td>44.8</td><td><strong>中性</strong><div class="subtle">早期修复，待转正</div></td><td>+3.21%</td><td>96.3%</td><td><span class="bias-temp cool">-4.52%</span><div class="subtle">3日 <span class="bias-delta warming">+2.81</span></div></td><td>0.99x</td><td>-0.23亿</td></tr></tbody></table></div></section></div><div class="bias-legend"><span class="bias-temp scorching">极热</span><span class="bias-temp hot">热</span><span class="bias-temp warm">温</span><span class="bias-temp cool">偏冷</span><span class="bias-temp cold">冷</span></div><div class="note">代表ETF乖离率=(ln收盘价−EMA20(ln收盘价))×100；3日变化判断修复/恶化；红利价值和高股息/银行按±5%震荡区逆向观察。ETF订单流只作确认，不等同于基金净申购。</div>
       <div class="mainline-card-grid">
             <article class="mainline-card">
               <div class="mainline-head">
                 <h3>全A大盘风险结论（资金与涨跌宽度）</h3>
               </div>
               <div class="mainline-grid">
-                <div><h4>结论</h4><p>全A总闸门为“增量进攻”；当日风格优先级为 高股息/银行 79.1分、医药 76.9分、消费 76.0分。</p></div>
+                <div><h4>结论</h4><p>全A总闸门为“增量进攻”；市值风格靠前为 红利价值 78.6分、中盘 66.4分、小微盘 64.3分；行业风格靠前为 高股息/银行 76.6分、医药 76.4分、消费 75.0分。</p></div>
                 <div><h4>依据</h4><p>全A主力净流入 +909.99亿，成交额 20,887亿，5195只上涨、286只下跌。 行业主要流入：电子 +726.85亿、半导体 +622.67亿、元件 +63.91亿；主要流出：计算机 -15.47亿、计算机设备 -15.23亿、石油石化 -12.41亿。</p></div>
                 <div><h4>约束</h4><p>全A下跌家数占比 5%；总资金未转正前，新增仓位继续从严。</p></div>
                 <div><h4>明日验证</h4><p>看全A主力净额能否转正；看上涨家数能否超过下跌家数；看宽基与科创方向能否同步收复短均线。</p></div>
