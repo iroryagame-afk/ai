@@ -285,7 +285,8 @@ abbr[title]{text-decoration:underline dotted rgba(139,144,160,.6);text-underline
 .caption strong{display:block;font:700 11px var(--mono);letter-spacing:.16em;color:var(--accent)}
 .caption span,.caption p{color:var(--muted);font-size:10px}
 .caption p{text-align:right;margin:0}
-.scroll{overflow-x:auto}
+.scroll{overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.scroll::-webkit-scrollbar{display:none}
 table{width:100%;border-collapse:collapse;min-width:1160px}
 th{color:var(--muted);font:650 9px var(--mono);letter-spacing:.08em;text-align:left;padding:0;background:var(--panel-2);border-bottom:1px solid var(--hairline)}
 th.plain{padding:11px 12px}
