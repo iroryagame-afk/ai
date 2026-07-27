@@ -148,15 +148,6 @@
     .flow-summary-card.outflow span { color:#1d4ed8; }
     .flow-summary-card.style { border-color:#fed7aa; background:#fff7ed; }
     .flow-summary-card.style span { color:#9a3412; }
-    .industry-details { margin:0 0 20px; border:1px solid #e2e8f0; border-radius:8px; background:#fbfdff; }
-    .industry-details summary { cursor:pointer; padding:10px 13px; color:#1d4ed8; font-size:12px; font-weight:900; user-select:none; }
-    .industry-details .industry-fund-grid { padding:0 12px 12px; margin:0; }
-    .industry-fund-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:10px 0 20px; }
-    .industry-fund-block { min-width:0; }
-    .industry-fund-block h4 { margin:0 0 7px; font-size:13px; }
-    .industry-fund-block.inflow h4 { color:#b91c1c; }
-    .industry-fund-block.outflow h4 { color:#1d4ed8; }
-    .industry-fund-block th,.industry-fund-block td { padding:8px 9px; font-size:12px; }
     .radar-status-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:12px 0 18px; }
     .radar-status-item { border:1px solid #e2e8f0; background:#fbfdff; border-radius:8px; padding:12px; }
     .radar-status-item > div { display:flex; align-items:center; justify-content:space-between; gap:8px; }
@@ -387,7 +378,7 @@
 	      .rec-review-head { flex-direction:column; }
 	      .rec-review-head > strong { font-size:38px; }
 	      .rec-review-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
-	      .setup-grid,.two-col,.workflow,.buy-focus-grid,.radar-meta,.radar-status-grid,.whole-market-grid,.market-flow-summary,.industry-fund-grid,.mainline-card-grid { grid-template-columns:1fr; }
+	      .setup-grid,.two-col,.workflow,.buy-focus-grid,.radar-meta,.radar-status-grid,.whole-market-grid,.market-flow-summary,.mainline-card-grid { grid-template-columns:1fr; }
       .mainline-card { padding:16px 0; }
       .mainline-card + .mainline-card { border-left:0; border-top:1px solid #dbeafe; padding-left:0; }
       .algo-link { align-items:flex-start; flex-direction:column; }
@@ -508,6 +499,12 @@ a { color: var(--accent); }
       --research-focus:var(--cinnabar);
       --shadow-card:0 2px 8px rgba(31,36,48,.055);
       --shadow-lift:0 4px 8px rgba(31,36,48,.08);
+      --space-1:4px;
+      --space-2:8px;
+      --space-3:12px;
+      --space-4:16px;
+      --space-5:24px;
+      --space-6:32px;
     }
     html { scroll-padding-top:74px; }
     body {
@@ -583,6 +580,9 @@ a { color: var(--accent); }
     .top .nav::-webkit-scrollbar { display:none; }
     .top .nav a {
       flex:0 0 auto;
+      display:inline-flex;
+      align-items:center;
+      min-height:44px;
       padding:8px 12px;
       border:0;
       border-radius:7px;
@@ -718,41 +718,153 @@ a { color: var(--accent); }
       background:transparent !important;
     }
     .radar-meta > div:last-child { border-right:0 !important; }
-    .whole-market-grid, .market-flow-summary { gap:10px !important; }
-    .whole-market-stat, .flow-summary-card, .radar-status-item,
-    .memory-card {
+    .radar-status-item, .memory-card {
       border:1px solid var(--hairline) !important;
       border-radius:10px !important;
       background:var(--panel-2) !important;
       box-shadow:none !important;
     }
-    .whole-market-stat.positive, .flow-summary-card.inflow {
-      border-color:#e7c1b8 !important;
-      background:var(--cinnabar-soft) !important;
+
+    /* Market tape: evidence first, decision last */
+    #mainline .whole-market-grid {
+      display:grid;
+      grid-template-columns:1.15fr 1fr 1.15fr .85fr !important;
+      gap:0 !important;
+      margin:12px 0 8px;
+      overflow:hidden;
+      border:1px solid var(--hairline);
+      border-radius:12px;
+      background:var(--panel-2);
     }
-    .whole-market-stat.gate, .flow-summary-card.style {
+    #mainline .whole-market-stat {
+      min-width:0;
+      padding:16px 18px !important;
+      border:0 !important;
+      border-right:1px solid var(--hairline) !important;
+      border-radius:0 !important;
+      background:transparent !important;
+      box-shadow:none !important;
+    }
+    #mainline .whole-market-stat:last-child { border-right:0 !important; }
+    #mainline .whole-market-stat span {
+      display:block;
+      margin-bottom:7px;
+      color:var(--muted) !important;
+      font-size:12px !important;
+      font-weight:650;
+    }
+    #mainline .whole-market-stat strong {
+      display:block;
+      color:var(--ink);
+      font-family:var(--serif);
+      font-size:21px !important;
+      font-weight:700;
+      line-height:1.28;
+      font-variant-numeric:tabular-nums;
+      white-space:nowrap;
+    }
+    #mainline .whole-market-stat.positive strong {
+      color:var(--cinnabar) !important;
+      font-size:24px !important;
+    }
+    #mainline .whole-market-stat.gate {
       border-color:#decfa9 !important;
       background:var(--gold-soft) !important;
     }
-    .flow-summary-card.outflow {
-      border-color:#cbd8e5 !important;
-      background:var(--accent-soft) !important;
+    #mainline .whole-market-stat.gate span,
+    #mainline .whole-market-stat.gate strong { color:var(--gold) !important; }
+    #mainline .market-source-note {
+      margin:0 0 32px;
+      padding:0 2px;
+      font-size:12px;
     }
-    .whole-market-stat.positive strong, .flow-summary-card.inflow span {
-      color:var(--cinnabar) !important;
+
+    /* Ranked comparison matrix, not another row of KPI cards */
+    #mainline .market-flow-summary {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+      gap:0 !important;
+      margin:12px 0;
+      overflow:hidden;
+      border:1px solid var(--hairline);
+      border-radius:12px;
+      background:var(--panel);
     }
-    .whole-market-stat.gate strong, .flow-summary-card.style span {
-      color:var(--gold) !important;
+    #mainline .flow-summary-card {
+      position:relative;
+      min-width:0;
+      padding:15px 16px 12px !important;
+      border:0 !important;
+      border-right:1px solid var(--hairline) !important;
+      border-radius:0 !important;
+      background:transparent !important;
+      box-shadow:none !important;
     }
-    .flow-summary-card.outflow span { color:var(--accent) !important; }
-    .industry-details, .validation-box {
+    #mainline .flow-summary-card:last-child { border-right:0 !important; }
+    #mainline .flow-summary-card::before {
+      content:"";
+      position:absolute;
+      inset:0 0 auto;
+      height:2px;
+      background:var(--hairline-strong);
+    }
+    #mainline .flow-summary-card.inflow::before { background:var(--cinnabar); }
+    #mainline .flow-summary-card.outflow::before { background:var(--accent); }
+    #mainline .flow-summary-card.style::before { background:var(--gold); }
+    #mainline .flow-summary-label {
+      display:block;
+      margin:0 0 5px;
+      color:var(--ink-2);
+      font-size:12px;
+      font-weight:750;
+    }
+    #mainline .flow-summary-card.inflow .flow-summary-label { color:var(--cinnabar); }
+    #mainline .flow-summary-card.outflow .flow-summary-label { color:var(--accent); }
+    #mainline .flow-summary-card.style .flow-summary-label { color:var(--gold); }
+    #mainline .flow-rank-list {
+      margin:0;
+      padding:0;
+      list-style:none;
+      counter-reset:flow-rank;
+    }
+    #mainline .flow-rank-list li {
+      counter-increment:flow-rank;
+      display:grid;
+      grid-template-columns:20px minmax(0,1fr) auto;
+      gap:8px;
+      align-items:baseline;
+      min-height:35px;
+      padding:7px 0;
+      border-top:1px solid var(--hairline);
+    }
+    #mainline .flow-rank-list li::before {
+      content:counter(flow-rank,decimal-leading-zero);
+      color:var(--muted);
+      font:600 10px/1 var(--mono);
+    }
+    #mainline .flow-rank-name {
+      min-width:0;
+      overflow:hidden;
+      color:var(--ink-2);
+      font-weight:650;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+    #mainline .flow-rank-value {
+      color:var(--ink);
+      font:700 13px/1.4 var(--mono);
+      font-variant-numeric:tabular-nums;
+      white-space:nowrap;
+    }
+    #mainline .flow-summary-card.inflow .flow-rank-value { color:var(--cinnabar); }
+    #mainline .flow-summary-card.outflow .flow-rank-value { color:var(--accent); }
+    #mainline .flow-summary-card.style .flow-rank-value { color:var(--gold); }
+    .validation-box {
       border:1px solid var(--hairline) !important;
       border-radius:10px !important;
       background:var(--panel-2) !important;
     }
-    .industry-details summary, .validation-box summary {
-      color:var(--accent) !important;
-    }
+    .validation-box summary { color:var(--accent) !important; }
     .mainline-card-grid {
       border-top:1px solid var(--hairline) !important;
     }
@@ -768,17 +880,30 @@ a { color: var(--accent); }
     }
     .algo-link strong { color:var(--accent) !important; font-family:var(--serif); }
     .algo-link a {
+      display:inline-flex;
+      align-items:center;
+      min-height:44px;
       background:var(--accent) !important;
       color:#fff !important;
     }
     .buy-focus-grid {
       grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)) !important;
+      gap:var(--space-4) !important;
     }
     .buy-card {
-      border:1px solid #e7c1b8 !important;
-      border-radius:12px !important;
-      background:var(--cinnabar-soft) !important;
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--hairline-strong) !important;
+      border-radius:10px !important;
+      background:var(--panel) !important;
       box-shadow:none !important;
+    }
+    .buy-card::before {
+      content:"";
+      position:absolute;
+      inset:0 0 auto;
+      height:2px;
+      background:var(--cinnabar);
     }
     .buy-head h3 { margin-top:0; }
     .buy-rank {
@@ -792,6 +917,7 @@ a { color: var(--accent); }
       background:var(--panel-2) !important;
     }
     .filter-field input, .filter-check {
+      min-height:44px !important;
       border-color:var(--hairline-strong) !important;
       border-radius:8px !important;
       background:var(--panel) !important;
@@ -799,6 +925,7 @@ a { color: var(--accent); }
     }
     .filter-check input { accent-color:var(--cinnabar) !important; }
     .filter-count {
+      min-height:44px;
       border:1px solid var(--hairline);
       border-radius:8px !important;
       background:var(--panel) !important;
@@ -837,7 +964,182 @@ a { color: var(--accent); }
     .candidate-table { min-width:920px !important; }
     .full-score-table { min-width:1180px !important; }
     .candidate-table-wrap table { border:0 !important; }
+
+    /* Style rotation matrix */
+    #mainline .style-rotation-scroll {
+      position:relative;
+      border-color:var(--hairline-strong) !important;
+    }
+    #mainline .style-rotation-table {
+      min-width:1060px !important;
+      table-layout:fixed;
+      border:0 !important;
+    }
+    #mainline .style-rotation-table th {
+      position:sticky;
+      top:0;
+      z-index:2;
+      padding:10px 11px !important;
+      text-align:left;
+      white-space:normal;
+    }
+    #mainline .style-rotation-table td {
+      padding:10px 11px !important;
+      vertical-align:middle;
+    }
+    #mainline .style-rotation-table th:nth-child(1) { width:15%; }
+    #mainline .style-rotation-table th:nth-child(2) { width:8%; }
+    #mainline .style-rotation-table th:nth-child(3) { width:21%; }
+    #mainline .style-rotation-table th:nth-child(4) { width:9%; }
+    #mainline .style-rotation-table th:nth-child(5) { width:11%; }
+    #mainline .style-rotation-table th:nth-child(6) { width:16%; }
+    #mainline .style-rotation-table th:nth-child(7) { width:10%; }
+    #mainline .style-rotation-table th:nth-child(8) { width:10%; }
+    #mainline .style-rotation-table th:nth-child(2),
+    #mainline .style-rotation-table th:nth-child(n+4),
+    #mainline .style-rotation-table td:nth-child(2),
+    #mainline .style-rotation-table td:nth-child(n+4) { text-align:right; }
+    #mainline .style-rotation-table th:nth-child(4),
+    #mainline .style-rotation-table td:nth-child(4),
+    #mainline .style-rotation-table th:nth-child(6),
+    #mainline .style-rotation-table td:nth-child(6) {
+      box-shadow:inset 1px 0 var(--hairline-strong);
+    }
+    #mainline .style-rotation-table th:first-child,
+    #mainline .style-rotation-table td:first-child {
+      position:sticky;
+      left:0;
+    }
+    #mainline .style-rotation-table th:first-child {
+      z-index:3;
+      background:var(--accent) !important;
+    }
+    #mainline .style-rotation-table td:first-child {
+      z-index:1;
+      background:var(--panel) !important;
+    }
+    #mainline .style-rotation-table tr:nth-child(even) td:first-child {
+      background:var(--panel-2) !important;
+    }
+    #mainline .style-rotation-table tbody tr:nth-child(-n+3) td {
+      background:rgba(248,240,211,.38) !important;
+    }
+    #mainline .style-rotation-table tbody tr:nth-child(-n+3) td:first-child {
+      background:#faf5e5 !important;
+    }
+    #mainline .style-rotation-table td:nth-child(2) {
+      color:var(--gold);
+      font:750 15px/1 var(--mono);
+    }
+    #mainline .table-scroll-hint {
+      display:none;
+      position:sticky;
+      left:0;
+      width:max-content;
+      padding:7px 10px;
+      color:var(--muted);
+      font-size:11px;
+      background:var(--panel-2);
+      border-right:1px solid var(--hairline);
+      border-bottom:1px solid var(--hairline);
+    }
+
+    /* Progressive disclosure keeps the 103-row audit table available, not dominant */
+    .fullscores-disclosure {
+      margin-top:var(--space-5);
+      overflow:hidden;
+      border:1px solid var(--hairline-strong);
+      border-radius:10px;
+      background:var(--panel-2);
+    }
+    .fullscores-disclosure > summary {
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:var(--space-2) var(--space-4);
+      align-items:center;
+      min-height:60px;
+      padding:12px 16px;
+      cursor:pointer;
+      list-style:none;
+      color:var(--accent);
+    }
+    .fullscores-disclosure > summary::-webkit-details-marker { display:none; }
+    .fullscores-disclosure > summary span {
+      font-weight:750;
+    }
+    .fullscores-disclosure > summary small {
+      grid-column:1;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.5;
+    }
+    .fullscores-disclosure > summary::after {
+      content:"+";
+      grid-column:2;
+      grid-row:1 / span 2;
+      display:grid;
+      place-items:center;
+      width:32px;
+      height:32px;
+      border:1px solid var(--hairline-strong);
+      border-radius:50%;
+      background:var(--panel);
+      color:var(--accent);
+      font:500 20px/1 var(--sans);
+    }
+    .fullscores-disclosure[open] > summary {
+      border-bottom:1px solid var(--hairline);
+      background:var(--accent-soft);
+    }
+    .fullscores-disclosure[open] > summary::after { content:"−"; }
+    .fullscores-body { padding:0 14px 14px; }
+
+    /* Dense tables keep the row identity visible while scrolling horizontally */
+    .candidate-table th:first-child,
+    .candidate-table td:first-child {
+      position:sticky;
+      left:0;
+    }
+    .candidate-table th:first-child {
+      z-index:3;
+      background:var(--accent) !important;
+    }
+    .candidate-table td:first-child {
+      z-index:1;
+      background:var(--panel) !important;
+    }
+    .candidate-table tr:nth-child(even) td:first-child {
+      background:var(--panel-2) !important;
+    }
+    .full-score-table th:nth-child(1),
+    .full-score-table td:nth-child(1) {
+      position:sticky;
+      left:0;
+      width:48px !important;
+    }
+    .full-score-table th:nth-child(2),
+    .full-score-table td:nth-child(2) {
+      position:sticky;
+      left:48px;
+      width:118px !important;
+    }
+    .full-score-table th:nth-child(-n+2) {
+      z-index:3;
+      background:var(--accent) !important;
+    }
+    .full-score-table td:nth-child(-n+2) {
+      z-index:1;
+      background:var(--panel) !important;
+    }
+    .full-score-table tr:nth-child(even) td:nth-child(-n+2) {
+      background:var(--panel-2) !important;
+    }
     .row-details summary {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:44px;
+      min-height:44px;
       border-color:var(--hairline-strong) !important;
       border-radius:7px !important;
       background:var(--panel-2) !important;
@@ -858,6 +1160,31 @@ a { color: var(--accent); }
       border-top:1px solid var(--hairline) !important;
       border-radius:0 !important;
       background:transparent !important;
+    }
+
+    /* Method and intake steps use one shared editorial rail */
+    #algorithm .workflow, #qveris .workflow {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:0 !important;
+      margin-top:var(--space-4);
+      border-top:1px solid var(--hairline);
+      border-bottom:1px solid var(--hairline);
+    }
+    #algorithm .step, #qveris .step {
+      padding:16px !important;
+      border:0 !important;
+      border-right:1px solid var(--hairline) !important;
+      border-radius:0 !important;
+      background:transparent !important;
+    }
+    #algorithm .step:last-child, #qveris .step:last-child {
+      border-right:0 !important;
+    }
+    #algorithm .step h3, #qveris .step h3 {
+      margin:0 0 8px;
+      font-family:var(--serif);
+      font-size:17px !important;
     }
 
     /* Semantic chips */
@@ -884,6 +1211,16 @@ a { color: var(--accent); }
     @media (max-width:980px) {
       .top, .wrap { width:min(100% - 28px,1280px) !important; }
       .top { padding-top:36px !important; }
+      .csn-item:nth-child(2) .csn-drop {
+        right:0 !important;
+        left:auto !important;
+        transform:translateY(6px) !important;
+      }
+      .csn-item:nth-child(2):hover .csn-drop,
+      .csn-item:nth-child(2):focus-within .csn-drop,
+      .csn-item:nth-child(2)[data-open="true"] .csn-drop {
+        transform:none !important;
+      }
       .kpis { grid-template-columns:repeat(3,minmax(0,1fr)) !important; }
       .kpi:nth-child(3) { border-right:0 !important; }
       .kpi:nth-child(-n+3) { border-bottom:1px solid var(--hairline) !important; }
@@ -896,11 +1233,38 @@ a { color: var(--accent); }
         border-left:0 !important;
         border-top:1px solid var(--hairline) !important;
       }
+      #mainline .whole-market-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+      }
+      #mainline .whole-market-stat:nth-child(2) { border-right:0 !important; }
+      #mainline .whole-market-stat:nth-child(-n+2) {
+        border-bottom:1px solid var(--hairline) !important;
+      }
+      #mainline .market-flow-summary {
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+      }
+      #mainline .flow-summary-card:nth-child(2) { border-right:0 !important; }
+      #mainline .flow-summary-card.style {
+        grid-column:1 / -1;
+        border-top:1px solid var(--hairline) !important;
+      }
+      #mainline .style-rotation-table { min-width:900px !important; }
+      #mainline .table-scroll-hint { display:block; }
+      #algorithm .workflow, #qveris .workflow {
+        grid-template-columns:1fr !important;
+      }
+      #algorithm .step, #qveris .step {
+        border-right:0 !important;
+        border-bottom:1px solid var(--hairline) !important;
+      }
+      #algorithm .step:last-child, #qveris .step:last-child {
+        border-bottom:0 !important;
+      }
     }
     @media (max-width:640px) {
       .csn-topnav-inner { min-height:54px; }
       .csn-brand-sub { display:none !important; }
-      .csn-item > a { padding:0 8px !important; font-size:12px !important; }
+      .csn-item > a { padding:0 10px !important; font-size:12px !important; }
       .csn-menu { overflow:visible !important; }
       .csn-drop {
         position:fixed !important;
@@ -936,8 +1300,35 @@ a { color: var(--accent); }
         border-bottom:1px solid rgba(150,112,42,.2) !important;
       }
       section > h2, .rec-review h2 { font-size:21px !important; }
+      #mainline .whole-market-stat { padding:14px 12px !important; }
+      #mainline .whole-market-stat strong {
+        font-size:17px !important;
+        white-space:normal;
+      }
+      #mainline .whole-market-stat.positive strong { font-size:19px !important; }
+      #mainline .market-flow-summary { grid-template-columns:1fr !important; }
+      #mainline .flow-summary-card {
+        border-right:0 !important;
+        border-bottom:1px solid var(--hairline) !important;
+      }
+      #mainline .flow-summary-card:last-child { border-bottom:0 !important; }
+      #mainline .flow-summary-card.style {
+        grid-column:auto;
+        border-top:0 !important;
+      }
+      #mainline .style-rotation-table { min-width:860px !important; }
+      .fullscores-disclosure > summary {
+        grid-template-columns:minmax(0,1fr) 32px;
+        min-height:72px;
+        padding:12px;
+      }
+      .fullscores-body { padding:0 10px 10px; }
       .candidate-table { min-width:880px !important; }
       .full-score-table { min-width:1120px !important; }
+      .candidate-table th, .candidate-table td,
+      .full-score-table th, .full-score-table td {
+        font-size:13px !important;
+      }
       .detail-grid {
         left:12px !important;
         right:12px !important;
@@ -1056,7 +1447,7 @@ a { color: var(--accent); }
     </section>
 
 
-    <section id="mainline" class="priority-section">
+    <section id="mainline" class="priority-section" data-page-polish="MDA_PAGE_POLISH_V1">
       <h2>一、主线雷达</h2>
       <p class="lead">先看全A总资金、成交额与涨跌宽度，再看行业资金分配；代表ETF只用于确认风格位置和温度，不代替大盘判断。</p>
 
@@ -1067,7 +1458,7 @@ a { color: var(--accent); }
       </div>
 
         <h3>全A市场资金总闸门</h3>
-        <div class="whole-market-grid">
+        <div class="whole-market-grid" data-layout="MDA_MARKET_MATRIX_V1">
           <div class="whole-market-stat positive"><span>全A主力净流入</span><strong>+909.99亿</strong></div>
           <div class="whole-market-stat"><span>全A成交额</span><strong>20,887亿</strong></div>
           <div class="whole-market-stat"><span>市场宽度</span><strong>5195涨 / 286跌</strong></div>
@@ -1075,8 +1466,8 @@ a { color: var(--accent); }
         </div>
         <div class="market-source-note">主力净占比 +4.36%；全A订单流覆盖 5883/5883；Futu沪深全A交叉核验 20,760亿。</div>
 
-      <h3>大盘资金流向摘要（全A行业）</h3><div class="market-flow-summary"><div class="flow-summary-card inflow"><span>主要流入</span><strong>电子 +726.85亿；半导体 +622.67亿；元件 +63.91亿</strong></div><div class="flow-summary-card outflow"><span>主要流出</span><strong>计算机 -15.47亿；计算机设备 -15.23亿；石油石化 -12.41亿</strong></div><div class="flow-summary-card style"><span>风格前三</span><strong>高股息/银行 79.1分；医药 76.9分；消费 76.0分</strong></div></div><details class="industry-details"><summary>展开全A行业净流入 / 净流出 TOP5 明细</summary><div class="industry-fund-grid"><div class="industry-fund-block inflow"><h4>净流入 TOP5</h4><div class="table-scroll"><table><thead><tr><th>行业</th><th>主力净额</th><th>净占比</th><th>涨跌</th><th>涨/跌</th></tr></thead><tbody><tr><td><strong>电子</strong></td><td>+726.85亿</td><td>+9.76%</td><td>+3.40%</td><td>472/39</td></tr><tr><td><strong>半导体</strong></td><td>+622.67亿</td><td>+12.73%</td><td>+2.20%</td><td>152/28</td></tr><tr><td><strong>元件</strong></td><td>+63.91亿</td><td>+6.68%</td><td>+5.28%</td><td>65/1</td></tr><tr><td><strong>电力设备</strong></td><td>+50.31亿</td><td>+3.03%</td><td>+3.89%</td><td>401/8</td></tr><tr><td><strong>建筑材料</strong></td><td>+37.08亿</td><td>+12.93%</td><td>+3.28%</td><td>74/4</td></tr></tbody></table></div></div><div class="industry-fund-block outflow"><h4>净流出 TOP5</h4><div class="table-scroll"><table><thead><tr><th>行业</th><th>主力净额</th><th>净占比</th><th>涨跌</th><th>涨/跌</th></tr></thead><tbody><tr><td><strong>计算机</strong></td><td>-15.47亿</td><td>-1.37%</td><td>+3.21%</td><td>345/16</td></tr><tr><td><strong>计算机设备</strong></td><td>-15.23亿</td><td>-3.92%</td><td>+3.48%</td><td>84/5</td></tr><tr><td><strong>石油石化</strong></td><td>-12.41亿</td><td>-6.37%</td><td>-0.31%</td><td>32/14</td></tr><tr><td><strong>非银金融</strong></td><td>-5.11亿</td><td>-1.35%</td><td>+1.19%</td><td>68/12</td></tr><tr><td><strong>银行Ⅱ</strong></td><td>-3.37亿</td><td>-1.24%</td><td>+0.33%</td><td>26/11</td></tr></tbody></table></div></div></div></details>
-      <h3>大盘风格轮动确认（行业宽度主判，代表ETF辅助）</h3><p class="subtle">综合分优先使用全A行业涨跌与上涨宽度；代表ETF只补充乖离率、成交温度和订单流确认，不代替大盘资金。</p><div class="table-scroll"><table><thead><tr><th>市场风格</th><th>综合分</th><th>综合结论</th><th>行业涨跌</th><th>行业上涨宽度</th><th>代表ETF乖离 / 3日变化</th><th>代表ETF成交温度</th><th>代表ETF订单流</th></tr></thead><tbody><tr><td><strong>高股息/银行</strong></td><td>79.1</td><td><strong>进攻闸门打开</strong><div class="subtle">价值流震荡区</div></td><td>+1.32%</td><td>100.0%</td><td><span class="bias-temp warm">+2.26%</span><div class="subtle">3日 <span class="bias-delta steady">-0.82</span></div></td><td>0.73x</td><td>+0.28亿</td></tr><tr><td><strong>医药</strong></td><td>76.9</td><td><strong>进攻闸门打开</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+3.58%</td><td>100.0%</td><td><span class="bias-temp warm">+1.46%</span><div class="subtle">3日 <span class="bias-delta cooling">-2.45</span></div></td><td>0.60x</td><td>+0.53亿</td></tr><tr><td><strong>消费</strong></td><td>76.0</td><td><strong>进攻闸门打开</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+3.03%</td><td>100.0%</td><td><span class="bias-temp warm">+0.44%</span><div class="subtle">3日 <span class="bias-delta cooling">-1.61</span></div></td><td>0.68x</td><td>+0.11亿</td></tr><tr><td><strong>周期资源</strong></td><td>57.2</td><td><strong>轮动确认/观察</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+2.30%</td><td>100.0%</td><td><span class="bias-temp warm">+0.27%</span><div class="subtle">3日 <span class="bias-delta steady">-1.17</span></div></td><td>0.67x</td><td>-0.30亿</td></tr><tr><td><strong>科技成长</strong></td><td>55.5</td><td><strong>轮动确认/观察</strong><div class="subtle">跌穿企稳</div></td><td>+3.50%</td><td>100.0%</td><td><span class="bias-temp cool">-4.60%</span><div class="subtle">3日 <span class="bias-delta steady">+0.59</span></div></td><td>0.74x</td><td>+1.17亿</td></tr><tr><td><strong>工业制造/防守</strong></td><td>45.7</td><td><strong>中性</strong><div class="subtle">早期修复，待转正</div></td><td>+3.21%</td><td>100.0%</td><td><span class="bias-temp cool">-4.52%</span><div class="subtle">3日 <span class="bias-delta warming">+2.81</span></div></td><td>0.99x</td><td>-0.23亿</td></tr></tbody></table></div><div class="bias-legend"><span class="bias-temp scorching">极热</span><span class="bias-temp hot">热</span><span class="bias-temp warm">温</span><span class="bias-temp cool">偏冷</span><span class="bias-temp cold">冷</span></div><div class="note">代表ETF乖离率=(ln收盘价−EMA20(ln收盘价))×100；3日变化判断修复/恶化；银行与红利按±5%震荡区逆向观察。该列只做风格确认。</div>
+      <h3>大盘资金流向摘要（全A行业）</h3><div class="market-flow-summary" data-layout="MDA_MARKET_MATRIX_V1"><article class="flow-summary-card inflow"><span class="flow-summary-label">主要流入</span><ol class="flow-rank-list"><li><span class="flow-rank-name">电子</span><strong class="flow-rank-value">+726.85亿</strong></li><li><span class="flow-rank-name">半导体</span><strong class="flow-rank-value">+622.67亿</strong></li><li><span class="flow-rank-name">元件</span><strong class="flow-rank-value">+63.91亿</strong></li></ol></article><article class="flow-summary-card outflow"><span class="flow-summary-label">主要流出</span><ol class="flow-rank-list"><li><span class="flow-rank-name">计算机</span><strong class="flow-rank-value">-15.47亿</strong></li><li><span class="flow-rank-name">计算机设备</span><strong class="flow-rank-value">-15.23亿</strong></li><li><span class="flow-rank-name">石油石化</span><strong class="flow-rank-value">-12.41亿</strong></li></ol></article><article class="flow-summary-card style"><span class="flow-summary-label">风格前三</span><ol class="flow-rank-list"><li><span class="flow-rank-name">高股息/银行</span><strong class="flow-rank-value">79.1分</strong></li><li><span class="flow-rank-name">医药</span><strong class="flow-rank-value">76.9分</strong></li><li><span class="flow-rank-name">消费</span><strong class="flow-rank-value">76.0分</strong></li></ol></article></div>
+      <h3>大盘风格轮动确认（行业宽度主判，代表ETF辅助）</h3><p class="subtle">综合分优先使用全A行业涨跌与上涨宽度；代表ETF只补充乖离率、成交温度和订单流确认，不代替大盘资金。</p><div class="table-scroll style-rotation-scroll" data-layout="MDA_MARKET_MATRIX_V1"><div class="table-scroll-hint" aria-hidden="true">← 左右滑动查看完整指标 →</div><table class="style-rotation-table" aria-label="大盘风格轮动确认"><thead><tr><th>市场风格</th><th>综合分</th><th>综合结论</th><th>行业涨跌</th><th>行业上涨宽度</th><th>代表ETF乖离 / 3日变化</th><th>代表ETF成交温度</th><th>代表ETF订单流</th></tr></thead><tbody><tr><td><strong>高股息/银行</strong></td><td>79.1</td><td><strong>进攻闸门打开</strong><div class="subtle">价值流震荡区</div></td><td>+1.32%</td><td>100.0%</td><td><span class="bias-temp warm">+2.26%</span><div class="subtle">3日 <span class="bias-delta steady">-0.82</span></div></td><td>0.73x</td><td>+0.28亿</td></tr><tr><td><strong>医药</strong></td><td>76.9</td><td><strong>进攻闸门打开</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+3.58%</td><td>100.0%</td><td><span class="bias-temp warm">+1.46%</span><div class="subtle">3日 <span class="bias-delta cooling">-2.45</span></div></td><td>0.60x</td><td>+0.53亿</td></tr><tr><td><strong>消费</strong></td><td>76.0</td><td><strong>进攻闸门打开</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+3.03%</td><td>100.0%</td><td><span class="bias-temp warm">+0.44%</span><div class="subtle">3日 <span class="bias-delta cooling">-1.61</span></div></td><td>0.68x</td><td>+0.11亿</td></tr><tr><td><strong>周期资源</strong></td><td>57.2</td><td><strong>轮动确认/观察</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+2.30%</td><td>100.0%</td><td><span class="bias-temp warm">+0.27%</span><div class="subtle">3日 <span class="bias-delta steady">-1.17</span></div></td><td>0.67x</td><td>-0.30亿</td></tr><tr><td><strong>科技成长</strong></td><td>55.5</td><td><strong>轮动确认/观察</strong><div class="subtle">跌穿企稳</div></td><td>+3.50%</td><td>100.0%</td><td><span class="bias-temp cool">-4.60%</span><div class="subtle">3日 <span class="bias-delta steady">+0.59</span></div></td><td>0.74x</td><td>+1.17亿</td></tr><tr><td><strong>工业制造/防守</strong></td><td>45.7</td><td><strong>中性</strong><div class="subtle">早期修复，待转正</div></td><td>+3.21%</td><td>100.0%</td><td><span class="bias-temp cool">-4.52%</span><div class="subtle">3日 <span class="bias-delta warming">+2.81</span></div></td><td>0.99x</td><td>-0.23亿</td></tr></tbody></table></div><div class="bias-legend"><span class="bias-temp scorching">极热</span><span class="bias-temp hot">热</span><span class="bias-temp warm">温</span><span class="bias-temp cool">偏冷</span><span class="bias-temp cold">冷</span></div><div class="note">代表ETF乖离率=(ln收盘价−EMA20(ln收盘价))×100；3日变化判断修复/恶化；银行与红利按±5%震荡区逆向观察。该列只做风格确认。</div>
       <div class="mainline-card-grid">
             <article class="mainline-card">
               <div class="mainline-head">
@@ -1233,7 +1624,7 @@ a { color: var(--accent); }
 
 	    <section id="fullscores">
 	      <h2>三、全量100池评分</h2>
-      <p class="lead">这里展示本次 Futu OpenD 已核验的全量股票池评分。它用于观察强弱和候选扩散，不等同于“建议买入”；真正的交易建议仍以上方 md50 龙一/龙二收敛清单为主。</p>
+      <p class="lead">这里展示本次 Futu OpenD 已核验的全量股票池评分。它用于观察强弱和候选扩散，不等同于“建议买入”；真正的交易建议仍以上方 md50 龙一/龙二收敛清单为主。</p><details class="fullscores-disclosure"><summary><span>展开完整评分表与筛选器</span><small>默认收起，可按代码、拼音、评分、形态和动作筛选</small></summary><div class="fullscores-body">
 
       <div class="filter-panel" id="fullScoreFilter">
         <div class="filter-field">
@@ -1374,7 +1765,7 @@ a { color: var(--accent); }
 <tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="兆易创新 603986 zhaoyichuangxin zycx 必选池 存储芯片/mcu / 存储芯片 存储芯片/mcu 存储芯片 破位观望 破位 二阶段预警-跌破55 a6弱 rs中性 中性 +0.0；17条中性新闻 无明显买点"><td>102</td><td class="stock"><strong>兆易创新</strong><code>603986</code></td><td><span class="pool-badge core" title="必选池">必</span> 存储芯片/MCU / 存储芯片<div class="subtle">存储芯片/MCU</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-5.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -18.6% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-5.2% / 10:-10.6% / 20:-24.6% / 55:-16.2% / 200:+17.5%</div></td><td>中性 +0.0；17条中性新闻</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
 <tr data-score="0" data-special="0" data-pool="core" data-action="sell" data-search="华虹公司 688347 huahonggongsi hhgs 必选池 特色工艺晶圆代工 / 半导体制造 特色工艺晶圆代工 半导体制造 破位观望 破位 严重乖离 a6弱 rs顶15% 偏利空 -0.2；多空交织：1条利好 vs 1条利空；机构看好/调入指数 20日线向上"><td>103</td><td class="stock"><strong>华虹公司</strong><code>688347</code></td><td><span class="pool-badge core" title="必选池">必</span> 特色工艺晶圆代工 / 半导体制造<div class="subtle">特色工艺晶圆代工</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 21</div></td><td><span class="pill down">-6.5%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -6.8% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-12.7% / 10:-9.8% / 20:-8.7% / 55:+11.2% / 200:+70.3%</div></td><td>偏利空 -0.2；多空交织：1条利好 vs 1条利空；机构看好/调入指数</td><td>暂不优先<div class="subtle">20日线向上</div></td></tr></tbody>
         </table>
-      </div>
+      </div></div></details>
     </section>
 
 	    <section id="algorithm">
