@@ -31,7 +31,6 @@
     .csn-item:hover .csn-drop,.csn-item:focus-within .csn-drop{opacity:1;visibility:visible;transform:none}
     .csn-drop a{display:block;padding:9px 11px;border-radius:8px;color:var(--ink);text-decoration:none}.csn-drop a:hover{background:#eef1e9}
     .csn-drop b,.csn-drop small{display:block}.csn-drop b{font-size:13px}.csn-drop small{margin-top:2px;color:var(--muted);font-size:10px;line-height:1.45}.csn-drop a.current b:after{content:" · 当前";color:var(--green);font-size:10px}
-    .site-search{position:relative;align-self:center;width:230px;flex:none}.site-search label{height:36px;display:flex;align-items:center;gap:7px;padding:0 11px;border:1px solid var(--line);border-radius:999px;background:#fff}.site-search label>span{color:var(--green);font-size:17px;line-height:1}.site-search input{min-width:0;width:100%;border:0;outline:0;background:transparent;color:var(--ink);font-size:11px}.site-search-results{position:absolute;z-index:80;top:calc(100% + 8px);right:0;width:360px;max-height:min(480px,70vh);overflow:auto;padding:7px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 20px 48px rgba(11,23,17,.17)}.site-search-results[hidden]{display:none}.site-search-results a{display:block;padding:10px 11px;border-radius:9px;color:var(--ink);text-decoration:none}.site-search-results a:hover,.site-search-results a:focus{background:#eef1e9;outline:none}.site-search-results b,.site-search-results small{display:block}.site-search-results b{font-size:12px}.site-search-results small{margin-top:3px;color:var(--muted);font-size:9px;line-height:1.45}.site-search-empty{padding:18px 12px;color:var(--muted);font-size:10px;text-align:center}
     .topbar{min-height:58px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
     .back{color:var(--ink);font:800 10px var(--mono);letter-spacing:.14em;text-decoration:none}.status{display:flex;align-items:center;gap:9px;color:#53665a;font-size:11px}.status i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 13px rgba(18,104,74,.6)}.status time{padding-left:9px;border-left:1px solid var(--line)}
     .hero{display:grid;grid-template-columns:1.35fr .65fr;gap:44px;align-items:end;padding:52px 0 32px}
@@ -55,9 +54,9 @@
     .point{position:absolute;z-index:2;transform:translate(-50%,-50%);min-width:38px;height:24px;padding:0 6px;border:1px solid rgba(11,23,17,.16);border-radius:7px;color:var(--ink);font:800 8px var(--mono);box-shadow:0 3px 10px rgba(11,23,17,.08)}.point:hover{z-index:10;transform:translate(-50%,-50%) scale(1.18)}
     .leading-accelerating{background:#c8f79f!important;color:#14563e!important}.leading-decelerating{background:#f3ddaa!important;color:#765313!important}.lagging-accelerating{background:#d7f0dc!important;color:#216145!important}.lagging-decelerating{background:#efd2cc!important;color:#8a382c!important}
     .candidates{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.candidate>p{margin:0;padding:15px 20px;color:#6a786f;font-size:11px;line-height:1.6;border-bottom:1px solid var(--line)}.candidate-rows{padding:8px 18px 15px}.candidate-rows article{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px 2px;border-bottom:1px solid rgba(11,23,17,.08)}.candidate-rows article:last-child{border:0}.candidate-rows article strong{display:inline-block;min-width:60px;font-size:13px}.candidate-rows article span{color:#7c8981;font-size:9px}.candidate-rows article b{font-size:11px}.recovery .section-head>strong,.recovery article b{color:var(--green)}.exhaustion .section-head>strong,.exhaustion article b{color:var(--amber)}.empty{padding:24px 2px 12px;color:#879188;font-size:10px}
-    .table-card{margin-top:12px}.table-scroll{overflow-x:auto;scrollbar-width:none}.table-scroll table{width:100%;min-width:1020px;border-collapse:collapse}.table-scroll th{padding:0;background:#e9ebe4;color:#718078;font:800 8px var(--mono);letter-spacing:.08em;text-align:left;white-space:nowrap}.table-scroll th:first-child{padding:11px 13px}.sort-head{width:100%;display:flex;align-items:center;gap:6px;padding:11px 13px;border:0;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;text-align:left;cursor:pointer}.sort-head:hover,.sort-head:focus-visible{background:rgba(18,104,74,.08);color:var(--green);outline:none}.sort-head .sort-icon{width:9px;color:#9aa59e;font-size:8px}.sort-head.active{color:var(--green)}.sort-head.active .sort-icon{color:var(--green)}.table-scroll td{padding:11px 13px;border-top:1px solid rgba(11,23,17,.08);font-size:10px}.table-scroll td:nth-child(2) strong,.table-scroll td:nth-child(2) span{display:block}.table-scroll td:nth-child(2) strong{font-size:13px}.table-scroll td:nth-child(2) span{margin-top:3px;max-width:230px;color:#879188;font-size:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.table-scroll em{display:inline-block;padding:5px 7px;border-radius:6px;font-style:normal;font-size:9px}.good{color:var(--green);font-weight:800}.warn{color:var(--amber);font-weight:800}
+    .table-card{margin-top:12px}.table-card[hidden]{display:none}.table-head-actions{display:flex;align-items:center;gap:12px}.table-head-actions .search{width:300px}.table-head-actions>strong{font-size:26px}.table-scroll{overflow-x:auto;scrollbar-width:none}.table-scroll table{width:100%;min-width:1020px;border-collapse:collapse}.table-scroll th{padding:0;background:#e9ebe4;color:#718078;font:800 8px var(--mono);letter-spacing:.08em;text-align:left;white-space:nowrap}.table-scroll th:first-child{padding:11px 13px}.sort-head{width:100%;display:flex;align-items:center;gap:6px;padding:11px 13px;border:0;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;text-align:left;cursor:pointer}.sort-head:hover,.sort-head:focus-visible{background:rgba(18,104,74,.08);color:var(--green);outline:none}.sort-head .sort-icon{width:9px;color:#9aa59e;font-size:8px}.sort-head.active{color:var(--green)}.sort-head.active .sort-icon{color:var(--green)}.table-scroll td{padding:11px 13px;border-top:1px solid rgba(11,23,17,.08);font-size:10px}.table-scroll td:nth-child(2) strong,.table-scroll td:nth-child(2) span{display:block}.table-scroll td:nth-child(2) strong{font-size:13px}.table-scroll td:nth-child(2) span{margin-top:3px;max-width:230px;color:#879188;font-size:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.table-scroll em{display:inline-block;padding:5px 7px;border-radius:6px;font-style:normal;font-size:9px}.good{color:var(--green);font-weight:800}.warn{color:var(--amber);font-weight:800}
     .message{padding:80px 20px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.55);text-align:center;color:#6d7b72}.footer{display:flex;justify-content:space-between;gap:20px;padding-top:17px;color:#79867e;font-size:9px}
-    @media(max-width:880px){.csn-topnav-inner{padding:8px 14px;flex-wrap:wrap;gap:0}.csn-brand{height:50px}.csn-brand-sub{display:none}.csn-menu{min-width:0;height:50px;overflow-x:auto}.csn-item>a,.csn-item>button{padding:0 10px}.csn-drop{right:0}.site-search{order:3;width:100%;margin:0 0 2px}.site-search-results{left:0;right:0;width:100%}.page{padding:0 15px 28px}.hero{grid-template-columns:1fr;padding:40px 0 28px;gap:20px}.hero h1{font-size:55px}.controls{flex-direction:column}.search{width:100%}.phase-strip{grid-template-columns:repeat(2,1fr)}.phase-strip button:first-child{grid-column:1/-1}.radar{height:560px}.candidates{grid-template-columns:1fr}}
+    @media(max-width:880px){.csn-topnav-inner{padding:0 14px}.csn-brand-sub{display:none}.csn-menu{min-width:0;overflow-x:auto}.csn-item>a,.csn-item>button{padding:0 10px}.csn-drop{right:0}.page{padding:0 15px 28px}.hero{grid-template-columns:1fr;padding:40px 0 28px;gap:20px}.hero h1{font-size:55px}.controls{flex-direction:column}.search{width:100%}.phase-strip{grid-template-columns:repeat(2,1fr)}.phase-strip button:first-child{grid-column:1/-1}.radar{height:560px}.candidates{grid-template-columns:1fr}.table-card .section-head{align-items:stretch;flex-direction:column}.table-head-actions{width:100%}.table-head-actions .search{flex:1;width:auto}}
     @media(max-width:520px){.status span{display:none}.hero h1{font-size:44px}.radar{min-height:500px}.point{min-width:32px;font-size:7px}.footer{flex-direction:column;gap:4px}}
   </style>
 </head>
@@ -70,51 +69,16 @@
       <div class="csn-item active"><button type="button">工具 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="../rs-thrust/"><b>相对强度加速图</b><small>找正在加速的强势股</small></a><a class="current" href="./"><b>轮动加速度雷达</b><small>看顶部衰竭与底部修复</small></a><a href="../us-skew/"><b>期权风险分布图</b><small>看保护需求与风险温度</small></a><a href="../ai-decision/"><b>每日市场进度</b><small>A股与美股的回调出清进度</small></a><a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>猎龙者每日信号表</b><small>美股机会、风险警报与历史信号</small></a></div></div>
       <div class="csn-item"><a href="../nav/">调研</a></div>
     </div>
-    <form class="site-search" id="siteSearch" role="search"><label><span aria-hidden="true">⌕</span><input id="siteSearchInput" type="search" placeholder="全站搜索" aria-label="搜索全站页面和报告" aria-controls="siteSearchResults" autocomplete="off"></label><div class="site-search-results" id="siteSearchResults" role="listbox" aria-live="polite" hidden></div></form>
   </div>
 </nav>
 <main class="page">
   <header class="topbar"><a class="back" href="../rs-thrust/">← RS THRUST</a><div class="status"><i></i><span id="status">读取中</span><time id="dataDate">—</time></div></header>
   <section class="hero"><div><p class="eyebrow">RELATIVE VELOCITY × ACCELERATION</p><h1>轮动加速度雷达</h1><div class="hero-copy">看清谁仍在领先、谁已开始乏力，以及哪些落后板块正在悄悄修复。预警是观察触发，不是顶底确认。</div></div><aside class="model"><small>CAUSAL MODEL</small><strong>RS速度 → 速度变化 → 加速度Z值</strong><p>5日因果平滑 · 3日速度变化 · 63日历史尺度</p></aside></section>
-  <section class="controls"><div class="tabs" id="classTabs"></div><label class="search"><b>⌕</b><input id="search" placeholder="搜索 ETF、代码或主题" aria-label="搜索 ETF、代码或主题"></label></section>
+  <section class="controls"><div class="tabs" id="classTabs"></div></section>
   <div id="content"><section class="message">正在读取轮动数据…</section></div>
+  <section class="table-card" id="tableCard" hidden><div class="section-head"><div><span>DETAILS · 点击表头排序</span><h2 id="tableTitle">全部轮动状态</h2></div><div class="table-head-actions"><label class="search"><b>⌕</b><input id="search" placeholder="搜索 ETF、代码或主题" aria-label="搜索 ETF、代码或主题"></label><strong id="tableCount">0</strong></div></div><div class="table-scroll"><table><thead><tr id="tableHead"></tr></thead><tbody id="tableBody"></tbody></table></div></section>
   <footer class="footer"><p id="source">基准：US.SPY · 最新完整交易日：—</p><p>二阶导数会放大噪声；当前模型仅作轮动观察，不构成交易建议。</p></footer>
 </main>
-<script>
-(() => {
-  const input=document.getElementById("siteSearchInput"),results=document.getElementById("siteSearchResults"),form=document.getElementById("siteSearch");
-  const pages=[
-    {title:"CSN 投研首页",subtitle:"一站式投研工作台",url:"../",tags:["首页","工作台"]},
-    {title:"A股严选",subtitle:"主线雷达 · MD50选股 · 全量评分",url:"../mda100/",tags:["A股","选股"]},
-    {title:"美股严选",subtitle:"核心池每日筛选 · 热门股扫描",url:"../csn/",tags:["美股","表姐严选"]},
-    {title:"热门股筛选",subtitle:"全市场热榜 · 板块轮动 · 技术核验",url:"../csn/hot/",tags:["热门股","热榜"]},
-    {title:"相对强度加速图",subtitle:"RS Thrust · 找正在加速的强势股",url:"../rs-thrust/",tags:["RS","相对强度"]},
-    {title:"轮动加速度雷达",subtitle:"顶部衰竭与底部修复",url:"./",tags:["轮动","二阶导数"]},
-    {title:"期权风险分布图",subtitle:"保护需求与风险温度",url:"../us-skew/",tags:["期权","风险"]},
-    {title:"每日市场进度",subtitle:"A股与美股的回调出清进度",url:"../ai-decision/",tags:["市场","回调"]},
-    {title:"猎龙者每日信号表",subtitle:"美股机会、风险警报与历史信号",url:"https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit",tags:["信号","Google Sheet"],external:true},
-    {title:"投研导航",subtitle:"公开行业与主题研究报告",url:"../nav/",tags:["调研","报告"]}
-  ];
-  let items=pages.slice(),matches=[];
-  const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  const search=()=>{
-    const terms=input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
-    if(!terms.length){results.hidden=true;matches=[];return}
-    matches=items.filter(item=>{const haystack=`${item.title} ${item.subtitle} ${(item.tags||[]).join(" ")}`.toLowerCase();return terms.every(term=>haystack.includes(term))}).slice(0,8);
-    results.innerHTML=matches.length?matches.map(item=>`<a role="option" href="${esc(item.url)}"${item.external?' target="_blank" rel="noopener"':""}><b>${esc(item.title)}</b><small>${esc(item.subtitle)}</small></a>`).join(""):`<div class="site-search-empty">未找到匹配页面或报告</div>`;
-    results.hidden=false;
-  };
-  fetch("../nav/reports.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("报告索引读取失败");return r.json()}).then(reports=>{
-    items=pages.concat(reports.map(report=>({title:report.title,subtitle:`${report.category} · ${report.date}`,url:report.url,tags:report.tags||[]})));
-    if(input.value.trim())search();
-  }).catch(()=>{});
-  input.addEventListener("input",search);
-  input.addEventListener("focus",()=>{if(input.value.trim())search()});
-  input.addEventListener("keydown",event=>{if(event.key==="Escape"){input.value="";results.hidden=true;input.blur()}});
-  form.addEventListener("submit",event=>{event.preventDefault();if(!matches.length)return;const first=matches[0];if(first.external)window.open(first.url,"_blank","noopener");else location.href=first.url});
-  document.addEventListener("click",event=>{if(!form.contains(event.target))results.hidden=true});
-})();
-</script>
 <script>
 (() => {
   const PHASES=["领先加速","领先减速","落后加速","落后减速"];
@@ -158,8 +122,12 @@
     document.getElementById("content").innerHTML=`
       <section class="phase-strip"><button data-phase="全部" class="${phase==="全部"?"active":""}"><span>全部</span><strong>${rows.length}</strong><small>${esc(label)}</small></button>${PHASES.map(p=>`<button data-phase="${p}" class="${CLASS[p]} ${phase===p?"active":""}"><span>${p}</span><strong>${counts[p]}</strong><small>${COPY[p]}</small></button>`).join("")}</section>
       <section class="shell"><div class="section-head"><div><span>ROTATION MAP</span><h2>${esc(label)}四象限</h2></div><p>横轴：相对SPY速度　纵轴：标准化加速度</p></div><div class="radar"><div class="quad q1"><strong>落后加速</strong><span>潜在轮动起点</span></div><div class="quad q2"><strong>领先加速</strong><span>主升与扩散</span></div><div class="quad q3"><strong>落后减速</strong><span>弱势延续</span></div><div class="quad q4"><strong>领先减速</strong><span>动能衰竭区</span></div><div class="axis-x"><span>相对落后</span><b>相对速度</b><span>相对领先</span></div><div class="axis-y"><span>加速</span><b>加速度</b><span>减速</span></div>${points}</div></section>
-      <section class="candidates">${candidate("底部修复候选","仍处相对落后区，但下跌速度开始明显收敛。等待RS转正与价格确认。",recoveries,"recovery")}${candidate("顶部衰竭候选","仍处相对领先区，但推进速度明显下降。观察是否跌破RS结构。",exhaustions,"exhaustion")}</section>
-      <section class="table-card"><div class="section-head"><div><span>DETAILS · 点击表头排序</span><h2>${phase==="全部"?"全部轮动状态":esc(phase)}</h2></div><strong>${filtered.length}</strong></div><div class="table-scroll"><table><thead><tr><th>#</th>${sortHead("ticker","标的 / 行业介绍")}${sortHead("rotationPhase","轮动阶段")}${sortHead("relativeVelocity5dPct","相对速度")}${sortHead("relativeAccelerationZ","加速度Z")}${sortHead("turnSignal","拐点预警")}${sortHead("rsThrustPct","RS Thrust")}${sortHead("monthChangePct","一月涨幅")}${sortHead("dayChangePct","当日")}</tr></thead><tbody>${body}</tbody></table></div></section>`;
+      <section class="candidates">${candidate("底部修复候选","仍处相对落后区，但下跌速度开始明显收敛。等待RS转正与价格确认。",recoveries,"recovery")}${candidate("顶部衰竭候选","仍处相对领先区，但推进速度明显下降。观察是否跌破RS结构。",exhaustions,"exhaustion")}</section>`;
+    document.getElementById("tableCard").hidden=false;
+    document.getElementById("tableTitle").textContent=phase==="全部"?"全部轮动状态":phase;
+    document.getElementById("tableCount").textContent=filtered.length;
+    document.getElementById("tableHead").innerHTML=`<th>#</th>${sortHead("ticker","标的 / 行业介绍")}${sortHead("rotationPhase","轮动阶段")}${sortHead("relativeVelocity5dPct","相对速度")}${sortHead("relativeAccelerationZ","加速度Z")}${sortHead("turnSignal","拐点预警")}${sortHead("rsThrustPct","RS Thrust")}${sortHead("monthChangePct","一月涨幅")}${sortHead("dayChangePct","当日")}`;
+    document.getElementById("tableBody").innerHTML=body;
     document.querySelectorAll("[data-phase]").forEach(b=>b.onclick=()=>{phase=b.dataset.phase;render()});
     document.querySelectorAll("[data-sort]").forEach(b=>b.onclick=()=>{
       const key=b.dataset.sort;
