@@ -260,7 +260,7 @@ button{color:inherit}
 .metrics small{color:var(--muted);font-size:10px}
 
 /* 阅读指南 */
-.guide{margin:0 0 14px;border:1px solid var(--hairline);border-radius:14px;background:var(--panel);box-shadow:var(--shadow-card);overflow:hidden}
+.guide{margin:14px 0 0;border:1px solid var(--hairline);border-radius:14px;background:var(--panel);box-shadow:var(--shadow-card);overflow:hidden}
 .guide summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;cursor:pointer;list-style:none}
 .guide summary::-webkit-details-marker{display:none}
 .guide summary strong{font-size:14px;font-family:var(--serif)}
@@ -440,6 +440,7 @@ let payload=null,sort='thrust',direction='desc',signal=new URLSearchParams(locat
 if(!['all','leaders','accelerators','rsHigh','both'].includes(signal))signal='all';
 if(!['us_stock','us_sector_etf'].includes(asset))asset='us_stock';
 const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+$('#shell').insertAdjacentElement('afterend',$('#guide'));
 document.querySelector('thead tr th:nth-last-child(3)').insertAdjacentHTML('beforebegin','<th class="plain"><abbr title="近252个交易日相对SPY强度线是否创新高">RS线</abbr></th>');
 const num=v=>v==null?'—':`${v>0?'+':''}${Number(v).toFixed(1)}%`,score=v=>v==null?'—':`${Number(v).toFixed(1)}%`;
 const delta=v=>`<span class="${v==null?'flat':v>0?'up':v<0?'down':'flat'}">${num(v)}</span>`;
