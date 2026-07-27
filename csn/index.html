@@ -57,9 +57,6 @@
     .page-headline { display:grid; gap:12px; }
     .csn-kicker { display:inline-flex; align-items:center; gap:8px; color:var(--gold); font:600 11px/1 var(--mono); letter-spacing:.24em; text-transform:uppercase; }
     .csn-kicker::before { content:""; width:22px; height:1px; background:var(--gold); }
-    .system-nav { display:flex; align-items:center; gap:6px; width:max-content; max-width:100%; margin:2px 0 4px; padding:5px; border:1px solid var(--line); border-radius:12px; background:rgba(255,254,250,.82); box-shadow:var(--shadow-card); }
-    .system-nav a { display:inline-flex; align-items:center; min-height:34px; padding:6px 13px; border-radius:8px; color:var(--ink-2); text-decoration:none; font-weight:750; font-size:14px; }
-    .system-nav a.active { background:var(--cinnabar-soft); color:var(--cinnabar); }
     .system-intro { display:flex; gap:10px; align-items:flex-start; margin:4px 0 0; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); background:var(--panel); color:var(--ink-2); box-shadow:var(--shadow-card); font-size:14px; line-height:1.65; font-weight:650; }
     .system-intro strong { color:var(--gold); white-space:nowrap; }
     h1 { margin:0; font-family:var(--serif); font-size:clamp(34px,4.8vw,52px); line-height:1.12; letter-spacing:.01em; }
@@ -197,8 +194,6 @@
       .csn-drop { left:auto; right:0; transform:translate(0,6px); min-width:220px; }
       .csn-item:hover .csn-drop,.csn-item:focus-within .csn-drop { transform:none; }
       main { padding:14px 10px 32px; }
-      .system-nav { width:100%; }
-      .system-nav a { flex:1; justify-content:center; }
       .system-intro { display:grid; }
       h1 { font-size:32px; }
       .summary-row { grid-template-columns:1fr; }
@@ -247,7 +242,8 @@
         <button type="button" aria-haspopup="true">股票 <span class="csn-caret">▼</span></button>
         <div class="csn-drop">
           <a href="../mda100/"><b>A股严选</b><small>主线雷达 · MD50 选股 · 全量评分</small></a>
-          <a class="current" href="./"><b>表姐严选</b><small>核心池每日筛选 · OpenD 核验</small></a>
+          <a class="current" href="./"><b>核心池筛选</b><small>表姐严选 · 300 只核心池 · OpenD 核验</small></a>
+          <a href="hot/"><b>热门股筛选</b><small>全市场热榜 · 板块轮动 · 技术核验</small></a>
         </div>
       </div>
       <div class="csn-item">
@@ -267,16 +263,12 @@
     <div class="page-headline">
       <span class="csn-kicker">CSN EQUITY SCREEN</span>
       <h1>表姐严选</h1>
-      <nav class="system-nav" aria-label="系统切换">
-        <a class="active" href="../csn/">核心池筛选</a>
-        <a href="hot/">热门股筛选</a>
-      </nav>
       <div class="sub">
         <span class="sub-line">数据日期：2026-07-27 ｜ 运行时间：2026-07-27 16:04</span>
         <span class="sub-line">核验状态：OpenD已连接；已核验 283（新拉取 283，今日缓存 0），失败 17，暂不支持 0；部分未完成实时核验</span>
         <span class="sub-line">范围：核心精选去重后 300 个标的</span>
         <span class="sub-line">价格/均线/买点/止损/核心池动态RS=OpenD日K复算</span>
-        <span class="sub-line"><a class="doc-link" href="csn_algorithm_model_20260625_1356.html" target="_blank" rel="noopener">算法说明：美股严选当前模型（2026-06-25 13:56）</a></span>
+        <span class="sub-line"><a class="doc-link" href="csn_algorithm_model_20260625_1356.html" target="_blank" rel="noopener">算法说明：表姐严选当前模型（2026-06-25 13:56）</a></span>
       </div>
       <div class="system-intro"><strong>系统A说明</strong><span>核心精选池每日筛选：以当前 300 只核心池为唯一股票池，结合二阶段、动态RS、买点/止损和OpenD均线核验，用于开盘前确定今日观察名单。</span></div>
     </div>
