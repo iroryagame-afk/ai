@@ -237,16 +237,12 @@ button{color:inherit}
 .search button{border:1px solid var(--hairline);background:var(--panel-2);color:var(--muted);border-radius:50%;width:24px;height:24px;cursor:pointer;line-height:1}
 .search button:hover{color:var(--ink);border-color:var(--hairline-strong)}
 .tabs{display:flex;align-items:center;gap:3px;background:var(--panel);border:1px solid var(--hairline);border-radius:12px;padding:4px}
-.tabs button,.groups button{border:0;background:transparent;cursor:pointer;white-space:nowrap}
+.tabs button{border:0;background:transparent;cursor:pointer;white-space:nowrap}
 .tabs button{padding:10px 14px;border-radius:8px;color:var(--muted);font-size:12px;font-weight:600}
 .tabs button:hover{color:var(--ink)}
 .tabs button.active{background:var(--accent);color:#fff}
 
 /* 分组胶囊 */
-.groups{display:flex;gap:7px;padding:16px 0 20px;overflow:auto;scrollbar-width:none}
-.groups button{border:1px solid var(--hairline);background:var(--panel);color:var(--ink-2);border-radius:999px;padding:7px 13px;font-size:11px;font-weight:600}
-.groups button:hover{border-color:var(--hairline-strong);color:var(--ink)}
-.groups button.active{color:#fff;background:var(--cinnabar);border-color:var(--cinnabar);font-weight:700}
 
 /* 指标筛选卡 */
 .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
@@ -406,7 +402,6 @@ footer p{margin:0}
     <span class="bench">FUTU WATCHLIST · SPY BENCHMARK</span>
   </div>
   <section class="controls csn-rise d3"><label class="search"><span>⌕</span><input id="query" placeholder="搜索代码或名称，例如 NVDA / US.NVDA"><button id="clear" aria-label="清空">×</button></label><div class="tabs" id="tabs"><button data-sort="thrust" class="active">Thrust</button><button data-sort="acceleration">加速度</button><button data-sort="monthRs">一月RS</button><button data-sort="day">当日</button><button data-sort="month">一月涨幅</button></div></section>
-  <nav class="groups" id="groups"></nav>
   <section class="loading" id="loading">正在读取最新自选股数据…</section>
   <section class="metrics" id="metrics" hidden></section>
   <details class="guide" id="guide" open hidden>
@@ -434,20 +429,19 @@ footer p{margin:0}
   <footer><p id="generated">研究工具，不构成投资建议</p><p>CSN 投研 · RS Thrust Monitor</p></footer>
 </main>
 <script>
-let payload=null,group='全部',sort='thrust',direction='desc',signal=new URLSearchParams(location.search).get('view')||'all';
+let payload=null,sort='thrust',direction='desc',signal=new URLSearchParams(location.search).get('view')||'all';
 if(!['all','leaders','accelerators','both'].includes(signal))signal='all';
 const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num=v=>v==null?'—':`${v>0?'+':''}${Number(v).toFixed(1)}%`,score=v=>v==null?'—':`${Number(v).toFixed(1)}%`;
 const delta=v=>`<span class="${v==null?'flat':v>0?'up':v<0?'down':'flat'}">${num(v)}</span>`;
 function bars(a=[]){const peak=Math.max(...a,0);return `<div class="bars">${a.map(v=>`<i class="${v===peak?'peak':''}" style="height:${Math.max(6,v)}%"></i>`).join('')}</div>`}
-function baseRows(){const q=$('#query').value.trim().toUpperCase().replace(/^US\./,'');return payload.rows.filter(r=>(group==='全部'||r.groups.includes(group))&&(!q||`${r.ticker} ${r.code} ${r.name}`.toUpperCase().includes(q)))}
+function baseRows(){const q=$('#query').value.trim().toUpperCase().replace(/^US\./,'');return payload.rows.filter(r=>!q||`${r.ticker} ${r.code} ${r.name}`.toUpperCase().includes(q))}
 function matchesSignal(r,view=signal){const leader=(r.rsThrustPct??-999)>=90,accelerating=(r.rsWeekAcceleration??0)>0;return view==='leaders'?leader:view==='accelerators'?accelerating:view==='both'?leader&&accelerating:true}
 function filtered(){const key={ticker:'ticker',thrust:'rsThrustPct',monthRs:'rsMonthPercentile',weekRs:'rsWeekPercentile',acceleration:'rsWeekAcceleration',day:'dayChangePct',month:'monthChangePct',relativeSpy:'rsVsSpyMonthPct'}[sort];return baseRows().filter(r=>matchesSignal(r)).sort((a,b)=>{const av=a[key],bv=b[key];if(typeof av==='string'||typeof bv==='string')return direction==='desc'?String(bv??'').localeCompare(String(av??'')):String(av??'').localeCompare(String(bv??''));const aa=av??(direction==='desc'?-999:999),bb=bv??(direction==='desc'?-999:999);return direction==='desc'?bb-aa:aa-bb})}
 function updateSortUI(){document.querySelectorAll('.sort-head').forEach(b=>{const active=b.dataset.sort===sort;b.classList.toggle('active',active);b.querySelector('.sort-arrow').textContent=active?(direction==='desc'?'↓':'↑'):'↕'});document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('active',b.dataset.sort===sort))}
 function render(){if(!payload)return;const base=baseRows(),list=filtered(),q=$('#query').value.trim(),count=view=>base.filter(r=>matchesSignal(r,view)).length;$('#metrics').innerHTML=`<button data-signal="all" class="${signal==='all'?'active':''}"><span>全部股票</span><strong>${base.length}</strong><small>点击恢复当前范围</small></button><button data-signal="leaders" class="${signal==='leaders'?'active':''}"><span>强势推进</span><strong>${count('leaders')}</strong><small>RS Thrust ≥ 90%</small></button><button data-signal="accelerators" class="${signal==='accelerators'?'active':''}"><span>短期加速</span><strong>${count('accelerators')}</strong><small>一周RS高于三日前</small></button><button data-signal="both" class="${signal==='both'?'active':''}"><span>强且加速</span><strong>${count('both')}</strong><small>同时满足前两项</small></button>`;$('#rows').innerHTML=list.map((r,i)=>`<tr><td class="rank">${String(i+1).padStart(2,'0')}</td><td class="stock"><strong>${esc(r.ticker)}</strong><span class="name">${esc(r.name)}</span><div class="tags">${r.groups.slice(0,4).map(g=>`<em>${esc(g)}</em>`).join('')}</div></td><td><strong class="thrust ${(r.rsThrustPct??0)>=90?'hot':(r.rsThrustPct??0)<30?'cold':''}">${score(r.rsThrustPct)}</strong></td><td><div class="score"><span>${score(r.rsMonthPercentile)}</span><i><b style="width:${Math.max(0,r.rsMonthPercentile||0)}%"></b></i></div></td><td>${score(r.rsWeekPercentile)}</td><td>${bars(r.rsSeries)}</td><td>${delta(r.rsWeekAcceleration)}</td><td>${delta(r.dayChangePct)}</td><td>${delta(r.monthChangePct)}</td><td>${delta(r.rsVsSpyMonthPct)}</td></tr>`).join('');$('#empty').hidden=list.length>0;$('#captionDate').textContent=`最新已核验收盘 · ${payload.dataDate} · 当前 ${list.length} 只`;updateSortUI();const url=new URL(location.href);q?url.searchParams.set('q',q):url.searchParams.delete('q');signal==='all'?url.searchParams.delete('view'):url.searchParams.set('view',signal);history.replaceState({},'',url)}
-function groupButtons(){const root=$('#groups');root.innerHTML=['全部',...payload.groups].map(g=>`<button class="${g===group?'active':''}" data-group="${esc(g)}">${esc(g)}</button>`).join('');root.onclick=e=>{const b=e.target.closest('button');if(!b)return;group=b.dataset.group;groupButtons();render()}}
 $('#query').value=new URLSearchParams(location.search).get('q')||'';$('#query').addEventListener('input',render);$('#clear').onclick=()=>{$('#query').value='';render();$('#query').focus()};$('#tabs').onclick=e=>{const b=e.target.closest('button[data-sort]');if(!b)return;sort=b.dataset.sort;direction='desc';render()};document.querySelector('thead').onclick=e=>{const b=e.target.closest('.sort-head');if(!b)return;if(sort===b.dataset.sort)direction=direction==='desc'?'asc':'desc';else{sort=b.dataset.sort;direction='desc'}render()};$('#metrics').onclick=e=>{const b=e.target.closest('button[data-signal]');if(!b)return;signal=b.dataset.signal;render()};
-fetch(`data.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('数据读取失败');return r.json()}).then(d=>{payload=d;$('#loading').hidden=true;$('#metrics').hidden=false;$('#guide').hidden=false;$('#shell').hidden=false;$('#status').textContent=d.status==='OPEN_D_VERIFIED'?'OpenD 已核验':'数据待核验';$('#dataDate').textContent=d.dataDate;$('#captionDate').textContent=`最新已核验收盘 · ${d.dataDate}`;$('#source').textContent=`数据源：Futu OpenD 只读行情 · 基准：${d.benchmark} · ${d.failedCount} 只未通过历史数据门槛`;$('#generated').textContent=`生成时间：${new Date(d.generatedAt).toLocaleString('zh-CN',{hour12:false})} · 研究工具，不构成投资建议`;groupButtons();render()}).catch(e=>{$('#loading').textContent=`数据暂时不可用：${e.message}`});
+fetch(`data.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('数据读取失败');return r.json()}).then(d=>{payload=d;$('#loading').hidden=true;$('#metrics').hidden=false;$('#guide').hidden=false;$('#shell').hidden=false;$('#status').textContent=d.status==='OPEN_D_VERIFIED'?'OpenD 已核验':'数据待核验';$('#dataDate').textContent=d.dataDate;$('#captionDate').textContent=`最新已核验收盘 · ${d.dataDate}`;$('#source').textContent=`数据源：Futu OpenD 只读行情 · 基准：${d.benchmark} · ${d.failedCount} 只未通过历史数据门槛`;$('#generated').textContent=`生成时间：${new Date(d.generatedAt).toLocaleString('zh-CN',{hour12:false})} · 研究工具，不构成投资建议`;render()}).catch(e=>{$('#loading').textContent=`数据暂时不可用：${e.message}`});
 </script>
 </body>
 </html>
