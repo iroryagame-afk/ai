@@ -17,3 +17,20 @@
 
 # Deployment configuration is not website content.
 wrangler.jsonc
+
+# Repository internals are not public website content.
+.assetsignore
+.gitignore
+AGENTS.md
+docs
+docs/**
+scripts
+scripts/**
+tests
+tests/**
+skills
+skills/**
+skill-packages
+skill-packages/**
+us-watchlist-timing
+us-watchlist-timing/**
