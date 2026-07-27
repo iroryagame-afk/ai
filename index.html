@@ -129,7 +129,7 @@ h1.hero-title em { font-style: normal; color: var(--cinnabar); }
 
 /* ===== 多工具共振强烈推荐 ===== */
 .confluence {
-  margin: 32px 0 10px; padding: 22px;
+  margin: 24px 0 8px; padding: 14px;
   border: 1px solid #dbc9a2; border-top: 3px solid var(--gold);
   border-radius: var(--radius-lg);
   background: linear-gradient(135deg, #fffdf7 0%, #fbf4e3 100%);
@@ -137,62 +137,82 @@ h1.hero-title em { font-style: normal; color: var(--cinnabar); }
 }
 .confluence[hidden] { display: none; }
 .confluence-head {
-  display: flex; align-items: flex-start; justify-content: space-between; gap: 18px;
-  padding-bottom: 14px; border-bottom: 1px solid rgba(150,112,42,.22);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding-bottom: 9px; border-bottom: 1px solid rgba(150,112,42,.22);
 }
-.confluence-title { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.confluence-title h2 { margin: 0; font-family: var(--serif); font-size: 24px; }
+.confluence-title { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.confluence-title h2 { margin: 0; font-family: var(--serif); font-size: 19px; }
 .confluence-title .flag {
-  padding: 5px 9px; border-radius: 999px;
+  padding: 4px 7px; border-radius: 999px;
   background: var(--cinnabar); color: #fff;
-  font: 700 11px/1 var(--sans); letter-spacing: .08em;
+  font: 700 9px/1 var(--sans); letter-spacing: .08em;
 }
-.confluence-head p { margin: 7px 0 0; color: var(--ink-2); font-size: 13px; }
+.confluence-head p { margin: 4px 0 0; color: var(--ink-2); font-size: 11px; line-height: 1.35; }
 .confluence-total {
-  min-width: 72px; text-align: center; color: var(--cinnabar);
-  font-family: var(--serif); font-size: 28px; font-weight: 700; line-height: 1;
+  min-width: 54px; text-align: center; color: var(--cinnabar);
+  font-family: var(--serif); font-size: 22px; font-weight: 700; line-height: 1;
 }
-.confluence-total small { display: block; margin-top: 5px; color: var(--muted); font: 600 11px/1.2 var(--sans); }
-.confluence-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+.confluence-total small { display: block; margin-top: 3px; color: var(--muted); font: 600 9px/1.2 var(--sans); }
+.confluence-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
 .confluence-card {
-  min-width: 0; padding: 16px; border: 1px solid rgba(150,112,42,.22);
-  border-radius: 12px; background: rgba(255,255,255,.78);
+  min-width: 0; padding: 10px; border: 1px solid rgba(150,112,42,.22);
+  border-radius: 10px; background: rgba(255,255,255,.78);
 }
-.confluence-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
-.confluence-kind { display: block; color: var(--gold); font: 700 10px/1 var(--mono); letter-spacing: .1em; }
-.confluence-card h3 { margin: 7px 0 0; font: 700 23px/1.1 var(--serif); }
+.confluence-card-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.confluence-card-head > div { min-width: 0; }
+.confluence-kind { display: block; color: var(--gold); font: 700 8.5px/1 var(--mono); letter-spacing: .08em; }
+.confluence-card h3 {
+  display: flex; align-items: baseline; gap: 6px; min-width: 0;
+  margin: 4px 0 0; font: 700 18px/1.05 var(--serif);
+}
 .confluence-card h3 small {
-  display: block; overflow: hidden; margin-top: 5px; color: var(--ink-2);
-  font: 600 12px/1.35 var(--sans); text-overflow: ellipsis; white-space: nowrap;
+  display: block; overflow: hidden; min-width: 0; color: var(--ink-2);
+  font: 600 10px/1.2 var(--sans); text-overflow: ellipsis; white-space: nowrap;
 }
-.confluence-count { color: var(--cinnabar); font: 700 22px/1 var(--serif); text-align: center; }
-.confluence-count small { display: block; margin-top: 4px; color: var(--muted); font: 600 9px/1 var(--sans); white-space: nowrap; }
-.confluence-note {
-  overflow: hidden; margin: 10px 0 0; color: var(--ink-2); font-size: 11.5px;
-  text-overflow: ellipsis; white-space: nowrap;
-}
-.confluence-tools { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+.confluence-count { flex: 0 0 auto; color: var(--cinnabar); font: 700 18px/1 var(--serif); text-align: center; }
+.confluence-count small { display: block; margin-top: 2px; color: var(--muted); font: 600 8px/1 var(--sans); white-space: nowrap; }
+.confluence-tools { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 7px; }
 .confluence-tool {
-  padding: 4px 7px; border: 1px solid var(--hairline); border-radius: 999px;
-  color: var(--ink-2); background: var(--panel); text-decoration: none; font-size: 10.5px; font-weight: 700;
+  padding: 3px 6px; border: 1px solid var(--hairline); border-radius: 999px;
+  color: var(--ink-2); background: var(--panel); text-decoration: none; font-size: 9px; font-weight: 700;
 }
 .confluence-tool.red { border-color: #e7b8ac; background: var(--cinnabar-soft); color: #923622; }
 .confluence-tool.jade { border-color: #bad3c3; background: var(--jade-soft); color: var(--jade); }
 .confluence-tool.gold { border-color: #dbc9a2; background: var(--gold-soft); color: #76561e; }
-.confluence-reasons { display: grid; gap: 6px; margin: 12px 0 0; padding: 0; list-style: none; }
-.confluence-reasons li { display: grid; gap: 1px; font-size: 11px; }
-.confluence-reasons b { color: var(--ink-2); }
-.confluence-reasons span { color: var(--muted); }
-.confluence-card footer {
-  margin-top: 12px; padding-top: 9px; border-top: 1px solid var(--hairline);
-  color: var(--muted); font: 600 10px/1.2 var(--mono);
-}
 .confluence-extra { display: none; }
 .confluence.expanded .confluence-extra { display: block; }
 .confluence-toggle {
-  display: block; margin: 16px auto 0; padding: 9px 14px;
+  display: block; margin: 9px auto 0; padding: 6px 10px;
   border: 1px solid #cdb77e; border-radius: 999px; background: rgba(255,255,255,.7);
-  color: #76561e; cursor: pointer; font: 700 12px/1 var(--sans);
+  color: #76561e; cursor: pointer; font: 700 10px/1 var(--sans);
+}
+.confluence-risk {
+  margin-top: 9px; border: 1px solid #e0c5bd; border-radius: 10px;
+  background: rgba(255,249,247,.74);
+}
+.confluence-risk[hidden] { display: none; }
+.confluence-risk summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 8px 10px; color: #833b2c; cursor: pointer; list-style: none;
+  font-size: 11px; font-weight: 700;
+}
+.confluence-risk summary::-webkit-details-marker { display: none; }
+.confluence-risk summary::before { content: "▸"; font-size: 10px; }
+.confluence-risk[open] summary::before { content: "▾"; }
+.confluence-risk-title { flex: 1; }
+.confluence-risk-title em {
+  margin-left: 6px; padding: 2px 5px; border-radius: 999px;
+  background: #f3d9d2; color: #8b3020; font: 700 8px/1 var(--sans); font-style: normal;
+}
+.confluence-risk-count { color: var(--cinnabar); font: 700 11px/1 var(--mono); }
+.confluence-risk-body { padding: 0 10px 10px; border-top: 1px solid rgba(145,66,47,.14); }
+.confluence-risk-note { margin: 7px 0 0; color: var(--muted); font-size: 9.5px; }
+.confluence-risk .confluence-list { margin-top: 8px; }
+.confluence-risk .confluence-kind { color: #9b4836; }
+.confluence-risk .confluence-card { border-color: #e5cbc4; background: rgba(255,255,255,.86); }
+@media (max-width: 760px) {
+  .confluence-list { grid-template-columns: 1fr; }
+  .confluence-head { align-items: flex-start; }
 }
 
 /* ===== 卡片网格 ===== */
@@ -324,6 +344,16 @@ footer.site-footer {
     </div>
     <div class="confluence-list" id="confluenceList"></div>
     <button class="confluence-toggle" id="confluenceToggle" type="button" hidden></button>
+    <details class="confluence-risk" id="tacticalRecommendations" hidden>
+      <summary>
+        <span class="confluence-risk-title">高风险战术工具<em>仅适合短线</em></span>
+        <strong class="confluence-risk-count"><span id="tacticalCount">—</span> 个</strong>
+      </summary>
+      <div class="confluence-risk-body">
+        <p class="confluence-risk-note">杠杆ETF、反向ETF、ETN及波动率ETP，与普通股票和ETF分开呈现。</p>
+        <div class="confluence-list" id="tacticalList"></div>
+      </div>
+    </details>
   </section>
 
   <section aria-label="股票">

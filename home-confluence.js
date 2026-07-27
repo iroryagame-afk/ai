@@ -7,6 +7,7 @@
     rotation: { label: "轮动领先加速", href: "./rotation/", tone: "gold" }
   };
   var SAFE_ASSET_CLASSES = new Set(["us_stock", "us_etf_standard"]);
+  var TACTICAL_ASSET_CLASSES = new Set(["us_etf_leveraged", "us_etf_inverse", "us_etp_other"]);
 
   function text(value) {
     return String(value == null ? "" : value);
@@ -32,6 +33,10 @@
 
   function isSafeAsset(row) {
     return SAFE_ASSET_CLASSES.has(row.assetClass || "us_stock");
+  }
+
+  function isTacticalAsset(row) {
+    return TACTICAL_ASSET_CLASSES.has(row.assetClass || "");
   }
 
   function put(map, rawTicker, source, row, date, reason) {
@@ -85,7 +90,7 @@
     if (rsVerified) {
       (rs.rows || [])
         .filter(function (row) {
-          return isSafeAsset(row) &&
+          return (isSafeAsset(row) || isTacticalAsset(row)) &&
             number(row.rsThrustPct, -999) >= 90 &&
             number(row.rsWeekAcceleration, 0) > 0;
         })
@@ -105,7 +110,8 @@
     if (rotationVerified) {
       (rotation.rows || [])
         .filter(function (row) {
-          return isSafeAsset(row) && row.rotationPhase === "领先加速";
+          return (isSafeAsset(row) || isTacticalAsset(row)) &&
+            row.rotationPhase === "领先加速";
         })
         .forEach(function (row) {
           put(
@@ -138,6 +144,7 @@
       item.dataDate = commonDate;
       item.toolCount = Object.keys(item.sources).length;
       item.crossModel = Boolean(item.sources.csn && (item.sources.rs || item.sources.rotation));
+      item.tactical = isTacticalAsset(item);
       var csnScore = item.sources.csn
         ? number(item.sources.csn.row.model_default_score || item.sources.csn.row.a6_score, 0)
         : 0;
@@ -153,37 +160,38 @@
     }).filter(function (item) {
       return item.toolCount >= 2;
     }).sort(function (a, b) {
-      return Number(b.crossModel) - Number(a.crossModel) ||
-        b.toolCount - a.toolCount ||
+      return b.toolCount - a.toolCount ||
+        Number(b.crossModel) - Number(a.crossModel) ||
         b.rankScore - a.rankScore ||
         a.ticker.localeCompare(b.ticker);
     });
   }
 
-  function card(item, index) {
+  function tacticalLabel(item) {
+    if (/\bETN\b/i.test(item.name)) return "ETN";
+    if (item.assetClass === "us_etf_inverse") return "反向ETF";
+    if (item.assetClass === "us_etf_leveraged") return "杠杆ETF";
+    return "波动率ETP";
+  }
+
+  function card(item, index, tactical) {
     var sourceKeys = Object.keys(item.sources);
     var sourceBadges = sourceKeys.map(function (key) {
       var source = SOURCES[key];
       return '<a class="confluence-tool ' + source.tone + '" href="' + source.href + '">' +
         esc(source.label) + "</a>";
     }).join("");
-    var reasons = sourceKeys.map(function (key) {
-      return '<li><b>' + esc(SOURCES[key].label) + "</b><span>" +
-        esc(item.sources[key].reason) + "</span></li>";
-    }).join("");
-    var assetLabel = item.assetClass === "us_etf_standard" ? "普通ETF" : "美股个股";
+    var assetLabel = tactical
+      ? tacticalLabel(item)
+      : (item.assetClass === "us_etf_standard" ? "普通ETF" : "美股个股");
     var modelLabel = item.crossModel ? "跨模型共振" : "同源双模型";
-    var detail = item.industryNote && item.industryNote !== item.name
-      ? '<p class="confluence-note">' + esc(item.industryNote) + "</p>"
-      : "";
-    return '<article class="confluence-card' + (index >= 6 ? " confluence-extra" : "") + '">' +
+    var extraClass = !tactical && index >= 3 ? " confluence-extra" : "";
+    return '<article class="confluence-card' + extraClass + '">' +
       '<div class="confluence-card-head"><div><span class="confluence-kind">' +
       esc(assetLabel) + " · " + esc(modelLabel) + '</span><h3>' +
       esc(item.ticker) + '<small>' + esc(item.name) + "</small></h3></div>" +
       '<strong class="confluence-count">' + item.toolCount + '<small>工具命中</small></strong></div>' +
-      detail + '<div class="confluence-tools">' + sourceBadges + "</div>" +
-      '<ul class="confluence-reasons">' + reasons + "</ul>" +
-      '<footer>同一已核验收盘日 · ' + esc(item.dataDate) + "</footer></article>";
+      '<div class="confluence-tools">' + sourceBadges + "</div></article>";
   }
 
   function render(items) {
@@ -191,29 +199,50 @@
     var list = document.getElementById("confluenceList");
     var count = document.getElementById("confluenceCount");
     var status = document.getElementById("confluenceStatus");
-    if (!section || !list || !count || !status) return;
+    var tacticalSection = document.getElementById("tacticalRecommendations");
+    var tacticalList = document.getElementById("tacticalList");
+    var tacticalCount = document.getElementById("tacticalCount");
+    if (!section || !list || !count || !status ||
+        !tacticalSection || !tacticalList || !tacticalCount) return;
 
+    var standardItems = items.filter(function (item) { return !item.tactical; });
+    var tacticalItems = items.filter(function (item) { return item.tactical; });
     section.hidden = false;
-    count.textContent = items.length;
-    if (!items.length) {
-      status.textContent = "当前没有满足“同日、至少两个工具、非杠杆/反向产品”的标的。";
+    count.textContent = standardItems.length;
+    if (!standardItems.length) {
+      status.textContent = "当前没有满足同日、至少两个工具的普通股票或ETF。";
       list.innerHTML = "";
-      return;
+    } else {
+      status.textContent = "3工具优先于2工具；仅作研究优先级，不等于买点。";
+      list.innerHTML = standardItems.map(function (item, index) {
+        return card(item, index, false);
+      }).join("");
     }
-    status.textContent = "仅表示研究优先级；进入观察区不等于买点，仍需价格、量能与失效线确认。";
-    list.innerHTML = items.map(card).join("");
 
     var button = document.getElementById("confluenceToggle");
-    if (items.length <= 6) {
+    if (standardItems.length <= 3) {
       button.hidden = true;
-      return;
+    } else {
+      button.hidden = false;
+      button.textContent = "展开其余 " + (standardItems.length - 3) + " 个";
+      button.addEventListener("click", function () {
+        var expanded = section.classList.toggle("expanded");
+        button.textContent = expanded
+          ? "收起"
+          : "展开其余 " + (standardItems.length - 3) + " 个";
+      });
     }
-    button.hidden = false;
-    button.textContent = "查看全部 " + items.length + " 个共振标的";
-    button.addEventListener("click", function () {
-      var expanded = section.classList.toggle("expanded");
-      button.textContent = expanded ? "收起共振标的" : "查看全部 " + items.length + " 个共振标的";
-    });
+
+    if (tacticalItems.length) {
+      tacticalSection.hidden = false;
+      tacticalCount.textContent = tacticalItems.length;
+      tacticalList.innerHTML = tacticalItems.map(function (item, index) {
+        return card(item, index, true);
+      }).join("");
+    } else {
+      tacticalSection.hidden = true;
+      tacticalList.innerHTML = "";
+    }
   }
 
   function fail(message) {
