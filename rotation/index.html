@@ -54,7 +54,7 @@
     .point{position:absolute;z-index:2;transform:translate(-50%,-50%);min-width:38px;height:24px;padding:0 6px;border:1px solid rgba(11,23,17,.16);border-radius:7px;color:var(--ink);font:800 8px var(--mono);box-shadow:0 3px 10px rgba(11,23,17,.08)}.point:hover{z-index:10;transform:translate(-50%,-50%) scale(1.18)}
     .leading-accelerating{background:#c8f79f!important;color:#14563e!important}.leading-decelerating{background:#f3ddaa!important;color:#765313!important}.lagging-accelerating{background:#d7f0dc!important;color:#216145!important}.lagging-decelerating{background:#efd2cc!important;color:#8a382c!important}
     .candidates{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.candidate>p{margin:0;padding:15px 20px;color:#6a786f;font-size:11px;line-height:1.6;border-bottom:1px solid var(--line)}.candidate-rows{padding:8px 18px 15px}.candidate-rows article{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px 2px;border-bottom:1px solid rgba(11,23,17,.08)}.candidate-rows article:last-child{border:0}.candidate-rows article strong{display:inline-block;min-width:60px;font-size:13px}.candidate-rows article span{color:#7c8981;font-size:9px}.candidate-rows article b{font-size:11px}.recovery .section-head>strong,.recovery article b{color:var(--green)}.exhaustion .section-head>strong,.exhaustion article b{color:var(--amber)}.empty{padding:24px 2px 12px;color:#879188;font-size:10px}
-    .table-card{margin-top:12px}.table-scroll{overflow-x:auto;scrollbar-width:none}.table-scroll table{width:100%;min-width:1020px;border-collapse:collapse}.table-scroll th{padding:11px 13px;background:#e9ebe4;color:#718078;font:800 8px var(--mono);letter-spacing:.08em;text-align:left}.table-scroll td{padding:11px 13px;border-top:1px solid rgba(11,23,17,.08);font-size:10px}.table-scroll td:nth-child(2) strong,.table-scroll td:nth-child(2) span{display:block}.table-scroll td:nth-child(2) strong{font-size:13px}.table-scroll td:nth-child(2) span{margin-top:3px;max-width:230px;color:#879188;font-size:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.table-scroll em{display:inline-block;padding:5px 7px;border-radius:6px;font-style:normal;font-size:9px}.good{color:var(--green);font-weight:800}.warn{color:var(--amber);font-weight:800}
+    .table-card{margin-top:12px}.table-scroll{overflow-x:auto;scrollbar-width:none}.table-scroll table{width:100%;min-width:1020px;border-collapse:collapse}.table-scroll th{padding:0;background:#e9ebe4;color:#718078;font:800 8px var(--mono);letter-spacing:.08em;text-align:left;white-space:nowrap}.table-scroll th:first-child{padding:11px 13px}.sort-head{width:100%;display:flex;align-items:center;gap:6px;padding:11px 13px;border:0;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;text-align:left;cursor:pointer}.sort-head:hover,.sort-head:focus-visible{background:rgba(18,104,74,.08);color:var(--green);outline:none}.sort-head .sort-icon{width:9px;color:#9aa59e;font-size:8px}.sort-head.active{color:var(--green)}.sort-head.active .sort-icon{color:var(--green)}.table-scroll td{padding:11px 13px;border-top:1px solid rgba(11,23,17,.08);font-size:10px}.table-scroll td:nth-child(2) strong,.table-scroll td:nth-child(2) span{display:block}.table-scroll td:nth-child(2) strong{font-size:13px}.table-scroll td:nth-child(2) span{margin-top:3px;max-width:230px;color:#879188;font-size:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.table-scroll em{display:inline-block;padding:5px 7px;border-radius:6px;font-style:normal;font-size:9px}.good{color:var(--green);font-weight:800}.warn{color:var(--amber);font-weight:800}
     .message{padding:80px 20px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.55);text-align:center;color:#6d7b72}.footer{display:flex;justify-content:space-between;gap:20px;padding-top:17px;color:#79867e;font-size:9px}
     @media(max-width:880px){.csn-topnav-inner{padding:0 14px}.csn-brand-sub{display:none}.csn-menu{min-width:0;overflow-x:auto}.csn-item>a,.csn-item>button{padding:0 10px}.csn-drop{right:0}.page{padding:0 15px 28px}.hero{grid-template-columns:1fr;padding:40px 0 28px;gap:20px}.hero h1{font-size:55px}.controls{flex-direction:column}.search{width:100%}.phase-strip{grid-template-columns:repeat(2,1fr)}.phase-strip button:first-child{grid-column:1/-1}.radar{height:560px}.candidates{grid-template-columns:1fr}}
     @media(max-width:520px){.status span{display:none}.hero h1{font-size:44px}.radar{min-height:500px}.point{min-width:32px;font-size:7px}.footer{flex-direction:column;gap:4px}}
@@ -83,11 +83,24 @@
   const PHASES=["领先加速","领先减速","落后加速","落后减速"];
   const COPY={"领先加速":"强者继续提速","领先减速":"强者开始乏力","落后加速":"弱者率先修复","落后减速":"弱者继续走弱"};
   const CLASS={"领先加速":"leading-accelerating","领先减速":"leading-decelerating","落后加速":"lagging-accelerating","落后减速":"lagging-decelerating"};
-  let payload=null,asset="us_etf_standard",phase="全部",query="";
+  let payload=null,asset="us_etf_standard",phase="全部",query="",sortKey="accelerationAbs",sortDirection="desc";
   const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const signed=(v,d=2,s="")=>v==null?"—":`${v>0?"+":""}${Number(v).toFixed(d)}${s}`;
   const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
   const ready=()=>payload.rows.filter(r=>(r.assetClass||"us_stock")===asset&&r.relativeVelocity5dPct!=null&&r.relativeAccelerationZ!=null&&r.rotationPhase&&r.rotationPhase!=="历史不足");
+  const sortValue=(row,key)=>key==="accelerationAbs"?Math.abs(row.relativeAccelerationZ??0):row[key];
+  const compareRows=(a,b)=>{
+    const av=sortValue(a,sortKey),bv=sortValue(b,sortKey);
+    if(av==null&&bv==null)return String(a.ticker).localeCompare(String(b.ticker),"zh-CN");
+    if(av==null)return 1;
+    if(bv==null)return -1;
+    const result=typeof av==="number"&&typeof bv==="number"?av-bv:String(av).localeCompare(String(bv),"zh-CN",{numeric:true});
+    return (sortDirection==="asc"?result:-result)||String(a.ticker).localeCompare(String(b.ticker),"zh-CN");
+  };
+  const sortHead=(key,label)=>{
+    const active=sortKey===key,direction=active?sortDirection:null;
+    return `<th aria-sort="${direction==="asc"?"ascending":direction==="desc"?"descending":"none"}"><button type="button" class="sort-head ${active?"active":""}" data-sort="${key}" title="按${label}排序">${label}<span class="sort-icon" aria-hidden="true">${direction==="asc"?"▲":direction==="desc"?"▼":"↕"}</span></button></th>`;
+  };
   function renderTabs(){
     document.getElementById("classTabs").innerHTML=(payload.assetClasses||[]).map(c=>`<button data-asset="${esc(c.id)}" class="${c.id===asset?"active":""}">${esc(c.label)}<span>${c.count}</span></button>`).join("");
     document.querySelectorAll("[data-asset]").forEach(b=>b.onclick=()=>{asset=b.dataset.asset;phase="全部";renderTabs();render()});
@@ -98,7 +111,7 @@
   }
   function render(){
     const rows=ready(),needle=query.trim().toUpperCase(),label=(payload.assetClasses||[]).find(c=>c.id===asset)?.label||"当前类别";
-    const filtered=rows.filter(r=>(!needle||`${r.ticker} ${r.code} ${r.name} ${r.industryNote||""}`.toUpperCase().includes(needle))&&(phase==="全部"||r.rotationPhase===phase)).sort((a,b)=>Math.abs(b.relativeAccelerationZ||0)-Math.abs(a.relativeAccelerationZ||0));
+    const filtered=rows.filter(r=>(!needle||`${r.ticker} ${r.code} ${r.name} ${r.industryNote||""}`.toUpperCase().includes(needle))&&(phase==="全部"||r.rotationPhase===phase)).sort(compareRows);
     const counts=Object.fromEntries(PHASES.map(p=>[p,rows.filter(r=>r.rotationPhase===p).length]));
     const xScale=Math.max(.1,...rows.map(r=>Math.abs(r.relativeVelocity5dPct||0))),yScale=Math.max(.5,...rows.map(r=>Math.abs(r.relativeAccelerationZ||0)));
     const points=filtered.slice(0,60).map(r=>{const left=clamp(50+((r.relativeVelocity5dPct||0)/xScale)*44,4,96),top=clamp(50-((r.relativeAccelerationZ||0)/yScale)*44,4,96);return `<button class="point ${CLASS[r.rotationPhase]||""}" style="left:${left}%;top:${top}%" title="${esc(`${r.ticker} · ${r.rotationPhase} · 速度${signed(r.relativeVelocity5dPct,2,"%")} · 加速度${signed(r.relativeAccelerationZ,2,"σ")}`)}">${esc(r.ticker)}</button>`}).join("");
@@ -109,8 +122,14 @@
       <section class="phase-strip"><button data-phase="全部" class="${phase==="全部"?"active":""}"><span>全部</span><strong>${rows.length}</strong><small>${esc(label)}</small></button>${PHASES.map(p=>`<button data-phase="${p}" class="${CLASS[p]} ${phase===p?"active":""}"><span>${p}</span><strong>${counts[p]}</strong><small>${COPY[p]}</small></button>`).join("")}</section>
       <section class="shell"><div class="section-head"><div><span>ROTATION MAP</span><h2>${esc(label)}四象限</h2></div><p>横轴：相对SPY速度　纵轴：标准化加速度</p></div><div class="radar"><div class="quad q1"><strong>落后加速</strong><span>潜在轮动起点</span></div><div class="quad q2"><strong>领先加速</strong><span>主升与扩散</span></div><div class="quad q3"><strong>落后减速</strong><span>弱势延续</span></div><div class="quad q4"><strong>领先减速</strong><span>动能衰竭区</span></div><div class="axis-x"><span>相对落后</span><b>相对速度</b><span>相对领先</span></div><div class="axis-y"><span>加速</span><b>加速度</b><span>减速</span></div>${points}</div></section>
       <section class="candidates">${candidate("底部修复候选","仍处相对落后区，但下跌速度开始明显收敛。等待RS转正与价格确认。",recoveries,"recovery")}${candidate("顶部衰竭候选","仍处相对领先区，但推进速度明显下降。观察是否跌破RS结构。",exhaustions,"exhaustion")}</section>
-      <section class="table-card"><div class="section-head"><div><span>DETAILS</span><h2>${phase==="全部"?"全部轮动状态":esc(phase)}</h2></div><strong>${filtered.length}</strong></div><div class="table-scroll"><table><thead><tr><th>#</th><th>标的 / 行业介绍</th><th>轮动阶段</th><th>相对速度</th><th>加速度Z</th><th>拐点预警</th><th>RS Thrust</th><th>一月涨幅</th><th>当日</th></tr></thead><tbody>${body}</tbody></table></div></section>`;
+      <section class="table-card"><div class="section-head"><div><span>DETAILS · 点击表头排序</span><h2>${phase==="全部"?"全部轮动状态":esc(phase)}</h2></div><strong>${filtered.length}</strong></div><div class="table-scroll"><table><thead><tr><th>#</th>${sortHead("ticker","标的 / 行业介绍")}${sortHead("rotationPhase","轮动阶段")}${sortHead("relativeVelocity5dPct","相对速度")}${sortHead("relativeAccelerationZ","加速度Z")}${sortHead("turnSignal","拐点预警")}${sortHead("rsThrustPct","RS Thrust")}${sortHead("monthChangePct","一月涨幅")}${sortHead("dayChangePct","当日")}</tr></thead><tbody>${body}</tbody></table></div></section>`;
     document.querySelectorAll("[data-phase]").forEach(b=>b.onclick=()=>{phase=b.dataset.phase;render()});
+    document.querySelectorAll("[data-sort]").forEach(b=>b.onclick=()=>{
+      const key=b.dataset.sort;
+      if(sortKey===key)sortDirection=sortDirection==="asc"?"desc":"asc";
+      else{sortKey=key;sortDirection=key==="ticker"?"asc":"desc"}
+      render();
+    });
   }
   document.getElementById("search").addEventListener("input",e=>{query=e.target.value.toUpperCase();render()});
   fetch(`data.json?v=${Date.now()}`,{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("轮动数据读取失败");return r.json()}).then(d=>{
