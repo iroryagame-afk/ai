@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T09:19:05.285Z",
+  "generatedAt": "2026-07-28T09:26:41.887Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -89,19 +89,19 @@
   },
   "externalFearGreed": {
     "cn": {
-      "score": 17.54,
-      "label": "极度恐惧",
-      "period": "2026 W30",
-      "frequency": "周频",
-      "source": "https://sc.macromicro.me/series/46919/china-mm-fear-and-greed-index",
-      "sourceLabel": "MacroMicro 中国-MM恐惧与贪婪指数",
-      "verifiedAt": "2026-07-28T17:20:00+08:00",
-      "note": "MacroMicro 公开页面阻止自动抓取；本值为已核验周频快照，刷新时必须重新核对来源页。"
+      "score": 20.97,
+      "label": "极度恐慌",
+      "period": "2026-07-28",
+      "frequency": "日频",
+      "source": "https://baifenwei.com/indicator/fear-greed/",
+      "sourceLabel": "百分位 A股恐惧贪婪指数",
+      "verifiedAt": "2026-07-28T17:03:42+08:00",
+      "note": "来源页已完成浏览器打开与正文回读；最新指数值20.97，数据日2026-07-28，页面更新时间2026-07-28 15:02。"
     },
     "kr": {
       "score": 25,
       "label": "恐惧",
-      "asOf": "2026-07-28T09:19:03.466Z",
+      "asOf": "2026-07-28T09:26:37.324Z",
       "source": "https://feargreed.co.kr/",
       "sourceLabel": "feargreed.co.kr",
       "methodology": "CNN方法适配KOSPI/KOSDAQ",
@@ -110,7 +110,7 @@
     "us": {
       "score": 40.7,
       "label": "恐惧",
-      "asOf": "2026-07-28T09:01:31+00:00",
+      "asOf": "2026-07-28T09:06:31+00:00",
       "previousClose": 39.9,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
