@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-27T06:43:27.683Z",
-  "stage": "风险释放中",
-  "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
+  "generatedAt": "2026-07-28T02:30:12.187Z",
+  "stage": "修复观察期",
+  "stageNote": "情绪修复，但趋势与杠杆尚未同时确认",
   "markets": {
     "cn": {
       "asOf": "2026-07-24",
@@ -32,15 +32,15 @@
       }
     },
     "us": {
-      "asOf": "2026-07-24",
+      "asOf": "2026-07-27",
       "score": 1,
       "label": "中性偏热",
       "valid": 16,
-      "aboveMa20Pct": 43.8,
+      "aboveMa20Pct": 50,
       "fear": 0,
       "greed": 0,
-      "spy1dPct": 0.1,
-      "qqq1dPct": -1.12,
+      "spy1dPct": 0.02,
+      "qqq1dPct": -0.31,
       "coverage": {
         "valid": 22,
         "total": 22,
@@ -60,35 +60,35 @@
       "currentTn": 32.672,
       "progressToBasicPct": 69,
       "basicTn": 30,
-      "etfFiveDayFlowTn": null
+      "etfFiveDayFlowTn": 0.071
     }
   },
   "putCall": {
     "source": "Cboe Global Markets",
-    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-07-24",
-    "asOf": "2026-07-24",
-    "total": 0.99,
-    "totalPrevious": 0.88,
-    "equity": 0.79,
-    "equityPrevious": 0.61,
-    "previousAsOf": "2026-07-23",
+    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-07-27",
+    "asOf": "2026-07-27",
+    "total": 0.94,
+    "totalPrevious": 0.99,
+    "equity": 0.66,
+    "equityPrevious": 0.79,
+    "previousAsOf": "2026-07-24",
     "status": "verified_official",
-    "totalChange": 0.11,
-    "equityChange": 0.18
+    "totalChange": -0.05,
+    "equityChange": -0.13
   },
   "skew": {
-    "asOf": "2026-07-24",
-    "median25d": 5.19,
-    "valid": 11,
+    "asOf": "2026-07-27",
+    "median25d": 3.94,
+    "valid": 12,
     "highCount": 5,
     "status": "verified_close"
   },
   "breadth": {
-    "aShareAsOf": "2026-07-24",
-    "aShareUpPct": 0,
-    "aShareUp": 0,
-    "aShareDown": 0,
-    "aShareMainNetYi": 659.46
+    "aShareAsOf": "2026-07-27",
+    "aShareUpPct": 94.05,
+    "aShareUp": 4884,
+    "aShareDown": 268,
+    "aShareMainNetYi": 909.99
   },
   "correction": {
     "cn": {
@@ -114,13 +114,13 @@
       "label": "出清接近基本位"
     },
     "us": {
-      "score": 44,
+      "score": 38,
       "components": {
-        "belowMa20": 56.3,
+        "belowMa20": 50,
         "sentimentScore": 1,
-        "putCallTotal": 0.99,
+        "putCallTotal": 0.94,
         "skewHighCount": 5,
-        "skewValid": 11
+        "skewValid": 12
       },
       "label": "回调中段"
     }
