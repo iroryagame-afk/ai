@@ -284,20 +284,24 @@ button{color:inherit}
 abbr[title]{text-decoration:underline dotted rgba(139,144,160,.6);text-underline-offset:3px;cursor:help}
 
 /* 表格前的数字化筛选口诀 */
-.decision-rule{margin:14px 0;border:2px solid var(--accent);border-left-width:6px;border-radius:14px;background:linear-gradient(115deg,var(--accent-soft),var(--panel) 52%,var(--gold-soft));box-shadow:var(--shadow-card);padding:16px 18px}
-.decision-rule-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:13px}
-.decision-rule-head div{display:flex;align-items:center;gap:10px}
-.decision-rule-kicker{display:inline-flex;align-items:center;border-radius:999px;background:var(--accent);color:#fff;padding:5px 9px;font:700 9px var(--mono);letter-spacing:.12em}
-.decision-rule h2{margin:0;font:700 17px var(--serif);color:var(--ink)}
-.decision-rule-head p{margin:0;max-width:520px;color:var(--muted);font-size:10px;line-height:1.55;text-align:right}
-.decision-rule-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.decision-rule-step{position:relative;border:1px solid var(--hairline);border-radius:11px;background:rgba(255,255,255,.7);padding:12px 13px}
-.decision-rule-step:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:50%;z-index:1;transform:translateY(-50%);color:var(--accent);font:700 15px var(--mono)}
-.decision-rule-step small{display:block;color:var(--muted);font-size:9px;letter-spacing:.08em;margin-bottom:5px}
-.decision-rule-step strong{display:block;color:var(--accent);font:750 15px var(--mono);font-variant-numeric:tabular-nums}
+.decision-rule{position:relative;margin:16px 0;border:1px solid var(--hairline-strong);border-radius:14px;background:var(--panel);overflow:hidden}
+.decision-rule::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--accent)}
+.decision-rule-head{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 20px 15px;border-bottom:1px solid var(--hairline)}
+.decision-rule-title{display:flex;align-items:center;gap:11px;min-width:max-content}
+.decision-rule-kicker{display:inline-flex;align-items:center;border-radius:999px;background:var(--accent-soft);color:var(--accent);border:1px solid rgba(27,64,98,.18);padding:4px 8px;font:700 9px var(--mono);letter-spacing:.08em}
+.decision-rule h2{margin:0;font:700 17px var(--serif);color:var(--ink);text-wrap:balance}
+.decision-rule-head p{margin:0;max-width:620px;color:var(--muted);font-size:11px;line-height:1.6;text-align:right;text-wrap:pretty}
+.decision-rule-flow{display:grid;grid-template-columns:repeat(4,1fr);list-style:none;margin:0;padding:0 20px}
+.decision-rule-step{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;min-width:0;padding:17px 16px;border-right:1px solid var(--hairline)}
+.decision-rule-step:last-child{border-right:0}
+.decision-rule-index{display:grid;place-items:center;width:24px;height:24px;border:1px solid rgba(27,64,98,.28);border-radius:50%;color:var(--accent);background:var(--accent-soft);font:700 10px var(--mono)}
+.decision-rule-copy{min-width:0}
+.decision-rule-step small{display:block;color:var(--muted);font-size:9px;letter-spacing:.05em;margin-bottom:5px}
+.decision-rule-step strong{display:block;color:var(--ink);font:750 15px var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
 .decision-rule-step span{display:block;margin-top:4px;color:var(--ink-2);font-size:9px;line-height:1.45}
-.decision-rule-result{margin:11px 0 0;color:var(--ink-2);font-size:10px;line-height:1.55}
-.decision-rule-result b{color:var(--accent)}
+.decision-rule-result{display:flex;align-items:center;gap:8px;margin:0;padding:11px 20px;border-top:1px solid var(--hairline);background:var(--panel-2);color:var(--ink-2);font-size:10px;line-height:1.55}
+.decision-rule-result b{color:var(--accent);font-size:11px}
+.decision-rule-result em{font-style:normal;color:var(--muted)}
 
 /* 排名表 */
 .shell{border:1px solid var(--hairline);border-radius:14px;overflow:hidden;background:var(--panel);box-shadow:var(--shadow-card)}
@@ -357,10 +361,11 @@ footer p{margin:0}
   .metrics button:last-child{grid-column:1/-1}
   .steps{grid-template-columns:1fr}
   .dictionary{grid-template-columns:1fr 1fr}
-  .decision-rule-head{flex-direction:column;gap:7px}
+  .decision-rule-head{align-items:flex-start;flex-direction:column;gap:7px}
   .decision-rule-head p{text-align:left}
   .decision-rule-flow{grid-template-columns:1fr 1fr}
-  .decision-rule-step:nth-child(2)::after{display:none}
+  .decision-rule-step:nth-child(2){border-right:0}
+  .decision-rule-step:nth-child(-n+2){border-bottom:1px solid var(--hairline)}
   .caption{align-items:flex-start;flex-direction:column;gap:7px}
   .caption p{text-align:left}
   footer{flex-direction:column;gap:4px}
@@ -370,9 +375,15 @@ footer p{margin:0}
   .dictionary{grid-template-columns:1fr}
   .guide summary{padding:15px}
   .guide-body{padding:15px}
-  .decision-rule{padding:15px}
-  .decision-rule-flow{grid-template-columns:1fr}
-  .decision-rule-step::after{display:none}
+  .decision-rule-head{padding:17px 15px 13px}
+  .decision-rule-title{align-items:flex-start;flex-direction:column;gap:7px;min-width:0}
+  .decision-rule h2{font-size:16px}
+  .decision-rule-head p{font-size:10px}
+  .decision-rule-flow{padding:0 15px}
+  .decision-rule-step{grid-template-columns:22px 1fr;gap:7px;padding:14px 8px}
+  .decision-rule-index{width:20px;height:20px;font-size:9px}
+  .decision-rule-step strong{font-size:13px}
+  .decision-rule-result{align-items:flex-start;flex-wrap:wrap;padding:10px 15px;gap:4px 7px}
 }
   </style>
 </head>
@@ -470,16 +481,16 @@ footer p{margin:0}
   </details>
   <aside class="decision-rule csn-rise d4" id="decisionRule" aria-labelledby="decisionRuleTitle" hidden>
     <div class="decision-rule-head">
-      <div><span class="decision-rule-kicker">先看这条</span><h2 id="decisionRuleTitle">四步数字筛选口诀</h2></div>
+      <div class="decision-rule-title"><span class="decision-rule-kicker">筛选顺序</span><h2 id="decisionRuleTitle">先强度，后结构，再确认</h2></div>
       <p>这是研究筛选阈值，不是上涨概率或自动买点；通过后仍要检查 K 线位置、量价和失效条件。</p>
     </div>
-    <div class="decision-rule-flow">
-      <div class="decision-rule-step"><small>01 · 先入围</small><strong>Thrust ≥ 90</strong><span>综合推进进入强势组</span></div>
-      <div class="decision-rule-step"><small>02 · 月度结构</small><strong>月 RS ≥ 75</strong><span>近约 25 日相对位置较强</span></div>
-      <div class="decision-rule-step"><small>03 · 短期速度</small><strong>周 RS ≥ 75</strong><span>并且加速度 &gt; 0</span></div>
-      <div class="decision-rule-step"><small>04 · 价格确认</small><strong>1M &gt; 0</strong><span>并且相对 SPY &gt; 0</span></div>
-    </div>
-    <p class="decision-rule-result"><b>全部满足：</b>进入“强且仍在加速”候选；任一步不满足，就先看作降温、修复或弱势，不直接追。</p>
+    <ol class="decision-rule-flow">
+      <li class="decision-rule-step"><span class="decision-rule-index">1</span><div class="decision-rule-copy"><small>综合推进</small><strong>Thrust ≥ 90</strong><span>进入强势组</span></div></li>
+      <li class="decision-rule-step"><span class="decision-rule-index">2</span><div class="decision-rule-copy"><small>月度结构</small><strong>月 RS ≥ 75</strong><span>近约 25 日位置较强</span></div></li>
+      <li class="decision-rule-step"><span class="decision-rule-index">3</span><div class="decision-rule-copy"><small>短期速度</small><strong>周 RS ≥ 75</strong><span>同时加速度 &gt; 0</span></div></li>
+      <li class="decision-rule-step"><span class="decision-rule-index">4</span><div class="decision-rule-copy"><small>价格确认</small><strong>1M &gt; 0</strong><span>同时相对 SPY &gt; 0</span></div></li>
+    </ol>
+    <p class="decision-rule-result"><b>四项均满足</b><span>进入“强且仍在加速”候选</span><em>· 任一步不满足，先看作降温、修复或弱势，不直接追。</em></p>
   </aside>
   <section class="shell csn-rise d4" id="shell" hidden><div class="caption"><div><strong>RS THRUST RANKING</strong><span id="captionDate"></span></div><p>个股与 ETF 分榜查看；点击表头可切换升降序。Thrust &gt;100% 代表近期 RS 仍在加速。</p></div><div class="scroll"><table><thead><tr><th class="plain"><abbr title="按当前排序方式生成的即时名次">#</abbr></th><th><button class="sort-head" data-sort="ticker" title="按代码排序">股票 / ETF <span class="sort-arrow">↕</span></button></th><th><button class="sort-head active" data-sort="thrust" title="周RS、月RS与加速度的综合分，不是胜率">RS Thrust <span class="sort-arrow">↓</span></button></th><th><button class="sort-head" data-sort="monthRs" title="当前标的/SPY比值在近约25日窗口的位置">1-Mth RS <span class="sort-arrow">↕</span></button></th><th><button class="sort-head" data-sort="weekRs" title="当前相对强度在最近5日窗口的位置">1-Week RS <span class="sort-arrow">↕</span></button></th><th class="plain"><abbr title="近约25日标的/SPY比值的标准化走势">RS路径</abbr></th><th><button class="sort-head" data-sort="acceleration" title="当前一周RS减去三个交易日前的一周RS">加速度 <span class="sort-arrow">↕</span></button></th><th class="plain"><abbr title="近252个交易日相对SPY强度线是否创新高">RS线</abbr></th><th><button class="sort-head" data-sort="day" title="标的最近一个交易日涨跌幅">1D <span class="sort-arrow">↕</span></button></th><th><button class="sort-head" data-sort="month" title="标的近约25个交易日涨跌幅">1M <span class="sort-arrow">↕</span></button></th><th><button class="sort-head" data-sort="relativeSpy" title="近月标的/SPY比值变化，正数代表跑赢">相对SPY <span class="sort-arrow">↕</span></button></th></tr></thead><tbody id="rows"></tbody></table></div><div class="empty" id="empty" hidden>当前类别没有匹配结果，请尝试完整代码或简称。</div></section>
   <footer><p id="generated">研究工具，不构成投资建议</p><p>CSN 投研 · RS Thrust Monitor</p></footer>
