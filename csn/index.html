@@ -71,10 +71,9 @@
     .doc-link { display:inline-flex; align-items:center; justify-content:center; min-height:30px; max-width:100%; padding:5px 11px; border:1px solid var(--line); border-radius:999px; background:var(--accent-soft); color:var(--accent); font-size:13px; font-weight:850; text-decoration:none; overflow-wrap:anywhere; white-space:nowrap; }
     .doc-link:hover { background:var(--panel); border-color:var(--line-strong); }
     .hero-status-note { min-height:34px; padding:10px 16px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; line-height:1.5; font-weight:700; }
-    .system-intro { display:grid; grid-template-columns:auto minmax(0,1fr); gap:14px; align-items:start; width:100%; margin:2px 0 4px; padding:14px 16px; border:1px solid var(--line); border-left:4px solid var(--gold); border-radius:var(--radius-lg); background:var(--panel); color:var(--ink-2); box-shadow:var(--shadow-card); font-size:14px; line-height:1.65; font-weight:650; }
-    .system-intro strong { color:var(--gold); white-space:nowrap; }
     .summary { display:grid; gap:10px; }
     .summary-row { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(320px,.55fr); gap:10px; align-items:stretch; }
+    .summary-row-full { grid-template-columns:minmax(0,1fr); }
     .panel,.metric { background:var(--panel); border:1px solid var(--line); border-radius:var(--radius-lg); padding:14px; box-shadow:var(--shadow-card); }
     .panel { border-top:3px solid var(--accent); }
     .status-card { display:grid; gap:10px; align-content:start; min-height:186px; padding:16px 16px 14px; background:linear-gradient(135deg,var(--panel),var(--panel-2)); color:var(--text); }
@@ -214,7 +213,6 @@
       .hero-stat { margin:0; padding:0; border:0; white-space:normal; }
       .hero-stat.wide,.doc-link { grid-column:1/-1; }
       .hero-status-note { font-size:12px; }
-      .system-intro { grid-template-columns:1fr; }
       h1 { font-size:32px; }
       .summary-row { grid-template-columns:1fr; }
       .summary-row .panel { grid-column:1/-1; }
@@ -264,7 +262,6 @@
     .sb-sep { width:1px; height:18px; background:var(--line); flex:none; }
     .statusbar-main .doc-link { margin-left:auto; }
     .statusbar-foot { padding:8px 16px; border-top:1px solid var(--line); background:var(--panel-2); color:var(--muted); font-size:12px; line-height:1.6; }
-    .system-intro { display:flex; gap:10px; align-items:flex-start; margin:4px 0 0; padding:10px 14px; border-left-width:3px; border-radius:var(--radius); font-weight:400; }
     .card-kicker { display:block; color:var(--muted); font:600 11px/1 var(--mono); letter-spacing:.18em; text-transform:uppercase; }
     .card-status-row { display:flex; align-items:baseline; flex-wrap:wrap; gap:6px 14px; margin-top:8px; }
     .card-big { font-family:var(--serif); font-size:30px; font-weight:700; line-height:1.1; color:var(--ink); }
@@ -300,7 +297,6 @@
       .statusbar-main { gap:8px 14px; }
       .sb-sep { display:none; }
       .statusbar-main .doc-link { margin-left:0; }
-      .system-intro { display:grid; }
       .filter-label { width:100%; }
       tbody tr { box-shadow:var(--shadow-card); }
       td::before { color:var(--muted); }
@@ -364,10 +360,9 @@
         </div>
         <div class="statusbar-foot">口径：价格 / 均线 / 买点 / 止损 / 核心池动态RS 均为 OpenD 日K复算 ｜ 今日新拉取 283、缓存 0 ｜ 部分标的未完成实时核验</div>
       </div>
-      <div class="system-intro"><strong>系统A说明</strong><span>核心精选池每日筛选：以当前 300 只核心池为唯一股票池，结合二阶段、动态RS、买点/止损和OpenD均线核验，用于开盘前确定今日观察名单。</span></div>
     </div>
     <section class="summary">
-      <div class="summary-row">
+      <div class="summary-row summary-row-full">
         <div class="panel spotlight tone-warn">
           <span class="card-kicker">核心池 · 已核验</span>
           <div class="card-status-row">
