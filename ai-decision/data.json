@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T09:26:41.887Z",
+  "generatedAt": "2026-07-28T09:40:18.976Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -82,6 +82,7 @@
       "momPct": 6.1,
       "recentPeakUsdBn": 1502.072,
       "reductionFromRecentPeakPct": 0,
+      "officialProgressPct": null,
       "source": "https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics",
       "sourceLabel": "FINRA Margin Statistics",
       "thresholdStatus": "无官方统一出清阈值"
@@ -101,7 +102,7 @@
     "kr": {
       "score": 25,
       "label": "恐惧",
-      "asOf": "2026-07-28T09:26:37.324Z",
+      "asOf": "2026-07-28T09:40:03.541Z",
       "source": "https://feargreed.co.kr/",
       "sourceLabel": "feargreed.co.kr",
       "methodology": "CNN方法适配KOSPI/KOSDAQ",
@@ -110,7 +111,7 @@
     "us": {
       "score": 40.7,
       "label": "恐惧",
-      "asOf": "2026-07-28T09:06:31+00:00",
+      "asOf": "2026-07-28T09:21:31+00:00",
       "previousClose": 39.9,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
