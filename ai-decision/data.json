@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T02:30:12.187Z",
+  "generatedAt": "2026-07-28T08:12:41.224Z",
   "stage": "修复观察期",
   "stageNote": "情绪修复，但趋势与杠杆尚未同时确认",
   "markets": {
@@ -18,12 +18,12 @@
       }
     },
     "kr": {
-      "asOf": "2026-07-24",
-      "score": -50,
-      "label": "中性偏恐",
+      "asOf": "2026-07-28",
+      "score": -63,
+      "label": "恐慌",
       "valid": 4,
       "aboveMa20Pct": 0,
-      "fear": 1,
+      "fear": 2,
       "greed": 0,
       "coverage": {
         "valid": 10,
@@ -56,9 +56,9 @@
       "basicTn": 2.6
     },
     "korea": {
-      "asOf": "2026-07-24",
-      "currentTn": 32.672,
-      "progressToBasicPct": 69,
+      "asOf": "2026-07-27",
+      "currentTn": 32.741,
+      "progressToBasicPct": 68.2,
       "basicTn": 30,
       "etfFiveDayFlowTn": 0.071
     }
@@ -84,11 +84,11 @@
     "status": "verified_close"
   },
   "breadth": {
-    "aShareAsOf": "2026-07-27",
-    "aShareUpPct": 94.05,
-    "aShareUp": 4884,
-    "aShareDown": 268,
-    "aShareMainNetYi": 909.99
+    "aShareAsOf": "2026-07-28",
+    "aShareUpPct": 45.61,
+    "aShareUp": 2372,
+    "aShareDown": 2673,
+    "aShareMainNetYi": -1087.87
   },
   "correction": {
     "cn": {
@@ -103,12 +103,12 @@
       "label": "回调中段"
     },
     "kr": {
-      "score": 77,
+      "score": 82,
       "components": {
-        "deleveraging": 69,
+        "deleveraging": 68.2,
         "belowMa20": 100,
-        "sentimentScore": -50,
-        "fearCount": 1,
+        "sentimentScore": -63,
+        "fearCount": 2,
         "sampleCount": 4
       },
       "label": "出清接近基本位"
