@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T09:51:27.467Z",
+  "generatedAt": "2026-07-28T09:57:25.210Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -19,15 +19,15 @@
     },
     "kr": {
       "asOf": "2026-07-28",
-      "score": -63,
-      "label": "恐慌",
-      "valid": 4,
+      "score": -46,
+      "label": "中性偏恐",
+      "valid": 16,
       "aboveMa20Pct": 0,
-      "fear": 2,
+      "fear": 4,
       "greed": 0,
       "coverage": {
-        "valid": 10,
-        "total": 10,
+        "valid": 22,
+        "total": 22,
         "ratio": 1
       }
     },
@@ -108,7 +108,7 @@
     "kr": {
       "score": 25,
       "label": "恐惧",
-      "asOf": "2026-07-28T09:51:22.688Z",
+      "asOf": "2026-07-28T09:57:22.433Z",
       "source": "https://feargreed.co.kr/",
       "sourceLabel": "feargreed.co.kr",
       "methodology": "CNN方法适配KOSPI/KOSDAQ",
@@ -117,7 +117,7 @@
     "us": {
       "score": 40.7,
       "label": "恐惧",
-      "asOf": "2026-07-28T09:31:31+00:00",
+      "asOf": "2026-07-28T09:41:31+00:00",
       "previousClose": 39.9,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
