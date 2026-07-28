@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T09:40:18.976Z",
+  "generatedAt": "2026-07-28T09:51:27.467Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -50,16 +50,22 @@
   },
   "deleveraging": {
     "aShare": {
-      "asOf": "2026-07-23",
-      "currentTn": 2.688805,
-      "progressToBasicPct": 79,
+      "asOf": "2026-07-27",
+      "currentTn": 2.676678601378,
+      "progressToBasicPct": 81.9,
       "basicTn": 2.6,
       "etaTradingDays": [
-        7,
-        12
+        6,
+        8
       ],
-      "etaCalendar": "约8月3日–8月10日",
-      "fastEtaTradingDays": 5
+      "etaCalendar": "约8月4日–8月6日",
+      "fastEtaTradingDays": 4,
+      "scopeNote": "2026-07-27交易所最新可得值：上交所融资余额1.364314690178万亿元，深交所1.303962万亿元，北交所约0.0084019112万亿元；三市场合计约2.676678601378万亿元。深交所页面按亿元显示，合计标注为约数。",
+      "sources": {
+        "sse": "https://www.sse.com.cn/market/othersdata/margin/sum/",
+        "szse": "https://www.szse.cn/disclosure/margin/margin/",
+        "bse": "https://www.bse.cn/disclosure/rzrq_trans_list.html"
+      }
     },
     "korea": {
       "asOf": "2026-07-27",
@@ -102,7 +108,7 @@
     "kr": {
       "score": 25,
       "label": "恐惧",
-      "asOf": "2026-07-28T09:40:03.541Z",
+      "asOf": "2026-07-28T09:51:22.688Z",
       "source": "https://feargreed.co.kr/",
       "sourceLabel": "feargreed.co.kr",
       "methodology": "CNN方法适配KOSPI/KOSDAQ",
@@ -111,7 +117,7 @@
     "us": {
       "score": 40.7,
       "label": "恐惧",
-      "asOf": "2026-07-28T09:21:31+00:00",
+      "asOf": "2026-07-28T09:31:31+00:00",
       "previousClose": 39.9,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
