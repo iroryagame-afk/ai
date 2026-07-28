@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T09:05:55.907Z",
+  "generatedAt": "2026-07-28T09:19:05.285Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -74,6 +74,48 @@
       ],
       "etaCalendar": "约8月21日—9月3日",
       "fastEtaTradingDays": 14
+    },
+    "us": {
+      "asOf": "Jun-26",
+      "currentUsdBn": 1502.072,
+      "previousUsdBn": 1415.557,
+      "momPct": 6.1,
+      "recentPeakUsdBn": 1502.072,
+      "reductionFromRecentPeakPct": 0,
+      "source": "https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics",
+      "sourceLabel": "FINRA Margin Statistics",
+      "thresholdStatus": "无官方统一出清阈值"
+    }
+  },
+  "externalFearGreed": {
+    "cn": {
+      "score": 17.54,
+      "label": "极度恐惧",
+      "period": "2026 W30",
+      "frequency": "周频",
+      "source": "https://sc.macromicro.me/series/46919/china-mm-fear-and-greed-index",
+      "sourceLabel": "MacroMicro 中国-MM恐惧与贪婪指数",
+      "verifiedAt": "2026-07-28T17:20:00+08:00",
+      "note": "MacroMicro 公开页面阻止自动抓取；本值为已核验周频快照，刷新时必须重新核对来源页。"
+    },
+    "kr": {
+      "score": 25,
+      "label": "恐惧",
+      "asOf": "2026-07-28T09:19:03.466Z",
+      "source": "https://feargreed.co.kr/",
+      "sourceLabel": "feargreed.co.kr",
+      "methodology": "CNN方法适配KOSPI/KOSDAQ",
+      "status": "第三方估算"
+    },
+    "us": {
+      "score": 40.7,
+      "label": "恐惧",
+      "asOf": "2026-07-28T09:01:31+00:00",
+      "previousClose": 39.9,
+      "source": "https://www.cnn.com/markets/fear-and-greed",
+      "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
+      "sourceLabel": "CNN Fear & Greed Index",
+      "status": "原始发布方"
     }
   },
   "putCall": {
@@ -110,41 +152,6 @@
       "up": 2372,
       "down": 2673,
       "turnoverYi": 20252.14
-    }
-  },
-  "correction": {
-    "cn": {
-      "score": 68,
-      "components": {
-        "deleveraging": 79,
-        "belowMa20": 82.1,
-        "sentimentScore": -28,
-        "fearCount": 6,
-        "sampleCount": 28
-      },
-      "label": "出清接近基本位"
-    },
-    "kr": {
-      "score": 82,
-      "components": {
-        "deleveraging": 68.2,
-        "belowMa20": 100,
-        "sentimentScore": -63,
-        "fearCount": 2,
-        "sampleCount": 4
-      },
-      "label": "出清接近基本位"
-    },
-    "us": {
-      "score": 38,
-      "components": {
-        "belowMa20": 50,
-        "sentimentScore": 1,
-        "putCallTotal": 0.94,
-        "skewHighCount": 5,
-        "skewValid": 12
-      },
-      "label": "回调中段"
     }
   }
 }
