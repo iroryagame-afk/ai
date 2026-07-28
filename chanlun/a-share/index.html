@@ -24,16 +24,30 @@
     body::before { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(180deg,rgba(255,255,255,.52),transparent 150px); }
     a { color:inherit; }
     :focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
-    .csn-topnav { position:sticky; top:0; z-index:100; background:rgba(255,254,250,.9); -webkit-backdrop-filter:blur(14px) saturate(1.3); backdrop-filter:blur(14px) saturate(1.3); border-bottom:1px solid var(--line); }
-    .csn-topnav-inner { width:min(1480px,100%); min-height:58px; margin:auto; padding:0 24px; display:flex; align-items:stretch; gap:20px; }
-    .csn-brand { display:flex; align-items:center; gap:10px; text-decoration:none; }
+    .csn-topnav { position:sticky; top:0; z-index:100; background:rgba(255,254,250,.88); -webkit-backdrop-filter:blur(14px) saturate(1.4); backdrop-filter:blur(14px) saturate(1.4); border-bottom:1px solid var(--line); }
+    .csn-topnav-inner { width:min(1180px,100%); min-height:58px; margin:auto; padding:0 20px; display:flex; align-items:stretch; gap:18px; }
+    .csn-brand { display:flex; flex:none; align-items:center; gap:10px; color:var(--ink); text-decoration:none; }
     .csn-brand-seal { width:30px; height:30px; display:grid; place-items:center; border-radius:7px; color:#fff; background:var(--cinnabar); font:700 14px/1 var(--serif); box-shadow:inset 0 0 0 1px rgba(255,255,255,.24); }
     .csn-brand-name { display:block; font:700 17px/1.15 var(--serif); letter-spacing:.02em; }
     .csn-brand-sub { display:block; margin-top:3px; color:var(--muted); font:600 10px/1 var(--mono); letter-spacing:.2em; text-transform:uppercase; }
-    .market-nav { display:flex; align-items:stretch; margin-left:auto; }
-    .market-nav a,.market-nav span { display:flex; align-items:center; padding:0 16px; border-bottom:2px solid transparent; color:var(--ink-2); text-decoration:none; font-weight:650; }
-    .market-nav .active { color:var(--cinnabar); border-bottom-color:var(--cinnabar); }
+    .csn-menu { display:flex; min-width:0; align-items:stretch; margin-left:auto; }
+    .csn-item { position:relative; display:flex; align-items:stretch; }
+    .csn-item>a,.csn-item>button { display:flex; align-items:center; gap:6px; min-height:0; padding:0 16px; border:0; border-bottom:2px solid transparent; border-radius:0; background:none; color:var(--ink-2); cursor:pointer; font:600 14px/1 var(--sans); text-decoration:none; }
+    .csn-item>a:hover,.csn-item>button:hover { color:var(--ink); }
+    .csn-item.active>a,.csn-item.active>button { color:var(--cinnabar); border-bottom-color:var(--cinnabar); }
+    .csn-caret { color:var(--muted); font-size:9px; transition:transform .18s ease; }
+    .csn-item:hover .csn-caret,.csn-item:focus-within .csn-caret,.csn-item[data-open="true"] .csn-caret { transform:rotate(180deg); }
+    .csn-drop { position:absolute; top:calc(100% + 1px); left:50%; width:250px; min-width:250px; padding:8px; transform:translate(-50%,6px); border:1px solid var(--line); border-radius:12px; background:var(--panel); box-shadow:0 4px 8px rgba(31,36,48,.08); opacity:0; visibility:hidden; pointer-events:none; transition:opacity .16s ease,transform .16s ease,visibility .16s; }
+    .csn-item:hover .csn-drop,.csn-item:focus-within .csn-drop,.csn-item[data-open="true"] .csn-drop { opacity:1; visibility:visible; pointer-events:auto; transform:translate(-50%,0); }
+    .csn-drop a { display:block; min-height:58px; padding:9px 11px; border-radius:8px; color:var(--ink); text-decoration:none; }
+    .csn-drop a:hover { background:var(--panel-2); }
+    .csn-drop a b { display:block; font-size:13.5px; font-weight:650; }
+    .csn-drop a small { display:block; margin-top:2px; color:var(--muted); font-size:11.5px; line-height:1.45; white-space:nowrap; }
     .page-head { width:min(1480px,100%); margin:auto; padding:40px 24px 10px; }
+    .market-tabs { display:inline-flex; margin-bottom:20px; padding:3px; border:1px solid var(--line); border-radius:9px; background:var(--panel-2); }
+    .market-tabs a,.market-tabs span { display:inline-flex; align-items:center; min-height:32px; padding:6px 12px; border-radius:6px; color:var(--ink-2); font-size:12px; font-weight:700; text-decoration:none; }
+    .market-tabs .active { background:var(--accent); color:#fff; }
+    .market-tabs a:hover { background:var(--panel); color:var(--ink); }
     .kicker { display:inline-flex; align-items:center; gap:9px; color:var(--gold); font:650 11px/1 var(--mono); letter-spacing:.22em; text-transform:uppercase; }
     .kicker::before { content:""; width:24px; height:1px; background:var(--gold); }
     h1 { max-width:980px; margin:13px 0 10px; font:700 clamp(34px,4.4vw,52px)/1.12 var(--serif); letter-spacing:.01em; text-wrap:balance; }
@@ -156,8 +170,12 @@
     @media(max-width:640px) {
       .csn-topnav-inner { padding:0 14px; }
       .csn-brand-sub { display:none; }
-      .market-nav a,.market-nav span { padding:0 7px; font-size:11.5px; }
+      .csn-item>a,.csn-item>button { padding:0 9px; font-size:12px; }
+      .csn-menu { overflow:visible; }
+      .csn-drop { position:fixed; top:59px; right:12px; left:12px; width:auto; min-width:0; transform:translateY(6px); }
+      .csn-item:hover .csn-drop,.csn-item:focus-within .csn-drop,.csn-item[data-open="true"] .csn-drop { transform:none; }
       .page-head { padding:28px 16px 8px; }
+      .market-tabs { margin-bottom:17px; }
       h1 { font-size:34px; }
       main { padding:8px 8px 36px; }
       .statusbar-main { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 14px; }
@@ -186,19 +204,40 @@
   </style>
 </head>
 <body>
-  <nav class="csn-topnav" aria-label="CSN 页面导航">
+  <nav class="csn-topnav" aria-label="全站导航">
     <div class="csn-topnav-inner">
-      <span class="csn-brand">
+      <a class="csn-brand" href="https://csnpk.com/">
         <span class="csn-brand-seal">研</span>
         <span><span class="csn-brand-name">CSN 投研</span><span class="csn-brand-sub">Research Desk</span></span>
-      </span>
-      <div class="market-nav">
-        <span class="active">A股</span>
-        <a href="../us-share/index.html">美股</a>
+      </a>
+      <div class="csn-menu">
+        <div class="csn-item active">
+          <button type="button" aria-haspopup="true">股票 <span class="csn-caret">▼</span></button>
+          <div class="csn-drop">
+            <a href="https://csnpk.com/mda100/"><b>A股严选</b><small>主线雷达 · MD50选股 · 全量评分</small></a>
+            <a href="https://csnpk.com/csn/"><b>核心池筛选</b><small>300只核心池 · OpenD核验</small></a>
+            <a href="https://csnpk.com/csn/hot/"><b>美股热门榜</b><small>全市场热榜 · 板块轮动 · 技术核验</small></a>
+          </div>
+        </div>
+        <div class="csn-item">
+          <button type="button" aria-haspopup="true">工具 <span class="csn-caret">▼</span></button>
+          <div class="csn-drop">
+            <a href="https://csnpk.com/rs-thrust/"><b>相对强度加速图</b><small>找正在加速的强势股</small></a>
+            <a href="https://csnpk.com/rotation/"><b>轮动加速度雷达</b><small>看顶部衰竭与底部修复</small></a>
+            <a href="https://csnpk.com/us-skew/"><b>期权风险分布图</b><small>看保护需求与风险温度</small></a>
+            <a href="https://csnpk.com/ai-decision/"><b>每日市场进度</b><small>A股与美股的回调出清进度</small></a>
+            <a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>猎龙者每日信号表</b><small>美股机会、风险警报与历史信号</small></a>
+          </div>
+        </div>
+        <div class="csn-item"><a href="https://csnpk.com/nav/">调研</a></div>
       </div>
     </div>
   </nav>
   <header class="page-head">
+    <div class="market-tabs" aria-label="缠论市场切换">
+      <span class="active">A股缠论</span>
+      <a href="../us-share/index.html">美股缠论</a>
+    </div>
     <span class="kicker">Chanlun Position Radar · CN</span>
     <h1>A股市场自选股｜缠论买卖点状态全景</h1>
     <p class="page-lead">先看位置，再看证据。本页逐只遍历富途系统自选，以 30m 背景、5m 结构、1m 触发分层归类；证据不够时只降级为候选、观察或未核验，不把工程代理冒充原文级确认。</p>
@@ -3007,6 +3046,32 @@
     <footer>本页为研究筛查工具，不构成投资建议，也不触发任何交易指令。</footer>
   </main>
   <script>
+    const navItems=[...document.querySelectorAll(".csn-menu .csn-item")];
+    const navButtons=[...document.querySelectorAll(".csn-menu button")];
+    navButtons.forEach(button=>{
+      button.setAttribute("aria-expanded","false");
+      button.addEventListener("click",event=>{
+        event.stopPropagation();
+        const item=button.closest(".csn-item");
+        const shouldOpen=item.dataset.open!=="true";
+        navItems.forEach(candidate=>{
+          candidate.removeAttribute("data-open");
+          const candidateButton=candidate.querySelector(":scope > button");
+          if(candidateButton) candidateButton.setAttribute("aria-expanded","false");
+        });
+        if(shouldOpen){
+          item.dataset.open="true";
+          button.setAttribute("aria-expanded","true");
+        }
+      });
+    });
+    document.addEventListener("click",()=>{
+      navItems.forEach(item=>item.removeAttribute("data-open"));
+      navButtons.forEach(button=>button.setAttribute("aria-expanded","false"));
+    });
+    document.addEventListener("keydown",event=>{
+      if(event.key==="Escape") document.dispatchEvent(new MouseEvent("click"));
+    });
     const rows=[...document.querySelectorAll("tbody tr")];
     const search=document.querySelector("#search");
     const clear=document.querySelector("#clear");
