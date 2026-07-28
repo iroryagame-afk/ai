@@ -43,6 +43,7 @@
     .csn-drop a:hover { background:var(--panel-2); }
     .csn-drop a b { display:block; font-size:13.5px; font-weight:650; }
     .csn-drop a small { display:block; margin-top:2px; color:var(--muted); font-size:11.5px; line-height:1.45; white-space:nowrap; }
+    .csn-drop a.current b::after { content:"· 当前"; margin-left:4px; color:var(--cinnabar); font-size:11px; }
     .page-head { width:min(1480px,100%); margin:auto; padding:40px 24px 10px; }
     .market-tabs { display:inline-flex; margin-bottom:20px; padding:3px; border:1px solid var(--line); border-radius:9px; background:var(--panel-2); }
     .market-tabs a,.market-tabs span { display:inline-flex; align-items:center; min-height:32px; padding:6px 12px; border-radius:6px; color:var(--ink-2); font-size:12px; font-weight:700; text-decoration:none; }
@@ -217,6 +218,8 @@
             <a href="https://csnpk.com/mda100/"><b>A股严选</b><small>主线雷达 · MD50选股 · 全量评分</small></a>
             <a href="https://csnpk.com/csn/"><b>核心池筛选</b><small>300只核心池 · OpenD核验</small></a>
             <a href="https://csnpk.com/csn/hot/"><b>美股热门榜</b><small>全市场热榜 · 板块轮动 · 技术核验</small></a>
+            <a href="https://csnpk.com/chanlun/a-share/"><b>A股缠论</b><small>自选股 · 30m / 5m / 1m 位置全景</small></a>
+            <a class="current" href="https://csnpk.com/chanlun/us-share/"><b>美股缠论</b><small>自选股 · 30m / 5m / 1m 位置全景</small></a>
           </div>
         </div>
         <div class="csn-item">
