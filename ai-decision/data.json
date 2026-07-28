@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T08:58:10.629Z",
+  "generatedAt": "2026-07-28T09:05:55.907Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -53,14 +53,27 @@
       "asOf": "2026-07-23",
       "currentTn": 2.688805,
       "progressToBasicPct": 79,
-      "basicTn": 2.6
+      "basicTn": 2.6,
+      "etaTradingDays": [
+        7,
+        12
+      ],
+      "etaCalendar": "约8月3日–8月10日",
+      "fastEtaTradingDays": 5
     },
     "korea": {
       "asOf": "2026-07-27",
       "currentTn": 32.741,
       "progressToBasicPct": 68.2,
       "basicTn": 30,
-      "etfFiveDayFlowTn": 0.071
+      "etfFiveDayFlowTn": 0.071,
+      "tenDayChangeTn": -2.048,
+      "etaTradingDays": [
+        19,
+        28
+      ],
+      "etaCalendar": "约8月21日—9月3日",
+      "fastEtaTradingDays": 14
     }
   },
   "putCall": {
