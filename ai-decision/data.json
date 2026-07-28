@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-07-28T08:39:41.702Z",
-  "stage": "修复观察期",
-  "stageNote": "情绪修复，但趋势与杠杆尚未同时确认",
+  "generatedAt": "2026-07-28T08:58:10.629Z",
+  "stage": "风险释放中",
+  "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
     "cn": {
       "asOf": "2026-07-28",
-      "score": -20,
+      "score": -28,
       "label": "中性偏恐",
-      "valid": 54,
-      "aboveMa20Pct": 25.9,
+      "valid": 28,
+      "aboveMa20Pct": 17.9,
       "fear": 6,
       "greed": 0,
       "coverage": {
-        "valid": 60,
-        "total": 60,
+        "valid": 34,
+        "total": 34,
         "ratio": 1
       }
     },
@@ -85,22 +85,31 @@
   },
   "breadth": {
     "aShareAsOf": "2026-07-28",
-    "aShareUpPct": 45.68,
-    "aShareUp": 2372,
-    "aShareDown": 2673,
-    "aShareMainNetYi": -1087.87
+    "aShareUpPct": 44.24,
+    "aShareUp": 2603,
+    "aShareDown": 2769,
+    "aShareMainNetYi": -1087.87,
+    "aShareUniverse": "全A股（含沪深北）",
+    "aShareCovered": 5884,
+    "crosscheck": {
+      "universe": "沪深全A（不含北交所）",
+      "activeSameDay": 5193,
+      "up": 2372,
+      "down": 2673,
+      "turnoverYi": 20252.14
+    }
   },
   "correction": {
     "cn": {
-      "score": 62,
+      "score": 68,
       "components": {
         "deleveraging": 79,
-        "belowMa20": 74.1,
-        "sentimentScore": -20,
+        "belowMa20": 82.1,
+        "sentimentScore": -28,
         "fearCount": 6,
-        "sampleCount": 54
+        "sampleCount": 28
       },
-      "label": "回调中段"
+      "label": "出清接近基本位"
     },
     "kr": {
       "score": 82,
