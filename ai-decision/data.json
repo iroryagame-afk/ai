@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-28T08:12:41.224Z",
+  "generatedAt": "2026-07-28T08:39:41.702Z",
   "stage": "修复观察期",
   "stageNote": "情绪修复，但趋势与杠杆尚未同时确认",
   "markets": {
     "cn": {
-      "asOf": "2026-07-24",
-      "score": -19,
+      "asOf": "2026-07-28",
+      "score": -20,
       "label": "中性偏恐",
       "valid": 54,
-      "aboveMa20Pct": 22.2,
-      "fear": 5,
+      "aboveMa20Pct": 25.9,
+      "fear": 6,
       "greed": 0,
       "coverage": {
         "valid": 60,
@@ -85,7 +85,7 @@
   },
   "breadth": {
     "aShareAsOf": "2026-07-28",
-    "aShareUpPct": 45.61,
+    "aShareUpPct": 45.68,
     "aShareUp": 2372,
     "aShareDown": 2673,
     "aShareMainNetYi": -1087.87
@@ -95,9 +95,9 @@
       "score": 62,
       "components": {
         "deleveraging": 79,
-        "belowMa20": 77.8,
-        "sentimentScore": -19,
-        "fearCount": 5,
+        "belowMa20": 74.1,
+        "sentimentScore": -20,
+        "fearCount": 6,
         "sampleCount": 54
       },
       "label": "回调中段"
