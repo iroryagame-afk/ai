@@ -231,21 +231,16 @@ button{color:inherit}
 .statusbar .src{color:var(--muted)}
 .statusbar .bench{margin-left:auto;font:600 10px/1 var(--mono);letter-spacing:.18em;color:var(--gold)}
 
-/* 搜索 + 排序页签 */
-.controls{display:flex;justify-content:space-between;gap:14px;margin:0 0 14px}
-.search{flex:1;max-width:680px;height:48px;display:flex;align-items:center;gap:10px;padding:0 15px;background:var(--panel);border:1px solid var(--hairline);border-radius:12px;color:var(--ink);box-shadow:var(--shadow-card)}
+/* 查看范围 + 搜索 */
+.scope-toolbar{display:flex;align-items:center;gap:12px;margin:0 0 16px}
+.search{flex:1 1 300px;min-width:260px;height:48px;display:flex;align-items:center;gap:10px;padding:0 15px;background:var(--panel);border:1px solid var(--hairline);border-radius:12px;color:var(--ink);box-shadow:var(--shadow-card)}
 .search:focus-within{border-color:var(--accent)}
 .search span{font-size:22px;color:var(--muted)}
 .search input{border:0;outline:0;background:transparent;width:100%;color:var(--ink);font-size:14px;font-weight:600}
 .search input::placeholder{color:var(--muted);font-weight:400}
 .search button{border:1px solid var(--hairline);background:var(--panel-2);color:var(--muted);border-radius:50%;width:24px;height:24px;cursor:pointer;line-height:1}
 .search button:hover{color:var(--ink);border-color:var(--hairline-strong)}
-.tabs{display:flex;align-items:center;gap:3px;background:var(--panel);border:1px solid var(--hairline);border-radius:12px;padding:4px}
-.tabs button{border:0;background:transparent;cursor:pointer;white-space:nowrap}
-.tabs button{padding:10px 14px;border-radius:8px;color:var(--muted);font-size:12px;font-weight:600}
-.tabs button:hover{color:var(--ink)}
-.tabs button.active{background:var(--accent);color:#fff}
-.asset-tabs{display:flex;gap:8px;margin:0 0 14px;overflow:auto}
+.asset-tabs{display:flex;flex:0 1 auto;gap:8px;margin:0;overflow:auto}
 .asset-tabs button{border:1px solid var(--hairline);background:var(--panel);color:var(--ink-2);padding:10px 16px;border-radius:999px;cursor:pointer;white-space:nowrap;font-weight:650}
 .asset-tabs button:hover{border-color:var(--hairline-strong);color:var(--ink)}
 .asset-tabs button.active{border-color:var(--accent);background:var(--accent);color:#fff}
@@ -253,11 +248,20 @@ button{color:inherit}
 
 /* 分组胶囊 */
 
-/* 指标筛选卡 */
-.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px}
-.metrics button{position:relative;text-align:left;background:var(--panel);color:var(--ink);border:1px solid var(--hairline);padding:16px 18px;border-radius:13px;cursor:pointer;box-shadow:var(--shadow-card);transition:border-color .15s,background .15s,transform .15s}
-.metrics button:hover{border-color:var(--hairline-strong);transform:translateY(-1px)}
-.metrics button.active{border-color:var(--accent);background:var(--accent-soft)}
+/* 候选筛选 + 四步确认 */
+.candidate-panel{position:relative;margin:0 0 16px;border:1px solid var(--hairline-strong);border-radius:14px;background:var(--panel);overflow:hidden}
+.candidate-panel::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--accent)}
+.candidate-head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 20px 14px}
+.candidate-title{display:flex;align-items:center;gap:11px}
+.candidate-kicker{display:inline-flex;align-items:center;border-radius:999px;background:var(--accent-soft);color:var(--accent);border:1px solid rgba(27,64,98,.18);padding:4px 8px;font:700 9px var(--mono);letter-spacing:.08em}
+.candidate-head h2{margin:0;font:700 17px var(--serif);color:var(--ink)}
+.signal-reset{border:1px solid var(--hairline);border-radius:999px;background:var(--panel-2);color:var(--ink-2);padding:7px 11px;font-size:10px;cursor:pointer}
+.signal-reset:hover{border-color:var(--accent);color:var(--accent)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
+.metrics button{position:relative;text-align:left;background:var(--panel);color:var(--ink);border:0;border-right:1px solid var(--hairline);padding:14px 18px;cursor:pointer;transition:background .15s}
+.metrics button:last-child{border-right:0}
+.metrics button:hover{background:var(--panel-2)}
+.metrics button.active{background:var(--accent-soft);box-shadow:inset 0 -2px var(--accent)}
 .metrics button.active::after{content:"筛选中";position:absolute;right:12px;top:12px;color:var(--accent);font-size:9px;letter-spacing:.08em;font-weight:700}
 .metrics span{display:block;color:var(--muted);font-size:10px;letter-spacing:.08em;font-weight:600}
 .metrics strong{display:inline-block;margin:8px 9px 0 0;font-size:26px;font-family:var(--mono);font-variant-numeric:tabular-nums}
@@ -283,9 +287,8 @@ button{color:inherit}
 .guide-note strong{color:var(--ink-2)}
 abbr[title]{text-decoration:underline dotted rgba(139,144,160,.6);text-underline-offset:3px;cursor:help}
 
-/* 表格前的数字化筛选口诀 */
-.decision-rule{position:relative;margin:16px 0;border:1px solid var(--hairline-strong);border-radius:14px;background:var(--panel);overflow:hidden}
-.decision-rule::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--accent)}
+/* 同一候选面板内的数字化确认口诀 */
+.decision-rule{background:var(--panel)}
 .decision-rule-head{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 20px 15px;border-bottom:1px solid var(--hairline)}
 .decision-rule-title{display:flex;align-items:center;gap:11px;min-width:max-content}
 .decision-rule-kicker{display:inline-flex;align-items:center;border-radius:999px;background:var(--accent-soft);color:var(--accent);border:1px solid rgba(27,64,98,.18);padding:4px 8px;font:700 9px var(--mono);letter-spacing:.08em}
@@ -354,11 +357,12 @@ footer p{margin:0}
 @media(max-width:860px){
   .hero{grid-template-columns:1fr;gap:18px}
   .statusbar .bench{margin-left:0}
-  .controls{flex-direction:column}
-  .search{max-width:none}
-  .tabs{overflow:auto}
+  .scope-toolbar{flex-wrap:wrap}
+  .asset-tabs{flex:1 1 100%;max-width:100%}
+  .search{flex-basis:100%;max-width:none}
   .metrics{grid-template-columns:1fr 1fr}
-  .metrics button[data-signal="all"]{grid-column:1/-1}
+  .metrics button:nth-child(2){border-right:0}
+  .metrics button:nth-child(-n+2){border-bottom:1px solid var(--hairline)}
   .steps{grid-template-columns:1fr}
   .dictionary{grid-template-columns:1fr 1fr}
   .decision-rule-head{align-items:flex-start;flex-direction:column;gap:7px}
@@ -371,6 +375,8 @@ footer p{margin:0}
   footer{flex-direction:column;gap:4px}
 }
 @media(max-width:470px){
+  .candidate-head{align-items:flex-start;padding:17px 15px 13px}
+  .candidate-title{align-items:flex-start;flex-direction:column;gap:7px}
   .metrics button{padding:14px}
   .dictionary{grid-template-columns:1fr}
   .guide summary{padding:15px}
@@ -453,10 +459,11 @@ footer p{margin:0}
     <span class="src" id="source">数据源：Futu OpenD 只读行情 · 基准：US.SPY</span>
     <span class="bench">FUTU WATCHLIST · SPY BENCHMARK</span>
   </div>
-  <nav class="asset-tabs csn-rise d3" id="assetTabs" aria-label="查看范围"></nav>
+  <section class="scope-toolbar csn-rise d3">
+    <nav class="asset-tabs" id="assetTabs" aria-label="查看范围"></nav>
+    <label class="search"><span>⌕</span><input id="query" placeholder="搜索代码或名称，例如 NVDA / XBI"><button id="clear" aria-label="清空">×</button></label>
+  </section>
   <section class="loading" id="loading">正在读取最新自选股数据…</section>
-  <section class="metrics" id="metrics" hidden></section>
-  <section class="controls csn-rise d3"><label class="search"><span>⌕</span><input id="query" placeholder="搜索代码或名称，例如 NVDA / XBI"><button id="clear" aria-label="清空">×</button></label><div class="tabs" id="tabs"><button data-sort="thrust" class="active">Thrust</button><button data-sort="monthRs">一月RS</button><button data-sort="acceleration">加速度</button><button data-sort="month">一月涨幅</button><button data-sort="day">当日</button></div></section>
   <details class="guide" id="guide" open hidden>
     <summary><strong>如何看懂这张表</strong><span>先看强度，再看方向，最后看价格确认⌄</span></summary>
     <div class="guide-body">
@@ -479,19 +486,26 @@ footer p{margin:0}
       <p class="guide-note"><strong>快速口诀：</strong>Thrust ≥ 90 → 1-Mth RS ≥ 75 → 1-Week RS ≥ 75 且加速度 &gt; 0 → 1M &gt; 0 且相对 SPY &gt; 0。全部通过才列入“强且仍在加速”候选。</p>
     </div>
   </details>
-  <aside class="decision-rule csn-rise d4" id="decisionRule" aria-labelledby="decisionRuleTitle" hidden>
-    <div class="decision-rule-head">
-      <div class="decision-rule-title"><span class="decision-rule-kicker">筛选顺序</span><h2 id="decisionRuleTitle">先强度，后结构，再确认</h2></div>
-      <p>这是研究筛选阈值，不是上涨概率或自动买点；通过后仍要检查 K 线位置、量价和失效条件。</p>
-    </div>
-    <ol class="decision-rule-flow">
-      <li class="decision-rule-step"><span class="decision-rule-index">1</span><div class="decision-rule-copy"><small>综合推进</small><strong>Thrust ≥ 90</strong><span>进入强势组</span></div></li>
-      <li class="decision-rule-step"><span class="decision-rule-index">2</span><div class="decision-rule-copy"><small>月度结构</small><strong>月 RS ≥ 75</strong><span>近约 25 日位置较强</span></div></li>
-      <li class="decision-rule-step"><span class="decision-rule-index">3</span><div class="decision-rule-copy"><small>短期速度</small><strong>周 RS ≥ 75</strong><span>同时加速度 &gt; 0</span></div></li>
-      <li class="decision-rule-step"><span class="decision-rule-index">4</span><div class="decision-rule-copy"><small>价格确认</small><strong>1M &gt; 0</strong><span>同时相对 SPY &gt; 0</span></div></li>
-    </ol>
-    <p class="decision-rule-result"><b>四项均满足</b><span>进入“强且仍在加速”候选</span><em>· 任一步不满足，先看作降温、修复或弱势，不直接追。</em></p>
-  </aside>
+  <section class="candidate-panel csn-rise d4" id="candidatePanel" hidden>
+    <header class="candidate-head">
+      <div class="candidate-title"><span class="candidate-kicker">候选筛选</span><h2>先筛候选，再按四步确认</h2></div>
+      <button class="signal-reset" id="signalReset" type="button">查看全部 / 清除候选</button>
+    </header>
+    <section class="metrics" id="metrics" aria-label="候选信号筛选"></section>
+    <aside class="decision-rule" id="decisionRule" aria-labelledby="decisionRuleTitle">
+      <div class="decision-rule-head">
+        <div class="decision-rule-title"><span class="decision-rule-kicker">四步确认</span><h2 id="decisionRuleTitle">先强度，后结构，再确认</h2></div>
+        <p>上方是快捷初筛；下方四步是完整确认标准。它们都不是上涨概率或自动买点，仍要检查 K 线、量价与失效条件。</p>
+      </div>
+      <ol class="decision-rule-flow">
+        <li class="decision-rule-step"><span class="decision-rule-index">1</span><div class="decision-rule-copy"><small>综合推进</small><strong>Thrust ≥ 90</strong><span>进入强势组</span></div></li>
+        <li class="decision-rule-step"><span class="decision-rule-index">2</span><div class="decision-rule-copy"><small>月度结构</small><strong>月 RS ≥ 75</strong><span>近约 25 日位置较强</span></div></li>
+        <li class="decision-rule-step"><span class="decision-rule-index">3</span><div class="decision-rule-copy"><small>短期速度</small><strong>周 RS ≥ 75</strong><span>同时加速度 &gt; 0</span></div></li>
+        <li class="decision-rule-step"><span class="decision-rule-index">4</span><div class="decision-rule-copy"><small>价格确认</small><strong>1M &gt; 0</strong><span>同时相对 SPY &gt; 0</span></div></li>
+      </ol>
+      <p class="decision-rule-result"><b>完整四项均满足</b><span>才进入最终“强且仍在加速”观察候选</span><em>· 任一步不满足，先看作降温、修复或弱势，不直接追。</em></p>
+    </aside>
+  </section>
   <section class="shell csn-rise d4" id="shell" hidden><div class="caption"><div><strong>RS THRUST RANKING</strong><span id="captionDate"></span></div><p>个股与 ETF 分榜查看；点击表头可切换升降序。Thrust &gt;100% 代表近期 RS 仍在加速。</p></div><div class="scroll"><table><thead><tr><th class="plain"><abbr title="按当前排序方式生成的即时名次">#</abbr></th><th><button class="sort-head" data-sort="ticker" title="按代码排序">股票 / ETF <span class="sort-arrow">↕</span></button></th><th><button class="sort-head active" data-sort="thrust" title="周RS、月RS与加速度的综合分，不是胜率">RS Thrust <span class="sort-arrow">↓</span></button></th><th><button class="sort-head" data-sort="monthRs" title="当前标的/SPY比值在近约25日窗口的位置">1-Mth RS <span class="sort-arrow">↕</span></button></th><th><button class="sort-head" data-sort="weekRs" title="当前相对强度在最近5日窗口的位置">1-Week RS <span class="sort-arrow">↕</span></button></th><th><button class="sort-head" data-sort="acceleration" title="当前一周RS减去三个交易日前的一周RS">加速度 <span class="sort-arrow">↕</span></button></th><th class="plain"><abbr title="近约25日标的/SPY比值的标准化走势">RS路径</abbr></th><th class="plain"><abbr title="近252个交易日相对SPY强度线是否创新高">RS线</abbr></th><th><button class="sort-head" data-sort="month" title="标的近约25个交易日涨跌幅">1M <span class="sort-arrow">↕</span></button></th><th><button class="sort-head" data-sort="relativeSpy" title="近月标的/SPY比值变化，正数代表跑赢">相对SPY <span class="sort-arrow">↕</span></button></th><th><button class="sort-head" data-sort="day" title="标的最近一个交易日涨跌幅">1D <span class="sort-arrow">↕</span></button></th></tr></thead><tbody id="rows"></tbody></table></div><div class="empty" id="empty" hidden>当前类别没有匹配结果，请尝试完整代码或简称。</div></section>
   <footer><p id="generated">研究工具，不构成投资建议</p><p>CSN 投研 · RS Thrust Monitor</p></footer>
 </main>
@@ -509,11 +523,11 @@ function rsLine(r){return r.rsLineNewHigh?'<span class="up">新高</span>':r.rsL
 function baseRows(){const q=$('#query').value.trim().toUpperCase().replace(/^US\./,'');return payload.rows.filter(r=>(r.assetClass||'us_stock')===asset&&(!q||`${r.ticker} ${r.code} ${r.name} ${r.industryNote||''}`.toUpperCase().includes(q)))}
 function matchesSignal(r,view=signal){const leader=(r.rsThrustPct??-999)>=90,accelerating=(r.rsWeekAcceleration??0)>0,rsHigh=r.rsLineNewHigh===true;return view==='leaders'?leader:view==='accelerators'?accelerating:view==='rsHigh'?rsHigh:view==='both'?leader&&accelerating:true}
 function filtered(){const key={ticker:'ticker',thrust:'rsThrustPct',monthRs:'rsMonthPercentile',weekRs:'rsWeekPercentile',acceleration:'rsWeekAcceleration',day:'dayChangePct',month:'monthChangePct',relativeSpy:'rsVsSpyMonthPct'}[sort];return baseRows().filter(r=>matchesSignal(r)).sort((a,b)=>{const av=a[key],bv=b[key];if(typeof av==='string'||typeof bv==='string')return direction==='desc'?String(bv??'').localeCompare(String(av??'')):String(av??'').localeCompare(String(bv??''));const aa=av??(direction==='desc'?-999:999),bb=bv??(direction==='desc'?-999:999);return direction==='desc'?bb-aa:aa-bb})}
-function updateSortUI(){document.querySelectorAll('.sort-head').forEach(b=>{const active=b.dataset.sort===sort;b.classList.toggle('active',active);b.querySelector('.sort-arrow').textContent=active?(direction==='desc'?'↓':'↑'):'↕'});document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('active',b.dataset.sort===sort))}
-function render(){if(!payload)return;const base=baseRows(),list=filtered(),q=$('#query').value.trim(),count=view=>base.filter(r=>matchesSignal(r,view)).length,label=assetLabels[asset]||asset;$('#metrics').innerHTML=`<button data-signal="all" class="${signal==='all'?'active':''}"><span>${label}</span><strong>${base.length}</strong><small>点击恢复当前范围</small></button><button data-signal="leaders" class="${signal==='leaders'?'active':''}"><span>强势推进</span><strong>${count('leaders')}</strong><small>RS Thrust ≥ 90%</small></button><button data-signal="accelerators" class="${signal==='accelerators'?'active':''}"><span>短期加速</span><strong>${count('accelerators')}</strong><small>一周RS高于三日前</small></button><button data-signal="both" class="${signal==='both'?'active':''}"><span>强且加速</span><strong>${count('both')}</strong><small>Thrust ≥ 90% 且正加速</small></button><button data-signal="rsHigh" class="${signal==='rsHigh'?'active':''}"><span>RS线新高</span><strong>${count('rsHigh')}</strong><small>近252日相对强度新高</small></button>`;$('#rows').innerHTML=list.map((r,i)=>`<tr><td class="rank">${String(i+1).padStart(2,'0')}</td><td class="stock"><strong>${esc(r.ticker)}</strong><span class="name">${esc(r.name)}</span><div class="tags">${r.groups.slice(0,4).map(g=>`<em>${esc(g)}</em>`).join('')}${r.industryNote?`<em class="industry-note">${esc(r.industryNote)}</em>`:''}</div></td><td><strong class="thrust ${(r.rsThrustPct??0)>=90?'hot':(r.rsThrustPct??0)<30?'cold':''}">${score(r.rsThrustPct)}</strong></td><td><div class="score"><span>${score(r.rsMonthPercentile)}</span><i><b style="width:${Math.max(0,r.rsMonthPercentile||0)}%"></b></i></div></td><td>${score(r.rsWeekPercentile)}</td><td>${delta(r.rsWeekAcceleration)}</td><td>${bars(r.rsSeries)}</td><td>${rsLine(r)}</td><td>${delta(r.monthChangePct)}</td><td>${delta(r.rsVsSpyMonthPct)}</td><td>${delta(r.dayChangePct)}</td></tr>`).join('');$('#empty').hidden=list.length>0;$('#captionDate').textContent=`最新已核验收盘 · ${payload.dataDate} · ${label} · 当前 ${list.length} 只`;updateSortUI();const url=new URL(location.href);q?url.searchParams.set('q',q):url.searchParams.delete('q');signal==='all'?url.searchParams.delete('view'):url.searchParams.set('view',signal);asset==='us_stock'?url.searchParams.delete('asset'):url.searchParams.set('asset',asset);history.replaceState({},'',url)}
-$('#query').value=new URLSearchParams(location.search).get('q')||'';$('#query').addEventListener('input',render);$('#clear').onclick=()=>{$('#query').value='';render();$('#query').focus()};$('#tabs').onclick=e=>{const b=e.target.closest('button[data-sort]');if(!b)return;sort=b.dataset.sort;direction='desc';render()};document.querySelector('thead').onclick=e=>{const b=e.target.closest('.sort-head');if(!b)return;if(sort===b.dataset.sort)direction=direction==='desc'?'asc':'desc';else{sort=b.dataset.sort;direction='desc'}render()};$('#metrics').onclick=e=>{const b=e.target.closest('button[data-signal]');if(!b)return;signal=b.dataset.signal;render()};
+function updateSortUI(){document.querySelectorAll('.sort-head').forEach(b=>{const active=b.dataset.sort===sort;b.classList.toggle('active',active);b.querySelector('.sort-arrow').textContent=active?(direction==='desc'?'↓':'↑'):'↕'})}
+function render(){if(!payload)return;const base=baseRows(),list=filtered(),q=$('#query').value.trim(),count=view=>base.filter(r=>matchesSignal(r,view)).length,label=assetLabels[asset]||asset;$('#metrics').innerHTML=`<button data-signal="leaders" class="${signal==='leaders'?'active':''}"><span>强势推进</span><strong>${count('leaders')}</strong><small>RS Thrust ≥ 90%</small></button><button data-signal="accelerators" class="${signal==='accelerators'?'active':''}"><span>短期加速</span><strong>${count('accelerators')}</strong><small>一周 RS 高于三日前</small></button><button data-signal="both" class="${signal==='both'?'active':''}"><span>强 + 正加速初筛</span><strong>${count('both')}</strong><small>Thrust ≥ 90% 且加速度 &gt; 0</small></button><button data-signal="rsHigh" class="${signal==='rsHigh'?'active':''}"><span>RS线新高</span><strong>${count('rsHigh')}</strong><small>近252日相对强度新高</small></button>`;$('#rows').innerHTML=list.map((r,i)=>`<tr><td class="rank">${String(i+1).padStart(2,'0')}</td><td class="stock"><strong>${esc(r.ticker)}</strong><span class="name">${esc(r.name)}</span><div class="tags">${r.groups.slice(0,4).map(g=>`<em>${esc(g)}</em>`).join('')}${r.industryNote?`<em class="industry-note">${esc(r.industryNote)}</em>`:''}</div></td><td><strong class="thrust ${(r.rsThrustPct??0)>=90?'hot':(r.rsThrustPct??0)<30?'cold':''}">${score(r.rsThrustPct)}</strong></td><td><div class="score"><span>${score(r.rsMonthPercentile)}</span><i><b style="width:${Math.max(0,r.rsMonthPercentile||0)}%"></b></i></div></td><td>${score(r.rsWeekPercentile)}</td><td>${delta(r.rsWeekAcceleration)}</td><td>${bars(r.rsSeries)}</td><td>${rsLine(r)}</td><td>${delta(r.monthChangePct)}</td><td>${delta(r.rsVsSpyMonthPct)}</td><td>${delta(r.dayChangePct)}</td></tr>`).join('');$('#empty').hidden=list.length>0;$('#captionDate').textContent=`最新已核验收盘 · ${payload.dataDate} · ${label} · 当前 ${list.length} 只`;updateSortUI();const url=new URL(location.href);q?url.searchParams.set('q',q):url.searchParams.delete('q');signal==='all'?url.searchParams.delete('view'):url.searchParams.set('view',signal);asset==='us_stock'?url.searchParams.delete('asset'):url.searchParams.set('asset',asset);history.replaceState({},'',url)}
+$('#query').value=new URLSearchParams(location.search).get('q')||'';$('#query').addEventListener('input',render);$('#clear').onclick=()=>{$('#query').value='';render();$('#query').focus()};document.querySelector('thead').onclick=e=>{const b=e.target.closest('.sort-head');if(!b)return;if(sort===b.dataset.sort)direction=direction==='desc'?'asc':'desc';else{sort=b.dataset.sort;direction='desc'}render()};$('#metrics').onclick=e=>{const b=e.target.closest('button[data-signal]');if(!b)return;signal=signal===b.dataset.signal?'all':b.dataset.signal;render()};$('#signalReset').onclick=()=>{signal='all';render()};
 $('#assetTabs').onclick=e=>{const b=e.target.closest('button[data-asset]');if(!b)return;asset=b.dataset.asset;signal='all';render();document.querySelectorAll('#assetTabs button').forEach(x=>x.classList.toggle('active',x.dataset.asset===asset))};
-fetch(`data.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('数据读取失败');return r.json()}).then(d=>{payload=d;const classes=d.assetClasses||Object.entries(assetLabels).map(([id,label])=>({id,label,count:d.rows.filter(r=>(r.assetClass||'us_stock')===id).length}));$('#assetTabs').innerHTML=classes.map(c=>`<button data-asset="${esc(c.id)}" class="${c.id===asset?'active':''}">${esc(c.label)}<small>${c.count}</small></button>`).join('');$('#universeNote').textContent=`作者帖子清单 ${d.authorPostEtfs?.configuredCount||287} 个代码 · 未包含私有校准项`;$('#loading').hidden=true;$('#metrics').hidden=false;$('#guide').hidden=false;$('#decisionRule').hidden=false;$('#shell').hidden=false;$('#status').textContent=d.status==='OPEN_D_VERIFIED'?'OpenD 已核验':'数据待核验';$('#dataDate').textContent=d.dataDate;$('#captionDate').textContent=`最新已核验收盘 · ${d.dataDate}`;$('#source').textContent=`数据源：Futu OpenD 只读行情 · 基准：${d.benchmark} · ${d.failedCount} 只未通过历史数据门槛`;$('#generated').textContent=`生成时间：${new Date(d.generatedAt).toLocaleString('zh-CN',{hour12:false})} · 研究工具，不构成投资建议`;render()}).catch(e=>{$('#loading').textContent=`数据暂时不可用：${e.message}`;$('#status').textContent='读取失败';$('#status').parentElement.classList.add('err');$('.dot').classList.add('err')});
+fetch(`data.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('数据读取失败');return r.json()}).then(d=>{payload=d;const classes=d.assetClasses||Object.entries(assetLabels).map(([id,label])=>({id,label,count:d.rows.filter(r=>(r.assetClass||'us_stock')===id).length}));$('#assetTabs').innerHTML=classes.map(c=>`<button data-asset="${esc(c.id)}" class="${c.id===asset?'active':''}" title="查看并恢复该范围全部标的">${esc(c.label)}<small>${c.count}</small></button>`).join('');$('#universeNote').textContent=`作者帖子清单 ${d.authorPostEtfs?.configuredCount||287} 个代码 · 未包含私有校准项`;$('#loading').hidden=true;$('#candidatePanel').hidden=false;$('#guide').hidden=false;$('#shell').hidden=false;$('#status').textContent=d.status==='OPEN_D_VERIFIED'?'OpenD 已核验':'数据待核验';$('#dataDate').textContent=d.dataDate;$('#captionDate').textContent=`最新已核验收盘 · ${d.dataDate}`;$('#source').textContent=`数据源：Futu OpenD 只读行情 · 基准：${d.benchmark} · ${d.failedCount} 只未通过历史数据门槛`;$('#generated').textContent=`生成时间：${new Date(d.generatedAt).toLocaleString('zh-CN',{hour12:false})} · 研究工具，不构成投资建议`;render()}).catch(e=>{$('#loading').textContent=`数据暂时不可用：${e.message}`;$('#status').textContent='读取失败';$('#status').parentElement.classList.add('err');$('.dot').classList.add('err')});
 </script>
 
 </body>
