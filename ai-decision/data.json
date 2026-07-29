@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T09:57:25.210Z",
+  "generatedAt": "2026-07-29T14:57:19.595Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -18,12 +18,12 @@
       }
     },
     "kr": {
-      "asOf": "2026-07-28",
-      "score": -46,
+      "asOf": "2026-07-29",
+      "score": -54,
       "label": "中性偏恐",
       "valid": 16,
       "aboveMa20Pct": 0,
-      "fear": 4,
+      "fear": 10,
       "greed": 0,
       "coverage": {
         "valid": 22,
@@ -50,17 +50,17 @@
   },
   "deleveraging": {
     "aShare": {
-      "asOf": "2026-07-27",
-      "currentTn": 2.676678601378,
-      "progressToBasicPct": 81.9,
+      "asOf": "2026-07-28",
+      "currentTn": 2.646901871315,
+      "progressToBasicPct": 88.9,
       "basicTn": 2.6,
       "etaTradingDays": [
-        6,
-        8
+        3,
+        5
       ],
-      "etaCalendar": "约8月4日–8月6日",
-      "fastEtaTradingDays": 4,
-      "scopeNote": "2026-07-27交易所最新可得值：上交所融资余额1.364314690178万亿元，深交所1.303962万亿元，北交所约0.0084019112万亿元；三市场合计约2.676678601378万亿元。深交所页面按亿元显示，合计标注为约数。",
+      "etaCalendar": "约8月3日–8月5日",
+      "fastEtaTradingDays": 2,
+      "scopeNote": "2026-07-28交易所最新可得值：上交所融资余额1.349011533515万亿元，深交所1.289506万亿元，北交所约0.0083843378万亿元；三市场合计约2.646901871315万亿元。深交所页面按亿元显示，合计标注为约数。",
       "sources": {
         "sse": "https://www.sse.com.cn/market/othersdata/margin/sum/",
         "szse": "https://www.szse.cn/disclosure/margin/margin/",
@@ -68,18 +68,18 @@
       }
     },
     "korea": {
-      "asOf": "2026-07-27",
-      "currentTn": 32.741,
-      "progressToBasicPct": 68.2,
+      "asOf": "2026-07-28",
+      "currentTn": 33.194,
+      "progressToBasicPct": 63,
       "basicTn": 30,
-      "etfFiveDayFlowTn": 0.071,
-      "tenDayChangeTn": -2.048,
+      "etfFiveDayFlowTn": null,
+      "tenDayChangeTn": -1.514,
       "etaTradingDays": [
-        19,
-        28
+        30,
+        44
       ],
-      "etaCalendar": "约8月21日—9月3日",
-      "fastEtaTradingDays": 14
+      "etaCalendar": "约9月8日—9月28日",
+      "fastEtaTradingDays": 22
     },
     "us": {
       "asOf": "Jun-26",
@@ -96,19 +96,20 @@
   },
   "externalFearGreed": {
     "cn": {
-      "score": 20.97,
-      "label": "极度恐慌",
-      "period": "2026-07-28",
+      "score": 36.18,
+      "label": "恐慌",
+      "period": "2026-07-29",
       "frequency": "日频",
       "source": "https://baifenwei.com/indicator/fear-greed/",
       "sourceLabel": "百分位 A股恐惧贪婪指数",
-      "verifiedAt": "2026-07-28T17:03:42+08:00",
-      "note": "来源页已完成浏览器打开与正文回读；最新指数值20.97，数据日2026-07-28，页面更新时间2026-07-28 15:02。"
+      "sourceUpdatedAt": "2026-07-29 14:00",
+      "verifiedAt": "2026-07-29T22:52:36+08:00",
+      "note": "来源页已完成网页正文回读；最新指数值36.18，数据日2026-07-29，页面更新时间2026-07-29 14:00。"
     },
     "kr": {
-      "score": 25,
+      "score": 21,
       "label": "恐惧",
-      "asOf": "2026-07-28T09:57:22.433Z",
+      "asOf": "2026-07-29T14:57:16.524Z",
       "source": "https://feargreed.co.kr/",
       "sourceLabel": "feargreed.co.kr",
       "methodology": "CNN方法适配KOSPI/KOSDAQ",
@@ -122,21 +123,21 @@
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
       "sourceLabel": "CNN Fear & Greed Index",
-      "status": "原始发布方"
+      "status": "原始发布方缓存回读"
     }
   },
   "putCall": {
     "source": "Cboe Global Markets",
-    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-07-27",
-    "asOf": "2026-07-27",
-    "total": 0.94,
-    "totalPrevious": 0.99,
-    "equity": 0.66,
-    "equityPrevious": 0.79,
-    "previousAsOf": "2026-07-24",
+    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-07-28",
+    "asOf": "2026-07-28",
+    "total": 0.96,
+    "totalPrevious": 0.94,
+    "equity": 0.71,
+    "equityPrevious": 0.66,
+    "previousAsOf": "2026-07-27",
     "status": "verified_official",
-    "totalChange": -0.05,
-    "equityChange": -0.13
+    "totalChange": 0.02,
+    "equityChange": 0.05
   },
   "skew": {
     "asOf": "2026-07-27",
