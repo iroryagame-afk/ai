@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-29T14:57:19.595Z",
+  "generatedAt": "2026-07-29T16:17:50.655Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
     "cn": {
-      "asOf": "2026-07-28",
-      "score": -28,
+      "asOf": "2026-07-29",
+      "score": -25,
       "label": "中性偏恐",
       "valid": 28,
-      "aboveMa20Pct": 17.9,
-      "fear": 6,
+      "aboveMa20Pct": 28.6,
+      "fear": 3,
       "greed": 0,
       "coverage": {
         "valid": 34,
@@ -32,15 +32,15 @@
       }
     },
     "us": {
-      "asOf": "2026-07-27",
-      "score": 1,
+      "asOf": "2026-07-28",
+      "score": 5,
       "label": "中性偏热",
       "valid": 16,
-      "aboveMa20Pct": 50,
+      "aboveMa20Pct": 56.3,
       "fear": 0,
       "greed": 0,
-      "spy1dPct": 0.02,
-      "qqq1dPct": -0.31,
+      "spy1dPct": 0.24,
+      "qqq1dPct": -0.97,
       "coverage": {
         "valid": 22,
         "total": 22,
@@ -109,21 +109,21 @@
     "kr": {
       "score": 21,
       "label": "恐惧",
-      "asOf": "2026-07-29T14:57:16.524Z",
+      "asOf": "2026-07-29T16:17:45.249Z",
       "source": "https://feargreed.co.kr/",
       "sourceLabel": "feargreed.co.kr",
       "methodology": "CNN方法适配KOSPI/KOSDAQ",
       "status": "第三方估算"
     },
     "us": {
-      "score": 40.7,
+      "score": 33.3,
       "label": "恐惧",
-      "asOf": "2026-07-28T09:41:31+00:00",
-      "previousClose": 39.9,
+      "asOf": "2026-07-29T16:11:51+00:00",
+      "previousClose": 38.5,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
       "sourceLabel": "CNN Fear & Greed Index",
-      "status": "原始发布方缓存回读"
+      "status": "原始发布方"
     }
   },
   "putCall": {
@@ -140,26 +140,26 @@
     "equityChange": 0.05
   },
   "skew": {
-    "asOf": "2026-07-27",
-    "median25d": 3.94,
-    "valid": 12,
+    "asOf": "2026-07-28",
+    "median25d": 2.4,
+    "valid": 13,
     "highCount": 5,
     "status": "verified_close"
   },
   "breadth": {
-    "aShareAsOf": "2026-07-28",
-    "aShareUpPct": 44.24,
-    "aShareUp": 2603,
-    "aShareDown": 2769,
-    "aShareMainNetYi": -1087.87,
+    "aShareAsOf": "2026-07-29",
+    "aShareUpPct": 72.28,
+    "aShareUp": 4253,
+    "aShareDown": 1215,
+    "aShareMainNetYi": -120.34,
     "aShareUniverse": "全A股（含沪深北）",
     "aShareCovered": 5884,
     "crosscheck": {
       "universe": "沪深全A（不含北交所）",
-      "activeSameDay": 5193,
-      "up": 2372,
-      "down": 2673,
-      "turnoverYi": 20252.14
+      "activeSameDay": 5192,
+      "up": 3967,
+      "down": 1173,
+      "turnoverYi": 22958.39
     }
   }
 }

@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "status": "DOUBLE_VERIFIED_A_SHARE_CONFLUENCE",
-  "generated_at": "2026-07-28T02:30:23.882796+08:00",
-  "data_date": "2026-07-27",
+  "generated_at": "2026-07-30T00:02:43.714152+08:00",
+  "data_date": "2026-07-29",
   "source_dates_match": true,
   "sources": {
     "mda100": {
       "status": "DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH",
-      "data_date": "2026-07-27",
+      "data_date": "2026-07-29",
       "selection": "必选池建议买入 + 打野池建议买入"
     },
     "chanlun_futu": {
       "status": "OPEN_D_VERIFIED_COMPLETE_SESSION",
-      "data_date": "2026-07-27",
+      "data_date": "2026-07-29",
       "selection": [
         "买点候选",
         "买点确认",
@@ -20,7 +20,7 @@
       ]
     }
   },
-  "intersection_count": 2,
+  "intersection_count": 1,
   "rows": [
     {
       "ticker": "688120",
@@ -28,33 +28,16 @@
       "pool": "必选池",
       "theme": "半导体设备 / CMP设备",
       "score": 100,
-      "buy_zone": "265.72-273.81",
-      "defense": "248.2",
+      "buy_zone": "269.87-278.08",
+      "defense": "251.6",
       "code": "SH.688120",
       "chanlun_category": "买点候选",
       "chanlun_action": "买入观察",
-      "chanlun_buy_score": 5,
+      "chanlun_buy_score": 6,
       "chanlun_signal": "后续首次完成回踩不进中枢，再观察B3前置条件",
       "chanlun_zone": "暂在已确认笔中枢上沿上方（ZG 257.57）",
-      "latest_kline_time": "2026-07-27 15:00:00",
-      "rank_score": 105
-    },
-    {
-      "ticker": "002371",
-      "name": "北方华创",
-      "pool": "必选池",
-      "theme": "半导体设备 / 前道设备",
-      "score": 100,
-      "buy_zone": "761.30-784.49",
-      "defense": "733.6",
-      "code": "SZ.002371",
-      "chanlun_category": "买点候选",
-      "chanlun_action": "买入观察",
-      "chanlun_buy_score": 2,
-      "chanlun_signal": "后续首次完成回踩不进中枢，再观察B3前置条件",
-      "chanlun_zone": "暂在已确认笔中枢上沿上方（ZG 703.98）",
-      "latest_kline_time": "2026-07-27 15:00:00",
-      "rank_score": 102
+      "latest_kline_time": "2026-07-29 15:00:00",
+      "rank_score": 106
     }
   ],
   "claim_boundary": "A股严选的建议买入与30分钟缠论买点候选/观察取交集；买入观察不等于下单或严格缠论买点确认"
