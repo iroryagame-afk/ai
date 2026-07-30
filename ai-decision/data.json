@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T16:17:50.655Z",
+  "generatedAt": "2026-07-30T04:12:17.010Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -32,15 +32,15 @@
       }
     },
     "us": {
-      "asOf": "2026-07-28",
-      "score": 5,
-      "label": "中性偏热",
+      "asOf": "2026-07-29",
+      "score": -7,
+      "label": "中性偏恐",
       "valid": 16,
-      "aboveMa20Pct": 56.3,
-      "fear": 0,
+      "aboveMa20Pct": 37.5,
+      "fear": 1,
       "greed": 0,
-      "spy1dPct": 0.24,
-      "qqq1dPct": -0.97,
+      "spy1dPct": -1.54,
+      "qqq1dPct": -2.04,
       "coverage": {
         "valid": 22,
         "total": 22,
@@ -107,9 +107,9 @@
       "note": "来源页已完成网页正文回读；最新指数值36.18，数据日2026-07-29，页面更新时间2026-07-29 14:00。"
     },
     "kr": {
-      "score": 21,
+      "score": 39,
       "label": "恐惧",
-      "asOf": "2026-07-29T16:17:45.249Z",
+      "asOf": "2026-07-30T04:12:13.694Z",
       "source": "https://feargreed.co.kr/",
       "sourceLabel": "feargreed.co.kr",
       "methodology": "CNN方法适配KOSPI/KOSDAQ",
@@ -123,27 +123,27 @@
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
       "sourceLabel": "CNN Fear & Greed Index",
-      "status": "原始发布方"
+      "status": "原始发布方缓存回读"
     }
   },
   "putCall": {
     "source": "Cboe Global Markets",
-    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-07-28",
-    "asOf": "2026-07-28",
-    "total": 0.96,
-    "totalPrevious": 0.94,
-    "equity": 0.71,
-    "equityPrevious": 0.66,
-    "previousAsOf": "2026-07-27",
+    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-07-29",
+    "asOf": "2026-07-29",
+    "total": 1.05,
+    "totalPrevious": 0.96,
+    "equity": 0.61,
+    "equityPrevious": 0.71,
+    "previousAsOf": "2026-07-28",
     "status": "verified_official",
-    "totalChange": 0.02,
-    "equityChange": 0.05
+    "totalChange": 0.09,
+    "equityChange": -0.1
   },
   "skew": {
-    "asOf": "2026-07-28",
-    "median25d": 2.4,
-    "valid": 13,
-    "highCount": 5,
+    "asOf": "2026-07-29",
+    "median25d": 2.19,
+    "valid": 14,
+    "highCount": 6,
     "status": "verified_close"
   },
   "breadth": {
