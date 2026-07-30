@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T07:55:23.258Z",
+  "generatedAt": "2026-07-30T08:00:20.567Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -109,7 +109,7 @@
     "kr": {
       "score": 40,
       "label": "恐惧",
-      "asOf": "2026-07-30T07:55:20.429Z",
+      "asOf": "2026-07-30T08:00:16.277Z",
       "source": "https://feargreed.co.kr/",
       "sourceLabel": "feargreed.co.kr",
       "methodology": "CNN方法适配KOSPI/KOSDAQ",
@@ -118,7 +118,7 @@
     "us": {
       "score": 34.5,
       "label": "恐惧",
-      "asOf": "2026-07-30T07:35:31+00:00",
+      "asOf": "2026-07-30T07:40:31+00:00",
       "previousClose": 32.3,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
@@ -128,7 +128,7 @@
   },
   "koreaCapitalFlow": {
     "asOf": "2026-07-30",
-    "verifiedAt": "2026-07-30T07:55:17.101Z",
+    "verifiedAt": "2026-07-30T08:00:00.380Z",
     "status": "verified_third_party",
     "unit": "억원",
     "market": {
@@ -176,8 +176,8 @@
       }
     ],
     "hynixConfirmation": {
-      "programNetEok": 3148.9,
-      "programTradeRatioPct": 29.45,
+      "programNetEok": 3004.4,
+      "programTradeRatioPct": 29.48,
       "shortAsOf": "2026-07-30",
       "shortRatioPct": 2.5
     },
