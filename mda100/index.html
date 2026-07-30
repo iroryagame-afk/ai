@@ -138,6 +138,10 @@
     .whole-market-stat.gate { border-color:#fed7aa; background:#fff7ed; }
     .whole-market-stat.gate strong { color:#9a3412; }
     .market-source-note { color:#52627a; font-size:12px; line-height:1.6; margin:4px 0 18px; }
+    .price-breadth-module { margin:16px 0 20px; padding:15px 16px 3px; border:1px solid #c7d2fe; border-radius:10px; background:linear-gradient(180deg,#f8faff,#fff); }
+    .price-breadth-head { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
+    .price-breadth-head h3 { margin:3px 0 0; font-size:18px; }
+    .price-breadth-module .note { margin-bottom:12px; }
     .etf-subscription-source { margin:16px 0 20px; border:1px solid #cbd5e1; border-radius:10px; background:#fbfdff; overflow:hidden; }
     .etf-subscription-head { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding:14px 16px 10px; }
     .etf-subscription-head h3 { margin:3px 0 0; font-size:18px; }
@@ -414,6 +418,7 @@
 	      .rec-review-head > strong { font-size:38px; }
 	      .rec-review-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
 	      .setup-grid,.two-col,.workflow,.buy-focus-grid,.radar-meta,.radar-status-grid,.whole-market-grid,.market-flow-summary,.mainline-card-grid { grid-template-columns:1fr; }
+        .price-breadth-head { flex-direction:column; gap:6px; }
       .mainline-card { padding:16px 0; }
       .mainline-card + .mainline-card { border-left:0; border-top:1px solid #dbeafe; padding-left:0; }
       .algo-link { align-items:flex-start; flex-direction:column; }
@@ -1689,6 +1694,32 @@ a { color: var(--accent); }
           <div class="whole-market-stat gate"><span>总闸门</span><strong>资金撤退</strong></div>
         </div>
         <div class="market-source-note">主力净占比 -3.37%；全A订单流覆盖 5885/5885；Futu沪深全A交叉核验 23,421亿。</div>
+
+
+        <section class="price-breadth-module">
+          <div class="price-breadth-head">
+            <div>
+              <span class="source-kicker">OpenD同日核验 · 830000增强观察</span>
+              <h3>全A股价体感</h3>
+            </div>
+            <span class="source-date">2026-07-30 · 5196只有效样本</span>
+          </div>
+          <div class="whole-market-grid">
+            <div class="whole-market-stat"><span>平均股价近似值</span><strong>24.76元</strong></div>
+            <div class="whole-market-stat"><span>等权平均涨跌</span><strong>-1.85%</strong></div>
+            <div class="whole-market-stat"><span>典型个股中位数</span><strong>-1.20%</strong></div>
+            <div class="whole-market-stat gate"><span>真实体感</span><strong>弱势体感</strong></div>
+          </div>
+          <div class="market-source-note">
+            原始平均价格当日变化 -4.17%，
+            与等权收益相差 <span class="negative">-2.32个百分点</span>：
+            原始均价表现被高价股明显拖累。
+            中位股价 12.87元，上涨宽度 31.47%。
+          </div>
+          <div class="note">用途：识别“权重指数稳定、但多数股票走弱”的背离，并约束ETF/个股开仓强度。
+          口径：沪深A股同日有效快照的最新价算术平均；不含北交所、停牌和无有效昨收股票。
+          边界：同花顺830000的可复核近似口径，不是同花顺官方指数值；平均股价受高价股、送转除权和样本变化影响。</div>
+        </section>
 
 
         <aside class="etf-subscription-source" data-source-status="USER_SCREENSHOT_VERIFIED">
