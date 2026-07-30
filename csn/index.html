@@ -273,6 +273,16 @@
     .tone-ok .verdict { background:var(--jade-soft); color:var(--jade); }
     .card-foot { margin:12px -14px -14px; padding:8px 14px; border-top:1px solid var(--line); background:var(--panel-2); color:var(--muted); font-size:12px; line-height:1.8; border-radius:0 0 var(--radius-lg) var(--radius-lg); overflow-wrap:anywhere; }
     .card-foot b { font-weight:700; }
+    .intersection-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:8px; margin-top:12px; }
+    .intersection-item { padding:11px 12px; border:1px solid var(--line); border-radius:10px; background:var(--panel-2); }
+    .intersection-item div { display:flex; align-items:baseline; gap:8px; }
+    .intersection-item strong { color:var(--cinnabar); font:800 19px/1 var(--sans); }
+    .intersection-item span { color:var(--ink-2); font-size:12px; }
+    .intersection-item p { margin:7px 0 3px; color:var(--ink); font:700 12px/1.5 var(--mono); }
+    .intersection-item small { display:block; color:var(--muted); font-size:11px; line-height:1.6; }
+    .intersection-source { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin-top:12px; }
+    .intersection-source span { display:grid; gap:5px; padding:10px 12px; border:1px solid var(--line); border-radius:9px; background:var(--panel-2); color:var(--ink-2); font-size:12px; line-height:1.6; }
+    .intersection-source b { color:var(--accent); font-size:11px; }
     .filter-card { display:grid; gap:8px; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius-lg); background:var(--panel); box-shadow:var(--shadow-card); }
     .filter-row { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
     .filter-label { width:64px; flex:none; color:var(--muted); font:600 11px/1 var(--mono); letter-spacing:.08em; }
@@ -298,6 +308,7 @@
       .sb-sep { display:none; }
       .statusbar-main .doc-link { margin-left:0; }
       .filter-label { width:100%; }
+      .intersection-grid,.intersection-source { grid-template-columns:1fr; }
       tbody tr { box-shadow:var(--shadow-card); }
       td::before { color:var(--muted); }
       td[data-label="标的"] { padding:12px 14px 10px; background:var(--panel-2); border:0; border-bottom:1px solid var(--line); box-shadow:none; }
@@ -365,22 +376,49 @@
     </div>
     <section class="summary">
       <div class="summary-row">
-        <div class="panel spotlight tone-warn">
-          <span class="card-kicker">核心池 · 已核验</span>
+
+        <div class="panel spotlight tone-ok">
+          <span class="card-kicker">精选推荐 · 三路共振</span>
           <div class="card-status-row">
-            <strong class="card-big">仅观察，不推荐</strong>
-            <span class="watchlist-meta">30 只｜买入观察30</span>
+            <strong class="card-big">精选推荐</strong>
+            <span class="watchlist-meta">8 只｜三路中命中至少 2 路</span>
           </div>
-          <p class="watchlist-text">美股择时次日胜率审计未达到 55% 门槛。当前 30 只仅保留为买入观察池，等待价格与量能确认，不作为直接推荐。</p>
-          <div class="stat-row">
-            <span class="sb-item"><span class="sb-label">CSN原始次日胜率</span><b class="mono bad">49.02%</b></span>
-            <span class="sb-item"><span class="sb-label">择时确认样本</span><b class="mono">0</b></span>
-            <span class="sb-item"><span class="sb-label">门槛</span><b class="mono">55%</b></span>
-            <span class="verdict">未通过 · 暂停推荐</span>
-          </div>
-          <div class="card-foot"><b>AI相关</b>｜美股：CRSR、NET、PANW、OKTA、AAPL、MTCH、EBAY、LLY、D<br><b>老登股</b>｜美股：ALRS、ROKU、VG、EOG、PRI、TX、AMBP、ILMN、MSM、STLD、IFS、MT、FLNG、PFG、AAMI、BGC、WTBA、ARQT、LNG、KOD、OXY</div>
+          <p class="watchlist-text">三路口径：Thrust“优先看”、猎龙者 Sheet1、轮动雷达“领先加速/落后加速”。命中至少 2 路即入选，不叠加 CSN 其他算法。</p>
+          <div class="intersection-grid"><article class="intersection-item">
+              <div><strong>SNOW</strong><span>Snowflake</span></div>
+              <p>命中 3/3 · Thrust优先看 · 猎龙者Sheet1 · 领先加速</p>
+              <small>Thrust 105% / 月RS 100% / 周RS 100%｜猎龙者 突破B · S · 二阶段偏热｜轮动 领先加速 · 速度 2.91% · 加速度Z 0.64</small>
+            </article><article class="intersection-item">
+              <div><strong>WDAY</strong><span>Workday</span></div>
+              <p>命中 3/3 · Thrust优先看 · 猎龙者Sheet1 · 领先加速</p>
+              <small>Thrust 105% / 月RS 100% / 周RS 100%｜猎龙者 入S2 · B · 二阶段启动｜轮动 领先加速 · 速度 11.01% · 加速度Z 1.91</small>
+            </article><article class="intersection-item">
+              <div><strong>ZETA</strong><span>Zeta Global</span></div>
+              <p>命中 2/3 · Thrust优先看 · 领先加速</p>
+              <small>Thrust 110% / 月RS 100% / 周RS 100%｜轮动 领先加速 · 速度 2.15% · 加速度Z 1.62</small>
+            </article><article class="intersection-item">
+              <div><strong>MSFT</strong><span>微软</span></div>
+              <p>命中 2/3 · Thrust优先看 · 领先加速</p>
+              <small>Thrust 108.3% / 月RS 95.8% / 周RS 100%｜轮动 领先加速 · 速度 0.16% · 加速度Z 0.29</small>
+            </article><article class="intersection-item">
+              <div><strong>NET</strong><span>Cloudflare</span></div>
+              <p>命中 2/3 · Thrust优先看 · 落后加速</p>
+              <small>Thrust 106.7% / 月RS 91.7% / 周RS 100%｜轮动 落后加速 · 速度 -0.38% · 加速度Z 0.32</small>
+            </article><article class="intersection-item">
+              <div><strong>CRM</strong><span>赛富时</span></div>
+              <p>命中 2/3 · Thrust优先看 · 领先加速</p>
+              <small>Thrust 105% / 月RS 100% / 周RS 100%｜轮动 领先加速 · 速度 6.87% · 加速度Z 1.92</small>
+            </article><article class="intersection-item">
+              <div><strong>DDOG</strong><span>Datadog</span></div>
+              <p>命中 2/3 · Thrust优先看 · 领先加速</p>
+              <small>Thrust 105% / 月RS 100% / 周RS 100%｜轮动 领先加速 · 速度 1.39% · 加速度Z 1.08</small>
+            </article><article class="intersection-item">
+              <div><strong>NOW</strong><span>ServiceNow</span></div>
+              <p>命中 2/3 · Thrust优先看 · 领先加速</p>
+              <small>Thrust 105% / 月RS 100% / 周RS 100%｜轮动 领先加速 · 速度 8.04% · 加速度Z 2.27</small>
+            </article></div>
+          <div class="card-foot">VERIFIED_US_THREE_SIGNAL_CONSENSUS_2_OF_3 · 数据日期 2026-07-29</div>
         </div>
-        
         <div class="panel backtest-panel">
           <span class="card-kicker">昨日推荐回看</span>
           <div class="card-status-row">
