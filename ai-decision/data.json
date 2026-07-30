@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T04:12:17.010Z",
+  "generatedAt": "2026-07-30T07:31:38.770Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -68,17 +68,17 @@
       }
     },
     "korea": {
-      "asOf": "2026-07-28",
-      "currentTn": 33.194,
-      "progressToBasicPct": 63,
+      "asOf": "2026-07-29",
+      "currentTn": 32.995,
+      "progressToBasicPct": 65.3,
       "basicTn": 30,
       "etfFiveDayFlowTn": null,
-      "tenDayChangeTn": -1.514,
+      "tenDayChangeTn": -1.375,
       "etaTradingDays": [
-        30,
-        44
+        31,
+        46
       ],
-      "etaCalendar": "约9月8日—9月28日",
+      "etaCalendar": "约9月10日—10月1日",
       "fastEtaTradingDays": 22
     },
     "us": {
@@ -107,24 +107,94 @@
       "note": "来源页已完成网页正文回读；最新指数值36.18，数据日2026-07-29，页面更新时间2026-07-29 14:00。"
     },
     "kr": {
-      "score": 39,
+      "score": 40,
       "label": "恐惧",
-      "asOf": "2026-07-30T04:12:13.694Z",
+      "asOf": "2026-07-30T07:31:35.630Z",
       "source": "https://feargreed.co.kr/",
       "sourceLabel": "feargreed.co.kr",
       "methodology": "CNN方法适配KOSPI/KOSDAQ",
       "status": "第三方估算"
     },
     "us": {
-      "score": 33.3,
+      "score": 34.5,
       "label": "恐惧",
-      "asOf": "2026-07-29T16:11:51+00:00",
-      "previousClose": 38.5,
+      "asOf": "2026-07-30T07:15:31+00:00",
+      "previousClose": 32.3,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
       "sourceLabel": "CNN Fear & Greed Index",
-      "status": "原始发布方缓存回读"
+      "status": "原始发布方"
     }
+  },
+  "koreaCapitalFlow": {
+    "asOf": "2026-07-30",
+    "verifiedAt": "2026-07-30T07:31:32.151Z",
+    "status": "verified_third_party",
+    "unit": "억원",
+    "market": {
+      "total": {
+        "individual": -15416,
+        "foreign": 15912,
+        "institution": -777
+      },
+      "kospi": {
+        "individual": -14310,
+        "foreign": 13427,
+        "institution": 660
+      },
+      "kosdaq": {
+        "individual": -1106,
+        "foreign": 2485,
+        "institution": -1437
+      }
+    },
+    "semiconductor5d": {
+      "from": "2026-07-24",
+      "to": "2026-07-30",
+      "individualEok": 852.2,
+      "foreignEok": -946.4,
+      "institutionEok": 71.4
+    },
+    "bellwethers": [
+      {
+        "code": "000660",
+        "name": "SK海力士",
+        "asOf": "2026-07-30",
+        "foreign5dEok": -64444.7,
+        "institution5dEok": 11942.1,
+        "foreign10dEok": -45697.2,
+        "institution10dEok": -15570.3
+      },
+      {
+        "code": "005930",
+        "name": "三星电子",
+        "asOf": "2026-07-30",
+        "foreign5dEok": -37878.9,
+        "institution5dEok": 3713.3,
+        "foreign10dEok": -22775.6,
+        "institution10dEok": -11825.8
+      }
+    ],
+    "hynixConfirmation": {
+      "programNetEok": 3698.5,
+      "programTradeRatioPct": 29.3,
+      "shortAsOf": "2026-07-30",
+      "shortRatioPct": 2.5
+    },
+    "sources": {
+      "ksinfo": {
+        "label": "KSInfo 韩国证券信息",
+        "url": "https://ksinfo.co.kr/stocks/000660",
+        "role": "自动读取全市场、行业与权重股资金"
+      },
+      "stockplus": {
+        "label": "Stockplus 证券Plus",
+        "url": "https://www.stockplus.com/m/stocks/KOREA-A000660/quotations/foreign",
+        "role": "动态页面辅助核验",
+        "status": "link_only_no_stable_public_api"
+      }
+    },
+    "scorePolicy": "仅作韩国资金确认，不改写KOFIA杠杆进度或韩国贪恐指数"
   },
   "putCall": {
     "source": "Cboe Global Markets",
@@ -147,19 +217,19 @@
     "status": "verified_close"
   },
   "breadth": {
-    "aShareAsOf": "2026-07-29",
-    "aShareUpPct": 72.28,
-    "aShareUp": 4253,
-    "aShareDown": 1215,
-    "aShareMainNetYi": -120.34,
+    "aShareAsOf": "2026-07-30",
+    "aShareUpPct": 30.04,
+    "aShareUp": 1768,
+    "aShareDown": 3635,
+    "aShareMainNetYi": -794.03,
     "aShareUniverse": "全A股（含沪深北）",
-    "aShareCovered": 5884,
+    "aShareCovered": 5885,
     "crosscheck": {
       "universe": "沪深全A（不含北交所）",
-      "activeSameDay": 5192,
-      "up": 3967,
-      "down": 1173,
-      "turnoverYi": 22958.39
+      "activeSameDay": 5202,
+      "up": 1635,
+      "down": 3447,
+      "turnoverYi": 23420.82
     }
   }
 }
