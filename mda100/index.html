@@ -1588,6 +1588,34 @@ a { color: var(--accent); }
       }
     }
   </style>
+
+<style id="thrust-market-confluence-style">
+    .confluence-panel{margin:18px 0 26px;padding:22px;border:1px solid var(--hairline);border-radius:14px;background:var(--panel)}
+    .confluence-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;padding-bottom:16px;border-bottom:1px solid var(--hairline)}
+    .confluence-head>div>span{color:var(--gold);font:600 10px/1 var(--mono);letter-spacing:.12em}
+    .confluence-head h2{margin:8px 0 5px;font:700 22px var(--serif)}
+    .confluence-head p{max-width:72ch;margin:0;color:var(--muted);font-size:12px}
+    .confluence-gate{min-width:180px;text-align:right}
+    .confluence-gate small,.confluence-gate span{display:block;color:var(--muted);font-size:10px}
+    .confluence-gate strong{display:block;margin:5px 0;color:var(--cinnabar);font:700 24px var(--serif)}
+    .confluence-counts{display:grid;grid-template-columns:repeat(4,1fr);margin:16px 0;border:1px solid var(--hairline);border-radius:10px;overflow:hidden}
+    .confluence-counts span{display:flex;align-items:baseline;gap:7px;padding:10px 12px;border-right:1px solid var(--hairline);color:var(--muted);font-size:10px}
+    .confluence-counts span:last-child{border-right:0}.confluence-counts b{color:var(--ink);font:700 18px var(--mono)}
+    .confluence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .confluence-card{padding:14px;border:1px solid var(--hairline);border-radius:10px;background:var(--panel-2,#f7f5ef)}
+    .confluence-card header{display:flex;justify-content:space-between;gap:10px;align-items:start}
+    .confluence-card header div{display:grid;grid-template-columns:auto minmax(0,1fr);gap:7px;align-items:baseline}
+    .confluence-card header strong{font:700 13px var(--mono)}.confluence-card header span{font-size:13px;font-weight:750}
+    .confluence-card em{padding:4px 7px;border-radius:999px;font:700 9px var(--sans);font-style:normal;white-space:nowrap}
+    .confluence-card em.buy{background:#e8f5ee;color:#19633d}.confluence-card em.watch{background:#eef3fa;color:#1f4f82}
+    .confluence-card em.wait{background:#faf1dc;color:#8c6416}.confluence-card em.pause{background:#f2f2f2;color:#666}
+    .confluence-score{display:flex;align-items:baseline;gap:4px;margin:13px 0 7px}.confluence-score b{color:var(--ink);font:700 25px var(--serif)}.confluence-score small{color:var(--muted);font-size:9px}
+    .confluence-card p{min-height:48px;margin:0;color:var(--muted);font-size:10px;line-height:1.55}
+    .confluence-card footer{margin-top:10px;padding-top:9px;border-top:1px solid var(--hairline);color:var(--ink);font-size:10px;font-weight:700}
+    .confluence-method{margin-top:14px;color:var(--muted);font-size:10px}.confluence-method summary{cursor:pointer;color:var(--ink);font-weight:700}.confluence-method p{margin:8px 0 0}
+    @media(max-width:860px){.confluence-head{grid-template-columns:1fr}.confluence-gate{text-align:left}.confluence-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.confluence-panel{padding:15px}.confluence-counts{grid-template-columns:1fr 1fr}.confluence-counts span:nth-child(2){border-right:0}.confluence-counts span:nth-child(-n+2){border-bottom:1px solid var(--hairline)}.confluence-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
 <nav aria-label="全站导航" class="csn-topnav" data-design="CSNPK_EDITORIAL_MDA_V2">
@@ -1615,6 +1643,7 @@ a { color: var(--accent); }
 <button aria-haspopup="true" type="button">工具 <span class="csn-caret">▼</span></button>
 <div class="csn-drop">
 <a data-file-href="../a-share-thrust/index.html" href="../a-share-thrust/"><b>A股 Thrust</b><small>行业ETF加速度 · 平均价格体感</small></a>
+<a data-file-href="../a-share-rotation/index.html" href="../a-share-rotation/"><b>A股轮动加速度雷达</b><small>四象限 · 底部修复 · 顶部衰竭</small></a>
 <a data-file-href="../rs-thrust/index.html" href="../rs-thrust/"><b>相对强度加速图</b><small>找正在加速的强势股</small></a>
 <a data-file-href="../rotation/index.html" href="../rotation/"><b>轮动加速度雷达</b><small>看顶部衰竭与底部修复</small></a>
 <a data-file-href="../us-skew/index.html" href="../us-skew/"><b>期权风险分布图</b><small>看保护需求与风险温度</small></a>
@@ -1668,7 +1697,28 @@ a { color: var(--accent); }
 <div class="verify">二次确认 DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH · Report 2026-07-30 = Index 2026-07-30</div>
 </header>
 <main class="wrap">
-<section data-layout="MDA_SELECTION_OVERVIEW_V1" id="select">
+<section aria-labelledby="confluenceTitle" class="confluence-panel">
+<div class="confluence-head">
+<div>
+<span>同日双验证 · 2026-07-30</span>
+<h2 id="confluenceTitle">Thrust 与大盘共振推荐</h2>
+<p>把个股相对强度、行业资金方向与全A总闸门合并。共振分是研究排序，不是胜率或自动买点。</p>
+</div>
+<div class="confluence-gate">
+<small>全A总闸门</small>
+<strong>资金撤退</strong>
+<span>主力净流入 -794.03亿</span>
+</div>
+</div>
+<div class="confluence-counts">
+<span><b>0</b>买入观察</span>
+<span><b>6</b>优先观察</span>
+<span><b>1</b>等待回踩</span>
+<span><b>2</b>暂停推荐</span>
+</div>
+<div class="confluence-grid"><article class="confluence-card"><header><div><strong>600900</strong><span>长江电力</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>77.3</b><small>/100 共振分</small></div><p>Thrust 110.0；高股息/银行 69.2分/轮动确认/观察；中性；全A资金撤退，动作降级</p><footer>只列研究优先级，等待次日量价确认</footer></article><article class="confluence-card"><header><div><strong>601288</strong><span>农业银行</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>77.2</b><small>/100 共振分</small></div><p>Thrust 102.5；高股息/银行 69.2分/轮动确认/观察；银行行业资金净流入；全A资金撤退，动作降级</p><footer>只列研究优先级，等待次日量价确认</footer></article><article class="confluence-card"><header><div><strong>600036</strong><span>招商银行</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>77.2</b><small>/100 共振分</small></div><p>Thrust 102.5；高股息/银行 69.2分/轮动确认/观察；银行行业资金净流入；全A资金撤退，动作降级</p><footer>只列研究优先级，等待次日量价确认</footer></article><article class="confluence-card"><header><div><strong>600926</strong><span>杭州银行</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>77.2</b><small>/100 共振分</small></div><p>Thrust 102.5；高股息/银行 69.2分/轮动确认/观察；银行行业资金净流入；全A资金撤退，动作降级</p><footer>只列研究优先级，等待次日量价确认</footer></article><article class="confluence-card"><header><div><strong>600276</strong><span>恒瑞医药</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>73.5</b><small>/100 共振分</small></div><p>Thrust 108.3；医药 57.9分/轮动确认/观察；中性；全A资金撤退，动作降级</p><footer>只列研究优先级，等待次日量价确认</footer></article><article class="confluence-card"><header><div><strong>600938</strong><span>中国海油</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>67.0</b><small>/100 共振分</small></div><p>Thrust 107.5；周期资源 33.5分/防守/降低新增仓位；石油石化资金净流入；全A资金撤退，动作降级；追涨性价比下降</p><footer>只列研究优先级，等待次日量价确认</footer></article><article class="confluence-card"><header><div><strong>601127</strong><span>赛力斯</span></div><em class="wait">等待回踩</em></header><div class="confluence-score"><b>46.2</b><small>/100 共振分</small></div><p>Thrust 107.5；工业制造/国防 14.1分/防守/降低新增仓位；中性；全A资金撤退，动作降级；单日涨幅偏热；A股执行门槛未通过</p><footer>只列研究优先级，等待次日量价确认</footer></article><article class="confluence-card"><header><div><strong>601899</strong><span>紫金矿业</span></div><em class="pause">暂停推荐</em></header><div class="confluence-score"><b>67.0</b><small>/100 共振分</small></div><p>Thrust 107.5；周期资源 33.5分/防守/降低新增仓位；中性；全A资金撤退，动作降级</p><footer>只列研究优先级，等待次日量价确认</footer></article><article class="confluence-card"><header><div><strong>688111</strong><span>金山办公</span></div><em class="pause">暂停推荐</em></header><div class="confluence-score"><b>55.2</b><small>/100 共振分</small></div><p>Thrust 102.5；科技成长 21.2分/防守/降低新增仓位；科技细分资金显著净流出；全A资金撤退，动作降级</p><footer>只列研究优先级，等待次日量价确认</footer></article></div>
+<details class="confluence-method"><summary>查看评分口径</summary><p>研究优先级 = Thrust 60分 + 风格资金25分 + 大盘闸门15分，再按过热、跌破EMA20、A股执行门槛和行业资金背离扣分；大盘资金撤退时禁止输出买入观察。</p></details>
+</section><section data-layout="MDA_SELECTION_OVERVIEW_V1" id="select">
 <h2>一、mda100 科技精选</h2>
 <p class="lead">基于 2026-07-30 收盘后 Futu OpenD 已核验行情，按 100 分制筛选次一交易日优先研究和布局的 A 股候选。新版股票池收缩为 md50：只保留 AI 科技链中各细分环节的龙一/龙二，PCB、电子料、光通信按产业链环节拆分，MLCC 仅保留龙一龙二。模型以技术图形、K线和成交量为主；新闻资讯只做排雷、解释和确认，不再把正面新闻作为主要加分项，避免追到已经 price in 的小作文。</p>
 <div class="selection-overview" data-layout="MDA_SELECTION_OVERVIEW_V1"><div class="kpis"><div class="kpi"><span>md50核心池</span><strong>50/50</strong></div><div class="kpi"><span>行情覆盖</span><strong>100.0%</strong></div><div class="kpi"><span>上涨/下跌</span><strong>3/47</strong></div><div class="kpi"><span>平均分</span><strong>3.8</strong></div><div class="kpi"><span>95分+</span><strong>0</strong></div><div class="kpi"><span>90分+</span><strong>0</strong></div></div><div class="rec-review negative">
