@@ -138,6 +138,21 @@
     .whole-market-stat.gate { border-color:#fed7aa; background:#fff7ed; }
     .whole-market-stat.gate strong { color:#9a3412; }
     .market-source-note { color:#52627a; font-size:12px; line-height:1.6; margin:4px 0 18px; }
+    .etf-subscription-source { margin:16px 0 20px; border:1px solid #cbd5e1; border-radius:10px; background:#fbfdff; overflow:hidden; }
+    .etf-subscription-head { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding:14px 16px 10px; }
+    .etf-subscription-head h3 { margin:3px 0 0; font-size:18px; }
+    .source-kicker,.source-date { color:#64748b; font-size:11px; font-weight:900; }
+    .source-date { white-space:nowrap; }
+    .etf-subscription-grid { display:grid; grid-template-columns:180px 180px minmax(0,1fr); border-top:1px solid #e2e8f0; }
+    .etf-subscription-stat,.etf-subscription-policy { padding:13px 16px; border-right:1px solid #e2e8f0; }
+    .etf-subscription-grid > :last-child { border-right:0; }
+    .etf-subscription-stat span,.etf-subscription-policy span { display:block; color:#64748b; font-size:11px; font-weight:800; }
+    .etf-subscription-stat strong { display:block; margin-top:3px; font-size:22px; font-variant-numeric:tabular-nums; }
+    .etf-subscription-stat.positive strong { color:#b91c1c; }
+    .etf-subscription-stat.negative strong { color:#087443; }
+    .etf-subscription-policy strong { display:block; margin-bottom:4px; color:#334155; font-size:13px; }
+    .etf-subscription-foot { display:flex; justify-content:space-between; gap:14px; padding:10px 16px; border-top:1px solid #e2e8f0; color:#64748b; font-size:11px; }
+    .etf-subscription-foot a { color:#1d4ed8; font-weight:900; text-decoration:none; white-space:nowrap; }
     .market-flow-summary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:10px 0 12px; }
     .flow-summary-card { border:1px solid #dbeafe; background:#f8fbff; border-radius:8px; padding:12px 14px; min-width:0; }
     .flow-summary-card span { display:block; color:#64748b; font-size:12px; font-weight:900; margin-bottom:6px; }
@@ -786,9 +801,80 @@ a { color: var(--accent); }
     #mainline .whole-market-stat.gate span,
     #mainline .whole-market-stat.gate strong { color:var(--gold) !important; }
     #mainline .market-source-note {
-      margin:0 0 32px;
+      margin:0 0 18px;
       padding:0 2px;
       font-size:12px;
+    }
+    #mainline .etf-subscription-source {
+      margin:16px 0 28px;
+      border:1px solid var(--hairline) !important;
+      border-radius:12px !important;
+      background:var(--panel-2) !important;
+      box-shadow:none !important;
+      overflow:hidden;
+    }
+    #mainline .etf-subscription-head {
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      padding:14px 16px 10px;
+    }
+    #mainline .etf-subscription-head h3 { margin:3px 0 0; font-size:18px; }
+    #mainline .source-kicker, #mainline .source-date {
+      color:var(--muted);
+      font-family:var(--mono);
+      font-size:11px;
+      font-weight:750;
+    }
+    #mainline .source-date { white-space:nowrap; }
+    #mainline .etf-subscription-grid {
+      display:grid;
+      grid-template-columns:180px 180px minmax(0,1fr);
+      border-top:1px solid var(--hairline);
+    }
+    #mainline .etf-subscription-stat,
+    #mainline .etf-subscription-policy {
+      padding:13px 16px;
+      border-right:1px solid var(--hairline);
+    }
+    #mainline .etf-subscription-grid > :last-child { border-right:0; }
+    #mainline .etf-subscription-stat span,
+    #mainline .etf-subscription-policy span {
+      display:block;
+      color:var(--muted);
+      font-size:11px;
+      font-weight:650;
+    }
+    #mainline .etf-subscription-stat strong {
+      display:block;
+      margin-top:3px;
+      font-family:var(--serif);
+      font-size:22px;
+      font-variant-numeric:tabular-nums;
+    }
+    #mainline .etf-subscription-stat.positive strong { color:var(--cinnabar); }
+    #mainline .etf-subscription-stat.negative strong { color:var(--jade); }
+    #mainline .etf-subscription-policy strong {
+      display:block;
+      margin-bottom:4px;
+      color:var(--ink);
+      font-size:13px;
+    }
+    #mainline .etf-subscription-foot {
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      padding:10px 16px;
+      border-top:1px solid var(--hairline);
+      color:var(--muted);
+      font-size:11px;
+    }
+    #mainline .etf-subscription-foot a {
+      color:var(--jade);
+      font-weight:800;
+      text-decoration:none;
+      white-space:nowrap;
     }
 
     /* Ranked comparison matrix, not another row of KPI cards */
@@ -1275,6 +1361,14 @@ a { color: var(--accent); }
       #mainline .market-flow-summary {
         grid-template-columns:repeat(2,minmax(0,1fr)) !important;
       }
+      #mainline .etf-subscription-grid {
+        grid-template-columns:1fr 1fr !important;
+      }
+      #mainline .etf-subscription-policy {
+        grid-column:1 / -1;
+        border-top:1px solid var(--hairline);
+        border-right:0;
+      }
       #mainline .flow-summary-card:nth-child(2) { border-right:0 !important; }
       #mainline .flow-summary-card.style {
         grid-column:1 / -1;
@@ -1339,6 +1433,11 @@ a { color: var(--accent); }
       }
       #mainline .whole-market-stat.positive strong { font-size:19px !important; }
       #mainline .market-flow-summary { grid-template-columns:1fr !important; }
+      #mainline .etf-subscription-head,
+      #mainline .etf-subscription-foot {
+        flex-direction:column;
+        gap:6px;
+      }
       #mainline .flow-summary-card {
         border-right:0 !important;
         border-bottom:1px solid var(--hairline) !important;
@@ -1484,6 +1583,25 @@ a { color: var(--accent); }
           <div class="whole-market-stat gate"><span>总闸门</span><strong>存量分化</strong></div>
         </div>
         <div class="market-source-note">主力净占比 -0.52%；全A订单流覆盖 5884/5884；Futu沪深全A交叉核验 22,958亿。</div>
+
+        <aside class="etf-subscription-source" data-source-status="USER_SCREENSHOT_VERIFIED">
+          <div class="etf-subscription-head">
+            <div>
+              <span class="source-kicker">独立资金证据 · 宽基ETF</span>
+              <h3>ETF申购净流入</h3>
+            </div>
+            <span class="source-date">2026-07-29 · 截图核验</span>
+          </div>
+          <div class="etf-subscription-grid">
+            <div class="etf-subscription-stat positive"><span>昨日净流入</span><strong>+368.30亿</strong></div>
+            <div class="etf-subscription-stat negative"><span>近60日净流入</span><strong>-1791.61亿</strong></div>
+            <div class="etf-subscription-policy"><strong>不参与自动评分</strong><span>ETF申购净流入是基金份额申赎口径，与Futu OpenD的ETF成交订单流不是同一指标。</span></div>
+          </div>
+          <div class="etf-subscription-foot">
+            <span>来源：同花顺理财 / iFinD；用户提供的同花顺理财“历史ETF申购净流入”截图回读</span>
+            <a href="https://fund.10jqka.com.cn/" target="_blank" rel="noopener">查看同花顺基金入口 ↗</a>
+          </div>
+        </aside>
 
       <h3>大盘资金流向摘要（全A行业）</h3><div class="market-flow-summary"><div class="flow-summary-card inflow"><span>主要流入 TOP5</span><strong>食品饮料 +17.79亿；游戏Ⅱ +16.63亿；证券Ⅱ +15.20亿；传媒 +14.92亿；电网设备 +14.61亿</strong></div><div class="flow-summary-card outflow"><span>主要流出 TOP5</span><strong>电子 -64.40亿；半导体 -53.37亿；计算机 -49.13亿；机械设备 -24.82亿；银行Ⅱ -18.74亿</strong></div><div class="flow-summary-card style"><span>行业风格前三</span><strong>消费 77.1分；高股息/银行 75.6分；农业防守 72.9分</strong></div></div>
       <h3>大盘风格轮动确认（市值风格 + 行业风格）</h3><p class="subtle">两层分开排序，避免把市值风险偏好与行业轮动混成一个榜单。</p><div class="style-layer-grid"><section class="style-layer"><h4>市值与风险风格（5类）</h4><p class="subtle">大盘、中盘、小微盘、科创创业与红利价值使用同组代表ETF的涨跌和上涨宽度确认风险偏好。</p><div class="table-scroll style-rotation-scroll" data-layout="MDA_MARKET_MATRIX_V1"><div class="table-scroll-hint" aria-hidden="true">← 左右滑动查看完整指标 →</div><table class="style-rotation-table" aria-label="市值与风险风格（5类）"><thead><tr><th>风格</th><th>综合分</th><th>综合结论</th><th>参考涨跌</th><th>上涨宽度</th><th>代表ETF乖离 / 3日变化</th><th>代表ETF成交温度</th><th>代表ETF订单流</th></tr></thead><tbody><tr><td><strong>红利价值</strong></td><td>85.5</td><td><strong>进攻闸门打开</strong><div class="subtle">价值流震荡区</div></td><td>+1.26%</td><td>100.0%</td><td><span class="bias-temp warm">+3.01%</span><div class="subtle">3日 <span class="bias-delta steady">+1.12</span></div></td><td>1.02x</td><td>+0.47亿</td></tr><tr><td><strong>小微盘</strong></td><td>69.3</td><td><strong>轮动确认/观察</strong><div class="subtle">深跌修复，仍待确认</div></td><td>+0.81%</td><td>100.0%</td><td><span class="bias-temp cold">-6.28%</span><div class="subtle">3日 <span class="bias-delta warming">+4.09</span></div></td><td>1.43x</td><td>+10.12亿</td></tr><tr><td><strong>大盘核心</strong></td><td>66.2</td><td><strong>轮动确认/观察</strong><div class="subtle">跌穿坚守</div></td><td>+0.46%</td><td>100.0%</td><td><span class="bias-temp cool">-1.66%</span><div class="subtle">3日 <span class="bias-delta steady">-0.44</span></div></td><td>0.96x</td><td>+1.11亿</td></tr><tr><td><strong>中盘</strong></td><td>65.5</td><td><strong>轮动确认/观察</strong><div class="subtle">深跌修复，仍待确认</div></td><td>+0.99%</td><td>100.0%</td><td><span class="bias-temp cold">-5.10%</span><div class="subtle">3日 <span class="bias-delta warming">+1.62</span></div></td><td>1.05x</td><td>+3.97亿</td></tr><tr><td><strong>科创/创业成长</strong></td><td>49.8</td><td><strong>中性</strong><div class="subtle">止损区，回避</div></td><td>+0.83%</td><td>66.7%</td><td><span class="bias-temp cold">-8.69%</span><div class="subtle">3日 <span class="bias-delta cooling">-1.88</span></div></td><td>1.32x</td><td>-0.03亿</td></tr></tbody></table></div></section><section class="style-layer"><h4>行业风格（9类）</h4><p class="subtle">行业涨跌和匹配行业真实成分上涨宽度主判；代表ETF只补充乖离、成交温度和订单流。</p><div class="table-scroll style-rotation-scroll" data-layout="MDA_MARKET_MATRIX_V1"><div class="table-scroll-hint" aria-hidden="true">← 左右滑动查看完整指标 →</div><table class="style-rotation-table" aria-label="行业风格（9类）"><thead><tr><th>风格</th><th>综合分</th><th>综合结论</th><th>参考涨跌</th><th>上涨宽度</th><th>代表ETF乖离 / 3日变化</th><th>代表ETF成交温度</th><th>代表ETF订单流</th></tr></thead><tbody><tr><td><strong>消费</strong></td><td>77.1</td><td><strong>进攻闸门打开</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+2.02%</td><td>90.0%</td><td><span class="bias-temp warm">+2.45%</span><div class="subtle">3日 <span class="bias-delta warming">+3.30</span></div></td><td>1.20x</td><td>+0.15亿</td></tr><tr><td><strong>高股息/银行</strong></td><td>75.6</td><td><strong>进攻闸门打开</strong><div class="subtle">价值流震荡区</div></td><td>+1.11%</td><td>82.8%</td><td><span class="bias-temp warm">+3.52%</span><div class="subtle">3日 <span class="bias-delta steady">+0.71</span></div></td><td>1.11x</td><td>+0.15亿</td></tr><tr><td><strong>农业防守</strong></td><td>72.9</td><td><strong>进攻闸门打开</strong><div class="subtle">偏强，未进主线</div></td><td>+1.88%</td><td>89.7%</td><td><span class="bias-temp warm">+2.08%</span><div class="subtle">3日 <span class="bias-delta warming">+2.58</span></div></td><td>0.59x</td><td>+0.03亿</td></tr><tr><td><strong>医药</strong></td><td>71.8</td><td><strong>进攻闸门打开</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+0.62%</td><td>75.2%</td><td><span class="bias-temp warm">+2.14%</span><div class="subtle">3日 <span class="bias-delta warming">+2.18</span></div></td><td>0.73x</td><td>+0.68亿</td></tr><tr><td><strong>券商/非银</strong></td><td>70.1</td><td><strong>进攻闸门打开</strong><div class="subtle">跌穿企稳</div></td><td>+2.40%</td><td>97.3%</td><td><span class="bias-temp cool">-0.20%</span><div class="subtle">3日 <span class="bias-delta steady">+0.91</span></div></td><td>0.81x</td><td>+2.40亿</td></tr><tr><td><strong>地产基建</strong></td><td>60.5</td><td><strong>轮动确认/观察</strong><div class="subtle">偏强，未进主线</div></td><td>+1.79%</td><td>85.6%</td><td><span class="bias-temp warm">+1.03%</span><div class="subtle">3日 <span class="bias-delta warming">+4.27</span></div></td><td>0.91x</td><td>-0.01亿</td></tr><tr><td><strong>周期资源</strong></td><td>58.7</td><td><strong>轮动确认/观察</strong><div class="subtle">主线回抽，等二次突破</div></td><td>+2.19%</td><td>84.1%</td><td><span class="bias-temp warm">+0.25%</span><div class="subtle">3日 <span class="bias-delta warming">+1.52</span></div></td><td>0.67x</td><td>-0.07亿</td></tr><tr><td><strong>工业制造/国防</strong></td><td>36.7</td><td><strong>防守/降低新增仓位</strong><div class="subtle">止损区，回避</div></td><td>+1.30%</td><td>77.0%</td><td><span class="bias-temp cold">-6.36%</span><div class="subtle">3日 <span class="bias-delta steady">+0.90</span></div></td><td>0.75x</td><td>-0.21亿</td></tr><tr><td><strong>科技成长</strong></td><td>32.7</td><td><strong>防守/降低新增仓位</strong><div class="subtle">止损区，回避</div></td><td>+0.14%</td><td>57.9%</td><td><span class="bias-temp cold">-13.08%</span><div class="subtle">3日 <span class="bias-delta cooling">-3.88</span></div></td><td>0.77x</td><td>-0.48亿</td></tr></tbody></table></div></section></div><div class="bias-legend"><span class="bias-temp scorching">极热</span><span class="bias-temp hot">热</span><span class="bias-temp warm">温</span><span class="bias-temp cool">偏冷</span><span class="bias-temp cold">冷</span></div><div class="note">代表ETF乖离率=(ln收盘价−EMA20(ln收盘价))×100；3日变化判断修复/恶化；红利价值和高股息/银行按±5%震荡区逆向观察。ETF订单流只作确认，不等同于基金净申购。</div>
