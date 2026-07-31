@@ -1668,6 +1668,63 @@ a { color: var(--accent); }
       .comparison-track { min-width:0; }
     }
   </style>
+
+<style id="a-share-etf-compare-page">
+    .etf-reference-card {
+      display:grid; grid-template-columns:minmax(0,1fr) auto; gap:22px; align-items:center;
+      margin:0 0 20px; padding:18px 20px; border:1px solid var(--hairline);
+      border-left:4px solid var(--cinnabar); border-radius:12px; background:var(--panel);
+    }
+    .etf-reference-card h3 { margin:4px 0 6px; font-family:var(--serif); font-size:22px; }
+    .etf-reference-card p { margin:0; color:var(--ink-2); }
+    .etf-reference-card a {
+      padding:9px 13px; border:1px solid var(--navy); border-radius:999px;
+      color:var(--navy); font-weight:800; text-decoration:none; white-space:nowrap;
+    }
+    .etf-page { max-width:1480px; margin:0 auto; padding:28px 24px 64px; }
+    .etf-hero { padding:28px 0 22px; border-bottom:1px solid var(--hairline); }
+    .etf-hero h1 { margin:8px 0 10px; font:800 clamp(32px,5vw,58px)/1.05 var(--serif); }
+    .etf-hero p { max-width:78ch; color:var(--ink-2); font-size:16px; }
+    .verify-line { margin-top:14px; color:var(--ink-3); font:700 12px/1.5 var(--mono); }
+    .etf-kpis { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); margin:24px 0; border:1px solid var(--hairline); border-radius:12px; overflow:hidden; }
+    .etf-kpi { padding:18px; background:var(--panel); border-right:1px solid var(--hairline); }
+    .etf-kpi:last-child { border-right:0; }
+    .etf-kpi span { display:block; color:var(--ink-3); font-size:12px; }
+    .etf-kpi strong { display:block; margin-top:7px; font:800 26px/1 var(--serif); }
+    .etf-groups { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; margin:0 0 24px; }
+    .etf-group { padding:14px 16px; border:1px solid var(--hairline); border-radius:10px; background:var(--panel); }
+    .etf-group strong { display:block; font:800 20px/1 var(--serif); }
+    .etf-group span { color:var(--ink-3); font-size:12px; }
+    .etf-controls { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:18px 0 12px; }
+    .etf-controls input { min-width:220px; padding:9px 11px; border:1px solid var(--hairline); border-radius:8px; background:var(--panel); }
+    .etf-controls button { padding:8px 11px; border:1px solid var(--hairline); border-radius:999px; background:var(--panel); cursor:pointer; }
+    .etf-controls button.active { border-color:var(--navy); color:var(--navy); font-weight:800; }
+    .etf-table-wrap { overflow-x:auto; border:1px solid var(--hairline); border-radius:12px; background:var(--panel); }
+    .etf-table { width:100%; min-width:1160px; border-collapse:collapse; }
+    .etf-table th,.etf-table td { padding:11px 10px; border-bottom:1px solid var(--hairline); text-align:right; font-size:13px; }
+    .etf-table th { position:sticky; top:0; z-index:2; background:#f4f0e8; color:var(--ink-2); }
+    .etf-table th:first-child,.etf-table td:first-child,.etf-table th:nth-child(2),.etf-table td:nth-child(2) { text-align:left; }
+    .etf-table tr:last-child td { border-bottom:0; }
+    .etf-name { font-weight:800; color:var(--ink); }
+    .etf-code { color:var(--ink-3); font:600 11px/1 var(--mono); }
+    .tone-positive { color:var(--cinnabar); } .tone-negative { color:var(--jade); }
+    .state-pill { display:inline-block; padding:4px 8px; border:1px solid var(--hairline); border-radius:999px; white-space:nowrap; }
+    .state-positive { color:var(--cinnabar); border-color:#d9a59b; }
+    .state-watch { color:#8a6200; border-color:#d6bd7f; }
+    .state-negative { color:var(--jade); border-color:#8fb9ae; }
+    .method-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:24px; }
+    .method-card { padding:18px; border:1px solid var(--hairline); border-radius:12px; background:var(--panel); }
+    .method-card h2 { margin:0 0 8px; font:800 22px/1.2 var(--serif); }
+    .method-card p,.method-card li { color:var(--ink-2); }
+    @media(max-width:760px) {
+      .etf-page { padding:18px 14px 48px; }
+      .etf-kpis { grid-template-columns:repeat(2,1fr); }
+      .etf-kpi:nth-child(2) { border-right:0; }
+      .etf-kpi:nth-child(-n+2) { border-bottom:1px solid var(--hairline); }
+      .method-grid,.etf-reference-card { grid-template-columns:1fr; }
+      .etf-reference-card a { justify-self:start; }
+    }
+  </style>
 </head>
 <body>
 <nav aria-label="全站导航" class="csn-topnav" data-design="CSNPK_EDITORIAL_MDA_V2">
@@ -1746,11 +1803,18 @@ a { color: var(--accent); }
 <header class="top">
 <h1>A股大盘观察</h1>
 <p>从全A总量到行业和风格，独立判断市场风险偏好与资金迁移；科技个股精选回到 mda100 页面。</p>
-<nav class="nav"><a href="#mainline">市场总闸门</a><a href="#mainline">行业流向</a><a href="#mainline">风格轮动</a></nav>
+<nav class="nav"><a href="./etf/">ETF资金与波动</a><a href="#mainline">市场总闸门</a><a href="#mainline">行业流向</a><a href="#mainline">风格轮动</a></nav>
 <div class="verify">二次确认 DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH · Report 2026-07-31 = Index 2026-07-31</div>
 </header>
 <main class="wrap split-page"><section class="priority-section" data-page-polish="MDA_PAGE_POLISH_V1" id="mainline">
-<h2>A股大盘观察</h2>
+<h2>A股大盘观察</h2><section class="etf-reference-card" data-verify="VERIFIED_A_SHARE_ETF_PRICE_SCALE_COMPARE">
+<div>
+<span class="source-kicker">A股选股参考 · ETF价格/份额/市值</span>
+<h3>代表ETF资金与波动确认</h3>
+<p>宽基+39.5%；科技-3.9%；防守-4.1%。资金承接靠前：中证1000ETF（+115.5%份额）、沪深300ETF（+54.4%份额）、有色金属ETF（+3.9%份额）；高波动降级：半导体ETF（-27.5%）、通信ETF（-25.3%）、半导体设备ETF（-26.0%）。</p>
+</div>
+<a href="./etf/">查看完整对比页</a>
+</section>
 <p class="lead">集中观察全A资金闸门、ETF申赎、行业资金去向与市值/风格轮动，不混入个股精选。</p>
 <div class="radar-meta">
 <div><strong>数据日期</strong><span>2026-07-31</span></div>
