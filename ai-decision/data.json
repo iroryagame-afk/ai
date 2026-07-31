@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T08:13:26.494Z",
+  "generatedAt": "2026-07-31T09:03:11.312Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -32,15 +32,15 @@
       }
     },
     "us": {
-      "asOf": "2026-07-29",
-      "score": -7,
+      "asOf": "2026-07-30",
+      "score": -1,
       "label": "中性偏恐",
       "valid": 16,
       "aboveMa20Pct": 37.5,
-      "fear": 1,
+      "fear": 0,
       "greed": 0,
-      "spy1dPct": -1.54,
-      "qqq1dPct": -2.04,
+      "spy1dPct": 1.68,
+      "qqq1dPct": 3.3,
       "coverage": {
         "valid": 22,
         "total": 22,
@@ -116,10 +116,10 @@
       "status": "第三方估算"
     },
     "us": {
-      "score": 34.5,
+      "score": 39,
       "label": "恐惧",
-      "asOf": "2026-07-30T07:57:01+00:00",
-      "previousClose": 32.3,
+      "asOf": "2026-07-31T08:44:31+00:00",
+      "previousClose": 38.9,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
       "sourceLabel": "CNN Fear & Greed Index",
@@ -198,38 +198,38 @@
   },
   "putCall": {
     "source": "Cboe Global Markets",
-    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-07-29",
-    "asOf": "2026-07-29",
-    "total": 1.05,
-    "totalPrevious": 0.96,
+    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-07-30",
+    "asOf": "2026-07-30",
+    "total": 0.91,
+    "totalPrevious": 1.05,
     "equity": 0.61,
-    "equityPrevious": 0.71,
-    "previousAsOf": "2026-07-28",
+    "equityPrevious": 0.61,
+    "previousAsOf": "2026-07-29",
     "status": "verified_official",
-    "totalChange": 0.09,
-    "equityChange": -0.1
+    "totalChange": -0.14,
+    "equityChange": 0
   },
   "skew": {
-    "asOf": "2026-07-29",
-    "median25d": 2.19,
-    "valid": 14,
-    "highCount": 6,
+    "asOf": "2026-07-30",
+    "median25d": 3.4,
+    "valid": 10,
+    "highCount": 4,
     "status": "verified_close"
   },
   "breadth": {
-    "aShareAsOf": "2026-07-30",
-    "aShareUpPct": 30.04,
-    "aShareUp": 1768,
-    "aShareDown": 3635,
-    "aShareMainNetYi": -794.03,
+    "aShareAsOf": "2026-07-31",
+    "aShareUpPct": 79.67,
+    "aShareUp": 4691,
+    "aShareDown": 728,
+    "aShareMainNetYi": 632.39,
     "aShareUniverse": "全A股（含沪深北）",
-    "aShareCovered": 5885,
+    "aShareCovered": 5888,
     "crosscheck": {
       "universe": "沪深全A（不含北交所）",
       "activeSameDay": 5196,
-      "up": 1635,
-      "down": 3447,
-      "turnoverYi": 23420.82
+      "up": 4395,
+      "down": 694,
+      "turnoverYi": 25412.46
     }
   }
 }
