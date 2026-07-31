@@ -1,378 +1,127 @@
 <!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>美股板块资金流向</title>
-  <style>
-    body { margin:0; background:#0b0f14; color:#edf2f7; font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; }
-    main { max-width:1180px; margin:0 auto; padding:44px 28px 60px; }
-    h1 { margin:0; font-size:42px; letter-spacing:0; }
-    h2 { margin:30px 0 12px; font-size:24px; letter-spacing:0; }
-    .sub { margin-top:10px; color:#7aa8ff; font-weight:800; }
-    .meta { margin-top:18px; color:#aeb8c4; line-height:1.7; }
-    .note { margin:22px 0; padding:14px 16px; border-left:4px solid #d7b56d; background:#17202b; color:#f0d493; font-weight:800; }
-    table { width:100%; border-collapse:collapse; background:#111820; border:1px solid #263241; border-radius:8px; overflow:hidden; }
-    th, td { padding:13px 14px; border-bottom:1px solid #263241; text-align:left; }
-    th { color:#8d9aaa; font-size:13px; }
-    td b { display:block; font-size:16px; }
-    td small { display:block; margin-top:4px; color:#8d9aaa; }
-    .pos { color:#ef5350; }
-    .neg { color:#2fc281; }
-    .bar { display:block; height:10px; border-radius:8px; min-width:8px; margin-top:8px; }
-    .bar.pos { background:#ef5350; }
-    .bar.neg { background:#2fc281; }
-    .trend-grid { display:grid; grid-template-columns:1fr; gap:18px; }
-    .trend-panel { background:#111820; border:1px solid #263241; border-radius:8px; padding:14px; overflow:hidden; }
-    .trend-svg { width:100%; height:auto; display:block; }
-    @media (max-width: 900px) { .trend-grid { grid-template-columns:1fr; } }
-  </style>
-</head>
-<body>
-<main>
-  <h1>美股板块资金流向</h1>
-  <div class="sub">上个交易日 vs 今日盘前 · 5日主线观察</div>
-  <div class="meta">生成时间：2026-07-09 20:04:24 <br>上一交易日收盘：07/08/2026<br>来源：Nasdaq ETF quote/historical API</div>
-  <div class="note">资金流入额为估算口径：ETF 成交额按涨跌方向加正负号，正值视作流入估算，负值视作流出估算；不等同于 ETF 真实净申赎。</div>
-  <h2>板块力度对比</h2>
-  <table>
-    <thead><tr><th>板块</th><th>上个交易日收盘</th><th>今日盘前</th><th>力度判断 / 代表观察</th></tr></thead>
-    <tbody>
-            <tr>
-              <td><b>能源</b><small>XLE · Energy</small></td>
-              <td>
-                <b class="pos">+1.76% · +2209.6mn</b>
-                <small>成交额 $2209.6mn · 量 39.7M</small>
-                <span class="bar pos" style="width:96.5%"></span>
-              </td>
-              <td>
-                <b class="neg">-0.24% · -4.59mn</b>
-                <small>成交额 $4.59mn · 量 82.8K</small>
-                <span class="bar neg" style="width:62.3%"></span>
-              </td>
-              <td><b>盘前转弱</b><small>油气能源: XOM/CVX/COP/SLB</small></td>
-            </tr>
-            
-            <tr>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>美股板块盘前雷达 · CSN</title>
+<style>
+:root{--bg:#0b0f14;--card:#111820;--line:#263241;--muted:#94a3b8;--text:#edf2f7;--pos:#ff6b6b;--neg:#2fc281;--flat:#f0d493}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+main{max-width:1240px;margin:auto;padding:38px 24px 56px}h1{margin:0;font-size:42px}h2{margin:28px 0 12px;font-size:23px}
+.sub{margin-top:8px;color:#7aa8ff;font-weight:800}.meta{margin-top:15px;color:var(--muted);line-height:1.75}
+.gate{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.pill{padding:7px 11px;border:1px solid #33506b;border-radius:999px;background:#13202d;font-size:13px}
+.note{margin:20px 0;padding:13px 15px;border-left:4px solid #d7b56d;background:#17202b;color:#f0d493;font-weight:700;line-height:1.6}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px}table{width:100%;border-collapse:collapse;background:var(--card);min-width:960px}
+th,td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--muted);font-size:13px}
+td b{display:block;font-size:15px}td small{display:block;margin-top:4px;color:var(--muted);line-height:1.4}.pos{color:var(--pos)}.neg{color:var(--neg)}.flat{color:var(--flat)}
+.bar{display:block;height:7px;border-radius:5px;min-width:8px;margin-top:8px}.bar.pos{background:var(--pos)}.bar.neg{background:var(--neg)}.bar.flat{background:var(--flat)}
+.trend-grid{display:grid;grid-template-columns:1fr;gap:15px}.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;overflow:hidden}
+.trend-svg{width:100%;height:auto;display:block}.svg-title{fill:#edf2f7;font-size:19px;font-weight:800}.axis,.legend{fill:#94a3b8;font-size:12px}.zero{stroke:#64748b;stroke-width:1}
+.foot{margin-top:24px;color:var(--muted);font-size:13px;line-height:1.7}a{color:#7aa8ff}
+@media(max-width:700px){main{padding:24px 12px}h1{font-size:30px}}
+</style></head><body><main>
+<h1>美股板块盘前雷达</h1>
+<div class="sub">2026-07-30 完整收盘 vs 2026-07-31 盘前 · 11 个 Select Sector ETF</div>
+<div class="meta">生成时间：2026-07-31 16:38:38（北京时间）<br>盘前快照：4:00 AM–4:37 AM ET（美东）<br>来源：Futu OpenD 硬核验 + Nasdaq 官方行情独立交叉检查</div>
+<div class="gate"><span class="pill">OpenD 11/11</span><span class="pill">Nasdaq 11/11</span><span class="pill">双源一致 10/11</span><span class="pill">低流动性分歧 1</span><span class="pill">市场状态 Pre-Market</span><span class="pill">完整收盘 07/30/2026</span></div>
+<div class="note">盘前“方向成交额代理”＝盘前价格 × 盘前成交量 × 涨跌方向。它只用于比较板块活跃度与方向，不等同于 ETF 真实净申购、净赎回或资金净流入；盘前早段成交稀疏，需随时间更新。</div>
+<h2>板块力度对比</h2><div class="table-wrap"><table><thead><tr><th>板块</th><th>上一完整收盘</th><th>当前盘前</th><th>方向判断 / 代表观察</th></tr></thead><tbody><tr>
               <td><b>科技</b><small>XLK · Technology</small></td>
-              <td>
-                <b class="pos">+1.24% · +1909.8mn</b>
-                <small>成交额 $1909.8mn · 量 10.5M</small>
-                <span class="bar pos" style="width:83.4%"></span>
-              </td>
-              <td>
-                <b class="pos">+1.30% · +7.37mn</b>
-                <small>成交额 $7.37mn · 量 40.1K</small>
-                <span class="bar pos" style="width:100.0%"></span>
-              </td>
-              <td><b>延续偏强</b><small>AI科技: NVDA/MSFT/AAPL/AVGO/AMD/MU/AMAT/LRCX</small></td>
-            </tr>
-            
-            <tr>
-              <td><b>房地产</b><small>XLRE · Real Estate</small></td>
-              <td>
-                <b class="neg">-1.65% · -174.7mn</b>
-                <small>成交额 $174.7mn · 量 4.0M</small>
-                <span class="bar neg" style="width:7.6%"></span>
-              </td>
-              <td>
-                <b class="pos">N/A · +0.00mn</b>
-                <small>成交额 $0.20mn · 量 4.6K</small>
-                <span class="bar pos" style="width:2.0%"></span>
-              </td>
-              <td><b>盘前清淡</b><small>地产/数据中心REITs: PLD/AMT/EQIX/CCI</small></td>
-            </tr>
-            
-            <tr>
+              <td><b class="pos">+5.50% · +2,654.17mn</b>
+                <small>收盘 $175.73 · 量 15.10M</small>
+                <span class="bar pos" style="width:100.0%"></span></td>
+              <td><b class="pos">+0.63% · +1.72mn</b>
+                <small>$176.84 · 量 9.7K · Jul 31, 2026 4:31 AM ET</small>
+                <span class="bar pos" style="width:100.0%"></span></td>
+              <td><b>延续偏强</b><small>AI科技：NVDA / MSFT / AAPL / AVGO / AMD</small></td>
+            </tr><tr>
               <td><b>通信服务</b><small>XLC · Communication Services</small></td>
-              <td>
-                <b class="neg">-1.41% · -605.1mn</b>
-                <small>成交额 $605.1mn · 量 5.5M</small>
-                <span class="bar neg" style="width:26.4%"></span>
-              </td>
-              <td>
-                <b class="pos">N/A · +0.00mn</b>
-                <small>成交额 $0.03mn · 量 248</small>
-                <span class="bar pos" style="width:2.0%"></span>
-              </td>
-              <td><b>盘前清淡</b><small>AI应用/互联网: META/GOOGL/NFLX/DIS/TTWO</small></td>
-            </tr>
-            
-            <tr>
-              <td><b>材料</b><small>XLB · Materials</small></td>
-              <td>
-                <b class="neg">-2.62% · -666.3mn</b>
-                <small>成交额 $666.3mn · 量 13.3M</small>
-                <span class="bar neg" style="width:29.1%"></span>
-              </td>
-              <td>
-                <b class="pos">+0.66% · +0.04mn</b>
-                <small>成交额 $0.04mn · 量 815</small>
-                <span class="bar pos" style="width:2.0%"></span>
-              </td>
-              <td><b>盘前清淡</b><small>材料/化工: LIN/SHW/APD/FCX/NEM</small></td>
-            </tr>
-            
-            <tr>
-              <td><b>公用事业</b><small>XLU · Utilities</small></td>
-              <td>
-                <b class="neg">-0.74% · -674.2mn</b>
-                <small>成交额 $674.2mn · 量 14.9M</small>
-                <span class="bar neg" style="width:29.4%"></span>
-              </td>
-              <td>
-                <b class="pos">N/A · +0.00mn</b>
-                <small>成交额 $0.24mn · 量 5.4K</small>
-                <span class="bar pos" style="width:2.0%"></span>
-              </td>
-              <td><b>盘前清淡</b><small>电力公用: NEE/SO/DUK/CEG/VST</small></td>
-            </tr>
-            
-            <tr>
-              <td><b>必需消费</b><small>XLP · Consumer Staples</small></td>
-              <td>
-                <b class="neg">-0.55% · -928.2mn</b>
-                <small>成交额 $928.2mn · 量 11.0M</small>
-                <span class="bar neg" style="width:40.5%"></span>
-              </td>
-              <td>
-                <b class="neg">-0.38% · -0.41mn</b>
-                <small>成交额 $0.41mn · 量 4.9K</small>
-                <span class="bar neg" style="width:5.5%"></span>
-              </td>
-              <td><b>延续偏弱</b><small>必需消费: COST/WMT/PG/KO/PEP</small></td>
-            </tr>
-            
-            <tr>
-              <td><b>工业</b><small>XLI · Industrials</small></td>
-              <td>
-                <b class="neg">-1.07% · -1323.1mn</b>
-                <small>成交额 $1323.1mn · 量 7.3M</small>
-                <span class="bar neg" style="width:57.8%"></span>
-              </td>
-              <td>
-                <b class="pos">N/A · +0.00mn</b>
-                <small>成交额 $0.47mn · 量 2.6K</small>
-                <span class="bar pos" style="width:2.0%"></span>
-              </td>
-              <td><b>盘前清淡</b><small>工业/自动化: GE/CAT/HON/UNP/RTX</small></td>
-            </tr>
-            
-            <tr>
-              <td><b>医疗保健</b><small>XLV · Health Care</small></td>
-              <td>
-                <b class="neg">-1.30% · -1507.4mn</b>
-                <small>成交额 $1507.4mn · 量 9.3M</small>
-                <span class="bar neg" style="width:65.8%"></span>
-              </td>
-              <td>
-                <b class="neg">-0.09% · -2.55mn</b>
-                <small>成交额 $2.55mn · 量 15.7K</small>
-                <span class="bar neg" style="width:34.6%"></span>
-              </td>
-              <td><b>延续偏弱</b><small>创新药/医疗: LLY/UNH/JNJ/ABBV/TMO</small></td>
-            </tr>
-            
-            <tr>
-              <td><b>可选消费</b><small>XLY · Consumer Discretionary</small></td>
-              <td>
-                <b class="neg">-1.78% · -1734.4mn</b>
-                <small>成交额 $1734.4mn · 量 15.0M</small>
-                <span class="bar neg" style="width:75.8%"></span>
-              </td>
-              <td>
-                <b class="pos">N/A · +0.00mn</b>
-                <small>成交额 $0.18mn · 量 1.5K</small>
-                <span class="bar pos" style="width:2.0%"></span>
-              </td>
-              <td><b>盘前清淡</b><small>可选消费/电商车: AMZN/TSLA/HD/MCD/BKNG</small></td>
-            </tr>
-            
-            <tr>
+              <td><b class="neg">-2.68% · -1,074.78mn</b>
+                <small>收盘 $106.58 · 量 10.08M</small>
+                <span class="bar neg" style="width:40.5%"></span></td>
+              <td><b class="pos">+1.70% · +0.00mn</b>
+                <small>$108.39 · 量 8 · Jul 31, 2026 4:00 AM ET</small>
+                <span class="bar pos" style="width:2.0%"></span></td>
+              <td><b>盘前清淡</b><small>平台与内容：META / GOOGL / NFLX / DIS</small></td>
+            </tr><tr>
               <td><b>金融</b><small>XLF · Financials</small></td>
-              <td>
-                <b class="neg">-1.93% · -2289.4mn</b>
-                <small>成交额 $2289.4mn · 量 41.6M</small>
-                <span class="bar neg" style="width:100.0%"></span>
-              </td>
-              <td>
-                <b class="pos">+0.11% · +1.52mn</b>
-                <small>成交额 $1.52mn · 量 27.6K</small>
-                <span class="bar pos" style="width:20.6%"></span>
-              </td>
-              <td><b>盘前修复</b><small>银行/券商: JPM/BAC/GS/MS/BLK</small></td>
-            </tr>
-            </tbody>
-  </table>
-  <h2>5日主线观察</h2>
-  <section class="trend-grid">
-    <div class="trend-panel"><svg class="trend-svg" viewBox="0 0 1080 380" role="img" aria-label="老登股 · 5日资金流入额">
-<text x="88" y="25" fill="#f4f7fb" font-size="22" font-weight="900">老登股 · 5日资金流入额</text>
-<text x="88" y="48" fill="#8d9aaa" font-size="13">单位：百万美元；正值流入 / 负值流出</text>
-<line x1="88" y1="305.6" x2="860" y2="305.6" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="309.6" fill="#8d9aaa" font-size="12" text-anchor="end">-3,000</text>
-<line x1="88" y1="250.8" x2="860" y2="250.8" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="254.8" fill="#8d9aaa" font-size="12" text-anchor="end">-1,500</text>
-<line x1="88" y1="196.0" x2="860" y2="196.0" stroke="#607080" stroke-width="1.2" opacity=".85"/>
-<text x="78" y="200.0" fill="#8d9aaa" font-size="12" text-anchor="end">0</text>
-<line x1="88" y1="141.2" x2="860" y2="141.2" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="145.2" fill="#8d9aaa" font-size="12" text-anchor="end">+1,500</text>
-<line x1="88" y1="86.4" x2="860" y2="86.4" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="90.4" fill="#8d9aaa" font-size="12" text-anchor="end">+3,000</text>
-<line x1="88" y1="70" x2="88" y2="322" stroke="#334155" stroke-width="1"/>
-<line x1="88.0" y1="70" x2="88.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="88.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/01</text>
-<line x1="281.0" y1="70" x2="281.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="281.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/02</text>
-<line x1="474.0" y1="70" x2="474.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="474.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/06</text>
-<line x1="667.0" y1="70" x2="667.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="667.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/07</text>
-<line x1="860.0" y1="70" x2="860.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="860.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/08</text>
-<polyline points="88.0,100.3 281.0,102.0 474.0,130.3 667.0,251.5 860.0,279.6" fill="none" stroke="#e74c3c" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="279.6" r="4" fill="#e74c3c"/>
-<polyline points="88.0,250.3 281.0,152.1 474.0,150.6 667.0,247.4 860.0,244.3" fill="none" stroke="#4aa3ff" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="244.3" r="4" fill="#4aa3ff"/>
-<polyline points="88.0,153.5 281.0,242.6 474.0,156.9 667.0,235.4 860.0,259.3" fill="none" stroke="#f4b400" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="259.3" r="4" fill="#f4b400"/>
-<polyline points="88.0,137.0 281.0,108.0 474.0,291.4 667.0,123.1 860.0,251.1" fill="none" stroke="#2fc281" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="251.1" r="4" fill="#2fc281"/>
-<polyline points="88.0,260.9 281.0,140.5 474.0,244.0 667.0,112.5 860.0,115.3" fill="none" stroke="#b084f5" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="115.3" r="4" fill="#b084f5"/>
-<polyline points="88.0,158.9 281.0,144.1 474.0,236.5 667.0,155.0 860.0,229.9" fill="none" stroke="#ff7a45" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="229.9" r="4" fill="#ff7a45"/>
-<polyline points="88.0,169.7 281.0,172.5 474.0,234.1 667.0,219.1 860.0,220.3" fill="none" stroke="#61dafb" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="220.3" r="4" fill="#61dafb"/>
-<polyline points="88.0,244.2 281.0,155.3 474.0,227.7 667.0,164.4 860.0,220.6" fill="none" stroke="#d6a23c" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="220.6" r="4" fill="#d6a23c"/>
-<polyline points="88.0,183.0 281.0,187.0 474.0,207.4 667.0,188.1 860.0,202.4" fill="none" stroke="#ff6b9a" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="202.4" r="4" fill="#ff6b9a"/>
-<text x="870.0" y="104.9" fill="#b084f5" font-size="12" font-weight="850">能源</text>
-<text x="870.0" y="192.0" fill="#ff6b9a" font-size="12" font-weight="850">房地产</text>
-<text x="870.0" y="210.0" fill="#61dafb" font-size="12" font-weight="850">材料</text>
-<text x="870.0" y="228.0" fill="#d6a23c" font-size="12" font-weight="850">公用事业</text>
-<text x="870.0" y="246.0" fill="#ff7a45" font-size="12" font-weight="850">必需消费</text>
-<text x="870.0" y="264.0" fill="#4aa3ff" font-size="12" font-weight="850">工业</text>
-<text x="870.0" y="282.0" fill="#2fc281" font-size="12" font-weight="850">医疗保健</text>
-<text x="870.0" y="300.0" fill="#f4b400" font-size="12" font-weight="850">可选消费</text>
-<text x="870.0" y="318.0" fill="#e74c3c" font-size="12" font-weight="850">金融</text>
-</svg></div>
-    <div class="trend-panel"><svg class="trend-svg" viewBox="0 0 1080 380" role="img" aria-label="AI股 · 5日资金流入额">
-<text x="88" y="25" fill="#f4f7fb" font-size="22" font-weight="900">AI股 · 5日资金流入额</text>
-<text x="88" y="48" fill="#8d9aaa" font-size="13">单位：百万美元；正值流入 / 负值流出</text>
-<line x1="88" y1="305.6" x2="860" y2="305.6" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="309.6" fill="#8d9aaa" font-size="12" text-anchor="end">-3,000</text>
-<line x1="88" y1="250.8" x2="860" y2="250.8" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="254.8" fill="#8d9aaa" font-size="12" text-anchor="end">-1,500</text>
-<line x1="88" y1="196.0" x2="860" y2="196.0" stroke="#607080" stroke-width="1.2" opacity=".85"/>
-<text x="78" y="200.0" fill="#8d9aaa" font-size="12" text-anchor="end">0</text>
-<line x1="88" y1="141.2" x2="860" y2="141.2" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="145.2" fill="#8d9aaa" font-size="12" text-anchor="end">+1,500</text>
-<line x1="88" y1="86.4" x2="860" y2="86.4" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="90.4" fill="#8d9aaa" font-size="12" text-anchor="end">+3,000</text>
-<line x1="88" y1="70" x2="88" y2="322" stroke="#334155" stroke-width="1"/>
-<line x1="88.0" y1="70" x2="88.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="88.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/01</text>
-<line x1="281.0" y1="70" x2="281.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="281.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/02</text>
-<line x1="474.0" y1="70" x2="474.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="474.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/06</text>
-<line x1="667.0" y1="70" x2="667.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="667.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/07</text>
-<line x1="860.0" y1="70" x2="860.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="860.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/08</text>
-<polyline points="88.0,263.5 281.0,289.6 474.0,136.2 667.0,276.2 860.0,126.2" fill="none" stroke="#e74c3c" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="126.2" r="4" fill="#e74c3c"/>
-<polyline points="88.0,137.8 281.0,229.6 474.0,160.0 667.0,164.0 860.0,218.1" fill="none" stroke="#4aa3ff" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="218.1" r="4" fill="#4aa3ff"/>
-<text x="870.0" y="130.2" fill="#e74c3c" font-size="12" font-weight="850">科技</text>
-<text x="870.0" y="222.1" fill="#4aa3ff" font-size="12" font-weight="850">通信服务</text>
-</svg></div>
-    <div class="trend-panel"><svg class="trend-svg" viewBox="0 0 1080 380" role="img" aria-label="老登股 · 5日涨跌幅">
-<text x="88" y="25" fill="#f4f7fb" font-size="22" font-weight="900">老登股 · 5日涨跌幅</text>
-<text x="88" y="48" fill="#8d9aaa" font-size="13">单位：%</text>
-<line x1="88" y1="305.6" x2="860" y2="305.6" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="309.6" fill="#8d9aaa" font-size="12" text-anchor="end">-3.0</text>
-<line x1="88" y1="250.8" x2="860" y2="250.8" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="254.8" fill="#8d9aaa" font-size="12" text-anchor="end">-1.5</text>
-<line x1="88" y1="196.0" x2="860" y2="196.0" stroke="#607080" stroke-width="1.2" opacity=".85"/>
-<text x="78" y="200.0" fill="#8d9aaa" font-size="12" text-anchor="end">0</text>
-<line x1="88" y1="141.2" x2="860" y2="141.2" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="145.2" fill="#8d9aaa" font-size="12" text-anchor="end">+1.5</text>
-<line x1="88" y1="86.4" x2="860" y2="86.4" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="90.4" fill="#8d9aaa" font-size="12" text-anchor="end">+3.0</text>
-<line x1="88" y1="70" x2="88" y2="322" stroke="#334155" stroke-width="1"/>
-<line x1="88.0" y1="70" x2="88.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="88.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/01</text>
-<line x1="281.0" y1="70" x2="281.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="281.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/02</text>
-<line x1="474.0" y1="70" x2="474.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="474.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/06</text>
-<line x1="667.0" y1="70" x2="667.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="667.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/07</text>
-<line x1="860.0" y1="70" x2="860.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="860.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/08</text>
-<polyline points="88.0,116.3 281.0,140.0 474.0,161.9 667.0,201.9 860.0,266.4" fill="none" stroke="#e74c3c" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="266.4" r="4" fill="#e74c3c"/>
-<polyline points="88.0,232.9 281.0,185.0 474.0,163.2 667.0,258.6 860.0,235.2" fill="none" stroke="#4aa3ff" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="235.2" r="4" fill="#4aa3ff"/>
-<polyline points="88.0,170.8 281.0,226.0 474.0,168.2 667.0,215.2 860.0,261.0" fill="none" stroke="#f4b400" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="261.0" r="4" fill="#f4b400"/>
-<polyline points="88.0,175.7 281.0,99.9 474.0,235.7 667.0,140.1 860.0,243.5" fill="none" stroke="#2fc281" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="243.5" r="4" fill="#2fc281"/>
-<polyline points="88.0,216.6 281.0,167.6 474.0,202.2 667.0,92.2 860.0,131.8" fill="none" stroke="#b084f5" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="131.8" r="4" fill="#b084f5"/>
-<polyline points="88.0,185.9 281.0,121.9 474.0,234.2 667.0,163.0 860.0,216.2" fill="none" stroke="#ff7a45" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="216.2" r="4" fill="#ff7a45"/>
-<polyline points="88.0,182.3 281.0,125.1 474.0,198.1 667.0,229.0 860.0,291.7" fill="none" stroke="#61dafb" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="291.7" r="4" fill="#61dafb"/>
-<polyline points="88.0,241.9 281.0,115.2 474.0,232.7 667.0,163.8 860.0,223.2" fill="none" stroke="#d6a23c" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="223.2" r="4" fill="#d6a23c"/>
-<polyline points="88.0,183.6 281.0,154.7 474.0,227.9 667.0,146.5 860.0,256.2" fill="none" stroke="#ff6b9a" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="256.2" r="4" fill="#ff6b9a"/>
-<text x="870.0" y="107.6" fill="#b084f5" font-size="12" font-weight="850">能源</text>
-<text x="870.0" y="192.0" fill="#ff7a45" font-size="12" font-weight="850">必需消费</text>
-<text x="870.0" y="210.0" fill="#d6a23c" font-size="12" font-weight="850">公用事业</text>
-<text x="870.0" y="228.0" fill="#4aa3ff" font-size="12" font-weight="850">工业</text>
-<text x="870.0" y="246.0" fill="#2fc281" font-size="12" font-weight="850">医疗保健</text>
-<text x="870.0" y="264.0" fill="#ff6b9a" font-size="12" font-weight="850">房地产</text>
-<text x="870.0" y="282.0" fill="#f4b400" font-size="12" font-weight="850">可选消费</text>
-<text x="870.0" y="300.0" fill="#e74c3c" font-size="12" font-weight="850">金融</text>
-<text x="870.0" y="318.0" fill="#61dafb" font-size="12" font-weight="850">材料</text>
-</svg></div>
-    <div class="trend-panel"><svg class="trend-svg" viewBox="0 0 1080 380" role="img" aria-label="AI股 · 5日涨跌幅">
-<text x="88" y="25" fill="#f4f7fb" font-size="22" font-weight="900">AI股 · 5日涨跌幅</text>
-<text x="88" y="48" fill="#8d9aaa" font-size="13">单位：%</text>
-<line x1="88" y1="305.6" x2="860" y2="305.6" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="309.6" fill="#8d9aaa" font-size="12" text-anchor="end">-3.0</text>
-<line x1="88" y1="250.8" x2="860" y2="250.8" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="254.8" fill="#8d9aaa" font-size="12" text-anchor="end">-1.5</text>
-<line x1="88" y1="196.0" x2="860" y2="196.0" stroke="#607080" stroke-width="1.2" opacity=".85"/>
-<text x="78" y="200.0" fill="#8d9aaa" font-size="12" text-anchor="end">0</text>
-<line x1="88" y1="141.2" x2="860" y2="141.2" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="145.2" fill="#8d9aaa" font-size="12" text-anchor="end">+1.5</text>
-<line x1="88" y1="86.4" x2="860" y2="86.4" stroke="#263241" stroke-width="1" opacity=".75"/>
-<text x="78" y="90.4" fill="#8d9aaa" font-size="12" text-anchor="end">+3.0</text>
-<line x1="88" y1="70" x2="88" y2="322" stroke="#334155" stroke-width="1"/>
-<line x1="88.0" y1="70" x2="88.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="88.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/01</text>
-<line x1="281.0" y1="70" x2="281.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="281.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/02</text>
-<line x1="474.0" y1="70" x2="474.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="474.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/06</text>
-<line x1="667.0" y1="70" x2="667.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="667.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/07</text>
-<line x1="860.0" y1="70" x2="860.0" y2="322" stroke="#263241" stroke-width="1" opacity=".78"/>
-<text x="860.0" y="362" fill="#8d9aaa" font-size="13" text-anchor="middle">07/08</text>
-<polyline points="88.0,289.9 281.0,295.0 474.0,135.7 667.0,283.3 860.0,150.8" fill="none" stroke="#e74c3c" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="150.8" r="4" fill="#e74c3c"/>
-<polyline points="88.0,107.0 281.0,200.7 474.0,175.7 667.0,169.2 860.0,247.3" fill="none" stroke="#4aa3ff" stroke-width="3" opacity=".9"/>
-<circle cx="860.0" cy="247.3" r="4" fill="#4aa3ff"/>
-<text x="870.0" y="154.8" fill="#e74c3c" font-size="12" font-weight="850">科技</text>
-<text x="870.0" y="251.3" fill="#4aa3ff" font-size="12" font-weight="850">通信服务</text>
-</svg></div>
-  </section>
-</main>
-</body>
-</html>
+              <td><b class="pos">+0.56% · +1,892.05mn</b>
+                <small>收盘 $57.00 · 量 33.19M</small>
+                <span class="bar pos" style="width:71.3%"></span></td>
+              <td><b class="pos">+0.09% · +0.09mn</b>
+                <small>$57.05 · 量 1.6K · Jul 31, 2026 4:32 AM ET</small>
+                <span class="bar pos" style="width:5.4%"></span></td>
+              <td><b>延续偏强</b><small>银行与资管：JPM / BAC / GS / MS / BLK</small></td>
+            </tr><tr>
+              <td><b>工业</b><small>XLI · Industrials</small></td>
+              <td><b class="pos">+0.98% · +1,314.41mn</b>
+                <small>收盘 $178.39 · 量 7.37M</small>
+                <span class="bar pos" style="width:49.5%"></span></td>
+              <td><b class="pos">+0.84% · +0.22mn</b>
+                <small>$179.88 · 量 1.2K · Jul 31, 2026 4:10 AM ET</small>
+                <span class="bar pos" style="width:13.1%"></span></td>
+              <td><b>延续偏强</b><small>工业与国防：GE / CAT / HON / RTX / UNP</small></td>
+            </tr><tr>
+              <td><b>可选消费</b><small>XLY · Consumer Discretionary</small></td>
+              <td><b class="pos">+0.70% · +907.50mn</b>
+                <small>收盘 $112.39 · 量 8.07M</small>
+                <span class="bar pos" style="width:34.2%"></span></td>
+              <td><b class="pos">+3.50% · +0.44mn</b>
+                <small>$116.32 · 量 3.8K · Jul 31, 2026 4:33 AM ET</small>
+                <span class="bar pos" style="width:25.5%"></span></td>
+              <td><b>延续偏强</b><small>消费与电商：AMZN / TSLA / HD / MCD</small></td>
+            </tr><tr>
+              <td><b>医疗保健</b><small>XLV · Health Care</small></td>
+              <td><b class="neg">-1.64% · -2,041.30mn</b>
+                <small>收盘 $163.52 · 量 12.48M</small>
+                <span class="bar neg" style="width:76.9%"></span></td>
+              <td><b class="neg">-0.35% · -0.59mn</b>
+                <small>$162.94 · 量 3.6K · Jul 31, 2026 4:36 AM ET</small>
+                <span class="bar neg" style="width:34.6%"></span></td>
+              <td><b>延续偏弱</b><small>医药与医疗：LLY / UNH / JNJ / ABBV</small></td>
+            </tr><tr>
+              <td><b>能源</b><small>XLE · Energy</small></td>
+              <td><b class="pos">+0.53% · +1,358.78mn</b>
+                <small>收盘 $58.96 · 量 23.05M</small>
+                <span class="bar pos" style="width:51.2%"></span></td>
+              <td><b class="neg">-0.40% · -0.46mn</b>
+                <small>$58.72 · 量 7.9K · Jul 31, 2026 4:37 AM ET</small>
+                <span class="bar neg" style="width:27.1%"></span></td>
+              <td><b>盘前转弱</b><small>油气能源：XOM / CVX / COP / SLB</small></td>
+            </tr><tr>
+              <td><b>必需消费</b><small>XLP · Consumer Staples</small></td>
+              <td><b class="neg">-2.16% · -1,419.58mn</b>
+                <small>收盘 $85.47 · 量 16.61M</small>
+                <span class="bar neg" style="width:53.5%"></span></td>
+              <td><b class="neg">-0.19% · -0.02mn</b>
+                <small>$85.31 · 量 270 · Jul 31, 2026 4:18 AM ET</small>
+                <span class="bar neg" style="width:2.0%"></span></td>
+              <td><b>延续偏弱</b><small>防御消费：COST / WMT / PG / KO / PEP</small></td>
+            </tr><tr>
+              <td><b>材料</b><small>XLB · Materials</small></td>
+              <td><b class="neg">-0.19% · -561.17mn</b>
+                <small>收盘 $51.64 · 量 10.87M</small>
+                <span class="bar neg" style="width:21.1%"></span></td>
+              <td><b class="neg">-0.46% · -0.00mn</b>
+                <small>$51.40 · 量 10 · Jul 31, 2026 4:00 AM ET</small>
+                <span class="bar neg" style="width:2.0%"></span></td>
+              <td><b>盘前清淡</b><small>材料与矿业：LIN / SHW / FCX / NEM</small></td>
+            </tr><tr>
+              <td><b>公用事业</b><small>XLU · Utilities</small></td>
+              <td><b class="neg">-0.56% · -1,046.40mn</b>
+                <small>收盘 $44.66 · 量 23.43M</small>
+                <span class="bar neg" style="width:39.4%"></span></td>
+              <td><b class="pos">+0.31% · +0.07mn</b>
+                <small>$44.80 · 量 1.5K · Jul 31, 2026 4:35 AM ET</small>
+                <span class="bar pos" style="width:3.9%"></span></td>
+              <td><b>盘前修复</b><small>电力公用：NEE / SO / DUK / CEG / VST</small></td>
+            </tr><tr>
+              <td><b>房地产</b><small>XLRE · Real Estate</small></td>
+              <td><b class="neg">-1.44% · -293.71mn</b>
+                <small>收盘 $45.30 · 量 6.48M</small>
+                <span class="bar neg" style="width:11.1%"></span></td>
+              <td><b class="pos">+0.26% · +0.00mn</b>
+                <small>$45.42 · 量 47 · Jul 31, 2026 4:00 AM ET</small>
+                <span class="bar pos" style="width:2.0%"></span></td>
+              <td><b>盘前清淡</b><small>地产与REITs：PLD / AMT / EQIX / CCI</small></td>
+            </tr></tbody></table></div>
+<h2>5日主线观察</h2><section class="trend-grid"><div class="panel"><svg class="trend-svg" viewBox="0 0 1000 350" role="img" aria-label="非AI板块 · 5日方向成交额代理（百万美元）"><text x="62" y="28" class="svg-title">非AI板块 · 5日方向成交额代理（百万美元）</text><line x1="62" y1="183.0" x2="780" y2="183.0" class="zero"/><text x="62.0" y="338" class="axis" text-anchor="middle">07/24</text><text x="241.5" y="338" class="axis" text-anchor="middle">07/27</text><text x="421.0" y="338" class="axis" text-anchor="middle">07/28</text><text x="600.5" y="338" class="axis" text-anchor="middle">07/29</text><text x="780.0" y="338" class="axis" text-anchor="middle">07/30</text><polyline points="62.0,106.6 241.5,111.6 421.0,100.1 600.5,300.0 780.0,103.4" fill="none" stroke="#ff6b6b" stroke-width="2.4"/><line x1="802" y1="51" x2="822" y2="51" stroke="#ff6b6b" stroke-width="3"/><text x="830" y="55" class="legend">XLF +1,892.0</text><polyline points="62.0,140.7 241.5,135.2 421.0,226.9 600.5,253.7 780.0,127.7" fill="none" stroke="#4dabf7" stroke-width="2.4"/><line x1="802" y1="74" x2="822" y2="74" stroke="#4dabf7" stroke-width="3"/><text x="830" y="78" class="legend">XLI +1,314.4</text><polyline points="62.0,145.2 241.5,150.4 421.0,154.5 600.5,218.4 780.0,144.8" fill="none" stroke="#ffd43b" stroke-width="2.4"/><line x1="802" y1="97" x2="822" y2="97" stroke="#ffd43b" stroke-width="3"/><text x="830" y="101" class="legend">XLY +907.5</text><polyline points="62.0,130.7 241.5,127.5 421.0,93.1 600.5,264.6 780.0,268.9" fill="none" stroke="#51cf66" stroke-width="2.4"/><line x1="802" y1="120" x2="822" y2="120" stroke="#51cf66" stroke-width="3"/><text x="830" y="124" class="legend">XLV -2,041.3</text><polyline points="62.0,97.2 241.5,266.1 421.0,250.4 600.5,98.6 780.0,125.8" fill="none" stroke="#cc5de8" stroke-width="2.4"/><line x1="802" y1="143" x2="822" y2="143" stroke="#cc5de8" stroke-width="3"/><text x="830" y="147" class="legend">XLE +1,358.8</text><polyline points="62.0,148.9 241.5,139.0 421.0,101.4 600.5,128.3 780.0,242.8" fill="none" stroke="#ffa94d" stroke-width="2.4"/><line x1="802" y1="166" x2="822" y2="166" stroke="#ffa94d" stroke-width="3"/><text x="830" y="170" class="legend">XLP -1,419.6</text><polyline points="62.0,156.7 241.5,164.2 421.0,157.1 600.5,212.9 780.0,206.6" fill="none" stroke="#20c997" stroke-width="2.4"/><line x1="802" y1="189" x2="822" y2="189" stroke="#20c997" stroke-width="3"/><text x="830" y="193" class="legend">XLB -561.2</text><polyline points="62.0,151.6 241.5,214.9 421.0,214.5 600.5,227.7 780.0,227.0" fill="none" stroke="#748ffc" stroke-width="2.4"/><line x1="802" y1="212" x2="822" y2="212" stroke="#748ffc" stroke-width="3"/><text x="830" y="216" class="legend">XLU -1,046.4</text><polyline points="62.0,173.8 241.5,191.1 421.0,171.7 600.5,194.7 780.0,195.4" fill="none" stroke="#f06595" stroke-width="2.4"/><line x1="802" y1="235" x2="822" y2="235" stroke="#f06595" stroke-width="3"/><text x="830" y="239" class="legend">XLRE -293.7</text></svg></div><div class="panel"><svg class="trend-svg" viewBox="0 0 1000 350" role="img" aria-label="AI相关板块 · 5日方向成交额代理（百万美元）"><text x="62" y="28" class="svg-title">AI相关板块 · 5日方向成交额代理（百万美元）</text><line x1="62" y1="183.0" x2="780" y2="183.0" class="zero"/><text x="62.0" y="338" class="axis" text-anchor="middle">07/24</text><text x="241.5" y="338" class="axis" text-anchor="middle">07/27</text><text x="421.0" y="338" class="axis" text-anchor="middle">07/28</text><text x="600.5" y="338" class="axis" text-anchor="middle">07/29</text><text x="780.0" y="338" class="axis" text-anchor="middle">07/30</text><polyline points="62.0,243.0 241.5,247.4 421.0,258.8 600.5,288.6 780.0,66.0" fill="none" stroke="#ff6b6b" stroke-width="2.4"/><line x1="802" y1="51" x2="822" y2="51" stroke="#ff6b6b" stroke-width="3"/><text x="830" y="55" class="legend">XLK +2,654.2</text><polyline points="62.0,154.2 241.5,151.4 421.0,157.3 600.5,217.4 780.0,230.4" fill="none" stroke="#4dabf7" stroke-width="2.4"/><line x1="802" y1="74" x2="822" y2="74" stroke="#4dabf7" stroke-width="3"/><text x="830" y="78" class="legend">XLC -1,074.8</text></svg></div><div class="panel"><svg class="trend-svg" viewBox="0 0 1000 350" role="img" aria-label="非AI板块 · 5日涨跌幅（%）"><text x="62" y="28" class="svg-title">非AI板块 · 5日涨跌幅（%）</text><line x1="62" y1="183.0" x2="780" y2="183.0" class="zero"/><text x="62.0" y="338" class="axis" text-anchor="middle">07/24</text><text x="241.5" y="338" class="axis" text-anchor="middle">07/27</text><text x="421.0" y="338" class="axis" text-anchor="middle">07/28</text><text x="600.5" y="338" class="axis" text-anchor="middle">07/29</text><text x="780.0" y="338" class="axis" text-anchor="middle">07/30</text><polyline points="62.0,151.5 241.5,145.9 421.0,136.6 600.5,241.5 780.0,162.3" fill="none" stroke="#ff6b6b" stroke-width="2.4"/><line x1="802" y1="51" x2="822" y2="51" stroke="#ff6b6b" stroke-width="3"/><text x="830" y="55" class="legend">XLF +0.6</text><polyline points="62.0,168.5 241.5,172.2 421.0,197.2 600.5,300.0 780.0,147.1" fill="none" stroke="#4dabf7" stroke-width="2.4"/><line x1="802" y1="74" x2="822" y2="74" stroke="#4dabf7" stroke-width="3"/><text x="830" y="78" class="legend">XLI +1.0</text><polyline points="62.0,161.1 241.5,135.1 421.0,128.8 600.5,211.3 780.0,157.4" fill="none" stroke="#ffd43b" stroke-width="2.4"/><line x1="802" y1="97" x2="822" y2="97" stroke="#ffd43b" stroke-width="3"/><text x="830" y="101" class="legend">XLY +0.7</text><polyline points="62.0,157.4 241.5,164.3 421.0,96.5 600.5,205.3 780.0,242.9" fill="none" stroke="#51cf66" stroke-width="2.4"/><line x1="802" y1="120" x2="822" y2="120" stroke="#51cf66" stroke-width="3"/><text x="830" y="124" class="legend">XLV -1.6</text><polyline points="62.0,168.2 241.5,260.4 421.0,232.6 600.5,114.3 780.0,163.6" fill="none" stroke="#cc5de8" stroke-width="2.4"/><line x1="802" y1="143" x2="822" y2="143" stroke="#cc5de8" stroke-width="3"/><text x="830" y="147" class="legend">XLE +0.5</text><polyline points="62.0,142.5 241.5,129.5 421.0,110.1 600.5,170.4 780.0,262.2" fill="none" stroke="#ffa94d" stroke-width="2.4"/><line x1="802" y1="166" x2="822" y2="166" stroke="#ffa94d" stroke-width="3"/><text x="830" y="170" class="legend">XLP -2.2</text><polyline points="62.0,112.4 241.5,173.7 421.0,115.3 600.5,225.0 780.0,190.1" fill="none" stroke="#20c997" stroke-width="2.4"/><line x1="802" y1="189" x2="822" y2="189" stroke="#20c997" stroke-width="3"/><text x="830" y="193" class="legend">XLB -0.2</text><polyline points="62.0,175.1 241.5,231.3 421.0,195.8 600.5,232.1 780.0,203.4" fill="none" stroke="#748ffc" stroke-width="2.4"/><line x1="802" y1="212" x2="822" y2="212" stroke="#748ffc" stroke-width="3"/><text x="830" y="216" class="legend">XLU -0.6</text><polyline points="62.0,101.5 241.5,198.1 421.0,163.0 600.5,187.0 780.0,235.6" fill="none" stroke="#f06595" stroke-width="2.4"/><line x1="802" y1="235" x2="822" y2="235" stroke="#f06595" stroke-width="3"/><text x="830" y="239" class="legend">XLRE -1.4</text></svg></div><div class="panel"><svg class="trend-svg" viewBox="0 0 1000 350" role="img" aria-label="AI相关板块 · 5日涨跌幅（%）"><text x="62" y="28" class="svg-title">AI相关板块 · 5日涨跌幅（%）</text><line x1="62" y1="183.0" x2="780" y2="183.0" class="zero"/><text x="62.0" y="338" class="axis" text-anchor="middle">07/24</text><text x="241.5" y="338" class="axis" text-anchor="middle">07/27</text><text x="421.0" y="338" class="axis" text-anchor="middle">07/28</text><text x="600.5" y="338" class="axis" text-anchor="middle">07/29</text><text x="780.0" y="338" class="axis" text-anchor="middle">07/30</text><polyline points="62.0,213.6 241.5,202.1 421.0,222.2 600.5,239.2 780.0,66.0" fill="none" stroke="#ff6b6b" stroke-width="2.4"/><line x1="802" y1="51" x2="822" y2="51" stroke="#ff6b6b" stroke-width="3"/><text x="830" y="55" class="legend">XLK +5.5</text><polyline points="62.0,164.4 241.5,155.8 421.0,143.3 600.5,186.1 780.0,239.9" fill="none" stroke="#4dabf7" stroke-width="2.4"/><line x1="802" y1="74" x2="822" y2="74" stroke="#4dabf7" stroke-width="3"/><text x="830" y="78" class="legend">XLC -2.7</text></svg></div></section>
+<div class="foot">交叉核验规则：正常流动性样本的 OpenD 与 Nasdaq 盘前价格偏差须 ≤ 0.35%，涨跌幅偏差须 ≤ 0.35 个百分点；低于 100 股的极低成交样本允许保留分歧并以 Nasdaq 官方值展示。11 个 ETF 必须共享同一个最新完整收盘日。数据明细见 <a href="./data.json">data.json</a>。</div>
+</main></body></html>

@@ -1,1338 +1,951 @@
 {
   "meta": {
-    "generated_at": "2026-07-09 20:04:24 ",
-    "method": "Nasdaq ETF quote; signed proxy = pre-market dollar volume * sign(percent change)."
+    "generated_at_bj": "2026-07-31 16:38:38",
+    "close_date": "07/30/2026",
+    "premarket_range_et": "4:00 AM–4:37 AM ET",
+    "market_status": "Pre-Market",
+    "opend_coverage": 11,
+    "nasdaq_coverage": 11,
+    "cross_check_pass": 10,
+    "low_liquidity_divergence": 1,
+    "verification": "DOUBLE_VERIFIED_FUTU_OPEND_NASDAQ",
+    "method": "directional turnover proxy = price * volume * sign(pct); not ETF creations/redemptions or actual net flow"
   },
   "sectors": [
     {
       "symbol": "XLK",
-      "name": "State Street Technology Select Sector SPDR ETF",
-      "price": 183.76,
-      "change": 2.36,
-      "pct": 1.3,
-      "volume": 40084.933665,
-      "avg20": null,
-      "avg50": null,
-      "prev_close": 181.4,
-      "aum_bn": null,
-      "dollar_volume_mn": 7.366007410280399,
-      "signed_proxy_mn": 7.366007410280399,
-      "volume_ratio": null,
-      "timestamp": "Jul 9, 2026 8:01 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/XLK/info?assetclass=etf",
+      "cn": "科技",
+      "en": "Technology",
+      "company_name": "State Street Technology Select Sector SPDR ETF",
+      "watch": "AI科技：NVDA / MSFT / AAPL / AVGO / AMD",
+      "premarket": {
+        "price": 176.84,
+        "pct": 0.63,
+        "volume": 9704.351661,
+        "dollar_volume_mn": 1.71611754773124,
+        "signed_proxy_mn": 1.71611754773124,
+        "timestamp": "Jul 31, 2026 4:31 AM ET",
+        "market_status": "Pre-Market"
+      },
       "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 181.4,
-        "prev_close": 179.18,
-        "change": 2.219999999999999,
-        "pct": 1.2389775644603185,
-        "volume": 10528340.0,
-        "dollar_volume_mn": 1909.840876,
-        "signed_proxy_mn": 1909.840876,
-        "source": "https://api.nasdaq.com/api/quote/XLK/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
+        "date": "07/30/2026",
+        "close": 175.73,
+        "prev_close": 166.57,
+        "pct": 5.499189529927362,
+        "volume": 15103710.0,
+        "dollar_volume_mn": 2654.1749582999996,
+        "signed_proxy_mn": 2654.1749582999996,
         "history_5d": [
           {
-            "date": "07/01/2026",
-            "close": 185.62,
-            "prev_close": 190.52,
-            "change": -4.900000000000006,
-            "pct": -2.5719084610539604,
-            "volume": 9960304.0,
-            "dollar_volume_mn": 1848.83162848,
-            "signed_proxy_mn": -1848.83162848
+            "date": "07/24/2026",
+            "close": 175.88,
+            "volume": 7739565.0,
+            "pct": -1.440179321938917,
+            "dollar_volume_mn": 1361.2346922000002,
+            "signed_proxy_mn": -1361.2346922000002
           },
           {
-            "date": "07/02/2026",
-            "close": 180.59,
-            "prev_close": 185.62,
-            "change": -5.030000000000001,
-            "pct": -2.70983730201487,
-            "volume": 14192630.0,
-            "dollar_volume_mn": 2563.0470517000003,
-            "signed_proxy_mn": -2563.0470517000003
+            "date": "07/27/2026",
+            "close": 174.3,
+            "volume": 8376633.0,
+            "pct": -0.8983397771207602,
+            "dollar_volume_mn": 1460.0471319,
+            "signed_proxy_mn": -1460.0471319
           },
           {
-            "date": "07/06/2026",
-            "close": 183.57,
-            "prev_close": 180.59,
-            "change": 2.9799999999999898,
-            "pct": 1.6501467412370505,
-            "volume": 8923121.0,
-            "dollar_volume_mn": 1638.01732197,
-            "signed_proxy_mn": 1638.01732197
+            "date": "07/28/2026",
+            "close": 171.09,
+            "volume": 10049330.0,
+            "pct": -1.8416523235800342,
+            "dollar_volume_mn": 1719.3398697,
+            "signed_proxy_mn": -1719.3398697
           },
           {
-            "date": "07/07/2026",
-            "close": 179.18,
-            "prev_close": 183.57,
-            "change": -4.389999999999986,
-            "pct": -2.391458299286368,
-            "volume": 12254780.0,
-            "dollar_volume_mn": 2195.8114804,
-            "signed_proxy_mn": -2195.8114804
+            "date": "07/29/2026",
+            "close": 166.57,
+            "volume": 14380490.0,
+            "pct": -2.6418843883336263,
+            "dollar_volume_mn": 2395.3582192999997,
+            "signed_proxy_mn": -2395.3582192999997
           },
           {
-            "date": "07/08/2026",
-            "close": 181.4,
-            "prev_close": 179.18,
-            "change": 2.219999999999999,
-            "pct": 1.2389775644603185,
-            "volume": 10528340.0,
-            "dollar_volume_mn": 1909.840876,
-            "signed_proxy_mn": 1909.840876
+            "date": "07/30/2026",
+            "close": 175.73,
+            "volume": 15103710.0,
+            "pct": 5.499189529927362,
+            "dollar_volume_mn": 2654.1749582999996,
+            "signed_proxy_mn": 2654.1749582999996
           }
         ]
       },
-      "cn": "科技",
-      "en": "Technology"
+      "signal": "延续偏强",
+      "sources": {
+        "nasdaq_info": "https://api.nasdaq.com/api/quote/XLK/info?assetclass=etf",
+        "nasdaq_history": "https://api.nasdaq.com/api/quote/XLK/historical?assetclass=etf&fromdate=2026-07-15&todate=2026-07-31&limit=20",
+        "opend": {
+          "update_time": "2026-07-31 04:31:54.351",
+          "close": 175.73,
+          "price": 176.84,
+          "pct": 0.631,
+          "volume": 4291.0,
+          "turnover": 757652.124
+        }
+      },
+      "cross_check": {
+        "price_diff_pct": 0.0,
+        "pct_diff_pp": 0.0010000000000000009,
+        "status": "PASS"
+      }
     },
     {
       "symbol": "XLC",
-      "name": "State Street Communication Services Select Sector SPDR ETF",
-      "price": 109.46,
-      "change": null,
-      "pct": null,
-      "volume": 247.599607,
-      "avg20": null,
-      "avg50": 5824139.0,
-      "prev_close": 109.46,
-      "aum_bn": null,
-      "dollar_volume_mn": 0.027102252982219997,
-      "signed_proxy_mn": 0,
-      "volume_ratio": null,
-      "timestamp": "Jul 9, 2026 7:58 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/XLC/info?assetclass=etf",
+      "cn": "通信服务",
+      "en": "Communication Services",
+      "company_name": "State Street Communication Services Select Sector SPDR ETF",
+      "watch": "平台与内容：META / GOOGL / NFLX / DIS",
+      "premarket": {
+        "price": 108.39,
+        "pct": 1.7,
+        "volume": 7.892089,
+        "dollar_volume_mn": 0.0008554235267100001,
+        "signed_proxy_mn": 0.0008554235267100001,
+        "timestamp": "Jul 31, 2026 4:00 AM ET",
+        "market_status": "Pre-Market"
+      },
       "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 109.46,
-        "prev_close": 111.02,
-        "change": -1.5600000000000023,
-        "pct": -1.405152224824358,
-        "volume": 5527899.0,
-        "dollar_volume_mn": 605.0838245399999,
-        "signed_proxy_mn": -605.0838245399999,
-        "source": "https://api.nasdaq.com/api/quote/XLC/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
+        "date": "07/30/2026",
+        "close": 106.58,
+        "prev_close": 109.51,
+        "pct": -2.67555474385901,
+        "volume": 10084230.0,
+        "dollar_volume_mn": 1074.7772334000001,
+        "signed_proxy_mn": -1074.7772334000001,
         "history_5d": [
           {
-            "date": "07/01/2026",
-            "close": 109.74,
-            "prev_close": 107.13,
-            "change": 2.6099999999999994,
-            "pct": 2.4362923550826094,
-            "volume": 14529760.0,
-            "dollar_volume_mn": 1594.4958623999999,
-            "signed_proxy_mn": 1594.4958623999999
+            "date": "07/24/2026",
+            "close": 106.3,
+            "volume": 6151978.0,
+            "pct": 0.873030935661423,
+            "dollar_volume_mn": 653.9552613999999,
+            "signed_proxy_mn": 653.9552613999999
           },
           {
-            "date": "07/02/2026",
-            "close": 109.6,
-            "prev_close": 109.74,
-            "change": -0.14000000000000057,
-            "pct": -0.12757426644796843,
-            "volume": 8388895.0,
-            "dollar_volume_mn": 919.422892,
-            "signed_proxy_mn": -919.422892
+            "date": "07/27/2026",
+            "close": 107.66,
+            "volume": 6668512.0,
+            "pct": 1.279397930385695,
+            "dollar_volume_mn": 717.93200192,
+            "signed_proxy_mn": 717.93200192
           },
           {
-            "date": "07/06/2026",
-            "close": 110.21,
-            "prev_close": 109.6,
-            "change": 0.6099999999999994,
-            "pct": 0.556569343065693,
-            "volume": 8938995.0,
-            "dollar_volume_mn": 985.1666389499999,
-            "signed_proxy_mn": 985.1666389499999
+            "date": "07/28/2026",
+            "close": 109.67,
+            "volume": 5307809.0,
+            "pct": 1.8669886680289904,
+            "dollar_volume_mn": 582.10741303,
+            "signed_proxy_mn": 582.10741303
           },
           {
-            "date": "07/07/2026",
-            "close": 111.02,
-            "prev_close": 110.21,
-            "change": 0.8100000000000023,
-            "pct": 0.7349605298974705,
-            "volume": 7882403.0,
-            "dollar_volume_mn": 875.1043810599999,
-            "signed_proxy_mn": 875.1043810599999
+            "date": "07/29/2026",
+            "close": 109.51,
+            "volume": 7120604.0,
+            "pct": -0.14589222212090247,
+            "dollar_volume_mn": 779.7773440400001,
+            "signed_proxy_mn": -779.7773440400001
           },
           {
-            "date": "07/08/2026",
-            "close": 109.46,
-            "prev_close": 111.02,
-            "change": -1.5600000000000023,
-            "pct": -1.405152224824358,
-            "volume": 5527899.0,
-            "dollar_volume_mn": 605.0838245399999,
-            "signed_proxy_mn": -605.0838245399999
+            "date": "07/30/2026",
+            "close": 106.58,
+            "volume": 10084230.0,
+            "pct": -2.67555474385901,
+            "dollar_volume_mn": 1074.7772334000001,
+            "signed_proxy_mn": -1074.7772334000001
           }
         ]
       },
-      "cn": "通信服务",
-      "en": "Communication Services"
+      "signal": "盘前清淡",
+      "sources": {
+        "nasdaq_info": "https://api.nasdaq.com/api/quote/XLC/info?assetclass=etf",
+        "nasdaq_history": "https://api.nasdaq.com/api/quote/XLC/historical?assetclass=etf&fromdate=2026-07-15&todate=2026-07-31&limit=20",
+        "opend": {
+          "update_time": "2026-07-31 04:00:01.058",
+          "close": 106.58,
+          "price": 106.58,
+          "pct": 0.0,
+          "volume": 10.0,
+          "turnover": 1079.024
+        }
+      },
+      "cross_check": {
+        "price_diff_pct": 1.669895746840111,
+        "pct_diff_pp": 1.7,
+        "status": "LOW_LIQUIDITY_DIVERGENCE"
+      }
     },
     {
       "symbol": "XLF",
-      "name": "State Street Financial Select Sector SPDR ETF",
-      "price": 55.0332,
-      "change": 0.0632,
-      "pct": 0.11,
-      "volume": 27607.780834,
-      "avg20": null,
-      "avg50": 46699359.0,
-      "prev_close": 54.97,
-      "aum_bn": null,
-      "dollar_volume_mn": 1.519344524193689,
-      "signed_proxy_mn": 1.519344524193689,
-      "volume_ratio": null,
-      "timestamp": "Jul 9, 2026 8:01 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/XLF/info?assetclass=etf",
+      "cn": "金融",
+      "en": "Financials",
+      "company_name": "State Street Financial Select Sector SPDR ETF",
+      "watch": "银行与资管：JPM / BAC / GS / MS / BLK",
+      "premarket": {
+        "price": 57.05,
+        "pct": 0.09,
+        "volume": 1634.159081,
+        "dollar_volume_mn": 0.09322877557104998,
+        "signed_proxy_mn": 0.09322877557104998,
+        "timestamp": "Jul 31, 2026 4:32 AM ET",
+        "market_status": "Pre-Market"
+      },
       "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 54.97,
-        "prev_close": 56.05,
-        "change": -1.0799999999999983,
-        "pct": -1.9268510258697562,
-        "volume": 41648110.0,
-        "dollar_volume_mn": 2289.3966066999997,
-        "signed_proxy_mn": -2289.3966066999997,
-        "source": "https://api.nasdaq.com/api/quote/XLF/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
+        "date": "07/30/2026",
+        "close": 57.0,
+        "prev_close": 56.68,
+        "pct": 0.5645730416372619,
+        "volume": 33193790.0,
+        "dollar_volume_mn": 1892.04603,
+        "signed_proxy_mn": 1892.04603,
         "history_5d": [
           {
-            "date": "07/01/2026",
-            "close": 54.78,
-            "prev_close": 53.61,
-            "change": 1.1700000000000017,
-            "pct": 2.182428651371016,
-            "volume": 47809760.0,
-            "dollar_volume_mn": 2619.0186528000004,
-            "signed_proxy_mn": 2619.0186528000004
+            "date": "07/24/2026",
+            "close": 56.31,
+            "volume": 32212940.0,
+            "pct": 0.8597528210639416,
+            "dollar_volume_mn": 1813.9106514,
+            "signed_proxy_mn": 1813.9106514
           },
           {
-            "date": "07/02/2026",
-            "close": 55.62,
-            "prev_close": 54.78,
-            "change": 0.8399999999999963,
-            "pct": 1.5334063526834543,
-            "volume": 46285180.0,
-            "dollar_volume_mn": 2574.3817116,
-            "signed_proxy_mn": 2574.3817116
+            "date": "07/27/2026",
+            "close": 56.88,
+            "volume": 29805890.0,
+            "pct": 1.012253596164081,
+            "dollar_volume_mn": 1695.3590232000001,
+            "signed_proxy_mn": 1695.3590232000001
           },
           {
-            "date": "07/06/2026",
-            "close": 56.14,
-            "prev_close": 55.62,
-            "change": 0.5200000000000031,
-            "pct": 0.9349154980222998,
-            "volume": 32043700.0,
-            "dollar_volume_mn": 1798.933318,
-            "signed_proxy_mn": 1798.933318
+            "date": "07/28/2026",
+            "close": 57.6,
+            "volume": 34204440.0,
+            "pct": 1.2658227848101333,
+            "dollar_volume_mn": 1970.175744,
+            "signed_proxy_mn": 1970.175744
           },
           {
-            "date": "07/07/2026",
-            "close": 56.05,
-            "prev_close": 56.14,
-            "change": -0.09000000000000341,
-            "pct": -0.1603135019593933,
-            "volume": 27116510.0,
-            "dollar_volume_mn": 1519.8803855,
-            "signed_proxy_mn": -1519.8803855
+            "date": "07/29/2026",
+            "close": 56.68,
+            "volume": 49038770.0,
+            "pct": -1.5972222222222276,
+            "dollar_volume_mn": 2779.5174836,
+            "signed_proxy_mn": -2779.5174836
           },
           {
-            "date": "07/08/2026",
-            "close": 54.97,
-            "prev_close": 56.05,
-            "change": -1.0799999999999983,
-            "pct": -1.9268510258697562,
-            "volume": 41648110.0,
-            "dollar_volume_mn": 2289.3966066999997,
-            "signed_proxy_mn": -2289.3966066999997
+            "date": "07/30/2026",
+            "close": 57.0,
+            "volume": 33193790.0,
+            "pct": 0.5645730416372619,
+            "dollar_volume_mn": 1892.04603,
+            "signed_proxy_mn": 1892.04603
           }
         ]
       },
-      "cn": "金融",
-      "en": "Financials"
+      "signal": "延续偏强",
+      "sources": {
+        "nasdaq_info": "https://api.nasdaq.com/api/quote/XLF/info?assetclass=etf",
+        "nasdaq_history": "https://api.nasdaq.com/api/quote/XLF/historical?assetclass=etf&fromdate=2026-07-15&todate=2026-07-31&limit=20",
+        "opend": {
+          "update_time": "2026-07-31 04:32:05.652",
+          "close": 57.0,
+          "price": 57.05,
+          "pct": 0.087,
+          "volume": 785.0,
+          "turnover": 44795.411
+        }
+      },
+      "cross_check": {
+        "price_diff_pct": 0.0,
+        "pct_diff_pp": 0.0030000000000000027,
+        "status": "PASS"
+      }
     },
     {
       "symbol": "XLI",
-      "name": "State Street Industrial Select Sector SPDR ETF",
-      "price": 180.42,
-      "change": null,
-      "pct": null,
-      "volume": 2617.035217,
-      "avg20": null,
-      "avg50": 10372673.0,
-      "prev_close": 180.42,
-      "aum_bn": null,
-      "dollar_volume_mn": 0.47216549385114,
-      "signed_proxy_mn": 0,
-      "volume_ratio": null,
-      "timestamp": "Jul 9, 2026 7:58 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/XLI/info?assetclass=etf",
+      "cn": "工业",
+      "en": "Industrials",
+      "company_name": "State Street Industrial Select Sector SPDR ETF",
+      "watch": "工业与国防：GE / CAT / HON / RTX / UNP",
+      "premarket": {
+        "price": 179.8835,
+        "pct": 0.84,
+        "volume": 1246.442276,
+        "dollar_volume_mn": 0.224214399154846,
+        "signed_proxy_mn": 0.224214399154846,
+        "timestamp": "Jul 31, 2026 4:10 AM ET",
+        "market_status": "Pre-Market"
+      },
       "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 180.42,
-        "prev_close": 182.38,
-        "change": -1.960000000000008,
-        "pct": -1.074679241144867,
-        "volume": 7333324.0,
-        "dollar_volume_mn": 1323.07831608,
-        "signed_proxy_mn": -1323.07831608,
-        "source": "https://api.nasdaq.com/api/quote/XLI/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
+        "date": "07/30/2026",
+        "close": 178.39,
+        "prev_close": 176.66,
+        "pct": 0.9792822370655374,
+        "volume": 7368172.0,
+        "dollar_volume_mn": 1314.40820308,
+        "signed_proxy_mn": 1314.40820308,
         "history_5d": [
           {
-            "date": "07/01/2026",
-            "close": 183.36,
-            "prev_close": 185.23,
-            "change": -1.8699999999999761,
-            "pct": -1.0095556875236065,
-            "volume": 8112773.0,
-            "dollar_volume_mn": 1487.5580572800002,
-            "signed_proxy_mn": -1487.5580572800002
+            "date": "07/24/2026",
+            "close": 182.66,
+            "volume": 5507718.0,
+            "pct": 0.395734857645369,
+            "dollar_volume_mn": 1006.03976988,
+            "signed_proxy_mn": 1006.03976988
           },
           {
-            "date": "07/02/2026",
-            "close": 183.91,
-            "prev_close": 183.36,
-            "change": 0.549999999999983,
-            "pct": 0.29995636998253866,
-            "volume": 6535995.0,
-            "dollar_volume_mn": 1202.03484045,
-            "signed_proxy_mn": 1202.03484045
+            "date": "07/27/2026",
+            "close": 183.2,
+            "volume": 6195737.0,
+            "pct": 0.29563122741704806,
+            "dollar_volume_mn": 1135.0590183999998,
+            "signed_proxy_mn": 1135.0590183999998
           },
           {
-            "date": "07/06/2026",
-            "close": 185.56,
-            "prev_close": 183.91,
-            "change": 1.6500000000000057,
-            "pct": 0.8971779674840986,
-            "volume": 6701926.0,
-            "dollar_volume_mn": 1243.6093885599998,
-            "signed_proxy_mn": 1243.6093885599998
+            "date": "07/28/2026",
+            "close": 182.49,
+            "volume": 5708678.0,
+            "pct": -0.38755458515282726,
+            "dollar_volume_mn": 1041.77664822,
+            "signed_proxy_mn": -1041.77664822
           },
           {
-            "date": "07/07/2026",
-            "close": 182.38,
-            "prev_close": 185.56,
-            "change": -3.180000000000007,
-            "pct": -1.7137314076309584,
-            "volume": 7721520.0,
-            "dollar_volume_mn": 1408.2508176,
-            "signed_proxy_mn": -1408.2508176
+            "date": "07/29/2026",
+            "close": 176.66,
+            "volume": 9507073.0,
+            "pct": -3.194695599758901,
+            "dollar_volume_mn": 1679.51951618,
+            "signed_proxy_mn": -1679.51951618
           },
           {
-            "date": "07/08/2026",
-            "close": 180.42,
-            "prev_close": 182.38,
-            "change": -1.960000000000008,
-            "pct": -1.074679241144867,
-            "volume": 7333324.0,
-            "dollar_volume_mn": 1323.07831608,
-            "signed_proxy_mn": -1323.07831608
+            "date": "07/30/2026",
+            "close": 178.39,
+            "volume": 7368172.0,
+            "pct": 0.9792822370655374,
+            "dollar_volume_mn": 1314.40820308,
+            "signed_proxy_mn": 1314.40820308
           }
         ]
       },
-      "cn": "工业",
-      "en": "Industrials"
+      "signal": "延续偏强",
+      "sources": {
+        "nasdaq_info": "https://api.nasdaq.com/api/quote/XLI/info?assetclass=etf",
+        "nasdaq_history": "https://api.nasdaq.com/api/quote/XLI/historical?assetclass=etf&fromdate=2026-07-15&todate=2026-07-31&limit=20",
+        "opend": {
+          "update_time": "2026-07-31 04:10:11.526",
+          "close": 178.39,
+          "price": 179.8835,
+          "pct": 0.837,
+          "volume": 45.0,
+          "turnover": 8048.258
+        }
+      },
+      "cross_check": {
+        "price_diff_pct": 0.0,
+        "pct_diff_pp": 0.0030000000000000027,
+        "status": "PASS"
+      }
     },
     {
       "symbol": "XLY",
-      "name": "State Street Consumer Discretionary Select Sector SPDR ETF",
-      "price": 115.3,
-      "change": null,
-      "pct": null,
-      "volume": 1524.4536,
-      "avg20": null,
-      "avg50": 10733169.0,
-      "prev_close": 115.3,
-      "aum_bn": null,
-      "dollar_volume_mn": 0.17576950008,
-      "signed_proxy_mn": 0,
-      "volume_ratio": null,
-      "timestamp": "Jul 9, 2026 7:58 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/XLY/info?assetclass=etf",
+      "cn": "可选消费",
+      "en": "Consumer Discretionary",
+      "company_name": "State Street Consumer Discretionary Select Sector SPDR ETF",
+      "watch": "消费与电商：AMZN / TSLA / HD / MCD",
+      "premarket": {
+        "price": 116.32,
+        "pct": 3.5,
+        "volume": 3765.706148,
+        "dollar_volume_mn": 0.43802693913536,
+        "signed_proxy_mn": 0.43802693913536,
+        "timestamp": "Jul 31, 2026 4:33 AM ET",
+        "market_status": "Pre-Market"
+      },
       "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 115.3,
-        "prev_close": 117.39,
-        "change": -2.0900000000000034,
-        "pct": -1.7803901524831787,
-        "volume": 15042710.0,
-        "dollar_volume_mn": 1734.424463,
-        "signed_proxy_mn": -1734.424463,
-        "source": "https://api.nasdaq.com/api/quote/XLY/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
+        "date": "07/30/2026",
+        "close": 112.39,
+        "prev_close": 111.61,
+        "pct": 0.6988621091300162,
+        "volume": 8074561.0,
+        "dollar_volume_mn": 907.49991079,
+        "signed_proxy_mn": 907.49991079,
         "history_5d": [
           {
-            "date": "07/01/2026",
-            "close": 118.09,
-            "prev_close": 117.28,
-            "change": 0.8100000000000023,
-            "pct": 0.6906548431105066,
-            "volume": 9864277.0,
-            "dollar_volume_mn": 1164.87247093,
-            "signed_proxy_mn": 1164.87247093
+            "date": "07/24/2026",
+            "close": 109.41,
+            "volume": 8210826.0,
+            "pct": 0.5976461934534605,
+            "dollar_volume_mn": 898.34647266,
+            "signed_proxy_mn": 898.34647266
           },
           {
-            "date": "07/02/2026",
-            "close": 117.12,
-            "prev_close": 118.09,
-            "change": -0.9699999999999989,
-            "pct": -0.8214074011347267,
-            "volume": 10884630.0,
-            "dollar_volume_mn": 1274.8078656000002,
-            "signed_proxy_mn": -1274.8078656000002
+            "date": "07/27/2026",
+            "close": 110.84,
+            "volume": 6979358.0,
+            "pct": 1.30701032812357,
+            "dollar_volume_mn": 773.59204072,
+            "signed_proxy_mn": 773.59204072
           },
           {
-            "date": "07/06/2026",
-            "close": 118.01,
-            "prev_close": 117.12,
-            "change": 0.8900000000000006,
-            "pct": 0.7599043715846999,
-            "volume": 9063611.0,
-            "dollar_volume_mn": 1069.59673411,
-            "signed_proxy_mn": 1069.59673411
+            "date": "07/28/2026",
+            "close": 112.48,
+            "volume": 6018139.0,
+            "pct": 1.479610249007579,
+            "dollar_volume_mn": 676.9202747200001,
+            "signed_proxy_mn": 676.9202747200001
           },
           {
-            "date": "07/07/2026",
-            "close": 117.39,
-            "prev_close": 118.01,
-            "change": -0.6200000000000045,
-            "pct": -0.5253792051521096,
-            "volume": 9191388.0,
-            "dollar_volume_mn": 1078.97703732,
-            "signed_proxy_mn": -1078.97703732
+            "date": "07/29/2026",
+            "close": 111.61,
+            "volume": 7534395.0,
+            "pct": -0.7734708392603151,
+            "dollar_volume_mn": 840.91382595,
+            "signed_proxy_mn": -840.91382595
           },
           {
-            "date": "07/08/2026",
-            "close": 115.3,
-            "prev_close": 117.39,
-            "change": -2.0900000000000034,
-            "pct": -1.7803901524831787,
-            "volume": 15042710.0,
-            "dollar_volume_mn": 1734.424463,
-            "signed_proxy_mn": -1734.424463
+            "date": "07/30/2026",
+            "close": 112.39,
+            "volume": 8074561.0,
+            "pct": 0.6988621091300162,
+            "dollar_volume_mn": 907.49991079,
+            "signed_proxy_mn": 907.49991079
           }
         ]
       },
-      "cn": "可选消费",
-      "en": "Consumer Discretionary"
+      "signal": "延续偏强",
+      "sources": {
+        "nasdaq_info": "https://api.nasdaq.com/api/quote/XLY/info?assetclass=etf",
+        "nasdaq_history": "https://api.nasdaq.com/api/quote/XLY/historical?assetclass=etf&fromdate=2026-07-15&todate=2026-07-31&limit=20",
+        "opend": {
+          "update_time": "2026-07-31 04:33:18.460",
+          "close": 112.39,
+          "price": 116.32,
+          "pct": 3.496,
+          "volume": 333.0,
+          "turnover": 38645.078
+        }
+      },
+      "cross_check": {
+        "price_diff_pct": 0.0,
+        "pct_diff_pp": 0.0040000000000000036,
+        "status": "PASS"
+      }
     },
     {
       "symbol": "XLV",
-      "name": "State Street Health Care Select Sector SPDR ETF",
-      "price": 162.1612,
-      "change": -0.1388,
-      "pct": -0.09,
-      "volume": 15705.347313,
-      "avg20": null,
-      "avg50": 10273670.0,
-      "prev_close": 162.3,
-      "aum_bn": null,
-      "dollar_volume_mn": 2.5467979666928557,
-      "signed_proxy_mn": -2.5467979666928557,
-      "volume_ratio": null,
-      "timestamp": "Jul 9, 2026 8:00 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/XLV/info?assetclass=etf",
+      "cn": "医疗保健",
+      "en": "Health Care",
+      "company_name": "State Street Health Care Select Sector SPDR ETF",
+      "watch": "医药与医疗：LLY / UNH / JNJ / ABBV",
+      "premarket": {
+        "price": 162.94,
+        "pct": -0.35,
+        "volume": 3648.28194,
+        "dollar_volume_mn": 0.5944510593036,
+        "signed_proxy_mn": -0.5944510593036,
+        "timestamp": "Jul 31, 2026 4:36 AM ET",
+        "market_status": "Pre-Market"
+      },
       "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 162.3,
-        "prev_close": 164.44,
-        "change": -2.1399999999999864,
-        "pct": -1.3013865239600988,
-        "volume": 9287864.0,
-        "dollar_volume_mn": 1507.4203272,
-        "signed_proxy_mn": -1507.4203272,
-        "source": "https://api.nasdaq.com/api/quote/XLV/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
+        "date": "07/30/2026",
+        "close": 163.52,
+        "prev_close": 166.24,
+        "pct": -1.6361886429258843,
+        "volume": 12483480.0,
+        "dollar_volume_mn": 2041.2986496,
+        "signed_proxy_mn": -2041.2986496,
         "history_5d": [
           {
-            "date": "07/01/2026",
-            "close": 159.54,
-            "prev_close": 158.66,
-            "change": 0.8799999999999955,
-            "pct": 0.5546451531576928,
-            "volume": 10123740.0,
-            "dollar_volume_mn": 1615.1414796,
-            "signed_proxy_mn": 1615.1414796
+            "date": "07/24/2026",
+            "close": 162.57,
+            "volume": 7647910.0,
+            "pct": 0.6999504459861194,
+            "dollar_volume_mn": 1243.3207287,
+            "signed_proxy_mn": 1243.3207287
           },
           {
-            "date": "07/02/2026",
-            "close": 163.74,
-            "prev_close": 159.54,
-            "change": 4.200000000000017,
-            "pct": 2.632568634825133,
-            "volume": 14722270.0,
-            "dollar_volume_mn": 2410.6244898,
-            "signed_proxy_mn": 2410.6244898
+            "date": "07/27/2026",
+            "close": 163.4,
+            "volume": 8064899.0,
+            "pct": 0.5105493018392249,
+            "dollar_volume_mn": 1317.8044966000002,
+            "signed_proxy_mn": 1317.8044966000002
           },
           {
-            "date": "07/06/2026",
-            "close": 161.96,
-            "prev_close": 163.74,
-            "change": -1.7800000000000011,
-            "pct": -1.0870892878954446,
-            "volume": 16123450.0,
-            "dollar_volume_mn": 2611.353962,
-            "signed_proxy_mn": -2611.353962
+            "date": "07/28/2026",
+            "close": 167.26,
+            "volume": 12774750.0,
+            "pct": 2.362301101591169,
+            "dollar_volume_mn": 2136.704685,
+            "signed_proxy_mn": 2136.704685
           },
           {
-            "date": "07/07/2026",
-            "close": 164.44,
-            "prev_close": 161.96,
-            "change": 2.4799999999999898,
-            "pct": 1.531242282044943,
-            "volume": 12143510.0,
-            "dollar_volume_mn": 1996.8787843999999,
-            "signed_proxy_mn": 1996.8787843999999
+            "date": "07/29/2026",
+            "close": 166.24,
+            "volume": 11658260.0,
+            "pct": -0.6098290087289127,
+            "dollar_volume_mn": 1938.0691424000001,
+            "signed_proxy_mn": -1938.0691424000001
           },
           {
-            "date": "07/08/2026",
-            "close": 162.3,
-            "prev_close": 164.44,
-            "change": -2.1399999999999864,
-            "pct": -1.3013865239600988,
-            "volume": 9287864.0,
-            "dollar_volume_mn": 1507.4203272,
-            "signed_proxy_mn": -1507.4203272
+            "date": "07/30/2026",
+            "close": 163.52,
+            "volume": 12483480.0,
+            "pct": -1.6361886429258843,
+            "dollar_volume_mn": 2041.2986496,
+            "signed_proxy_mn": -2041.2986496
           }
         ]
       },
-      "cn": "医疗保健",
-      "en": "Health Care"
+      "signal": "延续偏弱",
+      "sources": {
+        "nasdaq_info": "https://api.nasdaq.com/api/quote/XLV/info?assetclass=etf",
+        "nasdaq_history": "https://api.nasdaq.com/api/quote/XLV/historical?assetclass=etf&fromdate=2026-07-15&todate=2026-07-31&limit=20",
+        "opend": {
+          "update_time": "2026-07-31 04:37:14.024",
+          "close": 163.52,
+          "price": 162.94,
+          "pct": -0.354,
+          "volume": 656.0,
+          "turnover": 106898.771
+        }
+      },
+      "cross_check": {
+        "price_diff_pct": 0.0,
+        "pct_diff_pp": 0.0040000000000000036,
+        "status": "PASS"
+      }
     },
     {
       "symbol": "XLE",
-      "name": "State Street Energy Select Sector SPDR ETF",
-      "price": 55.4688,
-      "change": -0.1312,
-      "pct": -0.24,
-      "volume": 82772.035813,
-      "avg20": null,
-      "avg50": 43841309.0,
-      "prev_close": 55.6,
-      "aum_bn": null,
-      "dollar_volume_mn": 4.591265500104134,
-      "signed_proxy_mn": -4.591265500104134,
-      "volume_ratio": null,
-      "timestamp": "Jul 9, 2026 8:02 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/XLE/info?assetclass=etf",
+      "cn": "能源",
+      "en": "Energy",
+      "company_name": "State Street Energy Select Sector SPDR ETF",
+      "watch": "油气能源：XOM / CVX / COP / SLB",
+      "premarket": {
+        "price": 58.7215,
+        "pct": -0.4,
+        "volume": 7912.089799,
+        "dollar_volume_mn": 0.4646097811319785,
+        "signed_proxy_mn": -0.4646097811319785,
+        "timestamp": "Jul 31, 2026 4:37 AM ET",
+        "market_status": "Pre-Market"
+      },
       "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 55.6,
-        "prev_close": 54.64,
-        "change": 0.9600000000000009,
-        "pct": 1.756954612005858,
-        "volume": 39741350.0,
-        "dollar_volume_mn": 2209.61906,
-        "signed_proxy_mn": 2209.61906,
-        "source": "https://api.nasdaq.com/api/quote/XLE/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
+        "date": "07/30/2026",
+        "close": 58.96,
+        "prev_close": 58.65,
+        "pct": 0.5285592497868752,
+        "volume": 23045720.0,
+        "dollar_volume_mn": 1358.7756512,
+        "signed_proxy_mn": 1358.7756512,
         "history_5d": [
           {
-            "date": "07/01/2026",
-            "close": 52.81,
-            "prev_close": 53.11,
-            "change": -0.29999999999999716,
-            "pct": -0.5648653737525836,
-            "volume": 33662700.0,
-            "dollar_volume_mn": 1777.727187,
-            "signed_proxy_mn": -1777.727187
+            "date": "07/24/2026",
+            "close": 59.62,
+            "volume": 34181900.0,
+            "pct": 0.4041764904008094,
+            "dollar_volume_mn": 2037.924878,
+            "signed_proxy_mn": 2037.924878
           },
           {
-            "date": "07/02/2026",
-            "close": 53.22,
-            "prev_close": 52.81,
-            "change": 0.4099999999999966,
-            "pct": 0.7763681120999746,
-            "volume": 28538220.0,
-            "dollar_volume_mn": 1518.8040683999998,
-            "signed_proxy_mn": 1518.8040683999998
+            "date": "07/27/2026",
+            "close": 58.36,
+            "volume": 33826360.0,
+            "pct": -2.113384770211335,
+            "dollar_volume_mn": 1974.1063695999999,
+            "signed_proxy_mn": -1974.1063695999999
           },
           {
-            "date": "07/06/2026",
-            "close": 53.13,
-            "prev_close": 53.22,
-            "change": -0.0899999999999963,
-            "pct": -0.169109357384435,
-            "volume": 24735260.0,
-            "dollar_volume_mn": 1314.1843638,
-            "signed_proxy_mn": -1314.1843638
+            "date": "07/28/2026",
+            "close": 57.57,
+            "volume": 27800810.0,
+            "pct": -1.353666895133654,
+            "dollar_volume_mn": 1600.4926317,
+            "signed_proxy_mn": -1600.4926317
           },
           {
-            "date": "07/07/2026",
-            "close": 54.64,
-            "prev_close": 53.13,
-            "change": 1.509999999999998,
-            "pct": 2.842085450781099,
-            "volume": 41833650.0,
-            "dollar_volume_mn": 2285.790636,
-            "signed_proxy_mn": 2285.790636
+            "date": "07/29/2026",
+            "close": 58.65,
+            "volume": 34175580.0,
+            "pct": 1.8759770713913548,
+            "dollar_volume_mn": 2004.397767,
+            "signed_proxy_mn": 2004.397767
           },
           {
-            "date": "07/08/2026",
-            "close": 55.6,
-            "prev_close": 54.64,
-            "change": 0.9600000000000009,
-            "pct": 1.756954612005858,
-            "volume": 39741350.0,
-            "dollar_volume_mn": 2209.61906,
-            "signed_proxy_mn": 2209.61906
+            "date": "07/30/2026",
+            "close": 58.96,
+            "volume": 23045720.0,
+            "pct": 0.5285592497868752,
+            "dollar_volume_mn": 1358.7756512,
+            "signed_proxy_mn": 1358.7756512
           }
         ]
       },
-      "cn": "能源",
-      "en": "Energy"
+      "signal": "盘前转弱",
+      "sources": {
+        "nasdaq_info": "https://api.nasdaq.com/api/quote/XLE/info?assetclass=etf",
+        "nasdaq_history": "https://api.nasdaq.com/api/quote/XLE/historical?assetclass=etf&fromdate=2026-07-15&todate=2026-07-31&limit=20",
+        "opend": {
+          "update_time": "2026-07-31 04:37:06.625",
+          "close": 58.96,
+          "price": 58.7215,
+          "pct": -0.404,
+          "volume": 577.0,
+          "turnover": 33835.91
+        }
+      },
+      "cross_check": {
+        "price_diff_pct": 0.0,
+        "pct_diff_pp": 0.0040000000000000036,
+        "status": "PASS"
+      }
     },
     {
       "symbol": "XLP",
-      "name": "State Street Consumer Staples Select Sector SPDR ETF",
-      "price": 84.07,
-      "change": -0.32,
-      "pct": -0.38,
-      "volume": 4852.000807,
-      "avg20": null,
-      "avg50": 13252702.0,
-      "prev_close": 84.39,
-      "aum_bn": null,
-      "dollar_volume_mn": 0.40790770784449,
-      "signed_proxy_mn": -0.40790770784449,
-      "volume_ratio": null,
-      "timestamp": "Jul 9, 2026 8:02 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/XLP/info?assetclass=etf",
+      "cn": "必需消费",
+      "en": "Consumer Staples",
+      "company_name": "State Street Consumer Staples Select Sector SPDR ETF",
+      "watch": "防御消费：COST / WMT / PG / KO / PEP",
+      "premarket": {
+        "price": 85.31,
+        "pct": -0.19,
+        "volume": 270.351341,
+        "dollar_volume_mn": 0.02306367290071,
+        "signed_proxy_mn": -0.02306367290071,
+        "timestamp": "Jul 31, 2026 4:18 AM ET",
+        "market_status": "Pre-Market"
+      },
       "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 84.39,
-        "prev_close": 84.86,
-        "change": -0.46999999999999886,
-        "pct": -0.5538534056092375,
-        "volume": 10998510.0,
-        "dollar_volume_mn": 928.1642588999999,
-        "signed_proxy_mn": -928.1642588999999,
-        "source": "https://api.nasdaq.com/api/quote/XLP/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
+        "date": "07/30/2026",
+        "close": 85.47,
+        "prev_close": 87.36,
+        "pct": -2.163461538461542,
+        "volume": 16609080.0,
+        "dollar_volume_mn": 1419.5780676,
+        "signed_proxy_mn": -1419.5780676,
         "history_5d": [
           {
-            "date": "07/01/2026",
-            "close": 83.3,
-            "prev_close": 83.07,
-            "change": 0.23000000000000398,
-            "pct": 0.27687492476225356,
-            "volume": 12210130.0,
-            "dollar_volume_mn": 1017.103829,
-            "signed_proxy_mn": 1017.103829
+            "date": "07/24/2026",
+            "close": 84.13,
+            "volume": 9634563.0,
+            "pct": 1.1056363417858428,
+            "dollar_volume_mn": 810.5557851899999,
+            "signed_proxy_mn": 810.5557851899999
           },
           {
-            "date": "07/02/2026",
-            "close": 84.99,
-            "prev_close": 83.3,
-            "change": 1.6899999999999977,
-            "pct": 2.028811524609841,
-            "volume": 16706940.0,
-            "dollar_volume_mn": 1419.9228306,
-            "signed_proxy_mn": 1419.9228306
+            "date": "07/27/2026",
+            "close": 85.36,
+            "volume": 12244260.0,
+            "pct": 1.462023059550699,
+            "dollar_volume_mn": 1045.1700336000001,
+            "signed_proxy_mn": 1045.1700336000001
           },
           {
-            "date": "07/06/2026",
-            "close": 84.1,
-            "prev_close": 84.99,
-            "change": -0.8900000000000006,
-            "pct": -1.0471820214142846,
-            "volume": 13176600.0,
-            "dollar_volume_mn": 1108.15206,
-            "signed_proxy_mn": -1108.15206
+            "date": "07/28/2026",
+            "close": 87.06,
+            "volume": 22253030.0,
+            "pct": 1.991565135895046,
+            "dollar_volume_mn": 1937.3487917999998,
+            "signed_proxy_mn": 1937.3487917999998
           },
           {
-            "date": "07/07/2026",
-            "close": 84.86,
-            "prev_close": 84.1,
-            "change": 0.7600000000000051,
-            "pct": 0.9036860879904937,
-            "volume": 13234970.0,
-            "dollar_volume_mn": 1123.1195542,
-            "signed_proxy_mn": 1123.1195542
+            "date": "07/29/2026",
+            "close": 87.36,
+            "volume": 14869130.0,
+            "pct": 0.344589937973816,
+            "dollar_volume_mn": 1298.9671968,
+            "signed_proxy_mn": 1298.9671968
           },
           {
-            "date": "07/08/2026",
-            "close": 84.39,
-            "prev_close": 84.86,
-            "change": -0.46999999999999886,
-            "pct": -0.5538534056092375,
-            "volume": 10998510.0,
-            "dollar_volume_mn": 928.1642588999999,
-            "signed_proxy_mn": -928.1642588999999
+            "date": "07/30/2026",
+            "close": 85.47,
+            "volume": 16609080.0,
+            "pct": -2.163461538461542,
+            "dollar_volume_mn": 1419.5780676,
+            "signed_proxy_mn": -1419.5780676
           }
         ]
       },
-      "cn": "必需消费",
-      "en": "Consumer Staples"
+      "signal": "延续偏弱",
+      "sources": {
+        "nasdaq_info": "https://api.nasdaq.com/api/quote/XLP/info?assetclass=etf",
+        "nasdaq_history": "https://api.nasdaq.com/api/quote/XLP/historical?assetclass=etf&fromdate=2026-07-15&todate=2026-07-31&limit=20",
+        "opend": {
+          "update_time": "2026-07-31 04:18:45.241",
+          "close": 85.47,
+          "price": 85.31,
+          "pct": -0.187,
+          "volume": 28.0,
+          "turnover": 2393.289
+        }
+      },
+      "cross_check": {
+        "price_diff_pct": 0.0,
+        "pct_diff_pp": 0.0030000000000000027,
+        "status": "PASS"
+      }
     },
     {
       "symbol": "XLB",
-      "name": "State Street Materials Select Sector SPDR ETF",
-      "price": 50.49,
-      "change": 0.33,
-      "pct": 0.66,
-      "volume": 814.9874,
-      "avg20": null,
-      "avg50": 12419027.0,
-      "prev_close": 50.16,
-      "aum_bn": null,
-      "dollar_volume_mn": 0.041148713826,
-      "signed_proxy_mn": 0.041148713826,
-      "volume_ratio": null,
-      "timestamp": "Jul 9, 2026 8:00 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/XLB/info?assetclass=etf",
+      "cn": "材料",
+      "en": "Materials",
+      "company_name": "State Street Materials Select Sector SPDR ETF",
+      "watch": "材料与矿业：LIN / SHW / FCX / NEM",
+      "premarket": {
+        "price": 51.4,
+        "pct": -0.46,
+        "volume": 10.0,
+        "dollar_volume_mn": 0.000514,
+        "signed_proxy_mn": -0.000514,
+        "timestamp": "Jul 31, 2026 4:00 AM ET",
+        "market_status": "Pre-Market"
+      },
       "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 50.16,
-        "prev_close": 51.51,
-        "change": -1.3500000000000014,
-        "pct": -2.620850320326153,
-        "volume": 13282520.0,
-        "dollar_volume_mn": 666.2512032,
-        "signed_proxy_mn": -666.2512032,
-        "source": "https://api.nasdaq.com/api/quote/XLB/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
+        "date": "07/30/2026",
+        "close": 51.64,
+        "prev_close": 51.74,
+        "pct": -0.19327406262079627,
+        "volume": 10866900.0,
+        "dollar_volume_mn": 561.166716,
+        "signed_proxy_mn": -561.166716,
         "history_5d": [
           {
-            "date": "07/01/2026",
-            "close": 51.02,
-            "prev_close": 50.83,
-            "change": 0.19000000000000483,
-            "pct": 0.3737950029510227,
-            "volume": 14129150.0,
-            "dollar_volume_mn": 720.869233,
-            "signed_proxy_mn": 720.869233
+            "date": "07/24/2026",
+            "close": 51.26,
+            "volume": 12192770.0,
+            "pct": 1.9288128852654518,
+            "dollar_volume_mn": 625.0013902,
+            "signed_proxy_mn": 625.0013902
           },
           {
-            "date": "07/02/2026",
-            "close": 52.01,
-            "prev_close": 51.02,
-            "change": 0.9899999999999949,
-            "pct": 1.9404155233241767,
-            "volume": 12375730.0,
-            "dollar_volume_mn": 643.6617173,
-            "signed_proxy_mn": 643.6617173
+            "date": "07/27/2026",
+            "close": 51.39,
+            "volume": 8704309.0,
+            "pct": 0.25360905189231175,
+            "dollar_volume_mn": 447.31443951,
+            "signed_proxy_mn": 447.31443951
           },
           {
-            "date": "07/06/2026",
-            "close": 51.98,
-            "prev_close": 52.01,
-            "change": -0.030000000000001137,
-            "pct": -0.057681215150934696,
-            "volume": 20090470.0,
-            "dollar_volume_mn": 1044.3026306,
-            "signed_proxy_mn": -1044.3026306
+            "date": "07/28/2026",
+            "close": 52.34,
+            "volume": 11774860.0,
+            "pct": 1.8486086787312672,
+            "dollar_volume_mn": 616.2961724,
+            "signed_proxy_mn": 616.2961724
           },
           {
-            "date": "07/07/2026",
-            "close": 51.51,
-            "prev_close": 51.98,
-            "change": -0.46999999999999886,
-            "pct": -0.9041939207387436,
-            "volume": 12304980.0,
-            "dollar_volume_mn": 633.8295198,
-            "signed_proxy_mn": -633.8295198
+            "date": "07/29/2026",
+            "close": 51.74,
+            "volume": 13744760.0,
+            "pct": -1.1463507833397002,
+            "dollar_volume_mn": 711.1538823999999,
+            "signed_proxy_mn": -711.1538823999999
           },
           {
-            "date": "07/08/2026",
-            "close": 50.16,
-            "prev_close": 51.51,
-            "change": -1.3500000000000014,
-            "pct": -2.620850320326153,
-            "volume": 13282520.0,
-            "dollar_volume_mn": 666.2512032,
-            "signed_proxy_mn": -666.2512032
+            "date": "07/30/2026",
+            "close": 51.64,
+            "volume": 10866900.0,
+            "pct": -0.19327406262079627,
+            "dollar_volume_mn": 561.166716,
+            "signed_proxy_mn": -561.166716
           }
         ]
       },
-      "cn": "材料",
-      "en": "Materials"
+      "signal": "盘前清淡",
+      "sources": {
+        "nasdaq_info": "https://api.nasdaq.com/api/quote/XLB/info?assetclass=etf",
+        "nasdaq_history": "https://api.nasdaq.com/api/quote/XLB/historical?assetclass=etf&fromdate=2026-07-15&todate=2026-07-31&limit=20",
+        "opend": {
+          "update_time": "2026-07-31 04:00:17.506",
+          "close": 51.64,
+          "price": 51.4,
+          "pct": -0.464,
+          "volume": 10.0,
+          "turnover": 514.0
+        }
+      },
+      "cross_check": {
+        "price_diff_pct": 0.0,
+        "pct_diff_pp": 0.0040000000000000036,
+        "status": "PASS"
+      }
     },
     {
       "symbol": "XLU",
-      "name": "State Street Utilities Select Sector SPDR ETF",
-      "price": 45.36,
-      "change": null,
-      "pct": null,
-      "volume": 5364.242172,
-      "avg20": null,
-      "avg50": 26557945.0,
-      "prev_close": 45.36,
-      "aum_bn": null,
-      "dollar_volume_mn": 0.24332202492192,
-      "signed_proxy_mn": 0,
-      "volume_ratio": null,
-      "timestamp": "Jul 9, 2026 7:57 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/XLU/info?assetclass=etf",
+      "cn": "公用事业",
+      "en": "Utilities",
+      "company_name": "State Street Utilities Select Sector SPDR ETF",
+      "watch": "电力公用：NEE / SO / DUK / CEG / VST",
+      "premarket": {
+        "price": 44.8,
+        "pct": 0.31,
+        "volume": 1508.29986,
+        "dollar_volume_mn": 0.06757183372799999,
+        "signed_proxy_mn": 0.06757183372799999,
+        "timestamp": "Jul 31, 2026 4:35 AM ET",
+        "market_status": "Pre-Market"
+      },
       "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 45.36,
-        "prev_close": 45.7,
-        "change": -0.3400000000000034,
-        "pct": -0.7439824945295479,
-        "volume": 14863170.0,
-        "dollar_volume_mn": 674.1933912000001,
-        "signed_proxy_mn": -674.1933912000001,
-        "source": "https://api.nasdaq.com/api/quote/XLU/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
+        "date": "07/30/2026",
+        "close": 44.66,
+        "prev_close": 44.91,
+        "pct": -0.5566688933422381,
+        "volume": 23430330.0,
+        "dollar_volume_mn": 1046.3985378,
+        "signed_proxy_mn": -1046.3985378,
         "history_5d": [
           {
-            "date": "07/01/2026",
-            "close": 44.77,
-            "prev_close": 45.34,
-            "change": -0.5700000000000003,
-            "pct": -1.257168063520071,
-            "volume": 29493060.0,
-            "dollar_volume_mn": 1320.4042962,
-            "signed_proxy_mn": -1320.4042962
+            "date": "07/24/2026",
+            "close": 46.29,
+            "volume": 16108990.0,
+            "pct": 0.216497077289457,
+            "dollar_volume_mn": 745.6851471,
+            "signed_proxy_mn": 745.6851471
           },
           {
-            "date": "07/02/2026",
-            "close": 45.76,
-            "prev_close": 44.77,
-            "change": 0.9899999999999949,
-            "pct": 2.2113022113021996,
-            "volume": 24335420.0,
-            "dollar_volume_mn": 1113.5888192,
-            "signed_proxy_mn": 1113.5888192
+            "date": "07/27/2026",
+            "close": 45.68,
+            "volume": 16609570.0,
+            "pct": -1.317779217973647,
+            "dollar_volume_mn": 758.7251576,
+            "signed_proxy_mn": -758.7251576
           },
           {
-            "date": "07/06/2026",
-            "close": 45.3,
-            "prev_close": 45.76,
-            "change": -0.46000000000000085,
-            "pct": -1.0052447552447572,
-            "volume": 19176600.0,
-            "dollar_volume_mn": 868.69998,
-            "signed_proxy_mn": -868.69998
+            "date": "07/28/2026",
+            "close": 45.52,
+            "volume": 16414450.0,
+            "pct": -0.3502626970227629,
+            "dollar_volume_mn": 747.185764,
+            "signed_proxy_mn": -747.185764
           },
           {
-            "date": "07/07/2026",
-            "close": 45.7,
-            "prev_close": 45.3,
-            "change": 0.4000000000000057,
-            "pct": 0.8830022075055314,
-            "volume": 18962730.0,
-            "dollar_volume_mn": 866.596761,
-            "signed_proxy_mn": 866.596761
+            "date": "07/29/2026",
+            "close": 44.91,
+            "volume": 23653220.0,
+            "pct": -1.340070298769791,
+            "dollar_volume_mn": 1062.2661102,
+            "signed_proxy_mn": -1062.2661102
           },
           {
-            "date": "07/08/2026",
-            "close": 45.36,
-            "prev_close": 45.7,
-            "change": -0.3400000000000034,
-            "pct": -0.7439824945295479,
-            "volume": 14863170.0,
-            "dollar_volume_mn": 674.1933912000001,
-            "signed_proxy_mn": -674.1933912000001
+            "date": "07/30/2026",
+            "close": 44.66,
+            "volume": 23430330.0,
+            "pct": -0.5566688933422381,
+            "dollar_volume_mn": 1046.3985378,
+            "signed_proxy_mn": -1046.3985378
           }
         ]
       },
-      "cn": "公用事业",
-      "en": "Utilities"
+      "signal": "盘前修复",
+      "sources": {
+        "nasdaq_info": "https://api.nasdaq.com/api/quote/XLU/info?assetclass=etf",
+        "nasdaq_history": "https://api.nasdaq.com/api/quote/XLU/historical?assetclass=etf&fromdate=2026-07-15&todate=2026-07-31&limit=20",
+        "opend": {
+          "update_time": "2026-07-31 04:35:59.283",
+          "close": 44.66,
+          "price": 44.8,
+          "pct": 0.313,
+          "volume": 311.0,
+          "turnover": 13930.4
+        }
+      },
+      "cross_check": {
+        "price_diff_pct": 0.0,
+        "pct_diff_pp": 0.0030000000000000027,
+        "status": "PASS"
+      }
     },
     {
       "symbol": "XLRE",
-      "name": "State Street Real Estate Select Sector SPDR ETF",
-      "price": 44.15,
-      "change": null,
-      "pct": null,
-      "volume": 4571.4908,
-      "avg20": null,
-      "avg50": 6423965.0,
-      "prev_close": 44.15,
-      "aum_bn": null,
-      "dollar_volume_mn": 0.20183131882,
-      "signed_proxy_mn": 0,
-      "volume_ratio": null,
-      "timestamp": "Jul 9, 2026 7:58 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/XLRE/info?assetclass=etf",
-      "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 44.15,
-        "prev_close": 44.89,
-        "change": -0.740000000000002,
-        "pct": -1.6484740476720918,
-        "volume": 3957413.0,
-        "dollar_volume_mn": 174.71978395,
-        "signed_proxy_mn": -174.71978395,
-        "source": "https://api.nasdaq.com/api/quote/XLRE/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
-        "history_5d": [
-          {
-            "date": "07/01/2026",
-            "close": 44.18,
-            "prev_close": 44.03,
-            "change": 0.14999999999999858,
-            "pct": 0.34067681126504334,
-            "volume": 8073002.0,
-            "dollar_volume_mn": 356.66522836,
-            "signed_proxy_mn": 356.66522836
-          },
-          {
-            "date": "07/02/2026",
-            "close": 44.68,
-            "prev_close": 44.18,
-            "change": 0.5,
-            "pct": 1.131733816206428,
-            "volume": 5503053.0,
-            "dollar_volume_mn": 245.87640804,
-            "signed_proxy_mn": 245.87640804
-          },
-          {
-            "date": "07/06/2026",
-            "close": 44.29,
-            "prev_close": 44.68,
-            "change": -0.39000000000000057,
-            "pct": -0.8728737690241732,
-            "volume": 7036572.0,
-            "dollar_volume_mn": 311.64977388,
-            "signed_proxy_mn": -311.64977388
-          },
-          {
-            "date": "07/07/2026",
-            "close": 44.89,
-            "prev_close": 44.29,
-            "change": 0.6000000000000014,
-            "pct": 1.3547076089410734,
-            "volume": 4836593.0,
-            "dollar_volume_mn": 217.11465977,
-            "signed_proxy_mn": 217.11465977
-          },
-          {
-            "date": "07/08/2026",
-            "close": 44.15,
-            "prev_close": 44.89,
-            "change": -0.740000000000002,
-            "pct": -1.6484740476720918,
-            "volume": 3957413.0,
-            "dollar_volume_mn": 174.71978395,
-            "signed_proxy_mn": -174.71978395
-          }
-        ]
-      },
       "cn": "房地产",
-      "en": "Real Estate"
-    }
-  ],
-  "focus": [
-    {
-      "symbol": "SMH",
-      "name": "VanEck Semiconductor ETF",
-      "price": 610.53,
-      "change": 17.53,
-      "pct": 2.96,
-      "volume": 209910.359051,
-      "avg20": null,
-      "avg50": 8688618.0,
-      "prev_close": 593.0,
-      "aum_bn": null,
-      "dollar_volume_mn": 128.15657151140704,
-      "signed_proxy_mn": 128.15657151140704,
-      "volume_ratio": null,
-      "timestamp": "Jul 9, 2026 8:03 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/SMH/info?assetclass=etf",
+      "en": "Real Estate",
+      "company_name": "State Street Real Estate Select Sector SPDR ETF",
+      "watch": "地产与REITs：PLD / AMT / EQIX / CCI",
+      "premarket": {
+        "price": 45.42,
+        "pct": 0.26,
+        "volume": 47.0,
+        "dollar_volume_mn": 0.0021347400000000004,
+        "signed_proxy_mn": 0.0021347400000000004,
+        "timestamp": "Jul 31, 2026 4:00 AM ET",
+        "market_status": "Pre-Market"
+      },
       "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 593.0,
-        "prev_close": 581.45,
-        "change": 11.549999999999955,
-        "pct": 1.9864132771519396,
-        "volume": 9521328.0,
-        "dollar_volume_mn": 5646.147504,
-        "signed_proxy_mn": 5646.147504,
-        "source": "https://api.nasdaq.com/api/quote/SMH/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
+        "date": "07/30/2026",
+        "close": 45.3,
+        "prev_close": 45.96,
+        "pct": -1.436031331592702,
+        "volume": 6483671.0,
+        "dollar_volume_mn": 293.7102962999999,
+        "signed_proxy_mn": -293.7102962999999,
         "history_5d": [
           {
-            "date": "07/01/2026",
-            "close": 620.46,
-            "prev_close": 655.89,
-            "change": -35.42999999999995,
-            "pct": -5.401820427205774,
-            "volume": 13424670.0,
-            "dollar_volume_mn": 8329.470748200001,
-            "signed_proxy_mn": -8329.470748200001
+            "date": "07/24/2026",
+            "close": 45.95,
+            "volume": 4737182.0,
+            "pct": 2.2246941045606317,
+            "dollar_volume_mn": 217.67351290000002,
+            "signed_proxy_mn": 217.67351290000002
           },
           {
-            "date": "07/02/2026",
-            "close": 592.29,
-            "prev_close": 620.46,
-            "change": -28.170000000000073,
-            "pct": -4.540179866550635,
-            "volume": 21334060.0,
-            "dollar_volume_mn": 12635.9503974,
-            "signed_proxy_mn": -12635.9503974
+            "date": "07/27/2026",
+            "close": 45.76,
+            "volume": 4216390.0,
+            "pct": -0.413492927094683,
+            "dollar_volume_mn": 192.9420064,
+            "signed_proxy_mn": -192.9420064
           },
           {
-            "date": "07/06/2026",
-            "close": 604.3,
-            "prev_close": 592.29,
-            "change": 12.009999999999991,
-            "pct": 2.0277229060088793,
-            "volume": 9820715.0,
-            "dollar_volume_mn": 5934.6580745,
-            "signed_proxy_mn": 5934.6580745
+            "date": "07/28/2026",
+            "close": 46.01,
+            "volume": 5833973.0,
+            "pct": 0.5463286713286664,
+            "dollar_volume_mn": 268.42109773,
+            "signed_proxy_mn": 268.42109773
           },
           {
-            "date": "07/07/2026",
-            "close": 581.45,
-            "prev_close": 604.3,
-            "change": -22.84999999999991,
-            "pct": -3.781234486182345,
-            "volume": 14619230.0,
-            "dollar_volume_mn": 8500.3512835,
-            "signed_proxy_mn": -8500.3512835
+            "date": "07/29/2026",
+            "close": 45.96,
+            "volume": 6031285.0,
+            "pct": -0.10867202782003371,
+            "dollar_volume_mn": 277.1978586,
+            "signed_proxy_mn": -277.1978586
           },
           {
-            "date": "07/08/2026",
-            "close": 593.0,
-            "prev_close": 581.45,
-            "change": 11.549999999999955,
-            "pct": 1.9864132771519396,
-            "volume": 9521328.0,
-            "dollar_volume_mn": 5646.147504,
-            "signed_proxy_mn": 5646.147504
+            "date": "07/30/2026",
+            "close": 45.3,
+            "volume": 6483671.0,
+            "pct": -1.436031331592702,
+            "dollar_volume_mn": 293.7102962999999,
+            "signed_proxy_mn": -293.7102962999999
           }
         ]
       },
-      "cn": "半导体",
-      "en": "Semiconductors"
-    },
-    {
-      "symbol": "IBB",
-      "name": "iShares Biotechnology ETF",
-      "price": 197.8059,
-      "change": 1.4659,
-      "pct": 0.75,
-      "volume": 2208.252425,
-      "avg20": 1753415.0,
-      "avg50": 1829912.0,
-      "prev_close": 196.34,
-      "aum_bn": 9.581392,
-      "dollar_volume_mn": 0.43680535835430756,
-      "signed_proxy_mn": 0.43680535835430756,
-      "volume_ratio": 0.0012594008976768193,
-      "timestamp": "Jul 9, 2026 8:02 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/IBB/info?assetclass=etf",
-      "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 196.34,
-        "prev_close": 198.23,
-        "change": -1.8899999999999864,
-        "pct": -0.9534379256419243,
-        "volume": 1961898.0,
-        "dollar_volume_mn": 385.19905332,
-        "signed_proxy_mn": -385.19905332,
-        "source": "https://api.nasdaq.com/api/quote/IBB/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
-        "history_5d": [
-          {
-            "date": "07/01/2026",
-            "close": 190.12,
-            "prev_close": 190.19,
-            "change": -0.06999999999999318,
-            "pct": -0.03680529996319112,
-            "volume": 1662919.0,
-            "dollar_volume_mn": 316.15416028000004,
-            "signed_proxy_mn": -316.15416028000004
-          },
-          {
-            "date": "07/02/2026",
-            "close": 195.7,
-            "prev_close": 190.12,
-            "change": 5.579999999999984,
-            "pct": 2.934988428361027,
-            "volume": 2213583.0,
-            "dollar_volume_mn": 433.19819309999997,
-            "signed_proxy_mn": 433.19819309999997
-          },
-          {
-            "date": "07/06/2026",
-            "close": 195.31,
-            "prev_close": 195.7,
-            "change": -0.38999999999998636,
-            "pct": -0.1992846193152715,
-            "volume": 1649083.0,
-            "dollar_volume_mn": 322.08240073,
-            "signed_proxy_mn": -322.08240073
-          },
-          {
-            "date": "07/07/2026",
-            "close": 198.23,
-            "prev_close": 195.31,
-            "change": 2.9199999999999875,
-            "pct": 1.4950591367569441,
-            "volume": 2626800.0,
-            "dollar_volume_mn": 520.710564,
-            "signed_proxy_mn": 520.710564
-          },
-          {
-            "date": "07/08/2026",
-            "close": 196.34,
-            "prev_close": 198.23,
-            "change": -1.8899999999999864,
-            "pct": -0.9534379256419243,
-            "volume": 1961898.0,
-            "dollar_volume_mn": 385.19905332,
-            "signed_proxy_mn": -385.19905332
-          }
-        ]
+      "signal": "盘前清淡",
+      "sources": {
+        "nasdaq_info": "https://api.nasdaq.com/api/quote/XLRE/info?assetclass=etf",
+        "nasdaq_history": "https://api.nasdaq.com/api/quote/XLRE/historical?assetclass=etf&fromdate=2026-07-15&todate=2026-07-31&limit=20",
+        "opend": {
+          "update_time": "2026-07-31 04:00:17.729",
+          "close": 45.3,
+          "price": 45.42,
+          "pct": 0.264,
+          "volume": 2.0,
+          "turnover": 90.84
+        }
       },
-      "cn": "生物科技",
-      "en": "Biotech"
-    },
-    {
-      "symbol": "QQQ",
-      "name": "Invesco QQQ Trust, Series 1",
-      "price": 717.15,
-      "change": 5.71,
-      "pct": 0.8,
-      "volume": 999505.455839,
-      "avg20": 50400977.0,
-      "avg50": 51089926.0,
-      "prev_close": 711.44,
-      "aum_bn": 479.688416,
-      "dollar_volume_mn": 716.7953376549389,
-      "signed_proxy_mn": 716.7953376549389,
-      "volume_ratio": 0.019831073033346157,
-      "timestamp": "Jul 9, 2026 8:03 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/QQQ/info?assetclass=etf",
-      "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 711.44,
-        "prev_close": 709.43,
-        "change": 2.0100000000001046,
-        "pct": 0.2833260504912542,
-        "volume": 35603180.0,
-        "dollar_volume_mn": 25329.5263792,
-        "signed_proxy_mn": 25329.5263792,
-        "source": "https://api.nasdaq.com/api/quote/QQQ/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
-        "history_5d": [
-          {
-            "date": "07/01/2026",
-            "close": 725.17,
-            "prev_close": 736.4,
-            "change": -11.230000000000018,
-            "pct": -1.5249864204236854,
-            "volume": 40803790.0,
-            "dollar_volume_mn": 29589.6843943,
-            "signed_proxy_mn": -29589.6843943
-          },
-          {
-            "date": "07/02/2026",
-            "close": 712.6,
-            "prev_close": 725.17,
-            "change": -12.569999999999936,
-            "pct": -1.7333866541638425,
-            "volume": 51086080.0,
-            "dollar_volume_mn": 36403.940608,
-            "signed_proxy_mn": -36403.940608
-          },
-          {
-            "date": "07/06/2026",
-            "close": 722.82,
-            "prev_close": 712.6,
-            "change": 10.220000000000027,
-            "pct": 1.4341846758349743,
-            "volume": 30220430.0,
-            "dollar_volume_mn": 21843.931212600004,
-            "signed_proxy_mn": 21843.931212600004
-          },
-          {
-            "date": "07/07/2026",
-            "close": 709.43,
-            "prev_close": 722.82,
-            "change": -13.3900000000001,
-            "pct": -1.8524667275393734,
-            "volume": 42483080.0,
-            "dollar_volume_mn": 30138.771444399998,
-            "signed_proxy_mn": -30138.771444399998
-          },
-          {
-            "date": "07/08/2026",
-            "close": 711.44,
-            "prev_close": 709.43,
-            "change": 2.0100000000001046,
-            "pct": 0.2833260504912542,
-            "volume": 35603180.0,
-            "dollar_volume_mn": 25329.5263792,
-            "signed_proxy_mn": 25329.5263792
-          }
-        ]
-      },
-      "cn": "纳指100",
-      "en": "Nasdaq 100"
-    },
-    {
-      "symbol": "SPY",
-      "name": "State Street SPDR S&P 500 ETF Trust",
-      "price": 747.09,
-      "change": 1.69,
-      "pct": 0.23,
-      "volume": 409557.005389,
-      "avg20": 61901555.0,
-      "avg50": 75396031.0,
-      "prev_close": 745.4,
-      "aum_bn": 778.592704,
-      "dollar_volume_mn": 305.975943156068,
-      "signed_proxy_mn": 305.975943156068,
-      "volume_ratio": 0.006616263604185711,
-      "timestamp": "Jul 9, 2026 8:03 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/SPY/info?assetclass=etf",
-      "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 745.4,
-        "prev_close": 747.71,
-        "change": -2.310000000000059,
-        "pct": -0.3089433068970669,
-        "volume": 43767390.0,
-        "dollar_volume_mn": 32624.212506,
-        "signed_proxy_mn": -32624.212506,
-        "source": "https://api.nasdaq.com/api/quote/SPY/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
-        "history_5d": [
-          {
-            "date": "07/01/2026",
-            "close": 745.76,
-            "prev_close": 746.77,
-            "change": -1.009999999999991,
-            "pct": -0.1352491396279967,
-            "volume": 47100880.0,
-            "dollar_volume_mn": 35125.9522688,
-            "signed_proxy_mn": -35125.9522688
-          },
-          {
-            "date": "07/02/2026",
-            "close": 744.78,
-            "prev_close": 745.76,
-            "change": -0.9800000000000182,
-            "pct": -0.13140956876207066,
-            "volume": 57505950.0,
-            "dollar_volume_mn": 42829.281441,
-            "signed_proxy_mn": -42829.281441
-          },
-          {
-            "date": "07/06/2026",
-            "close": 751.28,
-            "prev_close": 744.78,
-            "change": 6.5,
-            "pct": 0.8727409436343619,
-            "volume": 50673310.0,
-            "dollar_volume_mn": 38069.84433679999,
-            "signed_proxy_mn": 38069.84433679999
-          },
-          {
-            "date": "07/07/2026",
-            "close": 747.71,
-            "prev_close": 751.28,
-            "change": -3.5699999999999363,
-            "pct": -0.4751890107549697,
-            "volume": 43721490.0,
-            "dollar_volume_mn": 32690.9952879,
-            "signed_proxy_mn": -32690.9952879
-          },
-          {
-            "date": "07/08/2026",
-            "close": 745.4,
-            "prev_close": 747.71,
-            "change": -2.310000000000059,
-            "pct": -0.3089433068970669,
-            "volume": 43767390.0,
-            "dollar_volume_mn": 32624.212506,
-            "signed_proxy_mn": -32624.212506
-          }
-        ]
-      },
-      "cn": "标普500",
-      "en": "S&P 500"
-    },
-    {
-      "symbol": "IWM",
-      "name": "iShares Russell 2000 Index Fund",
-      "price": 294.34,
-      "change": 0.86,
-      "pct": 0.29,
-      "volume": 219503.516889,
-      "avg20": 28670805.0,
-      "avg50": 32222947.0,
-      "prev_close": 293.48,
-      "aum_bn": 80.589613,
-      "dollar_volume_mn": 64.60866516110825,
-      "signed_proxy_mn": 64.60866516110825,
-      "volume_ratio": 0.007655994203476324,
-      "timestamp": "Jul 9, 2026 8:02 AM ET",
-      "market_status": "Pre-Market",
-      "source": "https://api.nasdaq.com/api/quote/IWM/info?assetclass=etf",
-      "close_snapshot": {
-        "date": "07/08/2026",
-        "close": 293.48,
-        "prev_close": 296.19,
-        "change": -2.7099999999999795,
-        "pct": -0.9149532394746547,
-        "volume": 24078350.0,
-        "dollar_volume_mn": 7066.514158,
-        "signed_proxy_mn": -7066.514158,
-        "source": "https://api.nasdaq.com/api/quote/IWM/historical?assetclass=etf&fromdate=2026-06-25&todate=2026-07-09&limit=10",
-        "history_5d": [
-          {
-            "date": "07/01/2026",
-            "close": 299.32,
-            "prev_close": 300.45,
-            "change": -1.1299999999999955,
-            "pct": -0.37610251289731916,
-            "volume": 20607880.0,
-            "dollar_volume_mn": 6168.350641599999,
-            "signed_proxy_mn": -6168.350641599999
-          },
-          {
-            "date": "07/02/2026",
-            "close": 297.58,
-            "prev_close": 299.32,
-            "change": -1.740000000000009,
-            "pct": -0.5813176533475909,
-            "volume": 21236400.0,
-            "dollar_volume_mn": 6319.527912,
-            "signed_proxy_mn": -6319.527912
-          },
-          {
-            "date": "07/06/2026",
-            "close": 298.9,
-            "prev_close": 297.58,
-            "change": 1.3199999999999932,
-            "pct": 0.44357819745950444,
-            "volume": 18581290.0,
-            "dollar_volume_mn": 5553.947581,
-            "signed_proxy_mn": 5553.947581
-          },
-          {
-            "date": "07/07/2026",
-            "close": 296.19,
-            "prev_close": 298.9,
-            "change": -2.7099999999999795,
-            "pct": -0.9066577450652323,
-            "volume": 18057100.0,
-            "dollar_volume_mn": 5348.332449,
-            "signed_proxy_mn": -5348.332449
-          },
-          {
-            "date": "07/08/2026",
-            "close": 293.48,
-            "prev_close": 296.19,
-            "change": -2.7099999999999795,
-            "pct": -0.9149532394746547,
-            "volume": 24078350.0,
-            "dollar_volume_mn": 7066.514158,
-            "signed_proxy_mn": -7066.514158
-          }
-        ]
-      },
-      "cn": "罗素2000",
-      "en": "Russell 2000"
+      "cross_check": {
+        "price_diff_pct": 0.0,
+        "pct_diff_pp": 0.0040000000000000036,
+        "status": "PASS"
+      }
     }
   ]
 }
