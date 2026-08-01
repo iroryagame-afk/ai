@@ -156,6 +156,72 @@ a { color: var(--accent); }
       .etf-reference-card a { justify-self:start; }
     }
   </style>
+<style id="a-share-research-path-style">
+  .a-share-research-path {
+    --path-paper:var(--paper,#f6f4ee);
+    --path-panel:var(--panel,#fffefa);
+    --path-ink:var(--ink,#1f2430);
+    --path-muted:var(--ink-2,#5f6675);
+    --path-line:var(--hairline,#ded8ca);
+    --path-accent:var(--accent,#173a5e);
+    --path-current:var(--cinnabar,#b5452e);
+    width:min(1280px,calc(100% - 40px));
+    margin:24px auto 0;
+    padding:18px 20px 16px;
+    border:1px solid var(--path-line);
+    border-radius:12px;
+    background:color-mix(in srgb,var(--path-panel) 94%,transparent);
+    color:var(--path-ink);
+    font-family:var(--sans,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif);
+  }
+  .a-share-research-path__head {
+    display:flex; align-items:baseline; justify-content:space-between; gap:16px;
+    margin-bottom:12px;
+  }
+  .a-share-research-path__head strong { font-size:15px; }
+  .a-share-research-path__head span { color:var(--path-muted); font-size:12px; }
+  .a-share-research-path ol {
+    display:grid; grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:0; margin:0; padding:0; list-style:none;
+    border:1px solid var(--path-line); border-radius:9px; overflow:hidden;
+  }
+  .a-share-research-path li { min-width:0; border-right:1px solid var(--path-line); }
+  .a-share-research-path li:last-child { border-right:0; }
+  .a-share-research-path a {
+    display:block; min-height:82px; padding:11px 12px;
+    color:var(--path-ink); background:transparent; text-decoration:none;
+    transition:background-color .16s ease,color .16s ease;
+  }
+  .a-share-research-path a:hover { background:rgba(23,58,94,.055); }
+  .a-share-research-path a:focus-visible { outline:3px solid rgba(181,69,46,.3); outline-offset:-3px; }
+  .a-share-research-path a[aria-current="page"] {
+    background:rgba(181,69,46,.09); box-shadow:inset 0 3px 0 var(--path-current);
+  }
+  .a-share-research-path__number {
+    display:block; margin-bottom:5px; color:var(--path-muted);
+    font:600 10px/1 var(--mono,ui-monospace,monospace); letter-spacing:.08em;
+  }
+  .a-share-research-path a[aria-current="page"] .a-share-research-path__number { color:var(--path-current); }
+  .a-share-research-path a strong { display:block; font-size:13px; line-height:1.35; }
+  .a-share-research-path a small { display:block; margin-top:4px; color:var(--path-muted); font-size:11px; line-height:1.4; }
+  .a-share-research-path__foot {
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    margin:11px 1px 0; color:var(--path-muted); font-size:12px;
+  }
+  .a-share-research-path__foot p { margin:0; }
+  .a-share-research-path__next { color:var(--path-accent); font-weight:700; white-space:nowrap; text-decoration:none; }
+  .a-share-research-path__next:hover { text-decoration:underline; text-underline-offset:3px; }
+  @media (max-width:760px) {
+    .a-share-research-path { width:calc(100% - 24px); margin-top:14px; padding:15px 14px; }
+    .a-share-research-path__head { align-items:flex-start; flex-direction:column; gap:2px; }
+    .a-share-research-path ol { display:flex; overflow-x:auto; scroll-snap-type:x proximity; }
+    .a-share-research-path li { flex:0 0 158px; scroll-snap-align:start; }
+    .a-share-research-path__foot { align-items:flex-start; flex-direction:column; gap:5px; }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    .a-share-research-path a { transition:none; }
+  }
+</style>
 </head>
 <body>
 <style id="csnpk-market-nav-responsive">
@@ -216,6 +282,7 @@ a { color: var(--accent); }
     </div>
   </div>
 </nav>
+<aside class="a-share-research-path" data-component="a-share-research-path" aria-label="A股研究路径"><div class="a-share-research-path__head"><strong>A股研究路径</strong><span>按顺序看，5分钟从市场到个股 · 同源数据 · 2026-07-31</span></div><ol><li><a href="https://csnpk.com/a-share-market/"><span class="a-share-research-path__number">01</span><strong>A股大盘</strong><small>现在能不能进攻？</small></a></li><li><a href="https://csnpk.com/a-share-market/etf/" aria-current="page"><span class="a-share-research-path__number">02</span><strong>ETF资金与波动</strong><small>资金往哪里走？</small></a></li><li><a href="https://csnpk.com/a-share-thrust/"><span class="a-share-research-path__number">03</span><strong>Thrust</strong><small>谁正在变强？</small></a></li><li><a href="https://csnpk.com/a-share-rotation/"><span class="a-share-research-path__number">04</span><strong>轮动雷达</strong><small>强弱处于哪一段？</small></a></li><li><a href="https://csnpk.com/mda100/"><span class="a-share-research-path__number">05</span><strong>mda100</strong><small>最后看哪些个股？</small></a></li></ol><div class="a-share-research-path__foot"><p>本页只回答：<strong>资金往哪里走？</strong></p><a class="a-share-research-path__next" href="https://csnpk.com/a-share-thrust/">推荐下一步：Thrust →</a></div></aside>
   <script>
     (() => {
     if (window.location.protocol === "file:") {
