@@ -52,13 +52,25 @@
       linear-gradient(135deg,rgba(169,239,114,.14),transparent 35%),linear-gradient(315deg,rgba(177,120,25,.09),transparent 35%)}
     .quad{position:absolute;z-index:1;pointer-events:none}.quad strong,.quad span{display:block}.quad strong{font-size:14px}.quad span{margin-top:3px;color:#829087;font-size:9px}.q1{left:20px;top:18px}.q2{right:20px;top:18px;text-align:right}.q3{left:20px;bottom:24px}.q4{right:20px;bottom:24px;text-align:right}
     .axis-x{position:absolute;left:18px;right:18px;top:calc(50% + 8px);display:flex;justify-content:space-between;color:#879188;font-size:8px}.axis-x b{color:#526159;letter-spacing:.12em}.axis-y{position:absolute;left:calc(50% + 8px);top:18px;bottom:18px;display:flex;flex-direction:column;justify-content:space-between;color:#879188;font-size:8px}.axis-y b{color:#526159;writing-mode:vertical-rl;letter-spacing:.12em}
-    .point{position:absolute;z-index:2;transform:translate(-50%,-50%);min-width:38px;height:24px;padding:0 6px;border:1px solid rgba(11,23,17,.16);border-radius:7px;color:var(--ink);font:800 8px var(--mono);box-shadow:0 3px 10px rgba(11,23,17,.08)}.point:hover{z-index:10;transform:translate(-50%,-50%) scale(1.18)}
+    .point{position:absolute;z-index:4;transform:translate(-50%,-50%);min-width:38px;max-width:112px;height:24px;padding:0 6px;overflow:hidden;border:1px solid rgba(11,23,17,.16);border-radius:7px;color:var(--ink);font:800 8px var(--mono);text-overflow:ellipsis;white-space:nowrap;box-shadow:0 3px 8px rgba(11,23,17,.08)}.point:hover,.point:focus-visible{z-index:10;outline:2px solid rgba(18,104,74,.48);outline-offset:2px}
     .leading-accelerating{background:#c8f79f!important;color:#14563e!important}.leading-decelerating{background:#f3ddaa!important;color:#765313!important}.lagging-accelerating{background:#d7f0dc!important;color:#216145!important}.lagging-decelerating{background:#efd2cc!important;color:#8a382c!important}
     .candidates{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.candidate>p{margin:0;padding:15px 20px;color:#6a786f;font-size:11px;line-height:1.6;border-bottom:1px solid var(--line)}.candidate-rows{padding:8px 18px 15px}.candidate-rows article{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px 2px;border-bottom:1px solid rgba(11,23,17,.08)}.candidate-rows article:last-child{border:0}.candidate-rows article strong{display:inline-block;min-width:60px;font-size:13px}.candidate-rows article span{color:#7c8981;font-size:9px}.candidate-rows article b{font-size:11px}.recovery .section-head>strong,.recovery article b{color:var(--green)}.exhaustion .section-head>strong,.exhaustion article b{color:var(--amber)}.empty{padding:24px 2px 12px;color:#879188;font-size:10px}
     .table-card{margin-top:12px}.table-card[hidden]{display:none}.table-head-actions{display:flex;align-items:center;gap:12px}.table-head-actions .search{width:300px}.table-head-actions>strong{font-size:26px}.table-scroll{overflow-x:auto;scrollbar-width:none}.table-scroll table{width:100%;min-width:1020px;border-collapse:collapse}.table-scroll th{padding:0;background:#e9ebe4;color:#718078;font:800 8px var(--mono);letter-spacing:.08em;text-align:left;white-space:nowrap}.table-scroll th:first-child{padding:11px 13px}.sort-head{width:100%;display:flex;align-items:center;gap:6px;padding:11px 13px;border:0;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;text-align:left;cursor:pointer}.sort-head:hover,.sort-head:focus-visible{background:rgba(18,104,74,.08);color:var(--green);outline:none}.sort-head .sort-icon{width:9px;color:#9aa59e;font-size:8px}.sort-head.active{color:var(--green)}.sort-head.active .sort-icon{color:var(--green)}.table-scroll td{padding:11px 13px;border-top:1px solid rgba(11,23,17,.08);font-size:10px}.table-scroll td:nth-child(2) strong,.table-scroll td:nth-child(2) span{display:block}.table-scroll td:nth-child(2) strong{font-size:13px}.table-scroll td:nth-child(2) span{margin-top:3px;max-width:230px;color:#879188;font-size:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.table-scroll em{display:inline-block;padding:5px 7px;border-radius:6px;font-style:normal;font-size:9px}.good{color:var(--green);font-weight:800}.warn{color:var(--amber);font-weight:800}
     .message{padding:80px 20px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.55);text-align:center;color:#6d7b72}.footer{display:flex;justify-content:space-between;gap:20px;padding-top:17px;color:#79867e;font-size:9px}
     @media(max-width:880px){.csn-topnav-inner{padding:0 14px}.csn-brand-sub{display:none}.csn-menu{min-width:0;overflow-x:auto}.csn-item>a,.csn-item>button{padding:0 10px}.csn-drop{right:0;width:min(250px,calc(100vw - 24px));min-width:0}.page{padding:0 15px 28px}.hero{grid-template-columns:1fr;padding:40px 0 28px;gap:20px}.hero h1{font-size:55px}.controls{flex-direction:column}.search{width:100%}.phase-strip{grid-template-columns:repeat(2,1fr)}.phase-strip button:first-child{grid-column:1/-1}.radar{height:560px}.candidates{grid-template-columns:1fr}.table-card .section-head{align-items:stretch;flex-direction:column}.table-head-actions{width:100%}.table-head-actions .search{flex:1;width:auto}}
-    @media(max-width:520px){.status span{display:none}.hero h1{font-size:44px}.radar{min-height:500px}.point{min-width:32px;font-size:7px}.footer{flex-direction:column;gap:4px}}
+    @media(max-width:520px){.status span{display:none}.hero h1{font-size:44px}.radar{min-height:620px}.point{min-width:32px;max-width:92px;font-size:7px}.footer{flex-direction:column;gap:4px}}
+  </style>
+<style id="rotation-trajectory-style">
+    .rotation-guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin:0 0 14px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--line)}
+    .rotation-guide div{padding:14px 16px;background:rgba(255,255,255,.64)}
+    .rotation-guide small,.rotation-guide strong{display:block}.rotation-guide small{color:var(--green);font:800 9px var(--mono);letter-spacing:.08em}.rotation-guide strong{margin-top:7px;font-size:12px}
+    .rotation-guide p{grid-column:1/-1;margin:0;padding:11px 16px;background:#eef1e9;color:#59685e;font-size:10px;line-height:1.6}
+    .trajectories{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none;overflow:visible}
+    .trajectory{fill:none;stroke:rgba(11,23,17,.48);stroke-width:1.25;vector-effect:non-scaling-stroke}
+    .trajectory.leading-accelerating{stroke:#12684a!important}.trajectory.leading-decelerating{stroke:#a16b12!important}.trajectory.lagging-accelerating{stroke:#3d8258!important}.trajectory.lagging-decelerating{stroke:#a94131!important}
+    .label-leader{stroke:rgba(71,86,77,.42);stroke-width:.8;vector-effect:non-scaling-stroke}.point-anchor{stroke:#fff;stroke-width:.7;vector-effect:non-scaling-stroke}.point-anchor.leading-accelerating{fill:#12684a}.point-anchor.leading-decelerating{fill:#a16b12}.point-anchor.lagging-accelerating{fill:#3d8258}.point-anchor.lagging-decelerating{fill:#a94131}
+    .trajectory-legend{display:inline-flex;align-items:center;gap:5px;color:#607067;font:700 9px var(--mono)}.trajectory-legend b{font-size:15px;color:var(--green)}.label-count{margin-left:8px;color:#607067;font:700 9px var(--mono);white-space:nowrap}
+    @media(max-width:760px){.rotation-guide{grid-template-columns:1fr}.rotation-guide p{grid-column:auto}.rotation-guide div{padding:11px 13px}}
   </style>
 
 <style id="a-share-rotation-trajectory-style">
@@ -138,6 +150,12 @@
 <main class="page">
 <header class="topbar"><a class="back" href="../a-share-thrust/">← A股 RS THRUST</a><div class="status"><i></i><span id="status">读取中</span><time id="dataDate">—</time></div></header>
 <section class="hero"><div><p class="eyebrow">RELATIVE VELOCITY × ACCELERATION</p><h1>A股轮动加速度雷达</h1><div class="hero-copy">用同一因果模型观察A股自选股、行业ETF与市值/风险ETF：谁仍在相对领先，谁开始乏力，以及哪些落后方向正在修复。预警是观察触发，不是顶底确认。</div></div><aside class="model"><small>CAUSAL MODEL</small><strong>相对中证全指速度 → 速度变化 → 加速度Z值</strong><p>5日因果平滑 · 3日速度变化 · 63日历史尺度</p></aside></section>
+<section aria-label="四象限读图指南" class="rotation-guide">
+<div><small>横轴 · 相对速度</small><strong>← 跑输 SPY　跑赢 SPY →</strong></div>
+<div><small>纵轴 · 速度变化</small><strong>↑ 加速改善　减速恶化 ↓</strong></div>
+<div><small>箭头 · 真实迁移</small><strong>前一交易日 → 当前交易日</strong></div>
+<p>先看箭头方向，再看当前象限；右上是改善，左下是恶化。箭头只表示已发生的一日迁移，不是后市预测。</p>
+</section>
 
 <section aria-label="四象限读图指南" class="rotation-guide">
 <div><small>横轴 · 相对速度</small><strong>← 跑输基准　跑赢基准 →</strong></div>
@@ -159,6 +177,7 @@
   const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const signed=(v,d=2,s="")=>v==null?"—":`${v>0?"+":""}${Number(v).toFixed(d)}${s}`;
   const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+  const displayLabel=r=>r.name||r.ticker;
   const ready=()=>payload.rows.filter(r=>(r.assetClass||"watchlist")===asset&&r.relativeVelocity5dPct!=null&&r.relativeAccelerationZ!=null&&r.rotationPhase&&r.rotationPhase!=="历史不足");
   const sortValue=(row,key)=>key==="accelerationAbs"?Math.abs(row.relativeAccelerationZ??0):row[key];
   const compareRows=(a,b)=>{
@@ -173,6 +192,40 @@
     const active=sortKey===key,direction=active?sortDirection:null;
     return `<th aria-sort="${direction==="asc"?"ascending":direction==="desc"?"descending":"none"}"><button type="button" class="sort-head ${active?"active":""}" data-sort="${key}" title="按${label}排序">${label}<span class="sort-icon" aria-hidden="true">${direction==="asc"?"▲":direction==="desc"?"▼":"↕"}</span></button></th>`;
   };
+  const overlaps=(a,b,pad=2)=>a.left<b.right+pad&&a.right+pad>b.left&&a.top<b.bottom+pad&&a.bottom+pad>b.top;
+  function labelOffsets(maxRadius){
+    const offsets=[{x:0,y:0}];
+    for(let radius=28,ring=0;radius<=maxRadius;radius+=24,ring++){
+      const steps=Math.max(8,Math.ceil(Math.PI*2*radius/28)),shift=(ring%2)*Math.PI/steps;
+      for(let i=0;i<steps;i++){const angle=shift+i*Math.PI*2/steps;offsets.push({x:Math.cos(angle)*radius,y:Math.sin(angle)*radius})}
+    }
+    return offsets;
+  }
+  function layoutRadarLabels(radar,plotted,position){
+    const width=radar.clientWidth,height=radar.clientHeight,svg=radar.querySelector(".trajectories");
+    if(!width||!height||!svg)return;
+    const reserved=[...radar.querySelectorAll(".quad,.axis-x b,.axis-y b")].map(node=>{const r=node.getBoundingClientRect(),base=radar.getBoundingClientRect();return{left:r.left-base.left-5,right:r.right-base.left+5,top:r.top-base.top-5,bottom:r.bottom-base.top+5}});
+    const ordered=[...plotted].sort((a,b)=>Number(b.turnSignal&&b.turnSignal!=="暂无拐点")-Number(a.turnSignal&&a.turnSignal!=="暂无拐点")||Math.abs(b.relativeAccelerationZ||0)-Math.abs(a.relativeAccelerationZ||0)||String(a.ticker).localeCompare(String(b.ticker),"zh-CN"));
+    const nodes=ordered.map(row=>{const anchor=position(row.relativeVelocity5dPct,row.relativeAccelerationZ),button=document.createElement("button");button.type="button";button.className=`point ${CLASS[row.rotationPhase]||""}`;button.textContent=displayLabel(row);button.title=`${row.name||row.ticker}（${row.ticker}） · ${row.rotationPhase} · 速度${signed(row.relativeVelocity5dPct,2,"%")} · 加速度${signed(row.relativeAccelerationZ,2,"σ")} · 标签引导线连接真实坐标`;button.style.visibility="hidden";radar.appendChild(button);return{row,anchor,button}});
+    const placed=[],leaders=[],anchors=[],offsets=labelOffsets(Math.min(300,Math.max(width,height)*.48));
+    for(const item of nodes){
+      const anchorX=item.anchor.left/100*width,anchorY=item.anchor.top/100*height,w=item.button.offsetWidth,h=item.button.offsetHeight;
+      anchors.push(`<circle class="point-anchor ${CLASS[item.row.rotationPhase]||""}" cx="${item.anchor.left}" cy="${item.anchor.top}" r=".48"><title>${esc(`${item.row.name||item.row.ticker}（${item.row.ticker}）真实坐标`)}</title></circle>`);
+      let chosen=null;
+      for(const offset of offsets){
+        const cx=anchorX+offset.x,cy=anchorY+offset.y,box={left:cx-w/2,right:cx+w/2,top:cy-h/2,bottom:cy+h/2};
+        if(box.left<6||box.right>width-6||box.top<6||box.bottom>height-6)continue;
+        if(placed.some(other=>overlaps(box,other))||reserved.some(other=>overlaps(box,other,3)))continue;
+        chosen={cx,cy,box};break;
+      }
+      if(!chosen){item.button.remove();continue}
+      placed.push(chosen.box);item.button.style.left=`${chosen.cx/width*100}%`;item.button.style.top=`${chosen.cy/height*100}%`;item.button.style.visibility="visible";
+      const dx=chosen.cx-anchorX,dy=chosen.cy-anchorY,distance=Math.hypot(dx,dy);
+      if(distance>8){const edgeScale=Math.min((w/2+2)/Math.max(Math.abs(dx),.001),(h/2+2)/Math.max(Math.abs(dy),.001)),endX=chosen.cx-dx*edgeScale,endY=chosen.cy-dy*edgeScale;leaders.push(`<line class="label-leader" x1="${item.anchor.left}" y1="${item.anchor.top}" x2="${endX/width*100}" y2="${endY/height*100}"/>`)}
+    }
+    svg.insertAdjacentHTML("beforeend",leaders.join("")+anchors.join(""));
+    const count=document.querySelector(".label-count");if(count)count.textContent=`锚点 ${plotted.length}/${plotted.length} · 标签 ${placed.length}/${plotted.length}`;
+  }
   function renderTabs(){
     document.getElementById("classTabs").innerHTML=(payload.assetClasses||[]).map(c=>`<button data-asset="${esc(c.id)}" class="${c.id===asset?"active":""}">${esc(c.label)}<span>${c.count}</span></button>`).join("");
     document.querySelectorAll("[data-asset]").forEach(b=>b.onclick=()=>{asset=b.dataset.asset;phase="全部";renderTabs();render()});
@@ -186,14 +239,15 @@
     const filtered=rows.filter(r=>(!needle||`${r.ticker} ${r.code} ${r.name} ${r.industryNote||""}`.toUpperCase().includes(needle))&&(phase==="全部"||r.rotationPhase===phase)).sort(compareRows);
     const counts=Object.fromEntries(PHASES.map(p=>[p,rows.filter(r=>r.rotationPhase===p).length]));
     const xScale=Math.max(.1,...rows.flatMap(r=>[Math.abs(r.relativeVelocity5dPct||0),Math.abs(r.previousRelativeVelocity5dPct||0)])),yScale=Math.max(.5,...rows.flatMap(r=>[Math.abs(r.relativeAccelerationZ||0),Math.abs(r.previousRelativeAccelerationZ||0)]));
-    const plotted=filtered.slice(0,60);const position=(velocity,acceleration)=>({left:clamp(50+((velocity||0)/xScale)*44,4,96),top:clamp(50-((acceleration||0)/yScale)*44,4,96)});const points=plotted.map(r=>{const current=position(r.relativeVelocity5dPct,r.relativeAccelerationZ);return `<button class="point ${CLASS[r.rotationPhase]||""}" style="left:${current.left}%;top:${current.top}%" title="${esc(`${r.name||r.ticker}（${r.ticker}） · ${r.rotationPhase} · 速度${signed(r.relativeVelocity5dPct,2,"%")} · 加速度${signed(r.relativeAccelerationZ,2,"σ")} · 箭头为前一交易日至今日`)}">${esc(r.name||r.ticker)}</button>`}).join("");const trajectoryLines=plotted.map(r=>{if(r.previousRelativeVelocity5dPct==null||r.previousRelativeAccelerationZ==null)return "";const previous=position(r.previousRelativeVelocity5dPct,r.previousRelativeAccelerationZ),current=position(r.relativeVelocity5dPct,r.relativeAccelerationZ),dx=current.left-previous.left,dy=current.top-previous.top,distance=Math.hypot(dx,dy);if(distance<.6)return "";const padding=Math.min(3,distance*.45),x2=current.left-dx/distance*padding,y2=current.top-dy/distance*padding;return `<line class="trajectory ${CLASS[r.rotationPhase]||""}" x1="${previous.left}" y1="${previous.top}" x2="${x2}" y2="${y2}" marker-end="url(#trajectory-arrow)"/>`}).join("");const trajectories=`<svg class="trajectories" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="trajectory-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#526159"/></marker></defs>${trajectoryLines}</svg>`;
+    const plotted=filtered,position=(velocity,acceleration)=>({left:clamp(50+((velocity||0)/xScale)*44,2,98),top:clamp(50-((acceleration||0)/yScale)*44,2,98)}),contentWidth=Math.max(320,document.getElementById("content").clientWidth),averageLabel=clamp(plotted.reduce((sum,row)=>sum+displayLabel(row).length,0)/Math.max(1,plotted.length)*8+16,40,92),density=window.innerWidth<760?2.2:4,targetHeight=plotted.length*averageLabel*26*density/contentWidth,radarHeight=clamp(Math.ceil(targetHeight/20)*20,window.innerWidth<760?620:520,window.innerWidth<760?1600:960);const trajectoryLines=plotted.map(r=>{if(r.previousRelativeVelocity5dPct==null||r.previousRelativeAccelerationZ==null)return "";const previous=position(r.previousRelativeVelocity5dPct,r.previousRelativeAccelerationZ),current=position(r.relativeVelocity5dPct,r.relativeAccelerationZ),dx=current.left-previous.left,dy=current.top-previous.top,distance=Math.hypot(dx,dy);if(distance<.6)return "";const padding=Math.min(.9,distance*.25),x2=current.left-dx/distance*padding,y2=current.top-dy/distance*padding;return `<line class="trajectory ${CLASS[r.rotationPhase]||""}" x1="${previous.left}" y1="${previous.top}" x2="${x2}" y2="${y2}" marker-end="url(#trajectory-arrow)"/>`}).join("");const trajectories=`<svg class="trajectories" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="trajectory-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#526159"/></marker></defs>${trajectoryLines}</svg>`;
     const recoveries=rows.filter(r=>r.turnSignal==="底部修复预警").sort((a,b)=>(b.relativeAccelerationZ||0)-(a.relativeAccelerationZ||0));
     const exhaustions=rows.filter(r=>r.turnSignal==="顶部衰竭预警").sort((a,b)=>(a.relativeAccelerationZ||0)-(b.relativeAccelerationZ||0));
     const body=filtered.map((r,i)=>`<tr><td>${String(i+1).padStart(2,"0")}</td><td title="${esc(r.name)}"><strong>${esc(r.ticker)}</strong><span>${esc(r.industryNote||r.name)}</span></td><td><em class="${CLASS[r.rotationPhase]||""}">${esc(r.rotationPhase)}</em></td><td>${signed(r.relativeVelocity5dPct,2,"%")}</td><td>${signed(r.relativeAccelerationZ,2,"σ")}</td><td class="${r.turnSignal==="底部修复预警"?"good":r.turnSignal==="顶部衰竭预警"?"warn":""}">${esc(r.turnSignal||"—")}</td><td>${signed(r.rsThrustPct,1,"%")}</td><td>${signed(r.monthChangePct,1,"%")}</td><td>${signed(r.dayChangePct,1,"%")}</td></tr>`).join("");
     document.getElementById("content").innerHTML=`
       <section class="phase-strip"><button data-phase="全部" class="${phase==="全部"?"active":""}"><span>全部</span><strong>${rows.length}</strong><small>${esc(label)}</small></button>${PHASES.map(p=>`<button data-phase="${p}" class="${CLASS[p]} ${phase===p?"active":""}"><span>${p}</span><strong>${counts[p]}</strong><small>${COPY[p]}</small></button>`).join("")}</section>
-      <section class="shell"><div class="section-head"><div><span>ROTATION MAP</span><h2>${esc(label)}四象限</h2></div><p>横轴：相对中证全指速度　纵轴：标准化加速度　<span class="trajectory-legend"><b>→</b> 前日至今日</span></p></div><div class="radar"><div class="quad q1"><strong>落后加速</strong><span>潜在轮动起点</span></div><div class="quad q2"><strong>领先加速</strong><span>主升与扩散</span></div><div class="quad q3"><strong>落后减速</strong><span>弱势延续</span></div><div class="quad q4"><strong>领先减速</strong><span>动能衰竭区</span></div><div class="axis-x"><span>相对落后</span><b>相对速度</b><span>相对领先</span></div><div class="axis-y"><span>加速</span><b>加速度</b><span>减速</span></div>${trajectories}${points}</div></section>
+      <section class="shell"><div class="section-head"><div><span>ROTATION MAP</span><h2>${esc(label)}四象限</h2></div><p>横轴：相对中证全指速度　纵轴：标准化加速度　<span class="trajectory-legend"><b>→</b> 前日至今日</span><span class="label-count">锚点 ${plotted.length}/${plotted.length} · 标签计算中</span></p></div><div class="radar" style="height:${radarHeight}px"><div class="quad q1"><strong>落后加速</strong><span>潜在轮动起点</span></div><div class="quad q2"><strong>领先加速</strong><span>主升与扩散</span></div><div class="quad q3"><strong>落后减速</strong><span>弱势延续</span></div><div class="quad q4"><strong>领先减速</strong><span>动能衰竭区</span></div><div class="axis-x"><span>相对落后</span><b>相对速度</b><span>相对领先</span></div><div class="axis-y"><span>加速</span><b>加速度</b><span>减速</span></div>${trajectories}</div></section>
       <section class="candidates">${candidate("底部修复候选","仍处相对落后区，但下跌速度开始明显收敛。等待RS转正与价格确认。",recoveries,"recovery")}${candidate("顶部衰竭候选","仍处相对领先区，但推进速度明显下降。观察是否跌破RS结构。",exhaustions,"exhaustion")}</section>`;
+    layoutRadarLabels(document.querySelector(".radar"),plotted,position);
     document.getElementById("tableCard").hidden=false;
     document.getElementById("tableTitle").textContent=phase==="全部"?"全部轮动状态":phase;
     document.getElementById("tableCount").textContent=filtered.length;
@@ -208,6 +262,7 @@
     });
   }
   document.getElementById("search").addEventListener("input",e=>{query=e.target.value.toUpperCase();render()});
+  let resizeTimer;window.addEventListener("resize",()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>payload&&render(),160)});
   const dataPromise=location.protocol==="file:"?Promise.resolve(JSON.parse(document.getElementById("a-share-rotation-data").textContent)):fetch(`data.json?v=${Date.now()}`,{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("轮动数据读取失败");return r.json()});dataPromise.then(d=>{
     payload=d;document.getElementById("status").textContent=String(d.status||"").startsWith("OPEN_D_VERIFIED")?(d.failedCount?"OpenD 已核验 · 部分历史不足":"OpenD 已核验"):"数据待核验";document.getElementById("dataDate").textContent=d.dataDate;document.getElementById("source").textContent=`基准：${d.benchmark} · 最新完整交易日：${d.dataDate}`;renderTabs();render();
   }).catch(e=>document.getElementById("content").innerHTML=`<section class="message"><strong>轮动雷达暂时不可用</strong><p>${esc(e.message)}</p></section>`);
