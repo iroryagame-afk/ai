@@ -136,7 +136,7 @@
 <div><small>横轴 · 相对速度</small><strong>← 跑输基准　跑赢基准 →</strong></div>
 <div><small>纵轴 · 速度变化</small><strong>↑ 加速改善　减速恶化 ↓</strong></div>
 <div><small>短箭头 · 单日方向</small><strong>标签边框：前一日 → 当前日</strong></div>
-<p>先看标签边框上的短箭头，再看当前象限；标签会自动避让，但象限判断始终使用真实数值。箭头只表示已发生的一日方向，不是后市预测。</p>
+<p>先看标签边框上的短箭头，再看当前象限；标签只在所属象限内自动避让，不跨越中轴。象限判断始终使用真实数值，箭头只表示已发生的一日方向，不是后市预测。</p>
 </section>
 <section class="controls"><div class="tabs" id="classTabs"></div></section>
 <div id="content"><section class="message">正在读取轮动数据…</section></div>
@@ -152,6 +152,14 @@
   const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const signed=(v,d=2,s="")=>v==null?"—":`${v>0?"+":""}${Number(v).toFixed(d)}${s}`;
   const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+  const phaseFromValues=(velocity,acceleration)=>velocity===0||acceleration===0?null:`${velocity>0?"领先":"落后"}${acceleration>0?"加速":"减速"}`;
+  const insideOwnQuadrant=(box,row,width,height,axisGap=8)=>{
+    const velocity=Number(row.relativeVelocity5dPct),acceleration=Number(row.relativeAccelerationZ),midX=width/2,midY=height/2;
+    if(!Number.isFinite(velocity)||!Number.isFinite(acceleration)||velocity===0||acceleration===0)return false;
+    const horizontal=velocity<0?box.right<=midX-axisGap:box.left>=midX+axisGap;
+    const vertical=acceleration>0?box.bottom<=midY-axisGap:box.top>=midY+axisGap;
+    return horizontal&&vertical;
+  };
   const displayLabel=r=>r.name||r.ticker;
   const ready=()=>payload.rows.filter(r=>(r.assetClass||"watchlist")===asset&&r.relativeVelocity5dPct!=null&&r.relativeAccelerationZ!=null&&r.rotationPhase&&r.rotationPhase!=="历史不足");
   const sortValue=(row,key)=>key==="accelerationAbs"?Math.abs(row.relativeAccelerationZ??0):row[key];
@@ -181,8 +189,8 @@
     if(!width||!height)return;
     const reserved=[...radar.querySelectorAll(".quad,.axis-x b,.axis-y b")].map(node=>{const r=node.getBoundingClientRect(),base=radar.getBoundingClientRect();return{left:r.left-base.left-5,right:r.right-base.left+5,top:r.top-base.top-5,bottom:r.bottom-base.top+5}});
     const ordered=[...plotted].sort((a,b)=>Number(b.turnSignal&&b.turnSignal!=="暂无拐点")-Number(a.turnSignal&&a.turnSignal!=="暂无拐点")||Math.abs(b.relativeAccelerationZ||0)-Math.abs(a.relativeAccelerationZ||0)||String(a.ticker).localeCompare(String(b.ticker),"zh-CN"));
-    const nodes=ordered.map(row=>{const anchor=position(row.relativeVelocity5dPct,row.relativeAccelerationZ),button=document.createElement("button");button.type="button";button.className=`point ${CLASS[row.rotationPhase]||""}`;button.innerHTML=`<span class="point-text">${esc(displayLabel(row))}</span>`;button.title=`${row.name||row.ticker}（${row.ticker}） · ${row.rotationPhase} · 速度${signed(row.relativeVelocity5dPct,2,"%")} · 加速度${signed(row.relativeAccelerationZ,2,"σ")} · 边框短箭头为前一交易日至今日方向`;button.style.visibility="hidden";radar.appendChild(button);return{row,anchor,button}});
-    const placed=[],offsets=labelOffsets(Math.min(300,Math.max(width,height)*.48));
+    const nodes=ordered.flatMap(row=>{const expectedPhase=phaseFromValues(Number(row.relativeVelocity5dPct),Number(row.relativeAccelerationZ));if(!expectedPhase||expectedPhase!==row.rotationPhase)return[];const anchor=position(row.relativeVelocity5dPct,row.relativeAccelerationZ),button=document.createElement("button");button.type="button";button.className=`point ${CLASS[row.rotationPhase]||""}`;button.dataset.ticker=row.ticker;button.dataset.phase=row.rotationPhase;button.innerHTML=`<span class="point-text">${esc(displayLabel(row))}</span>`;button.title=`${row.name||row.ticker}（${row.ticker}） · ${row.rotationPhase} · 速度${signed(row.relativeVelocity5dPct,2,"%")} · 加速度${signed(row.relativeAccelerationZ,2,"σ")} · 边框短箭头为前一交易日至今日方向`;button.style.visibility="hidden";radar.appendChild(button);return[{row,anchor,button}]});
+    const placed=[],offsets=labelOffsets(Math.min(560,Math.max(width,height)*.62));
     for(const item of nodes){
       const anchorX=item.anchor.left/100*width,anchorY=item.anchor.top/100*height,w=item.button.offsetWidth,h=item.button.offsetHeight;
       let movement=null;
@@ -190,8 +198,9 @@
       let chosen=null;
       for(const offset of offsets){
         const cx=anchorX+offset.x,cy=anchorY+offset.y,box={left:cx-w/2,right:cx+w/2,top:cy-h/2,bottom:cy+h/2};let occupied=box;
-        if(movement){const edge=Math.min((w/2+1)/Math.max(Math.abs(movement.ux),.001),(h/2+1)/Math.max(Math.abs(movement.uy),.001)),startX=cx+movement.ux*edge,startY=cy+movement.uy*edge,endX=startX+movement.ux*15,endY=startY+movement.uy*15,arrowBox={left:Math.min(startX,endX)-4,right:Math.max(startX,endX)+4,top:Math.min(startY,endY)-4,bottom:Math.max(startY,endY)+4};occupied={left:Math.min(box.left,arrowBox.left),right:Math.max(box.right,arrowBox.right),top:Math.min(box.top,arrowBox.top),bottom:Math.max(box.bottom,arrowBox.bottom)}}
+        if(movement){const edge=Math.min((w/2+1)/Math.max(Math.abs(movement.ux),.001),(h/2+1)/Math.max(Math.abs(movement.uy),.001)),startX=cx+movement.ux*edge,startY=cy+movement.uy*edge,endX=startX+movement.ux*13,endY=startY+movement.uy*13,arrowBox={left:Math.min(startX,endX)-3,right:Math.max(startX,endX)+3,top:Math.min(startY,endY)-3,bottom:Math.max(startY,endY)+3};occupied={left:Math.min(box.left,arrowBox.left),right:Math.max(box.right,arrowBox.right),top:Math.min(box.top,arrowBox.top),bottom:Math.max(box.bottom,arrowBox.bottom)}}
         if(occupied.left<6||occupied.right>width-6||occupied.top<6||occupied.bottom>height-6)continue;
+        if(!insideOwnQuadrant(occupied,item.row,width,height))continue;
         if(placed.some(other=>overlaps(occupied,other))||reserved.some(other=>overlaps(occupied,other,3)))continue;
         chosen={cx,cy,box,occupied};break;
       }
@@ -199,7 +208,7 @@
       placed.push(chosen.occupied);item.button.style.left=`${chosen.cx/width*100}%`;item.button.style.top=`${chosen.cy/height*100}%`;item.button.style.visibility="visible";
       if(movement){const edge=Math.min((w/2+1)/Math.max(Math.abs(movement.ux),.001),(h/2+1)/Math.max(Math.abs(movement.uy),.001)),arrow=document.createElement("span");arrow.className="direction-arrow";arrow.setAttribute("aria-hidden","true");arrow.style.left=`calc(50% + ${movement.ux*edge}px)`;arrow.style.top=`calc(50% + ${movement.uy*edge}px)`;arrow.style.transform=`translateY(-50%) rotate(${Math.atan2(movement.uy,movement.ux)}rad)`;item.button.appendChild(arrow)}
     }
-    const count=document.querySelector(".label-count");if(count)count.textContent=`标签 ${placed.length}/${plotted.length} · 避让显示`;
+    const count=document.querySelector(".label-count");if(count)count.textContent=`标签 ${placed.length}/${plotted.length} · 同象限避让`;
   }
   function renderTabs(){
     document.getElementById("classTabs").innerHTML=(payload.assetClasses||[]).map(c=>`<button data-asset="${esc(c.id)}" class="${c.id===asset?"active":""}">${esc(c.label)}<span>${c.count}</span></button>`).join("");
@@ -214,7 +223,7 @@
     const filtered=rows.filter(r=>(!needle||`${r.ticker} ${r.code} ${r.name} ${r.industryNote||""}`.toUpperCase().includes(needle))&&(phase==="全部"||r.rotationPhase===phase)).sort(compareRows);
     const counts=Object.fromEntries(PHASES.map(p=>[p,rows.filter(r=>r.rotationPhase===p).length]));
     const xScale=Math.max(.1,...rows.flatMap(r=>[Math.abs(r.relativeVelocity5dPct||0),Math.abs(r.previousRelativeVelocity5dPct||0)])),yScale=Math.max(.5,...rows.flatMap(r=>[Math.abs(r.relativeAccelerationZ||0),Math.abs(r.previousRelativeAccelerationZ||0)]));
-    const plotted=filtered,position=(velocity,acceleration)=>({left:clamp(50+((velocity||0)/xScale)*44,2,98),top:clamp(50-((acceleration||0)/yScale)*44,2,98)}),contentWidth=Math.max(320,document.getElementById("content").clientWidth),averageLabel=clamp(plotted.reduce((sum,row)=>sum+displayLabel(row).length,0)/Math.max(1,plotted.length)*8+16,40,92),density=window.innerWidth<760?3.2:5.5,targetHeight=plotted.length*averageLabel*26*density/contentWidth,radarHeight=clamp(Math.ceil(targetHeight/20)*20,window.innerWidth<760?620:520,window.innerWidth<760?1900:1100);
+    const plotted=filtered,position=(velocity,acceleration)=>({left:clamp(50+((velocity||0)/xScale)*44,2,98),top:clamp(50-((acceleration||0)/yScale)*44,2,98)}),contentWidth=Math.max(320,document.getElementById("content").clientWidth),averageLabel=clamp(plotted.reduce((sum,row)=>sum+displayLabel(row).length,0)/Math.max(1,plotted.length)*8+16,40,92),density=window.innerWidth<760?3.8:6.5,targetHeight=plotted.length*averageLabel*26*density/contentWidth,radarHeight=clamp(Math.ceil(targetHeight/20)*20,window.innerWidth<760?700:620,window.innerWidth<760?2200:1400);
     const recoveries=rows.filter(r=>r.turnSignal==="底部修复预警").sort((a,b)=>(b.relativeAccelerationZ||0)-(a.relativeAccelerationZ||0));
     const exhaustions=rows.filter(r=>r.turnSignal==="顶部衰竭预警").sort((a,b)=>(a.relativeAccelerationZ||0)-(b.relativeAccelerationZ||0));
     const body=filtered.map((r,i)=>`<tr><td>${String(i+1).padStart(2,"0")}</td><td title="${esc(r.name)}"><strong>${esc(r.ticker)}</strong><span>${esc(r.industryNote||r.name)}</span></td><td><em class="${CLASS[r.rotationPhase]||""}">${esc(r.rotationPhase)}</em></td><td>${signed(r.relativeVelocity5dPct,2,"%")}</td><td>${signed(r.relativeAccelerationZ,2,"σ")}</td><td class="${r.turnSignal==="底部修复预警"?"good":r.turnSignal==="顶部衰竭预警"?"warn":""}">${esc(r.turnSignal||"—")}</td><td>${signed(r.rsThrustPct,1,"%")}</td><td>${signed(r.monthChangePct,1,"%")}</td><td>${signed(r.dayChangePct,1,"%")}</td></tr>`).join("");
