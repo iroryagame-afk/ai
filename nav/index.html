@@ -418,6 +418,7 @@ footer {
     <input id="searchInput" type="search" placeholder="搜索报告、公司或标签……" autocomplete="off" />
     <div class="filters" aria-label="报告分类">
       <button class="filter active" type="button" data-category="全部" aria-pressed="true">全部</button>
+      <button class="filter" type="button" data-category="公司研究" aria-pressed="false">公司研究</button>
       <button class="filter" type="button" data-category="主题策略" aria-pressed="false">主题策略</button>
       <button class="filter" type="button" data-category="行业研究" aria-pressed="false">行业研究</button>
     </div>
@@ -431,7 +432,7 @@ footer {
 </main>
 
 <script>
-  const CATEGORY_ORDER = ["主题策略", "行业研究"];
+  const CATEGORY_ORDER = ["公司研究", "主题策略", "行业研究"];
   let entries = [];
   let activeCategory = "全部";
 
