@@ -1,0 +1,197 @@
+{
+  "verification_status": "partial",
+  "verification_marker": "X_AUTHOR_CONSENSUS_SOCIAL_LEADS_OPEN_D_SEPARATED",
+  "scanned_at": "2026-08-02T01:45:00+08:00",
+  "market_data_as_of": "2026-07-31",
+  "risk_control": "not_triggered",
+  "scope": {
+    "following_accounts_scanned": 561,
+    "charts_reviewed": 7,
+    "followed_author_charts": 5,
+    "timeline_source_charts": 2
+  },
+  "consensus": {
+    "label": "多空分歧，技术面偏防守",
+    "bias": "mixed_defensive",
+    "bullish": 3,
+    "bearish": 4,
+    "neutral": 0,
+    "summary": "SPY与QQQ存在极端回撤后的统计修复线索，但市场宽度、半导体流动性和周期心理图仍提示中期风险；当前更适合等待确认，而不是把社交媒体图表直接当成买卖信号。"
+  },
+  "opend_confirmation": {
+    "status": "OPEN_D_VERIFIED",
+    "as_of": "2026-07-31",
+    "QQQ": {
+      "close": 687.99,
+      "daily_state": "收盘高于EMA10、低于EMA20与EMA55，修复尚未确认",
+      "support": "683–686；跌破680转弱，673.3为下一层风险",
+      "trigger": "站回695.8后，再看698–701.1确认",
+      "invalidation": "661为更深结构失效线"
+    },
+    "SPY": {
+      "close": 747.03,
+      "daily_state": "收盘高于EMA10、EMA20、EMA55与EMA200，趋势仍在",
+      "support": "741.5–744；第二支撑737–738",
+      "trigger": "突破748.9–750后，再看756–758.5",
+      "invalidation": "跌破737转弱，729为更深结构风险"
+    }
+  },
+  "calls": [
+    {
+      "author": "Steve Burns",
+      "handle": "@SJosephBurns",
+      "relationship": "已关注作者",
+      "posted_at": "2026-08-01",
+      "symbols": [
+        "SPY",
+        "QQQ"
+      ],
+      "stance": "bearish",
+      "stance_label": "偏空 / 风险预警",
+      "horizon": "数日至数周",
+      "chart_type": "市场周期心理示意图",
+      "chart_summary": "作者认同市场处于第7阶段 Complacency；该阶段位于狂热之后、焦虑之前。",
+      "levels": "无价格点位",
+      "source_status": "X线索",
+      "opend_status": "QQQ趋势闸门未修复；SPY趋势仍在，不能据此确认全面转空",
+      "post_url": "https://x.com/SJosephBurns/status/2083340619284369605",
+      "chart_url": "https://x.com/SJosephBurns/status/2083114616687632701/photo/1",
+      "visual_status": "已验图",
+      "caveat": "通用心理示意图，不是价格序列，不能独立产生交易结论。"
+    },
+    {
+      "author": "The Kobeissi Letter",
+      "handle": "@KobeissiLetter",
+      "relationship": "已关注作者",
+      "posted_at": "2026-08-01",
+      "symbols": [
+        "SOX",
+        "SOXX",
+        "SMH",
+        "QQQ"
+      ],
+      "stance": "bearish",
+      "stance_label": "偏空",
+      "horizon": "3–6个月",
+      "chart_type": "SOX同比与G10超额流动性领先指标",
+      "chart_summary": "图中G10超额流动性领先指标转负并向前平移6个月，作者据此提示半导体仍受流动性约束。",
+      "levels": "无直接价格点位",
+      "source_status": "X线索",
+      "opend_status": "现有大盘页确认SOXX/SMH近1月偏弱，但未复算Bloomberg流动性序列",
+      "post_url": "https://x.com/KobeissiLetter/status/2083337567689212037",
+      "chart_url": "https://x.com/KobeissiLetter/status/2083337567689212037/photo/1",
+      "visual_status": "已验图",
+      "caveat": "领先关系和指标构造未独立复算。"
+    },
+    {
+      "author": "FinanceLancelot",
+      "handle": "@FinanceLancelot",
+      "relationship": "股票时间线来源",
+      "posted_at": "2026-08-01",
+      "symbols": [
+        "SPX",
+        "SPY"
+      ],
+      "stance": "bearish",
+      "stance_label": "偏空 / 宽度预警",
+      "horizon": "数日至数周",
+      "chart_type": "标普500成分股站上150日均线比例",
+      "chart_summary": "图中该比例跌破自2024年以来的收敛结构下沿；作者类比2026年2月的风险信号。",
+      "levels": "图中广度读数约64.41",
+      "source_status": "X线索",
+      "opend_status": "大盘页核心池站上MA20为50%，口径不同，不作同源确认",
+      "post_url": "https://x.com/FinanceLancelot/status/2083349204424908842",
+      "chart_url": "https://x.com/FinanceLancelot/status/2083349204424908842/photo/1",
+      "visual_status": "已验图",
+      "caveat": "150日广度与本站核心池MA20宽度不是同一指标。"
+    },
+    {
+      "author": "MrMikeInvesting / Hedgeye",
+      "handle": "@MrMikeInvesting",
+      "relationship": "已关注作者引用外部图",
+      "posted_at": "2026-08-01",
+      "symbols": [
+        "SPY",
+        "QQQ"
+      ],
+      "stance": "bullish",
+      "stance_label": "偏多 / 逆向修复",
+      "horizon": "数周至数月",
+      "chart_type": "Goldman美国高Beta动量月度表现",
+      "chart_summary": "Hedgeye图示高Beta动量月度跌幅约-37.07%；引用者将极端出清解读为长期投资者的潜在修复窗口。",
+      "levels": "月度读数约-37.07%",
+      "source_status": "X线索",
+      "opend_status": "QQQ仍低于日线EMA20/55，逆向修复尚未获得趋势确认",
+      "post_url": "https://x.com/MrMikeInvesting/status/2083333029133496732",
+      "chart_url": "https://x.com/Hedgeye/status/2082112332277117380/photo/1",
+      "visual_status": "已验图",
+      "caveat": "极端超卖不等于已见底，原始序列未独立复算。"
+    },
+    {
+      "author": "AskLivermore",
+      "handle": "@asklivermore",
+      "relationship": "股票时间线来源",
+      "posted_at": "2026-08-01",
+      "symbols": [
+        "QQQ",
+        "SPY"
+      ],
+      "stance": "bullish",
+      "stance_label": "偏多 / 统计修复",
+      "horizon": "1–12个月",
+      "chart_type": "SPY近高位而QQQ回撤8%以上的历史样本表",
+      "chart_summary": "图称自2000年以来有10次相似情形，QQQ与SPY后续1–12个月中位回报为正。",
+      "levels": "样本数10；图示QQQ 3个月中位+8.0%",
+      "source_status": "待证真",
+      "opend_status": "当前QQQ弱于SPY得到OpenD方向性支持，但历史样本规则和结果未复算",
+      "post_url": "https://x.com/asklivermore/status/2083451097277235407",
+      "chart_url": "https://x.com/asklivermore/status/2083451097277235407/photo/1",
+      "visual_status": "已验图",
+      "caveat": "样本仅10次，筛选条件、重叠样本与成本均待审计。"
+    },
+    {
+      "author": "Peter Brandt",
+      "handle": "@PeterLBrandt",
+      "relationship": "已关注作者",
+      "posted_at": "2026-08-02",
+      "symbols": [
+        "GC",
+        "GLD",
+        "GOLD"
+      ],
+      "stance": "bearish",
+      "stance_label": "看空 / 情景风险",
+      "horizon": "数月",
+      "chart_type": "黄金期货周线抛物线破位与下降结构",
+      "chart_summary": "作者讨论抛物线破位后的深跌情景；图中约4171与3955为近端参考，并把约2800列作50%回撤情景。",
+      "levels": "4171 / 3955；情景目标约2800，极端情景约1120",
+      "source_status": "X线索",
+      "opend_status": "本轮未用OpenD核验黄金点位",
+      "post_url": "https://x.com/PeterLBrandt/status/2083597370554786213",
+      "chart_url": "https://x.com/PeterLBrandt/status/2083597370554786213/photo/1",
+      "visual_status": "已验图",
+      "caveat": "2800和1120均为作者情景，不是本站目标价或已确认路径。"
+    },
+    {
+      "author": "Enrich",
+      "handle": "@enrichtrades",
+      "relationship": "已关注作者",
+      "posted_at": "2026-08-01",
+      "symbols": [
+        "GOOGL"
+      ],
+      "stance": "bullish",
+      "stance_label": "条件看多",
+      "horizon": "数日至数周",
+      "chart_type": "下降整理区突破预案",
+      "chart_summary": "作者称GOOGL处于大型下降整理区边缘，把360美元上方作为进一步上行的触发条件，并列为周一重点观察。",
+      "levels": "触发位：360美元上方",
+      "source_status": "待证真",
+      "opend_status": "本轮未用OpenD核验GOOGL点位",
+      "post_url": "https://x.com/enrichtrades/status/2083295085450399787",
+      "chart_url": "https://x.com/enrichtrades/status/2083295085450399787/photo/1",
+      "visual_status": "原图待二次视觉核验",
+      "caveat": "阈值来自作者帖子文字；未确认收盘站稳、成交量和假突破条件。"
+    }
+  ]
+}

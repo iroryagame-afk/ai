@@ -215,5 +215,28 @@
       "rotationPhase": "领先减速",
       "turnSignal": "暂无拐点"
     }
-  ]
+  ],
+  "x_author_consensus": {
+    "verification_status": "partial",
+    "verification_marker": "X_AUTHOR_CONSENSUS_SOCIAL_LEADS_OPEN_D_SEPARATED",
+    "scanned_at": "2026-08-02T01:45:00+08:00",
+    "market_data_as_of": "2026-07-31",
+    "risk_control": "not_triggered",
+    "scope": {
+      "following_accounts_scanned": 561,
+      "charts_reviewed": 7,
+      "followed_author_charts": 5,
+      "timeline_source_charts": 2
+    },
+    "consensus": {
+      "label": "多空分歧，技术面偏防守",
+      "bias": "mixed_defensive",
+      "bullish": 3,
+      "bearish": 4,
+      "neutral": 0,
+      "summary": "SPY与QQQ存在极端回撤后的统计修复线索，但市场宽度、半导体流动性和周期心理图仍提示中期风险；当前更适合等待确认，而不是把社交媒体图表直接当成买卖信号。"
+    },
+    "symbols": ["GC", "GLD", "GOLD", "GOOGL", "QQQ", "SMH", "SOX", "SOXX", "SPX", "SPY"],
+    "href": "./x-consensus/"
+  }
 }
