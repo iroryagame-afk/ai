@@ -59,6 +59,17 @@
     @media(max-width:880px){.csn-topnav-inner{padding:0 14px}.csn-brand-sub{display:none}.csn-menu{min-width:0;overflow-x:auto}.csn-item>a,.csn-item>button{padding:0 10px}.csn-drop{right:0;width:min(250px,calc(100vw - 24px));min-width:0}.page{padding:0 15px 28px}.hero{grid-template-columns:1fr;padding:40px 0 28px;gap:20px}.hero h1{font-size:55px}.controls{flex-direction:column}.search{width:100%}.phase-strip{grid-template-columns:repeat(2,1fr)}.phase-strip button:first-child{grid-column:1/-1}.radar{height:560px}.candidates{grid-template-columns:1fr}.table-card .section-head{align-items:stretch;flex-direction:column}.table-head-actions{width:100%}.table-head-actions .search{flex:1;width:auto}}
     @media(max-width:520px){.status span{display:none}.hero h1{font-size:44px}.radar{min-height:500px}.point{min-width:32px;font-size:7px}.footer{flex-direction:column;gap:4px}}
   </style>
+  <style id="rotation-trajectory-style">
+    .rotation-guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin:0 0 14px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--line)}
+    .rotation-guide div{padding:14px 16px;background:rgba(255,255,255,.64)}
+    .rotation-guide small,.rotation-guide strong{display:block}.rotation-guide small{color:var(--green);font:800 9px var(--mono);letter-spacing:.08em}.rotation-guide strong{margin-top:7px;font-size:12px}
+    .rotation-guide p{grid-column:1/-1;margin:0;padding:11px 16px;background:#eef1e9;color:#59685e;font-size:10px;line-height:1.6}
+    .trajectories{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none;overflow:visible}
+    .trajectory{fill:none;stroke:rgba(11,23,17,.48);stroke-width:1.25;vector-effect:non-scaling-stroke}
+    .trajectory.leading-accelerating{stroke:#12684a!important}.trajectory.leading-decelerating{stroke:#a16b12!important}.trajectory.lagging-accelerating{stroke:#3d8258!important}.trajectory.lagging-decelerating{stroke:#a94131!important}
+    .point{z-index:3}.trajectory-legend{display:inline-flex;align-items:center;gap:5px;color:#607067;font:700 9px var(--mono)}.trajectory-legend b{font-size:15px;color:var(--green)}
+    @media(max-width:760px){.rotation-guide{grid-template-columns:1fr}.rotation-guide p{grid-column:auto}.rotation-guide div{padding:11px 13px}}
+  </style>
 </head>
 <body>
 <style id="csnpk-market-nav-responsive">
@@ -125,6 +136,12 @@
 <main class="page">
   <header class="topbar"><a class="back" href="../rs-thrust/">← RS THRUST</a><div class="status"><i></i><span id="status">读取中</span><time id="dataDate">—</time></div></header>
   <section class="hero"><div><p class="eyebrow">RELATIVE VELOCITY × ACCELERATION</p><h1>轮动加速度雷达</h1><div class="hero-copy">看清谁仍在领先、谁已开始乏力，以及哪些落后板块正在悄悄修复。预警是观察触发，不是顶底确认。</div></div><aside class="model"><small>CAUSAL MODEL</small><strong>RS速度 → 速度变化 → 加速度Z值</strong><p>5日因果平滑 · 3日速度变化 · 63日历史尺度</p></aside></section>
+  <section aria-label="四象限读图指南" class="rotation-guide">
+    <div><small>横轴 · 相对速度</small><strong>← 跑输 SPY　跑赢 SPY →</strong></div>
+    <div><small>纵轴 · 速度变化</small><strong>↑ 加速改善　减速恶化 ↓</strong></div>
+    <div><small>箭头 · 真实迁移</small><strong>前一交易日 → 当前交易日</strong></div>
+    <p>先看箭头方向，再看当前象限；右上是改善，左下是恶化。箭头只表示已发生的一日迁移，不是后市预测。</p>
+  </section>
   <section class="controls"><div class="tabs" id="classTabs"></div></section>
   <div id="content"><section class="message">正在读取轮动数据…</section></div>
   <section class="table-card" id="tableCard" hidden><div class="section-head"><div><span>DETAILS · 点击表头排序</span><h2 id="tableTitle">全部轮动状态</h2></div><div class="table-head-actions"><label class="search"><b>⌕</b><input id="search" placeholder="搜索 ETF、代码或主题" aria-label="搜索 ETF、代码或主题"></label><strong id="tableCount">0</strong></div></div><div class="table-scroll"><table><thead><tr id="tableHead"></tr></thead><tbody id="tableBody"></tbody></table></div></section>
@@ -165,14 +182,14 @@
     const rows=ready(),needle=query.trim().toUpperCase(),label=(payload.assetClasses||[]).find(c=>c.id===asset)?.label||"当前类别";
     const filtered=rows.filter(r=>(!needle||`${r.ticker} ${r.code} ${r.name} ${r.industryNote||""}`.toUpperCase().includes(needle))&&(phase==="全部"||r.rotationPhase===phase)).sort(compareRows);
     const counts=Object.fromEntries(PHASES.map(p=>[p,rows.filter(r=>r.rotationPhase===p).length]));
-    const xScale=Math.max(.1,...rows.map(r=>Math.abs(r.relativeVelocity5dPct||0))),yScale=Math.max(.5,...rows.map(r=>Math.abs(r.relativeAccelerationZ||0)));
-    const points=filtered.slice(0,60).map(r=>{const left=clamp(50+((r.relativeVelocity5dPct||0)/xScale)*44,4,96),top=clamp(50-((r.relativeAccelerationZ||0)/yScale)*44,4,96);return `<button class="point ${CLASS[r.rotationPhase]||""}" style="left:${left}%;top:${top}%" title="${esc(`${r.ticker} · ${r.rotationPhase} · 速度${signed(r.relativeVelocity5dPct,2,"%")} · 加速度${signed(r.relativeAccelerationZ,2,"σ")}`)}">${esc(r.ticker)}</button>`}).join("");
+    const xScale=Math.max(.1,...rows.flatMap(r=>[Math.abs(r.relativeVelocity5dPct||0),Math.abs(r.previousRelativeVelocity5dPct||0)])),yScale=Math.max(.5,...rows.flatMap(r=>[Math.abs(r.relativeAccelerationZ||0),Math.abs(r.previousRelativeAccelerationZ||0)]));
+    const plotted=filtered.slice(0,60);const position=(velocity,acceleration)=>({left:clamp(50+((velocity||0)/xScale)*44,4,96),top:clamp(50-((acceleration||0)/yScale)*44,4,96)});const points=plotted.map(r=>{const current=position(r.relativeVelocity5dPct,r.relativeAccelerationZ);return `<button class="point ${CLASS[r.rotationPhase]||""}" style="left:${current.left}%;top:${current.top}%" title="${esc(`${r.ticker} · ${r.rotationPhase} · 速度${signed(r.relativeVelocity5dPct,2,"%")} · 加速度${signed(r.relativeAccelerationZ,2,"σ")} · 箭头为前一交易日至今日`)}">${esc(r.ticker)}</button>`}).join("");const trajectoryLines=plotted.map(r=>{if(r.previousRelativeVelocity5dPct==null||r.previousRelativeAccelerationZ==null)return "";const previous=position(r.previousRelativeVelocity5dPct,r.previousRelativeAccelerationZ),current=position(r.relativeVelocity5dPct,r.relativeAccelerationZ),dx=current.left-previous.left,dy=current.top-previous.top,distance=Math.hypot(dx,dy);if(distance<.6)return "";const padding=Math.min(3,distance*.45),x2=current.left-dx/distance*padding,y2=current.top-dy/distance*padding;return `<line class="trajectory ${CLASS[r.rotationPhase]||""}" x1="${previous.left}" y1="${previous.top}" x2="${x2}" y2="${y2}" marker-end="url(#trajectory-arrow)"/>`}).join("");const trajectories=`<svg class="trajectories" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="trajectory-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#526159"/></marker></defs>${trajectoryLines}</svg>`;
     const recoveries=rows.filter(r=>r.turnSignal==="底部修复预警").sort((a,b)=>(b.relativeAccelerationZ||0)-(a.relativeAccelerationZ||0));
     const exhaustions=rows.filter(r=>r.turnSignal==="顶部衰竭预警").sort((a,b)=>(a.relativeAccelerationZ||0)-(b.relativeAccelerationZ||0));
     const body=filtered.map((r,i)=>`<tr><td>${String(i+1).padStart(2,"0")}</td><td title="${esc(r.name)}"><strong>${esc(r.ticker)}</strong><span>${esc(r.industryNote||r.name)}</span></td><td><em class="${CLASS[r.rotationPhase]||""}">${esc(r.rotationPhase)}</em></td><td>${signed(r.relativeVelocity5dPct,2,"%")}</td><td>${signed(r.relativeAccelerationZ,2,"σ")}</td><td class="${r.turnSignal==="底部修复预警"?"good":r.turnSignal==="顶部衰竭预警"?"warn":""}">${esc(r.turnSignal||"—")}</td><td>${signed(r.rsThrustPct,1,"%")}</td><td>${signed(r.monthChangePct,1,"%")}</td><td>${signed(r.dayChangePct,1,"%")}</td></tr>`).join("");
     document.getElementById("content").innerHTML=`
       <section class="phase-strip"><button data-phase="全部" class="${phase==="全部"?"active":""}"><span>全部</span><strong>${rows.length}</strong><small>${esc(label)}</small></button>${PHASES.map(p=>`<button data-phase="${p}" class="${CLASS[p]} ${phase===p?"active":""}"><span>${p}</span><strong>${counts[p]}</strong><small>${COPY[p]}</small></button>`).join("")}</section>
-      <section class="shell"><div class="section-head"><div><span>ROTATION MAP</span><h2>${esc(label)}四象限</h2></div><p>横轴：相对SPY速度　纵轴：标准化加速度</p></div><div class="radar"><div class="quad q1"><strong>落后加速</strong><span>潜在轮动起点</span></div><div class="quad q2"><strong>领先加速</strong><span>主升与扩散</span></div><div class="quad q3"><strong>落后减速</strong><span>弱势延续</span></div><div class="quad q4"><strong>领先减速</strong><span>动能衰竭区</span></div><div class="axis-x"><span>相对落后</span><b>相对速度</b><span>相对领先</span></div><div class="axis-y"><span>加速</span><b>加速度</b><span>减速</span></div>${points}</div></section>
+      <section class="shell"><div class="section-head"><div><span>ROTATION MAP</span><h2>${esc(label)}四象限</h2></div><p>横轴：相对SPY速度　纵轴：标准化加速度　<span class="trajectory-legend"><b>→</b> 前日至今日</span></p></div><div class="radar"><div class="quad q1"><strong>落后加速</strong><span>潜在轮动起点</span></div><div class="quad q2"><strong>领先加速</strong><span>主升与扩散</span></div><div class="quad q3"><strong>落后减速</strong><span>弱势延续</span></div><div class="quad q4"><strong>领先减速</strong><span>动能衰竭区</span></div><div class="axis-x"><span>相对落后</span><b>相对速度</b><span>相对领先</span></div><div class="axis-y"><span>加速</span><b>加速度</b><span>减速</span></div>${trajectories}${points}</div></section>
       <section class="candidates">${candidate("底部修复候选","仍处相对落后区，但下跌速度开始明显收敛。等待RS转正与价格确认。",recoveries,"recovery")}${candidate("顶部衰竭候选","仍处相对领先区，但推进速度明显下降。观察是否跌破RS结构。",exhaustions,"exhaustion")}</section>`;
     document.getElementById("tableCard").hidden=false;
     document.getElementById("tableTitle").textContent=phase==="全部"?"全部轮动状态":phase;
