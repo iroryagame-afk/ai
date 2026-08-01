@@ -61,12 +61,14 @@
   </style>
   <style id="rotation-trajectory-style">
     .rotation-guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin:0 0 14px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--line)}
-    .rotation-guide div{padding:14px 16px;background:rgba(255,255,255,.64)}
-    .rotation-guide small,.rotation-guide strong{display:block}.rotation-guide small{color:var(--green);font:800 9px var(--mono);letter-spacing:.08em}.rotation-guide strong{margin-top:7px;font-size:12px}
-    .rotation-guide p{grid-column:1/-1;margin:0;padding:11px 16px;background:#eef1e9;color:#59685e;font-size:10px;line-height:1.6}
+    .rotation-guide>div{padding:14px 16px;background:rgba(255,255,255,.64)}
+    .rotation-guide>div>small,.rotation-guide>div>strong{display:block}.rotation-guide>div>small{color:var(--green);font:800 9px var(--mono);letter-spacing:.08em}.rotation-guide>div>strong{margin-top:7px;font-size:12px}
+    .rotation-guide .reading-rule{grid-column:1/-1;display:flex;align-items:baseline;gap:10px;padding:11px 16px;background:#eef1e9}.rotation-guide .reading-rule strong{margin:0;color:var(--ink);font-size:11px}.rotation-guide .reading-rule span{color:#59685e;font-size:10px;line-height:1.6}
+    .arrow-reading{grid-column:1/-1;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px!important;padding:1px 0 0!important;background:var(--line)!important}.arrow-reading>div{display:flex;align-items:center;gap:9px;padding:10px 13px;background:#fff}.arrow-reading b{flex:0 0 22px;color:var(--green);font:800 19px var(--mono);text-align:center}.arrow-reading strong,.arrow-reading small{display:block}.arrow-reading strong{font-size:10px}.arrow-reading small{margin-top:2px;color:#6b786f;font-size:9px;letter-spacing:0}
+    .rotation-guide .reading-example{grid-column:1/-1;margin:0;padding:11px 16px;background:#eef1e9;color:#59685e;font-size:10px;line-height:1.65}.reading-example strong{display:inline;color:#765313;font-size:10px}.reading-example span{margin-left:8px;color:#6b786f}
     .direction-arrow{position:absolute;width:13px;height:8px;color:currentColor;pointer-events:none;transform-origin:0 50%}.direction-arrow:before{content:"";position:absolute;left:0;top:3px;width:9px;border-top:1.5px solid currentColor}.direction-arrow:after{content:"";position:absolute;right:0;top:1px;width:5px;height:5px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;transform:rotate(45deg)}
     .trajectory-legend{display:inline-flex;align-items:center;gap:5px;color:#607067;font:700 9px var(--mono)}.trajectory-legend b{font-size:15px;color:var(--green)}.label-count{margin-left:8px;color:#607067;font:700 9px var(--mono);white-space:nowrap}
-    @media(max-width:760px){.rotation-guide{grid-template-columns:1fr}.rotation-guide p{grid-column:auto}.rotation-guide div{padding:11px 13px}}
+    @media(max-width:760px){.rotation-guide{grid-template-columns:1fr}.rotation-guide>div{padding:11px 13px}.rotation-guide .reading-rule,.rotation-guide .reading-example,.arrow-reading{grid-column:auto}.rotation-guide .reading-rule{display:block}.rotation-guide .reading-rule span{display:block;margin-top:4px}.arrow-reading{grid-template-columns:repeat(2,minmax(0,1fr))}.reading-example span{display:block;margin:4px 0 0}}
   </style>
 <style id="us-research-path-style">
   .us-research-path, .us-research-path * { box-sizing:border-box; }
@@ -179,10 +181,12 @@
   <header class="topbar"><a class="back" href="../rs-thrust/">← RS THRUST</a><div class="status"><i></i><span id="status">读取中</span><time id="dataDate">—</time></div></header>
   <section class="hero"><div><p class="eyebrow">RELATIVE VELOCITY × ACCELERATION</p><h1>轮动加速度雷达</h1><div class="hero-copy">看清谁仍在领先、谁已开始乏力，以及哪些落后板块正在悄悄修复。预警是观察触发，不是顶底确认。</div></div><aside class="model"><small>CAUSAL MODEL</small><strong>RS速度 → 速度变化 → 加速度Z值</strong><p>5日因果平滑 · 3日速度变化 · 63日历史尺度</p></aside></section>
   <section aria-label="四象限读图指南" class="rotation-guide">
-    <div><small>横轴 · 相对速度</small><strong>← 跑输 SPY　跑赢 SPY →</strong></div>
+    <div><small>横轴 · 相对速度</small><strong>← 相对落后　相对领先 →</strong></div>
     <div><small>纵轴 · 速度变化</small><strong>↑ 加速改善　减速恶化 ↓</strong></div>
-    <div><small>短箭头 · 单日方向</small><strong>标签边框：前一日 → 当前日</strong></div>
-    <p>先看标签边框上的短箭头，再看当前象限；标签只在所属象限内自动避让，不跨越中轴。象限判断始终使用真实数值，箭头只表示已发生的一日方向，不是后市预测。</p>
+    <div><small>短箭头 · 已发生的变化</small><strong>前一日坐标 → 当前日坐标</strong></div>
+    <div class="reading-rule"><strong>先看位置与颜色，再看箭头</strong><span>位置与颜色＝当前轮动状态；箭头＝相比前一日正在往哪里移动，不是下一日预测。</span></div>
+    <div class="arrow-reading" aria-label="箭头方向含义"><div><b>↗</b><span><strong>相对速度、加速度同升</strong><small>横纵两项同时改善</small></span></div><div><b>↘</b><span><strong>相对速度升、加速度降</strong><small>横向改善，动能降温</small></span></div><div><b>↙</b><span><strong>相对速度、加速度同降</strong><small>横纵两项同时走弱</small></span></div><div><b>↖</b><span><strong>相对速度降、加速度升</strong><small>横向回落，动能改善</small></span></div></div>
+    <p class="reading-example"><strong>例：右上「领先加速」的箭头 ↘</strong>　当前仍领先且加速，但加速度正在回落；越过横轴后才进入右下「领先减速」。<span>→/← 主要看相对速度，↑/↓ 主要看加速度。</span></p>
   </section>
   <section class="controls"><div class="tabs" id="classTabs"></div></section>
   <div id="content"><section class="message">正在读取轮动数据…</section></div>
