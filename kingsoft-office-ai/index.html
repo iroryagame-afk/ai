@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="金山办公AI软件投资研究：拆解WPS个人、WPS 365、海外业务与WPS Comate的增速、收入占比、兑现路径和三种情景目标价。">
+  <meta property="og:title" content="金山办公 AI 软件投资研究：产品兑现与目标价">
+  <meta property="og:description" content="WPS 365 × 海外增长 × WPS Comate × 三情景估值">
+  <title>金山办公 AI 软件投资研究：产品兑现与目标价｜CSN 投研</title>
+  <style>
+    :root{
+      color-scheme:light;--paper:#f5f1e8;--panel:#fffdf8;--ink:#202632;--ink2:#4e5562;
+      --muted:#747a86;--line:#ddd5c6;--navy:#173a5e;--red:#ad422f;--gold:#94702b;
+      --green:#35694f;--orange:#a45a2a;--shadow:0 18px 48px rgba(45,38,28,.09);
+      --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+      --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+      --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace
+    }
+    *{box-sizing:border-box} body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--sans);line-height:1.78}
+    a{color:var(--navy);text-underline-offset:3px}.backbar{height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 20px;border-bottom:1px solid var(--line);background:rgba(245,241,232,.95);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}
+    .backbar a{text-decoration:none}.back{font-size:13px;color:var(--ink2);padding:6px 10px;border-radius:8px}.brand{display:flex;align-items:center;gap:8px;color:var(--ink)}.seal{width:24px;height:24px;border-radius:6px;background:var(--red);color:#fff;display:grid;place-items:center;font:13px var(--serif)}.brandname{font:600 15px var(--serif);letter-spacing:.08em}
+    .shell{width:min(1140px,calc(100% - 32px));margin:0 auto;padding:34px 0 70px}.eyebrow{color:var(--red);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.hero{position:relative;overflow:hidden;padding:48px 50px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,#fffdf9 0%,#f5efe2 100%);box-shadow:var(--shadow)}.hero:after{content:"WPS";position:absolute;right:-15px;bottom:-58px;font:900 150px/1 var(--serif);color:rgba(23,58,94,.055);letter-spacing:-.08em}.hero h1{position:relative;z-index:1;max-width:880px;margin:10px 0 16px;font:800 clamp(32px,5vw,58px)/1.14 var(--serif);letter-spacing:-.045em}.deck{position:relative;z-index:1;max-width:800px;margin:0;color:var(--ink2);font-size:18px}.meta{position:relative;z-index:1;display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;color:var(--muted);font-size:12px}.pill{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.65)}
+    .verdict{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;margin:18px 0}.card{border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:0 8px 28px rgba(45,38,28,.055)}.call{padding:26px 28px;border-left:5px solid var(--red)}.call h2{margin:0 0 8px;font:700 24px var(--serif)}.call p{margin:0;color:var(--ink2)}.rating{padding:22px 24px;display:flex;flex-direction:column;justify-content:center;background:var(--navy);color:#fff}.rating .label{font-size:12px;opacity:.72;letter-spacing:.12em}.rating strong{margin:5px 0;font:700 28px var(--serif)}.rating span{font-size:13px;opacity:.82}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 38px}.stat{padding:18px;border:1px solid var(--line);border-radius:15px;background:rgba(255,253,248,.82)}.stat b{display:block;color:var(--navy);font:800 25px var(--serif)}.stat span{display:block;margin-top:3px;color:var(--muted);font-size:12px}
+    .toc{margin:0 0 42px;padding:19px 24px}.toc strong{font-family:var(--serif)}.toc nav{display:flex;gap:8px 18px;flex-wrap:wrap;margin-top:8px}.toc a{font-size:13px;text-decoration:none;border-bottom:1px solid rgba(23,58,94,.25)}
+    section{scroll-margin-top:76px;margin:0 0 48px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:15px;border-bottom:1px solid var(--line);padding-bottom:10px}.section-head h2{margin:0;font:800 30px/1.25 var(--serif)}.section-no{color:var(--red);font:700 12px var(--mono)}.lead{font-size:18px;color:var(--ink2);max-width:900px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.pad{padding:22px 24px}.pad h3{margin:0 0 8px;font:700 18px var(--serif)}.pad p{margin:0;color:var(--ink2)}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--panel)}table{width:100%;min-width:780px;border-collapse:collapse;font-size:14px}th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{color:#fff;background:var(--navy);font-size:12px;letter-spacing:.04em}tr:last-child td{border-bottom:0}.num{white-space:nowrap;font-family:var(--mono);font-size:13px}.hot{color:var(--red);font-weight:800}.good{color:var(--green);font-weight:800}.muted{color:var(--muted);font-size:12px}
+    .stage{position:relative;padding-top:18px}.stage:before{content:"";position:absolute;left:7%;right:7%;top:35px;height:2px;background:var(--line)}.stage-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.stage-card{padding:22px 20px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.dot{width:13px;height:13px;margin-bottom:15px;border:3px solid var(--paper);border-radius:50%;box-shadow:0 0 0 2px var(--navy);background:var(--navy)}.stage-card:nth-child(3) .dot{box-shadow:0 0 0 2px var(--orange);background:var(--orange)}.stage-card h3{margin:0;font:700 18px var(--serif)}.stage-card .tag{display:inline-block;margin:7px 0 10px;padding:3px 8px;border-radius:999px;background:#edf1f5;color:var(--navy);font-size:11px;font-weight:700}.stage-card:nth-child(3) .tag{background:#f7eadf;color:var(--orange)}.stage-card p{margin:0;color:var(--ink2);font-size:14px}
+    .scenario{overflow:hidden}.scenario .top{padding:18px 20px;color:#fff;background:var(--navy)}.scenario.bear .top{background:#665f5b}.scenario.bull .top{background:var(--green)}.scenario .top small{display:block;opacity:.72}.scenario .top strong{font:800 27px var(--serif)}.scenario .body{padding:19px 20px}.scenario dl{display:grid;grid-template-columns:1fr auto;gap:7px 12px;margin:0;font-size:13px}.scenario dt{color:var(--muted)}.scenario dd{margin:0;text-align:right;font-family:var(--mono)}.scenario .trigger{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line);color:var(--ink2);font-size:13px}
+    .matrix{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.score{padding:16px 10px;text-align:center;border:1px solid var(--line);border-radius:13px;background:var(--panel)}.score b{display:block;font:800 22px var(--serif);color:var(--navy)}.score span{font-size:12px;color:var(--muted)}
+    .checklist{display:grid;grid-template-columns:1fr 1fr;gap:16px}.check{padding:22px 24px}.check h3{margin:0 0 10px;font:700 19px var(--serif)}.check ul{margin:0;padding-left:20px}.check li+li{margin-top:7px}.prove{border-top:4px solid var(--green)}.kill{border-top:4px solid var(--red)}
+    .note{margin-top:14px;padding:15px 18px;border-left:4px solid var(--gold);background:#fff9e9;color:var(--ink2);font-size:13px}.sources{padding:25px 28px}.sources ol{margin:12px 0 0;padding-left:22px}.sources li+li{margin-top:8px}.sources li{color:var(--ink2);font-size:13px}.footer{padding:24px 0 0;text-align:center;color:var(--muted);font-size:12px}
+    @media(max-width:850px){.hero{padding:34px 26px}.verdict,.grid2,.checklist{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.grid3,.stage-grid{grid-template-columns:1fr}.stage:before{display:none}.matrix{grid-template-columns:repeat(2,1fr)}.matrix .score:last-child{grid-column:1/-1}.section-head h2{font-size:25px}}
+    @media(max-width:520px){.shell{width:min(100% - 18px,1140px);padding-top:16px}.backbar{padding:0 9px}.hero{padding:27px 20px;border-radius:17px}.hero h1{font-size:31px}.deck{font-size:15px}.call{padding:21px 19px}.stats{gap:8px}.stat{padding:14px 12px}.stat b{font-size:21px}.pad,.check,.sources{padding:18px}.matrix{grid-template-columns:1fr}.matrix .score:last-child{grid-column:auto}}
+  </style>
+</head>
+<body>
+  <header class="backbar">
+    <a class="back" href="../nav/">← 报告目录</a>
+    <a class="brand" href="https://csnpk.com/" target="_blank" rel="noreferrer noopener"><span class="seal">研</span><span class="brandname">CSN 投研</span></a>
+  </header>
+  <main class="shell">
+    <article>
+      <header class="hero">
+        <div class="eyebrow">Company Research · 688111.SH</div>
+        <h1>金山办公的 AI 时刻：<br>高质量公司，赔率还要等兑现</h1>
+        <p class="deck">WPS 365 已经进入规模放量，海外订阅正在加速；WPS Comate 则仍处客户认证至试点部署。真正的投资分歧，不是“有没有 Agent”，而是它能否把组织知识、权限与工作流转化为可续费的企业收入。</p>
+        <div class="meta"><span class="pill">研究日期：2026-08-01</span><span class="pill">行情截至：2026-07-31 收盘</span><span class="pill">口径：调整后利润 / 6–12个月情景估值</span></div>
+      </header>
+
+      <div class="verdict">
+        <section class="card call">
+          <h2>结论：可投资，但当前位置不宜追高</h2>
+          <p>公司层面是 A 股 AI 办公软件龙一，商业化基础强于纯概念 Agent；股票层面按 2026 年 23–25 亿元常态化利润估算，现价约 50–54 倍 PE，已经预付一部分 WPS 365 增长。适合观察仓或等待回调，确信仓要等 Comate 付费合同、续费率与单客收入披露。</p>
+        </section>
+        <aside class="card rating"><span class="label">最终评级</span><strong>观察 / 等验证</strong><span>公司质量：高 · 当前赔率：中等</span></aside>
+      </div>
+
+      <div class="stats" aria-label="关键数据">
+        <div class="stat"><b>269.58 元</b><span>2026-07-31 收盘价，单日 +6.90%</span></div>
+        <div class="stat"><b>约 1,249 亿</b><span>按 4.6318 亿股估算市值</span></div>
+        <div class="stat"><b>50–54×</b><span>现价对应 2026E 调整后 PE</span></div>
+        <div class="stat"><b>285–320 元</b><span>基准情景目标价区间</span></div>
+      </div>
+
+      <aside class="card toc"><strong>文章导航</strong><nav><a href="#business">业务增速与占比</a><a href="#product">AI 产品阶段</a><a href="#thesis">投资逻辑</a><a href="#valuation">三情景目标价</a><a href="#tracking">跟踪与证伪</a><a href="#sources">来源与口径</a></nav></aside>
+
+      <section id="business">
+        <div class="section-head"><h2>收入不是一个“AI 故事”，而是三条曲线</h2><span class="section-no">01 / BUSINESS MIX</span></div>
+        <p class="lead">最值得重视的是 WPS 365 与海外个人业务：前者正在成为第二增长引擎，后者验证产品国际化。Comate 当前还不能单独计入已兑现收入。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>产品 / 业务</th><th>最新口径</th><th>增速</th><th>占金山办公</th><th>占金山软件集团</th><th>判断</th></tr></thead>
+            <tbody>
+              <tr><td><strong>WPS 个人业务</strong></td><td class="num">2025：36.26 亿元</td><td class="num">+10.42%</td><td class="num">61.2%</td><td class="num">37.4%</td><td>现金牛，AI 会员提价与付费率决定再加速幅度</td></tr>
+              <tr><td><strong>海外 WPS 个人业务</strong></td><td class="num">2025：2.82 亿元</td><td class="num hot">+53.67%</td><td class="num">4.75%</td><td class="num">2.91%</td><td>体量仍小，但收入弹性最大；需继续观察 ARPU</td></tr>
+              <tr><td><strong>WPS 365</strong></td><td class="num">2025：7.20 亿元</td><td class="num hot">+64.93%</td><td class="num">12.1%</td><td class="num">7.43%</td><td class="good">第二增长引擎，贡献约 35% 的金山办公收入增量</td></tr>
+              <tr><td><strong>WPS 软件业务</strong></td><td class="num">2025：14.61 亿元</td><td class="num">+15.24%</td><td class="num">24.6%</td><td class="num">15.1%</td><td>政企授权与信创底盘，增速稳定</td></tr>
+              <tr><td><strong>办公软件及服务</strong></td><td class="num">2026Q1：16.13 亿元</td><td class="num hot">+24%</td><td class="num">100%</td><td class="num">66.8%</td><td>已是金山软件集团最核心收入来源</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">占比按同一期间披露收入计算，四舍五入。金山软件集团的办公分部主要对应金山办公，但分部口径与上市公司报表并非完全等同；2025 年办公分部占集团收入约 61.2%，2026Q1 升至约 66.8%。</div>
+      </section>
+
+      <section id="product">
+        <div class="section-head"><h2>产品阶段：WPS 365 已放量，Comate 仍需过桥</h2><span class="section-no">02 / PRODUCT STAGE</span></div>
+        <div class="stage">
+          <div class="stage-grid">
+            <article class="stage-card"><div class="dot"></div><h3>海外 WPS</h3><span class="tag">规模放量期</span><p>2025 年收入增长 53.67%；2026 年激励考核设置 40% 触发、50% 目标，隐含收入约 3.94–4.22 亿元。高校口碑是采用线索，但不是收入凭证。</p></article>
+            <article class="stage-card"><div class="dot"></div><h3>WPS 365</h3><span class="tag">规模放量期</span><p>2026Q1 收入 2.44 亿元，同比增长 60.79%，占金山办公收入约 15.1%。它把协作、云文档、AI 与企业订阅打包，是当前最可信的估值增量。</p></article>
+            <article class="stage-card"><div class="dot"></div><h3>WPS Comate</h3><span class="tag">客户认证 → 试点部署</span><p>面向组织级数据、知识库、业务系统、权限与审计。公开的“450+ 企业共创意向”只说明 PoC 漏斗，不等于 450 份订单，更不等于已确认收入。</p></article>
+          </div>
+        </div>
+        <div class="grid2" style="margin-top:16px">
+          <article class="card pad"><h3>Comate 的乐观测算</h3><p>仅作敏感性分析：若 450 家线索中 15%–30% 转为付费，2026 年单客确认 30–60 万元，则当年收入约 0.2–0.8 亿元，相当于 WPS 365 收入的约 2%–8%、金山办公收入的约 0.3%–1.1%。</p></article>
+          <article class="card pad"><h3>为什么不能直接给高倍数</h3><p>Agent 的推理成本、私有化交付、客户数据治理与长销售周期都会吞噬毛利。必须看到合同金额、部署周期、续费率和推理成本之后，才能从“产品期权”升级为“利润引擎”。</p></article>
+        </div>
+      </section>
+
+      <section id="thesis">
+        <div class="section-head"><h2>可投资性的核心：入口、数据与商业闭环</h2><span class="section-no">03 / INVESTMENT THESIS</span></div>
+        <div class="grid3">
+          <article class="card pad"><h3>入口优势</h3><p>WPS 已嵌入高频办公场景，AI 无需从零获客。文档、表格、演示和协作天然产生任务反馈，比独立 Agent 更接近真实工作流。</p></article>
+          <article class="card pad"><h3>企业数据壁垒</h3><p>组织知识、权限、审计与业务系统连接，是 Comate 区别于通用聊天机器人的关键；但壁垒成立的前提是部署与续费，而非发布会功能清单。</p></article>
+          <article class="card pad"><h3>订阅变现能力</h3><p>个人会员提供现金流，WPS 365 提升企业 ARPU，海外市场打开用户天花板。三者若共振，利润增速可高于收入增速。</p></article>
+        </div>
+        <div class="matrix" style="margin-top:16px">
+          <div class="score"><b>9 / 10</b><span>主题纯度</span></div>
+          <div class="score"><b>8 / 10</b><span>商业化基础</span></div>
+          <div class="score"><b>7.5 / 10</b><span>利润弹性</span></div>
+          <div class="score"><b>7.5 / 10</b><span>兑现确定性</span></div>
+          <div class="score"><b>中高</b><span>估值风险</span></div>
+        </div>
+        <div class="note"><strong>相对排序：</strong>金山办公是 A 股办公 Agent / AI 办公应用的龙一；但若比较“跨应用通用 Agent 平台”，其开放生态与外部系统编排能力仍需验证。它更像拥有强分发入口的垂直应用龙头，而不是已经胜出的全栈 Agent 操作系统。</div>
+      </section>
+
+      <section id="valuation">
+        <div class="section-head"><h2>三种条件下的目标价：不要把投资收益当主营利润</h2><span class="section-no">04 / VALUATION</span></div>
+        <p class="lead">2026 年中报预告中的归母净利润受基金投资收益显著抬升，因此估值采用调整后利润。以 4.6318 亿股、2027 年调整后利润和条件式 PE 计算，目标价不是单点承诺。</p>
+        <div class="grid3">
+          <article class="card scenario bear"><div class="top"><small>悲观情景 · 验证失败</small><strong>190–220 元</strong></div><div class="body"><dl><dt>2027E 调整后利润</dt><dd>25–27 亿元</dd><dt>对应 EPS</dt><dd>5.40–5.83 元</dd><dt>估值倍数</dt><dd>35–38×</dd><dt>较现价空间</dt><dd>-30% 至 -18%</dd></dl><p class="trigger">条件：WPS 365 增速跌破 30%，Comate 缺少付费与续费证据，AI 成本压制利润率。</p></div></article>
+          <article class="card scenario"><div class="top"><small>基准情景 · 稳健兑现</small><strong>285–320 元</strong></div><div class="body"><dl><dt>2027E 调整后利润</dt><dd>29–31 亿元</dd><dt>对应 EPS</dt><dd>6.26–6.69 元</dd><dt>估值倍数</dt><dd>45–48×</dd><dt>较现价空间</dt><dd>+5% 至 +19%</dd></dl><p class="trigger">条件：WPS 365 保持 35%–45% 增长，海外保持 35%+，Comate 出现可复核合同但利润贡献仍小。</p></div></article>
+          <article class="card scenario bull"><div class="top"><small>乐观情景 · Agent 放量</small><strong>380–430 元</strong></div><div class="body"><dl><dt>2027E 调整后利润</dt><dd>33–35 亿元</dd><dt>对应 EPS</dt><dd>7.12–7.56 元</dd><dt>估值倍数</dt><dd>53–57×</dd><dt>较现价空间</dt><dd>+40% 至 +60%</dd></dl><p class="trigger">条件：WPS 365 与海外均超考核目标，Comate 形成规模化付费、续费和良好单位经济性。</p></div></article>
+        </div>
+        <div class="note"><strong>现价隐含什么：</strong>269.58 元若给 45 倍 2027 PE，隐含调整后利润约 27.7 亿元；说明市场已定价中等增长，但尚未完全计入 Comate 大规模成功。若目标价 360 元且只给 45 倍，需要 2027 年利润约 37.1 亿元；若利润仅 30 亿元，则需要约 55.6 倍 PE。</div>
+      </section>
+
+      <section id="tracking">
+        <div class="section-head"><h2>跟踪清单：什么证明，什么证伪</h2><span class="section-no">05 / MONITOR</span></div>
+        <div class="checklist">
+          <article class="card check prove"><h3>升级为确信仓的证据</h3><ul><li>2026 年 WPS 365 收入显著超过 10 亿元，且增长并非主要来自一次性项目。</li><li>Comate 披露付费客户、合同金额、上线周期与续费，而不是共创意向数量。</li><li>海外收入达到 40%–50% 增长目标，同时 ARPU 与付费率改善。</li><li>2026 年调整后利润达到 23–25 亿元，AI 推理和交付成本受控。</li></ul></article>
+          <article class="card check kill"><h3>投资逻辑的证伪信号</h3><ul><li>WPS 365 增速快速降至 30% 以下，企业订阅转为重交付、低复购。</li><li>Comate 长期停留 PoC，缺少可核验的付费合同或续费数据。</li><li>个人业务增速跌破 10%，AI 会员没有带来付费率或 ARPU 提升。</li><li>海外用户增长快但变现弱，或 AI 成本导致调整后利润率明显下滑。</li></ul></article>
+        </div>
+        <div class="note"><strong>仓位纪律：</strong>2026-07-31 股价单日上涨 6.90%，并高于 5/10/20 日均线约 7.9%/10.2%/15.0%。基本面研究结论是“可投”，不等于当前价格“可追”；更好的入场来自回调后的估值安全垫，或财报后用订单与利润验证换取更高确定性。</div>
+      </section>
+
+      <section id="sources">
+        <div class="section-head"><h2>来源、口径与边界</h2><span class="section-no">06 / SOURCES</span></div>
+        <div class="card sources">
+          <ol>
+            <li><a href="https://static.cninfo.com.cn/finalpage/2026-03-26/1225032249.PDF" target="_blank" rel="noreferrer noopener">金山办公 2025 年年度报告</a>：收入拆分、股本、业务与风险。</li>
+            <li><a href="https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260423/4266fc74860846d6859d29b680003906.PDF" target="_blank" rel="noreferrer noopener">金山办公 2026 年第一季度报告</a>：季度收入与调整后利润。</li>
+            <li><a href="https://static.cninfo.com.cn/finalpage/2026-04-24/1225165341.PDF" target="_blank" rel="noreferrer noopener">金山办公 2026 年限制性股票激励计划</a>：海外和 WPS 365 考核目标。</li>
+            <li><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0422/2026042200391_c.pdf" target="_blank" rel="noreferrer noopener">金山软件 2025 年报</a>与<a href="https://ir.kingsoft.com/system/files-encrypted/nasdaq_kms/assets/2026/05/27/5-52-07/ANNOUNCEMENT%20OF%20THE%20RESULTS%20FOR%20THE%20THREE%20MONTHS%20ENDED%2031%20MARCH%202026.pdf" target="_blank" rel="noreferrer noopener">2026Q1 业绩公告</a>：集团业务占比。</li>
+            <li><a href="https://comate.wps.cn/" target="_blank" rel="noreferrer noopener">WPS Comate 官网</a>与<a href="https://comate.wps.cn/cases" target="_blank" rel="noreferrer noopener">案例页</a>：产品定位与公开案例；不据此推定合同收入。</li>
+            <li><a href="https://m.ithome.com/html/982672.htm" target="_blank" rel="noreferrer noopener">IT之家：金山办公 2026 年半年度业绩预告摘要</a>：用于区分经营利润与基金投资收益，正式财报仍需后续复核。</li>
+            <li><a href="https://m.guancha.cn/GongSi/2026_07_31_825675.shtml?s=fwrphbios" target="_blank" rel="noreferrer noopener">观察者网：WPS 海外高校采用报道</a>：仅作为产品采用线索，不作为财务证据。</li>
+            <li>行情来自 Futu OpenD，只读核验截至 2026-07-31 15:00；估值为本文情景假设，不是公司指引或一致预期。</li>
+          </ol>
+          <p class="muted">重要说明：文中的 Comate 收入、2026/2027 调整后利润和估值倍数均为条件式研究假设。2026 年中报预告的法定归母利润包含显著投资收益，不能直接作为经营性 PE 分母。本文仅供研究，不构成投资建议。</p>
+        </div>
+      </section>
+    </article>
+    <footer class="footer">© 2026 CSN 投研 · 事实与估值分开，产品发布与收入兑现分开</footer>
+  </main>
+</body>
+</html>
