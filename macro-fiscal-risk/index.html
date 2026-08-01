@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="美国财政风险溢价监控：长端利率、美元、股债相关性、信用扩散与高久期成长压力。">
+  <meta name="theme-color" content="#f3f0e8">
+  <title>财政风险溢价监控｜CSN 投研</title>
+  <style>
+    :root{--paper:#f3f0e8;--panel:#fffdf8;--panel-2:#f8f5ee;--ink:#20242b;--ink-2:#4c5360;--muted:#747b86;--line:#ddd7c9;--line-2:#c9c0ac;--navy:#173a5e;--navy-soft:#e8eef4;--red:#a43b2b;--red-soft:#f5e4df;--amber:#9a6b18;--amber-soft:#f5ecd5;--green:#2c694c;--green-soft:#e5f0e8;--serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--shadow:0 1px 2px rgba(25,29,34,.05),0 10px 30px rgba(25,29,34,.06)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(850px 420px at 82% -90px,rgba(23,58,94,.10),transparent 70%),linear-gradient(rgba(255,255,255,.52),transparent 180px)}a{color:var(--navy)}button{font:inherit}
+    .csn-topnav{position:sticky;top:0;z-index:100;background:rgba(255,253,248,.90);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.csn-topnav-inner{width:min(1380px,100%);min-height:58px;margin:auto;padding:0 28px;display:flex;align-items:stretch;gap:18px}.csn-brand{display:flex;align-items:center;gap:10px;flex:none;color:var(--ink);text-decoration:none}.csn-brand-seal{width:30px;height:30px;border-radius:7px;display:grid;place-items:center;background:#b5452e;color:#fff;font:700 14px/1 var(--serif)}.csn-brand-name{display:block;font:700 17px/1.2 var(--serif)}.csn-brand-sub{display:block;color:var(--muted);font:600 10px/1 var(--mono);letter-spacing:.2em}.csn-menu{display:flex;align-items:stretch;margin-left:auto}.csn-item{position:relative;display:flex;align-items:stretch}.csn-item>a,.csn-item>button{display:flex;align-items:center;gap:6px;padding:0 16px;border:0;border-bottom:2px solid transparent;background:none;color:var(--ink-2);text-decoration:none;font-weight:650}.csn-item.active>a,.csn-item.active>button{color:#b5452e;border-bottom-color:#b5452e}.csn-caret{font-size:9px}.csn-drop{position:absolute;top:calc(100% + 1px);left:50%;width:250px;padding:8px;transform:translate(-50%,6px);background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);opacity:0;visibility:hidden;pointer-events:none}.csn-item:hover .csn-drop,.csn-item:focus-within .csn-drop{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}.csn-drop a{display:block;padding:9px 11px;border-radius:8px;color:var(--ink);text-decoration:none}.csn-drop a:hover{background:var(--panel-2)}.csn-drop b,.csn-drop small{display:block}.csn-drop b{font-size:13.5px}.csn-drop small{margin-top:2px;color:var(--muted);font-size:11.5px}.csn-drop a.current b:after{content:" · 当前";color:#b5452e;font-size:11px}
+    .wrap{width:min(1380px,100%);margin:auto;padding:30px 28px 56px}.topline{display:flex;align-items:center;justify-content:space-between;gap:18px}.eyebrow{font:700 10px/1.4 var(--mono);letter-spacing:.16em;color:var(--amber)}.freshness{display:flex;align-items:center;gap:9px;color:var(--muted);font:600 10px/1.4 var(--mono)}.freshness i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px var(--green-soft)}h1{margin:10px 0 0;font:700 clamp(31px,5vw,54px)/1.05 var(--serif);letter-spacing:-.04em}.lede{max-width:850px;margin:15px 0 0;color:var(--ink-2);font-size:14px}.hero{display:grid;grid-template-columns:minmax(240px,.85fr) minmax(0,2fr);gap:14px;margin-top:24px}.regime,.summary{border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow)}.regime{position:relative;overflow:hidden;padding:22px}.regime:before{content:"";position:absolute;inset:0 auto 0 0;width:6px;background:var(--amber)}.regime[data-status="red"]:before{background:var(--red)}.regime[data-status="green"]:before{background:var(--green)}.regime small{color:var(--muted);font:700 10px var(--mono);letter-spacing:.12em}.regime strong{display:block;margin-top:18px;font:700 34px/1 var(--serif)}.regime p{margin:12px 0 0;color:var(--ink-2);font-size:12px}.scoreline{display:flex;gap:7px;margin-top:20px}.scoreline i{height:7px;flex:1;border-radius:99px;background:#e8e3d8}.regime[data-status="green"] .scoreline i:nth-child(1),.regime[data-status="yellow"] .scoreline i:nth-child(-n+2),.regime[data-status="red"] .scoreline i{background:currentColor}.regime[data-status="green"]{color:var(--green)}.regime[data-status="yellow"]{color:var(--amber)}.regime[data-status="red"]{color:var(--red)}.summary{padding:20px 22px}.summary h2{margin:0;font:700 18px var(--serif)}.summary p{margin:10px 0 0;color:var(--ink-2);font-size:13px}.gate{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:17px}.gate div{padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--panel-2)}.gate span{display:block;color:var(--muted);font-size:10px}.gate b{display:block;margin-top:4px;font:700 18px var(--mono)}
+    .section-head{display:flex;align-items:baseline;gap:12px;margin:31px 0 12px}.section-head h2{margin:0;font:700 20px var(--serif)}.section-head span{color:var(--muted);font:700 9px var(--mono);letter-spacing:.14em}.section-head p{margin:0 0 0 auto;color:var(--muted);font-size:10px}.signal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.signal{min-width:0;padding:17px 18px;border:1px solid var(--line);border-top:4px solid var(--green);border-radius:15px;background:var(--panel)}.signal[data-status="yellow"]{border-top-color:var(--amber)}.signal[data-status="red"]{border-top-color:var(--red)}.signal-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.signal-top b{font-size:13px}.badge{padding:3px 8px;border-radius:99px;background:var(--green-soft);color:var(--green);font:700 9px var(--mono)}.signal[data-status="yellow"] .badge{background:var(--amber-soft);color:var(--amber)}.signal[data-status="red"] .badge{background:var(--red-soft);color:var(--red)}.signal-value{margin:17px 0 5px;font:800 34px/1 var(--mono);letter-spacing:-.05em}.signal-value small{margin-left:5px;color:var(--muted);font-size:10px;letter-spacing:0}.signal-detail{min-height:36px;color:var(--ink-2);font-size:11px}.signal-source{margin-top:11px;padding-top:9px;border-top:1px solid var(--line);color:var(--muted);font:600 9px var(--mono)}
+    .charts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.chart-card{padding:16px 17px 13px;border:1px solid var(--line);border-radius:15px;background:var(--panel)}.chart-head{display:flex;justify-content:space-between;gap:12px}.chart-head b{font-size:13px}.chart-head span{color:var(--muted);font:600 9px var(--mono)}canvas{display:block;width:100%;height:220px;margin-top:10px}.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px;color:var(--muted);font:600 9px var(--mono)}.legend i{display:inline-block;width:11px;height:3px;margin-right:5px;vertical-align:middle;border-radius:2px}
+    .impact-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}.impact{padding:15px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.impact small{display:inline-flex;padding:3px 7px;border-radius:99px;background:var(--navy-soft);color:var(--navy);font-weight:700}.impact h3{margin:12px 0 6px;font-size:13px}.impact p{margin:0;color:var(--ink-2);font-size:10px;line-height:1.65}.anchors{display:grid;grid-template-columns:1.15fr .85fr;gap:10px}.anchor-card,.method{border:1px solid var(--line);border-radius:15px;background:var(--panel)}.anchor-grid{display:grid;grid-template-columns:repeat(4,1fr)}.anchor{padding:17px;border-right:1px solid var(--line)}.anchor:last-child{border:0}.anchor span{color:var(--muted);font-size:10px}.anchor b{display:block;margin-top:8px;font:750 22px var(--mono)}.anchor a{display:block;margin-top:7px;font-size:9px;text-decoration:none}.method{padding:17px}.method b{font:700 14px var(--serif)}.method p{margin:8px 0 0;color:var(--ink-2);font-size:10px}.source-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.source-list a{padding:5px 8px;border:1px solid var(--line);border-radius:8px;background:var(--panel-2);font-size:9px;text-decoration:none}.status-note{margin-top:12px;color:var(--muted);font:600 9px/1.55 var(--mono)}.error{display:none;margin-top:18px;padding:14px;border:1px solid #d6a79d;border-radius:12px;background:var(--red-soft);color:var(--red);font-size:12px}.error.show{display:block}
+    @media(max-width:1000px){.impact-grid{grid-template-columns:repeat(3,1fr)}.anchors{grid-template-columns:1fr}.hero{grid-template-columns:1fr 1.7fr}}@media(max-width:760px){.wrap{padding:22px 15px 42px}.csn-topnav-inner{padding:0 12px;gap:8px}.csn-brand-sub{display:none}.csn-menu{min-width:0;overflow-x:auto}.csn-item>a,.csn-item>button{padding:0 10px;font-size:13px}.hero,.charts{grid-template-columns:1fr}.signal-grid{grid-template-columns:1fr 1fr}.anchor-grid{grid-template-columns:1fr 1fr}.anchor:nth-child(2){border-right:0}.anchor:nth-child(-n+2){border-bottom:1px solid var(--line)}.impact-grid{grid-template-columns:1fr 1fr}.section-head p{display:none}}@media(max-width:480px){.signal-grid,.impact-grid{grid-template-columns:1fr}.gate{grid-template-columns:1fr}.topline{align-items:flex-start}.freshness{max-width:150px;text-align:right}.anchor-grid{grid-template-columns:1fr}.anchor{border-right:0;border-bottom:1px solid var(--line)}.anchor:nth-child(3){border-bottom:1px solid var(--line)}}
+  </style>
+</head>
+<body>
+  <style id="csnpk-market-nav-responsive">
+@media (max-width:760px) {
+  .csn-topnav .csn-drop {
+    position:fixed;
+    top:59px;
+    right:12px;
+    left:12px;
+    z-index:110;
+    width:auto;
+    min-width:0;
+    max-height:calc(100vh - 72px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    transform:translateY(6px);
+  }
+  .csn-topnav .csn-item:hover .csn-drop,
+  .csn-topnav .csn-item:focus-within .csn-drop,
+  .csn-topnav .csn-item[data-open="true"] .csn-drop { transform:none; }
+}
+</style>
+<nav class="csn-topnav" aria-label="全站导航" data-nav-version="market-groups-v1">
+  <div class="csn-topnav-inner">
+    <a class="csn-brand" href="../">
+      <span class="csn-brand-seal">研</span>
+      <span><span class="csn-brand-name">CSN 投研</span><span class="csn-brand-sub">Research Desk</span></span>
+    </a>
+    <div class="csn-menu">
+      <div class="csn-item" data-group="stocks">
+        <button type="button" aria-haspopup="true">股票 <span class="csn-caret">▼</span></button>
+        <div class="csn-drop">
+          <a href="../mda100/" data-key="mda100"><b>A股严选</b><small>科技核心池 · 候选排序 · 次日纪律</small></a>
+          <a href="../csn/" data-key="csn"><b>美股严选</b><small>核心池 · OpenD核验 · 精选推荐</small></a>
+          <a href="../csn/hot/" data-key="csn-hot"><b>美股热门榜</b><small>全市场热榜 · 板块轮动 · 技术核验</small></a>
+        </div>
+      </div>
+      <div class="csn-item" data-group="a-tools">
+        <button type="button" aria-haspopup="true">A股工具 <span class="csn-caret">▼</span></button>
+        <div class="csn-drop">
+          <a href="../a-share-market/" data-key="a-share-market"><b>A股大盘观察</b><small>资金闸门 · 行业流向 · 风格轮动</small></a>
+          <a href="../a-share-thrust/" data-key="a-share-thrust"><b>A股 Thrust</b><small>行业ETF加速度 · 平均价格体感</small></a>
+          <a href="../a-share-rotation/" data-key="a-share-rotation"><b>A股轮动加速度雷达</b><small>四象限 · 底部修复 · 顶部衰竭</small></a>
+          <a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表</b><small>板块ETF · 自选股 · 机会与风险</small></a>
+        </div>
+      </div>
+      <div class="csn-item active" data-group="us-tools">
+        <button type="button" aria-haspopup="true">美股工具 <span class="csn-caret">▼</span></button>
+        <div class="csn-drop">
+          <a href="../rs-thrust/" data-key="rs-thrust"><b>美股相对强度加速图</b><small>找正在加速的强势股</small></a>
+          <a href="../rotation/" data-key="rotation"><b>美股轮动加速度雷达</b><small>看顶部衰竭与底部修复</small></a>
+          <a href="../ai-software-security-shovels/" data-key="ai-software-security-shovels"><b>AI 软件与安全监控台</b><small>固定股票池 · 轮动 · 量价 · 盘后动作</small></a>
+          <a href="../us-skew/" data-key="us-skew"><b>美股期权风险分布图</b><small>看保护需求与风险温度</small></a>
+          <a class="current" href="../macro-fiscal-risk/" data-key="macro-fiscal-risk"><b>财政风险溢价监控</b><small>长端、美元、股债与信用扩散</small></a>
+          <a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表</b><small>机会、风险警报与历史信号</small></a>
+        </div>
+      </div>
+      <div class="csn-item" data-group="progress"><a href="../ai-decision/" data-key="ai-decision">市场进度</a></div>
+      <div class="csn-item" data-group="research"><a href="../nav/" data-key="nav">调研</a></div>
+    </div>
+  </div>
+</nav>
+  <main class="wrap">
+    <div class="topline"><div class="eyebrow">MACRO · FISCAL RISK · CLOSE-ONLY</div><div class="freshness"><i></i><span id="freshness">载入已核验快照…</span></div></div>
+    <h1>财政风险溢价监控</h1>
+    <p class="lede">监控“长期收益率上升、美元走弱”是否从一次异常行情，演变成影响股票估值、债券对冲和信用市场的持续制度变化。单个指标不触发危机判断。</p>
+    <div id="error" class="error" role="alert">数据载入失败。页面不会用空值或旧缓存冒充最新结果。</div>
+
+    <section class="hero" aria-label="当前风险状态">
+      <article class="regime" id="regime" data-status="yellow"><small>CURRENT REGIME</small><strong id="regime-label">待核验</strong><p id="regime-action">正在读取数据。</p><div class="scoreline" aria-hidden="true"><i></i><i></i><i></i></div></article>
+      <article class="summary"><h2>怎样才算真正升级</h2><p>红色状态必须同时出现：长期国债高压、美元代理在长端上行时继续走弱，并至少向股债相关性、高久期成长或信用市场扩散。长端和曲线属于同一类风险，不可重复当成两个独立确认。</p><div class="gate"><div><span>核心红色</span><b id="red-core">—</b></div><div><span>全部红色</span><b id="red-total">—</b></div><div><span>数据口径</span><b id="data-date">—</b></div></div></article>
+    </section>
+
+    <div class="section-head"><h2>核心确认链</h2><span>CORE CHAIN</span><p>长期国债 → 曲线 → 美元反应</p></div>
+    <section class="signal-grid" id="core-signals" aria-label="核心确认信号"></section>
+
+    <div class="section-head"><h2>风险扩散与硬资产确认</h2><span>TRANSMISSION</span><p>股债、信用、高久期成长、黄金相对表现</p></div>
+    <section class="signal-grid" id="spread-signals" aria-label="风险扩散信号"></section>
+
+    <div class="section-head"><h2>关键路径</h2><span>65 SESSIONS</span><p>收盘数据，不作盘中信号</p></div>
+    <section class="charts">
+      <article class="chart-card"><div class="chart-head"><b>2年与30年美债收益率</b><span>U.S. TREASURY</span></div><canvas id="yield-chart" aria-label="2年与30年美债收益率走势图"></canvas><div class="legend"><span><i style="background:#173a5e"></i>2Y</span><span><i style="background:#a43b2b"></i>30Y</span></div></article>
+      <article class="chart-card"><div class="chart-head"><b>股票、长债、黄金与美元代理</b><span>起点 = 100</span></div><canvas id="asset-chart" aria-label="股票、长债、黄金与美元代理相对走势图"></canvas><div class="legend"><span><i style="background:#173a5e"></i>QQQ</span><span><i style="background:#a43b2b"></i>TLT</span><span><i style="background:#9a6b18"></i>GLD</span><span><i style="background:#2c694c"></i>UUP</span></div></article>
+    </section>
+
+    <div class="section-head"><h2>对股票组合的影响</h2><span>PORTFOLIO MAP</span></div>
+    <section class="impact-grid" id="impact-grid" aria-label="资产影响地图"></section>
+
+    <div class="section-head"><h2>官方宏观锚点与口径</h2><span>VERIFIED ANCHORS</span></div>
+    <section class="anchors">
+      <div class="anchor-card"><div class="anchor-grid" id="anchor-grid"></div></div>
+      <aside class="method"><b>页面边界</b><p id="method-rule">—</p><p id="method-limit">—</p><div class="source-list" id="source-list"></div><div class="status-note" id="verification-marker">—</div></aside>
+    </section>
+  </main>
+  <script>
+    const statusText={green:'常规',yellow:'警报',red:'高压'};
+    const sourceNames={treasury:'美国财政部',fed:'美联储',pce:'BEA PCE',gdp:'BEA GDP',cbo:'CBO',futu:'Futu',fred:'FRED'};
+    const el=id=>document.getElementById(id);
+    const safe=(value,fallback='—')=>value===null||value===undefined||value===''?fallback:String(value);
+    function signalCard(signal){const article=document.createElement('article');article.className='signal';article.dataset.status=signal.status;const top=document.createElement('div');top.className='signal-top';const title=document.createElement('b');title.textContent=signal.title;const badge=document.createElement('span');badge.className='badge';badge.textContent=statusText[signal.status]||signal.status;top.append(title,badge);const value=document.createElement('div');value.className='signal-value';value.textContent=safe(signal.value);const unit=document.createElement('small');unit.textContent=safe(signal.unit,'');value.append(unit);const detail=document.createElement('div');detail.className='signal-detail';detail.textContent=signal.detail;const source=document.createElement('div');source.className='signal-source';source.textContent=`来源：${signal.source}`;article.append(top,value,detail,source);return article}
+    function renderSignals(data){const core=el('core-signals'),spread=el('spread-signals');core.replaceChildren();spread.replaceChildren();data.signals.forEach(signal=>(signal.group==='core'?core:spread).append(signalCard(signal)))}
+    function renderImpact(items){const root=el('impact-grid');root.replaceChildren();items.forEach(item=>{const card=document.createElement('article');card.className='impact';const tag=document.createElement('small');tag.textContent=item.bias;const title=document.createElement('h3');title.textContent=item.asset;const body=document.createElement('p');body.textContent=item.rule;card.append(tag,title,body);root.append(card)})}
+    function renderAnchors(data){const root=el('anchor-grid');root.replaceChildren();data.anchors.forEach(item=>{const card=document.createElement('article');card.className='anchor';const label=document.createElement('span');label.textContent=item.label;const value=document.createElement('b');value.textContent=item.value;const link=document.createElement('a');link.href=data.sources[item.source_key];link.target='_blank';link.rel='noopener';link.textContent=`${item.date} · 官方来源 ↗`;card.append(label,value,link);root.append(card)});const list=el('source-list');list.replaceChildren();Object.entries(sourceNames).forEach(([key,name])=>{if(!data.sources[key])return;const a=document.createElement('a');a.href=data.sources[key];a.target='_blank';a.rel='noopener';a.textContent=`${name} ↗`;list.append(a)})}
+    function prepCanvas(canvas){const ratio=Math.max(1,window.devicePixelRatio||1);const rect=canvas.getBoundingClientRect();canvas.width=Math.round(rect.width*ratio);canvas.height=Math.round(rect.height*ratio);const ctx=canvas.getContext('2d');ctx.setTransform(ratio,0,0,ratio,0,0);return{ctx,w:rect.width,h:rect.height}}
+    function drawChart(canvas,series,normalize=false){const {ctx,w,h}=prepCanvas(canvas),pad={l:36,r:12,t:12,b:25};ctx.clearRect(0,0,w,h);const prepared=series.map(s=>{const first=s.data[0]?.value||1;return{...s,data:s.data.map(p=>({...p,value:normalize?p.value/first*100:p.value}))}});const values=prepared.flatMap(s=>s.data.map(p=>p.value));if(!values.length)return;let min=Math.min(...values),max=Math.max(...values);const extra=(max-min||1)*.12;min-=extra;max+=extra;ctx.strokeStyle='#ded8cb';ctx.lineWidth=1;ctx.font='9px ui-monospace,monospace';ctx.fillStyle='#747b86';for(let i=0;i<4;i++){const y=pad.t+(h-pad.t-pad.b)*i/3;ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(w-pad.r,y);ctx.stroke();const v=max-(max-min)*i/3;ctx.fillText((normalize?v.toFixed(0):v.toFixed(2)),2,y+3)}prepared.forEach(s=>{ctx.strokeStyle=s.color;ctx.lineWidth=2;ctx.beginPath();s.data.forEach((p,i)=>{const x=pad.l+(w-pad.l-pad.r)*(i/Math.max(1,s.data.length-1));const y=pad.t+(h-pad.t-pad.b)*(max-p.value)/(max-min);i?ctx.lineTo(x,y):ctx.moveTo(x,y)});ctx.stroke()});const last=prepared[0].data.at(-1)?.date||'';const first=prepared[0].data[0]?.date||'';ctx.fillStyle='#747b86';ctx.fillText(first,pad.l,h-6);ctx.textAlign='right';ctx.fillText(last,w-pad.r,h-6);ctx.textAlign='left'}
+    function drawAll(data){drawChart(el('yield-chart'),[{data:data.history.yield_2y,color:'#173a5e'},{data:data.history.yield_30y,color:'#a43b2b'}]);drawChart(el('asset-chart'),[{data:data.history.qqq,color:'#173a5e'},{data:data.history.tlt,color:'#a43b2b'},{data:data.history.gld,color:'#9a6b18'},{data:data.history.dollar_uup,color:'#2c694c'}],true)}
+    function render(data){if(data.verification_status!=='complete')throw new Error('snapshot incomplete');el('freshness').textContent=`数据 ${data.data_date} · 市场 ${data.latest_market_date} · 生成 ${data.generated_at.slice(0,16).replace('T',' ')}`;el('regime').dataset.status=data.regime.status;el('regime-label').textContent=data.regime.label;el('regime-action').textContent=data.regime.action;el('red-core').textContent=safe(data.regime.red_core);el('red-total').textContent=safe(data.regime.red_total);el('data-date').textContent=data.data_date;renderSignals(data);renderImpact(data.market_impact);renderAnchors(data);el('method-rule').textContent=data.methodology.decision_rule;el('method-limit').textContent=data.methodology.limitations;el('verification-marker').textContent=`${data.verification_marker} · 各数据源日期：${Object.entries(data.source_health).map(([k,v])=>`${k} ${v}`).join(' / ')}`;drawAll(data);window.addEventListener('resize',()=>drawAll(data),{passive:true})}
+    fetch(`data.json?v=${Date.now()}`,{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json()}).then(render).catch(error=>{console.error(error);el('error').classList.add('show');el('freshness').textContent='数据未完成载入';el('freshness').previousElementSibling.style.background='#a43b2b'})
+  </script>
+</body>
+</html>
