@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bloom Energy 与 AI 数据中心现场供电产业链研究：1.2、2.0、2.8GW 三情景供应额，北美与 A 股铲子股证据等级、股价、目标价及跟踪纪律。">
+  <meta property="og:title" content="SOFC × AI 电力：谁在卖铲子，谁只是映射？">
+  <meta property="og:description" content="Bloom Energy 供应链压力测试：供应范围、估值情景与价格纪律">
+  <title>SOFC × AI 电力：Bloom Energy 供应链压力测试｜CSN 投研</title>
+  <style>
+    :root{color-scheme:light;--paper:#f5f1e8;--panel:#fffdf8;--ink:#202632;--ink2:#4e5562;--muted:#747a86;--line:#ddd5c6;--navy:#173a5e;--red:#ad422f;--gold:#94702b;--green:#35694f;--orange:#a45a2a;--shadow:0 18px 48px rgba(45,38,28,.09);--serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;--mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--sans);line-height:1.78}a{color:var(--navy);text-underline-offset:3px}.backbar{height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 20px;border-bottom:1px solid var(--line);background:rgba(245,241,232,.95);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}.backbar a{text-decoration:none}.back{font-size:13px;color:var(--ink2);padding:6px 10px;border-radius:8px}.brand{display:flex;align-items:center;gap:8px;color:var(--ink)}.seal{width:24px;height:24px;border-radius:6px;background:var(--red);color:#fff;display:grid;place-items:center;font:13px var(--serif)}.brandname{font:600 15px var(--serif);letter-spacing:.08em}
+    .shell{width:min(1140px,calc(100% - 32px));margin:0 auto;padding:34px 0 70px}.eyebrow{color:var(--red);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.hero{position:relative;overflow:hidden;padding:48px 50px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,#fffdf9 0%,#f5efe2 100%);box-shadow:var(--shadow)}.hero:after{content:"SOFC";position:absolute;right:-18px;bottom:-58px;font:900 142px/1 var(--serif);color:rgba(23,58,94,.055);letter-spacing:-.08em}.hero h1{position:relative;z-index:1;max-width:900px;margin:10px 0 16px;font:800 clamp(32px,5vw,58px)/1.14 var(--serif);letter-spacing:-.045em}.deck{position:relative;z-index:1;max-width:850px;margin:0;color:var(--ink2);font-size:18px}.meta{position:relative;z-index:1;display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;color:var(--muted);font-size:12px}.pill{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.65)}
+    .verdict{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;margin:18px 0}.card{border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:0 8px 28px rgba(45,38,28,.055)}.call{padding:26px 28px;border-left:5px solid var(--red)}.call h2{margin:0 0 8px;font:700 24px var(--serif)}.call p{margin:0;color:var(--ink2)}.rating{padding:22px 24px;display:flex;flex-direction:column;justify-content:center;background:var(--navy);color:#fff}.rating .label{font-size:12px;opacity:.72;letter-spacing:.12em}.rating strong{margin:5px 0;font:700 28px var(--serif)}.rating span{font-size:13px;opacity:.82}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 38px}.stat{padding:18px;border:1px solid var(--line);border-radius:15px;background:rgba(255,253,248,.82)}.stat b{display:block;color:var(--navy);font:800 25px var(--serif)}.stat span{display:block;margin-top:3px;color:var(--muted);font-size:12px}.toc{margin:0 0 42px;padding:19px 24px}.toc strong{font-family:var(--serif)}.toc nav{display:flex;gap:8px 18px;flex-wrap:wrap;margin-top:8px}.toc a{font-size:13px;text-decoration:none;border-bottom:1px solid rgba(23,58,94,.25)}
+    section{scroll-margin-top:76px;margin:0 0 48px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:15px;border-bottom:1px solid var(--line);padding-bottom:10px}.section-head h2{margin:0;font:800 30px/1.25 var(--serif)}.section-no{color:var(--red);font:700 12px var(--mono)}.lead{font-size:18px;color:var(--ink2);max-width:920px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.pad{padding:22px 24px}.pad h3{margin:0 0 8px;font:700 18px var(--serif)}.pad p{margin:0;color:var(--ink2)}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--panel)}table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px}th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{color:#fff;background:var(--navy);font-size:12px;letter-spacing:.04em}tr:last-child td{border-bottom:0}.num{white-space:nowrap;font-family:var(--mono);font-size:13px}.hot{color:var(--red);font-weight:800}.good{color:var(--green);font-weight:800}.muted{color:var(--muted);font-size:12px}.tag{display:inline-block;padding:3px 8px;border-radius:999px;background:#edf1f5;color:var(--navy);font-size:11px;font-weight:700}.tag.risk{background:#f7eadf;color:var(--orange)}
+    .scenario{overflow:hidden}.scenario .top{padding:18px 20px;color:#fff;background:var(--navy)}.scenario.bear .top{background:#665f5b}.scenario.bull .top{background:var(--green)}.scenario .top small{display:block;opacity:.72}.scenario .top strong{font:800 27px var(--serif)}.scenario .body{padding:19px 20px}.scenario dl{display:grid;grid-template-columns:1fr auto;gap:7px 12px;margin:0;font-size:13px}.scenario dt{color:var(--muted)}.scenario dd{margin:0;text-align:right;font-family:var(--mono)}.scenario .trigger{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line);color:var(--ink2);font-size:13px}
+    .matrix{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.score{padding:16px 10px;text-align:center;border:1px solid var(--line);border-radius:13px;background:var(--panel)}.score b{display:block;font:800 22px var(--serif);color:var(--navy)}.score span{font-size:12px;color:var(--muted)}.note{margin-top:14px;padding:15px 18px;border-left:4px solid var(--gold);background:#fff9e9;color:var(--ink2);font-size:13px}.sources{padding:25px 28px}.sources ol{margin:12px 0 0;padding-left:22px}.sources li+li{margin-top:8px}.sources li{color:var(--ink2);font-size:13px}.footer{padding:24px 0 0;text-align:center;color:var(--muted);font-size:12px}
+    @media(max-width:850px){.hero{padding:34px 26px}.verdict,.grid2{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr}.matrix{grid-template-columns:repeat(2,1fr)}.matrix .score:last-child{grid-column:1/-1}.section-head h2{font-size:25px}}@media(max-width:520px){.shell{width:min(100% - 18px,1140px);padding-top:16px}.backbar{padding:0 9px}.hero{padding:27px 20px;border-radius:17px}.hero h1{font-size:31px}.deck{font-size:15px}.call{padding:21px 19px}.stats{gap:8px}.stat{padding:14px 12px}.stat b{font-size:21px}.pad,.sources{padding:18px}.matrix{grid-template-columns:1fr}.matrix .score:last-child{grid-column:auto}}
+  </style>
+</head>
+<body>
+  <header class="backbar">
+    <a class="back" href="../nav/">← 报告目录</a>
+    <a class="brand" href="https://csnpk.com/" target="_blank" rel="noreferrer noopener"><span class="seal">研</span><span class="brandname">CSN 投研</span></a>
+  </header>
+  <main class="shell">
+    <article>
+      <header class="hero">
+        <div class="eyebrow">Industry Research · SOFC × AI Data Center</div>
+        <h1>谁在卖铲子，<br>谁只是 Bloom 映射？</h1>
+        <p class="deck">把 Oracle 的 1.2GW 首期合同、Bloom 的 2GW 产能目标和 2.8GW 主协议上限，统一映射到北美整机与 A 股零部件的潜在供应额、证据等级、当前股价和 6–12 个月估值边界。</p>
+        <div class="meta"><span class="pill">研究日期：2026-08-01</span><span class="pill">行情截至：2026-07-31 收盘</span><span class="pill">行情：Futu OpenD 已核验</span><span class="pill">单位价值量：公司披露 + 条件式测算</span></div>
+      </header>
+
+      <div class="verdict">
+        <section class="card call"><h2>结论：产业趋势是真的，股票仍要等确认</h2><p>纯度排序为 <strong>BE ＞ 三环集团 ＞ 春晖智控 ＞ 壹连科技</strong>；弹性更高的是三环与振华，但三环估值已预付较强放量，振华又隔着 2–3 层供应链。当前六只核心标的均未形成“可追”状态，优先等收入、订单和技术趋势三者闭环。</p></section>
+        <aside class="card rating"><span class="label">最终评级</span><strong>观察 / 不追</strong><span>产业确定性：中高 · 交易风险：高</span></aside>
+      </div>
+
+      <div class="stats" aria-label="关键数据">
+        <div class="stat"><b>1.2 GW</b><span>Oracle 首期约束性合同口径</span></div>
+        <div class="stat"><b>2.0 GW</b><span>Bloom 2026 年底目标产能口径</span></div>
+        <div class="stat"><b>2.8 GW</b><span>Oracle 主协议上限，非当年承诺</span></div>
+        <div class="stat"><b>约 $20B</b><span>Bloom 2025 年末总 backlog</span></div>
+      </div>
+
+      <aside class="card toc"><strong>文章导航</strong><nav><a href="#map">确认股票地图</a><a href="#model">供应额压力测试</a><a href="#valuation">股价与目标价</a><a href="#levels">价格纪律</a><a href="#method">模型边界</a><a href="#sources">来源</a></nav></aside>
+
+      <section id="map">
+        <div class="section-head"><h2>确认股票地图：整机只有一个，铲子需要分层</h2><span class="section-no">01 / CONFIRMED MAP</span></div>
+        <p class="lead">北美上市公司里，BE 是唯一高纯度 SOFC 整机；ORCL、EQIX、CRWV 是需求验证，AEP 与 Brookfield 是项目和资金通道。A 股只把公司级证据支持的供应关系放进核心池。</p>
+        <div class="table-wrap"><table><thead><tr><th>标的</th><th>环节</th><th>核心产品阶段</th><th>证据状态</th><th>铲子等级</th><th>投资判断</th></tr></thead><tbody>
+          <tr><td><strong>BE</strong></td><td>SOFC 整机与系统</td><td><span class="tag">规模放量期</span></td><td>Oracle/AEP/积压已确认</td><td class="good">S</td><td>美股纯度龙一；高波动、高估值</td></tr>
+          <tr><td><strong>三环集团 300408</strong></td><td>电解质隔膜、单电池</td><td><span class="tag">规模放量期</span></td><td>历史 Bloom 主要供应关系确认</td><td class="good">S</td><td>A 股基本面龙一；收入未单列</td></tr>
+          <tr><td><strong>春晖智控 300943</strong></td><td>高温传感器</td><td><span class="tag">规模放量期*</span></td><td>拟收购资产为 Bloom 全球唯二之一</td><td class="good">A</td><td>供应关系硬；并表仍待完成</td></tr>
+          <tr><td><strong>壹连科技 301631</strong></td><td>AIDC 电连接组件</td><td><span class="tag">规模放量早期</span></td><td>2022 年起合作已确认</td><td class="good">A−</td><td>金额和份额未披露，集团弹性有限</td></tr>
+          <tr><td><strong>振华股份 603067</strong></td><td>连接体上游金属铬</td><td><span class="tag risk">客户认证 / 试点</span></td><td>间接链确认，隔 2–3 层</td><td class="hot">B+</td><td>弹性龙一；确定性折价</td></tr>
+          <tr><td><strong>凯中精密 002823</strong></td><td>换热器、重整器、阻尼器</td><td><span class="tag risk">工程样机 / 认证</span></td><td>产品确认；BE 客户待证真</td><td class="hot">B−</td><td>先按期权价值，不计确认收入</td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section id="model">
+        <div class="section-head"><h2>三档供应额：框架上限不能当作当年收入</h2><span class="section-no">02 / SUPPLY CAPTURE</span></div>
+        <div class="table-wrap"><table><thead><tr><th>标的</th><th>单 GW / 捕获率假设</th><th>1.2GW 保守</th><th>2.0GW 基准</th><th>2.8GW 乐观</th><th>可信度</th></tr></thead><tbody>
+          <tr><td><strong>BE</strong></td><td>系统价值 $2.8–3.2B/GW</td><td class="num">$3.36–3.84B</td><td class="num">$5.60–6.40B</td><td class="num">$7.84–8.96B</td><td class="good">中高</td></tr>
+          <tr><td><strong>三环集团</strong></td><td>环节 ¥19亿/GW × 55%–75%</td><td class="num">¥12.5–17.1亿</td><td class="num">¥20.9–28.5亿</td><td class="num">¥29.3–39.9亿</td><td class="hot">中</td></tr>
+          <tr><td><strong>春晖智控</strong></td><td>捕获 ¥0.12–0.36亿/GW</td><td class="num">¥0.14–0.43亿</td><td class="num">¥0.24–0.72亿</td><td class="num">¥0.34–1.01亿</td><td>中低</td></tr>
+          <tr><td><strong>壹连科技</strong></td><td>环节 ¥1.1亿/GW × 30%–60%</td><td class="num">¥0.40–0.79亿</td><td class="num">¥0.66–1.32亿</td><td class="num">¥0.92–1.85亿</td><td class="hot">中</td></tr>
+          <tr><td><strong>振华股份</strong></td><td>捕获 ¥0.31–1.55亿/GW</td><td class="num">¥0.37–1.86亿</td><td class="num">¥0.62–3.10亿</td><td class="num">¥0.87–4.34亿</td><td>低</td></tr>
+          <tr><td><strong>凯中精密</strong></td><td>确认值为 0；期权上限 ¥0.40亿/GW</td><td class="num">¥0–0.48亿</td><td class="num">¥0–0.80亿</td><td class="num">¥0–1.12亿</td><td class="hot">待证真</td></tr>
+        </tbody></table></div>
+        <div class="note"><strong>读表方式：</strong>这是“项目价值量 × 容量 × 公司捕获率”的潜在供应范围，不代表订单签署、收入确认年份或净利润。三环和壹连的单 GW 价值量来自卖方测算，公司并未披露捕获份额；春晖、振华、凯中的单 GW 数值为条件式分析假设。</div>
+      </section>
+
+      <section id="valuation">
+        <div class="section-head"><h2>当前股价与目标价：产业纯度不等于当前赔率</h2><span class="section-no">03 / VALUATION</span></div>
+        <div class="table-wrap"><table><thead><tr><th>标的</th><th>2026-07-31 收盘</th><th>PE TTM</th><th>保守目标</th><th>基准目标</th><th>乐观目标</th><th>最终评级</th></tr></thead><tbody>
+          <tr><td><strong>BE</strong></td><td class="num">$205.81</td><td class="num">267.3×</td><td class="num">$170–210</td><td class="num">$230–270</td><td class="num">$310–360</td><td>等趋势确认</td></tr>
+          <tr><td><strong>三环集团</strong></td><td class="num">¥111.68</td><td class="num">77.2×</td><td class="num">¥82–92</td><td class="num">¥100–115</td><td class="num">¥125–140</td><td class="hot">不追 / 等回调</td></tr>
+          <tr><td><strong>春晖智控</strong></td><td class="num">¥21.94</td><td class="num">78.6×</td><td class="num">¥18–21</td><td class="num">¥24–28</td><td class="num">¥31–36</td><td>等重组与趋势</td></tr>
+          <tr><td><strong>壹连科技</strong></td><td class="num">¥58.54</td><td class="num">24.6×</td><td class="num">¥52–58</td><td class="num">¥64–72</td><td class="num">¥78–88</td><td>观察仓候选</td></tr>
+          <tr><td><strong>振华股份</strong></td><td class="num">¥31.14</td><td class="num">35.5×</td><td class="num">¥23–27</td><td class="num">¥29–34</td><td class="num">¥37–42</td><td class="hot">等确认</td></tr>
+          <tr><td><strong>凯中精密</strong></td><td class="num">¥12.90</td><td class="num">17.9×</td><td class="num">¥11.5–12.5</td><td class="num">¥14–15.5</td><td class="num">¥17–19*</td><td>事件期权</td></tr>
+        </tbody></table></div>
+        <div class="note">目标价为 6–12 个月研究型区间，不是买点。凯中乐观目标只有在披露客户、定点或规模收入后才成立；BE 当前高 PE 主要反映远期容量与订单转换，不能用单一年份利润机械外推。</div>
+      </section>
+
+      <section id="levels">
+        <div class="section-head"><h2>价格纪律：观察、确认、失效三层分开</h2><span class="section-no">04 / PRICE DISCIPLINE</span></div>
+        <div class="table-wrap"><table><thead><tr><th>标的</th><th>观察：收复 EMA20</th><th>确认：站稳 EMA55</th><th>失效 / 风控</th><th>执行约束</th></tr></thead><tbody>
+          <tr><td><strong>BE</strong></td><td class="num">$218.15</td><td class="num">$238.92</td><td class="num">跌破 EMA200 $186.75</td><td>ATR14 约 14.5%，不追隔夜脉冲</td></tr>
+          <tr><td><strong>三环集团</strong></td><td class="num">¥114.37</td><td class="num">¥115.93</td><td class="num">55日低 ¥84.64</td><td>A 股 T+1，以收盘确认</td></tr>
+          <tr><td><strong>春晖智控</strong></td><td class="num">¥28.57</td><td class="num">¥33.25</td><td class="num">55日低 ¥19.36</td><td>趋势破坏最重，不接第一次反弹</td></tr>
+          <tr><td><strong>壹连科技</strong></td><td class="num">¥61.99</td><td class="num">¥69.64</td><td class="num">55日低 ¥50.37</td><td>收复 EMA20 只算修复</td></tr>
+          <tr><td><strong>振华股份</strong></td><td class="num">¥33.90</td><td class="num">¥36.46</td><td class="num">55日低 ¥28.31</td><td>高波动间接链，确认优先</td></tr>
+          <tr><td><strong>凯中精密</strong></td><td class="num">¥13.13</td><td class="num">¥14.54</td><td class="num">55日低 ¥11.46</td><td>产业证据优先于低估值</td></tr>
+        </tbody></table></div>
+        <div class="note"><strong>美股市场闸门：</strong>同一交易日 SPY 位于 EMA20/55 上方，但 QQQ 位于两条均线下方，属于指数分化，不给 BE 追涨绿灯。A 股价格信号必须区分 T 日收盘成立与 T+1 可执行。</div>
+      </section>
+
+      <section id="method">
+        <div class="section-head"><h2>证据等级与会改变结论的事件</h2><span class="section-no">05 / METHOD</span></div>
+        <div class="grid3">
+          <article class="card pad"><h3>公司级确认</h3><p>客户公告、SEC/交易所文件、公司年报或重组问询。BE、三环、春晖标的资产与壹连进入这一层。</p></article>
+          <article class="card pad"><h3>间接供应链</h3><p>振华隔 2–3 层，经连接体厂商传导。必须给宽区间，不能把环节价值量直接等同公司收入。</p></article>
+          <article class="card pad"><h3>期权价值</h3><p>凯中产品存在，但 BE 客户与规模收入待证真，因此保守情景确认收入按零处理。</p></article>
+        </div>
+        <div class="matrix" style="margin-top:16px">
+          <div class="score"><b>BE</b><span>美股整机龙一</span></div><div class="score"><b>三环</b><span>A 股纯度龙一</span></div><div class="score"><b>振华</b><span>A 股弹性龙一</span></div><div class="score"><b>壹连</b><span>赔率相对较好</span></div><div class="score"><b>凯中</b><span>待证真期权</span></div>
+        </div>
+        <div class="note"><strong>升级证据：</strong>Bloom 单季度 MW 交付和 2GW 产线按期投产；三环单列 SOFC 收入或订单；春晖重组完成并表；壹连披露金额/份额；振华出现约束性合同；凯中正式确认 Bloom 客户与规模销售。任何一项缺失，都不能用股价上涨替代基本面验证。</div>
+      </section>
+
+      <section id="sources">
+        <div class="section-head"><h2>主要来源、口径与边界</h2><span class="section-no">06 / SOURCES</span></div>
+        <div class="card sources"><ol>
+          <li><a href="https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx" target="_blank" rel="noreferrer noopener">Bloom–Oracle：最高 2.8GW、首期 1.2GW</a>。</li>
+          <li><a href="https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results-with-Record-Full-Year-Revenues/" target="_blank" rel="noreferrer noopener">Bloom FY2025 业绩与约 200 亿美元 backlog</a>。</li>
+          <li><a href="https://static.cninfo.com.cn/finalpage/2014-12-09/1200453619.PDF" target="_blank" rel="noreferrer noopener">三环集团招股阶段 Bloom 供应关系</a>。</li>
+          <li><a href="https://cdn-news.chunhuizk.com/2025/11/20251117051206448.pdf" target="_blank" rel="noreferrer noopener">春晖智控重组问询回复</a>。</li>
+          <li><a href="https://www.nbd.com.cn/articles/2026-04-28/4368985.html" target="_blank" rel="noreferrer noopener">壹连科技向 Bloom 提供 AIDC 电连接组件的公司回复报道</a>。</li>
+          <li><a href="https://dataclouds.cninfo.com.cn/shgonggao/investor/2026/20260430/15444ba7e6034f9e91a495be1ca3d9a4.PDF" target="_blank" rel="noreferrer noopener">振华股份投资者关系记录</a>。</li>
+          <li><a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-16/316221be-eb66-4537-80ad-340fe5d6ffc9.PDF" target="_blank" rel="noreferrer noopener">凯中精密 2025 年年报</a>。</li>
+          <li>行情、均线、ATR 与基准指数来自 Futu OpenD，只读核验截至 2026-07-31；供应额、捕获率与目标价为本文条件式研究假设。</li>
+        </ol><p class="muted">本文把“官方事实”“分析假设”和“待证真映射”分开。2.8GW 是主协议上限，不代表同年交付；供应范围不等于收入确认，更不等于净利润。本文仅供研究，不构成投资建议。</p></div>
+      </section>
+    </article>
+    <footer class="footer">© 2026 CSN 投研 · 框架上限不是订单，产业纯度不是买点</footer>
+  </main>
+</body>
+</html>
