@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T09:03:11.312Z",
+  "generatedAt": "2026-08-01T01:06:56.347Z",
   "stage": "风险释放中",
   "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
   "markets": {
@@ -32,15 +32,15 @@
       }
     },
     "us": {
-      "asOf": "2026-07-30",
-      "score": -1,
-      "label": "中性偏恐",
+      "asOf": "2026-07-31",
+      "score": 0,
+      "label": "中性",
       "valid": 16,
-      "aboveMa20Pct": 37.5,
+      "aboveMa20Pct": 50,
       "fear": 0,
       "greed": 0,
-      "spy1dPct": 1.68,
-      "qqq1dPct": 3.3,
+      "spy1dPct": 0.72,
+      "qqq1dPct": 0.65,
       "coverage": {
         "valid": 22,
         "total": 22,
@@ -116,9 +116,9 @@
       "status": "第三方估算"
     },
     "us": {
-      "score": 39,
+      "score": 42.5,
       "label": "恐惧",
-      "asOf": "2026-07-31T08:44:31+00:00",
+      "asOf": "2026-07-31T23:59:52+00:00",
       "previousClose": 38.9,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
@@ -210,10 +210,10 @@
     "equityChange": 0
   },
   "skew": {
-    "asOf": "2026-07-30",
-    "median25d": 3.4,
-    "valid": 10,
-    "highCount": 4,
+    "asOf": "2026-07-31",
+    "median25d": 1.89,
+    "valid": 14,
+    "highCount": 6,
     "status": "verified_close"
   },
   "breadth": {
