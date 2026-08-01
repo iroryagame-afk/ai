@@ -1,0 +1,219 @@
+{
+  "verification_status": "complete",
+  "verification_marker": "VERIFIED_US_MARKET_OBSERVATION_SOURCE_DATES_PRESERVED",
+  "generated_at": "2026-08-01T23:55:17+08:00",
+  "date_status": "same_close",
+  "source_dates": {
+    "market_progress_us": "2026-07-31",
+    "fear_greed": "2026-07-31T23:59:52+00:00",
+    "put_call": "2026-07-30",
+    "skew": "2026-07-31",
+    "rs_thrust_rotation": "2026-07-31",
+    "finra_margin": "Jun-26"
+  },
+  "market": {
+    "asOf": "2026-07-31",
+    "score": 0,
+    "label": "中性",
+    "valid": 16,
+    "aboveMa20Pct": 50,
+    "fear": 0,
+    "greed": 0,
+    "spy1dPct": 0.72,
+    "qqq1dPct": 0.65,
+    "coverage": {
+      "valid": 22,
+      "total": 22,
+      "ratio": 1
+    }
+  },
+  "fear_greed": {
+    "score": 42.5,
+    "label": "恐惧",
+    "asOf": "2026-07-31T23:59:52+00:00",
+    "previousClose": 38.9,
+    "source": "https://www.cnn.com/markets/fear-and-greed",
+    "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
+    "sourceLabel": "CNN Fear & Greed Index",
+    "status": "原始发布方"
+  },
+  "put_call": {
+    "source": "Cboe Global Markets",
+    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-07-30",
+    "asOf": "2026-07-30",
+    "total": 0.91,
+    "totalPrevious": 1.05,
+    "equity": 0.61,
+    "equityPrevious": 0.61,
+    "previousAsOf": "2026-07-29",
+    "status": "verified_official",
+    "totalChange": -0.14,
+    "equityChange": 0
+  },
+  "skew": {
+    "market_date": "2026-07-31",
+    "requested": 20,
+    "valid": 20,
+    "rank_eligible": 14,
+    "median25d": 1.89,
+    "high_count": 6
+  },
+  "margin": {
+    "asOf": "Jun-26",
+    "currentUsdBn": 1502.072,
+    "previousUsdBn": 1415.557,
+    "momPct": 6.1,
+    "recentPeakUsdBn": 1502.072,
+    "reductionFromRecentPeakPct": 0,
+    "officialProgressPct": null,
+    "source": "https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics",
+    "sourceLabel": "FINRA Margin Statistics",
+    "thresholdStatus": "无官方统一出清阈值"
+  },
+  "representative_etfs": [
+    {
+      "ticker": "SPY",
+      "name": "标普500ETF-SPDR",
+      "dayChangePct": 0.72,
+      "monthChangePct": 2.47,
+      "rsVsSpyMonthPct": 0.0,
+      "rsThrustPct": 50.0,
+      "relativeVelocity5dPct": null,
+      "relativeAccelerationZ": null,
+      "rotationPhase": "历史不足",
+      "turnSignal": "历史不足"
+    },
+    {
+      "ticker": "QQQ",
+      "name": "纳指100ETF-Invesco QQQ Trust",
+      "dayChangePct": 0.65,
+      "monthChangePct": -2.62,
+      "rsVsSpyMonthPct": -4.97,
+      "rsThrustPct": 38.3,
+      "relativeVelocity5dPct": -1.73,
+      "relativeAccelerationZ": 0.25,
+      "rotationPhase": "落后加速",
+      "turnSignal": "暂无拐点"
+    },
+    {
+      "ticker": "RSP",
+      "name": "平均加权指数ETF-Rydex S&P",
+      "dayChangePct": -0.17,
+      "monthChangePct": 2.23,
+      "rsVsSpyMonthPct": -0.23,
+      "rsThrustPct": 18.3,
+      "relativeVelocity5dPct": 1.19,
+      "relativeAccelerationZ": -0.61,
+      "rotationPhase": "领先减速",
+      "turnSignal": "暂无拐点"
+    },
+    {
+      "ticker": "IWM",
+      "name": "罗素2000ETF-iShares",
+      "dayChangePct": -0.48,
+      "monthChangePct": -2.88,
+      "rsVsSpyMonthPct": -5.22,
+      "rsThrustPct": -7.5,
+      "relativeVelocity5dPct": -0.28,
+      "relativeAccelerationZ": -0.32,
+      "rotationPhase": "落后减速",
+      "turnSignal": "暂无拐点"
+    },
+    {
+      "ticker": "IGV",
+      "name": "扩展科技软件行业ETF-iShares",
+      "dayChangePct": 1.36,
+      "monthChangePct": 7.23,
+      "rsVsSpyMonthPct": 4.64,
+      "rsThrustPct": 80.8,
+      "relativeVelocity5dPct": 3.97,
+      "relativeAccelerationZ": 1.88,
+      "rotationPhase": "领先加速",
+      "turnSignal": "暂无拐点"
+    },
+    {
+      "ticker": "SOXX",
+      "name": "半导体ETF-iShares",
+      "dayChangePct": 0.07,
+      "monthChangePct": -14.42,
+      "rsVsSpyMonthPct": -16.48,
+      "rsThrustPct": 38.3,
+      "relativeVelocity5dPct": -6.95,
+      "relativeAccelerationZ": -0.79,
+      "rotationPhase": "落后减速",
+      "turnSignal": "暂无拐点"
+    },
+    {
+      "ticker": "SMH",
+      "name": "半导体指数ETF-VanEck",
+      "dayChangePct": 0.3,
+      "monthChangePct": -11.62,
+      "rsVsSpyMonthPct": -13.76,
+      "rsThrustPct": 38.3,
+      "relativeVelocity5dPct": -5.99,
+      "relativeAccelerationZ": -0.73,
+      "rotationPhase": "落后减速",
+      "turnSignal": "暂无拐点"
+    },
+    {
+      "ticker": "XLF",
+      "name": "金融行业ETF-SPDR",
+      "dayChangePct": -0.11,
+      "monthChangePct": 6.29,
+      "rsVsSpyMonthPct": 3.72,
+      "rsThrustPct": 23.3,
+      "relativeVelocity5dPct": 1.45,
+      "relativeAccelerationZ": -0.26,
+      "rotationPhase": "领先减速",
+      "turnSignal": "暂无拐点"
+    },
+    {
+      "ticker": "XLV",
+      "name": "医疗保健精选行业指数ETF-SPDR",
+      "dayChangePct": -0.59,
+      "monthChangePct": 1.38,
+      "rsVsSpyMonthPct": -1.07,
+      "rsThrustPct": 13.3,
+      "relativeVelocity5dPct": 1.68,
+      "relativeAccelerationZ": -0.5,
+      "rotationPhase": "领先减速",
+      "turnSignal": "暂无拐点"
+    },
+    {
+      "ticker": "XLP",
+      "name": "日常消费品精选行业指数ETF-SPDR",
+      "dayChangePct": -0.49,
+      "monthChangePct": 0.4,
+      "rsVsSpyMonthPct": -2.02,
+      "rsThrustPct": 11.7,
+      "relativeVelocity5dPct": 1.91,
+      "relativeAccelerationZ": 0.06,
+      "rotationPhase": "领先加速",
+      "turnSignal": "暂无拐点"
+    },
+    {
+      "ticker": "TLT",
+      "name": "20+年以上美国国债ETF-iShares",
+      "dayChangePct": -0.66,
+      "monthChangePct": -5.5,
+      "rsVsSpyMonthPct": -7.78,
+      "rsThrustPct": -10.0,
+      "relativeVelocity5dPct": -0.56,
+      "relativeAccelerationZ": -1.01,
+      "rotationPhase": "落后减速",
+      "turnSignal": "暂无拐点"
+    },
+    {
+      "ticker": "GLD",
+      "name": "黄金ETF-SPDR",
+      "dayChangePct": -1.49,
+      "monthChangePct": -0.56,
+      "rsVsSpyMonthPct": -2.96,
+      "rsThrustPct": 13.3,
+      "relativeVelocity5dPct": 0.2,
+      "relativeAccelerationZ": -0.58,
+      "rotationPhase": "领先减速",
+      "turnSignal": "暂无拐点"
+    }
+  ]
+}
