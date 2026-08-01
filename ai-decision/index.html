@@ -24,6 +24,45 @@
     .board-intro{display:flex;justify-content:space-between;align-items:baseline;gap:18px;margin:20px 1px 9px}.board-intro b{font-size:14px}.board-intro span{color:var(--muted);font:600 9px/1.5 var(--mono);text-align:right}.market-boards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:11px;row-gap:0;align-items:stretch}.market-board{display:grid;grid-row:span 4;grid-template-rows:subgrid;min-width:0;border:1px solid var(--line);border-radius:17px;background:var(--card);overflow:hidden}.market-board-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:16px 17px 14px;border-top:4px solid var(--green);background:var(--panel)}.market-board.cn .market-board-head{border-top-color:#3d718d}.market-board.kr .market-board-head{border-top-color:#865c9f}.market-board.us .market-board-head{border-top-color:#116c50}.market-board-title{display:flex;align-items:center;gap:10px}.market-code{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--ink);color:#fff;font:800 10px/1 var(--mono);letter-spacing:.05em}.market-board-title h2{margin:0;font-size:18px;line-height:1.1}.market-board-title p{margin:4px 0 0;color:var(--muted);font:600 9px/1.3 var(--mono)}.market-date{text-align:right;color:var(--muted);font:600 9px/1.5 var(--mono)}.market-block{padding:14px 17px 15px;border-top:1px solid var(--line)}.market-block-title{display:flex;justify-content:space-between;align-items:baseline;gap:12px;color:var(--muted);font:700 9px/1.4 var(--mono);letter-spacing:.06em}.metric-row{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;margin-top:9px}.metric-main{min-width:0}.metric-value{font:800 30px/1 var(--mono);letter-spacing:-.055em}.metric-value small{margin-left:4px;color:var(--muted);font-size:10px;letter-spacing:0}.metric-label{margin-top:5px;font-size:11px;font-weight:750}.metric-side{text-align:right;color:var(--muted);font:600 9px/1.55 var(--mono)}.metric-side b{display:block;color:var(--ink);font-size:11px}.market-meta{margin-top:9px;color:var(--muted);font:500 9px/1.55 var(--mono)}.market-bar{height:5px;margin-top:10px;border-radius:999px;overflow:hidden;background:#e0e2dc}.market-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--amber),var(--green))}.market-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}.market-stats div{min-width:0;padding-top:8px;border-top:1px solid var(--line)}.market-stats span{display:block;color:var(--muted);font-size:9px}.market-stats b{display:block;margin-top:3px;font:700 11px/1.35 var(--mono);overflow-wrap:anywhere}.market-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.market-links a{color:var(--green);font-size:9px;font-weight:700;text-decoration:none}.market-links a:hover{text-decoration:underline}
     @media(max-width:900px){.market-boards,.methodology-grid{grid-template-columns:repeat(2,1fr)}.stage{grid-template-columns:1fr}.wrap{padding:18px}.date{display:none}}@media(max-width:760px){.csn-topnav-inner{padding:0 12px;gap:8px}.csn-brand-sub{display:none}.csn-brand-name{font-size:15px}.csn-menu{overflow-x:auto;overflow-y:hidden}.csn-item>a,.csn-item>button{padding:0 10px;font-size:13px}.csn-drop{left:auto;right:0;width:min(250px,calc(100vw - 24px));min-width:0;transform:translate(0,6px)}.csn-item:hover .csn-drop,.csn-item:focus-within .csn-drop{transform:none}.board-intro{display:block}.board-intro span{display:block;margin-top:5px;text-align:left}}@media(max-width:540px){.market-boards,.methodology-grid{grid-template-columns:1fr}.market-board-head{padding:14px}.market-block{padding:13px 14px}h1{font-size:32px}.legend{display:block}.legend span{display:block;margin-top:5px}}
   </style>
+<style id="us-research-path-style">
+  .us-research-path {
+    --path-panel:var(--panel,var(--card,#fffefa));
+    --path-ink:var(--ink,#1f2430);
+    --path-muted:var(--ink-2,var(--muted,#5f6675));
+    --path-line:var(--hairline,var(--line,#ded8ca));
+    --path-accent:var(--accent,var(--navy,#173a5e));
+    --path-current:var(--cinnabar,var(--red,#b5452e));
+    width:min(1280px,calc(100% - 40px)); margin:24px auto 0; padding:18px 20px 16px;
+    border:1px solid var(--path-line); border-radius:12px; background:var(--path-panel);
+    color:var(--path-ink); font-family:var(--sans,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif);
+  }
+  .us-research-path__head { display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:12px; }
+  .us-research-path__head strong { font-size:15px; }
+  .us-research-path__head span { color:var(--path-muted); font-size:12px; }
+  .us-research-path ol { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:0; margin:0; padding:0; list-style:none; border:1px solid var(--path-line); border-radius:9px; overflow:hidden; }
+  .us-research-path li { min-width:0; border-right:1px solid var(--path-line); }
+  .us-research-path li:last-child { border-right:0; }
+  .us-research-path a { display:block; min-height:82px; padding:11px 12px; color:var(--path-ink); background:transparent; text-decoration:none; transition:background-color .16s ease,color .16s ease; }
+  .us-research-path a:hover { background:rgba(23,58,94,.055); }
+  .us-research-path a:focus-visible { outline:3px solid rgba(181,69,46,.3); outline-offset:-3px; }
+  .us-research-path a[aria-current="page"] { background:rgba(181,69,46,.09); box-shadow:inset 0 3px 0 var(--path-current); }
+  .us-research-path__number { display:block; margin-bottom:5px; color:var(--path-muted); font:600 10px/1 var(--mono,ui-monospace,monospace); letter-spacing:.08em; }
+  .us-research-path a[aria-current="page"] .us-research-path__number { color:var(--path-current); }
+  .us-research-path a strong { display:block; font-size:13px; line-height:1.35; }
+  .us-research-path a small { display:block; margin-top:4px; color:var(--path-muted); font-size:11px; line-height:1.4; }
+  .us-research-path__foot { display:flex; align-items:center; justify-content:space-between; gap:16px; margin:11px 1px 0; color:var(--path-muted); font-size:12px; }
+  .us-research-path__foot p { margin:0; }
+  .us-research-path__next { color:var(--path-accent); font-weight:700; white-space:nowrap; text-decoration:none; }
+  .us-research-path__next:hover { text-decoration:underline; text-underline-offset:3px; }
+  @media (max-width:760px) {
+    .us-research-path { width:calc(100% - 24px); margin-top:14px; padding:15px 14px; }
+    .us-research-path__head { align-items:flex-start; flex-direction:column; gap:2px; }
+    .us-research-path ol { display:flex; overflow-x:auto; scroll-snap-type:x proximity; }
+    .us-research-path li { flex:0 0 158px; scroll-snap-align:start; }
+    .us-research-path__foot { align-items:flex-start; flex-direction:column; gap:5px; }
+  }
+  @media (prefers-reduced-motion:reduce) { .us-research-path a { transition:none; } }
+</style>
 </head>
 <body>
 <style id="csnpk-market-nav-responsive">
@@ -87,6 +126,7 @@
     </div>
   </div>
 </nav>
+<aside class="us-research-path" data-component="us-research-path" aria-label="美股研究路径"><div class="us-research-path__head"><strong>美股研究路径</strong><span>先过风险门，再从热点与强度落到个股 · 按各页核验日期阅读</span></div><ol><li><a href="https://csnpk.com/ai-decision/" aria-current="page"><span class="us-research-path__number">01</span><strong>市场进度</strong><small>现在能不能进攻？</small></a></li><li><a href="https://csnpk.com/us-skew/"><span class="us-research-path__number">02</span><strong>US Skew</strong><small>保护需求有多强？</small></a></li><li><a href="https://csnpk.com/csn/hot/"><span class="us-research-path__number">03</span><strong>美股热门榜</strong><small>市场正在交易什么？</small></a></li><li><a href="https://csnpk.com/rs-thrust/"><span class="us-research-path__number">04</span><strong>RS Thrust</strong><small>谁正在变强？</small></a></li><li><a href="https://csnpk.com/rotation/"><span class="us-research-path__number">05</span><strong>轮动雷达</strong><small>强弱处于哪一段？</small></a></li><li><a href="https://csnpk.com/csn/"><span class="us-research-path__number">06</span><strong>表姐美股严选</strong><small>最后看哪些个股？</small></a></li></ol><div class="us-research-path__foot"><p>本页只回答：<strong>现在能不能进攻？</strong></p><a class="us-research-path__next" href="https://csnpk.com/us-skew/">推荐下一步：US Skew →</a></div></aside>
 <main class="wrap">
   <header class="top"><div><div class="eyebrow">CHINA · KOREA · US · CLOSE ONLY</div><h1>中韩美市场进度</h1></div><div class="date">A股 2026-07-30<br>韩股 2026-07-30<br>美股 2026-07-31</div></header>
   <section class="stage"><div><small>当前阶段</small><b>风险释放中</b><small>保护性需求偏高，去杠杆尚未到基本观察线</small></div><div class="track"><span class="active">风险释放</span><span class="">修复观察</span><span class="">趋势确认</span></div></section>
