@@ -25,6 +25,7 @@
 | A股工具 | A 股轮动加速度雷达 | `/a-share-rotation/` | 基于同源 A 股 Thrust 数据展示相对速度、加速度、四象限和拐点预警 |
 | 美股工具 | RS Thrust | `/rs-thrust/` | 相对强度加速 |
 | 美股工具 | 轮动加速度雷达 | `/rotation/` | ETF 相对速度与加速度 |
+| 美股工具 | AI 软件与安全监控台 | `/ai-software-security-shovels/` | 固定软件、安全与 ANET 类控制层股票池的轮动、量价、盘后动作与目标价参考 |
 | 美股工具 | US Skew | `/us-skew/` | 期权保护需求与风险温度 |
 | 跨市场 | 每日市场进度 | `/ai-decision/` | 市场回调出清进度 |
 | 调研 | 投研导航 | `/nav/` | 长期报告统一入口 |
@@ -41,6 +42,7 @@
 - “A 股轮动加速度雷达”属于 A股工具分组，必须与 A 股 Thrust 使用同一数据日期和基准；二阶变化只作研究观察，不直接产生买点。
 - “A股猎龙者信号表”属于外部工具入口，固定指向 Google Sheet `1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw`；mda100 只在信号日期与报告日期一致且 OpenD 覆盖率不低于 90% 时启用猎龙者机会/风险筛选。
 - `/csn/hot/` 是 `/csn/` 的子页面，可以在股票分组中额外出现。
+- `/ai-software-security-shovels/` 是固定 18 只股票的独立动态监控台；ANET 按软硬一体控制层归入软件。组内强度不是 `/rs-thrust/` 的正式分数，高弹性标的只有在市场、催化、趋势、量价、两日确认与盈亏比六门齐过时才允许升级买入动作。
 - `/ai-decision/` 可以使用紧凑数据源导航，但必须包含 A 股严选、RS Thrust、US Skew、轮动雷达和投研导航。
 - 新增正式动态页时，必须同时更新本注册表、首页入口、相关生成器和所有采用全站导航的页面。
 - 新增长期报告时，不加入动态页清单；按 `docs/report-nav-policy.md` 更新 `nav/reports.json`。
