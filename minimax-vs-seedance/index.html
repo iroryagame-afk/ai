@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MiniMax H3、Seedance 2.0 与 Seedance 2.5 的独立盲测、官方规格、生产成熟度与AI漫剧生产路由建议。">
+  <meta property="og:title" content="H3 vs Seedance：AI漫剧生产路由">
+  <meta property="og:description" content="角色连续性、批量图生、修镜、对白与单集产能的证据分层比较">
+  <title>H3 vs Seedance：AI漫剧生产路由｜CSN 投研</title>
+  <style>
+    :root{color-scheme:light;--paper:#f5f1e8;--panel:#fffdf8;--ink:#202632;--ink2:#4e5562;--muted:#747a86;--line:#ddd5c6;--navy:#173a5e;--red:#ad422f;--gold:#94702b;--green:#35694f;--orange:#a45a2a;--blue:#396b9c;--shadow:0 18px 48px rgba(45,38,28,.09);--serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;overflow-x:hidden;color:var(--ink);background:var(--paper);font-family:var(--sans);line-height:1.76}main,article{min-width:0}a{color:var(--navy);text-underline-offset:3px}.backbar{height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 20px;border-bottom:1px solid var(--line);background:rgba(245,241,232,.95);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}.backbar a{text-decoration:none}.back{font-size:13px;color:var(--ink2);padding:6px 10px;border-radius:8px}.brand{display:flex;align-items:center;gap:8px;color:var(--ink)}.seal{width:24px;height:24px;border-radius:6px;background:var(--red);color:#fff;display:grid;place-items:center;font:13px var(--serif)}.brandname{font:600 15px var(--serif);letter-spacing:.08em}
+    .shell{width:min(1140px,calc(100% - 32px));margin:0 auto;padding:34px 0 70px}.hero{position:relative;overflow:hidden;padding:48px 50px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,#fffdf9 0%,#f3ecdf 100%);box-shadow:var(--shadow)}.hero:after{content:"H3 × SD";position:absolute;right:-8px;bottom:-46px;font:900 106px/1 var(--serif);color:rgba(23,58,94,.052);letter-spacing:-.08em}.eyebrow{position:relative;z-index:1;color:var(--red);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.hero h1{position:relative;z-index:1;max-width:900px;margin:10px 0 16px;font:800 clamp(32px,5vw,58px)/1.14 var(--serif);letter-spacing:-.045em}.deck{position:relative;z-index:1;max-width:840px;margin:0;color:var(--ink2);font-size:18px}.meta{position:relative;z-index:1;display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;color:var(--muted);font-size:12px}.pill{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.7)}
+    .verdict{display:grid;grid-template-columns:1.35fr .65fr;gap:18px;margin:18px 0}.card{border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:0 8px 28px rgba(45,38,28,.055)}.call{padding:26px 28px;border-left:5px solid var(--red)}.call h2{margin:0 0 8px;font:700 24px var(--serif)}.call p{margin:0;color:var(--ink2)}.rating{padding:22px 24px;display:flex;flex-direction:column;justify-content:center;background:var(--navy);color:#fff}.rating .label{font-size:12px;opacity:.72;letter-spacing:.12em}.rating strong{margin:5px 0;font:700 28px var(--serif)}.rating span{font-size:13px;opacity:.82}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 38px}.stat{padding:18px;border:1px solid var(--line);border-radius:15px;background:rgba(255,253,248,.82)}.stat b{display:block;color:var(--navy);font:800 25px var(--serif)}.stat span{display:block;margin-top:3px;color:var(--muted);font-size:12px}.toc{margin:0 0 42px;padding:19px 24px}.toc strong{font-family:var(--serif)}.toc nav{display:flex;gap:8px 18px;flex-wrap:wrap;margin-top:8px}.toc a{font-size:13px;text-decoration:none;border-bottom:1px solid rgba(23,58,94,.25)}
+    article>section{min-width:0;scroll-margin-top:76px;margin:0 0 48px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:15px;border-bottom:1px solid var(--line);padding-bottom:10px}.section-head h2{margin:0;font:800 30px/1.25 var(--serif)}.section-no{color:var(--red);font:700 12px var(--mono)}.lead{font-size:18px;color:var(--ink2);max-width:930px}.table-wrap{max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--panel)}table{width:100%;min-width:860px;border-collapse:collapse;font-size:14px}th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{color:#fff;background:var(--navy);font-size:12px;letter-spacing:.04em}tr:last-child td{border-bottom:0}.num{white-space:nowrap;font-family:var(--mono);font-size:13px}.good{color:var(--green);font-weight:800}.warn{color:var(--orange);font-weight:800}.hot{color:var(--red);font-weight:800}.muted{color:var(--muted);font-size:12px}.tag{display:inline-block;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:800}.verified{background:#e7f1eb;color:var(--green)}.conditional{background:#fff0da;color:var(--orange)}.unverified{background:#f7e7e4;color:var(--red)}
+    .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.lane{overflow:hidden}.lane .top{padding:18px 20px;color:#fff;background:var(--navy)}.lane:nth-child(2) .top{background:var(--blue)}.lane:nth-child(3) .top{background:var(--orange)}.lane .top small{display:block;opacity:.75}.lane .top strong{font:800 26px var(--serif)}.lane .body{padding:20px}.lane ul{margin:0;padding-left:20px}.lane li+li{margin-top:7px}.lane .action{margin:15px -20px -20px;padding:13px 20px;background:#f4efe5;color:var(--ink2);font-size:13px}.evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.e-card{padding:21px}.e-card h3{margin:0 0 10px;font:700 18px var(--serif)}.bar{height:8px;background:#e5ded0;border-radius:999px;overflow:hidden;margin:11px 0 8px}.bar span{display:block;height:100%;background:var(--navy);border-radius:inherit}.e-card:nth-child(2) .bar span{background:var(--blue)}.e-card:nth-child(3) .bar span{background:var(--red)}.pair{display:flex;justify-content:space-between;gap:12px;font:12px var(--mono);color:var(--muted)}
+    .note{margin-top:14px;padding:15px 18px;border-left:4px solid var(--gold);background:#fff9e9;color:var(--ink2);font-size:13px}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:16px}.check{padding:22px 24px}.check h3{margin:0 0 10px;font:700 19px var(--serif)}.check ul{margin:0;padding-left:20px}.check li+li{margin-top:7px}.prove{border-top:4px solid var(--green)}.kill{border-top:4px solid var(--red)}.testflow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.step{position:relative;padding:19px 17px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.step b{display:block;margin-bottom:5px;color:var(--red);font:700 12px var(--mono)}.step strong{font-family:var(--serif)}.step p{margin:6px 0 0;color:var(--ink2);font-size:13px}.sources{padding:25px 28px}.sources ol{margin:12px 0 0;padding-left:22px}.sources li+li{margin-top:8px}.sources li{color:var(--ink2);font-size:13px}.footer{padding:24px 0 0;text-align:center;color:var(--muted);font-size:12px}
+    @media(max-width:850px){.hero{padding:34px 26px}.verdict,.checklist{grid-template-columns:minmax(0,1fr)}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3,.evidence{grid-template-columns:minmax(0,1fr)}.testflow{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head h2{font-size:25px}}@media(max-width:520px){.shell{width:calc(100% - 18px);max-width:calc(100% - 18px);padding-top:16px;overflow:hidden}.hero,.card,.verdict,.stats,.toc,article>section{width:100%;max-width:100%;min-width:0}.backbar{padding:0 9px}.hero{padding:27px 20px;border-radius:17px}.hero h1{font-size:31px;overflow-wrap:anywhere;word-break:break-word}.deck{font-size:15px}.call{padding:21px 19px}.stats{gap:8px}.stat{min-width:0;padding:14px 12px}.stat b{font-size:21px}.testflow{grid-template-columns:minmax(0,1fr)}.sources,.check{padding:18px}}
+  </style>
+</head>
+<body>
+  <header class="backbar"><a class="back" href="../nav/">← 报告目录</a><a class="brand" href="https://csnpk.com/" target="_blank" rel="noreferrer noopener"><span class="seal">研</span><span class="brandname">CSN 投研</span></a></header>
+  <main class="shell"><article>
+    <header class="hero">
+      <div class="eyebrow">Model Research · AI Comic Drama</div>
+      <h1>H3 vs Seedance：<br>不是选冠军，而是选生产路由</h1>
+      <p class="deck">对 AI 漫剧，最重要的不是单条样片有多震撼，而是同一角色跨分镜不变脸、设定图能稳定批量动起来、对白镜头可修、单集能准时交付。三款模型应按“批量起片—修镜—高价值长镜头”分工。</p>
+      <div class="meta"><span class="pill">研究日期：2026-08-02</span><span class="pill">榜单快照：2026-08-02</span><span class="pill">口径：官方规格 × 独立盲测 × 生产验收</span></div>
+    </header>
+
+    <div class="verdict">
+      <section class="card call"><h2>结论：SD2 主起片，H3 主修镜，SD2.5 试长段落</h2><p>Seedance 2.0 作为角色设定图驱动的批量图生基线；H3 负责改动作、统一运镜、修复可用镜头；Seedance 2.5 只试片头、转场、群像和连续叙事。没有证据支持三者的“9.5 / 9.2 / 9.0”综合分。</p></section>
+      <aside class="card rating"><span class="label">AI 漫剧决策</span><strong>按镜头路由</strong><span>主生产：SD2 · 修镜：H3 · 实验：SD2.5</span></aside>
+    </div>
+
+    <div class="stats" aria-label="关键数据">
+      <div class="stat"><b>SD2 +12</b><span>图生音视频 Elo；适合设定图起片</span></div>
+      <div class="stat"><b>H3 +95</b><span>编辑 Elo；适合返工与镜头修复</span></div>
+      <div class="stat"><b>30 秒</b><span>SD2.5 连续段落上限；稳定性待测</span></div>
+      <div class="stat"><b>$7.80/min</b><span>H3 官方 2K API 标价</span></div>
+    </div>
+
+    <aside class="card toc"><strong>文章导航</strong><nav><a href="#route">漫剧生产路由</a><a href="#benchmark">独立盲测</a><a href="#spec">官方规格</a><a href="#truth">漫剧流水线</a><a href="#test">样集试产</a><a href="#change">改变判断</a><a href="#summary">最终综述</a><a href="#stock">MiniMax 股价</a><a href="#sources">来源</a></nav></aside>
+
+    <section id="route">
+      <div class="section-head"><h2>三条漫剧生产线，不是一个总榜</h2><span class="section-no">01 / ROUTING</span></div>
+      <div class="grid3">
+        <article class="card lane"><div class="top"><small>编辑线 · 已核验强项</small><strong>MiniMax H3</strong></div><div class="body"><span class="tag verified">修镜主力</span><ul><li>V2V、动作/运镜迁移、自然语言编辑</li><li>适合保留可用镜头，仅修改局部问题</li><li>编辑盲测优势最清晰</li><li>官方 2K 价格 0.13 美元/秒</li></ul><div class="action"><strong>动作：</strong>修嘴型、动作、镜头运动和穿帮，不负责全量起片。</div></div></article>
+        <article class="card lane"><div class="top"><small>生成线 · 成熟基线</small><strong>Seedance 2.0</strong></div><div class="body"><span class="tag verified">批量起片</span><ul><li>图生视频 Elo 略高于 H3</li><li>9图 + 3视频 + 3音频参考</li><li>15秒多镜头、双声道</li><li>角色图、场景图、姿势参考可组合</li></ul><div class="action"><strong>动作：</strong>从角色设定图与分镜关键帧批量生成主体镜头。</div></div></article>
+        <article class="card lane"><div class="top"><small>实验线 · 上限高但未闭环</small><strong>Seedance 2.5</strong></div><div class="body"><span class="tag conditional">高价值镜头试点</span><ul><li>30秒、多轮延长</li><li>30图 + 10视频 + 10音频</li><li>时间戳、白模、绿幕与定向编辑</li><li>独立 Elo、价格、失败率仍缺失</li></ul><div class="action"><strong>动作：</strong>试片头、关键情绪戏、群像、长转场，不承担日更产能。</div></div></article>
+      </div>
+    </section>
+
+    <section id="benchmark">
+      <div class="section-head"><h2>Artificial Analysis：编辑差距有意义，生成差距别放大</h2><span class="section-no">02 / INDEPENDENT TEST</span></div>
+      <p class="lead">Elo 来自同提示词的匿名两两偏好，使用 Bradley–Terry 模型聚合，并按文生、图生、编辑分别建池。它能回答“哪段更讨喜”，但并未专门测试二维漫剧风格、同一角色跨几十个分镜的一致性或单集日更产能。</p>
+      <div class="evidence">
+        <article class="card e-card"><h3>文生音视频</h3><div class="pair"><span>H3 1242 ±11</span><span>SD2 1225 ±7</span></div><div class="bar"><span style="width:57%"></span></div><p class="muted">差 17 Elo；区间边界接近。H3 有温和优势信号，不是全面胜出。</p></article>
+        <article class="card e-card"><h3>图生音视频</h3><div class="pair"><span>SD2 1196 ±8</span><span>H3 1184 ±11</span></div><div class="bar"><span style="width:54%"></span></div><p class="muted">差 12 Elo且区间重叠。SD2 略优，仍应视为同一梯队。</p></article>
+        <article class="card e-card"><h3>视频编辑 + 音频</h3><div class="pair"><span>H3 1130 ±7</span><span>SD2 1035 ±5</span></div><div class="bar"><span style="width:85%"></span></div><p class="muted">差 95 Elo且区间不重叠，是当前最值得行动的独立信号。</p></article>
+      </div>
+      <div class="note">对 AI 漫剧，图生视频与编辑应比文生视频权重更高：大部分镜头先有角色设定、场景与分镜关键帧，再进入动画化和修镜。榜单按小时重算，以上仅为 2026-08-02 快照。</div>
+    </section>
+
+    <section id="spec">
+      <div class="section-head"><h2>规格表：把“能生成”与“能连载”分开</h2><span class="section-no">03 / CAPABILITY</span></div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>维度</th><th>MiniMax H3</th><th>Seedance 2.0</th><th>Seedance 2.5</th><th>证据状态</th></tr></thead>
+        <tbody>
+          <tr><td><strong>单次时长</strong></td><td class="num">最长 15 秒</td><td class="num">15 秒</td><td class="num good">30 秒 + 多轮延长</td><td><span class="tag verified">官方已核验</span></td></tr>
+          <tr><td><strong>漫剧首要用途</strong></td><td class="good">修镜、局部重生成、运镜统一</td><td class="good">角色设定图驱动的批量起片</td><td>长段落、群像、复杂转场试点</td><td>按工作负载路由</td></tr>
+          <tr><td><strong>参考素材</strong></td><td>图 / 视频 / 音频统一上下文；数量按 API</td><td class="num">9 图 / 3 视频 / 3 音频</td><td class="num good">30 图 / 10 视频 / 10 音频</td><td><span class="tag verified">官方已核验</span></td></tr>
+          <tr><td><strong>编辑能力</strong></td><td class="good">自然语言编辑、V2V 迁移</td><td>片段、角色、动作、剧情修改</td><td class="good">时间戳、定向、绿幕、白模、视角</td><td>H3/SD2有独立榜；2.5仅官方</td></tr>
+          <tr><td><strong>API 价格</strong></td><td class="num">2K：$7.80/min</td><td>AA 720p 参考：T2V/I2V $9.07/min</td><td class="warn">未核验公共价格</td><td>规格不完全同口径</td></tr>
+          <tr><td><strong>开放权重</strong></td><td class="warn">官方称将开放；HF 未见 H3</td><td>闭源</td><td>闭源</td><td><span class="tag unverified">H3 待兑现</span></td></tr>
+          <tr><td><strong>连载成熟度</strong></td><td>新发布，编辑与价格可量化</td><td class="good">优先进入样集主生产</td><td class="warn">先验证连续角色与单集产能</td><td>研究判断</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="truth">
+      <div class="section-head"><h2>AI 漫剧流水线：模型只负责中间两段</h2><span class="section-no">04 / WORKFLOW</span></div>
+      <div class="testflow">
+        <article class="step"><b>01</b><strong>角色圣经</strong><p>固定脸型、发型、服装、比例、道具和禁改项；建立多角度设定图。</p></article>
+        <article class="step"><b>02</b><strong>分镜关键帧</strong><p>把剧本拆成景别、动作、情绪和台词节拍，先锁可复用静态画面。</p></article>
+        <article class="step"><b>03</b><strong>生成与修镜</strong><p>SD2 批量图生；H3 修动作、镜头和局部穿帮；SD2.5 试复杂长段落。</p></article>
+        <article class="step"><b>04</b><strong>配音与合成</strong><p>固定角色声线，统一对白、字幕、音效和剪辑节奏，再做单集质检。</p></article>
+      </div>
+      <div class="note"><strong>漫剧红线：</strong>30 秒不等于能直接生成一集。连载能力必须看同一角色跨 20–30 个镜头的身份、服装、道具、声线与剧情连续性；官方精选 demo 不能替代样集试产。</div>
+    </section>
+
+    <section id="test">
+      <div class="section-head"><h2>样集试产：用合格单集分钟成本决定路由</h2><span class="section-no">05 / PRODUCTION TEST</span></div>
+      <div class="testflow">
+        <article class="step"><b>01</b><strong>固定样集</strong><p>同一 3 分钟剧本、角色设定、分镜、台词与声线；覆盖对白、打斗、群像、转场。</p></article>
+        <article class="step"><b>02</b><strong>冻结验收</strong><p>角色不变脸、服装道具连续、口型情绪、镜头可用、字幕安全区和可修复性。</p></article>
+        <article class="step"><b>03</b><strong>逐镜计数</strong><p>记录首次命中、重试、修镜分钟、废片秒数、配音返工和整集交付时长。</p></article>
+        <article class="step"><b>04</b><strong>升级门槛</strong><p>角色一致性 ≥95%、镜头可用率 ≥80%、合格单集分钟成本下降 ≥15%。</p></article>
+      </div>
+      <div class="note">核心公式：<strong>合格单集分钟成本 =（设定/分镜 + 生成与重试 + 修镜 + 配音字幕 + 剪辑质检）÷ 最终可发布分钟</strong>。同时记录“一集从剧本锁定到成片”的工时；低单价但频繁变脸的模型可能最贵。</div>
+    </section>
+
+    <section id="change">
+      <div class="section-head"><h2>什么会改变当前判断</h2><span class="section-no">06 / TRIGGERS</span></div>
+      <div class="checklist">
+        <article class="card check prove"><h3>提高 H3 权重</h3><ul><li>样集修镜后非目标区域保持率 ≥95%。</li><li>对白近景的嘴型、表情和服装修复稳定。</li><li>修镜时间比整镜重抽减少 30% 以上。</li><li>官方权重与商用许可证真正落地。</li></ul></article>
+        <article class="card check prove"><h3>提高 SD2.5 权重</h3><ul><li>公共 API、价格、并发与 SLA 可核验。</li><li>30 秒内角色身份、服装和道具一致性 ≥95%。</li><li>群像与连续对白镜头的可用率稳定。</li><li>单集拼接、补帧和返工成本显著下降。</li></ul></article>
+      </div>
+    </section>
+
+    <section id="summary">
+      <div class="section-head"><h2>最终综述：生产选组合，投资看兑现</h2><span class="section-no">07 / FINAL VIEW</span></div>
+      <div class="card call"><h2>AI 漫剧现在不该押一个模型</h2><p><strong>Seedance 2.0 负责角色设定图驱动的批量起片，MiniMax H3 负责修镜和视频编辑，Seedance 2.5 只进入高价值长段落试产。</strong>当前最硬的独立证据不是 H3 文生领先 17 Elo，而是其视频编辑领先 95 Elo；SD2 图生仅领先 12 Elo且置信区间重叠。真正的采购胜负要由 3 分钟样集的角色连续性、镜头可用率、返工工时和合格单集分钟成本决定。</p></div>
+      <div class="grid3" style="margin-top:14px">
+        <article class="card e-card"><h3>生产主线</h3><p>先锁角色圣经和分镜关键帧，再用 SD2 批量动画化；不要把 30 秒生成误当成整集生成。</p></article>
+        <article class="card e-card"><h3>效率杠杆</h3><p>把 H3 放在“保留可用内容、只修问题”的位置。若修镜工时少于整镜重抽 30%，再扩大占比。</p></article>
+        <article class="card e-card"><h3>升级条件</h3><p>SD2.5 只有在公共价格、并发、角色连续性和单集成本同时过线后，才从实验线升级为主产能。</p></article>
+      </div>
+      <div class="note"><strong>一句话：</strong>模型层面的结论是“H3 编辑强、SD2 起片稳、SD2.5 上限高”；业务层面的结论是“先做样集，再按镜头路由”；资本市场层面的结论则必须另看收入、亏损、估值与筹码。</div>
+    </section>
+
+    <section id="stock">
+      <div class="section-head"><h2>MiniMax 股价判断：反弹可看，暂不追</h2><span class="section-no">08 / STOCK VIEW</span></div>
+      <p class="lead"><strong>决策：观察，等待回调或趋势确认；不因 H3 发布后单日上涨就追买。</strong>MiniMax Group（00100.HK）是 H3 对应的上市主体。以下行情由 Futu OpenD 于 2026-08-02 回读，最新已核验收盘为 2026-07-31，并非实时盘中价。</p>
+      <div class="stats">
+        <div class="stat"><b>HK$230.6</b><span>2026-07-31 收盘；当日 +13.15%</span></div>
+        <div class="stat"><b>HK$80.5bn</b><span>总市值；较 IPO 价 165 港元高 39.8%</span></div>
+        <div class="stat"><b>&lt;34.4×</b><span>市值 / 最新 ARR 下限；精确 ARR 未披露</span></div>
+        <div class="stat"><b>-82.7%</b><span>较上市后历史高点；波动风险极高</span></div>
+      </div>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>维度</th><th>已核验事实</th><th>股价含义</th><th>判断</th></tr></thead>
+        <tbody>
+          <tr><td><strong>增长</strong></td><td>2025 收入 7,904 万美元，同比 +158.9%；海外收入约 73%</td><td>全球化与商业化速度快，给高估值提供增长基础</td><td class="good">强催化</td></tr>
+          <tr><td><strong>盈利</strong></td><td>毛利率 25.4%；调整后净亏损 2.509 亿美元；研发 2.528 亿美元</td><td>调整后亏损和研发均约为收入的 3.2 倍，仍高度依赖融资与规模效应</td><td class="hot">尚未自证</td></tr>
+          <tr><td><strong>H3</strong></td><td>编辑榜领先、2K API 已有价格，但财报尚未单列 H3 收入或客户留存</td><td>证明产品竞争力，不证明利润弹性已经兑现</td><td class="warn">产品催化</td></tr>
+          <tr><td><strong>估值</strong></td><td>230.6 港元对应约 805 亿港元市值；约 131 倍 2025 年收入、低于 34.4 倍最新 ARR 下限</td><td>ARR 显示商业化明显加速，但市场仍预付多年高增长，对增速或毛利率不达预期非常敏感</td><td class="hot">仍不便宜</td></tr>
+          <tr><td><strong>筹码</strong></td><td>多名上市前股东的部分禁售期于 2026-07-08 届满；不等于已经减持</td><td>7 月剧烈下跌与解禁时点重叠，后续供给压力仍需公告确认</td><td class="warn">待跟踪</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="checklist" style="margin-top:16px">
+        <article class="card check prove"><h3>技术观察与触发</h3><ul><li><strong>位置：</strong>收盘 230.6，高于 MA5 214.8、MA10 208.2，但仍低于 MA20 242.7、MA50 432.3。</li><li><strong>观察区：</strong>203–215 港元，来自 MA5/MA10、前收盘与近期密集成交；只观察缩量承接。</li><li><strong>触发：</strong>放量收复 245 港元；<strong>确认：</strong>再站稳 260–272 港元，才算短线结构转强。</li><li><strong>失效：</strong>日线收盘跌破 186.2 港元近期低点，反弹逻辑失效。</li></ul></article>
+        <article class="card check kill"><h3>为什么现在不追</h3><ul><li>14 日 ATR 约 34 港元，相当于现价约 14.7%，隔夜与单日波动都很大。</li><li>7 月 31 日成交量约为 20 日均量 1.24 倍，但收盘仍未越过 MA20。</li><li>244.8、260.6、297.4 港元上方存在连续压力，单根产品发布阳线不足以扭转中期下降趋势。</li><li>若回踩 203–215 无承接，宁可等待；港股可当日回转，但高波动不适合重仓试错。</li></ul></article>
+      </div>
+
+      <div class="table-wrap" style="margin-top:16px"><table>
+        <thead><tr><th>ARR / 盈利口径</th><th>计算</th><th>结果</th><th>如何解读</th></tr></thead>
+        <tbody>
+          <tr><td><strong>最新 ARR 下限</strong></td><td>2026年2月 &gt;US$150m；5月底再增长 &gt;100%</td><td class="num good">&gt;US$300m</td><td>管理层只披露相对增长，精确值未公布；不能写成确定的 US$300m</td></tr>
+          <tr><td><strong>市值 / ARR</strong></td><td>US$10.32bn ÷ &gt;US$300m</td><td class="num warn">&lt;34.4×</td><td>比 131 倍历史收入更贴近当前速度，但 ARR 不是已审计收入，也不是合同积压</td></tr>
+          <tr><td><strong>2026E P/S</strong></td><td>市值 ÷ Visible Alpha 一致预期收入 US$219m</td><td class="num warn">约 47.1×</td><td>ARR 高于全年收入预测并不矛盾：ARR是5月底瞬时年化，全年收入含较低的年初月份</td></tr>
+          <tr><td><strong>历史 PE / FPE</strong></td><td>2025净亏损；14份研报汇总预计2026–2028年仍连续亏损</td><td class="num hot">N/M</td><td>亏损企业的负 PE 没有估值含义；不能拿 ARR 直接除成 PE</td></tr>
+          <tr><td><strong>模拟 FPE</strong></td><td>以 &gt;US$300m ARR × 10% / 20% / 30% 净利率</td><td class="num">&lt;344× / &lt;172× / &lt;115×</td><td>只是稳态盈利敏感性，不是2026年盈利预测；实际 ARR 越高，对应倍数越低</td></tr>
+        </tbody>
+      </table></div>
+      <div class="note"><strong>ARR估值结论：</strong>MiniMax 已从“只有远期故事”进入“高增长商业化验证”，但尚未进入可用 PE 定价的盈利阶段。现价隐含约 34.4 倍 ARR 下限；若仅给 20/30/40 倍当前 ARR，对应股价约 134/201/268 港元。230.6 港元已经位于 30–40 倍区间中上部，赔率仍不足以支持追涨。</div>
+
+      <div class="table-wrap" style="margin-top:16px"><table>
+        <thead><tr><th>6–12 个月情景</th><th>2026E 收入假设</th><th>市销率假设</th><th>研究型目标价</th><th>需要兑现</th></tr></thead>
+        <tbody>
+          <tr><td><strong>保守</strong></td><td class="num">US$140m</td><td class="num">35×</td><td class="num hot">HK$110</td><td>增长降速、毛利率改善有限，估值继续压缩</td></tr>
+          <tr><td><strong>基准</strong></td><td class="num">US$190m</td><td class="num">50×</td><td class="num warn">HK$210</td><td>收入约 2.4 倍、毛利率继续提升，亏损率明显收窄</td></tr>
+          <tr><td><strong>乐观</strong></td><td class="num">US$250m</td><td class="num">65×</td><td class="num good">HK$360</td><td>H3、M 系列与 Open Platform 同时放量，形成全球平台溢价</td></tr>
+        </tbody>
+      </table></div>
+      <div class="note">目标价为研究情景，不是市场一致预期：按 349,235,308 股、港元兑美元 7.8 计算，且未把未来增发、股权激励和净现金调整进模型。现价 230.6 港元高于基准目标 210 港元，赔率并不支持追涨；只有收入、毛利率和亏损率连续超预期，乐观情景才成立。</div>
+
+      <div class="card call" style="margin-top:16px"><h2>约 200 字投资总结</h2><p><strong>H3 是 MiniMax 当前最直接的股价催化：</strong>视频编辑 Elo 领先 SD2 95 分，2K API 定价 7.80 美元/分钟，把优势从模型观感推进到可收费的修镜、V2V 与批量内容生产。若 H3 带动海螺订阅、API 调用和企业客户留存，ARR 有望继续上修，并通过推理规模效应改善毛利率，这是乐观估值成立的核心。风险是公司尚未披露 H3 单独收入、调用量与留存，产品领先还不等于利润兑现。其后再看公司：最新 ARR 下限已超 3 亿美元，但 2026–2028 年一致预期仍亏损；230.6 港元对应低于 34.4 倍 ARR。最终评级：<strong>观察 / 暂不追</strong>；目标价 110 / 210 / 360 港元。</p></div>
+    </section>
+
+    <section id="sources">
+      <div class="section-head"><h2>来源、口径与边界</h2><span class="section-no">09 / SOURCES</span></div>
+      <div class="card sources"><ol>
+        <li><a href="https://www.minimax.io/blog/minimax-h3" target="_blank" rel="noreferrer noopener">MiniMax H3 官方发布</a>：2K、15 秒、双声道、多模态编辑与开放权重计划。</li>
+        <li><a href="https://platform.minimax.io/docs/guides/pricing-paygo" target="_blank" rel="noreferrer noopener">MiniMax API 官方价格</a>：H3 2K 为 0.13 美元/秒。</li>
+        <li><a href="https://seed.bytedance.com/zh/blog/official-launch-of-seedance-2-0" target="_blank" rel="noreferrer noopener">Seedance 2.0 官方发布</a>：15秒、9图/3视频/3音频与编辑边界。</li>
+        <li><a href="https://seed.bytedance.com/zh/blog/%E4%B8%80%E9%95%9C%E6%88%90%E7%89%87-%E9%9A%8F%E5%BF%83%E5%8F%82%E8%80%83-seedance-2-5-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83" target="_blank" rel="noreferrer noopener">Seedance 2.5 官方发布</a>：30秒、多轮延长、多素材、时间戳、白模/绿幕；API 状态。</li>
+        <li><a href="https://artificialanalysis.ai/video/methodology" target="_blank" rel="noreferrer noopener">Artificial Analysis 方法论</a>：匿名两两偏好、Bradley–Terry、分任务独立 Elo 池。</li>
+        <li><a href="https://artificialanalysis.ai/video/leaderboard/text-to-video" target="_blank" rel="noreferrer noopener">文生视频榜</a>、<a href="https://artificialanalysis.ai/video/leaderboard/image-to-video" target="_blank" rel="noreferrer noopener">图生视频榜</a>、<a href="https://artificialanalysis.ai/video/leaderboard/video-editing" target="_blank" rel="noreferrer noopener">视频编辑榜</a>：2026-08-02 动态快照。</li>
+        <li><a href="https://huggingface.co/MiniMaxAI/models" target="_blank" rel="noreferrer noopener">MiniMaxAI 官方 Hugging Face 组织页</a>：截至核验时未见 H3 权重。</li>
+        <li><a href="https://www.minimax.io/news/minimax-global-announces-full-year-2025-financial-results" target="_blank" rel="noreferrer noopener">MiniMax 2025 年全年业绩</a>：收入、毛利率、调整后净亏损、研发、海外收入与用户/客户数据。</li>
+        <li><a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0108/2026010801343_c.pdf" target="_blank" rel="noreferrer noopener">MiniMax 配发结果公告</a>：上市前股东禁售安排与届满日期。</li>
+        <li><a href="https://file.cdn.minimax.io/public/ba6ecddc-7a0f-434a-b340-96576f676b3c.pdf" target="_blank" rel="noreferrer noopener">MiniMax 2025 年业绩公告 PDF</a>：IPO 价格 165 港元、发售股份与募集资金。</li>
+        <li><a href="https://www.scmp.com/tech/tech-trends/article/3355156/chinas-minimax-records-1-million-client-base-fivefold-growth-half-year" target="_blank" rel="noreferrer noopener">MiniMax 2026年5月业务更新</a>、<a href="https://www.stcn.com/article/detail/3931888.html" target="_blank" rel="noreferrer noopener">证券时报交叉报道</a>：2月 ARR 超1.5亿美元，随后两个月增长超过100%；属于管理层活动披露的媒体转述，非审计财报。</li>
+        <li><a href="https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/04/minimax-revenue-seen-rising-to-usd219m-in-2026-reaching-usd6b-by-2030" target="_blank" rel="noreferrer noopener">Visible Alpha 一致预期</a>：2026年收入预测2.19亿美元；预测会随分析师更新而变化。</li>
+        <li><a href="https://www.etnet.hk/www/eng/stocks/realtime/quote_profit.php?code=00100" target="_blank" rel="noreferrer noopener">经济通盈利预测汇总</a>：14份研报的综合预测仍显示2026–2028年亏损，因此常规FPE为N/M；汇总会随覆盖机构更新。</li>
+        <li><strong>Futu OpenD 只读行情</strong>：00100.HK 于 2026-07-31 的收盘、成交量、总市值及 136 根前复权日线；技术指标由页面作者计算。</li>
+      </ol><p class="muted">页面不使用未经定义的综合评分。厂商规格只能证明“公开声称/发布了能力”，不能证明角色连续性和日更产能；Elo 只能证明匿名偏好，不能替代 AI 漫剧样集验收。本文仅供研究与生产决策，不构成采购承诺。</p></div>
+    </section>
+  </article><footer class="footer">© 2026 CSN 投研 · 单镜头观感与连载产能分开，模型能力与整集工作流分开</footer></main>
+</body>
+</html>
