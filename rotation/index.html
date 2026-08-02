@@ -233,6 +233,7 @@
     return horizontal&&vertical;
   };
   const displayLabel=r=>r.ticker;
+  const focusLabelLimit=()=>window.innerWidth<760?5:8;
   const ready=()=>payload.rows.filter(r=>(r.assetClass||"us_stock")===asset&&r.relativeVelocity5dPct!=null&&r.relativeAccelerationZ!=null&&r.rotationPhase&&r.rotationPhase!=="历史不足");
   const sortValue=(row,key)=>key==="accelerationAbs"?Math.abs(row.relativeAccelerationZ??0):row[key];
   const compareRows=(a,b)=>{
@@ -257,14 +258,15 @@
     return offsets;
   }
   function focusLabels(plotted){
-    if(labelMode==="all"||plotted.length<=20)return plotted;
+    const limit=focusLabelLimit();
+    if(labelMode==="all"||plotted.length<=limit*PHASES.length)return plotted;
     const chosen=[];
     for(const currentPhase of PHASES){
       chosen.push(...plotted.filter(r=>r.rotationPhase===currentPhase).sort((a,b)=>
         Number(b.ticker===selectedTicker)-Number(a.ticker===selectedTicker)||
         Number(b.turnSignal&&b.turnSignal!=="暂无拐点")-Number(a.turnSignal&&a.turnSignal!=="暂无拐点")||
         Math.abs(b.relativeAccelerationZ||0)-Math.abs(a.relativeAccelerationZ||0)
-      ).slice(0,5));
+      ).slice(0,limit));
     }
     const selected=plotted.find(r=>r.ticker===selectedTicker),matches=query.trim()?plotted.slice(0,12):[];
     return [...new Map([...chosen,...matches,...(selected?[selected]:[])].map(r=>[r.ticker,r])).values()];
@@ -298,7 +300,7 @@
       placed.push(chosen.occupied);item.button.classList.toggle("selected",item.row.ticker===selectedTicker);item.button.dataset.select=item.row.ticker;item.button.style.left=`${chosen.cx/width*100}%`;item.button.style.top=`${chosen.cy/height*100}%`;item.button.style.visibility="visible";
       if(movement){const edge=Math.min((w/2+1)/Math.max(Math.abs(movement.ux),.001),(h/2+1)/Math.max(Math.abs(movement.uy),.001)),arrow=document.createElement("span");arrow.className="direction-arrow";arrow.setAttribute("aria-hidden","true");arrow.style.left=`calc(50% + ${movement.ux*edge}px)`;arrow.style.top=`calc(50% + ${movement.uy*edge}px)`;arrow.style.transform=`translateY(-50%) rotate(${Math.atan2(movement.uy,movement.ux)}rad)`;item.button.appendChild(arrow)}
     }
-    const count=document.querySelector(".label-count");if(count)count.textContent=`重点标签 ${placed.length} · 全量点位 ${plotted.length}`;
+    const count=document.querySelector(".label-count");if(count)count.textContent=`重点标签 ${placed.length} · 每象限最多 ${focusLabelLimit()} · 全量点位 ${plotted.length}`;
   }
   function renderTabs(){
     document.getElementById("classTabs").innerHTML=(payload.assetClasses||[]).map(c=>`<button data-asset="${esc(c.id)}" class="${c.id===asset?"active":""}">${esc(c.label)}<span>${c.count}</span></button>`).join("");
@@ -327,7 +329,7 @@
     const body=filtered.map((r,i)=>{const move=movementOf(r);return `<tr data-select="${esc(r.ticker)}" class="${r.ticker===selectedTicker?"selected":""}"><td>${String(i+1).padStart(2,"0")}</td><td title="${esc(r.name)}"><strong>${esc(r.ticker)}</strong><span>${esc(r.industryNote||r.name)}</span></td><td><em class="${CLASS[r.rotationPhase]||""}">${esc(STANDARD[r.rotationPhase]||r.rotationPhase)}<small>${esc(r.rotationPhase)}</small></em></td><td>${signed(r.relativeVelocity5dPct,2,"%")}</td><td>${signed(r.relativeAccelerationZ,2,"σ")}</td><td title="${esc(move.label)}"><strong>${move.icon}</strong> ${esc(move.label)}</td><td class="${r.turnSignal==="底部修复预警"?"good":r.turnSignal==="顶部衰竭预警"?"warn":""}">${esc(r.turnSignal||"—")}</td><td>${signed(r.rsThrustPct,1,"%")}</td><td>${signed(r.monthChangePct,1,"%")}</td><td>${signed(r.dayChangePct,1,"%")}</td></tr>`}).join("");
     document.getElementById("content").innerHTML=`
       <section class="phase-strip"><button data-phase="全部" class="${phase==="全部"?"active":""}"><span>全部</span><strong>${rows.length}</strong><small>${esc(label)}</small></button>${PHASES.map(p=>`<button data-phase="${p}" class="${CLASS[p]} ${phase===p?"active":""}"><span>${p}</span><strong>${counts[p]}</strong><small>${COPY[p]}</small></button>`).join("")}</section>
-      <section class="shell"><div class="section-head"><div><span>ROTATION MAP</span><h2>${esc(label)}四象限</h2></div><p>横轴：相对SPY速度　纵轴：标准化加速度　<span class="trajectory-legend"><b>→</b> 前一日→当前日</span><span class="label-count">标签计算中</span></p></div><div class="radar-toolbar" aria-label="标签密度"><span>全部坐标都保留，文字按优先级显示</span><div><button type="button" data-label-mode="focus" class="${labelMode==="focus"?"active":""}">重点标签</button><button type="button" data-label-mode="all" class="${labelMode==="all"?"active":""}">全部标签</button></div></div><div class="rotation-workbench"><div class="radar" style="height:${radarHeight}px"><div class="axis-band-x"></div><div class="axis-band-y"></div><div class="quad q1"><strong>改善 Improving</strong><span>落后加速 · 潜在轮动起点</span></div><div class="quad q2"><strong>领先 Leading</strong><span>领先加速 · 主升与扩散</span></div><div class="quad q3"><strong>落后 Lagging</strong><span>落后减速 · 弱势延续</span></div><div class="quad q4"><strong>转弱 Weakening</strong><span>领先减速 · 动能衰竭区</span></div><div class="axis-x"><span>相对落后</span><b>相对速度</b><span>相对领先</span></div><div class="axis-y"><span>加速</span><b>加速度</b><span>减速</span></div></div>${detailCard(selected)}</div></section>
+      <section class="shell"><div class="section-head"><div><span>ROTATION MAP</span><h2>${esc(label)}四象限</h2></div><p>横轴：相对SPY速度　纵轴：标准化加速度　<span class="trajectory-legend"><b>→</b> 前一日→当前日</span><span class="label-count">标签计算中</span></p></div><div class="radar-toolbar" aria-label="标签密度"><span>全部坐标都保留，当前每象限优先显示 ${focusLabelLimit()} 个</span><div><button type="button" data-label-mode="focus" class="${labelMode==="focus"?"active":""}">重点标签</button><button type="button" data-label-mode="all" class="${labelMode==="all"?"active":""}">全部标签</button></div></div><div class="rotation-workbench"><div class="radar" style="height:${radarHeight}px"><div class="axis-band-x"></div><div class="axis-band-y"></div><div class="quad q1"><strong>改善 Improving</strong><span>落后加速 · 潜在轮动起点</span></div><div class="quad q2"><strong>领先 Leading</strong><span>领先加速 · 主升与扩散</span></div><div class="quad q3"><strong>落后 Lagging</strong><span>落后减速 · 弱势延续</span></div><div class="quad q4"><strong>转弱 Weakening</strong><span>领先减速 · 动能衰竭区</span></div><div class="axis-x"><span>相对落后</span><b>相对速度</b><span>相对领先</span></div><div class="axis-y"><span>加速</span><b>加速度</b><span>减速</span></div></div>${detailCard(selected)}</div></section>
       <section class="candidates">${candidate("底部修复候选","仍处相对落后区，但下跌速度开始明显收敛。等待RS转正与价格确认。",recoveries,"recovery")}${candidate("顶部衰竭候选","仍处相对领先区，但推进速度明显下降。观察是否跌破RS结构。",exhaustions,"exhaustion")}</section>`;
     layoutRadarLabels(document.querySelector(".radar"),plotted,labelRows,position);
     document.getElementById("tableCard").hidden=false;
