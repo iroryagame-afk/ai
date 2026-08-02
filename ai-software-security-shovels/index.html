@@ -250,8 +250,9 @@ function bind(){
   $('#query').oninput=e=>{state.query=e.target.value;state.selected=null;render()};
   document.querySelector('thead').onclick=e=>{const b=e.target.closest('[data-sort]');if(!b)return;if(state.sort===b.dataset.sort)state.dir=state.dir==='desc'?'asc':'desc';else{state.sort=b.dataset.sort;state.dir='desc'}render()};
 }
+function applyPayload(nextPayload){payload=nextPayload||payload;if(!payload)throw Error('本地预览尚未注入数据');$('#status').textContent=payload.status.startsWith('OPEN_D_VERIFIED')?'OpenD 已核验':'数据待核验';$('#dataDate').textContent=payload.dataDate;const gate=payload.gates.market;$('#heroAction').textContent=gate?'市场闸门通过 · 等个股确认':'暂无确认买 · 等待 QQQ 收复 EMA55';$('#heroReason').textContent=gate?'高弹性仍需六项附加门全部通过。':'软件板块相对强，但系统性风险门槛未通过；新仓全部降级为观察。';if(!state.selected)state.selected=payload.rows[0]?.ticker;renderGates();renderTargets();render()}
 async function load(){
-  try{payload=location.protocol==='file:'?window.__MONITOR_FALLBACK__:await fetch(`data.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('数据读取失败');return r.json()});if(!payload)throw Error('本地预览尚未注入数据');$('#status').textContent=payload.status.startsWith('OPEN_D_VERIFIED')?'OpenD 已核验':'数据待核验';$('#dataDate').textContent=payload.dataDate;const gate=payload.gates.market;$('#heroAction').textContent=gate?'市场闸门通过 · 等个股确认':'暂无确认买 · 等待 QQQ 收复 EMA55';$('#heroReason').textContent=gate?'高弹性仍需六项附加门全部通过。':'软件板块相对强，但系统性风险门槛未通过；新仓全部降级为观察。';state.selected=payload.rows[0]?.ticker;renderGates();renderTargets();bind();render()}catch(e){$('#status').textContent='读取失败';$('#dot').classList.add('bad');$('#heroAction').textContent='数据不可用';$('#heroReason').textContent=e.message}}
+  try{applyPayload(window.__MONITOR_FALLBACK__);bind();if(location.protocol!=='file:'){try{let fresh=await fetch(`data.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('数据读取失败');return r.json()});applyPayload(fresh)}catch(e){console.warn('公开数据刷新失败，继续使用内嵌已核验数据',e)}}}catch(e){$('#status').textContent='读取失败';$('#dot').classList.add('bad');$('#heroAction').textContent='数据不可用';$('#heroReason').textContent=e.message}}
 load();
 </script>
 </body>
