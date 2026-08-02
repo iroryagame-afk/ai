@@ -336,9 +336,9 @@
   }
   document.getElementById("search").addEventListener("input",e=>{query=e.target.value.toUpperCase();render()});
   let resizeTimer;window.addEventListener("resize",()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>payload&&render(),160)});
-  const dataPromise=location.protocol==="file:"?Promise.resolve(JSON.parse(document.getElementById("a-share-rotation-data").textContent)):fetch(`data.json?v=${Date.now()}`,{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("轮动数据读取失败");return r.json()});dataPromise.then(d=>{
-    payload=d;document.getElementById("status").textContent=String(d.status||"").startsWith("OPEN_D_VERIFIED")?(d.failedCount?"OpenD 已核验 · 部分历史不足":"OpenD 已核验"):"数据待核验";document.getElementById("dataDate").textContent=d.dataDate;document.getElementById("source").textContent=`基准：${d.benchmark} · 最新完整交易日：${d.dataDate}`;renderTabs();render();
-  }).catch(e=>document.getElementById("content").innerHTML=`<section class="message"><strong>轮动雷达暂时不可用</strong><p>${esc(e.message)}</p></section>`);
+  const applyPayload=d=>{payload=d;document.getElementById("status").textContent=String(d.status||"").startsWith("OPEN_D_VERIFIED")?(d.failedCount?"OpenD 已核验 · 部分历史不足":"OpenD 已核验"):"数据待核验";document.getElementById("dataDate").textContent=d.dataDate;document.getElementById("source").textContent=`基准：${d.benchmark} · 最新完整交易日：${d.dataDate}`;renderTabs();render()};
+  applyPayload(JSON.parse(document.getElementById("a-share-rotation-data").textContent));
+  if(location.protocol!=="file:")fetch(`data.json?v=${Date.now()}`,{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("轮动数据读取失败");return r.json()}).then(applyPayload).catch(e=>console.warn("公开数据刷新失败，继续使用内嵌已核验数据",e));
 })();
 </script>
 </body>
