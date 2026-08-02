@@ -30,7 +30,7 @@
 | 美股工具 | RS Thrust | `/rs-thrust/` | 相对强度加速 |
 | 美股工具 | 轮动加速度雷达 | `/rotation/` | ETF 相对速度与加速度 |
 | 美股工具 | AI 软件与安全监控台 | `/ai-software-security-shovels/` | 固定软件、安全与 ANET 类控制层股票池的轮动、量价、盘后动作与目标价参考 |
-| 美股工具 | AI 硬件铲子监控台 | `/ai-hardware-shovels/` | 以 SOXX 为基准，监控 AI 算力、ASIC、制造设备、HBM、光互连与电力散热铲子股 |
+| 美股工具 | AI 硬件铲子监控台 | `/ai-hardware-shovels/` | 以 SPY 为统一相对基准，监控 AI 算力、ASIC、制造设备、HBM、光互连与电力散热铲子股 |
 | 美股工具 | US Skew | `/us-skew/` | 期权保护需求与风险温度 |
 | 市场观察 | 财政风险溢价监控 | `/macro-fiscal-risk/` | 美国长端、美元、股债相关性、信用扩散与高久期成长压力 |
 | 市场观察 | 中韩美市场进度 | `/ai-decision/` | 市场回调出清进度 |
@@ -55,7 +55,7 @@
 - “A股猎龙者信号表”属于外部工具入口，固定指向 Google Sheet `1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw`；mda100 只在信号日期与报告日期一致且 OpenD 覆盖率不低于 90% 时启用猎龙者机会/风险筛选。
 - `/csn/hot/` 是 `/csn/` 的子页面，可以在股票分组中额外出现。
 - `/ai-software-security-shovels/` 是固定 18 只股票的独立动态监控台；ANET 按软硬一体控制层归入软件。组内强度不是 `/rs-thrust/` 的正式分数，高弹性标的只有在市场、催化、趋势、量价、两日确认与盈亏比六门齐过时才允许升级买入动作。
-- `/ai-hardware-shovels/` 是固定 24 只股票的独立动态监控台；ANET 不重复进入硬件池。相对强度以 SOXX 为基准，AAOI 等高弹性标的只有在市场、板块、催化、趋势量价、两日确认与盈亏比同时通过时才允许升级买入动作。
+- `/ai-hardware-shovels/` 是固定 24 只股票的独立动态监控台；ANET 不重复进入硬件池。轮动、加速度与组内强度统一以 SPY 为基准，AAOI 等高弹性标的只有在市场、板块、催化、趋势量价、两日确认与盈亏比同时通过时才允许升级买入动作。
 - `/ai-decision/` 可以使用紧凑数据源导航，但必须包含 A 股严选、RS Thrust、US Skew、轮动雷达和投研导航。
 - 新增正式动态页时，必须同时更新本注册表、首页入口、相关生成器和所有采用全站导航的页面。
 - 新增长期报告时，不加入动态页清单；按 `docs/report-nav-policy.md` 更新 `nav/reports.json`。
