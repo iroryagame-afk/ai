@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T09:50:07.475Z",
+  "generatedAt": "2026-08-03T10:13:18.054Z",
   "stage": "修复观察期",
   "stageNote": "情绪修复，但趋势与杠杆尚未同时确认",
   "markets": {
@@ -54,6 +54,11 @@
       "currentTn": 2.589116268881,
       "progressToBasicPct": 100,
       "basicTn": 2.6,
+      "basicLabel": "基本观察位",
+      "progressToSecondPct": 69.6,
+      "secondLevelTn": 2.4,
+      "secondLevelLabel": "较充分位",
+      "remainingToSecondTn": 0.189,
       "etaTradingDays": [
         0,
         0
@@ -72,6 +77,11 @@
       "currentTn": 28.935,
       "progressToBasicPct": 100,
       "basicTn": 30,
+      "basicLabel": "基本观察位",
+      "progressToSecondPct": 91.2,
+      "secondLevelTn": 28,
+      "secondLevelLabel": "较充分位",
+      "remainingToSecondTn": 0.935,
       "etfFiveDayFlowTn": 1.654,
       "tenDayChangeTn": -4.398,
       "etaTradingDays": [
