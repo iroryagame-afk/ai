@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-01T01:06:56.347Z",
-  "stage": "风险释放中",
-  "stageNote": "保护性需求偏高，去杠杆尚未到基本观察线",
+  "generatedAt": "2026-08-03T09:19:39.851Z",
+  "stage": "修复观察期",
+  "stageNote": "情绪修复，但趋势与杠杆尚未同时确认",
   "markets": {
     "cn": {
-      "asOf": "2026-07-30",
-      "score": -26,
-      "label": "中性偏恐",
+      "asOf": "2026-08-03",
+      "score": -21,
+      "label": "技术中性偏弱",
       "valid": 28,
-      "aboveMa20Pct": 28.6,
-      "fear": 6,
-      "greed": 0,
+      "aboveMa20Pct": 32.1,
+      "weak": 0,
+      "strong": 0,
       "coverage": {
         "valid": 34,
         "total": 34,
@@ -50,17 +50,17 @@
   },
   "deleveraging": {
     "aShare": {
-      "asOf": "2026-07-29",
-      "currentTn": 2.621300194636,
-      "progressToBasicPct": 95,
+      "asOf": "2026-07-31",
+      "currentTn": 2.589116268881,
+      "progressToBasicPct": 100,
       "basicTn": 2.6,
       "etaTradingDays": [
-        1,
-        2
+        0,
+        0
       ],
-      "etaCalendar": "约7月31日–8月3日",
-      "fastEtaTradingDays": 1,
-      "scopeNote": "2026-07-29最新可得值：上交所官方融资余额1.336695445485万亿元，深交所官方融资余额1.276274万亿元；北交所官网当前受访问防护限制，采用公开逐股明细328只汇总交叉核验为0.008330749151万亿元。三市场合计约2.621300194636万亿元。",
+      "etaCalendar": "已于7月31日低于2.60万亿基本观察位",
+      "fastEtaTradingDays": 0,
+      "scopeNote": "2026-07-31最新可得值：上交所官方融资余额1.327398268667万亿元，深交所官方汇总融资余额1.253570万亿元，北交所官方汇总融资余额0.008148000214万亿元。三市场合计约2.589116268881万亿元，已低于2.60万亿元基本观察位。",
       "sources": {
         "sse": "https://www.sse.com.cn/market/othersdata/margin/sum/",
         "szse": "https://www.szse.cn/disclosure/margin/margin/",
@@ -217,19 +217,19 @@
     "status": "verified_close"
   },
   "breadth": {
-    "aShareAsOf": "2026-07-31",
-    "aShareUpPct": 79.67,
-    "aShareUp": 4691,
-    "aShareDown": 728,
-    "aShareMainNetYi": 632.39,
+    "aShareAsOf": "2026-08-03",
+    "aShareUpPct": 68.02,
+    "aShareUp": 4005,
+    "aShareDown": 1466,
+    "aShareMainNetYi": -420.16,
     "aShareUniverse": "全A股（含沪深北）",
     "aShareCovered": 5888,
     "crosscheck": {
       "universe": "沪深全A（不含北交所）",
       "activeSameDay": 5196,
-      "up": 4395,
-      "down": 694,
-      "turnoverYi": 25412.46
+      "up": 3866,
+      "down": 1278,
+      "turnoverYi": 19968.49
     }
   }
 }

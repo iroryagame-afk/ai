@@ -1663,7 +1663,18 @@ a { color: var(--accent); }
     .etf-table { width:100%; min-width:1160px; border-collapse:collapse; }
     .etf-table th,.etf-table td { padding:11px 10px; border-bottom:1px solid var(--hairline); text-align:right; font-size:13px; }
     .etf-table th { position:sticky; top:0; z-index:2; background:#f4f0e8; color:var(--ink-2); }
+    .etf-table th.sortable { padding:0; }
+    .etf-sort-button {
+      display:flex; width:100%; min-height:42px; align-items:center; justify-content:flex-end; gap:5px;
+      padding:11px 10px; border:0; background:transparent; color:inherit; font:inherit;
+      cursor:pointer; white-space:nowrap;
+    }
+    .etf-sort-button:hover,.etf-sort-button:focus-visible { background:rgba(23,49,74,.07); color:var(--navy); outline:none; }
+    .etf-sort-indicator { min-width:1em; color:var(--ink-3); font-family:var(--mono); }
+    .etf-table th[aria-sort="ascending"] .etf-sort-button,
+    .etf-table th[aria-sort="descending"] .etf-sort-button { color:var(--navy); font-weight:800; }
     .etf-table th:first-child,.etf-table td:first-child,.etf-table th:nth-child(2),.etf-table td:nth-child(2) { text-align:left; }
+    .etf-table th:first-child .etf-sort-button,.etf-table th:nth-child(2) .etf-sort-button { justify-content:flex-start; }
     .etf-table tr:last-child td { border-bottom:0; }
     .etf-name { font-weight:800; color:var(--ink); }
     .etf-code { color:var(--ink-3); font:600 11px/1 var(--mono); }
@@ -1672,6 +1683,7 @@ a { color: var(--accent); }
     .state-positive { color:var(--cinnabar); border-color:#d9a59b; }
     .state-watch { color:#8a6200; border-color:#d6bd7f; }
     .state-negative { color:var(--jade); border-color:#8fb9ae; }
+    .etf-sort-status { margin-left:auto; color:var(--ink-3); font-size:12px; }
     .method-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:24px; }
     .method-card { padding:18px; border:1px solid var(--hairline); border-radius:12px; background:var(--panel); }
     .method-card h2 { margin:0 0 8px; font:800 22px/1.2 var(--serif); }
@@ -1822,7 +1834,7 @@ a { color: var(--accent); }
     </div>
   </div>
 </nav>
-<aside class="a-share-research-path" data-component="a-share-research-path" aria-label="A股研究路径"><div class="a-share-research-path__head"><strong>A股研究路径</strong><span>四段式：市场闸门 → 资金方向（ETF＋Thrust）→ 轮动阶段 → 个股执行 · 同源数据 · 2026-07-31</span></div><ol><li><a href="https://csnpk.com/a-share-market/"><span class="a-share-research-path__number">01</span><strong>A股大盘</strong><small>现在能不能进攻？</small></a></li><li><a href="https://csnpk.com/a-share-market/etf/"><span class="a-share-research-path__number">02</span><strong>ETF资金与波动</strong><small>资金往哪里走？</small></a></li><li><a href="https://csnpk.com/a-share-thrust/"><span class="a-share-research-path__number">03</span><strong>Thrust</strong><small>谁正在变强？</small></a></li><li><a href="https://csnpk.com/a-share-rotation/"><span class="a-share-research-path__number">04</span><strong>轮动雷达</strong><small>强弱处于哪一段？</small></a></li><li><a href="https://csnpk.com/mda100/" aria-current="page"><span class="a-share-research-path__number">05</span><strong>mda100</strong><small>最后看哪些个股？</small></a></li></ol><div class="a-share-research-path__foot"><p>本页只回答：<strong>最后看哪些个股？</strong></p><a class="a-share-research-path__next" href="https://csnpk.com/a-share-market/">推荐下一步：A股大盘 →</a></div></aside>
+<aside class="a-share-research-path" data-component="a-share-research-path" aria-label="A股研究路径"><div class="a-share-research-path__head"><strong>A股研究路径</strong><span>四段式：市场闸门 → 资金方向（ETF＋Thrust）→ 轮动阶段 → 个股执行 · 同源数据 · 2026-08-03</span></div><ol><li><a href="https://csnpk.com/a-share-market/"><span class="a-share-research-path__number">01</span><strong>A股大盘</strong><small>现在能不能进攻？</small></a></li><li><a href="https://csnpk.com/a-share-market/etf/"><span class="a-share-research-path__number">02</span><strong>ETF资金与波动</strong><small>资金往哪里走？</small></a></li><li><a href="https://csnpk.com/a-share-thrust/"><span class="a-share-research-path__number">03</span><strong>Thrust</strong><small>谁正在变强？</small></a></li><li><a href="https://csnpk.com/a-share-rotation/"><span class="a-share-research-path__number">04</span><strong>轮动雷达</strong><small>强弱处于哪一段？</small></a></li><li><a href="https://csnpk.com/mda100/" aria-current="page"><span class="a-share-research-path__number">05</span><strong>mda100</strong><small>最后看哪些个股？</small></a></li></ol><div class="a-share-research-path__foot"><p>本页只回答：<strong>最后看哪些个股？</strong></p><a class="a-share-research-path__next" href="https://csnpk.com/a-share-market/">推荐下一步：A股大盘 →</a></div></aside>
 <script>
     (() => {
     if (window.location.protocol === "file:") {
@@ -1862,46 +1874,62 @@ a { color: var(--accent); }
 <h1>mda100 科技精选</h1>
 <p>聚焦 A 股科技链核心池、候选排序、评分解释与次日纪律；大盘资金和行业轮动移至独立观察页。</p>
 <nav class="nav"><a href="#select">科技精选</a><a href="#fullscores">全量科技池</a><a href="#qveris">新股票初评</a><a href="#algorithm">算法说明</a></nav>
-<div class="verify">二次确认 DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH · Report 2026-07-31 = Index 2026-07-31</div>
+<div class="verify">二次确认 DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH · Report 2026-08-03 = Index 2026-08-03</div>
 </header>
 <main class="wrap">
 
 <section aria-labelledby="confluenceTitle" class="confluence-panel">
 <div class="confluence-head">
 <div>
-<span>同日三路验证 · 2026-07-31</span>
+<span>同日三路验证 · 2026-08-03</span>
 <h2 id="confluenceTitle">A股三路共振精选</h2>
 <p>Thrust“优先看”、轮动雷达“领先加速/落后加速”、大盘观察“行业/风格资金支持”；任一股票命中至少2路即入选。</p>
 </div>
 <div class="confluence-gate">
 <small>全A总闸门</small>
-<strong>增量进攻</strong>
-<span>主力净流入 +632.39亿</span>
+<strong>存量分化</strong>
+<span>主力净流入 -420.16亿</span>
 </div>
 </div>
 <div class="confluence-counts">
 <span><b>5</b>共振入选</span>
 <span><b>0</b>命中3/3</span>
 <span><b>5</b>命中2/3</span>
-<span><b>52</b>轮动加速池</span>
+<span><b>66</b>轮动加速池</span>
 </div>
-<div class="confluence-grid"><article class="confluence-card"><header><div><strong>600276</strong><span>恒瑞医药</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 72.6</small></div><p>命中 2/3（领先加速、行业/风格资金支持）；Thrust 82.5；轮动 领先加速；医药 74.3分/进攻闸门打开；中性；A股执行门槛未通过</p><footer>观察</footer></article><article class="confluence-card"><header><div><strong>601127</strong><span>赛力斯</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 68.6</small></div><p>命中 2/3（领先加速、行业/风格资金支持）；Thrust 80.8；轮动 领先加速；工业制造/国防 62.0分/轮动确认/观察；中性；A股执行门槛未通过</p><footer>观察</footer></article><article class="confluence-card"><header><div><strong>603716</strong><span>塞力医疗</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 66.8</small></div><p>命中 2/3（领先加速、行业/风格资金支持）；Thrust 79.2；轮动 领先加速；医药 74.3分/进攻闸门打开；中性；追涨性价比下降；A股执行门槛未通过</p><footer>观察</footer></article><article class="confluence-card"><header><div><strong>688111</strong><span>金山办公</span></div><em class="wait">等待回踩</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 68.6</small></div><p>命中 2/3（领先加速、行业/风格资金支持）；Thrust 100.0；轮动 领先加速；科技成长 44.4分/中性；计算机资金净流入；单日涨幅偏热；A股执行门槛未通过</p><footer>强势初筛，等待六项确认</footer></article><article class="confluence-card"><header><div><strong>301526</strong><span>国际复材</span></div><em class="pause">暂停推荐</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 49.2</small></div><p>命中 2/3（领先加速、行业/风格资金支持）；Thrust 60.0；轮动 领先加速；工业制造/国防 62.0分/轮动确认/观察；中性；仍在EMA20下方；A股执行门槛未通过</p><footer>观察</footer></article></div>
+<div class="confluence-grid"><article class="confluence-card"><header><div><strong>600036</strong><span>招商银行</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 64.0</small></div><p>命中 2/3（领先加速、行业/风格资金支持）；Thrust 83.3；轮动 领先加速；高股息/银行 70.3分/进攻闸门打开；中性；A股执行门槛未通过</p><footer>观察</footer></article><article class="confluence-card"><header><div><strong>600926</strong><span>杭州银行</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 62.6</small></div><p>命中 2/3（领先加速、行业/风格资金支持）；Thrust 80.8；轮动 领先加速；高股息/银行 70.3分/进攻闸门打开；中性；A股执行门槛未通过</p><footer>观察</footer></article><article class="confluence-card"><header><div><strong>002415</strong><span>海康威视</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 56.3</small></div><p>命中 2/3（Thrust优先看、领先加速）；Thrust 105.0；轮动 领先加速；未映射 0.0分/未映射；中性；行业映射待核验</p><footer>等待回踩或次日量价确认</footer></article><article class="confluence-card"><header><div><strong>600900</strong><span>长江电力</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 52.7</small></div><p>命中 2/3（领先加速、行业/风格资金支持）；Thrust 62.5；轮动 领先加速；高股息/银行 70.3分/进攻闸门打开；中性；A股执行门槛未通过</p><footer>观察</footer></article><article class="confluence-card"><header><div><strong>688095</strong><span>福昕软件</span></div><em class="pause">暂停推荐</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 59.4</small></div><p>命中 2/3（Thrust优先看、领先加速）；Thrust 102.5；轮动 领先加速；科技成长 25.8分/防守/降低新增仓位；科技细分资金显著净流出；追涨性价比下降</p><footer>等待回踩或次日量价确认</footer></article></div>
 <details class="confluence-method"><summary>查看评分口径</summary><p>三路信号为：A股 Thrust“优先看”、轮动雷达“领先加速/落后加速”、大盘观察“行业或风格资金支持”；命中至少2路入选。共振分只作排序，并按过热、EMA20、A股执行门槛和资金背离调整；大盘资金撤退时禁止输出买入观察。</p></details>
 </section><section class="etf-reference-card" data-verify="VERIFIED_A_SHARE_ETF_PRICE_SCALE_COMPARE">
 <div>
 <span class="source-kicker">A股选股参考 · ETF价格/份额/市值</span>
 <h3>代表ETF资金与波动确认</h3>
-<p>宽基+39.5%；科技-3.9%；防守-4.1%。资金承接靠前：中证1000ETF（+115.5%份额）、沪深300ETF（+54.4%份额）、有色金属ETF（+3.9%份额）；高波动降级：半导体ETF（-27.5%）、通信ETF（-25.3%）、半导体设备ETF（-26.0%）。</p>
+<p>宽基+39.3%；科技-12.8%；防守-5.8%。资金承接靠前：中证1000ETF（+116.8%份额）、沪深300ETF（+54.3%份额）、有色金属ETF（+4.1%份额）；高波动降级：半导体设备ETF（-33.1%）、半导体ETF（-32.7%）、通信ETF（-25.3%）。</p>
 </div>
 <a href="./etf/">查看完整对比页</a>
 </section><section data-layout="MDA_SELECTION_OVERVIEW_V1" id="select">
 <h2>一、mda100 科技精选</h2>
-<p class="lead">基于 2026-07-31 收盘后 Futu OpenD 已核验行情，按 100 分制筛选次一交易日优先研究和布局的 A 股候选。新版股票池收缩为 md50：只保留 AI 科技链中各细分环节的龙一/龙二，PCB、电子料、光通信按产业链环节拆分，MLCC 仅保留龙一龙二。模型以技术图形、K线和成交量为主；新闻资讯只做排雷、解释和确认，不再把正面新闻作为主要加分项，避免追到已经 price in 的小作文。</p>
+<p class="lead">基于 2026-08-03 收盘后 Futu OpenD 已核验行情，按 100 分制筛选次一交易日优先研究和布局的 A 股候选。新版股票池收缩为 md50：只保留 AI 科技链中各细分环节的龙一/龙二，PCB、电子料、光通信按产业链环节拆分，MLCC 仅保留龙一龙二。模型以技术图形、K线和成交量为主；新闻资讯只做排雷、解释和确认，不再把正面新闻作为主要加分项，避免追到已经 price in 的小作文。</p>
 <div class="selection-overview" data-layout="MDA_SELECTION_OVERVIEW_V1">
-<div class="kpis"><div class="kpi"><span>md50核心池</span><strong>50/50</strong></div><div class="kpi"><span>行情覆盖</span><strong>100.0%</strong></div><div class="kpi"><span>上涨/下跌</span><strong>44/6</strong></div><div class="kpi"><span>平均分</span><strong>4.7</strong></div><div class="kpi"><span>95分+</span><strong>0</strong></div><div class="kpi"><span>90分+</span><strong>0</strong></div></div>
-<div class="rec-review muted-review"><strong>昨日推荐回看</strong><span>2026-07-30 推荐未在 2026-07-31 复盘表中匹配到表现</span></div>
+<div class="kpis"><div class="kpi"><span>md50核心池</span><strong>50/50</strong></div><div class="kpi"><span>行情覆盖</span><strong>100.0%</strong></div><div class="kpi"><span>上涨/下跌</span><strong>8/42</strong></div><div class="kpi"><span>平均分</span><strong>2.3</strong></div><div class="kpi"><span>95分+</span><strong>0</strong></div><div class="kpi"><span>90分+</span><strong>0</strong></div></div>
+<div class="rec-review negative">
+<div class="rec-review-head">
+<div>
+<h2>昨日推荐回看</h2>
+<p>2026-07-31 推荐 <span>|</span> 2026-08-03 表现</p>
 </div>
-<div class="note">新闻扫描：news_scan_20260731_170028.json · 2026-07-31T17:00:28 · 已匹配本次复盘全部 103 只股票；逐请求零错误</div>
+<strong>-10.99%</strong>
+</div>
+<div class="rec-review-metrics">
+<div><b>1</b><span>推荐数</span></div>
+<div><b>-10.99%</b><span>中位数</span></div>
+<div><b>0/1</b><span>胜率</span></div>
+<div><b>0%</b><span>正收益占比</span></div>
+</div>
+<p><b>Top：</b>拓荆科技 -10.99%</p>
+<p><b>Bottom：</b>拓荆科技 -10.99%</p>
+</div>
+</div>
+<div class="note">新闻扫描：news_scan_20260803_164814.json · 2026-08-03T16:48:14 · 已匹配本次复盘全部 103 只股票；逐请求零错误</div>
 <div class="algo-link">
 <div>
 <strong>当前算法说明</strong>
@@ -1938,7 +1966,7 @@ a { color: var(--accent); }
 <section id="fullscores">
 <h2>二、全量科技池评分</h2>
 <p class="lead">这里展示本次 Futu OpenD 已核验的全量股票池评分。它用于观察强弱和候选扩散，不等同于“建议买入”；真正的交易建议仍以上方 md50 龙一/龙二收敛清单为主。</p><details class="fullscores-disclosure"><summary><span>展开完整评分表与筛选器</span><small>默认收起，可按代码、拼音、评分、形态和动作筛选</small></summary><div class="fullscores-body">
-<div class="lh008-status verified"><strong>A股猎龙者信号：</strong>OpenD同日核验 2026-07-31，覆盖 92.02%；推荐池命中 13 只。 <a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" rel="noopener" target="_blank">打开固定表格</a></div>
+<div class="lh008-status verified"><strong>A股猎龙者信号：</strong>OpenD同日核验 2026-08-03，覆盖 92.33%；推荐池命中 13 只。 <a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" rel="noopener" target="_blank">打开固定表格</a></div>
 <div class="filter-panel" id="fullScoreFilter">
 <div class="filter-field">
 <label for="fullScoreSearch">快速搜索</label>
@@ -1980,8 +2008,8 @@ a { color: var(--accent); }
 <div class="candidate-table-wrap">
 <table class="full-score-table">
 <thead><tr><th>排名</th><th>股票</th><th>主题</th><th>技术档</th><th>100分</th><th>涨跌</th><th>多周期温度</th><th>新闻修正 / 关键新闻</th><th>观察动作</th></tr></thead>
-<tbody id="fullScoreRows"><tr data-action="sell" data-lh008="none" data-pool="wild" data-score="0" data-search="通信etf国泰 515880 tongxinguotai txgt 打野池 其他/待归类 / 其他 其他/待归类 其他 破位观望 破位 200日线下 a6弱 rs偏弱 利好 +1.5；资本运作(正向)等16条利好；机构看好/调入指数 无明显买点" data-special="0"><td>1</td><td class="stock"><strong>通信ETF国泰</strong><code>515880</code></td><td><span class="pool-badge wild" title="打野池">野</span> 其他/待归类 / 其他<div class="subtle">其他/待归类</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill up">4.9%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -14.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-3.2% / 10:-8.2% / 20:-16.1% / 55:-19.9% / 200:-7.5%</div></td><td>利好 +1.5；资本运作(正向)等16条利好；机构看好/调入指数</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
-<tr data-action="sell" data-lh008="none" data-pool="wild" data-score="0" data-search="半导体设备etf国泰 159516 bandaotishebeiguotai bdtsbgt 打野池 前道半导体设备 / 半导体设备 前道半导体设备 半导体设备 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 利好 +1.5；资本运作(正向)等17条利好；资本运作(正向) / 机构看好/调入指数 无明显买点" data-special="0"><td>2</td><td class="stock"><strong>半导体设备ETF国泰</strong><code>159516</code></td><td><span class="pool-badge wild" title="打野池">野</span> 前道半导体设备 / 半导体设备<div class="subtle">前道半导体设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill up">3.1%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -10.5% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-4.7% / 10:-5.8% / 20:-14.0% / 55:-6.8% / 200:+21.9%</div></td><td>利好 +1.5；资本运作(正向)等17条利好；资本运作(正向) / 机构看好/调入指数</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr></tbody>
+<tbody id="fullScoreRows"><tr data-action="sell" data-lh008="none" data-pool="wild" data-score="0" data-search="通信etf国泰 515880 tongxinguotai txgt 打野池 其他/待归类 / 其他 其他/待归类 其他 破位观望 破位 200日线下 a6弱 rs偏弱 利好 +1.5；资本运作(正向)等16条利好；机构看好/调入指数 无明显买点" data-special="0"><td>1</td><td class="stock"><strong>通信ETF国泰</strong><code>515880</code></td><td><span class="pool-badge wild" title="打野池">野</span> 其他/待归类 / 其他<div class="subtle">其他/待归类</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill up">0.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -13.4% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-0.4% / 10:-7.3% / 20:-15.0% / 55:-19.3% / 200:-7.5%</div></td><td>利好 +1.5；资本运作(正向)等16条利好；机构看好/调入指数</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
+<tr data-action="sell" data-lh008="none" data-pool="wild" data-score="0" data-search="半导体设备etf国泰 159516 bandaotishebeiguotai bdtsbgt 打野池 前道半导体设备 / 半导体设备 前道半导体设备 半导体设备 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 利好 +1.5；资本运作(正向)等16条利好；资本运作(正向) / 机构看好/调入指数 无明显买点" data-special="0"><td>2</td><td class="stock"><strong>半导体设备ETF国泰</strong><code>159516</code></td><td><span class="pool-badge wild" title="打野池">野</span> 前道半导体设备 / 半导体设备<div class="subtle">前道半导体设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-9.7%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -17.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-9.7% / 10:-14.2% / 20:-21.0% / 55:-15.3% / 200:+9.7%</div></td><td>利好 +1.5；资本运作(正向)等16条利好；资本运作(正向) / 机构看好/调入指数</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr></tbody>
 </table>
 </div></div></details>
 </section>
