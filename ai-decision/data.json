@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T10:13:18.054Z",
+  "generatedAt": "2026-08-04T01:27:52.520Z",
   "stage": "修复观察期",
   "stageNote": "情绪修复，但趋势与杠杆尚未同时确认",
   "markets": {
@@ -32,15 +32,15 @@
       }
     },
     "us": {
-      "asOf": "2026-07-31",
-      "score": 0,
-      "label": "中性",
+      "asOf": "2026-08-03",
+      "score": 8,
+      "label": "技术中性偏强",
       "valid": 16,
-      "aboveMa20Pct": 50,
-      "fear": 0,
-      "greed": 0,
-      "spy1dPct": 0.72,
-      "qqq1dPct": 0.65,
+      "aboveMa20Pct": 81.3,
+      "weak": 0,
+      "strong": 0,
+      "spy1dPct": 1.42,
+      "qqq1dPct": 1.76,
       "coverage": {
         "valid": 22,
         "total": 22,
@@ -126,10 +126,10 @@
       "status": "第三方估算"
     },
     "us": {
-      "score": 42.5,
-      "label": "恐惧",
-      "asOf": "2026-07-31T23:59:52+00:00",
-      "previousClose": 38.9,
+      "score": 45.8,
+      "label": "中性",
+      "asOf": "2026-08-03T23:59:53+00:00",
+      "previousClose": 42.5,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
       "sourceLabel": "CNN Fear & Greed Index",
@@ -208,22 +208,22 @@
   },
   "putCall": {
     "source": "Cboe Global Markets",
-    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-07-30",
-    "asOf": "2026-07-30",
-    "total": 0.91,
-    "totalPrevious": 1.05,
-    "equity": 0.61,
-    "equityPrevious": 0.61,
-    "previousAsOf": "2026-07-29",
+    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-08-03",
+    "asOf": "2026-08-03",
+    "total": 0.8,
+    "totalPrevious": 0.91,
+    "equity": 0.55,
+    "equityPrevious": 0.63,
+    "previousAsOf": "2026-07-31",
     "status": "verified_official",
-    "totalChange": -0.14,
-    "equityChange": 0
+    "totalChange": -0.11,
+    "equityChange": -0.08
   },
   "skew": {
-    "asOf": "2026-07-31",
-    "median25d": 1.89,
-    "valid": 14,
-    "highCount": 6,
+    "asOf": "2026-08-03",
+    "median25d": 0.79,
+    "valid": 13,
+    "highCount": 5,
     "status": "verified_close"
   },
   "breadth": {
