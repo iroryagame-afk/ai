@@ -1,163 +1,310 @@
 {
-  "title": "美股三路共振精选",
-  "dataDate": "2026-08-03",
+  "schemaVersion": 1,
+  "title": "美股综合优选",
   "status": "VERIFIED",
-  "verifyMarker": "VERIFIED_US_THREE_SIGNAL_CONSENSUS_3_OF_3",
-  "refreshMode": "CONFLUENCE_ONLY",
-  "fullCsnDailyRefresh": "DISABLED_BY_USER_2026-08-04",
-  "featuredIntersection": {
-    "marker": "VERIFIED_US_THREE_SIGNAL_CONSENSUS_3_OF_3",
-    "status": "VERIFIED",
-    "dataDate": "2026-08-03",
-    "selectionRule": "CSN_BUY_WATCH_THRUST_PRIORITY_ROTATION_ACCEL_ALL_3",
-    "csnPriorityCount": 63,
-    "csnPriorityTickers": [
-      "AGNCN",
-      "APD",
-      "APH",
-      "ATI",
-      "AVGO",
-      "AXTI",
-      "BRK.B",
-      "CBRE",
-      "CEG",
-      "CMC",
-      "CNQ",
-      "COP",
-      "CSX",
-      "CVX",
-      "DAR",
-      "DE",
-      "ECL",
-      "EGP",
-      "EME",
-      "EOG",
-      "F",
-      "FAF",
-      "FCX",
-      "FLNG",
-      "GD",
-      "GE",
-      "HON",
-      "IFS",
-      "IHS",
-      "IMCR",
-      "INTU",
-      "IX",
-      "KOD",
-      "LNG",
-      "LSPD",
-      "MA",
-      "MSI",
-      "MSM",
-      "NCLH",
-      "NOC",
-      "NTES",
-      "NVDA",
-      "O",
-      "OHI",
-      "OKTA",
-      "ORLY",
-      "OUST",
-      "OXY",
-      "PFG",
-      "PH",
-      "PWR",
-      "RTX",
-      "SNAP",
-      "SOFI",
-      "SPOT",
-      "SYM",
-      "TRNO",
-      "TXNM",
-      "UNP",
-      "VG",
-      "WAT",
-      "WPP",
-      "XOM"
+  "verifyMarker": "VERIFIED_US_INTEGRATED_RECOMMENDATIONS_ALL_INPUTS_SAME_CLOSE",
+  "modelVersion": "US_INTEGRATED_V1_20260804",
+  "generatedAt": "2026-08-04T15:51:44+08:00",
+  "dataDate": "2026-08-03",
+  "sourceDates": {
+    "csnSignal": "2026-08-03",
+    "hot": "2026-08-03",
+    "thrust": "2026-08-03",
+    "rotation": "2026-08-03",
+    "skew": "2026-08-03",
+    "software": "2026-08-03",
+    "hardware": "2026-08-03",
+    "usMarket": "2026-08-03",
+    "macroMarket": "2026-08-03"
+  },
+  "weights": {
+    "strengthRotation": 30,
+    "trendEntry": 25,
+    "heatTheme": 15,
+    "volumeStructure": 10,
+    "specialMonitor": 10,
+    "riskReward": 10
+  },
+  "marketGate": {
+    "mode": "neutral",
+    "label": "中性观察",
+    "maxCount": 7,
+    "threshold": 66.0,
+    "reasons": [
+      "科技股偏谨慎：QQQ低于MA50",
+      "黄色警报",
+      "CNN贪恐 45.8 · 中性",
+      "CBOE总Put/Call 0.80"
     ],
-    "thrustPriorityCount": 5,
-    "thrustPriorityTickers": [
-      "ETN",
-      "ONDS",
-      "ANET",
-      "CEG",
-      "CRWD"
+    "marketScore": 8,
+    "aboveMa20Pct": 81.3,
+    "fearGreed": 45.8,
+    "putCall": 0.8,
+    "fiscalStatus": "yellow"
+  },
+  "selectionPolicy": {
+    "targetCount": "5-10; never pad below threshold",
+    "sectorCap": 2,
+    "shareClassDedup": true,
+    "allowedAssetClasses": [
+      "us_etf_standard",
+      "us_stock"
     ],
-    "rotationAccelerationCount": 64,
-    "rotationAccelerationTickers": [
-      "AAOI",
-      "AEHR",
-      "ALAB",
-      "AMAT",
-      "AMD",
-      "ANET",
-      "AOSL",
-      "APLD",
-      "ASML",
-      "BE",
-      "CBRS",
-      "CLSK",
-      "COHR",
-      "CORZ",
-      "CRDO",
-      "CRM",
-      "CRWD",
-      "DDOG",
-      "ELMT",
-      "ENTG",
-      "ETN",
-      "FORM",
-      "FTNT",
-      "GEV",
-      "GFS",
-      "GOOG",
-      "HIVE",
-      "ICHR",
-      "INTC",
-      "IREN",
-      "LITE",
-      "LRCX",
-      "MDB",
-      "MKSI",
-      "MSFT",
-      "NBIS",
-      "NET",
-      "NOK",
-      "NOW",
-      "NVDA",
-      "NVTS",
-      "OKLO",
-      "OKTA",
-      "ONTO",
-      "ORCL",
-      "PANW",
-      "PENG",
-      "POWI",
-      "QNT",
-      "RCAT",
-      "RKLB",
-      "SHAZ",
-      "SMR",
-      "SNDK",
-      "SNOW",
-      "TEAM",
-      "TSEM",
-      "VIAV",
-      "VICR",
-      "WDAY",
-      "WDC",
-      "WOLF",
-      "ZETA",
-      "ZS"
+    "excludedAssetClasses": [
+      "us_etf_inverse",
+      "us_etf_leveraged",
+      "us_etp_other"
     ],
-    "selectedCount": 0,
-    "intersectionCount": 0,
-    "rotationMeta": {
-      "generatedAt": "2026-08-04T09:13:39+08:00",
-      "benchmark": "US.SPY",
-      "status": "OPEN_D_VERIFIED"
+    "xConsensusPolicy": "context_only_not_scored"
+  },
+  "selectionStats": {
+    "universeCount": 688,
+    "scoredCount": 36,
+    "qualifiedBeforeDiversification": 8,
+    "exclusions": {
+      "csnRiskGate": 174,
+      "highRiskProduct": 121,
+      "singleSource": 357,
+      "sectorCap": 2
+    }
+  },
+  "selectedCount": 6,
+  "rows": [
+    {
+      "ticker": "FTNT",
+      "name": "飞塔信息",
+      "assetClass": "us_stock",
+      "sector": "安全平台",
+      "score": 81.1,
+      "factors": {
+        "strengthRotation": 24.2,
+        "trendEntry": 24.4,
+        "heatTheme": 8.1,
+        "volumeStructure": 6.9,
+        "specialMonitor": 9.3,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "HOT",
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "无独立信号",
+      "reasons": [
+        "趋势/位置",
+        "专项监控",
+        "风险收益",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "153.81–158.49",
+      "invalidation": "141.27",
+      "skew": null,
+      "atrPct": 4.29,
+      "distanceEma20": 4.52,
+      "rank": 1,
+      "action": "优先观察"
     },
-    "rows": []
-  }
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "assetClass": "us_stock",
+      "sector": "安全平台",
+      "score": 80.7,
+      "factors": {
+        "strengthRotation": 26.5,
+        "trendEntry": 22.1,
+        "heatTheme": 7.2,
+        "volumeStructure": 7.4,
+        "specialMonitor": 9.3,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
+        "HOT",
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 4,
+      "rotationPhase": "领先加速",
+      "csnCall": "等待确认",
+      "reasons": [
+        "专项监控",
+        "趋势/位置",
+        "相对强度/轮动",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "186.08–191.74",
+      "invalidation": "171.69",
+      "skew": null,
+      "atrPct": 4.53,
+      "distanceEma20": 7.21,
+      "rank": 2,
+      "action": "优先观察"
+    },
+    {
+      "ticker": "ANET",
+      "name": "Arista Networks",
+      "assetClass": "us_stock",
+      "sector": "软硬控制层",
+      "score": 77.1,
+      "factors": {
+        "strengthRotation": 26.8,
+        "trendEntry": 20.0,
+        "heatTheme": 5.2,
+        "volumeStructure": 7.6,
+        "specialMonitor": 9.3,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "持有",
+      "reasons": [
+        "专项监控",
+        "相对强度/轮动",
+        "风险收益",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "170.24–175.42",
+      "invalidation": "156.84",
+      "skew": null,
+      "atrPct": 5.76,
+      "distanceEma20": 6.98,
+      "rank": 3,
+      "action": "等待回踩确认"
+    },
+    {
+      "ticker": "MDB",
+      "name": "MongoDB",
+      "assetClass": "us_stock",
+      "sector": "高弹性数据层",
+      "score": 77.0,
+      "factors": {
+        "strengthRotation": 26.1,
+        "trendEntry": 19.9,
+        "heatTheme": 5.2,
+        "volumeStructure": 8.3,
+        "specialMonitor": 9.3,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "等待确认",
+      "reasons": [
+        "专项监控",
+        "相对强度/轮动",
+        "量价结构",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "322.38–332.20",
+      "invalidation": "291.79",
+      "skew": null,
+      "atrPct": 4.9,
+      "distanceEma20": 9.38,
+      "rank": 4,
+      "action": "等待回踩确认"
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "assetClass": "us_stock",
+      "sector": "软件基础设施",
+      "score": 76.3,
+      "factors": {
+        "strengthRotation": 24.4,
+        "trendEntry": 21.5,
+        "heatTheme": 8.8,
+        "volumeStructure": 5.1,
+        "specialMonitor": 8.3,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
+        "HOT",
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 4,
+      "rotationPhase": "领先加速",
+      "csnCall": "等待确认",
+      "reasons": [
+        "趋势/位置",
+        "专项监控",
+        "风险收益",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "253.49–261.21",
+      "invalidation": "230.55",
+      "skew": null,
+      "atrPct": 4.65,
+      "distanceEma20": 6.31,
+      "rank": 5,
+      "action": "等待回踩确认"
+    },
+    {
+      "ticker": "NET",
+      "name": "Cloudflare",
+      "assetClass": "us_stock",
+      "sector": "软件基础设施",
+      "score": 68.2,
+      "factors": {
+        "strengthRotation": 24.1,
+        "trendEntry": 19.6,
+        "heatTheme": 5.2,
+        "volumeStructure": 2.8,
+        "specialMonitor": 8.3,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "持有",
+      "reasons": [
+        "专项监控",
+        "风险收益",
+        "相对强度/轮动",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "263.91–271.95",
+      "invalidation": "244.87",
+      "skew": null,
+      "atrPct": 5.0,
+      "distanceEma20": 5.53,
+      "rank": 6,
+      "action": "观察"
+    }
+  ]
 }
