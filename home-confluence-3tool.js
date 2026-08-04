@@ -2,7 +2,7 @@
   "use strict";
 
   var SOURCES = {
-    csn: { label: "美股严选", href: "./csn/", tone: "red" },
+    csn: { label: "美股综合优选", href: "./csn/", tone: "red" },
     rs: { label: "RS 强且加速", href: "./rs-thrust/?view=both", tone: "jade" },
     rotation: { label: "轮动领先加速", href: "./rotation/", tone: "gold" }
   };
@@ -64,25 +64,22 @@
 
   function collect(csn, rs, rotation) {
     var map = new Map();
-    var csnVerified = text(csn.verifyStatus).indexOf("OpenD") !== -1;
+    var csnVerified = csn.status === "VERIFIED" &&
+      csn.verifyMarker === "VERIFIED_US_INTEGRATED_RECOMMENDATIONS_ALL_INPUTS_SAME_CLOSE";
     var rsVerified = rs.status === "OPEN_D_VERIFIED";
     var rotationVerified = rotation.status === "OPEN_D_VERIFIED";
 
     if (csnVerified) {
       (csn.rows || [])
-        .filter(function (row) {
-          return row.call === "买入观察" &&
-            row.category === "行动信号" &&
-            text(row.verify).indexOf("OpenD") !== -1;
-        })
+        .filter(function (row) { return isSafeAsset(row); })
         .forEach(function (row) {
           put(
             map,
-            row.code,
+            row.ticker || row.code,
             "csn",
             row,
-            row.last_kline_date,
-            row.action || "买入观察"
+            csn.dataDate,
+            "综合优选 " + number(row.score, 0).toFixed(1) + "分"
           );
         });
     }
@@ -146,7 +143,7 @@
       item.crossModel = Boolean(item.sources.csn && (item.sources.rs || item.sources.rotation));
       item.tactical = isTacticalAsset(item);
       var csnScore = item.sources.csn
-        ? number(item.sources.csn.row.model_default_score || item.sources.csn.row.a6_score, 0)
+        ? number(item.sources.csn.row.score || item.sources.csn.row.model_default_score || item.sources.csn.row.a6_score, 0)
         : 0;
       var rsScore = item.sources.rs
         ? Math.min(100, number(item.sources.rs.row.rsThrustPct, 0))

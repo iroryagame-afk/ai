@@ -1,0 +1,63 @@
+{
+  "version": "A_INTEGRATED_T1_V1_20260804",
+  "status": "VERIFIED",
+  "verifyMarker": "VERIFIED_A_SHARE_INTEGRATED_RECOMMENDATIONS_T1",
+  "doubleVerifyMarker": "DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH",
+  "dataDate": "2026-08-03",
+  "generatedAt": "2026-08-04T16:16:18+08:00",
+  "marketGate": {
+    "mode": "neutral",
+    "label": "存量分化",
+    "threshold": 67.0,
+    "maxCount": 7,
+    "mainNetYi": -420.16,
+    "breadthPct": 68.02,
+    "leadingStyle": "高股息/银行",
+    "leadingGate": "进攻闸门打开"
+  },
+  "weights": {
+    "strengthRotation": 25,
+    "trendPosition": 25,
+    "technicalQuality": 20,
+    "marketStyle": 10,
+    "volumeNews": 10,
+    "t1Executability": 10
+  },
+  "selectionCount": 1,
+  "rows": [
+    {
+      "ticker": "000636",
+      "name": "风华高科",
+      "theme": "MLCC整机/被动元件",
+      "score": 69.1,
+      "factors": {
+        "strengthRotation": 23.1,
+        "trendPosition": 19.0,
+        "technicalQuality": 17.8,
+        "marketStyle": 5.5,
+        "volumeNews": 6.7,
+        "t1Executability": 5.0
+      },
+      "close": 51.96,
+      "dayChangePct": 5.29,
+      "phase": "领先加速",
+      "rsThrust": 83.3,
+      "news": "资本运作(正向)等2条利好",
+      "why": [
+        "RS顶5%",
+        "二阶段偏热",
+        "观察"
+      ],
+      "t1": {
+        "action": "等收盘确认",
+        "zone": "49.62–51.96",
+        "invalidation": 47.8,
+        "flatOpen": "平开或小幅低开：守住观察区且量价不转弱，才考虑观察仓",
+        "highOpen": "明显高开：不追，等待回踩观察区或下一次收盘确认",
+        "lowOpen": "低开跌破失效线：取消当日新开仓计划",
+        "settlement": "T日收盘出信号；T+1才可执行，新买最早T+2卖出"
+      }
+    }
+  ],
+  "boundary": "T日收盘信号，T+1条件执行，新买最早T+2卖出；不构成自动交易指令。"
+}
