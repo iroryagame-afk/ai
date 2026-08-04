@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>mda100 科技精选｜CSNPK</title>
+<title>A股三路共振精选｜CSNPK</title>
 <style>
     :root {
       --ink:#121826; --muted:#607089; --line:#dfe7f2; --navy:#152033;
@@ -1628,143 +1628,8 @@ a { color: var(--accent); }
     @media(max-width:860px){.confluence-head{grid-template-columns:1fr}.confluence-gate{text-align:left}.confluence-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:560px){.confluence-panel{padding:15px}.confluence-counts{grid-template-columns:1fr 1fr}.confluence-counts span:nth-child(2){border-right:0}.confluence-counts span:nth-child(-n+2){border-bottom:1px solid var(--hairline)}.confluence-grid{grid-template-columns:1fr}}
   </style>
-
-<style id="a-share-etf-compare-page">
-    .etf-reference-card {
-      display:grid; grid-template-columns:minmax(0,1fr) auto; gap:22px; align-items:center;
-      margin:0 0 20px; padding:18px 20px; border:1px solid var(--hairline);
-      border-left:4px solid var(--cinnabar); border-radius:12px; background:var(--panel);
-    }
-    .etf-reference-card h3 { margin:4px 0 6px; font-family:var(--serif); font-size:22px; }
-    .etf-reference-card p { margin:0; color:var(--ink-2); }
-    .etf-reference-card a {
-      padding:9px 13px; border:1px solid var(--navy); border-radius:999px;
-      color:var(--navy); font-weight:800; text-decoration:none; white-space:nowrap;
-    }
-    .etf-page { max-width:1480px; margin:0 auto; padding:28px 24px 64px; }
-    .etf-hero { padding:28px 0 22px; border-bottom:1px solid var(--hairline); }
-    .etf-hero h1 { margin:8px 0 10px; font:800 clamp(32px,5vw,58px)/1.05 var(--serif); }
-    .etf-hero p { max-width:78ch; color:var(--ink-2); font-size:16px; }
-    .verify-line { margin-top:14px; color:var(--ink-3); font:700 12px/1.5 var(--mono); }
-    .etf-kpis { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); margin:24px 0; border:1px solid var(--hairline); border-radius:12px; overflow:hidden; }
-    .etf-kpi { padding:18px; background:var(--panel); border-right:1px solid var(--hairline); }
-    .etf-kpi:last-child { border-right:0; }
-    .etf-kpi span { display:block; color:var(--ink-3); font-size:12px; }
-    .etf-kpi strong { display:block; margin-top:7px; font:800 26px/1 var(--serif); }
-    .etf-groups { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; margin:0 0 24px; }
-    .etf-group { padding:14px 16px; border:1px solid var(--hairline); border-radius:10px; background:var(--panel); }
-    .etf-group strong { display:block; font:800 20px/1 var(--serif); }
-    .etf-group span { color:var(--ink-3); font-size:12px; }
-    .etf-controls { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:18px 0 12px; }
-    .etf-controls input { min-width:220px; padding:9px 11px; border:1px solid var(--hairline); border-radius:8px; background:var(--panel); }
-    .etf-controls button { padding:8px 11px; border:1px solid var(--hairline); border-radius:999px; background:var(--panel); cursor:pointer; }
-    .etf-controls button.active { border-color:var(--navy); color:var(--navy); font-weight:800; }
-    .etf-table-wrap { overflow-x:auto; border:1px solid var(--hairline); border-radius:12px; background:var(--panel); }
-    .etf-table { width:100%; min-width:1160px; border-collapse:collapse; }
-    .etf-table th,.etf-table td { padding:11px 10px; border-bottom:1px solid var(--hairline); text-align:right; font-size:13px; }
-    .etf-table th { position:sticky; top:0; z-index:2; background:#f4f0e8; color:var(--ink-2); }
-    .etf-table th.sortable { padding:0; }
-    .etf-sort-button {
-      display:flex; width:100%; min-height:42px; align-items:center; justify-content:flex-end; gap:5px;
-      padding:11px 10px; border:0; background:transparent; color:inherit; font:inherit;
-      cursor:pointer; white-space:nowrap;
-    }
-    .etf-sort-button:hover,.etf-sort-button:focus-visible { background:rgba(23,49,74,.07); color:var(--navy); outline:none; }
-    .etf-sort-indicator { min-width:1em; color:var(--ink-3); font-family:var(--mono); }
-    .etf-table th[aria-sort="ascending"] .etf-sort-button,
-    .etf-table th[aria-sort="descending"] .etf-sort-button { color:var(--navy); font-weight:800; }
-    .etf-table th:first-child,.etf-table td:first-child,.etf-table th:nth-child(2),.etf-table td:nth-child(2) { text-align:left; }
-    .etf-table th:first-child .etf-sort-button,.etf-table th:nth-child(2) .etf-sort-button { justify-content:flex-start; }
-    .etf-table tr:last-child td { border-bottom:0; }
-    .etf-name { font-weight:800; color:var(--ink); }
-    .etf-code { color:var(--ink-3); font:600 11px/1 var(--mono); }
-    .tone-positive { color:var(--cinnabar); } .tone-negative { color:var(--jade); }
-    .state-pill { display:inline-block; padding:4px 8px; border:1px solid var(--hairline); border-radius:999px; white-space:nowrap; }
-    .state-positive { color:var(--cinnabar); border-color:#d9a59b; }
-    .state-watch { color:#8a6200; border-color:#d6bd7f; }
-    .state-negative { color:var(--jade); border-color:#8fb9ae; }
-    .etf-sort-status { margin-left:auto; color:var(--ink-3); font-size:12px; }
-    .method-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:24px; }
-    .method-card { padding:18px; border:1px solid var(--hairline); border-radius:12px; background:var(--panel); }
-    .method-card h2 { margin:0 0 8px; font:800 22px/1.2 var(--serif); }
-    .method-card p,.method-card li { color:var(--ink-2); }
-    @media(max-width:760px) {
-      .etf-page { padding:18px 14px 48px; }
-      .etf-kpis { grid-template-columns:repeat(2,1fr); }
-      .etf-kpi:nth-child(2) { border-right:0; }
-      .etf-kpi:nth-child(-n+2) { border-bottom:1px solid var(--hairline); }
-      .method-grid,.etf-reference-card { grid-template-columns:1fr; }
-      .etf-reference-card a { justify-self:start; }
-    }
-  </style>
-<style id="a-share-research-path-style">
-  .a-share-research-path {
-    --path-paper:var(--paper,#f6f4ee);
-    --path-panel:var(--panel,#fffefa);
-    --path-ink:var(--ink,#1f2430);
-    --path-muted:var(--ink-2,#5f6675);
-    --path-line:var(--hairline,#ded8ca);
-    --path-accent:var(--accent,#173a5e);
-    --path-current:var(--cinnabar,#b5452e);
-    width:min(1280px,calc(100% - 40px));
-    margin:24px auto 0;
-    padding:18px 20px 16px;
-    border:1px solid var(--path-line);
-    border-radius:12px;
-    background:color-mix(in srgb,var(--path-panel) 94%,transparent);
-    color:var(--path-ink);
-    font-family:var(--sans,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif);
-  }
-  .a-share-research-path__head {
-    display:flex; align-items:baseline; justify-content:space-between; gap:16px;
-    margin-bottom:12px;
-  }
-  .a-share-research-path__head strong { font-size:15px; }
-  .a-share-research-path__head span { color:var(--path-muted); font-size:12px; }
-  .a-share-research-path ol {
-    display:grid; grid-template-columns:repeat(5,minmax(0,1fr));
-    gap:0; margin:0; padding:0; list-style:none;
-    border:1px solid var(--path-line); border-radius:9px; overflow:hidden;
-  }
-  .a-share-research-path li { min-width:0; border-right:1px solid var(--path-line); }
-  .a-share-research-path li:last-child { border-right:0; }
-  .a-share-research-path a {
-    display:block; min-height:82px; padding:11px 12px;
-    color:var(--path-ink); background:transparent; text-decoration:none;
-    transition:background-color .16s ease,color .16s ease;
-  }
-  .a-share-research-path a:hover { background:rgba(23,58,94,.055); }
-  .a-share-research-path a:focus-visible { outline:3px solid rgba(181,69,46,.3); outline-offset:-3px; }
-  .a-share-research-path a[aria-current="page"] {
-    background:rgba(181,69,46,.09); box-shadow:inset 0 3px 0 var(--path-current);
-  }
-  .a-share-research-path__number {
-    display:block; margin-bottom:5px; color:var(--path-muted);
-    font:600 10px/1 var(--mono,ui-monospace,monospace); letter-spacing:.08em;
-  }
-  .a-share-research-path a[aria-current="page"] .a-share-research-path__number { color:var(--path-current); }
-  .a-share-research-path a strong { display:block; font-size:13px; line-height:1.35; }
-  .a-share-research-path a small { display:block; margin-top:4px; color:var(--path-muted); font-size:11px; line-height:1.4; }
-  .a-share-research-path__foot {
-    display:flex; align-items:center; justify-content:space-between; gap:16px;
-    margin:11px 1px 0; color:var(--path-muted); font-size:12px;
-  }
-  .a-share-research-path__foot p { margin:0; }
-  .a-share-research-path__next { color:var(--path-accent); font-weight:700; white-space:nowrap; text-decoration:none; }
-  .a-share-research-path__next:hover { text-decoration:underline; text-underline-offset:3px; }
-  @media (max-width:760px) {
-    .a-share-research-path { width:calc(100% - 24px); margin-top:14px; padding:15px 14px; }
-    .a-share-research-path__head { align-items:flex-start; flex-direction:column; gap:2px; }
-    .a-share-research-path ol { display:flex; overflow-x:auto; scroll-snap-type:x proximity; }
-    .a-share-research-path li { flex:0 0 158px; scroll-snap-align:start; }
-    .a-share-research-path__foot { align-items:flex-start; flex-direction:column; gap:5px; }
-  }
-  @media (prefers-reduced-motion:reduce) {
-    .a-share-research-path a { transition:none; }
-  }
-</style>
-</head>
-<body>
+<meta content="DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH" name="csnpk-verification"/></head>
+<body class="mda-confluence-only">
 <style id="csnpk-market-nav-responsive">
 @media (max-width:760px) {
   .csn-topnav .csn-drop {
@@ -1795,7 +1660,7 @@ a { color: var(--accent); }
       <div class="csn-item active" data-group="stocks">
         <button type="button" aria-haspopup="true">股票 <span class="csn-caret">▼</span></button>
         <div class="csn-drop">
-          <a class="current" href="../mda100/" data-key="mda100"><b>A股严选</b><small>科技核心池 · 候选排序 · 次日纪律</small></a>
+          <a class="current" href="../mda100/" data-key="mda100"><b>mda100 三路共振</b><small>Thrust · 轮动雷达 · 大盘观察</small></a>
           <a href="../csn/" data-key="csn"><b>美股严选</b><small>核心池 · OpenD核验 · 精选推荐</small></a>
           <a href="../csn/hot/" data-key="csn-hot"><b>美股热门榜</b><small>全市场热榜 · 板块轮动 · 技术核验</small></a>
         </div>
@@ -1834,7 +1699,6 @@ a { color: var(--accent); }
     </div>
   </div>
 </nav>
-<aside class="a-share-research-path" data-component="a-share-research-path" aria-label="A股研究路径"><div class="a-share-research-path__head"><strong>A股研究路径</strong><span>四段式：市场闸门 → 资金方向（ETF＋Thrust）→ 轮动阶段 → 个股执行 · 同源数据 · 2026-08-03</span></div><ol><li><a href="https://csnpk.com/a-share-market/"><span class="a-share-research-path__number">01</span><strong>A股大盘</strong><small>现在能不能进攻？</small></a></li><li><a href="https://csnpk.com/a-share-market/etf/"><span class="a-share-research-path__number">02</span><strong>ETF资金与波动</strong><small>资金往哪里走？</small></a></li><li><a href="https://csnpk.com/a-share-thrust/"><span class="a-share-research-path__number">03</span><strong>Thrust</strong><small>谁正在变强？</small></a></li><li><a href="https://csnpk.com/a-share-rotation/"><span class="a-share-research-path__number">04</span><strong>轮动雷达</strong><small>强弱处于哪一段？</small></a></li><li><a href="https://csnpk.com/mda100/" aria-current="page"><span class="a-share-research-path__number">05</span><strong>mda100</strong><small>最后看哪些个股？</small></a></li></ol><div class="a-share-research-path__foot"><p>本页只回答：<strong>最后看哪些个股？</strong></p><a class="a-share-research-path__next" href="https://csnpk.com/a-share-market/">推荐下一步：A股大盘 →</a></div></aside>
 <script>
     (() => {
     if (window.location.protocol === "file:") {
@@ -1870,15 +1734,8 @@ a { color: var(--accent); }
     });
     })();
   </script>
-<header class="top">
-<h1>mda100 科技精选</h1>
-<p>聚焦 A 股科技链核心池、候选排序、评分解释与次日纪律；大盘资金和行业轮动移至独立观察页。</p>
-<nav class="nav"><a href="#select">科技精选</a><a href="#fullscores">全量科技池</a><a href="#qveris">新股票初评</a><a href="#algorithm">算法说明</a></nav>
-<div class="verify">二次确认 DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH · Report 2026-08-03 = Index 2026-08-03</div>
-</header>
-<main class="wrap">
 
-<section aria-labelledby="confluenceTitle" class="confluence-panel">
+<main class="wrap"><section aria-labelledby="confluenceTitle" class="confluence-panel" data-verify="DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH">
 <div class="confluence-head">
 <div>
 <span>同日三路验证 · 2026-08-03</span>
@@ -1898,193 +1755,7 @@ a { color: var(--accent); }
 <span><b>66</b>轮动加速池</span>
 </div>
 <div class="confluence-grid"><article class="confluence-card"><header><div><strong>600036</strong><span>招商银行</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 64.0</small></div><p>命中 2/3（领先加速、行业/风格资金支持）；Thrust 83.3；轮动 领先加速；高股息/银行 70.3分/进攻闸门打开；中性；A股执行门槛未通过</p><footer>观察</footer></article><article class="confluence-card"><header><div><strong>600926</strong><span>杭州银行</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 62.6</small></div><p>命中 2/3（领先加速、行业/风格资金支持）；Thrust 80.8；轮动 领先加速；高股息/银行 70.3分/进攻闸门打开；中性；A股执行门槛未通过</p><footer>观察</footer></article><article class="confluence-card"><header><div><strong>002415</strong><span>海康威视</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 56.3</small></div><p>命中 2/3（Thrust优先看、领先加速）；Thrust 105.0；轮动 领先加速；未映射 0.0分/未映射；中性；行业映射待核验</p><footer>等待回踩或次日量价确认</footer></article><article class="confluence-card"><header><div><strong>600900</strong><span>长江电力</span></div><em class="watch">优先观察</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 52.7</small></div><p>命中 2/3（领先加速、行业/风格资金支持）；Thrust 62.5；轮动 领先加速；高股息/银行 70.3分/进攻闸门打开；中性；A股执行门槛未通过</p><footer>观察</footer></article><article class="confluence-card"><header><div><strong>688095</strong><span>福昕软件</span></div><em class="pause">暂停推荐</em></header><div class="confluence-score"><b>2/3</b><small>信号命中 · 共振分 59.4</small></div><p>命中 2/3（Thrust优先看、领先加速）；Thrust 102.5；轮动 领先加速；科技成长 25.8分/防守/降低新增仓位；科技细分资金显著净流出；追涨性价比下降</p><footer>等待回踩或次日量价确认</footer></article></div>
-<details class="confluence-method"><summary>查看评分口径</summary><p>三路信号为：A股 Thrust“优先看”、轮动雷达“领先加速/落后加速”、大盘观察“行业或风格资金支持”；命中至少2路入选。共振分只作排序，并按过热、EMA20、A股执行门槛和资金背离调整；大盘资金撤退时禁止输出买入观察。</p></details>
-</section><section class="etf-reference-card" data-verify="VERIFIED_A_SHARE_ETF_PRICE_SCALE_COMPARE">
-<div>
-<span class="source-kicker">A股选股参考 · ETF价格/份额/市值</span>
-<h3>代表ETF资金与波动确认</h3>
-<p>宽基+39.3%；科技-12.8%；防守-5.8%。资金承接靠前：中证1000ETF（+116.8%份额）、沪深300ETF（+54.3%份额）、有色金属ETF（+4.1%份额）；高波动降级：半导体设备ETF（-33.1%）、半导体ETF（-32.7%）、通信ETF（-25.3%）。</p>
-</div>
-<a href="./etf/">查看完整对比页</a>
-</section><section data-layout="MDA_SELECTION_OVERVIEW_V1" id="select">
-<h2>一、mda100 科技精选</h2>
-<p class="lead">基于 2026-08-03 收盘后 Futu OpenD 已核验行情，按 100 分制筛选次一交易日优先研究和布局的 A 股候选。新版股票池收缩为 md50：只保留 AI 科技链中各细分环节的龙一/龙二，PCB、电子料、光通信按产业链环节拆分，MLCC 仅保留龙一龙二。模型以技术图形、K线和成交量为主；新闻资讯只做排雷、解释和确认，不再把正面新闻作为主要加分项，避免追到已经 price in 的小作文。</p>
-<div class="selection-overview" data-layout="MDA_SELECTION_OVERVIEW_V1">
-<div class="kpis"><div class="kpi"><span>md50核心池</span><strong>50/50</strong></div><div class="kpi"><span>行情覆盖</span><strong>100.0%</strong></div><div class="kpi"><span>上涨/下跌</span><strong>8/42</strong></div><div class="kpi"><span>平均分</span><strong>2.3</strong></div><div class="kpi"><span>95分+</span><strong>0</strong></div><div class="kpi"><span>90分+</span><strong>0</strong></div></div>
-<div class="rec-review negative">
-<div class="rec-review-head">
-<div>
-<h2>昨日推荐回看</h2>
-<p>2026-07-31 推荐 <span>|</span> 2026-08-03 表现</p>
-</div>
-<strong>-10.99%</strong>
-</div>
-<div class="rec-review-metrics">
-<div><b>1</b><span>推荐数</span></div>
-<div><b>-10.99%</b><span>中位数</span></div>
-<div><b>0/1</b><span>胜率</span></div>
-<div><b>0%</b><span>正收益占比</span></div>
-</div>
-<p><b>Top：</b>拓荆科技 -10.99%</p>
-<p><b>Bottom：</b>拓荆科技 -10.99%</p>
-</div>
-</div>
-<div class="note">新闻扫描：news_scan_20260803_164814.json · 2026-08-03T16:48:14 · 已匹配本次复盘全部 103 只股票；逐请求零错误</div>
-<div class="algo-link">
-<div>
-<strong>当前算法说明</strong>
-<span>S形态、结构标签、反人性、多周期温度、排序口径和新闻排雷统一收在本页下方，主入口只保留一个 HTML 和一个 Markdown。</span>
-</div>
-<a href="#algorithm">查看说明</a>
-</div>
-<h3>今日建议买入</h3>
-<div class="pool-focus-block">
-<div class="pool-focus-title">
-<h3>必选池建议买入（最多3只）</h3>
-<p>核心资产容错更高：允许围绕关键支撑、假破位修复和缩量回踩做低吸预案。</p>
-</div>
-<div class="empty-focus">本次没有达到“建议买入”条件的前三候选，高分票先按观察低吸处理。</div>
-</div>
-<div class="pool-focus-block">
-<div class="pool-focus-title">
-<h3>打野池建议买入（最多3只）</h3>
-<p>阶段性机会要求更严：必须右侧确认、量价承接，不做高位追涨。</p>
-</div>
-<div class="empty-focus">本次没有达到“建议买入”条件的前三候选，高分票先按观察低吸处理。</div>
-</div>
-<h3>高分候选池</h3>
-<p class="lead">数量已经收紧，这里只展示高分和 S 形态的候选；更细的条件筛选移到下方全量评分区。</p>
-<div class="candidate-table-wrap">
-<table class="candidate-table">
-<thead>
-<tr><th>股票</th><th>池/垂类</th><th>评分</th><th>层级/多周期温度</th><th>新闻修正 / 关键新闻</th><th>次日操作</th><th>详情</th></tr>
-</thead>
-<tbody id="candidateRows"></tbody>
-</table>
-</div>
-</section>
-<section id="fullscores">
-<h2>二、全量科技池评分</h2>
-<p class="lead">这里展示本次 Futu OpenD 已核验的全量股票池评分。它用于观察强弱和候选扩散，不等同于“建议买入”；真正的交易建议仍以上方 md50 龙一/龙二收敛清单为主。</p><details class="fullscores-disclosure"><summary><span>展开完整评分表与筛选器</span><small>默认收起，可按代码、拼音、评分、形态和动作筛选</small></summary><div class="fullscores-body">
-<div class="lh008-status verified"><strong>A股猎龙者信号：</strong>OpenD同日核验 2026-08-03，覆盖 92.33%；推荐池命中 13 只。 <a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" rel="noopener" target="_blank">打开固定表格</a></div>
-<div class="filter-panel" id="fullScoreFilter">
-<div class="filter-field">
-<label for="fullScoreSearch">快速搜索</label>
-<input autocomplete="off" id="fullScoreSearch" name="fullScoreSearch" placeholder="代码 / 拼音 / 汉字 / 垂类…" type="search"/>
-</div>
-<div class="filter-group">
-<div class="filter-group-title">池子</div>
-<div class="filter-checks">
-<label class="filter-check core"><input data-kind="pool" type="checkbox" value="core"/>必选池</label>
-<label class="filter-check wild"><input data-kind="pool" type="checkbox" value="wild"/>打野池</label>
-</div>
-</div>
-<div class="filter-group">
-<div class="filter-group-title">评分 / 形态</div>
-<div class="filter-checks">
-<label class="filter-check score95"><input data-kind="score" type="checkbox" value="95"/>95+</label>
-<label class="filter-check score90"><input data-kind="score" type="checkbox" value="90"/>90+</label>
-<label class="filter-check score85"><input data-kind="score" type="checkbox" value="85"/>85+</label>
-<label class="filter-check setup"><input data-kind="special" type="checkbox" value="S"/>S形态</label>
-</div>
-</div>
-<div class="filter-group">
-<div class="filter-group-title">操作</div>
-<div class="filter-checks">
-<label class="filter-check buy"><input data-kind="action" type="checkbox" value="buy"/>买入</label>
-<label class="filter-check watch"><input data-kind="action" type="checkbox" value="watch"/>观察</label>
-<label class="filter-check sell"><input data-kind="action" type="checkbox" value="sell"/>卖出</label>
-</div>
-</div>
-<div class="filter-group">
-<div class="filter-group-title">A股猎龙者</div>
-<div class="filter-checks">
-<label class="filter-check lh-opportunity"><input data-kind="lh008" type="checkbox" value="opportunity"/>机会</label>
-<label class="filter-check lh-risk"><input data-kind="lh008" type="checkbox" value="risk"/>风险</label>
-</div>
-</div>
-<div class="filter-count" id="fullScoreCount">显示 0 / 0</div>
-</div>
-<div class="candidate-table-wrap">
-<table class="full-score-table">
-<thead><tr><th>排名</th><th>股票</th><th>主题</th><th>技术档</th><th>100分</th><th>涨跌</th><th>多周期温度</th><th>新闻修正 / 关键新闻</th><th>观察动作</th></tr></thead>
-<tbody id="fullScoreRows"><tr data-action="sell" data-lh008="none" data-pool="wild" data-score="0" data-search="通信etf国泰 515880 tongxinguotai txgt 打野池 其他/待归类 / 其他 其他/待归类 其他 破位观望 破位 200日线下 a6弱 rs偏弱 利好 +1.5；资本运作(正向)等16条利好；机构看好/调入指数 无明显买点" data-special="0"><td>1</td><td class="stock"><strong>通信ETF国泰</strong><code>515880</code></td><td><span class="pool-badge wild" title="打野池">野</span> 其他/待归类 / 其他<div class="subtle">其他/待归类</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill up">0.0%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -13.4% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-0.4% / 10:-7.3% / 20:-15.0% / 55:-19.3% / 200:-7.5%</div></td><td>利好 +1.5；资本运作(正向)等16条利好；机构看好/调入指数</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr>
-<tr data-action="sell" data-lh008="none" data-pool="wild" data-score="0" data-search="半导体设备etf国泰 159516 bandaotishebeiguotai bdtsbgt 打野池 前道半导体设备 / 半导体设备 前道半导体设备 半导体设备 破位观望 破位 二阶段预警-跌破55 a6弱 rs偏强 利好 +1.5；资本运作(正向)等16条利好；资本运作(正向) / 机构看好/调入指数 无明显买点" data-special="0"><td>2</td><td class="stock"><strong>半导体设备ETF国泰</strong><code>159516</code></td><td><span class="pool-badge wild" title="打野池">野</span> 前道半导体设备 / 半导体设备<div class="subtle">前道半导体设备</div></td><td><span class="score score-1">1</span></td><td><span class="score100 weak">0</span><div class="subtle">技术 14</div></td><td><span class="pill down">-9.7%</span></td><td><span class="bias-badge weak" title="20EMA乖离&lt;-5%，趋势转弱，除非出现强反人性修复。">20乖 -17.7% · 破位</span><div class="subtle temp-summary">E5/10/20/55/200：5:-9.7% / 10:-14.2% / 20:-21.0% / 55:-15.3% / 200:+9.7%</div></td><td>利好 +1.5；资本运作(正向)等16条利好；资本运作(正向) / 机构看好/调入指数</td><td>暂不优先<div class="subtle">无明显买点</div></td></tr></tbody>
-</table>
-</div></div></details>
-</section>
-<section id="algorithm">
-<h2>三、当前算法说明</h2>
-<p class="lead">这部分只保留稳定口径：先看全市场资金闸门，再看个股图形、S形态、量价确认、反人性修复和新闻排雷；新闻不替代买点。</p>
-<div class="setup-grid">
-<article class="setup-card">
-<div class="s-tag">S-平台突破</div>
-<h3>长期放量横盘后放量突破</h3>
-<p>长期横盘积累换手，放量突破平台上沿，代表筹码完成再分配，可能进入主升浪。</p>
-<small>来源：10192025真正的干货：实战中我最喜欢的setup 1.md</small>
-</article>
-<article class="setup-card">
-<div class="s-tag">S-缺口支撑</div>
-<h3>重大利好跳空后回踩缺口不破</h3>
-<p>基本面再定价形成缺口，回踩缺口上下沿不破，支撑强度通常高于普通均线。</p>
-<small>来源：10192025真正的干货：实战中我最喜欢的setup 1.md</small>
-</article>
-</div>
-<div class="workflow">
-<div class="step"><h3>排序口径</h3><p>最终分 &gt; S标记 &gt; 反人性/错杀修复 &gt; 二阶段健康度 &gt; 动态RS &gt; 技术分 &gt; 追高风险 &gt; 新闻排雷。</p></div>
-<div class="step"><h3>资金闸门</h3><p>先判断科技成长、周期资源、高股息防守、消费医药等风格谁在吸金，再决定候选池进攻性。</p></div>
-<div class="step"><h3>交易边界</h3><p>强票也必须服从买点、支撑位、成交量和风控位；未完成新闻核验时必须明确标注。</p></div>
-</div>
-</section>
-<section id="qveris">
-<h2>四、新股票 / qveris 初评入口</h2>
-<div class="workflow">
-<div class="step"><h3>1. 输入</h3><p>你给股票截图、代码或一段自媒体线索。系统先识别股票和所属细分赛道。</p></div>
-<div class="step"><h3>2. qveris 初评</h3><p>按 discover → inspect → call 顺序调用能力，先看公司业务、新闻事件、同赛道对手和初步风险。</p></div>
-<div class="step"><h3>3. 纳入模型</h3><p>通过初评的股票进入 md50 候选扩展区，只有成为细分环节龙一/龙二后才进入正式 md50 核心池。</p></div>
-</div>
-</section>
-</main>
-<script>
-    (() => {
-      const normalize = (value) => String(value || "").trim().toLowerCase();
-      function initFilter(panelId, searchId, rowSelector, countId) {
-        const panel = document.getElementById(panelId);
-        const search = document.getElementById(searchId);
-        const rows = Array.from(document.querySelectorAll(rowSelector));
-        const checks = panel ? Array.from(panel.querySelectorAll("input[type='checkbox']")) : [];
-        const count = document.getElementById(countId);
-        function applyFilter() {
-        const query = normalize(search && search.value);
-        const selectedScores = new Set(checks.filter((item) => item.checked && item.dataset.kind === "score").map((item) => item.value));
-        const selectedPools = new Set(checks.filter((item) => item.checked && item.dataset.kind === "pool").map((item) => item.value));
-        const selectedActions = new Set(checks.filter((item) => item.checked && item.dataset.kind === "action").map((item) => item.value));
-        const selectedLH008 = new Set(checks.filter((item) => item.checked && item.dataset.kind === "lh008").map((item) => item.value));
-        const needSpecial = checks.some((item) => item.checked && item.dataset.kind === "special");
-        let visible = 0;
-        rows.forEach((row) => {
-          const rowScore = Number(row.dataset.score || "0");
-          const scoreOk = !selectedScores.size || Array.from(selectedScores).some((score) => rowScore >= Number(score));
-          const poolOk = !selectedPools.size || selectedPools.has(row.dataset.pool);
-          const actionOk = !selectedActions.size || selectedActions.has(row.dataset.action);
-          const lh008Side = row.dataset.lh008 || "none";
-          const lh008Ok = !selectedLH008.size
-            || selectedLH008.has(lh008Side)
-            || (lh008Side === "both" && (selectedLH008.has("opportunity") || selectedLH008.has("risk")));
-          const specialOk = !needSpecial || row.dataset.special === "1";
-          const queryOk = !query || normalize(row.dataset.search).includes(query);
-          const ok = scoreOk && poolOk && actionOk && lh008Ok && specialOk && queryOk;
-          row.style.display = ok ? "" : "none";
-          if (ok) visible += 1;
-        });
-        if (count) count.textContent = `显示 ${visible} / ${rows.length}`;
-      }
-        if (search) search.addEventListener("input", applyFilter);
-        checks.forEach((item) => item.addEventListener("change", applyFilter));
-        applyFilter();
-      }
-      initFilter("fullScoreFilter", "fullScoreSearch", "#fullScoreRows tr", "fullScoreCount");
-    })();
-  </script>
+</section></main>
+
 </body>
 </html>
