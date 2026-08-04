@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CSNPK 富途自编指标工具箱：缠论 V19、自动压力线、MACD 底背离、BIAS20/60 和 KDJ VOL。">
+  <meta property="og:title" content="富途自编指标工具箱 | CSNPK">
+  <meta property="og:description" content="五个原版指标代码、安装说明与视觉效果示意。">
+  <meta property="og:image" content="https://csnpk.com/futu-indicators/preview.png">
+  <title>富途自编指标工具箱 | CSNPK</title>
+  <style>
+    :root {
+      --paper:#f4efe4; --paper-2:#ebe2d2; --ink:#17243a; --muted:#6d6a61;
+      --navy:#132b4f; --red:#a6382b; --gold:#b78a3a; --green:#2f7b62;
+      --cyan:#1596aa; --magenta:#ad4b91; --line:rgba(23,36,58,.16);
+      --shadow:0 16px 40px rgba(35,30,22,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(135deg,var(--paper),#f8f4ec 52%,var(--paper-2));color:var(--ink);font-family:"Songti SC","STSong","Noto Serif SC",serif;line-height:1.65}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;background-image:radial-gradient(rgba(23,36,58,.16) .45px,transparent .45px);background-size:5px 5px}
+    a{color:inherit}
+    .wrap{position:relative;width:min(1380px,calc(100% - 36px));margin:auto}
+    header{padding:22px 0;border-bottom:1px solid var(--line);background:rgba(244,239,228,.82);backdrop-filter:blur(16px);position:sticky;top:0;z-index:20}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;letter-spacing:.12em;color:var(--navy)}
+    .brand span{color:var(--red)}
+    nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    nav a{text-decoration:none;padding:7px 12px;border-radius:999px;color:var(--muted);font:600 13px/1.2 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    nav a:hover{background:rgba(19,43,79,.08);color:var(--navy)}
+    .hero{padding:82px 0 54px;display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--red);font:700 12px/1 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;letter-spacing:.16em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:30px;height:2px;background:var(--red)}
+    h1{font-size:clamp(42px,6vw,76px);line-height:1.03;margin:20px 0 24px;letter-spacing:-.04em;color:var(--navy)}
+    h1 em{font-style:normal;color:var(--red)}
+    .lead{font-size:18px;color:#4e4d48;max-width:720px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;padding:12px 18px;border-radius:6px;font:700 14px/1 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;border:1px solid var(--navy)}
+    .btn.primary{background:var(--navy);color:#fff}.btn.secondary{background:rgba(255,255,255,.42)}
+    .hero-board{background:rgba(255,255,255,.52);border:1px solid var(--line);box-shadow:var(--shadow);padding:22px;border-radius:12px;transform:rotate(1deg)}
+    .hero-board svg{display:block;width:100%;height:auto}
+    .caption{margin-top:10px;color:var(--muted);font:12px/1.5 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    .section{padding:62px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:28px}
+    h2{font-size:34px;line-height:1.15;margin:0;color:var(--navy);letter-spacing:-.02em}
+    .section-head p{margin:0;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .card{background:rgba(255,255,255,.54);border:1px solid var(--line);box-shadow:0 10px 30px rgba(35,30,22,.07);border-radius:10px;overflow:hidden}
+    .card.wide{grid-column:1/-1}
+    .card-body{padding:24px}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+    .tag{padding:5px 9px;border-radius:999px;background:rgba(19,43,79,.08);color:var(--navy);font:700 11px/1 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    .tag.main{background:rgba(166,56,43,.10);color:var(--red)}
+    .tag.sub{background:rgba(47,123,98,.11);color:var(--green)}
+    h3{font-size:24px;line-height:1.2;margin:0 0 8px;color:var(--navy)}
+    .desc{margin:0;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    .chart{margin:20px 0 18px;border:1px solid rgba(23,36,58,.14);background:#101928;border-radius:8px;overflow:hidden}
+    .chart svg{display:block;width:100%;height:auto}
+    .download{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:16px}
+    .download small{color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    .download a{text-decoration:none;color:var(--red);font:800 13px/1 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    .install{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;align-items:start;background:var(--navy);color:#fff;border-radius:12px;padding:34px;box-shadow:var(--shadow)}
+    .install h2{color:#fff}.install p{color:#d8dfeb}
+    .steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .step{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);padding:16px;border-radius:8px;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    .step b{display:block;color:#e5c272;margin-bottom:4px}
+    .notice{margin-top:22px;padding:16px 18px;border-left:4px solid var(--gold);background:rgba(183,138,58,.10);color:#595348;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    footer{padding:34px 0 54px;border-top:1px solid var(--line);color:var(--muted);font:13px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    @media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:54px}.hero-board{transform:none}.grid{grid-template-columns:1fr}.install{grid-template-columns:1fr}.topbar{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start;flex-direction:column}.steps{grid-template-columns:1fr}.wrap{width:min(100% - 24px,1380px)}h1{font-size:44px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <div class="brand">CSN<span>PK</span> · 指标工具箱</div>
+      <nav aria-label="页内导航">
+        <a href="#main">主图</a><a href="#sub">副图</a><a href="#install">安装</a><a href="/nav/">投研导航</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <div class="eyebrow">Futu Custom Indicators</div>
+        <h1>把图表变成<br><em>决策界面</em></h1>
+        <p class="lead">五个富途自编指标的原版代码与安装说明：缠论结构、自动压力线、MACD 底背离、BIAS20/60 拥挤度和 KDJ VOL 量价动能。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="downloads/00_富途五个指标_安装说明.txt" download>下载安装说明</a>
+          <a class="btn secondary" href="#main">查看效果示意</a>
+        </div>
+      </div>
+      <div class="hero-board" aria-label="缠论与压力线视觉示意">
+        <svg viewBox="0 0 720 450" role="img">
+          <defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1e3455"/><stop offset="1" stop-color="#101928"/></linearGradient></defs>
+          <rect width="720" height="450" rx="10" fill="url(#fade)"/>
+          <g stroke="#fff" opacity=".08"><path d="M0 90H720M0 180H720M0 270H720M0 360H720"/><path d="M120 0V450M240 0V450M360 0V450M480 0V450M600 0V450"/></g>
+          <g stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M42 340L112 268L176 302L248 202L322 238L405 128L482 180L560 92L664 126" stroke="#f04d43"/><path d="M42 340L112 268M176 302L248 202M322 238L405 128M482 180L560 92" stroke="#39d98a"/></g>
+          <rect x="238" y="192" width="176" height="56" fill="#ef67bc" opacity=".24" stroke="#ef67bc" stroke-width="2"/>
+          <path d="M270 112L650 68" stroke="#ff5b52" stroke-width="4" stroke-dasharray="12 8"/>
+          <path d="M250 334L650 236" stroke="#39d98a" stroke-width="4" stroke-dasharray="12 8"/>
+          <g font-family="-apple-system,PingFang SC,sans-serif" font-size="16" font-weight="700"><text x="585" y="58" fill="#ff7770">下降压力</text><text x="560" y="258" fill="#52e3a2">上升支撑</text><text x="295" y="226" fill="#ffd2ee">三笔中枢</text></g>
+        </svg>
+        <div class="caption">视觉示意：图中价格与信号为模拟绘制，不是实时行情、历史回测或交易建议。</div>
+      </div>
+    </section>
+
+    <section class="section" id="main">
+      <div class="wrap">
+        <div class="section-head"><h2>主图结构工具</h2><p>Python 与 Mai Language 需分别创建，不可混贴。</p></div>
+        <div class="grid">
+          <article class="card">
+            <div class="card-body">
+              <div class="meta"><span class="tag main">主图</span><span class="tag">Python</span><span class="tag">CLCUR</span></div>
+              <h3>缠论当前周期 V19</h3>
+              <p class="desc">去包含K线、已确认笔、三笔重叠中枢与候选观察点。</p>
+              <div class="chart"><svg viewBox="0 0 640 260"><rect width="640" height="260" fill="#111b2c"/><g stroke="#fff" opacity=".07"><path d="M0 65H640M0 130H640M0 195H640"/></g><path d="M28 210L92 148L150 176L218 92L282 136L354 64L428 110L500 42L606 84" fill="none" stroke="#ff5b52" stroke-width="4"/><path d="M92 148L150 176M218 92L282 136M354 64L428 110" fill="none" stroke="#52e3a2" stroke-width="4"/><rect x="205" y="94" width="158" height="48" fill="#ea66b9" opacity=".23" stroke="#ea66b9"/></svg></div>
+              <div class="download"><small>544 行 · 原版 TXT</small><a href="downloads/01_主图_缠论_CLCUR_V19_原版.txt" download>下载代码 ↓</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <div class="meta"><span class="tag main">主图</span><span class="tag">Mai Language</span><span class="tag">FTTL1</span></div>
+              <h3>自动压力线与形态</h3>
+              <p class="desc">根据已确认摆动高低点生成下降压力、上升支撑与基础形态候选。</p>
+              <div class="chart"><svg viewBox="0 0 640 260"><rect width="640" height="260" fill="#111b2c"/><g fill="none" stroke-linecap="round"><path d="M38 86L596 142" stroke="#ff5b52" stroke-width="4"/><path d="M52 220L596 150" stroke="#52e3a2" stroke-width="4"/><path d="M42 170L96 118L142 156L198 110L246 138L300 100L354 130L410 112L462 142L520 126L588 148" stroke="#dfe9f5" stroke-width="3"/></g><text x="438" y="82" fill="#ff7770" font-family="sans-serif" font-size="15">DOWN_RES</text><text x="420" y="212" fill="#52e3a2" font-family="sans-serif" font-size="15">UP_SUP</text></svg></div>
+              <div class="download"><small>67 行 · 原版 TXT</small><a href="downloads/02_主图_自动压力线_FTTL1_原版.txt" download>下载代码 ↓</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sub">
+      <div class="wrap">
+        <div class="section-head"><h2>副图动能与拥挤度</h2><p>默认优先按日K使用，分钟周期需重新理解参数。</p></div>
+        <div class="grid">
+          <article class="card">
+            <div class="card-body">
+              <div class="meta"><span class="tag sub">副图</span><span class="tag">Mai Language</span><span class="tag">MACDBD</span></div>
+              <h3>MACD 底背离高亮</h3>
+              <p class="desc">四色动能柱与零轴下底背离观察信号。</p>
+              <div class="chart"><svg viewBox="0 0 640 260"><rect width="640" height="260" fill="#111b2c"/><path d="M0 130H640" stroke="#7b8797"/><g><path d="M36 130V170M64 130V190M92 130V210M120 130V196M148 130V178M176 130V162" stroke="#30d5c8" stroke-width="15"/><path d="M210 130V112M238 130V92M266 130V76M294 130V88" stroke="#ff5b52" stroke-width="15"/><path d="M330 130V168M358 130V184M386 130V174M414 130V156" stroke="#30d5c8" stroke-width="15"/></g><path d="M25 146C100 205 150 174 204 126S320 70 392 138S515 150 610 88" fill="none" stroke="#f5c84c" stroke-width="3"/><path d="M25 151C108 183 154 166 210 130S325 96 394 142S522 132 610 105" fill="none" stroke="#32c3d6" stroke-width="3"/><circle cx="386" cy="174" r="12" fill="none" stroke="#ec4bc2" stroke-width="4"/><text x="406" y="210" fill="#f7df69" font-family="sans-serif" font-size="15">底背离</text></svg></div>
+              <div class="download"><small>26 行 · 原版 TXT</small><a href="downloads/03_副图_MACD底背离_富途高亮版_v1_原版.txt" download>下载代码 ↓</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <div class="meta"><span class="tag sub">副图</span><span class="tag">Mai Language</span><span class="tag">BIAS2060</span></div>
+              <h3>BIAS20/60 五档冷暖</h3>
+              <p class="desc">以 -8/-5/10/15/20 标记极冷、冷、警戒、过热和极热。</p>
+              <div class="chart"><svg viewBox="0 0 640 260"><rect width="640" height="260" fill="#111b2c"/><g stroke-dasharray="6 7"><path d="M0 52H640" stroke="#db4cc8"/><path d="M0 82H640" stroke="#ff5b52"/><path d="M0 112H640" stroke="#e8c64e"/><path d="M0 202H640" stroke="#30d5c8"/></g><path d="M10 192C78 212 112 160 164 176S248 78 302 104S382 32 434 58S525 126 630 72" fill="none" stroke="#20bce2" stroke-width="4"/><path d="M10 205C90 198 128 182 190 188S278 142 334 151S430 101 492 110S570 92 630 100" fill="none" stroke="#ff6b6b" stroke-width="4"/></svg></div>
+              <div class="download"><small>30 行 · 原版 TXT</small><a href="downloads/04_副图_BIAS2060_五档冷暖逃顶指标_原版.txt" download>下载代码 ↓</a></div>
+            </div>
+          </article>
+          <article class="card wide">
+            <div class="card-body">
+              <div class="meta"><span class="tag sub">副图</span><span class="tag">Mai Language</span><span class="tag">KDJVOL</span></div>
+              <h3>KDJ VOL V3.1 · B/S 高对比</h3>
+              <p class="desc">将 KDJ 位置、量价资金代理与动能修复压缩为 B?/B/S?/S 四类观察标记。</p>
+              <div class="chart"><svg viewBox="0 0 1180 270"><rect width="1180" height="270" fill="#111b2c"/><path d="M0 138H1180" stroke="#6e7d90" stroke-dasharray="5 6"/><g stroke-width="18"><path d="M40 138V210M72 138V230M104 138V196M136 138V174" stroke="#30d5c8"/><path d="M168 138V182M200 138V158" stroke="#fff"/><path d="M232 138V116M264 138V92M296 138V70M328 138V84" stroke="#ff5b52"/><path d="M390 138V102M422 138V76M454 138V96" stroke="#ff5b52"/><path d="M516 138V164M548 138V190M580 138V206" stroke="#30d5c8"/><path d="M642 138V176M674 138V152" stroke="#fff"/><path d="M706 138V110M738 138V82M770 138V66" stroke="#ff5b52"/><path d="M832 138V94M864 138V112M896 138V150M928 138V184" stroke="#30d5c8"/><path d="M990 138V174M1022 138V150M1054 138V124M1086 138V98" stroke="#fff"/></g><g font-family="sans-serif" font-size="18" font-weight="700"><text x="116" y="244" fill="#fff">[B?]</text><text x="276" y="48" fill="#f7df69">[B]</text><text x="748" y="46" fill="#ef67bc">[S?]</text><text x="920" y="224" fill="#37d8e5">[S]</text></g><path d="M20 172C112 208 174 164 252 102S390 60 472 116S628 216 720 112S884 74 972 154S1080 116 1160 84" fill="none" stroke="#f5c84c" stroke-width="4"/></svg></div>
+              <div class="download"><small>95 行 · 原版 TXT</small><a href="downloads/05_副图_KDJ_VOL_V3.1_BS高对比版_原版.txt" download>下载代码 ↓</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="install">
+      <div class="wrap">
+        <div class="install">
+          <div><h2>安装只需四步</h2><p>使用富途牛牛桌面端。CLCUR 选 Python，其余四个选 Mai Language。</p><a class="btn secondary" style="color:#fff;border-color:#fff" href="downloads/00_富途五个指标_安装说明.txt" download>下载完整说明</a></div>
+          <div class="steps"><div class="step"><b>01 · 打开K线</b>富途桌面端进入任意标的K线。</div><div class="step"><b>02 · 新建指标</b>指标管理中选择主图或副图。</div><div class="step"><b>03 · 选对语言</b>Python 与 Mai Language 不可混用。</div><div class="step"><b>04 · 测试后保存</b>粘贴全文，通过“测试指标”后应用。</div></div>
+        </div>
+        <div class="notice"><strong>重要：</strong>页面示意图只解释视觉语义，不代表信号稳定性、历史胜率或未来收益。指标不会自动下单，也不构成投资建议。</div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">CSNPK · 富途自编指标工具箱<br>代码仅供研究、图表观察与人工决策复核。</div></footer>
+</body>
+</html>

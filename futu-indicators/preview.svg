@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4efe4"/><stop offset=".55" stop-color="#faf7f0"/><stop offset="1" stop-color="#e9decb"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1d3455"/><stop offset="1" stop-color="#101928"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#382f22" flood-opacity=".15"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#paper)"/>
+  <rect x="0" y="0" width="1600" height="76" fill="#f4efe4" opacity=".95"/>
+  <path d="M0 76H1600" stroke="#17243a" opacity=".15"/>
+  <text x="90" y="49" font-family="Songti SC,STSong,serif" font-size="25" font-weight="700" fill="#132b4f" letter-spacing="3">CSN<tspan fill="#a6382b">PK</tspan> · 指标工具箱</text>
+  <g font-family="PingFang SC,sans-serif" font-size="16" fill="#6d6a61"><text x="1260" y="48">主图</text><text x="1330" y="48">副图</text><text x="1400" y="48">安装</text></g>
+
+  <g transform="translate(90 148)">
+    <path d="M0 0H32" stroke="#a6382b" stroke-width="3"/><text x="44" y="6" font-family="PingFang SC,sans-serif" font-size="15" font-weight="700" fill="#a6382b" letter-spacing="3">FUTU CUSTOM INDICATORS</text>
+    <text x="0" y="92" font-family="Songti SC,STSong,serif" font-size="70" font-weight="800" fill="#132b4f">把图表变成</text>
+    <text x="0" y="170" font-family="Songti SC,STSong,serif" font-size="70" font-weight="800" fill="#a6382b">决策界面</text>
+    <text x="0" y="224" font-family="PingFang SC,sans-serif" font-size="22" fill="#56524b">缠论结构 · 自动压力线 · MACD底背离 · BIAS20/60 · KDJ VOL</text>
+    <rect x="0" y="258" width="220" height="50" rx="7" fill="#132b4f"/><text x="32" y="291" font-family="PingFang SC,sans-serif" font-size="17" font-weight="700" fill="#fff">下载安装说明</text>
+  </g>
+
+  <g transform="translate(870 116)" filter="url(#shadow)">
+    <rect width="640" height="390" rx="14" fill="#ffffff" opacity=".68" stroke="#17243a" stroke-opacity=".18"/>
+    <g transform="translate(24 24)">
+      <rect width="592" height="308" rx="10" fill="url(#screen)"/>
+      <g stroke="#fff" opacity=".08"><path d="M0 77H592M0 154H592M0 231H592"/><path d="M118 0V308M236 0V308M354 0V308M472 0V308"/></g>
+      <path d="M28 250L90 186L146 214L208 130L270 166L340 82L406 124L476 52L558 90" fill="none" stroke="#f04d43" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M28 250L90 186M146 214L208 130M270 166L340 82M406 124L476 52" fill="none" stroke="#39d98a" stroke-width="5"/>
+      <rect x="196" y="124" width="152" height="52" fill="#ef67bc" opacity=".25" stroke="#ef67bc" stroke-width="2"/>
+      <path d="M230 78L556 44" stroke="#ff5b52" stroke-width="4" stroke-dasharray="11 8"/>
+      <path d="M212 248L556 184" stroke="#39d98a" stroke-width="4" stroke-dasharray="11 8"/>
+      <g font-family="PingFang SC,sans-serif" font-size="14" font-weight="700"><text x="480" y="32" fill="#ff7770">下降压力</text><text x="458" y="208" fill="#52e3a2">上升支撑</text><text x="238" y="156" fill="#ffd2ee">三笔中枢</text></g>
+    </g>
+    <text x="24" y="364" font-family="PingFang SC,sans-serif" font-size="14" fill="#6d6a61">视觉示意 · 非实时行情/非回测</text>
+  </g>
+
+  <g transform="translate(90 560)" font-family="PingFang SC,sans-serif">
+    <g filter="url(#shadow)"><rect width="445" height="300" rx="12" fill="#fff" opacity=".70" stroke="#17243a" stroke-opacity=".15"/><rect x="24" y="24" width="72" height="28" rx="14" fill="#a6382b" opacity=".12"/><text x="43" y="44" font-size="13" font-weight="700" fill="#a6382b">主图</text><text x="24" y="92" font-family="Songti SC,STSong,serif" font-size="28" font-weight="700" fill="#132b4f">缠论 V19</text><rect x="24" y="116" width="397" height="142" rx="8" fill="#111b2c"/><path d="M46 228L100 176L150 198L202 146L254 166L306 126L360 148L400 98" fill="none" stroke="#ff5b52" stroke-width="4"/><rect x="190" y="140" width="120" height="34" fill="#ea66b9" opacity=".25"/></g>
+    <g transform="translate(475 0)" filter="url(#shadow)"><rect width="445" height="300" rx="12" fill="#fff" opacity=".70" stroke="#17243a" stroke-opacity=".15"/><rect x="24" y="24" width="72" height="28" rx="14" fill="#2f7b62" opacity=".13"/><text x="43" y="44" font-size="13" font-weight="700" fill="#2f7b62">副图</text><text x="24" y="92" font-family="Songti SC,STSong,serif" font-size="28" font-weight="700" fill="#132b4f">MACD 底背离</text><rect x="24" y="116" width="397" height="142" rx="8" fill="#111b2c"/><path d="M24 188H421" stroke="#7b8797"/><g stroke="#30d5c8" stroke-width="13"><path d="M62 188V224M88 188V238M114 188V218M140 188V204"/></g><g stroke="#ff5b52" stroke-width="13"><path d="M180 188V166M206 188V150M232 188V140"/></g><path d="M42 200C112 232 160 184 214 156S310 222 404 148" fill="none" stroke="#f5c84c" stroke-width="3"/><circle cx="346" cy="190" r="10" fill="none" stroke="#ec4bc2" stroke-width="4"/></g>
+    <g transform="translate(950 0)" filter="url(#shadow)"><rect width="445" height="300" rx="12" fill="#fff" opacity=".70" stroke="#17243a" stroke-opacity=".15"/><rect x="24" y="24" width="72" height="28" rx="14" fill="#2f7b62" opacity=".13"/><text x="43" y="44" font-size="13" font-weight="700" fill="#2f7b62">副图</text><text x="24" y="92" font-family="Songti SC,STSong,serif" font-size="28" font-weight="700" fill="#132b4f">BIAS20/60</text><rect x="24" y="116" width="397" height="142" rx="8" fill="#111b2c"/><g stroke-dasharray="5 6"><path d="M24 146H421" stroke="#db4cc8"/><path d="M24 166H421" stroke="#ff5b52"/><path d="M24 188H421" stroke="#e8c64e"/></g><path d="M34 232C90 246 126 194 172 208S246 148 292 168S358 130 410 148" fill="none" stroke="#20bce2" stroke-width="4"/><path d="M34 242C110 234 164 222 218 226S304 196 410 204" fill="none" stroke="#ff6b6b" stroke-width="4"/></g>
+  </g>
+
+  <text x="90" y="940" font-family="PingFang SC,sans-serif" font-size="16" fill="#6d6a61">页面效果示意 · 所有图形为模拟绘制，不代表实时信号、历史胜率或交易建议。</text>
+</svg>
