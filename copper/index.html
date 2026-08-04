@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="铜产业投资决策看板：关税、TC、AI资本开支、衰退路径与股票优先级。" />
+  <title>铜｜投资决策看板</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f1e8;
+      --panel: #fffdf8;
+      --panel-2: #faf7f0;
+      --line: #ddd5c6;
+      --text: #202632;
+      --muted: #727986;
+      --copper: #ad422f;
+      --copper-2: #94702b;
+      --green: #35694f;
+      --red: #ad422f;
+      --yellow: #94702b;
+      --blue: #173a5e;
+      --radius: 18px;
+      --shadow: 0 12px 36px rgba(45,38,28,.075);
+      --serif: "Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 82% 3%, rgba(148,112,43,.08), transparent 31rem), var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+    button { font: inherit; }
+
+    .shell { width: min(1180px, calc(100% - 36px)); margin: 0 auto; }
+    .topbar {
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20;
+      background: rgba(245,241,232,.93); backdrop-filter: blur(12px);
+    }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 760; letter-spacing: .02em; }
+    .brand-mark {
+      width: 28px; height: 28px; border-radius: 7px;
+      background: var(--copper);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.28);
+      position: relative;
+    }
+    .brand-mark::after { content: "铜"; position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font: 700 13px var(--serif); }
+    .asof { color: var(--muted); font-size: 13px; }
+    .back { color: var(--muted); text-decoration: none; font-size: 13px; }
+    .back:hover { color: var(--copper); }
+
+    .hero { padding: 74px 0 38px; display: grid; grid-template-columns: 1.45fr .7fr; gap: 34px; align-items: end; }
+    .eyebrow { color: var(--copper-2); font-weight: 760; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { margin: 13px 0 18px; font: 800 clamp(44px, 7.3vw, 82px)/1.02 var(--serif); letter-spacing: -.045em; }
+    h1 span { color: var(--copper); }
+    .lead { max-width: 790px; margin: 0; color: #4e5562; font-size: clamp(17px, 2vw, 21px); line-height: 1.7; }
+    .hero-rule { border-left: 1px solid var(--line); padding-left: 28px; }
+    .hero-rule .label { color: var(--muted); font-size: 13px; }
+    .hero-rule .answer { margin-top: 8px; font-size: 28px; font-weight: 780; color: var(--yellow); }
+    .hero-rule p { color: var(--muted); margin: 10px 0 0; font-size: 14px; }
+
+    .status-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0 54px; }
+    .status { padding: 18px; background: rgba(255,253,248,.82); border: 1px solid var(--line); border-radius: 16px; }
+    .status .k { color: var(--muted); font-size: 12px; }
+    .status .v { margin-top: 6px; font-weight: 740; font-size: 17px; }
+    .status.good .v { color: var(--green); }
+    .status.warn .v { color: var(--yellow); }
+    .status.bad .v { color: var(--red); }
+
+    section { margin: 34px 0 72px; }
+    .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 22px; margin-bottom: 20px; }
+    .section-head h2 { margin: 0; font: 800 clamp(28px, 4vw, 43px)/1.08 var(--serif); letter-spacing: -.025em; }
+    .section-head p { margin: 0; color: var(--muted); max-width: 520px; text-align: right; }
+
+    .logic { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .logic-card, .stock, .scenario, .watch-card { background: linear-gradient(160deg, #fffdf9, #f7f2e8); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .logic-card { padding: 24px; min-height: 204px; position: relative; overflow: hidden; }
+    .logic-card::before { content: attr(data-n); position: absolute; right: 16px; top: 3px; font: 850 64px var(--serif); color: rgba(23,58,94,.045); }
+    .logic-card .tag { display: inline-flex; padding: 4px 9px; border-radius: 99px; background: #f5eeda; color: #856327; font-size: 12px; }
+    .logic-card h3 { margin: 16px 0 8px; font-size: 20px; }
+    .logic-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .stocks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .stock { padding: 26px; position: relative; transition: transform .2s ease, border-color .2s ease; }
+    .stock:hover { transform: translateY(-3px); border-color: rgba(228,131,74,.45); }
+    .rank { width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center; background: rgba(228,131,74,.14); color: var(--copper-2); font-weight: 850; }
+    .stock h3 { margin: 20px 0 0; font-size: 26px; letter-spacing: -.025em; }
+    .ticker { color: var(--muted); font-size: 13px; }
+    .stock .role { margin: 15px 0 18px; font-size: 16px; color: #4e5562; }
+    .meter { height: 6px; border-radius: 9px; background: #eee7da; overflow: hidden; margin: 8px 0 17px; }
+    .meter span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--copper), var(--copper-2)); }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .fact { padding: 11px 12px; border-radius: 12px; background: rgba(23,58,94,.045); }
+    .fact b { display: block; font-size: 13px; }
+    .fact small { color: var(--muted); }
+    .risk { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+
+    .allocation { display: grid; grid-template-columns: .8fr 1.4fr; gap: 16px; }
+    .allocation-panel { padding: 29px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
+    .donut { width: 210px; aspect-ratio: 1; border-radius: 50%; margin: 8px auto 24px; background: conic-gradient(var(--copper) 0 60%, var(--blue) 60% 100%); position: relative; }
+    .donut::after { content: "A股组合"; position: absolute; inset: 23%; display: grid; place-items: center; border-radius: 50%; background: var(--panel); color: var(--muted); font-size: 13px; }
+    .legend { display: flex; justify-content: center; gap: 19px; color: var(--muted); font-size: 13px; }
+    .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 7px; }
+    .steps { display: grid; gap: 10px; }
+    .step { display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: center; padding: 17px; border: 1px solid var(--line); border-radius: 15px; background: #faf7f0; }
+    .step-num { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 11px; background: #eaf0f6; color: var(--blue); font-weight: 800; }
+    .step b { display: block; }
+    .step small { color: var(--muted); }
+    .step .pct { color: var(--yellow); font-weight: 760; white-space: nowrap; }
+
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+    .tab { cursor: pointer; border: 1px solid var(--line); background: #fffdf8; color: var(--muted); border-radius: 99px; padding: 9px 14px; }
+    .tab.active { color: #fff; border-color: var(--blue); background: var(--blue); font-weight: 760; }
+    .scenario { padding: 26px; display: none; grid-template-columns: 1fr 1.5fr; gap: 26px; align-items: center; }
+    .scenario.active { display: grid; }
+    .scenario .call { font-size: 35px; font-weight: 840; line-height: 1.1; letter-spacing: -.035em; }
+    .scenario ul { margin: 0; padding-left: 20px; color: #4e5562; }
+    .scenario li + li { margin-top: 8px; }
+
+    .watch { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .watch-card { padding: 25px; }
+    .watch-card h3 { margin: 0 0 15px; font-size: 20px; }
+    .watch-card ul { margin: 0; padding-left: 19px; color: var(--muted); }
+    .watch-card li + li { margin-top: 8px; }
+    .watch-card.up h3 { color: var(--green); }
+    .watch-card.down h3 { color: var(--red); }
+
+    .notice { padding: 22px 24px; border-radius: 18px; border: 1px solid #dfcfaa; background: #fff9e9; color: #4e5562; }
+    .notice b { color: var(--yellow); }
+    footer { border-top: 1px solid var(--line); padding: 26px 0 42px; color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; gap: 20px; }
+    footer a { color: var(--copper-2); text-decoration: none; }
+
+    @media (max-width: 920px) {
+      .hero, .allocation { grid-template-columns: 1fr; }
+      .hero-rule { border-left: 0; border-top: 1px solid var(--line); padding: 22px 0 0; }
+      .status-grid, .logic { grid-template-columns: 1fr 1fr; }
+      .stocks { grid-template-columns: 1fr; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+      .section-head p { text-align: left; }
+    }
+    @media (max-width: 580px) {
+      .shell { width: min(100% - 24px, 1180px); }
+      .topbar { height: 58px; }
+      .asof { font-size: 11px; }
+      .hero { padding-top: 50px; }
+      .status-grid, .logic, .watch { grid-template-columns: 1fr; }
+      .scenario.active { grid-template-columns: 1fr; }
+      .step { grid-template-columns: 42px 1fr; }
+      .step .pct { grid-column: 2; }
+      footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="shell topbar">
+    <a class="back" href="../nav/">← 投研报告目录</a>
+    <a class="brand" href="../" style="text-decoration:none;color:inherit"><span class="brand-mark" aria-hidden="true"></span>CSN 投研</a>
+    <div class="asof">2026-08-04</div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Copper · Buy-side view</div>
+        <h1>中期看多，<br><span>短期不追。</span></h1>
+        <p class="lead">矿越来越难抢，AI和电网仍在增加用铜需求。但铜价已在高位，关税也还没有完全落地。最好的办法不是追期货，而是等回调、分批买有自产铜矿的公司。</p>
+      </div>
+      <aside class="hero-rule">
+        <div class="label">一句话行动</div>
+        <div class="answer">买矿，不买炉</div>
+        <p>优先紫金矿业、洛阳钼业与 FCX；不把铜陵有色、云南铜业当作本轮铜价主升的首选。</p>
+      </aside>
+    </section>
+
+    <div class="status-grid" aria-label="核心判断">
+      <div class="status good"><div class="k">中期方向</div><div class="v">偏多 ↑</div></div>
+      <div class="status warn"><div class="k">当前位置</div><div class="v">高位确认区</div></div>
+      <div class="status good"><div class="k">矿端信号</div><div class="v">强紧张</div></div>
+      <div class="status bad"><div class="k">追高性价比</div><div class="v">偏低</div></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <h2>为什么看多，但不追？</h2>
+        <p>把复杂的铜产业链压缩成四件普通投资者能跟踪的事。</p>
+      </div>
+      <div class="logic">
+        <article class="logic-card" data-n="01"><span class="tag">矿端</span><h3>TC 跌破零</h3><p>极端成交接近 -200 美元/吨，说明炼厂为了拿矿必须让利。真正议价权在矿山手里。</p></article>
+        <article class="logic-card" data-n="02"><span class="tag">需求</span><h3>AI 还在花钱</h3><p>数据中心只是起点，背后的变电站、电网和发电扩容都需要铜。关键看 CAPEX 增速能否延续。</p></article>
+        <article class="logic-card" data-n="03"><span class="tag">政策</span><h3>15% 尚未落地</h3><p>精炼铜 2027 年 15%仍是待决定方案。税率超预期先推高美国溢价，不保证全球铜价同比例上涨。</p></article>
+        <article class="logic-card" data-n="04"><span class="tag">价格</span><h3>已经不是低位</h3><p>截图价格已逼近前高和上沿。这里适合等突破确认或回踩，不适合因为新闻一次性满仓。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>股票优先级</h2>
+        <p>排序标准：自产铜资源、产量弹性、风险分散，以及负 TC 环境下的盈利方向。</p>
+      </div>
+      <div class="stocks">
+        <article class="stock">
+          <div class="rank">01</div>
+          <h3>紫金矿业</h3><div class="ticker">601899.SH · 核心仓</div>
+          <p class="role">最均衡：铜价上涨能受益，黄金业务又能在衰退阶段提供缓冲。</p>
+          <small>综合优先级</small><div class="meter"><span style="width:92%"></span></div>
+          <div class="facts"><div class="fact"><b>确定性</b><small>高</small></div><div class="fact"><b>铜价弹性</b><small>中高</small></div></div>
+          <p class="risk">主要风险：体量较大，纯铜弹性不如单一铜矿；海外项目执行与金属价格共振风险。</p>
+        </article>
+        <article class="stock">
+          <div class="rank">02</div>
+          <h3>洛阳钼业</h3><div class="ticker">603993.SH · 进攻仓</div>
+          <p class="role">弹性更强：铜与钴产量增长快，铜价主升阶段可能比紫金更有攻击性。</p>
+          <small>综合优先级</small><div class="meter"><span style="width:85%"></span></div>
+          <div class="facts"><div class="fact"><b>确定性</b><small>中高</small></div><div class="fact"><b>铜价弹性</b><small>高</small></div></div>
+          <p class="risk">主要风险：刚果（金）资产集中，地缘政治、税务、运输与钴价波动更大。</p>
+        </article>
+        <article class="stock">
+          <div class="rank">03</div>
+          <h3>Freeport</h3><div class="ticker">NYSE: FCX · 海外弹性仓</div>
+          <p class="role">直接的美股铜矿龙头，铜价上涨时盈利敏感度高，适合跨市场配置。</p>
+          <small>综合优先级</small><div class="meter"><span style="width:80%"></span></div>
+          <div class="facts"><div class="fact"><b>确定性</b><small>中高</small></div><div class="fact"><b>铜价弹性</b><small>高</small></div></div>
+          <p class="risk">主要风险：波动大，印尼资产与运营节奏影响明显；高铜价阶段不宜追涨。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>简单执行方案</h2>
+        <p>这是研究型示例组合，不是个性化仓位建议。没有明确确认前，现金本身也是仓位。</p>
+      </div>
+      <div class="allocation">
+        <div class="allocation-panel">
+          <div class="donut" aria-label="紫金矿业60%，洛阳钼业40%"></div>
+          <div class="legend"><span><i class="dot" style="background:var(--copper)"></i>紫金 60%</span><span><i class="dot" style="background:var(--blue)"></i>洛钼 40%</span></div>
+        </div>
+        <div class="allocation-panel steps">
+          <div class="step"><div class="step-num">1</div><div><b>第一笔：只建观察仓</b><small>不因关税传闻一次性买满</small></div><div class="pct">计划仓位 ⅓</div></div>
+          <div class="step"><div class="step-num">2</div><div><b>第二笔：回踩不破再加</b><small>铜价关键支撑守住，股票缩量企稳</small></div><div class="pct">再加 ⅓</div></div>
+          <div class="step"><div class="step-num">3</div><div><b>第三笔：基本面确认</b><small>炼厂减产、库存下降或 AI CAPEX 再上修</small></div><div class="pct">补足 ⅓</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>宏观剧本切换</h2>
+        <p>点击不同状态，快速查看铜和矿业股的应对方式。</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="宏观剧本">
+        <button class="tab active" type="button" data-target="s1" role="tab" aria-selected="true">AI增长＋不降息</button>
+        <button class="tab" type="button" data-target="s2" role="tab" aria-selected="false">AI增长＋降息</button>
+        <button class="tab" type="button" data-target="s3" role="tab" aria-selected="false">AI下修＋衰退降息</button>
+      </div>
+      <article class="scenario active" id="s1"><div class="call" style="color:var(--green)">偏多，<br>但慢慢买</div><ul><li>AI与电网实物需求支撑铜价。</li><li>高利率和强美元限制估值扩张。</li><li>优先紫金，洛钼保留进攻仓。</li></ul></article>
+      <article class="scenario" id="s2"><div class="call" style="color:var(--copper-2)">最强多头<br>组合</div><ul><li>实物需求与流动性同时改善。</li><li>若库存继续下降，可提高洛钼和 FCX 权重。</li><li>仍要防止政策利好兑现后的短线回落。</li></ul></article>
+      <article class="scenario" id="s3"><div class="call" style="color:var(--red)">先防守，<br>后找买点</div><ul><li>衰退初期需求下修通常快于降息利好。</li><li>先保留现金，不因第一次降息抄底。</li><li>等 PMI、信用利差和铜/黄金比止跌再加仓。</li></ul></article>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>什么时候加，什么时候退？</h2></div>
+      <div class="watch">
+        <article class="watch-card up"><h3>加仓确认</h3><ul><li>铜价放量突破并站稳 6.7175–6.755。</li><li>精炼铜关税高于15%，覆盖阴极铜且主要国家没有豁免。</li><li>中国精铜产量连续走弱，亚洲升水与库存去化同步加强。</li><li>微软、亚马逊等继续上修 AI 与数据中心资本开支。</li></ul></article>
+        <article class="watch-card down"><h3>减仓／失效</h3><ul><li>高税率标题很强，但精炼阴极铜获得豁免。</li><li>AI资本开支增速明显下修，美国制造业和就业同步恶化。</li><li>COMEX–LME 溢价快速收窄，非美库存开始回升。</li><li>铜价放量跌破 6.371；中期再跌破 5.987。</li></ul></article>
+      </div>
+    </section>
+
+    <section class="notice">
+      <b>政策核验：</b>截至本研究时点，白宫文件中的精炼铜关税仍是“2027年15%、2028年30%的待决定方案”，不是已经生效的税率；没有查到“2026年8月必须公布”的正式截止日期。关税交易应以正式公告、覆盖品类、豁免国家和生效时间为准。
+    </section>
+  </main>
+
+  <footer class="shell">
+    <span>研究用途 · 不构成投资建议 · 技术价位来自用户截图，非交易所结算级复算</span>
+    <span><a href="https://www.whitehouse.gov/presidential-actions/2025/07/adjusting-imports-of-copper-into-the-united-states/" target="_blank" rel="noreferrer noopener">白宫原文</a> · <a href="https://fcx.com/sustainability" target="_blank" rel="noreferrer noopener">FCX资料</a></span>
+  </footer>
+
+  <script>
+    const tabs = [...document.querySelectorAll('.tab')];
+    const scenarios = [...document.querySelectorAll('.scenario')];
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((item) => { item.classList.remove('active'); item.setAttribute('aria-selected', 'false'); });
+        scenarios.forEach((item) => item.classList.remove('active'));
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        document.getElementById(tab.dataset.target)?.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
