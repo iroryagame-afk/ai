@@ -319,7 +319,11 @@
 
     body .csn-confluence-only { width:min(1920px,100%); margin:0 auto; padding:24px 36px 48px; }
     body .csn-confluence-only .us-confluence { margin:0; }
+    body .us-confluence-empty { display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin:0; padding:14px 16px; border-top:3px solid var(--line-strong); }
+    body .us-confluence-empty strong { color:var(--ink); font-size:16px; }
+    body .us-confluence-empty span { color:var(--muted); font-size:12px; text-align:right; }
     @media(max-width:760px) { body .csn-confluence-only { padding:14px 12px 32px; } }
+    @media(max-width:760px) { body .us-confluence-empty { align-items:flex-start; flex-direction:column; gap:4px; } body .us-confluence-empty span { text-align:left; } }
   </style>
 </head>
 <body>
@@ -392,5 +396,9 @@
     </div>
   </div>
 </nav>
+<main class="csn-confluence-only"><section class="us-confluence-empty panel" aria-label="美股三路共振结果">
+          <strong>今日无三路共振</strong>
+          <span>2026-08-03 · 只展示美股严选、RS Thrust、轮动雷达同日 3/3；不显示 2/3</span>
+        </section></main>
 </body>
 </html>
