@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-04T01:27:52.520Z",
-  "stage": "修复观察期",
-  "stageNote": "情绪修复，但趋势与杠杆尚未同时确认",
+  "generatedAt": "2026-08-04T09:01:50.905Z",
+  "stage": "趋势确认期",
+  "stageNote": "风险指标已明显退潮，等待价格延续确认",
   "markets": {
     "cn": {
-      "asOf": "2026-08-03",
-      "score": -21,
+      "asOf": "2026-08-04",
+      "score": -15,
       "label": "技术中性偏弱",
       "valid": 28,
-      "aboveMa20Pct": 32.1,
+      "aboveMa20Pct": 46.4,
       "weak": 0,
       "strong": 0,
       "coverage": {
@@ -18,11 +18,11 @@
       }
     },
     "kr": {
-      "asOf": "2026-08-03",
-      "score": -36,
+      "asOf": "2026-08-04",
+      "score": -26,
       "label": "技术中性偏弱",
       "valid": 16,
-      "aboveMa20Pct": 6.3,
+      "aboveMa20Pct": 43.8,
       "weak": 0,
       "strong": 0,
       "coverage": {
@@ -73,17 +73,17 @@
       }
     },
     "korea": {
-      "asOf": "2026-07-31",
-      "currentTn": 28.935,
+      "asOf": "2026-08-03",
+      "currentTn": 27.444,
       "progressToBasicPct": 100,
       "basicTn": 30,
       "basicLabel": "基本观察位",
-      "progressToSecondPct": 91.2,
+      "progressToSecondPct": 100,
       "secondLevelTn": 28,
       "secondLevelLabel": "较充分位",
-      "remainingToSecondTn": 0.935,
-      "etfFiveDayFlowTn": 1.654,
-      "tenDayChangeTn": -4.398,
+      "remainingToSecondTn": 0,
+      "etfFiveDayFlowTn": 2.475,
+      "tenDayChangeTn": -6.114,
       "etaTradingDays": [
         0,
         0
@@ -117,19 +117,19 @@
       "note": "来源页已完成网页正文回读；最新指数值19.53，数据日2026-07-30，页面更新时间2026-07-30 14:30。"
     },
     "kr": {
-      "score": 39,
-      "label": "恐惧",
-      "asOf": "2026-08-03T09:50:03.547Z",
+      "score": 74,
+      "label": "贪婪",
+      "asOf": "2026-08-04T09:01:47.875Z",
       "source": "https://feargreed.co.kr/",
       "sourceLabel": "feargreed.co.kr",
       "methodology": "CNN方法适配KOSPI/KOSDAQ",
       "status": "第三方估算"
     },
     "us": {
-      "score": 45.8,
+      "score": 50.5,
       "label": "中性",
-      "asOf": "2026-08-03T23:59:53+00:00",
-      "previousClose": 42.5,
+      "asOf": "2026-08-04T08:43:31+00:00",
+      "previousClose": 45.8,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
       "sourceLabel": "CNN Fear & Greed Index",
@@ -137,59 +137,59 @@
     }
   },
   "koreaCapitalFlow": {
-    "asOf": "2026-08-03",
-    "verifiedAt": "2026-08-03T09:50:00.731Z",
+    "asOf": "2026-08-04",
+    "verifiedAt": "2026-08-04T09:01:43.937Z",
     "status": "verified_third_party",
     "unit": "억원",
     "market": {
       "total": {
-        "individual": 46825,
-        "foreign": -30312,
-        "institution": -17847
+        "individual": 5599,
+        "foreign": -6476,
+        "institution": 39
       },
       "kospi": {
-        "individual": 46523,
-        "foreign": -28220,
-        "institution": -19516
+        "individual": 8186,
+        "foreign": -3705,
+        "institution": -5395
       },
       "kosdaq": {
-        "individual": 302,
-        "foreign": -2092,
-        "institution": 1669
+        "individual": -2587,
+        "foreign": -2771,
+        "institution": 5434
       }
     },
     "semiconductor5d": {
-      "from": "2026-07-28",
-      "to": "2026-08-03",
-      "individualEok": -41.8,
-      "foreignEok": -179.8,
-      "institutionEok": 216
+      "from": "2026-07-29",
+      "to": "2026-08-04",
+      "individualEok": -341.4,
+      "foreignEok": 238.5,
+      "institutionEok": 92.6
     },
     "bellwethers": [
       {
         "code": "000660",
         "name": "SK海力士",
-        "asOf": "2026-08-03",
-        "foreign5dEok": -16880.5,
-        "institution5dEok": 16995.8,
-        "foreign10dEok": -24052.8,
-        "institution10dEok": 5891.6
+        "asOf": "2026-08-04",
+        "foreign5dEok": 6089.9,
+        "institution5dEok": 11075.4,
+        "foreign10dEok": -26067.7,
+        "institution10dEok": -619.7
       },
       {
         "code": "005930",
         "name": "三星电子",
-        "asOf": "2026-08-03",
-        "foreign5dEok": -9148.2,
-        "institution5dEok": 8206.9,
-        "foreign10dEok": -11812.9,
-        "institution10dEok": 604.8
+        "asOf": "2026-08-04",
+        "foreign5dEok": 7854.5,
+        "institution5dEok": 372.1,
+        "foreign10dEok": -14841.2,
+        "institution10dEok": -13363.1
       }
     ],
     "hynixConfirmation": {
-      "programNetEok": -18507.5,
-      "programTradeRatioPct": 33.2,
-      "shortAsOf": "2026-08-03",
-      "shortRatioPct": 3.48
+      "programNetEok": -3923.3,
+      "programTradeRatioPct": 28.56,
+      "shortAsOf": "2026-08-04",
+      "shortRatioPct": 2.18
     },
     "sources": {
       "ksinfo": {
@@ -227,19 +227,19 @@
     "status": "verified_close"
   },
   "breadth": {
-    "aShareAsOf": "2026-08-03",
-    "aShareUpPct": 68.02,
-    "aShareUp": 4005,
-    "aShareDown": 1466,
-    "aShareMainNetYi": -420.16,
+    "aShareAsOf": "2026-08-04",
+    "aShareUpPct": 61.84,
+    "aShareUp": 3642,
+    "aShareDown": 1747,
+    "aShareMainNetYi": 589.94,
     "aShareUniverse": "全A股（含沪深北）",
-    "aShareCovered": 5888,
+    "aShareCovered": 5889,
     "crosscheck": {
       "universe": "沪深全A（不含北交所）",
       "activeSameDay": 5196,
-      "up": 3866,
-      "down": 1278,
-      "turnoverYi": 19968.49
+      "up": 3405,
+      "down": 1664,
+      "turnoverYi": 22130.62
     }
   }
 }
