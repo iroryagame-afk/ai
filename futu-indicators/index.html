@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="CSNPK 富途自编指标工具箱：缠论 V19、自动压力线、MACD 底背离、BIAS20/60 和 KDJ VOL。">
+  <meta name="description" content="CSNPK 指标工具箱：富途自编指标，以及冰神分享的通达信 TN6 指标包与使用说明。">
   <meta property="og:title" content="富途自编指标工具箱 | CSNPK">
   <meta property="og:description" content="五个原版指标代码、安装说明与视觉效果示意。">
   <meta property="og:image" content="https://csnpk.com/futu-indicators/preview.png">
@@ -65,8 +65,24 @@
     .step{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);padding:16px;border-radius:8px;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
     .step b{display:block;color:#e5c272;margin-bottom:4px}
     .notice{margin-top:22px;padding:16px 18px;border-left:4px solid var(--gold);background:rgba(183,138,58,.10);color:#595348;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    .bingshen{position:relative;overflow:hidden;background:linear-gradient(112deg,#0c1b31 0%,#173a5f 56%,#165f74 100%);color:#fff;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 20px 48px rgba(12,27,49,.18)}
+    .bingshen:after{content:"冰";position:absolute;right:4vw;top:-104px;color:rgba(255,255,255,.045);font-size:340px;font-weight:900;line-height:1}
+    .bingshen-inner{position:relative;z-index:1;padding:56px 0;display:grid;grid-template-columns:.72fr 1.28fr;gap:42px;align-items:start}
+    .bingshen h2{color:#fff;font-size:clamp(38px,5vw,62px)}
+    .bingshen .eyebrow{color:#71d6e5}.bingshen .eyebrow:before{background:#71d6e5}
+    .bingshen-lead{color:#d9e8f2;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    .bingshen-note{padding:13px 15px;border-left:3px solid #e5c272;background:rgba(255,255,255,.07);color:#dbe5ed;font:13px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    .ice-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px}
+    .ice-step{padding:16px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);border-radius:8px;font:14px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    .ice-step b{display:block;color:#f2cf78;margin-bottom:4px}
+    .pack-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .pack-group{padding:16px;border-radius:8px;background:rgba(7,17,31,.42);border:1px solid rgba(255,255,255,.11)}
+    .pack-group h3{color:#fff;font:800 15px/1.3 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;margin-bottom:10px}
+    .pack-links{display:flex;gap:7px;flex-wrap:wrap}
+    .pack-links a{padding:7px 9px;border-radius:5px;text-decoration:none;background:rgba(113,214,229,.10);border:1px solid rgba(113,214,229,.26);color:#dffbff;font:600 12px/1.2 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+    .pack-links a:hover{background:rgba(113,214,229,.22)}
     footer{padding:34px 0 54px;border-top:1px solid var(--line);color:var(--muted);font:13px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
-    @media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:54px}.hero-board{transform:none}.grid{grid-template-columns:1fr}.install{grid-template-columns:1fr}.topbar{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start;flex-direction:column}.steps{grid-template-columns:1fr}.wrap{width:min(100% - 24px,1380px)}h1{font-size:44px}}
+    @media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:54px}.hero-board{transform:none}.grid{grid-template-columns:1fr}.install{grid-template-columns:1fr}.topbar{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start;flex-direction:column}.steps,.ice-steps,.pack-groups{grid-template-columns:1fr}.bingshen-inner{grid-template-columns:1fr}.wrap{width:min(100% - 24px,1380px)}h1{font-size:44px}}
   </style>
 </head>
 <body>
@@ -74,7 +90,7 @@
     <div class="wrap topbar">
       <div class="brand">CSN<span>PK</span> · 指标工具箱</div>
       <nav aria-label="页内导航">
-        <a href="#main">主图</a><a href="#sub">副图</a><a href="#install">安装</a><a href="/nav/">投研导航</a>
+        <a href="#bingshen">冰神分享</a><a href="#main">主图</a><a href="#sub">副图</a><a href="#install">安装</a><a href="/nav/">投研导航</a>
       </nav>
     </div>
   </header>
@@ -102,6 +118,39 @@
           <g font-family="-apple-system,PingFang SC,sans-serif" font-size="16" font-weight="700"><text x="585" y="58" fill="#ff7770">下降压力</text><text x="560" y="258" fill="#52e3a2">上升支撑</text><text x="295" y="226" fill="#ffd2ee">三笔中枢</text></g>
         </svg>
         <div class="caption">视觉示意：图中价格与信号为模拟绘制，不是实时行情、历史回测或交易建议。</div>
+      </div>
+    </section>
+
+    <section class="bingshen" id="bingshen">
+      <div class="wrap bingshen-inner">
+        <div>
+          <div class="eyebrow">TongdaXin Formula Pack</div>
+          <h2>《冰神分享》</h2>
+          <p class="bingshen-lead">15 个通达信 TN6 原始公式包，覆盖主图、买点提示、选股与量价辅助。建议先小范围导入、逐个观察，再按“趋势过滤 → 条件触发 → 量价复核”组合使用。</p>
+          <p class="bingshen-note"><strong>格式状态：</strong>这些文件仅可按通达信 TN6 包处理，不能直接导入富途。富途只接受 FTINDEX，且当前没有取得这 15 个包的明文源码，因此未做富途编译或同名仿制。<br><strong>核验边界：</strong>已核验文件完整且 15 个包互不重复；下面分类依据文件名整理，不代表已验证内部公式、无未来函数或具有稳定胜率。</p>
+          <a class="btn secondary" style="color:#fff;border-color:#71d6e5;margin-top:15px" href="bingshen/冰神分享_使用说明.txt" download>下载使用说明</a>
+        </div>
+        <div>
+          <div class="ice-steps">
+            <div class="ice-step"><b>01 · 导入与分组</b>通达信公式管理器选择“导入公式”，载入 TN6；先只勾选准备测试的一组。</div>
+            <div class="ice-step"><b>02 · 先趋势后信号</b>先看主图或趋势过滤，再用凛冬买点、选股公式寻找候选，避免单信号直接买入。</div>
+            <div class="ice-step"><b>03 · 收盘复核</b>优先等待日线收盘确认，并结合成交量、压力位和止损线人工判断。</div>
+          </div>
+          <div class="pack-groups">
+            <div class="pack-group"><h3>主图与结构参考（文件名推断）</h3><div class="pack-links">
+              <a href="bingshen/赞爹主图.tn6" download>赞爹主图</a><a href="bingshen/六龙连山原版.tn6" download>六龙连山原版</a><a href="bingshen/六龙连山赞爹.tn6" download>六龙连山赞爹</a><a href="bingshen/生命诅咒线.tn6" download>生命诅咒线</a>
+            </div></div>
+            <div class="pack-group"><h3>凛冬买点系列</h3><div class="pack-links">
+              <a href="bingshen/凛冬买1.tn6" download>凛冬买1</a><a href="bingshen/凛冬买1宽松版.tn6" download>买1宽松版</a><a href="bingshen/凛冬买2.tn6" download>凛冬买2</a><a href="bingshen/凛冬买3严格版.tn6" download>买3严格版</a><a href="bingshen/凛冬买3宽松版.tn6" download>买3宽松版</a>
+            </div></div>
+            <div class="pack-group"><h3>选股与突破候选（文件名推断）</h3><div class="pack-links">
+              <a href="bingshen/骑牛90.tn6" download>骑牛90</a><a href="bingshen/骑牛BBI水上选股.tn6" download>骑牛BBI水上选股</a><a href="bingshen/突破诅咒线选.tn6" download>突破诅咒线选</a>
+            </div></div>
+            <div class="pack-group"><h3>量价与辅助观察（文件名推断）</h3><div class="pack-links">
+              <a href="bingshen/骑牛成交量.tn6" download>骑牛成交量</a><a href="bingshen/紫色分金定穴.tn6" download>紫色分金定穴</a><a href="bingshen/国漫黄金.tn6" download>国漫黄金</a>
+            </div></div>
+          </div>
+        </div>
       </div>
     </section>
 
