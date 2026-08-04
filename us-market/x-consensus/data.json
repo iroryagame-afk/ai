@@ -4,6 +4,218 @@
   "scanned_at": "2026-08-02T01:45:00+08:00",
   "market_data_as_of": "2026-07-31",
   "risk_control": "not_triggered",
+  "narrative_marker": "X_STOCK_NARRATIVE_AND_AUTHOR_VISUALS_SEPARATED",
+  "narrative_scan": {
+    "scanned_at": "2026-08-04T16:15:21+08:00",
+    "window": "过去24小时",
+    "attentionvc_updated_at": "2026-08-04T08:15:20.999Z",
+    "attentionvc_articles": 21,
+    "aihot_topics": 8,
+    "headline": "公司级叙事集中在阿里、Block、MiniMax；游戏产品热度落到EA与Ubisoft",
+    "summary": "优先保留能直接落到上市公司、且有原帖或多源信号的讨论。股票讨论热度与股价方向分开展示，不把产品关注度直接等同为买入信号。",
+    "selection_rule": "直接上市公司映射或官方产品/IP映射；有原帖、原图或多源信号；剔除纯类比、非X新闻和无法核验归属的题材。"
+  },
+  "stock_narratives": [
+    {
+      "rank": 1,
+      "company": "阿里巴巴",
+      "symbols": [
+        "BABA",
+        "9988.HK"
+      ],
+      "topic": "Qwen3.8-Max发布：2.4T参数、编码与协作能力、开放权重",
+      "direction": "positive",
+      "direction_label": "产品催化偏正面",
+      "evidence_grade": "A",
+      "mapping": "direct",
+      "mapping_label": "直接公司映射",
+      "source_label": "AI HOT热点第1",
+      "source_detail": "9个独立来源、19组信号；包含Qwen官方及多位X作者",
+      "author": "Qwen与多位AI作者",
+      "handle": "@Alibaba_Qwen 等",
+      "posted_at": "2026-08-03至2026-08-04",
+      "post_url": "https://aihot.virxact.com/story/27fed64c-4884-402e-a962-dd56910ca9ca",
+      "source_url": "https://qwen.ai/blog?id=qwen3.8",
+      "image_url": null,
+      "image_summary": "聚合源确认多位X作者参与扩散，但没有取得可稳定展示的同一张原图，因此不补无关配图。",
+      "metrics": "9来源 · 19信号",
+      "caveat": "模型发布是公司级催化线索，不等于BABA短线必然上涨。"
+    },
+    {
+      "rank": 2,
+      "company": "Block",
+      "symbols": [
+        "XYZ"
+      ],
+      "topic": "Hermes Agent与Block开源Buzz，讨论AI Agent协作入口",
+      "direction": "positive",
+      "direction_label": "产品叙事偏正面",
+      "evidence_grade": "A-",
+      "mapping": "direct",
+      "mapping_label": "直接公司映射",
+      "source_label": "AttentionVC 24小时第7",
+      "source_detail": "X长文直接提及Block开源Buzz",
+      "author": "YanXbt",
+      "handle": "@IBuzovskyi",
+      "posted_at": "2026-08-03",
+      "post_url": "https://x.com/IBuzovskyi/status/2084258777117663572",
+      "source_url": "https://www.attentionvc.ai/article?window=1d",
+      "image_url": "https://pbs.twimg.com/media/HOytX92WIAAFs1J.jpg",
+      "image_summary": "黄色封面以Buzz字样、机器人图标和黑色人物插画为主体，强调Buzz产品品牌。",
+      "metrics": "7.6万浏览 · 1,359收藏",
+      "caveat": "收藏强度高，但属于单篇X长文，尚未证明形成全平台共识。"
+    },
+    {
+      "rank": 3,
+      "company": "MiniMax",
+      "symbols": [
+        "00100.HK"
+      ],
+      "topic": "H3全模态生成系统开源，支持2K视频与原生立体声",
+      "direction": "positive",
+      "direction_label": "产品催化偏正面",
+      "evidence_grade": "A-",
+      "mapping": "direct",
+      "mapping_label": "直接公司映射",
+      "source_label": "AI HOT热点第3",
+      "source_detail": "3个独立来源、6组信号；包含MiniMax官方X",
+      "author": "MiniMax与Kim",
+      "handle": "@MiniMax_AI 等",
+      "posted_at": "2026-08-03",
+      "post_url": "https://aihot.virxact.com/story/a9281e36-7a12-480d-9cdc-a5947f44abff",
+      "source_url": "https://aihot.virxact.com/items/cmsdu3hyr015xrofzqxuosm3y",
+      "image_url": null,
+      "image_summary": "已确认官方X参与扩散；公开聚合结果没有返回稳定原图。",
+      "metrics": "3来源 · 6信号",
+      "caveat": "属于模型发布热度，商业化兑现仍需订单、调用量或收入数据验证。"
+    },
+    {
+      "rank": 4,
+      "company": "Electronic Arts",
+      "symbols": [
+        "EA"
+      ],
+      "topic": "Apex Legends第30赛季更新与角色、武器、地图改动",
+      "direction": "positive",
+      "direction_label": "产品热度偏正面",
+      "evidence_grade": "B+",
+      "mapping": "product",
+      "mapping_label": "官方产品映射",
+      "source_label": "AttentionVC 24小时第4",
+      "source_detail": "Apex官方X长文；Apex为EA核心游戏产品",
+      "author": "ApexLiveComms",
+      "handle": "@ApexLiveComms",
+      "posted_at": "2026-08-03",
+      "post_url": "https://x.com/ApexLiveComms/status/2084320208223641604",
+      "source_url": "https://www.attentionvc.ai/article?window=1d",
+      "image_url": "https://pbs.twimg.com/media/HOg2vNNaYAABuh7.jpg",
+      "image_summary": "蓝色Patch Notes信息图，列出世界边缘地图刷新、英雄加强、腐化配件与能量武器变化。",
+      "metrics": "12.2万浏览 · 732点赞",
+      "caveat": "游戏版本关注度不能直接替代玩家留存、付费率与净预订数据。"
+    },
+    {
+      "rank": 5,
+      "company": "商汤",
+      "symbols": [
+        "00020.HK"
+      ],
+      "topic": "SenseNova U1.5-Lite轻量原生多模态模型开源",
+      "direction": "positive",
+      "direction_label": "产品催化偏正面",
+      "evidence_grade": "B+",
+      "mapping": "direct",
+      "mapping_label": "直接公司映射",
+      "source_label": "AI HOT热点第7",
+      "source_detail": "2个独立来源、3组信号；商汤官方X直接发布",
+      "author": "SenseTime",
+      "handle": "@SenseTime_AI",
+      "posted_at": "2026-08-03",
+      "post_url": "https://x.com/SenseTime_AI/status/2084288424236782073",
+      "source_url": "https://aihot.virxact.com/items/cmsdczxnl0138rotj8fjenm4b",
+      "image_url": null,
+      "image_summary": "官方X原帖已确认，但聚合接口没有返回稳定原图。",
+      "metrics": "2来源 · 3信号",
+      "caveat": "模型规模和开源热度需要后续开发者采用与商业收入验证。"
+    },
+    {
+      "rank": 6,
+      "company": "Ubisoft",
+      "symbols": [
+        "UBI.PA"
+      ],
+      "topic": "Assassin's Creed Black Flag Resynced 1.0.6版本更新",
+      "direction": "positive",
+      "direction_label": "产品热度偏正面",
+      "evidence_grade": "B",
+      "mapping": "product",
+      "mapping_label": "官方产品映射",
+      "source_label": "AttentionVC 24小时第10",
+      "source_detail": "Assassin's Creed官方X长文",
+      "author": "Assassin's Creed",
+      "handle": "@assassinscreed",
+      "posted_at": "2026-08-03",
+      "post_url": "https://x.com/assassinscreed/status/2084309707506819392",
+      "source_url": "https://www.attentionvc.ai/article?window=1d",
+      "image_url": "https://pbs.twimg.com/media/HOzz14lWUAA-AXW.jpg",
+      "image_summary": "暖色游戏场景封面，中央写有Patch Notes与Title Update 1.0.6。",
+      "metrics": "6.6万浏览 · 989点赞",
+      "caveat": "版本更新讨论主要反映玩家关注，不等于公司业绩催化。"
+    },
+    {
+      "rank": 7,
+      "company": "Cloudflare",
+      "symbols": [
+        "NET"
+      ],
+      "topic": "@cloudflare/computer预览版与Agent执行环境",
+      "direction": "positive",
+      "direction_label": "产品催化偏正面",
+      "evidence_grade": "B-",
+      "mapping": "direct",
+      "mapping_label": "直接公司映射",
+      "source_label": "AI HOT热点第4",
+      "source_detail": "2个来源、1组信号；本轮以公司博客和媒体为主",
+      "author": "Cloudflare",
+      "handle": "公司博客",
+      "posted_at": "2026-08-04",
+      "post_url": "https://aihot.virxact.com/story/ac62fece-417c-4d13-a422-d7d5b38ebdf5",
+      "source_url": "https://blog.cloudflare.com/cloudflare-computer",
+      "image_url": null,
+      "image_summary": "本轮没有足够X原图证据，保留为次级观察，不进入最强X股票结论。",
+      "metrics": "2来源 · 1信号",
+      "caveat": "事件本身明确，但X扩散强度尚未得到本轮数据确认。"
+    }
+  ],
+  "excluded_narratives": [
+    {
+      "symbols": [
+        "NVO",
+        "LLY"
+      ],
+      "reason": "睡眠肽文章只是借用Ozempic作类比，没有对应公司产品催化。"
+    },
+    {
+      "symbols": [
+        "PLTR"
+      ],
+      "reason": "热点来自媒体报道，本轮没有足够X来源，不列为X热股。"
+    },
+    {
+      "symbols": [
+        "MSFT"
+      ],
+      "reason": "仅见单条研究院发布，尚未进入多源热点。"
+    },
+    {
+      "symbols": [
+        "NVDA",
+        "AVGO",
+        "MU",
+        "VRT"
+      ],
+      "reason": "AI事件可作产业映射，但没有直接股票讨论，避免强行落股。"
+    }
+  ],
   "scope": {
     "following_accounts_scanned": 561,
     "charts_reviewed": 7,
@@ -56,6 +268,9 @@
       "opend_status": "QQQ趋势闸门未修复；SPY趋势仍在，不能据此确认全面转空",
       "post_url": "https://x.com/SJosephBurns/status/2083340619284369605",
       "chart_url": "https://x.com/SJosephBurns/status/2083114616687632701/photo/1",
+      "image_url": "https://pbs.twimg.com/media/HOi1tEzW0AAW7nY.jpg?name=orig",
+      "image_alt": "市场周期从希望、乐观、兴奋、狂热到自满、焦虑、否认与恐慌的心理阶段示意图",
+      "post_metrics": "21.9万浏览 · 210点赞 · 162收藏",
       "visual_status": "已验图",
       "caveat": "通用心理示意图，不是价格序列，不能独立产生交易结论。"
     },
@@ -80,6 +295,9 @@
       "opend_status": "现有大盘页确认SOXX/SMH近1月偏弱，但未复算Bloomberg流动性序列",
       "post_url": "https://x.com/KobeissiLetter/status/2083337567689212037",
       "chart_url": "https://x.com/KobeissiLetter/status/2083337567689212037/photo/1",
+      "image_url": "https://pbs.twimg.com/media/HOjw59SWEAA94il.jpg?name=orig",
+      "image_alt": "SOX同比表现与G10超额流动性领先指标的双线对照图",
+      "post_metrics": "20.7万浏览 · 1,177点赞 · 314收藏",
       "visual_status": "已验图",
       "caveat": "领先关系和指标构造未独立复算。"
     },
@@ -102,6 +320,9 @@
       "opend_status": "大盘页核心池站上MA20为50%，口径不同，不作同源确认",
       "post_url": "https://x.com/FinanceLancelot/status/2083349204424908842",
       "chart_url": "https://x.com/FinanceLancelot/status/2083349204424908842/photo/1",
+      "image_url": "https://pbs.twimg.com/media/HOmKowoWoAElxEU.png?name=orig",
+      "image_alt": "标普500成分股站上150日均线比例及下降趋势线图",
+      "post_metrics": "11.8万浏览 · 153点赞 · 27收藏",
       "visual_status": "已验图",
       "caveat": "150日广度与本站核心池MA20宽度不是同一指标。"
     },
@@ -124,6 +345,9 @@
       "opend_status": "QQQ仍低于日线EMA20/55，逆向修复尚未获得趋势确认",
       "post_url": "https://x.com/MrMikeInvesting/status/2083333029133496732",
       "chart_url": "https://x.com/Hedgeye/status/2082112332277117380/photo/1",
+      "image_url": "https://pbs.twimg.com/media/HOUlITHWAAAvA6m.jpg?name=orig",
+      "image_alt": "Goldman美国高Beta动量篮子月度表现历史柱状图",
+      "post_metrics": "原图帖162.2万浏览 · 1,438点赞 · 556收藏",
       "visual_status": "已验图",
       "caveat": "极端超卖不等于已见底，原始序列未独立复算。"
     },
@@ -169,6 +393,9 @@
       "opend_status": "本轮未用OpenD核验黄金点位",
       "post_url": "https://x.com/PeterLBrandt/status/2083597370554786213",
       "chart_url": "https://x.com/PeterLBrandt/status/2083597370554786213/photo/1",
+      "image_url": "https://pbs.twimg.com/media/HOpswa8bsAAleiB.jpg?name=orig",
+      "image_alt": "黄金期货周线抛物线上涨、破位与历史回撤情景图",
+      "post_metrics": "12.2万浏览 · 939点赞 · 301收藏",
       "visual_status": "已验图",
       "caveat": "2800和1120均为作者情景，不是本站目标价或已确认路径。"
     },
@@ -190,8 +417,2071 @@
       "opend_status": "本轮未用OpenD核验GOOGL点位",
       "post_url": "https://x.com/enrichtrades/status/2083295085450399787",
       "chart_url": "https://x.com/enrichtrades/status/2083295085450399787/photo/1",
+      "image_url": "https://pbs.twimg.com/media/HOlZ1vcWIAAB2fU.jpg?name=orig",
+      "image_alt": "GOOGL下降整理区与360美元突破观察位的技术图",
+      "post_metrics": "1.4万浏览 · 169点赞 · 27收藏",
       "visual_status": "原图待二次视觉核验",
       "caveat": "阈值来自作者帖子文字；未确认收盘站稳、成交量和假突破条件。"
     }
-  ]
+  ],
+  "attention_radar": {
+    "verification_status": "partial",
+    "verification_marker": "GLOBAL_STOCK_ATTENTION_24H_MULTILINGUAL_READONLY",
+    "generated_at": "2026-08-04T17:01:00+08:00",
+    "window": "24h",
+    "title": "全球股票注意力雷达",
+    "headline": "按股票聚合中文X、英文/韩文X长文与Reddit公开讨论",
+    "scope_note": "热度不等于看多；跨源讨论只作候选发现，方向、财务与价格需独立核验。",
+    "source_status": {
+      "attentionvc": {
+        "status": "verified_public_api",
+        "window": "24h_trending",
+        "updated_at": "2026-08-04T08:15:20.999Z",
+        "entries": 829,
+        "stock_mentions": 11,
+        "languages": [
+          "en",
+          "ko",
+          "zh"
+        ],
+        "caveat": "24h是Trending窗，部分原文发布时间可早于24小时。",
+        "url": "https://www.attentionvc.ai/article?window=24h"
+      },
+      "tl1": {
+        "status": "verified_public_api",
+        "window": "today",
+        "entries": 76,
+        "total": 76,
+        "stock_mentions": 9,
+        "languages": [
+          "zh"
+        ],
+        "caveat": "主要覆盖中文X，不代表英文Fintwit全量。",
+        "url": "https://tl1.com/history/maxFans/10000"
+      },
+      "reddit": {
+        "status": "verified_anonymous_readonly_rss_fallback",
+        "window": "hot_feed_snapshot",
+        "communities": {
+          "stocks": 25,
+          "wallstreetbets": 25
+        },
+        "fetch_modes": {
+          "stocks": "live",
+          "wallstreetbets": "live"
+        },
+        "entries": 50,
+        "stock_mentions": 38,
+        "languages": [
+          "en"
+        ],
+        "caveat": "匿名模式回退到RSS，无score、upvote ratio与评论数，不做伪热度估算。",
+        "url": "https://www.reddit.com/r/stocks/"
+      }
+    },
+    "trending_topics": [
+      {
+        "slug": "iran",
+        "displayName": "Iran",
+        "articleCount": 19,
+        "totalViews": 2239009
+      },
+      {
+        "slug": "anthropic",
+        "displayName": "Anthropic",
+        "articleCount": 14,
+        "totalViews": 2470657
+      },
+      {
+        "slug": "donald-trump",
+        "displayName": "Donald Trump",
+        "articleCount": 11,
+        "totalViews": 580966
+      },
+      {
+        "slug": "centcom",
+        "displayName": "Centcom",
+        "articleCount": 11,
+        "totalViews": 1270569
+      },
+      {
+        "slug": "us-central-command",
+        "displayName": "Us Central Command",
+        "articleCount": 10,
+        "totalViews": 1588462
+      },
+      {
+        "slug": "openai",
+        "displayName": "OpenAI",
+        "articleCount": 10,
+        "totalViews": 2355046
+      },
+      {
+        "slug": "lionel-messi",
+        "displayName": "Lionel Messi",
+        "articleCount": 9,
+        "totalViews": 4936007
+      },
+      {
+        "slug": "vivant",
+        "displayName": "Vivant",
+        "articleCount": 7,
+        "totalViews": 259364
+      },
+      {
+        "slug": "ukraine",
+        "displayName": "Ukraine",
+        "articleCount": 6,
+        "totalViews": 120498
+      },
+      {
+        "slug": "robinhood",
+        "displayName": "Robinhood",
+        "articleCount": 6,
+        "totalViews": 409251
+      },
+      {
+        "slug": "bitcoin",
+        "displayName": "Bitcoin",
+        "articleCount": 5,
+        "totalViews": 496843
+      },
+      {
+        "slug": "palworld",
+        "displayName": "Palworld",
+        "articleCount": 5,
+        "totalViews": 399752
+      },
+      {
+        "slug": "valorant",
+        "displayName": "Valorant",
+        "articleCount": 5,
+        "totalViews": 1020719
+      },
+      {
+        "slug": "spain",
+        "displayName": "Spain",
+        "articleCount": 5,
+        "totalViews": 174749
+      },
+      {
+        "slug": "tesla",
+        "displayName": "Tesla",
+        "articleCount": 5,
+        "totalViews": 805561
+      }
+    ],
+    "stock_rows": [
+      {
+        "ticker": "NVDA",
+        "company": "NVIDIA",
+        "theme": "AI芯片·CPO",
+        "attention_score": 214.9,
+        "source_count": 3,
+        "sources": [
+          "attentionvc",
+          "reddit",
+          "tl1"
+        ],
+        "source_labels": [
+          "AttentionVC X长文",
+          "Reddit 匿名只读",
+          "TL1 中文X热帖"
+        ],
+        "language_count": 3,
+        "languages": [
+          "en",
+          "ko",
+          "zh"
+        ],
+        "mention_count": 7,
+        "measured_views": 141613,
+        "evidence_level": "多源共振",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "NVDA",
+            "source": "attentionvc",
+            "language": "ko",
+            "author": "@JhonbermanS4",
+            "author_name": "존버맨 인베스터",
+            "author_region": "Korea",
+            "title": "[X-파일] 삼성전자 100만원 가나요? 네? 5만전자요?",
+            "excerpt": "들어가기 전에 N줄 요약 삼성전자가 지난 2분기에 영업이익 89조 4천억원을 찍었다. 엔비디아보다 많이 벌었다. 미친거지 지구상 민간기업 중에서 석 달 동안 제일 많이 번 회사다. 그런데 그 발표가 나온 7월 7일,",
+            "url": "https://x.com/JhonbermanS4/status/2080423549349892459",
+            "published_at": "2026-07-23T22:43:21.000Z",
+            "views": 134150,
+            "likes": 502,
+            "reposts": 133,
+            "comments": 67,
+            "topics": [
+              "samsung",
+              "nvidia"
+            ],
+            "category": "business",
+            "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+          },
+          {
+            "ticker": "NVDA",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/No_Presentation9490",
+            "author_name": "/u/No_Presentation9490",
+            "author_region": null,
+            "title": "Being right about the long-term trend doesn't mean the market owes you stock performance relative to your cost basis.",
+            "excerpt": "The current AI narrative of why AI datacenter stocks such as Nvidia, Oracle, Taiwan Semi, etc. are a \"sure bet\" and \"safe investment\" is that \"we can only grow from here\" and \"We will need more datacenters in the future, not less.\" While this may be true, it d",
+            "url": "https://www.reddit.com/r/stocks/comments/1ved2x4/being_right_about_the_longterm_trend_doesnt_mean/",
+            "published_at": "2026-08-03T13:13:23+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "NVDA",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/Southern_Row2615",
+            "author_name": "/u/Southern_Row2615",
+            "author_region": null,
+            "title": "How The F*ck is OpenAI Going to Pay 1.4 Trillion??",
+            "excerpt": "OpenAI currently generates $25B/year, and it is not a profitable company.. Yesterday I also saw that there is only 22% the will IPO this year, so most likely 2027, this is where they could get part of the money. They are expected to IPO at $1T valuation and co",
+            "url": "https://www.reddit.com/r/stocks/comments/1vdf3sz/how_the_fck_is_openai_going_to_pay_14_trillion/",
+            "published_at": "2026-08-02T10:58:42+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "NVDA",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/Theolino54",
+            "author_name": "/u/Theolino54",
+            "author_region": null,
+            "title": "First Stocks",
+            "excerpt": "Hey, I just turned 18 and in my Country it’s the min age for buying stocks independently. I wanted to buy some before but my parents didn’t allow me to and said it would be too dangerous for minors… So I just bought some stocks that match my interest and which",
+            "url": "https://www.reddit.com/r/stocks/comments/1vegtmw/first_stocks/",
+            "published_at": "2026-08-03T15:34:39+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "ticker": "005930.KS",
+        "company": "Samsung Electronics",
+        "theme": "存储·韩国半导体",
+        "attention_score": 206.8,
+        "source_count": 3,
+        "sources": [
+          "attentionvc",
+          "reddit",
+          "tl1"
+        ],
+        "source_labels": [
+          "AttentionVC X长文",
+          "Reddit 匿名只读",
+          "TL1 中文X热帖"
+        ],
+        "language_count": 3,
+        "languages": [
+          "en",
+          "ko",
+          "zh"
+        ],
+        "mention_count": 5,
+        "measured_views": 136751,
+        "evidence_level": "多源共振",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "005930.KS",
+            "source": "attentionvc",
+            "language": "ko",
+            "author": "@JhonbermanS4",
+            "author_name": "존버맨 인베스터",
+            "author_region": "Korea",
+            "title": "[X-파일] 삼성전자 100만원 가나요? 네? 5만전자요?",
+            "excerpt": "들어가기 전에 N줄 요약 삼성전자가 지난 2분기에 영업이익 89조 4천억원을 찍었다. 엔비디아보다 많이 벌었다. 미친거지 지구상 민간기업 중에서 석 달 동안 제일 많이 번 회사다. 그런데 그 발표가 나온 7월 7일,",
+            "url": "https://x.com/JhonbermanS4/status/2080423549349892459",
+            "published_at": "2026-07-23T22:43:21.000Z",
+            "views": 134150,
+            "likes": 502,
+            "reposts": 133,
+            "comments": 67,
+            "topics": [
+              "samsung",
+              "nvidia"
+            ],
+            "category": "business",
+            "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+          },
+          {
+            "ticker": "005930.KS",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/winterc1",
+            "author_name": "/u/winterc1",
+            "author_region": null,
+            "title": "Here’s why Korean index (KOSPI) went from 2600 (May, 2025) to 9000 (June, 2026) to 5600 (July, 2026).",
+            "excerpt": "The KOSPI has been in a wild ride but many people do not seem to understand it other than the memory boom due to data centers, so I wanted to share some information that is not as well known. Three reasons it went from 2600 to 9000 in a year (you probably didn",
+            "url": "https://www.reddit.com/r/stocks/comments/1vdkny1/heres_why_korean_index_kospi_went_from_2600_may/",
+            "published_at": "2026-08-02T15:15:23+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "005930.KS",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/willbabu",
+            "author_name": "/u/willbabu",
+            "author_region": null,
+            "title": "Koreans now all in on 2x inverse ETF",
+            "excerpt": "You can’t make this shit up. Sold 1T in long leverage ETF, half of that money immediately went to short leverage ETF to circumvent the new Korean rule, same day the Korean exchange went up 17% largest single gain ever. Headline: With the ₩30 million deposit ru",
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1vevv2v/koreans_now_all_in_on_2x_inverse_etf/",
+            "published_at": "2026-08-04T01:08:20+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/wallstreetbets"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "005930.KS",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/anotherloserhere",
+            "author_name": "/u/anotherloserhere",
+            "author_region": null,
+            "title": "Memory Crisis Expected to Worsen",
+            "excerpt": "Samsung's latest report suggests the RAM crisis is only just getting started — could we be looking at a new normal? Tldr; RAM shortages expected to worsen next year and 2028. More capacity not expected until 2029, and even then it is only a small amount - The ",
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1veyq28/memory_crisis_expected_to_worsen/",
+            "published_at": "2026-08-04T03:18:42+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/wallstreetbets"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 2
+      },
+      {
+        "ticker": "PLTR",
+        "company": "Palantir",
+        "theme": "AI软件·政府与企业",
+        "attention_score": 192.5,
+        "source_count": 3,
+        "sources": [
+          "attentionvc",
+          "reddit",
+          "tl1"
+        ],
+        "source_labels": [
+          "AttentionVC X长文",
+          "Reddit 匿名只读",
+          "TL1 中文X热帖"
+        ],
+        "language_count": 2,
+        "languages": [
+          "en",
+          "zh"
+        ],
+        "mention_count": 5,
+        "measured_views": 121995,
+        "evidence_level": "多源共振",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "PLTR",
+            "source": "attentionvc",
+            "language": "en",
+            "author": "@0xCodez",
+            "author_name": "Codez",
+            "author_region": "Ukraine",
+            "title": "How to become a Forward Deployed Engineer in 10 Steps: $785K / year (full-course)",
+            "excerpt": "Forward Deployed Engineer went from a Palantir curiosity to the most-recruited role in AI in twelve months - postings up 729%. This is the 10-step roadmap into it: what the job actually is, the stack",
+            "url": "https://x.com/0xCodez/status/2082468167935308098",
+            "published_at": "2026-07-29T14:07:56.000Z",
+            "views": 120283,
+            "likes": 508,
+            "reposts": 64,
+            "comments": 26,
+            "topics": [
+              "palantir"
+            ],
+            "category": "business",
+            "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+          },
+          {
+            "ticker": "PLTR",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/app1310",
+            "author_name": "/u/app1310",
+            "author_region": null,
+            "title": "Palantir posts blowout Q2 numbers, with U.S. commercial revenue soaring nearly 150%",
+            "excerpt": "Palantir topped second-quarter earnings on Monday and more than doubled commercial revenue growth from a year ago. The stock surged 8% after the numbers were released. Here’s how the company did versus LSEG estimates: Earnings per share: 41 cents adj. vs. 35 c",
+            "url": "https://www.reddit.com/r/stocks/comments/1veomq6/palantir_posts_blowout_q2_numbers_with_us/",
+            "published_at": "2026-08-03T20:15:41+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "PLTR",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/ProudMatter9227",
+            "author_name": "/u/ProudMatter9227",
+            "author_region": null,
+            "title": "Palantir posts blowout Q2 numbers, with U.S. commercial revenue soaring nearly 150%",
+            "excerpt": "submitted by /u/ProudMatter9227 [link] [comments]",
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1veowtu/palantir_posts_blowout_q2_numbers_with_us/",
+            "published_at": "2026-08-03T20:26:05+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/wallstreetbets"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "PLTR",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/Anteater_Able",
+            "author_name": "/u/Anteater_Able",
+            "author_region": null,
+            "title": "Palantir raises outlook on blowout Q2 numbers, U.S. commercial revenue soaring nearly 150%; Karp calls business sales 'otherworldly'",
+            "excerpt": "submitted by /u/Anteater_Able [link] [comments]",
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1veow56/palantir_raises_outlook_on_blowout_q2_numbers_us/",
+            "published_at": "2026-08-03T20:25:23+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/wallstreetbets"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 3
+      },
+      {
+        "ticker": "000660.KS",
+        "company": "SK Hynix",
+        "theme": "存储·HBM",
+        "attention_score": 191.5,
+        "source_count": 3,
+        "sources": [
+          "attentionvc",
+          "reddit",
+          "tl1"
+        ],
+        "source_labels": [
+          "AttentionVC X长文",
+          "Reddit 匿名只读",
+          "TL1 中文X热帖"
+        ],
+        "language_count": 2,
+        "languages": [
+          "en",
+          "zh"
+        ],
+        "mention_count": 5,
+        "measured_views": 81674,
+        "evidence_level": "多源共振",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "000660.KS",
+            "source": "attentionvc",
+            "language": "en",
+            "author": "@solana",
+            "author_name": "Solana",
+            "author_region": "United States",
+            "title": "THIS WEEK IN MEDIA - 7/10-7/17",
+            "excerpt": "Read The Street: SBI Holdings Teams Up With Solana on a New Onchain Market in Japan Crypto Briefing: SK Hynix Surges in Nasdaq Debut After Raising $26.5B in Share Sale, as Tokenized Versions Launch on",
+            "url": "https://x.com/solana/status/2078416824363073633",
+            "published_at": "2026-07-18T09:49:20.000Z",
+            "views": 79073,
+            "likes": 502,
+            "reposts": 72,
+            "comments": 125,
+            "topics": [
+              "sbi-holdings",
+              "sk-hynix",
+              "morgan-stanley"
+            ],
+            "category": "crypto",
+            "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+          },
+          {
+            "ticker": "000660.KS",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/One_Influenceo",
+            "author_name": "/u/One_Influenceo",
+            "author_region": null,
+            "title": "AI Market Correction Doesn’t Change the Long-Term Story But Excessive Leverage Needs to Reset",
+            "excerpt": "Last month, I posted here that the leverage in the artificial intelligence sector had become too high and that investors needed to look at this market more rationally. At that time, I also mentioned that the AI sector had already accumulated massive profits, a",
+            "url": "https://www.reddit.com/r/stocks/comments/1vegvzw/ai_market_correction_doesnt_change_the_longterm/",
+            "published_at": "2026-08-03T15:37:07+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "000660.KS",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/winterc1",
+            "author_name": "/u/winterc1",
+            "author_region": null,
+            "title": "Here’s why Korean index (KOSPI) went from 2600 (May, 2025) to 9000 (June, 2026) to 5600 (July, 2026).",
+            "excerpt": "The KOSPI has been in a wild ride but many people do not seem to understand it other than the memory boom due to data centers, so I wanted to share some information that is not as well known. Three reasons it went from 2600 to 9000 in a year (you probably didn",
+            "url": "https://www.reddit.com/r/stocks/comments/1vdkny1/heres_why_korean_index_kospi_went_from_2600_may/",
+            "published_at": "2026-08-02T15:15:23+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "000660.KS",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/willbabu",
+            "author_name": "/u/willbabu",
+            "author_region": null,
+            "title": "Koreans now all in on 2x inverse ETF",
+            "excerpt": "You can’t make this shit up. Sold 1T in long leverage ETF, half of that money immediately went to short leverage ETF to circumvent the new Korean rule, same day the Korean exchange went up 17% largest single gain ever. Headline: With the ₩30 million deposit ru",
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1vevv2v/koreans_now_all_in_on_2x_inverse_etf/",
+            "published_at": "2026-08-04T01:08:20+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/wallstreetbets"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 4
+      },
+      {
+        "ticker": "TSLA",
+        "company": "Tesla",
+        "theme": "智能汽车·机器人",
+        "attention_score": 163.4,
+        "source_count": 2,
+        "sources": [
+          "attentionvc",
+          "reddit"
+        ],
+        "source_labels": [
+          "AttentionVC X长文",
+          "Reddit 匿名只读"
+        ],
+        "language_count": 2,
+        "languages": [
+          "en",
+          "ko"
+        ],
+        "mention_count": 6,
+        "measured_views": 805561,
+        "evidence_level": "多源共振",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "TSLA",
+            "source": "attentionvc",
+            "language": "en",
+            "author": "@CernBasher",
+            "author_name": "Cern Basher",
+            "author_region": "United States",
+            "title": "13 Takeaways from Elon's Q2 Comments",
+            "excerpt": "Elon central message was that Tesla is entering a much broader and more capital-intensive growth phase. The most important implication is that Tesla’s future growth, in Elon’s framing, will be",
+            "url": "https://x.com/CernBasher/status/2080638520687767801",
+            "published_at": "2026-07-24T12:57:34.000Z",
+            "views": 171565,
+            "likes": 505,
+            "reposts": 92,
+            "comments": 39,
+            "topics": [
+              "elon-musk",
+              "tesla"
+            ],
+            "category": "business",
+            "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+          },
+          {
+            "ticker": "TSLA",
+            "source": "attentionvc",
+            "language": "ko",
+            "author": "@JhonbermanS4",
+            "author_name": "존버맨 인베스터",
+            "author_region": "Korea",
+            "title": "우리의 꿈과 희망 인류의 미래 나락도 락이다 \"테슬락\"",
+            "excerpt": "들어가기 전에 읽어 지난주에 테슬라 성적표가 나왔거든? 차는 역사상 제일 많이 팔았어. 근데 주가는 다음날? 하루에 15% 가까이 대폭락. 제일 잘 판 날 제일 크게 뺨을 맞은거임. 이게 말이 되냐 싶잖아. 근데 이",
+            "url": "https://x.com/JhonbermanS4/status/2081195257568608574",
+            "published_at": "2026-07-26T01:49:50.000Z",
+            "views": 137550,
+            "likes": 507,
+            "reposts": 119,
+            "comments": 74,
+            "topics": [
+              "tesla",
+              "elon-musk"
+            ],
+            "category": "business",
+            "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+          },
+          {
+            "ticker": "TSLA",
+            "source": "attentionvc",
+            "language": "en",
+            "author": "@BLKMDL3",
+            "author_name": "Zack",
+            "author_region": "United States",
+            "title": "FSD v14.3.7: My review",
+            "excerpt": "A few hours in with the new FSD v14.3.7 (2026.21.5), here are my first impressions and thoughts: I’ve driven it 115 miles so far, through city streets, highways, canyon roads, parking lots and more",
+            "url": "https://x.com/BLKMDL3/status/2083786259042902376",
+            "published_at": "2026-08-02T05:25:33.000Z",
+            "views": 107954,
+            "likes": 513,
+            "reposts": 27,
+            "comments": 33,
+            "topics": [
+              "fsd",
+              "tesla"
+            ],
+            "category": "tech",
+            "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+          },
+          {
+            "ticker": "TSLA",
+            "source": "attentionvc",
+            "language": "en",
+            "author": "@Investanswers",
+            "author_name": "InvestAnswers",
+            "author_region": "United States",
+            "title": "$500 to $600 TSLA by Year-End: Madness… or Mad Math?",
+            "excerpt": "I know $500 or even $600 TSLA by year-end sounds completely insane after the week we just had… But 2,000 unsupervised Cybercabs actually running at 100 miles/day is a forcing function Wall Street",
+            "url": "https://x.com/Investanswers/status/2081072265748508799",
+            "published_at": "2026-07-25T17:41:07.000Z",
+            "views": 39586,
+            "likes": 533,
+            "reposts": 45,
+            "comments": 54,
+            "topics": [
+              "tesla",
+              "fsd"
+            ],
+            "category": "business",
+            "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+          }
+        ],
+        "rank": 5
+      },
+      {
+        "ticker": "AAPL",
+        "company": "Apple",
+        "theme": "消费电子·AI终端",
+        "attention_score": 157.1,
+        "source_count": 2,
+        "sources": [
+          "reddit",
+          "tl1"
+        ],
+        "source_labels": [
+          "Reddit 匿名只读",
+          "TL1 中文X热帖"
+        ],
+        "language_count": 2,
+        "languages": [
+          "en",
+          "zh"
+        ],
+        "mention_count": 7,
+        "measured_views": 15174,
+        "evidence_level": "多源共振",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "AAPL",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/_Mido",
+            "author_name": "/u/_Mido",
+            "author_region": null,
+            "title": "Apple Earns $2.2 Billion in Tariff Refunds",
+            "excerpt": "*Apple received an estimated $2.19 billion in tariff refunds […] Apple reported a gross margin of 50.1%, with tariff refunds contributing a favorable impact of around two percentage points. The refunds also increased diluted earnings per share by $0.11, bringi",
+            "url": "https://www.reddit.com/r/stocks/comments/1ve602j/apple_earns_22_billion_in_tariff_refunds/",
+            "published_at": "2026-08-03T07:00:33+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "AAPL",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/FailOk1528",
+            "author_name": "/u/FailOk1528",
+            "author_region": null,
+            "title": "Apple and Amazon both got tariff refunds. Are investors backing these out of earnings?",
+            "excerpt": "Apple said tariff refunds added about two percentage points to gross margin and $0.11 to EPS. Amazon received another $600M. Obviously the cash is real, but it didn’t come from higher sales or better operations, and it won’t repeat forever. I haven’t seen much",
+            "url": "https://www.reddit.com/r/stocks/comments/1vf41rb/apple_and_amazon_both_got_tariff_refunds_are/",
+            "published_at": "2026-08-04T08:07:21+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "AAPL",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/CivilizedSteve",
+            "author_name": "/u/CivilizedSteve",
+            "author_region": null,
+            "title": "Whose earnings does AI help now, the most, beyond capex spending?",
+            "excerpt": "The market wants to know who can best leverage AI into earnings now, right? What about APP? $1.3B free cash flow. Current Trailing P/E is ~34x but 59% revenue growth and a lot of cash generation. 88% gross margin. RSI ~56. $1B buybacks in Q1. Q2 guidance: reve",
+            "url": "https://www.reddit.com/r/stocks/comments/1ve04mj/whose_earnings_does_ai_help_now_the_most_beyond/",
+            "published_at": "2026-08-03T01:54:18+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "AAPL",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/Savings-Display5123",
+            "author_name": "/u/Savings-Display5123",
+            "author_region": null,
+            "title": "Larry Ellison has 346 million Oracle shares pledged as loan collateral. The stock has lost more than half its value since last September.",
+            "excerpt": "The NYT ran a piece yesterday asking whether Ellison will end up the face of the AI bubble. Forget the framing, the numbers underneath are wilder than the headline. Oracle burned $55.7 billion in capex last fiscal year, more than double the year before, nearly",
+            "url": "https://www.reddit.com/r/stocks/comments/1vcq7k5/larry_ellison_has_346_million_oracle_shares/",
+            "published_at": "2026-08-01T15:24:20+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 6
+      },
+      {
+        "ticker": "MU",
+        "company": "Micron",
+        "theme": "存储·HBM",
+        "attention_score": 139.3,
+        "source_count": 2,
+        "sources": [
+          "reddit",
+          "tl1"
+        ],
+        "source_labels": [
+          "Reddit 匿名只读",
+          "TL1 中文X热帖"
+        ],
+        "language_count": 2,
+        "languages": [
+          "en",
+          "zh"
+        ],
+        "mention_count": 4,
+        "measured_views": 1671,
+        "evidence_level": "多源共振",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "MU",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/Key_Category_8531",
+            "author_name": "/u/Key_Category_8531",
+            "author_region": null,
+            "title": "How are we feeling about Micron?",
+            "excerpt": "I think right now is still a decent opportunity for MU investors who got caught up in the hype to sell and minimize losses or lock in profits What I'm wondering though is if the memory hype narrative is still alive All of July the stock has been dumping. It sh",
+            "url": "https://www.reddit.com/r/stocks/comments/1veh61b/how_are_we_feeling_about_micron/",
+            "published_at": "2026-08-03T15:47:13+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "MU",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/Key_Category_8531",
+            "author_name": "/u/Key_Category_8531",
+            "author_region": null,
+            "title": "Price analysts to Micron investors",
+            "excerpt": "submitted by /u/Key_Category_8531 [link] [comments]",
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1vettb0/price_analysts_to_micron_investors/",
+            "published_at": "2026-08-03T23:40:07+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/wallstreetbets"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "MU",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/WhyOverComplicated",
+            "author_name": "/u/WhyOverComplicated",
+            "author_region": null,
+            "title": "Still have hope, switching to options",
+            "excerpt": "I’m 21 in college having worked weekends for 4 years living extremely frugally ($400 rent to mom if in school, buys my own food, rides a bike year round). I deposited all that saved up money and put it into x2 micron basically. The goal was to get to 100k (+10",
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1vejyqv/still_have_hope_switching_to_options/",
+            "published_at": "2026-08-03T17:26:44+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/wallstreetbets"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "MU",
+            "source": "tl1",
+            "language": "zh",
+            "author": "@web3annie",
+            "author_name": "Annie 所长",
+            "author_region": null,
+            "title": "半导体板块未来走势预测： 1. 整体判断：短期已见顶。 可能先小幅反弹骗散户接盘，然后回调20%-30%到周线公允价值支撑，之后再看能否继续上涨。 2. $AMD 短期最好情况先冲到$520-$540 ，然后回调到$380、$360附近（买",
+            "excerpt": "半导体板块未来走势预测： 1. 整体判断：短期已见顶。 可能先小幅反弹骗散户接盘，然后回调20%-30%到周线公允价值支撑，之后再看能否继续上涨。 2. $AMD 短期最好情况先冲到$520-$540 ，然后回调到$380、$360附近（买入观察区）。 周二盘后财报可能成为下跌触发点。 3. 美光 $MU https://t.co/BV7kivdjJI",
+            "url": "https://x.com/web3annie/status/2084553247449117078",
+            "published_at": "2026-08-04T08:13:17.000Z",
+            "views": 1671,
+            "likes": 11,
+            "reposts": 1,
+            "comments": 6,
+            "topics": [],
+            "category": "public_post",
+            "window_note": "TL1 当日入榜热帖"
+          }
+        ],
+        "rank": 7
+      },
+      {
+        "ticker": "AMD",
+        "company": "AMD",
+        "theme": "AI芯片",
+        "attention_score": 131.3,
+        "source_count": 2,
+        "sources": [
+          "reddit",
+          "tl1"
+        ],
+        "source_labels": [
+          "Reddit 匿名只读",
+          "TL1 中文X热帖"
+        ],
+        "language_count": 2,
+        "languages": [
+          "en",
+          "zh"
+        ],
+        "mention_count": 2,
+        "measured_views": 1671,
+        "evidence_level": "多源共振",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "AMD",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/Southern_Row2615",
+            "author_name": "/u/Southern_Row2615",
+            "author_region": null,
+            "title": "How The F*ck is OpenAI Going to Pay 1.4 Trillion??",
+            "excerpt": "OpenAI currently generates $25B/year, and it is not a profitable company.. Yesterday I also saw that there is only 22% the will IPO this year, so most likely 2027, this is where they could get part of the money. They are expected to IPO at $1T valuation and co",
+            "url": "https://www.reddit.com/r/stocks/comments/1vdf3sz/how_the_fck_is_openai_going_to_pay_14_trillion/",
+            "published_at": "2026-08-02T10:58:42+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "AMD",
+            "source": "tl1",
+            "language": "zh",
+            "author": "@web3annie",
+            "author_name": "Annie 所长",
+            "author_region": null,
+            "title": "半导体板块未来走势预测： 1. 整体判断：短期已见顶。 可能先小幅反弹骗散户接盘，然后回调20%-30%到周线公允价值支撑，之后再看能否继续上涨。 2. $AMD 短期最好情况先冲到$520-$540 ，然后回调到$380、$360附近（买",
+            "excerpt": "半导体板块未来走势预测： 1. 整体判断：短期已见顶。 可能先小幅反弹骗散户接盘，然后回调20%-30%到周线公允价值支撑，之后再看能否继续上涨。 2. $AMD 短期最好情况先冲到$520-$540 ，然后回调到$380、$360附近（买入观察区）。 周二盘后财报可能成为下跌触发点。 3. 美光 $MU https://t.co/BV7kivdjJI",
+            "url": "https://x.com/web3annie/status/2084553247449117078",
+            "published_at": "2026-08-04T08:13:17.000Z",
+            "views": 1671,
+            "likes": 11,
+            "reposts": 1,
+            "comments": 6,
+            "topics": [],
+            "category": "public_post",
+            "window_note": "TL1 当日入榜热帖"
+          }
+        ],
+        "rank": 8
+      },
+      {
+        "ticker": "GOOGL",
+        "company": "Alphabet",
+        "theme": "AI平台·广告",
+        "attention_score": 134.1,
+        "source_count": 2,
+        "sources": [
+          "attentionvc",
+          "reddit"
+        ],
+        "source_labels": [
+          "AttentionVC X长文",
+          "Reddit 匿名只读"
+        ],
+        "language_count": 1,
+        "languages": [
+          "en"
+        ],
+        "mention_count": 4,
+        "measured_views": 48359,
+        "evidence_level": "多源共振",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "GOOGL",
+            "source": "attentionvc",
+            "language": "en",
+            "author": "@GoogleAI",
+            "author_name": "Google AI",
+            "author_region": "United States",
+            "title": "Mapping the Brain with Connectomics",
+            "excerpt": "Did you know that mapping a speck of the human brain (smaller than a grain of rice) revealed never-before-seen structures, like single neurons connected by up to 50 synapses? This offers us brand-new",
+            "url": "https://x.com/GoogleAI/status/2082466336228122711",
+            "published_at": "2026-07-29T14:00:39.000Z",
+            "views": 48359,
+            "likes": 635,
+            "reposts": 79,
+            "comments": 25,
+            "topics": [
+              "google-research",
+              "connectomics"
+            ],
+            "category": "tech",
+            "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+          },
+          {
+            "ticker": "GOOGL",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/AutoModerator",
+            "author_name": "/u/AutoModerator",
+            "author_region": null,
+            "title": "r/Stocks Daily Discussion Monday - Aug 03, 2026",
+            "excerpt": "These daily discussions run from Monday to Friday including during our themed posts. Some helpful links: * [Finviz]( https://finviz.com/quote.ashx?t=spy ) for charts, fundamentals, and aggregated news on individual stocks * [Bloomberg market news]( https://www",
+            "url": "https://www.reddit.com/r/stocks/comments/1vea1cf/rstocks_daily_discussion_monday_aug_03_2026/",
+            "published_at": "2026-08-03T10:50:07+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "GOOGL",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/CivilizedSteve",
+            "author_name": "/u/CivilizedSteve",
+            "author_region": null,
+            "title": "Whose earnings does AI help now, the most, beyond capex spending?",
+            "excerpt": "The market wants to know who can best leverage AI into earnings now, right? What about APP? $1.3B free cash flow. Current Trailing P/E is ~34x but 59% revenue growth and a lot of cash generation. 88% gross margin. RSI ~56. $1B buybacks in Q1. Q2 guidance: reve",
+            "url": "https://www.reddit.com/r/stocks/comments/1ve04mj/whose_earnings_does_ai_help_now_the_most_beyond/",
+            "published_at": "2026-08-03T01:54:18+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "GOOGL",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/No_Presentation9490",
+            "author_name": "/u/No_Presentation9490",
+            "author_region": null,
+            "title": "The mental trap of avoiding triggering capital gains taxes",
+            "excerpt": "As we saw from the recent AI infrastructure stock run-up and subsequent crash of 35-45%, the mindset of not wanting to pay capital gains taxes can cause people to get locked in completely to sunk-cost fallacy and bargaining with the market. Many people who bou",
+            "url": "https://www.reddit.com/r/stocks/comments/1vckl80/the_mental_trap_of_avoiding_triggering_capital/",
+            "published_at": "2026-08-01T11:12:37+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 9
+      },
+      {
+        "ticker": "MSFT",
+        "company": "Microsoft",
+        "theme": "AI云·软件",
+        "attention_score": 87.8,
+        "source_count": 1,
+        "sources": [
+          "attentionvc"
+        ],
+        "source_labels": [
+          "AttentionVC X长文"
+        ],
+        "language_count": 1,
+        "languages": [
+          "en"
+        ],
+        "mention_count": 1,
+        "measured_views": 197135,
+        "evidence_level": "单源升温",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "MSFT",
+            "source": "attentionvc",
+            "language": "en",
+            "author": "@pavandavuluri",
+            "author_name": "Pavan Davuluri",
+            "author_region": "United States",
+            "title": "Windows quality: an update on the commitment we made in March",
+            "excerpt": "In March I wrote to you about our commitment to Windows quality. Four months in, the team and I have been reflecting on our progress and wanted to share an update. We know there is more to do,",
+            "url": "https://x.com/pavandavuluri/status/2083221255436812418",
+            "published_at": "2026-07-31T16:00:26.000Z",
+            "views": 197135,
+            "likes": 504,
+            "reposts": 71,
+            "comments": 73,
+            "topics": [
+              "microsoft",
+              "windows"
+            ],
+            "category": "tech",
+            "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+          }
+        ],
+        "rank": 10
+      },
+      {
+        "ticker": "INTC",
+        "company": "Intel",
+        "theme": "半导体·制造",
+        "attention_score": 80.4,
+        "source_count": 1,
+        "sources": [
+          "tl1"
+        ],
+        "source_labels": [
+          "TL1 中文X热帖"
+        ],
+        "language_count": 1,
+        "languages": [
+          "zh"
+        ],
+        "mention_count": 1,
+        "measured_views": 11594,
+        "evidence_level": "单源升温",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "INTC",
+            "source": "tl1",
+            "language": "zh",
+            "author": "@TJ_Research",
+            "author_name": "投资TALK君",
+            "author_region": null,
+            "title": "7月初做展望时的观点不变，软硬双修，不是A或者B，而是A和B。上半年账户涨幅几乎全部来自于英特尔，之后120进行了两次减仓，但长期仍然非常看好，第二大仓位。另外今年喊了好几次的苹果，过去几个月也贡献了很多，财报前和财报后也两次减仓，仍然持有",
+            "excerpt": "7月初做展望时的观点不变，软硬双修，不是A或者B，而是A和B。上半年账户涨幅几乎全部来自于英特尔，之后120进行了两次减仓，但长期仍然非常看好，第二大仓位。另外今年喊了好几次的苹果，过去几个月也贡献了很多，财报前和财报后也两次减仓，仍然持有并在估值合理后加回，看好AI",
+            "url": "https://x.com/TJ_Research/status/2084543155160965607",
+            "published_at": "2026-08-04T07:33:11.000Z",
+            "views": 11594,
+            "likes": 52,
+            "reposts": 2,
+            "comments": 15,
+            "topics": [],
+            "category": "public_post",
+            "window_note": "TL1 当日入榜热帖"
+          }
+        ],
+        "rank": 11
+      },
+      {
+        "ticker": "AMZN",
+        "company": "Amazon",
+        "theme": "云计算·电商",
+        "attention_score": 64.0,
+        "source_count": 1,
+        "sources": [
+          "reddit"
+        ],
+        "source_labels": [
+          "Reddit 匿名只读"
+        ],
+        "language_count": 1,
+        "languages": [
+          "en"
+        ],
+        "mention_count": 3,
+        "measured_views": 0,
+        "evidence_level": "单源升温",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "AMZN",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/FailOk1528",
+            "author_name": "/u/FailOk1528",
+            "author_region": null,
+            "title": "Apple and Amazon both got tariff refunds. Are investors backing these out of earnings?",
+            "excerpt": "Apple said tariff refunds added about two percentage points to gross margin and $0.11 to EPS. Amazon received another $600M. Obviously the cash is real, but it didn’t come from higher sales or better operations, and it won’t repeat forever. I haven’t seen much",
+            "url": "https://www.reddit.com/r/stocks/comments/1vf41rb/apple_and_amazon_both_got_tariff_refunds_are/",
+            "published_at": "2026-08-04T08:07:21+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "AMZN",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/BogleDick",
+            "author_name": "/u/BogleDick",
+            "author_region": null,
+            "title": "Amazon says it got $600 million in Trump tariff refunds and will pass return along to some customers",
+            "excerpt": "Amazon disclosed Thursday that it has received $600 million in tariff refunds after the Supreme Court ruled that many of President Donald Trump's levies were illegal, and said it expects to return some of that cash to customers. We are participating in the tar",
+            "url": "https://www.reddit.com/r/stocks/comments/1vdhp4q/amazon_says_it_got_600_million_in_trump_tariff/",
+            "published_at": "2026-08-02T13:09:18+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "AMZN",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/No_Presentation9490",
+            "author_name": "/u/No_Presentation9490",
+            "author_region": null,
+            "title": "The mental trap of avoiding triggering capital gains taxes",
+            "excerpt": "As we saw from the recent AI infrastructure stock run-up and subsequent crash of 35-45%, the mindset of not wanting to pay capital gains taxes can cause people to get locked in completely to sunk-cost fallacy and bargaining with the market. Many people who bou",
+            "url": "https://www.reddit.com/r/stocks/comments/1vckl80/the_mental_trap_of_avoiding_triggering_capital/",
+            "published_at": "2026-08-01T11:12:37+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 12
+      },
+      {
+        "ticker": "ORCL",
+        "company": "Oracle",
+        "theme": "AI云·数据中心",
+        "attention_score": 60.0,
+        "source_count": 1,
+        "sources": [
+          "reddit"
+        ],
+        "source_labels": [
+          "Reddit 匿名只读"
+        ],
+        "language_count": 1,
+        "languages": [
+          "en"
+        ],
+        "mention_count": 2,
+        "measured_views": 0,
+        "evidence_level": "单源升温",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "ORCL",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/No_Presentation9490",
+            "author_name": "/u/No_Presentation9490",
+            "author_region": null,
+            "title": "Being right about the long-term trend doesn't mean the market owes you stock performance relative to your cost basis.",
+            "excerpt": "The current AI narrative of why AI datacenter stocks such as Nvidia, Oracle, Taiwan Semi, etc. are a \"sure bet\" and \"safe investment\" is that \"we can only grow from here\" and \"We will need more datacenters in the future, not less.\" While this may be true, it d",
+            "url": "https://www.reddit.com/r/stocks/comments/1ved2x4/being_right_about_the_longterm_trend_doesnt_mean/",
+            "published_at": "2026-08-03T13:13:23+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          },
+          {
+            "ticker": "ORCL",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/Savings-Display5123",
+            "author_name": "/u/Savings-Display5123",
+            "author_region": null,
+            "title": "Larry Ellison has 346 million Oracle shares pledged as loan collateral. The stock has lost more than half its value since last September.",
+            "excerpt": "The NYT ran a piece yesterday asking whether Ellison will end up the face of the AI bubble. Forget the framing, the numbers underneath are wilder than the headline. Oracle burned $55.7 billion in capex last fiscal year, more than double the year before, nearly",
+            "url": "https://www.reddit.com/r/stocks/comments/1vcq7k5/larry_ellison_has_346_million_oracle_shares/",
+            "published_at": "2026-08-01T15:24:20+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 13
+      },
+      {
+        "ticker": "IONQ",
+        "company": "IonQ",
+        "theme": "量子计算",
+        "attention_score": 56.0,
+        "source_count": 1,
+        "sources": [
+          "reddit"
+        ],
+        "source_labels": [
+          "Reddit 匿名只读"
+        ],
+        "language_count": 1,
+        "languages": [
+          "en"
+        ],
+        "mention_count": 1,
+        "measured_views": 0,
+        "evidence_level": "单源升温",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "IONQ",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/JobuJabroni",
+            "author_name": "/u/JobuJabroni",
+            "author_region": null,
+            "title": "IonQ Completes Acquisition of Semiconductor Manufacturer SkyWater Technology",
+            "excerpt": "\" IonQ (NYSE: IONQ), the world’s leading quantum platform company, today completed its acquisition of SkyWater Technology (NASDAQ: SKYT), the largest exclusively U.S.-based semiconductor foundry. “Acquiring SkyWater crystalizes IonQ’s vision to serve as a tech",
+            "url": "https://www.reddit.com/r/stocks/comments/1vewx2i/ionq_completes_acquisition_of_semiconductor/",
+            "published_at": "2026-08-04T01:55:13+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 14
+      },
+      {
+        "ticker": "SKYT",
+        "company": "SkyWater Technology",
+        "theme": "半导体制造",
+        "attention_score": 56.0,
+        "source_count": 1,
+        "sources": [
+          "reddit"
+        ],
+        "source_labels": [
+          "Reddit 匿名只读"
+        ],
+        "language_count": 1,
+        "languages": [
+          "en"
+        ],
+        "mention_count": 1,
+        "measured_views": 0,
+        "evidence_level": "单源升温",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "SKYT",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/JobuJabroni",
+            "author_name": "/u/JobuJabroni",
+            "author_region": null,
+            "title": "IonQ Completes Acquisition of Semiconductor Manufacturer SkyWater Technology",
+            "excerpt": "\" IonQ (NYSE: IONQ), the world’s leading quantum platform company, today completed its acquisition of SkyWater Technology (NASDAQ: SKYT), the largest exclusively U.S.-based semiconductor foundry. “Acquiring SkyWater crystalizes IonQ’s vision to serve as a tech",
+            "url": "https://www.reddit.com/r/stocks/comments/1vewx2i/ionq_completes_acquisition_of_semiconductor/",
+            "published_at": "2026-08-04T01:55:13+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 15
+      },
+      {
+        "ticker": "DIS",
+        "company": "Disney",
+        "theme": "媒体·娱乐",
+        "attention_score": 56.0,
+        "source_count": 1,
+        "sources": [
+          "reddit"
+        ],
+        "source_labels": [
+          "Reddit 匿名只读"
+        ],
+        "language_count": 1,
+        "languages": [
+          "en"
+        ],
+        "mention_count": 1,
+        "measured_views": 0,
+        "evidence_level": "单源升温",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "DIS",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/CuteSuspectt",
+            "author_name": "/u/CuteSuspectt",
+            "author_region": null,
+            "title": "Disney is down 20% over the past year and has beaten earnings four straight quarters.something doesnt add up",
+            "excerpt": "I am trying to understand why the market hates a stock that keeps beating expectations,the numbers going into wed arent bad( four consecutive earnings beats).The Q2 saw streaming entertainment revenue grow 13%, parks are like up 7% to nearly $9.5 billion and e",
+            "url": "https://www.reddit.com/r/stocks/comments/1vdua2k/disney_is_down_20_over_the_past_year_and_has/",
+            "published_at": "2026-08-02T21:34:13+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 16
+      },
+      {
+        "ticker": "PSIX",
+        "company": "Power Solutions International",
+        "theme": "数据中心·动力",
+        "attention_score": 56.0,
+        "source_count": 1,
+        "sources": [
+          "reddit"
+        ],
+        "source_labels": [
+          "Reddit 匿名只读"
+        ],
+        "language_count": 1,
+        "languages": [
+          "en"
+        ],
+        "mention_count": 1,
+        "measured_views": 0,
+        "evidence_level": "单源升温",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "PSIX",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/Odd-Record-1041",
+            "author_name": "/u/Odd-Record-1041",
+            "author_region": null,
+            "title": "Power Solutions International PSIX - Sub-1 P/S and 6.7x P/E with Data Center Exposure",
+            "excerpt": "I was driving through Wisconsin this past weekend and passed by one of Power Solutions International's (PSIX) manufacturing facilities. Ended up looking up the company and the stock caught my eye. Business Overview Who they sell to: They build engines for othe",
+            "url": "https://www.reddit.com/r/stocks/comments/1vepcd1/power_solutions_international_psix_sub1_ps_and/",
+            "published_at": "2026-08-03T20:42:10+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 17
+      },
+      {
+        "ticker": "GRND",
+        "company": "Grindr",
+        "theme": "社交平台",
+        "attention_score": 56.0,
+        "source_count": 1,
+        "sources": [
+          "reddit"
+        ],
+        "source_labels": [
+          "Reddit 匿名只读"
+        ],
+        "language_count": 1,
+        "languages": [
+          "en"
+        ],
+        "mention_count": 1,
+        "measured_views": 0,
+        "evidence_level": "单源升温",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "GRND",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/Grffin721",
+            "author_name": "/u/Grffin721",
+            "author_region": null,
+            "title": "The best setup in the market is a gay dating app",
+            "excerpt": "Yes, I’m talking about Grindr ($GRND), a company I’m sure you are all very familiar with. For those of you who have “never heard of it”, Grindr is a gay social media/ dating app which serves 15 million monthly average users as of year-end 2025. Not only is Gri",
+            "url": "https://www.reddit.com/r/stocks/comments/1vdysqo/the_best_setup_in_the_market_is_a_gay_dating_app/",
+            "published_at": "2026-08-03T00:51:10+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/stocks"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 18
+      },
+      {
+        "ticker": "SOFI",
+        "company": "SoFi",
+        "theme": "金融科技",
+        "attention_score": 56.0,
+        "source_count": 1,
+        "sources": [
+          "reddit"
+        ],
+        "source_labels": [
+          "Reddit 匿名只读"
+        ],
+        "language_count": 1,
+        "languages": [
+          "en"
+        ],
+        "mention_count": 1,
+        "measured_views": 0,
+        "evidence_level": "单源升温",
+        "direction": "讨论方向需读原帖",
+        "top_mentions": [
+          {
+            "ticker": "SOFI",
+            "source": "reddit",
+            "language": "en",
+            "author": "/u/PKLeor",
+            "author_name": "/u/PKLeor",
+            "author_region": null,
+            "title": "YOLO - Market Doesn't Understand SoFi (SOFI)",
+            "excerpt": "Welcome back to regarded takes with pretty pictures. Last time we looked at a banner with He-Man which was enough to get some regards in. Now we have a lovely SoFi stadium backdrop and some little glowy icons. Oooh ahhh. Onto the DD! But first, what I did here",
+            "url": "https://www.reddit.com/r/wallstreetbets/comments/1verj10/yolo_market_doesnt_understand_sofi_sofi/",
+            "published_at": "2026-08-03T22:05:15+00:00",
+            "views": null,
+            "likes": null,
+            "reposts": null,
+            "comments": null,
+            "topics": [
+              "r/wallstreetbets"
+            ],
+            "category": "community_post",
+            "window_note": "Reddit MCP匿名模式的RSS回退；无投票和评论计数"
+          }
+        ],
+        "rank": 19
+      }
+    ],
+    "language_lanes": {
+      "en": [
+        {
+          "ticker": "TSLA",
+          "source": "attentionvc",
+          "language": "en",
+          "author": "@Tesla",
+          "author_name": "Tesla",
+          "author_region": "United States",
+          "title": "Summer Release 2026",
+          "excerpt": "2026 Summer Release rolling out shortly – here's what to expect More Grok Commands Grok can now make phone calls, search and play music, adjust climate, open the glovebox, and answer questions",
+          "url": "https://x.com/Tesla/status/2079584176182087827",
+          "published_at": "2026-07-21T15:07:59.000Z",
+          "views": 348906,
+          "likes": 3805,
+          "reposts": 524,
+          "comments": 384,
+          "topics": [
+            "tesla"
+          ],
+          "category": "tech",
+          "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+        },
+        {
+          "ticker": "MSFT",
+          "source": "attentionvc",
+          "language": "en",
+          "author": "@pavandavuluri",
+          "author_name": "Pavan Davuluri",
+          "author_region": "United States",
+          "title": "Windows quality: an update on the commitment we made in March",
+          "excerpt": "In March I wrote to you about our commitment to Windows quality. Four months in, the team and I have been reflecting on our progress and wanted to share an update. We know there is more to do,",
+          "url": "https://x.com/pavandavuluri/status/2083221255436812418",
+          "published_at": "2026-07-31T16:00:26.000Z",
+          "views": 197135,
+          "likes": 504,
+          "reposts": 71,
+          "comments": 73,
+          "topics": [
+            "microsoft",
+            "windows"
+          ],
+          "category": "tech",
+          "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+        },
+        {
+          "ticker": "TSLA",
+          "source": "attentionvc",
+          "language": "en",
+          "author": "@CernBasher",
+          "author_name": "Cern Basher",
+          "author_region": "United States",
+          "title": "13 Takeaways from Elon's Q2 Comments",
+          "excerpt": "Elon central message was that Tesla is entering a much broader and more capital-intensive growth phase. The most important implication is that Tesla’s future growth, in Elon’s framing, will be",
+          "url": "https://x.com/CernBasher/status/2080638520687767801",
+          "published_at": "2026-07-24T12:57:34.000Z",
+          "views": 171565,
+          "likes": 505,
+          "reposts": 92,
+          "comments": 39,
+          "topics": [
+            "elon-musk",
+            "tesla"
+          ],
+          "category": "business",
+          "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+        },
+        {
+          "ticker": "PLTR",
+          "source": "attentionvc",
+          "language": "en",
+          "author": "@0xCodez",
+          "author_name": "Codez",
+          "author_region": "Ukraine",
+          "title": "How to become a Forward Deployed Engineer in 10 Steps: $785K / year (full-course)",
+          "excerpt": "Forward Deployed Engineer went from a Palantir curiosity to the most-recruited role in AI in twelve months - postings up 729%. This is the 10-step roadmap into it: what the job actually is, the stack",
+          "url": "https://x.com/0xCodez/status/2082468167935308098",
+          "published_at": "2026-07-29T14:07:56.000Z",
+          "views": 120283,
+          "likes": 508,
+          "reposts": 64,
+          "comments": 26,
+          "topics": [
+            "palantir"
+          ],
+          "category": "business",
+          "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+        },
+        {
+          "ticker": "TSLA",
+          "source": "attentionvc",
+          "language": "en",
+          "author": "@BLKMDL3",
+          "author_name": "Zack",
+          "author_region": "United States",
+          "title": "FSD v14.3.7: My review",
+          "excerpt": "A few hours in with the new FSD v14.3.7 (2026.21.5), here are my first impressions and thoughts: I’ve driven it 115 miles so far, through city streets, highways, canyon roads, parking lots and more",
+          "url": "https://x.com/BLKMDL3/status/2083786259042902376",
+          "published_at": "2026-08-02T05:25:33.000Z",
+          "views": 107954,
+          "likes": 513,
+          "reposts": 27,
+          "comments": 33,
+          "topics": [
+            "fsd",
+            "tesla"
+          ],
+          "category": "tech",
+          "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+        },
+        {
+          "ticker": "000660.KS",
+          "source": "attentionvc",
+          "language": "en",
+          "author": "@solana",
+          "author_name": "Solana",
+          "author_region": "United States",
+          "title": "THIS WEEK IN MEDIA - 7/10-7/17",
+          "excerpt": "Read The Street: SBI Holdings Teams Up With Solana on a New Onchain Market in Japan Crypto Briefing: SK Hynix Surges in Nasdaq Debut After Raising $26.5B in Share Sale, as Tokenized Versions Launch on",
+          "url": "https://x.com/solana/status/2078416824363073633",
+          "published_at": "2026-07-18T09:49:20.000Z",
+          "views": 79073,
+          "likes": 502,
+          "reposts": 72,
+          "comments": 125,
+          "topics": [
+            "sbi-holdings",
+            "sk-hynix",
+            "morgan-stanley"
+          ],
+          "category": "crypto",
+          "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+        },
+        {
+          "ticker": "GOOGL",
+          "source": "attentionvc",
+          "language": "en",
+          "author": "@GoogleAI",
+          "author_name": "Google AI",
+          "author_region": "United States",
+          "title": "Mapping the Brain with Connectomics",
+          "excerpt": "Did you know that mapping a speck of the human brain (smaller than a grain of rice) revealed never-before-seen structures, like single neurons connected by up to 50 synapses? This offers us brand-new",
+          "url": "https://x.com/GoogleAI/status/2082466336228122711",
+          "published_at": "2026-07-29T14:00:39.000Z",
+          "views": 48359,
+          "likes": 635,
+          "reposts": 79,
+          "comments": 25,
+          "topics": [
+            "google-research",
+            "connectomics"
+          ],
+          "category": "tech",
+          "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+        },
+        {
+          "ticker": "TSLA",
+          "source": "attentionvc",
+          "language": "en",
+          "author": "@Investanswers",
+          "author_name": "InvestAnswers",
+          "author_region": "United States",
+          "title": "$500 to $600 TSLA by Year-End: Madness… or Mad Math?",
+          "excerpt": "I know $500 or even $600 TSLA by year-end sounds completely insane after the week we just had… But 2,000 unsupervised Cybercabs actually running at 100 miles/day is a forcing function Wall Street",
+          "url": "https://x.com/Investanswers/status/2081072265748508799",
+          "published_at": "2026-07-25T17:41:07.000Z",
+          "views": 39586,
+          "likes": 533,
+          "reposts": 45,
+          "comments": 54,
+          "topics": [
+            "tesla",
+            "fsd"
+          ],
+          "category": "business",
+          "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+        }
+      ],
+      "ko": [
+        {
+          "ticker": "TSLA",
+          "source": "attentionvc",
+          "language": "ko",
+          "author": "@JhonbermanS4",
+          "author_name": "존버맨 인베스터",
+          "author_region": "Korea",
+          "title": "우리의 꿈과 희망 인류의 미래 나락도 락이다 \"테슬락\"",
+          "excerpt": "들어가기 전에 읽어 지난주에 테슬라 성적표가 나왔거든? 차는 역사상 제일 많이 팔았어. 근데 주가는 다음날? 하루에 15% 가까이 대폭락. 제일 잘 판 날 제일 크게 뺨을 맞은거임. 이게 말이 되냐 싶잖아. 근데 이",
+          "url": "https://x.com/JhonbermanS4/status/2081195257568608574",
+          "published_at": "2026-07-26T01:49:50.000Z",
+          "views": 137550,
+          "likes": 507,
+          "reposts": 119,
+          "comments": 74,
+          "topics": [
+            "tesla",
+            "elon-musk"
+          ],
+          "category": "business",
+          "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+        },
+        {
+          "ticker": "NVDA",
+          "source": "attentionvc",
+          "language": "ko",
+          "author": "@JhonbermanS4",
+          "author_name": "존버맨 인베스터",
+          "author_region": "Korea",
+          "title": "[X-파일] 삼성전자 100만원 가나요? 네? 5만전자요?",
+          "excerpt": "들어가기 전에 N줄 요약 삼성전자가 지난 2분기에 영업이익 89조 4천억원을 찍었다. 엔비디아보다 많이 벌었다. 미친거지 지구상 민간기업 중에서 석 달 동안 제일 많이 번 회사다. 그런데 그 발표가 나온 7월 7일,",
+          "url": "https://x.com/JhonbermanS4/status/2080423549349892459",
+          "published_at": "2026-07-23T22:43:21.000Z",
+          "views": 134150,
+          "likes": 502,
+          "reposts": 133,
+          "comments": 67,
+          "topics": [
+            "samsung",
+            "nvidia"
+          ],
+          "category": "business",
+          "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+        },
+        {
+          "ticker": "005930.KS",
+          "source": "attentionvc",
+          "language": "ko",
+          "author": "@JhonbermanS4",
+          "author_name": "존버맨 인베스터",
+          "author_region": "Korea",
+          "title": "[X-파일] 삼성전자 100만원 가나요? 네? 5만전자요?",
+          "excerpt": "들어가기 전에 N줄 요약 삼성전자가 지난 2분기에 영업이익 89조 4천억원을 찍었다. 엔비디아보다 많이 벌었다. 미친거지 지구상 민간기업 중에서 석 달 동안 제일 많이 번 회사다. 그런데 그 발표가 나온 7월 7일,",
+          "url": "https://x.com/JhonbermanS4/status/2080423549349892459",
+          "published_at": "2026-07-23T22:43:21.000Z",
+          "views": 134150,
+          "likes": 502,
+          "reposts": 133,
+          "comments": 67,
+          "topics": [
+            "samsung",
+            "nvidia"
+          ],
+          "category": "business",
+          "window_note": "AttentionVC 24h Trending窗；原文发布时间可早于24小时"
+        }
+      ],
+      "zh": [
+        {
+          "ticker": "AAPL",
+          "source": "tl1",
+          "language": "zh",
+          "author": "@TJ_Research",
+          "author_name": "投资TALK君",
+          "author_region": null,
+          "title": "7月初做展望时的观点不变，软硬双修，不是A或者B，而是A和B。上半年账户涨幅几乎全部来自于英特尔，之后120进行了两次减仓，但长期仍然非常看好，第二大仓位。另外今年喊了好几次的苹果，过去几个月也贡献了很多，财报前和财报后也两次减仓，仍然持有",
+          "excerpt": "7月初做展望时的观点不变，软硬双修，不是A或者B，而是A和B。上半年账户涨幅几乎全部来自于英特尔，之后120进行了两次减仓，但长期仍然非常看好，第二大仓位。另外今年喊了好几次的苹果，过去几个月也贡献了很多，财报前和财报后也两次减仓，仍然持有并在估值合理后加回，看好AI",
+          "url": "https://x.com/TJ_Research/status/2084543155160965607",
+          "published_at": "2026-08-04T07:33:11.000Z",
+          "views": 11594,
+          "likes": 52,
+          "reposts": 2,
+          "comments": 15,
+          "topics": [],
+          "category": "public_post",
+          "window_note": "TL1 当日入榜热帖"
+        },
+        {
+          "ticker": "INTC",
+          "source": "tl1",
+          "language": "zh",
+          "author": "@TJ_Research",
+          "author_name": "投资TALK君",
+          "author_region": null,
+          "title": "7月初做展望时的观点不变，软硬双修，不是A或者B，而是A和B。上半年账户涨幅几乎全部来自于英特尔，之后120进行了两次减仓，但长期仍然非常看好，第二大仓位。另外今年喊了好几次的苹果，过去几个月也贡献了很多，财报前和财报后也两次减仓，仍然持有",
+          "excerpt": "7月初做展望时的观点不变，软硬双修，不是A或者B，而是A和B。上半年账户涨幅几乎全部来自于英特尔，之后120进行了两次减仓，但长期仍然非常看好，第二大仓位。另外今年喊了好几次的苹果，过去几个月也贡献了很多，财报前和财报后也两次减仓，仍然持有并在估值合理后加回，看好AI",
+          "url": "https://x.com/TJ_Research/status/2084543155160965607",
+          "published_at": "2026-08-04T07:33:11.000Z",
+          "views": 11594,
+          "likes": 52,
+          "reposts": 2,
+          "comments": 15,
+          "topics": [],
+          "category": "public_post",
+          "window_note": "TL1 当日入榜热帖"
+        },
+        {
+          "ticker": "NVDA",
+          "source": "tl1",
+          "language": "zh",
+          "author": "@Balder13946731",
+          "author_name": "Balder",
+          "author_region": null,
+          "title": "据传 $NVDA CPO要步入量产，光要逆天翻盘了吗？",
+          "excerpt": "据传 $NVDA CPO要步入量产，光要逆天翻盘了吗？",
+          "url": "https://x.com/Balder13946731/status/2084539264394764712",
+          "published_at": "2026-08-04T07:17:44.000Z",
+          "views": 7463,
+          "likes": 19,
+          "reposts": 0,
+          "comments": 4,
+          "topics": [],
+          "category": "public_post",
+          "window_note": "TL1 当日入榜热帖"
+        },
+        {
+          "ticker": "AAPL",
+          "source": "tl1",
+          "language": "zh",
+          "author": "@landiantech",
+          "author_name": "蓝点网",
+          "author_region": null,
+          "title": "#软件资讯 苹果收到举报称 Telegram 存在儿童性虐内容因此将其下架，在删除内容后苹果重新上架该应用。 苹果发布声明称，其审核团队发现该应用存在违反儿童性虐内容准则的内容，因此将其下架。在开发者迅速删除内容并封禁对应用户后，该应用可以",
+          "excerpt": "#软件资讯 苹果收到举报称 Telegram 存在儿童性虐内容因此将其下架，在删除内容后苹果重新上架该应用。 苹果发布声明称，其审核团队发现该应用存在违反儿童性虐内容准则的内容，因此将其下架。在开发者迅速删除内容并封禁对应用户后，该应用可以重新上架。",
+          "url": "https://x.com/landiantech/status/2084543434338308395",
+          "published_at": "2026-08-04T07:34:18.000Z",
+          "views": 3580,
+          "likes": 11,
+          "reposts": 1,
+          "comments": 3,
+          "topics": [],
+          "category": "public_post",
+          "window_note": "TL1 当日入榜热帖"
+        },
+        {
+          "ticker": "005930.KS",
+          "source": "tl1",
+          "language": "zh",
+          "author": "@NICOLASYANGX",
+          "author_name": "尼可拉斯楊Live精",
+          "author_region": null,
+          "title": "今天收盤韓國三星和海力士開始企穩。",
+          "excerpt": "今天收盤韓國三星和海力士開始企穩。",
+          "url": "https://x.com/NICOLASYANGX/status/2084535853414797394",
+          "published_at": "2026-08-04T07:04:10.000Z",
+          "views": 2601,
+          "likes": 6,
+          "reposts": 0,
+          "comments": 4,
+          "topics": [],
+          "category": "public_post",
+          "window_note": "TL1 当日入榜热帖"
+        },
+        {
+          "ticker": "000660.KS",
+          "source": "tl1",
+          "language": "zh",
+          "author": "@NICOLASYANGX",
+          "author_name": "尼可拉斯楊Live精",
+          "author_region": null,
+          "title": "今天收盤韓國三星和海力士開始企穩。",
+          "excerpt": "今天收盤韓國三星和海力士開始企穩。",
+          "url": "https://x.com/NICOLASYANGX/status/2084535853414797394",
+          "published_at": "2026-08-04T07:04:10.000Z",
+          "views": 2601,
+          "likes": 6,
+          "reposts": 0,
+          "comments": 4,
+          "topics": [],
+          "category": "public_post",
+          "window_note": "TL1 当日入榜热帖"
+        },
+        {
+          "ticker": "PLTR",
+          "source": "tl1",
+          "language": "zh",
+          "author": "@AlphaguyTrading",
+          "author_name": "Alpha哥AI投资日记 🌴 📈",
+          "author_region": null,
+          "title": "昨晚 $PLTR 财报后盘后一度暴涨约 14%。季度营收同比增长 93%，全年营收指引也再次上调。 Palantir 真正厉害的地方，不只是把 AI 接进企业数据和工作流。它已经在政府和大型企业里积累了多年的客户关系，也掌握了一整套把 AI",
+          "excerpt": "昨晚 $PLTR 财报后盘后一度暴涨约 14%。季度营收同比增长 93%，全年营收指引也再次上调。 Palantir 真正厉害的地方，不只是把 AI 接进企业数据和工作流。它已经在政府和大型企业里积累了多年的客户关系，也掌握了一整套把 AI 真正部署进复杂组织的 know-how,这些能力。 所以 $PLTR https://t.co/yCo8WPgZei",
+          "url": "https://x.com/AlphaguyTrading/status/2084536408371499376",
+          "published_at": "2026-08-04T07:06:23.000Z",
+          "views": 1712,
+          "likes": 7,
+          "reposts": 1,
+          "comments": 0,
+          "topics": [],
+          "category": "public_post",
+          "window_note": "TL1 当日入榜热帖"
+        },
+        {
+          "ticker": "MU",
+          "source": "tl1",
+          "language": "zh",
+          "author": "@web3annie",
+          "author_name": "Annie 所长",
+          "author_region": null,
+          "title": "半导体板块未来走势预测： 1. 整体判断：短期已见顶。 可能先小幅反弹骗散户接盘，然后回调20%-30%到周线公允价值支撑，之后再看能否继续上涨。 2. $AMD 短期最好情况先冲到$520-$540 ，然后回调到$380、$360附近（买",
+          "excerpt": "半导体板块未来走势预测： 1. 整体判断：短期已见顶。 可能先小幅反弹骗散户接盘，然后回调20%-30%到周线公允价值支撑，之后再看能否继续上涨。 2. $AMD 短期最好情况先冲到$520-$540 ，然后回调到$380、$360附近（买入观察区）。 周二盘后财报可能成为下跌触发点。 3. 美光 $MU https://t.co/BV7kivdjJI",
+          "url": "https://x.com/web3annie/status/2084553247449117078",
+          "published_at": "2026-08-04T08:13:17.000Z",
+          "views": 1671,
+          "likes": 11,
+          "reposts": 1,
+          "comments": 6,
+          "topics": [],
+          "category": "public_post",
+          "window_note": "TL1 当日入榜热帖"
+        }
+      ]
+    },
+    "korean_author_watch": [
+      {
+        "author": "@JhonbermanS4",
+        "name": "존버맨 인베스터",
+        "region": "Korea",
+        "stock_mentions": [
+          "005930.KS",
+          "NVDA",
+          "TSLA"
+        ],
+        "article_count": 3,
+        "measured_views": 405850,
+        "top_title": "우리의 꿈과 희망 인류의 미래 나락도 락이다 \"테슬락\"",
+        "url": "https://x.com/JhonbermanS4/status/2081195257568608574"
+      }
+    ],
+    "requested_author_watch": {
+      "query": "junhan",
+      "status": "unresolved_exact_handle",
+      "note": "AttentionVC 24h与全量公开索引未找到可唯一归属的Junhan账号；暂不把相似姓名内容误归属。"
+    },
+    "method": {
+      "ranking": "先按独立来源数，再按语言覆盖、提及数和已测得浏览量排序。",
+      "direction": "不从热度推导买卖方向。",
+      "entity_mapping": "只保留能直接映射到上市公司名称、股票代码或官方产品的内容。"
+    }
+  }
 }
