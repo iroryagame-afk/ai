@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>从 CEO 金句看 AI 行业走向 — CSNPK</title>
+<style>
+:root {
+  --paper: #f6f4ee;
+  --panel: #fffefa;
+  --panel-2: #faf8f2;
+  --ink: #1f2430;
+  --ink-2: #494f5e;
+  --muted: #6f7587;
+  --hairline: #e3ded1;
+  --hairline-strong: #cfc8b6;
+  --accent: #173a5e;
+  --accent-soft: #eaf0f6;
+  --cinnabar: #b5452e;
+  --cinnabar-soft: #f9ece7;
+  --gold: #96702a;
+  --gold-soft: #f5eeda;
+  --jade: #2f6b4f;
+  --jade-soft: #e9f2ec;
+  --violet: #5f4b7a;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --nav-h: 59px;
+  --shadow-card: 0 1px 2px rgba(31,36,48,.05),0 8px 24px rgba(31,36,48,.06);
+  --serif: "Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+  --sans: -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --mono: ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── Top Nav ── */
+.site-nav{
+  position:sticky;top:0;z-index:100;
+  height:var(--nav-h);
+  background:rgba(246,244,238,.88);
+  backdrop-filter:blur(14px) saturate(1.4);
+  -webkit-backdrop-filter:blur(14px) saturate(1.4);
+  border-bottom:1px solid var(--hairline);
+  display:flex;align-items:center;
+  padding:0 max(24px,calc((100vw - 1480px)/2 + 24px));
+}
+.nav-brand{
+  display:flex;align-items:center;gap:10px;
+  flex-shrink:0;margin-right:32px;
+  text-decoration:none;color:inherit;
+}
+.nav-stamp{
+  width:30px;height:30px;
+  background:var(--cinnabar);
+  color:#fff;font-family:var(--serif);font-size:18px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:7px;
+  line-height:1;
+}
+.nav-brand-name{
+  font-family:var(--serif);font-size:17px;font-weight:700;
+  color:var(--ink);letter-spacing:.5px;
+}
+.nav-brand-sub{
+  font-family:var(--mono);font-size:9px;color:var(--muted);
+  letter-spacing:.18em;text-transform:uppercase;
+}
+.nav-groups{
+  display:flex;align-items:stretch;gap:0;
+  flex:1;min-width:0;
+}
+.nav-group{
+  position:relative;display:flex;align-items:stretch;
+}
+.nav-group>button,.nav-group>a{
+  display:flex;align-items:center;padding:0 18px;
+  font-size:14px;font-weight:600;color:var(--ink-2);
+  background:none;border:none;cursor:pointer;
+  font-family:var(--sans);text-decoration:none;
+  white-space:nowrap;transition:color .15s;
+}
+.nav-group>button:hover,.nav-group>a:hover{color:var(--accent)}
+.nav-group.current>a,.nav-group.current>button{
+  color:var(--cinnabar);
+  box-shadow:inset 0 -2px 0 var(--cinnabar);
+}
+.nav-more{display:none;margin-left:auto;flex-shrink:0}
+.nav-more-btn{
+  display:flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:8px;
+  background:none;border:1px solid var(--hairline);
+  cursor:pointer;font-size:18px;color:var(--ink-2);
+}
+.nav-more-dropdown{
+  display:none;position:absolute;top:var(--nav-h);
+  right:12px;width:250px;
+  background:var(--panel);
+  border:1px solid var(--hairline-strong);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-card);z-index:101;padding:8px;
+}
+.nav-more-dropdown a{
+  display:block;padding:8px 14px;
+  color:var(--ink-2);text-decoration:none;
+  font-size:14px;border-radius:6px;
+}
+.nav-more-dropdown a:hover{background:var(--accent-soft);color:var(--accent)}
+.nav-more.open .nav-more-dropdown{display:block}
+
+/* ── Layout ── */
+.page-wrap{
+  max-width:1280px;margin:0 auto;
+  padding:36px 24px 60px;
+}
+
+/* ── Hero ── */
+.hero{
+  padding:20px 0 32px;
+  border-bottom:1px solid var(--hairline);
+  margin-bottom:24px;
+}
+.hero-kicker{
+  font-family:var(--mono);font-size:10px;color:var(--gold);
+  letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:42px;font-weight:800;line-height:1.25;
+  color:var(--ink);letter-spacing:-.3px;margin-bottom:14px;
+}
+.hero-desc{
+  font-size:16px;color:var(--ink-2);line-height:1.8;
+  max-width:680px;margin-bottom:16px;
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;align-items:center;gap:16px;
+}
+.hero-date{
+  font-family:var(--mono);font-size:13px;color:var(--muted);
+  display:flex;align-items:center;gap:6px;
+}
+.hero-date::before{content:"";display:inline-block;width:8px;height:8px;background:var(--jade);border-radius:50%}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:5px;
+  background:var(--jade-soft);color:var(--jade);
+  font-size:12px;font-weight:600;padding:3px 12px;
+  border-radius:999px;font-family:var(--sans);
+}
+
+/* ── Verify Bar ── */
+.verify-bar{
+  background:var(--cinnabar-soft);
+  border:1px solid #e8c9be;
+  border-radius:var(--radius);
+  padding:12px 18px;margin-bottom:32px;
+  font-size:13px;color:#8b3a26;line-height:1.6;
+  display:flex;align-items:flex-start;gap:10px;
+}
+.verify-bar-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+
+/* ── Section Head ── */
+.section-head{
+  margin-bottom:20px;
+}
+.section-kicker{
+  font-family:var(--mono);font-size:10px;color:var(--gold);
+  letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px;
+}
+.section-head h2{
+  font-family:var(--serif);font-size:26px;font-weight:700;
+  color:var(--ink);letter-spacing:-.2px;margin-bottom:8px;
+}
+.section-head p{
+  font-size:15px;color:var(--ink-2);line-height:1.75;
+}
+
+/* ── Core Thesis Block ── */
+.thesis-block{
+  background:var(--accent);
+  color:#e8ecf2;border-radius:var(--radius-lg);
+  padding:28px 32px;margin-bottom:36px;
+}
+.thesis-label{
+  font-family:var(--mono);font-size:10px;color:#8aa0b8;
+  letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px;
+}
+.thesis-block blockquote{
+  font-family:var(--serif);
+  font-size:18px;font-weight:600;line-height:1.7;
+  border-left:3px solid #5b8cb8;
+  padding-left:20px;margin:0 0 20px;
+}
+.thesis-next{
+  font-size:14px;line-height:1.7;
+  padding-top:16px;border-top:1px solid rgba(255,255,255,.12);
+  color:#b0c2d4;
+}
+.thesis-next strong{color:#e8ecf2}
+
+/* ── KPI Grid ── */
+.kpi-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--hairline);
+  border:1px solid var(--hairline);
+  border-radius:var(--radius);
+  overflow:hidden;
+  margin-bottom:40px;
+}
+.kpi-cell{
+  background:var(--panel);
+  padding:18px 20px;
+}
+.kpi-company{
+  font-family:var(--mono);font-size:10px;color:var(--gold);
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px;
+}
+.kpi-label{font-size:12px;color:var(--muted);margin-bottom:4px}
+.kpi-val{
+  font-family:var(--mono);font-size:28px;font-weight:700;
+  font-variant-numeric:tabular-nums;color:var(--accent);line-height:1.15;
+}
+
+/* ── CEO Table ── */
+.table-section{margin-bottom:44px}
+.table-scroll{
+  overflow-x:auto;
+  border:1px solid var(--hairline);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-card);
+  -webkit-overflow-scrolling:touch;
+}
+.csnpk-table{
+  width:100%;border-collapse:collapse;
+  font-size:14px;min-width:860px;
+}
+.csnpk-table thead{
+  background:#f0ede5;border-bottom:2px solid var(--hairline-strong);
+}
+.csnpk-table thead th{
+  padding:14px 16px;text-align:left;
+  font-family:var(--mono);font-size:10px;font-weight:700;
+  color:var(--muted);letter-spacing:.14em;text-transform:uppercase;
+  white-space:nowrap;
+}
+.csnpk-table tbody td{
+  padding:14px 16px;border-bottom:1px solid var(--hairline);
+  vertical-align:top;line-height:1.65;
+}
+.csnpk-table tbody tr:last-child td{border-bottom:none}
+.csnpk-table tbody tr:nth-child(even){background:var(--panel-2)}
+.csnpk-table tbody tr:hover{background:var(--accent-soft)}
+.ticker{
+  font-family:var(--mono);font-weight:700;color:var(--ink);
+  white-space:nowrap;
+}
+.quote-snippet{
+  font-family:var(--serif);font-style:italic;color:var(--accent);
+  display:block;padding:6px 0 6px 12px;
+  border-left:3px solid var(--accent-soft);
+  background:var(--accent-soft);border-radius:0 6px 6px 0;
+  font-size:13px;margin-bottom:4px;
+}
+.quote-zh{font-size:13px;color:var(--ink-2);line-height:1.65}
+.source-ref{
+  font-family:var(--mono);font-size:10px;color:var(--muted);
+  margin-top:4px;
+}
+.source-ref a{color:var(--accent);text-decoration:none}
+.source-ref a:hover{text-decoration:underline}
+
+/* ── Direction Card ── */
+.dir-card{
+  background:var(--panel);
+  border:1px solid var(--hairline);
+  border-radius:var(--radius);
+  padding:28px;margin-bottom:18px;
+  box-shadow:var(--shadow-card);
+}
+.dir-card h3{
+  font-family:var(--serif);font-size:20px;font-weight:700;
+  color:var(--ink);margin-bottom:12px;
+  display:flex;align-items:center;gap:12px;
+}
+.dir-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:28px;background:var(--accent);color:#fff;
+  border-radius:50%;font-family:var(--sans);font-size:13px;font-weight:700;
+  flex-shrink:0;
+}
+.dir-card p{color:var(--ink-2);margin-bottom:10px;line-height:1.8}
+.dir-card ul{
+  list-style:none;padding:0;margin-bottom:10px;
+}
+.dir-card ul li{
+  padding:4px 0 4px 20px;position:relative;
+  color:var(--ink-2);line-height:1.75;
+}
+.dir-card ul li::before{
+  content:"";position:absolute;left:4px;top:12px;
+  width:5px;height:5px;background:var(--accent);border-radius:50%;
+}
+.highlight-inset{
+  background:var(--accent-soft);border-radius:8px;
+  padding:14px 18px;font-size:15px;color:#1d3d5a;
+  font-family:var(--serif);font-weight:600;line-height:1.7;
+  margin:12px 0;
+}
+.diff-duo{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;
+}
+.diff-box{
+  padding:14px 16px;border-radius:8px;font-size:14px;
+}
+.diff-pos{
+  background:var(--jade-soft);border:1px solid #c5dfd2;
+}
+.diff-neg{
+  background:var(--cinnabar-soft);border:1px solid #e8c9be;
+}
+.diff-tag{
+  font-family:var(--mono);font-size:10px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;
+}
+.diff-pos .diff-tag{color:var(--jade)}
+.diff-neg .diff-tag{color:var(--cinnabar)}
+.diff-txt{color:var(--ink-2);line-height:1.6}
+
+/* ── Tier Grid ── */
+.tier-section{margin-bottom:40px}
+.tier-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+}
+.tier-card{
+  background:var(--panel);border:1px solid var(--hairline);
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-card);
+}
+.tier-top{padding:16px 20px;color:#fff}
+.tier-top.t1{background:var(--jade)}
+.tier-top.t2{background:var(--gold)}
+.tier-top.t3{background:var(--cinnabar)}
+.tier-ttl{
+  font-family:var(--serif);font-size:16px;font-weight:700;
+}
+.tier-body{padding:16px 20px}
+.tier-body ul{list-style:none;padding:0;font-size:14px}
+.tier-body ul li{
+  padding:7px 0;color:var(--ink-2);line-height:1.6;
+  border-bottom:1px solid var(--hairline);
+}
+.tier-body ul li:last-child{border-bottom:none}
+.tier-theme{display:block;font-weight:600;color:var(--ink-2)}
+.tier-examples{
+  display:block;margin-top:3px;
+  font-family:var(--mono);font-size:10px;line-height:1.55;
+  color:var(--muted);letter-spacing:.01em;
+}
+.tier-examples.risk{color:#9b5548}
+.tier-note{
+  margin-top:12px;padding:10px 12px;border-radius:8px;
+  background:var(--panel-2);border:1px solid var(--hairline);
+  color:var(--muted);font-size:11px;line-height:1.65;
+}
+
+/* ── Conclusion ── */
+.conclude{
+  background:var(--accent);
+  color:#dce4ee;border-radius:var(--radius-lg);
+  padding:32px;margin-bottom:32px;
+}
+.conclude h2{
+  font-family:var(--serif);font-size:24px;font-weight:700;
+  color:#fff;margin-bottom:20px;
+}
+.conclude-main{
+  font-family:var(--serif);font-size:20px;font-weight:700;
+  color:#fff;margin-bottom:20px;line-height:1.5;
+}
+.conclude-main em{color:#7eb8d8;font-style:normal}
+.conclude-item{
+  border-bottom:1px solid rgba(255,255,255,.1);
+  padding:16px 0;
+}
+.conclude-item:last-child{border-bottom:none}
+.conclude-num{
+  font-family:var(--mono);font-size:10px;color:#7a96b0;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px;
+}
+.conclude-item p{
+  font-family:var(--serif);font-size:16px;font-weight:600;
+  color:#dce4ee;line-height:1.65;margin:0;
+}
+.conf-row{
+  display:flex;gap:28px;margin-top:20px;
+  padding-top:16px;border-top:1px solid rgba(255,255,255,.1);
+  flex-wrap:wrap;
+}
+.conf-item .conf-lbl{
+  font-family:var(--mono);font-size:10px;color:#7a96b0;
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;
+}
+.conf-item .conf-val{
+  font-family:var(--serif);font-size:16px;font-weight:700;
+}
+.conf-high{color:#6fc99b}
+.conf-mid{color:#e8c75a}
+
+/* ── Footer ── */
+.page-foot{
+  border-top:1px solid var(--hairline);
+  padding-top:24px;margin-top:32px;
+  font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.8;
+}
+.page-foot strong{color:var(--ink-2);font-family:var(--sans);font-weight:600}
+
+/* ── Responsive: Tablet ── */
+@media(max-width:980px){
+  .kpi-grid{grid-template-columns:repeat(4,1fr)}
+  .tier-grid{grid-template-columns:1fr 1fr 1fr}
+  .diff-duo{grid-template-columns:1fr}
+  .csnpk-table{min-width:720px}
+}
+@media(max-width:760px){
+  .hero h1{font-size:32px}
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .tier-grid{grid-template-columns:1fr}
+  .dir-card{padding:20px}
+  .conclude{padding:24px}
+  .thesis-block blockquote{font-size:16px}
+  .nav-brand-sub{display:none}
+}
+
+/* ── Responsive: Mobile 390px ── */
+@media(max-width:520px){
+  .page-wrap{padding:20px 12px 40px}
+  .site-nav{padding:0 12px}
+  .nav-brand{margin-right:10px}
+  .nav-groups{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    gap:0;
+  }
+  .nav-groups::-webkit-scrollbar{display:none}
+  .nav-group>button,.nav-group>a{padding:0 10px;font-size:13px}
+  .nav-more{display:flex}
+  .nav-more+.nav-group{display:none}
+
+  .hero h1{font-size:28px;line-height:1.3}
+  .hero-desc{font-size:14px}
+  .hero-meta{flex-direction:column;align-items:flex-start;gap:8px}
+
+  .thesis-block{padding:20px 18px;border-radius:var(--radius)}
+  .thesis-block blockquote{font-size:15px;padding-left:14px}
+
+  .kpi-grid{grid-template-columns:1fr 1fr}
+  .kpi-cell{padding:14px 16px}
+  .kpi-val{font-size:24px}
+
+  .section-head h2{font-size:22px}
+  .dir-card{padding:18px 16px}
+
+  .table-scroll{border-radius:8px}
+  .csnpk-table{min-width:600px;font-size:13px}
+  .csnpk-table thead th{font-size:9px;padding:10px 8px}
+  .csnpk-table tbody td{padding:10px 8px}
+
+  .dir-card h3{font-size:17px;gap:8px}
+  .dir-num{width:24px;height:24px;font-size:11px}
+
+  .tier-grid{gap:12px}
+  .tier-card{border-radius:8px}
+
+  .conclude-main{font-size:17px}
+  .conclude-item p{font-size:15px}
+
+  .verify-bar{font-size:12px;padding:10px 14px}
+  .verify-bar-icon{font-size:14px}
+
+  .nav-dropdown{
+    position:fixed;top:var(--nav-h);left:12px;right:12px;
+    max-height:60vh;overflow-y:auto;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ── Top Navigation ── -->
+<nav class="site-nav" aria-label="主导航">
+  <a href="/" class="nav-brand" aria-label="CSNPK 首页">
+    <span class="nav-stamp">策</span>
+    <span>
+      <div class="nav-brand-name">CSNPK</div>
+      <div class="nav-brand-sub">Research Terminal</div>
+    </span>
+  </a>
+  <div class="nav-groups" role="menubar">
+    <div class="nav-group" role="none"><a href="/nav/" role="menuitem">股票</a></div>
+    <div class="nav-group" role="none"><a href="/nav/" role="menuitem">A股工具</a></div>
+    <div class="nav-group" role="none"><a href="/nav/" role="menuitem">美股工具</a></div>
+    <div class="nav-group current" role="none"><a href="/nav/" role="menuitem" aria-current="page">市场观察</a></div>
+    <div class="nav-group" role="none"><a href="/nav/" role="menuitem">调研</a></div>
+  </div>
+</nav>
+
+<!-- ── Page ── -->
+<main class="page-wrap">
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-kicker">AI 产业深度 · 2026 Q2 财报季专题</div>
+  <h1>从 CEO 金句看 AI 行业走向</h1>
+  <p class="hero-desc">
+    10 家公司，10 个关键信号。TSMC、Alphabet、Amazon、AMD、Arista、Astera Labs、Palantir、Qnity、GE Vernova、Meta — 最近三周财报共同指向：AI 没有进入资本开支下行周期，而是从「买 GPU」升级为「建设完整 AI 工厂」。
+  </p>
+  <div class="hero-meta">
+    <span class="hero-date">截至 2026.08.05（收盘后数据）</span>
+    <span class="hero-badge">✓ 已核验：财报电话会记录交叉验证</span>
+  </div>
+</header>
+
+<!-- Verify Bar -->
+<div class="verify-bar">
+  <span class="verify-bar-icon" aria-hidden="true">⚠</span>
+  <span><strong>研究用途声明：</strong>本文基于公开财报电话会记录与官方披露整理，仅用于产业研究与学习参考，不构成任何投资建议。文中所有公司、产品和市场判断均为作者个人观点。「已核验」指电话会内容与多源交叉验证；「待证真」指产业推演逻辑；两者不构成买卖信号。</span>
+</div>
+
+<!-- Core Thesis -->
+<section class="thesis-block">
+  <div class="thesis-label">核心判断</div>
+  <blockquote>
+    截至 2026 年 8 月 5 日，最近三周的财报共同指向：AI 没有进入资本开支下行周期，而是从「买 GPU」升级为「建设完整 AI 工厂」；同时，市场开始严格区分订单、收入和自由现金流，不再奖励单纯烧钱。
+  </blockquote>
+  <div class="thesis-next">
+    下一阶段主线将从 <strong>GPU 单点</strong> 进一步扩散至：<strong>网络与互连 → HBM / 系统内存 / 存储 → 先进封装与材料 → 电力与配电 → 企业数据与工作流。</strong>
+  </div>
+</section>
+
+<!-- KPI Grid -->
+<section>
+  <div class="section-head">
+    <div class="section-kicker">Key Metrics</div>
+    <h2>核心经营指标速览</h2>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi-cell">
+      <div class="kpi-company">TSMC</div>
+      <div class="kpi-label">2026 收入增速指引</div>
+      <div class="kpi-val">&gt;40%</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-company">Alphabet</div>
+      <div class="kpi-label">Google Cloud 同比</div>
+      <div class="kpi-val">+82%</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-company">Amazon</div>
+      <div class="kpi-label">AWS 增长（18季最快）</div>
+      <div class="kpi-val">+37%</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-company">AMD</div>
+      <div class="kpi-label">数据中心收入同比</div>
+      <div class="kpi-val">+107%</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-company">Arista</div>
+      <div class="kpi-label">收入同比</div>
+      <div class="kpi-val">+38%</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-company">Astera Labs</div>
+      <div class="kpi-label">收入同比</div>
+      <div class="kpi-val">+104%</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-company">Palantir</div>
+      <div class="kpi-label">收入同比</div>
+      <div class="kpi-val">+93%</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-company">GE Vernova</div>
+      <div class="kpi-label">订单同比</div>
+      <div class="kpi-val">+88%</div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: CEO Quotes -->
+<section class="table-section">
+  <div class="section-head">
+    <div class="section-kicker">Section 01 · Primary Evidence</div>
+    <h2>最关键财报与电话会金句</h2>
+    <p>以下 10 家公司的 CEO 或 CFO 在最新财报电话会上说出的每一句话，本质上都是在定义 AI 产业的下一个阶段。不是「AI 是不是泡沫」的问题 — 他们根本不讨论这个 — 而是在回答：「下一批钱会流向哪里，以及为什么。」</p>
+  </div>
+
+  <div class="table-scroll">
+  <table class="csnpk-table">
+    <thead>
+    <tr>
+      <th>公司</th>
+      <th>最关键经营信号</th>
+      <th>管理层金句及含义</th>
+      <th>来源</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><span class="ticker">TSMC</span></td>
+      <td>Q2 收入约 402 亿美元；2026 收入增速上调至略高于 40%；资本开支提高至 600 亿—640 亿美元</td>
+      <td>
+        <span class="quote-snippet">"We are witnessing a new industry called the AI industry."</span>
+        <span class="quote-zh">— 魏哲家。AI 不再只是半导体的一个应用，而是在形成独立产业；未来三年资本开支会显著高于过去三年。</span>
+      </td>
+      <td><span class="source-ref"><a href="https://www.fool.com/earnings/call-transcripts/2026/07/16/tsm-tsm-q2-2026-earnings-call/" target="_blank" rel="noopener noreferrer">电话会记录</a></span></td>
+    </tr>
+    <tr>
+      <td><span class="ticker">Alphabet</span></td>
+      <td>Google Cloud 收入 248 亿美元、同比增长 82%；积压订单 5,140 亿美元；全年资本开支 1,950 亿—2,050 亿美元</td>
+      <td>
+        <span class="quote-snippet">"We're still in a supply-constrained environment."</span>
+        <span class="quote-zh">— CFO。云 AI 目前的主要限制仍是供给而非需求。超 2,000 家企业过去一年分别消费逾 1,000 亿 Token，企业推理开始真正规模化。</span>
+      </td>
+      <td><span class="source-ref"><a href="https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/" target="_blank" rel="noopener noreferrer">官方披露</a></span></td>
+    </tr>
+    <tr>
+      <td><span class="ticker">Amazon</span></td>
+      <td>AWS 增长 37%，为 18 个季度最快；2026 年技术及 AI 资本开支约 2,200 亿美元</td>
+      <td>
+        <span class="quote-zh">Jassy 表示，即使加大投资，算力容量仍然受限，而且能够看到延伸至 2028 年的 AI 需求。说明云厂扩产并非只依据当前订单，而是依据多年需求可见度。</span>
+      </td>
+      <td><span class="source-ref"><a href="https://apnews.com/article/b4ce02b4666a35b8975823c5c22072ee" target="_blank" rel="noopener noreferrer">AP 报道</a></span></td>
+    </tr>
+    <tr>
+      <td><span class="ticker">AMD</span></td>
+      <td>数据中心收入 67.2 亿美元、同比增长 107%；Q3 收入指引约 130 亿美元</td>
+      <td>
+        <span class="quote-snippet">"Entering the second half with strong momentum as Helios ramps."</span>
+        <span class="quote-zh">— Lisa Su。竞争单位已经从单颗 GPU 转向 Helios 这类整机柜系统。但股价盘后下跌，说明「业绩强」还必须同时超过极高预期。</span>
+      </td>
+      <td><span class="source-ref"><a href="https://www.reuters.com/business/amd-forecasts-upbeat-revenue-ai-data-center-demand-beats-quarterly-estimates-2026-08-04/" target="_blank" rel="noopener noreferrer">Reuters</a></span></td>
+    </tr>
+    <tr>
+      <td><span class="ticker">Arista</span></td>
+      <td>收入 30.36 亿美元、同比增长约 38%；Q3 收入指引约 33 亿美元，利润率好于预期</td>
+      <td>
+        <span class="quote-zh">管理层将网络定义为 AI 基础设施的 <strong>「central nervous system — 中枢神经系统」</strong>。AI 集群规模扩大后，交换机、Ethernet、800G / 1.6T 和网络软件的重要性增速可能超过 GPU 数量增速。</span>
+      </td>
+      <td><span class="source-ref"><a href="https://www.barrons.com/articles/arista-networks-earnings-stock-price-e421b3c3" target="_blank" rel="noopener noreferrer">Barron's</a></span></td>
+    </tr>
+    <tr>
+      <td><span class="ticker">Astera Labs</span></td>
+      <td>收入 3.924 亿美元、同比增长 104%；Q3 收入指引 5.4 亿—5.6 亿美元，大幅超过预期</td>
+      <td>
+        <span class="quote-zh">Scorpio 交换芯片开始放量，Aries 等 PCIe 互连创新高。<strong>互连芯片已经成为独立的高增长价值层。</strong>但盘后不涨反跌，反映市场已提前计入较多增长。</span>
+      </td>
+      <td><span class="source-ref"><a href="https://www.investors.com/news/technology/astera-labs-alab-stock-q2-2026-earnings/" target="_blank" rel="noopener noreferrer">IBD 报道</a></span></td>
+    </tr>
+    <tr>
+      <td><span class="ticker">Palantir</span></td>
+      <td>收入 19.35 亿美元、同比增长 93%；美国商业收入增长 149%；大幅上调全年指引</td>
+      <td>
+        <span class="quote-zh">Alex Karp 警告，大模型实验室认为自己有权 <strong>「colonize your enterprise」</strong>。所谓 AI 主权，就是客户自己控制数据、权限、业务流程和最终决策，并能随时替换底层模型。</span>
+      </td>
+      <td><span class="source-ref"><a href="https://www.wsj.com/livecoverage/stock-market-today-spacex-earnings-08-04-2026/card/-money-quote-palantir-s-alex-karp-on-ai-colonizers--eQMnMyicTOpRB15yY1F3" target="_blank" rel="noopener noreferrer">WSJ</a></span></td>
+    </tr>
+    <tr>
+      <td><span class="ticker">Qnity</span></td>
+      <td>收入 14.29 亿美元、增长 22%；互连业务增长 30%；上调全年收入与 EPS 指引</td>
+      <td>
+        <span class="quote-zh">Jon Kemp 强调半导体正在走向 <strong>「shrink and stack — 继续微缩，同时不断堆叠」</strong>。晶圆步骤、封装层数和互连密度增加，对 CMP、清洗、电镀、介质、热管理材料形成乘数效应。</span>
+      </td>
+      <td><span class="source-ref"><a href="https://ir.qnityelectronics.com/press-releases/detail/69/qnity-reports-second-quarter-2026-results-raises-full-year-financial-guidance" target="_blank" rel="noopener noreferrer">官方业绩</a></span></td>
+    </tr>
+    <tr>
+      <td><span class="ticker">GE Vernova</span></td>
+      <td>订单 242 亿美元、增长 88%；总积压订单 1,760 亿美元；数据中心电气化订单上半年超 50 亿美元</td>
+      <td>
+        <span class="quote-zh"><strong>数据中心电气化订单半年已超过 2025 年全年两倍。</strong>燃机在手合同 116GW，目标年底至少 125GW。AI 资本开支已经从服务器机房外溢至燃机、变压器、开关设备和电网。</span>
+      </td>
+      <td><span class="source-ref"><a href="https://www.gevernova.com/news/press-releases/ge-vernova-reports-second-quarter-2026-financial-results-raises-2026-financial" target="_blank" rel="noopener noreferrer">官方披露</a></span></td>
+    </tr>
+    <tr>
+      <td><span class="ticker">Meta</span></td>
+      <td>收入仍增长 28%，但季度资本开支 310.8 亿美元，自由现金流同比大幅下降</td>
+      <td>
+        <span class="quote-zh">财报最重要的不是金句，而是股价反馈：<strong>AI 投入如果暂时无法形成清晰现金回报，市场会压缩估值。</strong>Meta 将全年资本开支维持在 1,300 亿—1,450 亿美元，但投资者开始追问回收周期。</span>
+      </td>
+      <td><span class="source-ref"><a href="https://www.reuters.com/business/meta-narrows-annual-capex-forecast-ai-buildout-grows-2026-07-29/" target="_blank" rel="noopener noreferrer">Reuters</a></span></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- Section 2: Five Directions -->
+<section>
+  <div class="section-head">
+    <div class="section-kicker">Section 02 · Analysis</div>
+    <h2>从这些财报推导出的五个方向</h2>
+  </div>
+
+  <article class="dir-card">
+    <h3><span class="dir-num" aria-hidden="true">1</span> AI 资本开支尚未见顶，但建设对象发生变化</h3>
+    <p>TSMC、Alphabet、Amazon 共同证明，限制条件依然是产能、服务器、电力和数据中心交付，而不是客户需求不足。</p>
+    <p>但新增资金不再全部流向 GPU：</p>
+    <ul>
+      <li>GPU 与 CPU</li>
+      <li>Scale-up、Scale-out 网络</li>
+      <li>HBM、DDR、SOCAMM 和 SSD</li>
+      <li>光电互连</li>
+      <li>机柜电源、液冷、变压器与燃机</li>
+      <li>数据治理和企业工作流</li>
+    </ul>
+    <p style="font-weight:600;margin-top:10px">所以更准确的说法不是「GPU 周期继续」，而是进入了 <strong>AI 全栈基础设施周期</strong>。</p>
+  </article>
+
+  <article class="dir-card">
+    <h3><span class="dir-num" aria-hidden="true">2</span> 推理与 Agent 将提高内存、存储和 CPU 的权重</h3>
+    <p>训练主要受 GPU 和 HBM 制约；Agent 推理还需要：</p>
+    <ul>
+      <li>更长上下文和 KV Cache</li>
+      <li>更大的系统内存</li>
+      <li>高频访问企业数据库</li>
+      <li>大量 CPU 负责检索、调度和业务逻辑</li>
+      <li>SSD 承接冷、温数据及向量数据库</li>
+      <li>网络在多个 Agent、模型和数据源间传输信息</li>
+    </ul>
+    <div class="highlight-inset">
+      美光指出，模型上下文长度增速远快于服务器内存容量 — 未来系统瓶颈可能从「算力不足」逐步转向<strong>「内存容量、带宽与数据移动成本」</strong>。
+    </div>
+    <p>存储链不是被证伪，而是从 HBM 单一主线向 <strong>HBM ＋ 系统 DRAM ＋ 企业级 SSD</strong> 扩散。</p>
+  </article>
+
+  <article class="dir-card">
+    <h3><span class="dir-num" aria-hidden="true">3</span> 网络从配套件变成决定 AI 集群效率的核心设备</h3>
+    <p>ANET 和 ALAB 分别验证了两层：</p>
+    <ul>
+      <li><strong>ANET：</strong>数据中心之间及 GPU 集群的 Ethernet 交换网络</li>
+      <li><strong>ALAB：</strong>服务器和机柜内部的 PCIe、CXL 与 Scale-up Fabric</li>
+    </ul>
+    <div class="highlight-inset">
+      AI 集群越大，单颗 GPU 性能越不是唯一标准。真正重要的是：<strong>多少 GPU 能够像一台计算机一样稳定工作，以及每瓦电力能够产生多少 Token。</strong>
+    </div>
+    <p style="font-weight:600;margin-top:16px">但光通信需要区分：</p>
+    <div class="diff-duo">
+      <div class="diff-box diff-pos">
+        <div class="diff-tag">+ 需求逻辑：强化</div>
+        <div class="diff-txt">交换机、交换芯片、Retimer、DSP 和高速光模块的产业需求仍然被强化。</div>
+      </div>
+      <div class="diff-box diff-neg">
+        <div class="diff-tag">− 中国厂商对美出口风险：上升</div>
+        <div class="diff-txt">美国正研究限制中国光收发器进入美国数据中心，全球需求强不等于所有供应商都能无风险兑现。</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="dir-card">
+    <h3><span class="dir-num" aria-hidden="true">4</span> 企业 AI 护城河从「大模型能力」转向「数据与工作流主权」</h3>
+    <p>Palantir/Karp 最关键的观点不是 Palantir 模型比别人强，而是：</p>
+    <div class="highlight-inset">
+      <strong>企业不能把自己的数据、业务逻辑和决策权永久交给某一家模型公司。</strong>
+    </div>
+    <p>未来企业 AI 架构更可能是：</p>
+    <p style="text-align:center;padding:12px;background:var(--panel-2);border-radius:8px;font-size:14px;font-family:var(--mono);color:var(--ink-2);letter-spacing:-.2px">
+      企业私有数据/知识库 → 权限和本体层 → 可替换的大模型 → 工作流执行 → 审计和反馈
+    </p>
+    <p style="margin-top:12px">底层模型会逐渐商品化；真正能够收费的环节是：</p>
+    <ul>
+      <li>企业数据治理</li>
+      <li>工业知识与业务本体</li>
+      <li>权限、合规与 AI 主权</li>
+      <li>Agent 对 ERP、MES、供应链和政府系统的闭环执行</li>
+    </ul>
+    <p style="font-weight:600;margin-top:8px">通用聊天机器人估值空间可能下降，而掌握行业数据和执行入口的软件平台价值上升。</p>
+  </article>
+
+  <article class="dir-card">
+    <h3><span class="dir-num" aria-hidden="true">5</span> 市场开始从「AI 叙事」转向「AI 投入产出表」</h3>
+    <p>近期最重要的股价分化：</p>
+    <div class="diff-duo" style="grid-template-columns:1fr 1fr 1fr">
+      <div class="diff-box diff-pos">
+        <div class="diff-tag">↑ Alphabet / Amazon / PLTR</div>
+        <div class="diff-txt">AI 投入已对应云收入、订单和企业付费</div>
+      </div>
+      <div class="diff-box diff-neg">
+        <div class="diff-tag">↓ Meta</div>
+        <div class="diff-txt">收入不错，但自由现金流被资本开支吞噬</div>
+      </div>
+      <div class="diff-box diff-neg">
+        <div class="diff-tag">↓ AMD / ALAB</div>
+        <div class="diff-txt">业绩强，但此前预期更高，股价仍可能下跌</div>
+      </div>
+    </div>
+    <p style="margin-top:16px;font-weight:600">今后衡量 AI 公司的四个核心指标：</p>
+    <ul>
+      <li><strong>AI 订单和积压订单</strong></li>
+      <li><strong>收入增速能否超过资本开支增速</strong></li>
+      <li><strong>毛利率、自由现金流是否同步改善</strong></li>
+      <li><strong>单位资本开支能够带来多少收入或 Token</strong></li>
+    </ul>
+  </article>
+</section>
+
+<!-- Section 3: Tiers -->
+<section class="tier-section">
+  <div class="section-head">
+    <div class="section-kicker">Section 03 · Priority Ranking</div>
+    <h2>未来 6—12 个月产业优先级</h2>
+    <p>基于订单、收入与指引验证程度，将 AI 产业链方向分为三个梯队。</p>
+  </div>
+  <div class="tier-grid">
+    <div class="tier-card">
+      <div class="tier-top t1"><div class="tier-ttl">第一梯队</div></div>
+      <div class="tier-body">
+        <div class="diff-tag" style="margin-bottom:8px">确定性继续提高</div>
+        <ul>
+          <li><span class="tier-theme">AI 交换网络与 Fabric 互连</span><span class="tier-examples">代表：Arista Networks（ANET）· Broadcom（AVGO）· Astera Labs（ALAB）</span></li>
+          <li><span class="tier-theme">电力、变压器、开关设备、燃机和液冷</span><span class="tier-examples">代表：GE Vernova（GEV）· Eaton（ETN）· Vertiv（VRT）</span></li>
+          <li><span class="tier-theme">HBM、系统内存及企业级 SSD</span><span class="tier-examples">代表：Micron（MU）· SK hynix（000660.KS）· Samsung Electronics（005930.KS）</span></li>
+          <li><span class="tier-theme">先进封装、CMP、电子化学品与高纯材料</span><span class="tier-examples">代表：TSMC（TSM）· Qnity Electronics（Q）· Entegris（ENTG）</span></li>
+          <li><span class="tier-theme">拥有专有数据和工作流入口的企业 AI 软件</span><span class="tier-examples">代表：Palantir（PLTR）· ServiceNow（NOW）· SAP（SAP）</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tier-card">
+      <div class="tier-top t2"><div class="tier-ttl">第二梯队</div></div>
+      <div class="tier-body">
+        <div class="diff-tag" style="color:var(--gold);margin-bottom:8px">需求强，但估值决定收益</div>
+        <ul>
+          <li><span class="tier-theme">GPU 及 AI 加速器</span><span class="tier-examples">代表：NVIDIA（NVDA）· AMD（AMD）· Broadcom（AVGO）</span></li>
+          <li><span class="tier-theme">光模块与光器件</span><span class="tier-examples">代表：Coherent（COHR）· Lumentum（LITE）· Applied Optoelectronics（AAOI）</span></li>
+          <li><span class="tier-theme">高速 PCB、CCL 和服务器连接器</span><span class="tier-examples">代表：TTM Technologies（TTMI）· Amphenol（APH）· TE Connectivity（TEL）</span></li>
+          <li><span class="tier-theme">AI 服务器整机</span><span class="tier-examples">代表：Dell（DELL）· Super Micro Computer（SMCI）· Hewlett Packard Enterprise（HPE）</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tier-card">
+      <div class="tier-top t3"><div class="tier-ttl">第三梯队</div></div>
+      <div class="tier-body">
+        <div class="diff-tag" style="color:var(--cinnabar);margin-bottom:8px">需要谨慎</div>
+        <ul>
+          <li><span class="tier-theme">没有专有数据和分发渠道的通用 AI 应用</span><span class="tier-examples risk">估值 / 兑现观察：C3.ai（AI）· BigBear.ai（BBAI）· SoundHound AI（SOUN）</span></li>
+          <li><span class="tier-theme">只有「参与 AI 项目」却没有收入增量的公司</span><span class="tier-examples risk">不设固定名单：以 AI 收入拆分、订单转化和付费留存逐季核验</span></li>
+          <li><span class="tier-theme">自由现金流长期恶化、只依赖扩大资本开支的模式</span><span class="tier-examples risk">财务观察：Meta（META）· 重点核验 CapEx 向收入及自由现金流的转化</span></li>
+          <li><span class="tier-theme">高度依赖美国数据中心、同时存在出口限制风险的供应商</span><span class="tier-examples risk">政策暴露观察：Coherent（COHR）· Lumentum（LITE）· Applied Optoelectronics（AAOI）</span></li>
+        </ul>
+        <p class="tier-note">第三梯队是动态风险筛选，不是永久公司定性。同一公司可以同时处于景气赛道与风险约束中，需按季度财务、估值与政策敞口重新判断。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Conclusion -->
+<section class="conclude">
+  <h2>最终结论</h2>
+  <div class="conclude-main">
+    AI 接下来不会简单从硬件切换到软件，而是走向<br><em>「硬件全栈化 ＋ 软件业务化」</em>
+  </div>
+  <div class="conclude-item" style="padding-top:0">
+    <div class="conclude-num">变化一</div>
+    <p>算力竞争从 GPU 性能升级为整座 AI 工厂的系统效率</p>
+  </div>
+  <div class="conclude-item">
+    <div class="conclude-num">变化二</div>
+    <p>Agent 推理令网络、CPU、内存和存储获得更高价值权重</p>
+  </div>
+  <div class="conclude-item">
+    <div class="conclude-num">变化三</div>
+    <p>企业客户将要求数据、模型选择和决策权掌握在自己手中</p>
+  </div>
+  <div class="conf-row">
+    <div class="conf-item">
+      <div class="conf-lbl">产业趋势置信度</div>
+      <div class="conf-val conf-high">高</div>
+    </div>
+    <div class="conf-item">
+      <div class="conf-lbl">短期股价方向置信度</div>
+      <div class="conf-val conf-mid">中等</div>
+    </div>
+  </div>
+  <p style="font-family:var(--mono);font-size:12px;color:#7a96b0;margin-top:10px">
+    — 基本面仍强，但多个 AI 核心资产已经进入「必须持续超预期」才能上涨的阶段。
+  </p>
+</section>
+
+<!-- Footer -->
+<footer class="page-foot">
+  <p><strong>数据来源：</strong>TSMC、Alphabet、Amazon、AMD、Arista Networks、Astera Labs、Palantir、Qnity Electronics、GE Vernova、Meta 2026 年 Q2 财报电话会记录与官方披露，交叉验证于 Motley Fool、Reuters、AP News、WSJ、Barron's、IBD 等财经媒体。</p>
+  <p><strong>口径：</strong>6—12 个月研究型产业分析，不构成投资建议。<strong>核验状态：</strong>10/10 公司电话会记录已交叉验证；产业推演标注为「待证真」。</p>
+  <p><strong>编制日期：</strong>2026.08.05 &nbsp;|&nbsp; <strong>作者：</strong>Lingliang &nbsp;|&nbsp; <strong>页面模式：</strong>A（门户 / 研究报告）</p>
+</footer>
+
+</main>
+
+<script>
+// Mobile nav: show "more" dropdown for hidden groups
+(function(){
+  const groups = document.querySelector('.nav-groups');
+  const more = document.querySelector('.nav-more');
+  if(!groups||!more) return;
+
+  // On mobile (< 521px), show "more" button to reveal overflow
+  const check = () => {
+    if(window.innerWidth <= 520){
+      more.style.display='flex';
+    }else{
+      more.style.display='none';
+    }
+  };
+  check();
+  window.addEventListener('resize',check);
+
+  // Touch toggle
+  const btn = more.querySelector('button');
+  if(btn){
+    btn.addEventListener('click',(e)=>{
+      e.stopPropagation();
+      more.classList.toggle('open');
+      btn.setAttribute('aria-expanded',more.classList.contains('open'));
+    });
+  }
+  document.addEventListener('click',()=>{more.classList.remove('open')});
+})();
+
+// Mobile table: add data-label for card mode
+(function(){
+  if(window.innerWidth>520) return;
+  const tables = document.querySelectorAll('.csnpk-table');
+  tables.forEach(table=>{
+    const headers = [];
+    table.querySelectorAll('thead th').forEach(th=>headers.push(th.textContent.trim()));
+    const rows = table.querySelectorAll('tbody tr');
+    rows.forEach(row=>{
+      const cells = row.querySelectorAll('td');
+      cells.forEach((cell,i)=>{
+        if(headers[i] && !cell.hasAttribute('data-label')){
+          cell.setAttribute('data-label',headers[i]);
+        }
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
