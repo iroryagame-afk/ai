@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T08:02:38.615Z",
+  "generatedAt": "2026-08-05T08:18:56.065Z",
   "stage": "趋势确认期",
   "stageNote": "风险指标已明显退潮，等待价格延续确认",
   "markets": {
@@ -106,15 +106,17 @@
   },
   "externalFearGreed": {
     "cn": {
-      "score": 19.53,
-      "label": "极度恐慌",
-      "period": "2026-07-30",
+      "score": 11.4,
+      "label": "极度恐惧",
+      "period": "2026-08-04",
       "frequency": "日频",
-      "source": "https://baifenwei.com/indicator/fear-greed/",
-      "sourceLabel": "百分位 A股恐惧贪婪指数",
-      "sourceUpdatedAt": "2026-07-30 14:30",
-      "verifiedAt": "2026-07-30T16:15:00+08:00",
-      "note": "来源页已完成网页正文回读；最新指数值19.53，数据日2026-07-30，页面更新时间2026-07-30 14:30。"
+      "source": "https://qjr1997.github.io/fear-greed-index/",
+      "dataSource": "https://qjr1997.github.io/fear-greed-index/data.json",
+      "sourceLabel": "A股恐贪指数（第三方5指标模型）",
+      "sourceUpdatedAt": "2026-08-04 10:05:37",
+      "verifiedAt": "2026-08-05T08:18:56.065Z",
+      "status": "第三方模型",
+      "methodology": "股票强度、成交量、波动率、避险需求与期货升贴水五项标准化指标；与原百分位口径不可直接比较。"
     },
     "kr": {
       "score": 79,
