@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>从 PLTR 爆发到禁止中国光模块 —— AI 主权的三个框架</title>
+<style>
+  /* ===================================================================
+     CSNPK Design System — Mode A: 研究报告 / 门户
+     品牌骨架：纸张质感的研究所刊物 + 高密度可核验决策终端
+     页面类型：A. 研究报告（暖米白纸张、衬线标题、较多留白）
+     =================================================================== */
+
+  /* ----- 标准设计令牌 ----- */
+  :root {
+    --paper: #f6f4ee;
+    --panel: #fffefa;
+    --panel-2: #faf8f2;
+
+    --ink: #1f2430;
+    --ink-2: #494f5e;
+    --muted: #6f7587;
+
+    --hairline: #e3ded1;
+    --hairline-strong: #cfc8b6;
+
+    --accent: #173a5e;
+    --accent-soft: #eaf0f6;
+    --cinnabar: #b5452e;
+    --cinnabar-soft: #f9ece7;
+    --gold: #96702a;
+    --gold-deep: #856327;
+    --gold-soft: #f5eeda;
+    --jade: #2f6b4f;
+    --jade-soft: #e9f2ec;
+    --violet: #5f4b7a;
+
+    --radius: 10px;
+    --radius-lg: 14px;
+    --radius-sm: 6px;
+    --nav-h: 59px;
+
+    --shadow-card: 0 1px 2px rgba(31,36,48,.05), 0 8px 24px rgba(31,36,48,.06);
+    --shadow-lift: 0 2px 4px rgba(31,36,48,.06), 0 16px 40px rgba(31,36,48,.10);
+
+    --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+    --content-pad: clamp(20px, 5vw, 100px);
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* ===================================================================
+     全站导航 — CSNPK 标准导航条
+     =================================================================== */
+  .csnpk-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--nav-h);
+    background: rgba(255,254,250,.88);
+    backdrop-filter: blur(14px) saturate(1.4);
+    -webkit-backdrop-filter: blur(14px) saturate(1.4);
+    border-bottom: 1px solid var(--hairline);
+    display: flex;
+    align-items: center;
+  }
+  .csnpk-nav .nav-inner {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--content-pad);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  /* 品牌区 */
+  .csnpk-nav .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .csnpk-nav .brand-seal {
+    width: 30px; height: 30px;
+    border-radius: 7px;
+    background: var(--cinnabar);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .csnpk-nav .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .csnpk-nav .brand-name {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .csnpk-nav .brand-sub {
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  /* 一级菜单 */
+  .csnpk-nav .nav-groups {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 100%;
+  }
+  .csnpk-nav .nav-group {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .csnpk-nav .nav-group > button {
+    background: none;
+    border: none;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink-2);
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color .15s;
+  }
+  .csnpk-nav .nav-group > button:hover { color: var(--ink); }
+  .csnpk-nav .nav-group > button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .csnpk-nav .nav-group > button .arrow {
+    font-size: 10px;
+    opacity: .5;
+    transition: transform .15s;
+  }
+  .csnpk-nav .nav-group:hover > button .arrow,
+  .csnpk-nav .nav-group:focus-within > button .arrow {
+    transform: rotate(180deg);
+  }
+
+  /* 当前分组 */
+  .csnpk-nav .nav-group.current > button {
+    color: var(--cinnabar);
+  }
+  .csnpk-nav .nav-group.current::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 14px; right: 14px;
+    height: 2px;
+    background: var(--cinnabar);
+    border-radius: 2px 2px 0 0;
+  }
+
+  /* 下拉菜单 */
+  .csnpk-nav .nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lift);
+    padding: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .15s, visibility .15s;
+    z-index: 101;
+  }
+  .csnpk-nav .nav-group:hover .nav-dropdown,
+  .csnpk-nav .nav-group:focus-within .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+  }
+  .csnpk-nav .nav-dropdown a {
+    display: block;
+    padding: 10px 14px;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+    transition: background .12s;
+  }
+  .csnpk-nav .nav-dropdown a small {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+  .csnpk-nav .nav-dropdown a:hover {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  /* ----- 主布局 ----- */
+  .page-main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--content-pad);
+  }
+
+  /* ===================================================================
+     Hero / 页头
+     =================================================================== */
+  .hero {
+    padding: 52px 0 32px;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 36px;
+  }
+  .hero .kicker {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--ink);
+    letter-spacing: .005em;
+    margin-bottom: 14px;
+  }
+  .hero .hero-desc {
+    font-size: 15px;
+    color: var(--ink-2);
+    line-height: 1.8;
+    max-width: 60ch;
+    margin-bottom: 18px;
+  }
+  .hero .hero-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    font-size: 12px;
+    color: var(--muted);
+    font-family: var(--mono);
+  }
+  .hero .hero-status .status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: var(--sans);
+  }
+  .status-tag.verified {
+    background: var(--jade-soft);
+    color: var(--jade);
+  }
+  .status-tag.pending {
+    background: var(--gold-soft);
+    color: var(--gold-deep);
+  }
+
+  /* ===================================================================
+     核验条 / 研究路径
+     =================================================================== */
+  .research-path {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 28px;
+    padding: 10px 16px;
+    background: var(--panel-2);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+  }
+  .research-path .path-step {
+    color: var(--ink-2);
+    font-weight: 600;
+  }
+  .research-path .path-step.done { color: var(--jade); }
+  .research-path .path-step.current {
+    color: var(--cinnabar);
+    border-bottom: 1px dashed var(--cinnabar);
+  }
+  .research-path .path-sep { color: var(--hairline-strong); }
+
+  /* ===================================================================
+     决策摘要
+     =================================================================== */
+  .summary-box {
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    margin-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--ink-2);
+  }
+  .summary-box .summary-title {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .summary-box strong { color: var(--ink); }
+
+  /* ===================================================================
+     KPI 数字行
+     =================================================================== */
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .kpi-card {
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 20px 18px;
+    text-align: center;
+  }
+  .kpi-card .kpi-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .kpi-card .kpi-value {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .kpi-card .kpi-note {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ===================================================================
+     正文排版
+     =================================================================== */
+  .article-body h2 {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 48px 0 16px;
+    letter-spacing: .005em;
+    line-height: 1.4;
+  }
+  .article-body h3 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 32px 0 12px;
+    letter-spacing: .005em;
+    line-height: 1.45;
+  }
+  .article-body h4 {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink-2);
+    margin: 24px 0 8px;
+  }
+  .article-body p {
+    margin-bottom: 16px;
+    color: var(--ink);
+    line-height: 1.8;
+  }
+  .article-body p + p { margin-top: -4px; }
+  .article-body strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .article-body em { color: var(--ink-2); }
+
+  /* 引导段 */
+  .article-body p.lead {
+    font-size: 16px;
+    color: var(--ink);
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+
+  /* 行内来源标注 */
+  .src-note {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: var(--mono);
+    white-space: nowrap;
+  }
+  .src-note::before { content: '['; }
+  .src-note::after { content: ']'; }
+
+  /* Pull quote */
+  .pull-quote {
+    margin: 32px 0;
+    padding: 18px 0;
+    border-top: 1px solid var(--hairline-strong);
+    border-bottom: 1px solid var(--hairline-strong);
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1.55;
+    text-align: center;
+    letter-spacing: .01em;
+  }
+
+  /* 分隔 */
+  .section-sep {
+    text-align: center;
+    margin: 40px 0 28px;
+    color: var(--hairline-strong);
+    font-family: var(--serif);
+    font-size: 13px;
+    letter-spacing: .24em;
+  }
+
+  /* ===================================================================
+     卡片组件
+     =================================================================== */
+  .card-grid {
+    display: grid;
+    gap: 14px;
+    margin: 24px 0;
+  }
+  .card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 20px;
+    transition: box-shadow .15s, border-color .15s;
+  }
+  .card:hover {
+    border-color: var(--hairline-strong);
+    box-shadow: var(--shadow-card);
+  }
+  .card .card-kicker {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .card h4 {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 8px;
+    line-height: 1.4;
+  }
+  .card p {
+    font-size: 13px;
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin: 0;
+  }
+  .card .card-tags {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .card .tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    padding: 3px 9px;
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    color: var(--muted);
+    background: var(--panel-2);
+    letter-spacing: .04em;
+  }
+  .card.accent-top { border-top: 3px solid var(--accent); }
+  .card.cinnabar-top { border-top: 3px solid var(--cinnabar); }
+  .card.jade-top { border-top: 3px solid var(--jade); }
+
+  /* ===================================================================
+     Callout / 提示框
+     =================================================================== */
+  .callout {
+    margin: 24px 0;
+    padding: 16px 20px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--ink-2);
+  }
+  .callout .callout-kicker {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .callout p { margin: 0; }
+  .callout strong { color: var(--ink); }
+
+  .callout.warn {
+    background: var(--cinnabar-soft);
+    border: 1px solid rgba(181,69,46,.15);
+  }
+  .callout.warn .callout-kicker { color: var(--cinnabar); }
+
+  .callout.info {
+    background: var(--accent-soft);
+    border: 1px solid rgba(23,58,94,.1);
+  }
+  .callout.info .callout-kicker { color: var(--accent); }
+
+  .callout.note {
+    background: var(--gold-soft);
+    border: 1px solid rgba(150,112,42,.12);
+  }
+  .callout.note .callout-kicker { color: var(--gold-deep); }
+
+  /* ===================================================================
+     表格
+     =================================================================== */
+  .tbl-wrap {
+    overflow-x: auto;
+    margin: 24px 0;
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    min-width: 520px;
+  }
+  thead th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--ink-2);
+    background: var(--panel-2);
+    border-bottom: 1px solid var(--hairline-strong);
+    white-space: nowrap;
+    font-family: var(--serif);
+    letter-spacing: .02em;
+  }
+  tbody td {
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--hairline);
+    color: var(--ink);
+    line-height: 1.6;
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(23,58,94,.02); }
+
+  .rank-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px; height: 22px;
+    border-radius: 999px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--accent);
+  }
+  .rank-num.dim { background: var(--muted); }
+
+  /* ===================================================================
+     插图
+     =================================================================== */
+  .illustration {
+    margin: 32px 0;
+    padding: 20px;
+    background: var(--panel-2);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    text-align: center;
+  }
+  .illustration img {
+    display: block;
+    margin: 0 auto;
+    max-width: clamp(260px, 65%, 720px);
+    height: auto;
+    border-radius: var(--radius-sm);
+  }
+  .illustration figcaption {
+    margin-top: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: .04em;
+  }
+
+  /* ===================================================================
+     页脚
+     =================================================================== */
+  .page-footer {
+    margin-top: 56px;
+    padding: 24px 0 40px;
+    border-top: 1px solid var(--hairline);
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .page-footer .disclaimer {
+    background: var(--panel-2);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+  .page-footer .disclaimer strong { color: var(--ink-2); }
+  .page-footer .footer-meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* ===================================================================
+     响应式
+     =================================================================== */
+  @media (max-width: 980px) {
+    .hero h1 { font-size: 30px; }
+    .kpi-row { grid-template-columns: repeat(2, 1fr); }
+    .card-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+    .csnpk-nav .brand-sub { display: none; }
+  }
+
+  @media (max-width: 760px) {
+    .hero h1 { font-size: 26px; }
+    .hero { padding: 36px 0 24px; }
+    .kpi-row { grid-template-columns: 1fr 1fr; }
+    .card-grid.cols-3,
+    .card-grid.cols-2 { grid-template-columns: 1fr; }
+    .csnpk-nav .nav-group > button { font-size: 13px; padding: 6px 10px; }
+    .pull-quote { font-size: 17px; }
+    .page-main { padding: 0 20px; }
+    .csnpk-nav .nav-inner { padding: 0 20px; }
+  }
+
+  @media (max-width: 760px) {
+    .illustration img { max-width: clamp(240px, 80%, 600px); }
+  }
+
+  @media (max-width: 520px) {
+    .illustration img { max-width: 100%; }
+    .hero h1 { font-size: 24px; line-height: 1.4; }
+    .hero .hero-desc { font-size: 14px; }
+    .kpi-row { grid-template-columns: 1fr; gap: 10px; }
+    .kpi-card { padding: 16px 14px; }
+    .kpi-card .kpi-value { font-size: 24px; }
+    .article-body h2 { font-size: 20px; }
+    .article-body h3 { font-size: 16px; }
+    .page-main { padding: 0 16px; }
+    .summary-box { padding: 14px 16px; font-size: 13px; }
+    .csnpk-nav .nav-inner { padding: 0 16px; }
+    .csnpk-nav .nav-groups {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 0;
+      mask-image: linear-gradient(to right, #000 92%, transparent);
+      -webkit-mask-image: linear-gradient(to right, #000 92%, transparent);
+    }
+    .csnpk-nav .nav-group > button {
+      font-size: 12px;
+      padding: 6px 8px;
+      scroll-snap-align: start;
+    }
+    .research-path { font-size: 10px; gap: 4px; }
+    .research-path .path-sep { display: none; }
+    .research-path .path-step { padding: 2px 6px; }
+  }
+
+  @media (max-width: 390px) {
+    .page-main { padding: 0 12px; }
+    .csnpk-nav .nav-inner { padding: 0 12px; }
+    .hero h1 { font-size: 22px; }
+    .kpi-card .kpi-value { font-size: 22px; }
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .csnpk-nav { display: none; }
+    .page-main { padding: 0 12px; }
+    .page-footer { display: none; }
+    .card, .callout, .summary-box, .kpi-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================================================================
+   全站导航
+   =================================================================== -->
+<nav class="csnpk-nav" aria-label="主导航">
+  <div class="nav-inner">
+    <a class="brand" href="/" aria-label="CSNPK 首页">
+      <span class="brand-seal" aria-hidden="true">策</span>
+      <span class="brand-text">
+        <span class="brand-name">行业战略分析</span>
+        <span class="brand-sub">Sector Strategy Research</span>
+      </span>
+    </a>
+
+    <div class="nav-groups">
+      <div class="nav-group">
+        <button type="button" aria-expanded="false">股票 <span class="arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="/a-share-market/">A 股概览<small>沪深市场全景</small></a>
+          <a href="/nav/">港股概览<small>港股研究入口</small></a>
+          <a href="/us-market/">美股概览<small>标普 / 纳斯达克</small></a>
+        </div>
+      </div>
+
+      <div class="nav-group">
+        <button type="button" aria-expanded="false">A 股工具 <span class="arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="/mda100/">候选筛选<small>多条件选股</small></a>
+          <a href="/a-share-rotation/">轮动雷达<small>板块强度追踪</small></a>
+          <a href="/a-share-market/">资金面<small>ETF与市场资金观察</small></a>
+        </div>
+      </div>
+
+      <div class="nav-group">
+        <button type="button" aria-expanded="false">美股工具 <span class="arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="/us-skew/">美股偏斜<small>期权偏斜监控</small></a>
+          <a href="/mda100/">MDA 100<small>动量宽度仪表盘</small></a>
+        </div>
+      </div>
+
+      <div class="nav-group">
+        <button type="button" aria-expanded="false">市场观察 <span class="arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="/macro-fiscal-risk/">宏观财政风险<small>债务 & 利率追踪</small></a>
+          <a href="/a-share-rotation/">行业轮动<small>A 股板块迁移</small></a>
+        </div>
+      </div>
+
+      <div class="nav-group current">
+        <button type="button" aria-expanded="false" aria-current="page">调研 <span class="arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="/ai-sovereignty/" style="color:var(--cinnabar);font-weight:600">AI 主权<small>当前阅读</small></a>
+          <a href="/nav/">半导体<small>设备 & 材料</small></a>
+          <a href="/nav/">新能源<small>光伏 & 储能</small></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================================================================
+   主内容区
+   =================================================================== -->
+<main class="page-main">
+
+<!-- ----- Hero ----- -->
+<header class="hero">
+  <div class="kicker">Research Report · 行业深度</div>
+  <h1>从 PLTR 爆发到禁止中国光模块<br>AI 主权的三个框架</h1>
+  <p class="hero-desc">
+    当 AI 开始审批贷款、调度电网、指挥供应链的时候，谁控制算力、数据和业务规则，谁就有实际决策权。这不是口号，是正在发生的产业趋势。
+  </p>
+</header>
+
+<!-- ----- 研究路径 ----- -->
+<div class="research-path" aria-label="研究路径">
+  <span class="path-step done">政策梳理 ✓</span>
+  <span class="path-sep">→</span>
+  <span class="path-step done">框架构建 ✓</span>
+  <span class="path-sep">→</span>
+  <span class="path-step current">方向验证</span>
+  <span class="path-sep">→</span>
+  <span class="path-step">持续跟踪</span>
+</div>
+
+<!-- ----- 决策摘要 ----- -->
+<div class="summary-box">
+  <div class="summary-title">当前判断</div>
+  <p>
+    <strong>AI 主权是未来 3-5 年的结构性主线</strong>，产业链内部存在显著分化。产业正经历"基建先行 → 控制层接棒 → 应用兑现"的轮动。算力基建仍在景气但定价已较充分；<strong>数据控制层未来 1-3 年产业增量最大</strong>；应用层长期空间最大但收入尚未兑现。
+  </p>
+</div>
+
+<!-- ----- KPI ----- -->
+<div class="kpi-row">
+  <div class="kpi-card">
+    <div class="kpi-label">主线时间窗口</div>
+    <div class="kpi-value">3–5 年</div>
+    <div class="kpi-note">方向置信度高，产业逻辑清晰</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">产业轮动节奏</div>
+    <div class="kpi-value">三层接棒</div>
+    <div class="kpi-note">算力 → 控制层 → 应用</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">当前最大增量</div>
+    <div class="kpi-value">数据控制层</div>
+    <div class="kpi-note">主权云 / 数据库 / 权限系统</div>
+  </div>
+</div>
+
+<!-- ===================================================================
+   正文
+   =================================================================== -->
+<article class="article-body">
+
+<!-- ----- 插图 1 ----- -->
+<figure class="illustration">
+  <img src="illustrations/01-framework-ai-sovereignty.png"
+       alt="AI 主权四大维度：国家竞争力基础设施、关键决策系统、企业数据载体、Agent 操作系统">
+  <figcaption>图 1 · AI 主权的四个核心维度</figcaption>
+</figure>
+
+<!-- ===== 一 ===== -->
+<h2>一、AI 主权到底是什么</h2>
+
+<p>
+  市场普遍将 AI 主权等同于"国产替代"或信创范畴，这一框架已不足以覆盖当前的产业现实。
+</p>
+
+<p>
+  核心逻辑是：当 AI 仅承担对话角色时，主权约束不强；但当 AI 进入信贷审批、电网调度、供应链指挥、ERP 系统调用等关键决策场景时，<strong>谁控制算力、谁能访问数据、谁设置权限规则、谁定义业务逻辑，即构成实质性的权力分配问题</strong>。
+</p>
+
+<h3>全球政策都在往这个方向走</h3>
+
+<p>
+  美国 AI 行动计划已将 AI 划分为三大支柱——创新、基础设施、国际安全——并计划向盟友输出覆盖硬件、模型、软件、应用及标准的"全栈 AI 包"。其目标并非单纯销售 GPU，而是输出整套技术标准与生态体系。<span class="src-note">白宫 AI 行动计划 2025.07</span>
+</p>
+
+<p>
+  欧盟正推进 AI Factory、AI Gigafactory 与主权云建设，InvestAI 计划目标调动约 2000 亿欧元投资，核心诉求明确：降低对美国云服务商与算力体系的依赖。<span class="src-note">EC AI Continent Plan</span>
+</p>
+
+<p>
+  中国"人工智能+"政策同时推模型、数据、算力、应用和安全，重心从"建算力"往"工业、政务、能源场景落地"转。<span class="src-note">国务院"人工智能+"意见 2025.08</span>
+</p>
+
+<div class="pull-quote">
+  中美欧路径不同，但方向一致：AI 从商业产品变成战略基础设施。
+</div>
+
+<!-- ----- 插图 2 ----- -->
+<figure class="illustration">
+  <img src="illustrations/02-flowchart-three-layer.png"
+       alt="AI 主权三层架构：算力主权、数据与控制主权、应用与工作流主权">
+  <figcaption>图 2 · AI 主权的三层架构与轮动节奏</figcaption>
+</figure>
+
+<!-- ===== 二 ===== -->
+<h2>二、三层框架：资本流向与价值分布</h2>
+
+<div class="card-grid cols-3">
+  <div class="card accent-top">
+    <div class="card-kicker">Phase 01</div>
+    <h4>算力主权</h4>
+    <p>芯片、服务器、光模块、数据中心。支出最大、收入兑现最快，但市场定价已经普遍不低，正在进入分化阶段。</p>
+    <div class="card-tags">
+      <span class="tag">GPU</span>
+      <span class="tag">半导体设备</span>
+      <span class="tag">光模块</span>
+      <span class="tag">数据中心</span>
+    </div>
+  </div>
+
+  <div class="card cinnabar-top">
+    <div class="card-kicker">Phase 02</div>
+    <h4>数据与控制主权</h4>
+    <p>数据库、权限系统、主权云、审计追踪。商业模式优于硬件——高毛利率、高迁移成本、订阅制收入。未来 1-3 年的产业增量最为突出。</p>
+    <div class="card-tags">
+      <span class="tag">主权云</span>
+      <span class="tag">数据库</span>
+      <span class="tag">IAM</span>
+      <span class="tag">审计</span>
+    </div>
+  </div>
+
+  <div class="card jade-top">
+    <div class="card-kicker">Phase 03</div>
+    <h4>应用与工作流主权</h4>
+    <p>办公 Agent、工业 Agent、政务 Agent。长期空间最大、数据飞轮最强。WorkBuddy 等头部产品已在文档处理、代码生成、金融研究、跨工具调用等场景中验证了 AI 助手的真实生产力，是这一层最先跑通商业闭环的样本之一。</p>
+    <div class="card-tags">
+      <span class="tag">办公</span>
+      <span class="tag">工业</span>
+      <span class="tag">政务</span>
+      <span class="tag">WorkBuddy</span>
+    </div>
+  </div>
+</div>
+
+<h3>第一阶段：算力基建——景气维持，企业分化加剧</h3>
+
+<p>
+  算力层的资本开支规模确凿。2024-2026 年市场定价路径清晰：英伟达 → 国产算力 → 光模块 → 半导体设备。这一轮动序列本身说明<strong>产业景气趋势不变，但市场定价已先行反映。</strong>
+</p>
+
+<p>
+  当前核心矛盾在于分化：谁能实现稳定交付？谁已获得客户验证？谁能维持毛利率扩张？谁在出口管制框架下供应链不受制约？市场已从"需求驱动普增"进入"基本面驱动的企业间分化"阶段。
+</p>
+
+<h3>第二阶段：数据控制层——当前定价尚不充分</h3>
+
+<p>
+  这一层的商业模式本质上优于算力层：算力和模型属于可采购资产，但数据、权限与业务知识具有不可替代性。
+</p>
+
+<p>
+  Palantir 是一个典型参照。其核心竞争力不在于拥有客户数据，而在于将客户的数据、权限、业务对象、工作流与 Agent 统一映射至 Ontology 框架，使客户自行定义"谁能访问什么、模型可执行哪些操作、哪些动作须经审批"。<span class="src-note">Palantir Sovereign AI Whitepaper</span>
+</p>
+
+<p>
+  这一层的商业模型存在几个结构性优势：软件毛利率显著高于硬件、客户迁移成本较高、订阅收入具备可预测性、使用反馈可形成数据复利。但短板同样明显——采购周期偏长、定制化程度较高，目前多家"中国版 Palantir"仍处于概念阶段，尚未形成标准化产品。
+</p>
+
+<h3>第三阶段：应用层——想象空间最大，收入兑现周期最长</h3>
+
+<p>
+  最终竞争不在 GPU 数量，而在于谁能将 AI 深度嵌入真实业务流程。文档协同、审批流转、制造排产、电网调度、风控决策——这些场景的入口已被现有软件厂商占据。核心问题是这些公司能否将传统席位升级为 AI 席位、将一次性项目转化为持续性订阅收入。
+</p>
+
+<p>
+  当前的核心矛盾是：<strong>产品发布密集，但形成规模化收入、实现提价与高续费率的公司仍为少数。</strong>
+</p>
+
+<p>
+  从早期样本看，WorkBuddy 的产品形态已经具备较强的范式意义：多模型调度与插件化架构，使它能在长文档分析、跨工具调用、合规审查等高密度任务上稳定交付；在金融研究、代码生成、文档处理等场景中，已经形成可验证、可计费的工作流。可以认为，WorkBuddy 代表的正是应用层从"对话"走向"执行"、从"工具"走向"工作流"的一类成熟形态，是主权应用最后一公里上确定性最强的方向之一。
+</p>
+
+<div class="tbl-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>层级</th>
+        <th>产业阶段</th>
+        <th>走势判断</th>
+        <th>产业观察</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>国家顶层</td>
+        <td>加速确立</td>
+        <td>出口限制、采购标准持续加码</td>
+        <td>方向确定，属顶层政策，不直接映射具体企业</td>
+      </tr>
+      <tr>
+        <td>算力基建</td>
+        <td>高景气中后段</td>
+        <td>需求增长、供应链分化</td>
+        <td>产业支撑明确，定价已较充分</td>
+      </tr>
+      <tr>
+        <td style="font-weight:600">数据控制层</td>
+        <td style="font-weight:600">加速初期</td>
+        <td>主权云/数据库/安全投入上升</td>
+        <td style="font-weight:600;color:var(--cinnabar)">未来 1-3 年产业增量最大</td>
+      </tr>
+      <tr>
+        <td>应用工作流</td>
+        <td>商业化早期</td>
+        <td>从问答转向执行型 Agent</td>
+        <td>空间最大，收入还需验证</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ----- 插图 3 ----- -->
+<figure class="illustration">
+  <img src="illustrations/03-infographic-stage-judgment.png"
+       alt="AI 主权四阶段走势判断矩阵">
+  <figcaption>图 3 · 四层级走势判断</figcaption>
+</figure>
+
+<div class="callout warn">
+  <div class="callout-kicker">重要区分</div>
+  <p>产业方向长期向上——这个判断置信度很高。但"所有与主权概念相关的企业都会同步受益"——这个判断置信度很低。需要严格区分具备真实产业支撑的企业与仅依靠概念标签的企业。</p>
+</div>
+
+<!-- ===== 三 ===== -->
+<div class="section-sep">· · ·</div>
+
+<h2>三、中美两条路径</h2>
+
+<figure class="illustration">
+  <img src="illustrations/04-comparison-us-china.png"
+       alt="中美 AI 主权路径对比：美国输出全栈体系 vs 中国全栈自主">
+  <figcaption>图 4 · 中美 AI 主权路径对比</figcaption>
+</figure>
+
+<h3>美国：输出"美国技术体系下的主权"</h3>
+
+<p>
+  美国的基本逻辑是：各国可以保留自己的数据和应用控制权，但底层尽量用美国芯片、美国云、美国软件和美国标准。
+</p>
+
+<p>
+  一句话概括这种不对称：<strong>客户保留数据主权，但技术栈利润归属美国公司。</strong>
+</p>
+
+<div class="tbl-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>方向</th>
+        <th>代表企业</th>
+        <th>逻辑</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>国家 AI 工厂</td><td style="font-weight:600;font-family:var(--mono)">NVDA</td><td>全球 AI 基建的通用底座</td></tr>
+      <tr><td>主权云 / 隔离云</td><td style="font-weight:600;font-family:var(--mono)">ORCL, MSFT, AMZN</td><td>政府和大企业专属云需求爆发</td></tr>
+      <tr><td>数据与业务控制层</td><td style="font-weight:600;font-family:var(--mono)">PLTR</td><td>Ontology + Agent，政企数据治理标杆</td></tr>
+      <tr><td>安全体系</td><td style="font-weight:600;font-family:var(--mono)">PANW</td><td>AI 安全新边界</td></tr>
+      <tr><td>非中国光通信</td><td style="font-weight:600;font-family:var(--mono)">COHR, LITE, AAOI</td><td>供应链替代链</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>中国：从硬件自主到全栈落地</h3>
+
+<p>
+  此前阶段中国的重点方向集中于芯片国产化、国产服务器与信创底座，该阶段仍在推进，但下一阶段的产业逻辑将逐步扩散。
+</p>
+
+<p>
+  演进路径大致为：<strong>半导体设备 → 国产算力 → 数据库/安全 → 办公与工业 Agent。</strong>
+</p>
+
+<p>
+  核心变量在于能否从项目制交付转向平台化与订阅收入模式。若持续依赖单一项目型收入，软件层的定价中枢将受到结构性压制。
+</p>
+
+<!-- ===== 四 ===== -->
+<div class="section-sep">· · ·</div>
+
+<h2>四、光模块事件的位置</h2>
+
+<p>
+  美国拟限制进口中国新型号光模块（目前还在起草阶段，可能修改或搁置）。这不是一个孤立事件——<strong>它是算力基础设施主权继续升级的信号</strong>，但注意，它不代表"国产光模块全面受益"。<span class="src-note">Reuters 2026.08.04</span>
+</p>
+
+<p>这件事反映三个变化：</p>
+
+<p>
+  第一，光模块已经被视为数据中心安全边界的一部分，不再是纯粹的通用元器件。<br>
+  第二，供应商的国籍和控制权会进入采购标准，海外产能和合规身份变得值钱。<br>
+  第三，全球 AI 供应链正从"效率优先"转变为"安全性+效率双重约束"。
+</p>
+
+<div class="callout warn">
+  <div class="callout-kicker">产业链影响并非一概而论</div>
+  <p>
+    COHR、LITE、AAOI 是美国替代链上的供应方，短期内可能承接转移订单。中际旭创、新易盛面对的是美国市场准入不确定性，其海外收入占比高，受到的冲击方向与替代链企业相反。光迅科技国内收入占比较高、海外敞口相对有限，但并不意味着其具备确定性增长动力。
+  </p>
+</div>
+
+<!-- ===== 五 ===== -->
+<div class="section-sep">· · ·</div>
+
+<h2>五、三个可能被低估的方向</h2>
+
+<figure class="illustration">
+  <img src="illustrations/05-framework-undervalued.png"
+       alt="三个被低估方向：主权云与隔离云、数据库与权限系统、掌握工作入口的软件">
+  <figcaption>图 5 · 三个被低估的方向</figcaption>
+</figure>
+
+<p>市场当前充分交易的是 GPU、国产算力、光模块、半导体设备。下面三个方向还没有被完全定价，可能是下一轮的主线：</p>
+
+<div class="card-grid cols-3">
+  <div class="card">
+    <div class="card-kicker">Direction 01</div>
+    <h4>主权云与隔离云</h4>
+    <p>政府和大企业要的不是"数据存在本国"这么简单。他们要的是独立控制面、本地运维、密钥自己拿、能断网运行、不受外国法律和母公司远程控制。</p>
+  </div>
+  <div class="card">
+    <div class="card-kicker">Direction 02</div>
+    <h4>数据库与权限系统</h4>
+    <p>大模型会慢慢商品化，但数据、权限、业务语义不会。数据库、知识图谱、Ontology、身份权限和审计系统，可能比模型层拿到更稳定的价值。</p>
+  </div>
+  <div class="card">
+    <div class="card-kicker">Direction 03</div>
+    <h4>掌握工作入口的软件</h4>
+    <p>文档、办公、ERP 天然掌握用户行为、企业知识、审批流程和 Agent 执行入口。WorkBuddy 等新一代 AI 助手已把代码、文档、研究、自动化任务统一到同一入口，是这一方向上跑得最快的产品形态。关键是能不能把传统席位升级成 AI 席位。</p>
+  </div>
+</div>
+
+<!-- ===== 六 ===== -->
+<div class="section-sep">· · ·</div>
+
+<h2>六、风险提示</h2>
+
+<div class="card-grid cols-2">
+  <div class="card">
+    <h4>政策落地比想象慢</h4>
+    <p>出口限制措施存在修改甚至搁置可能。政府采购与信创推进受行政周期约束，收入兑现时点可能滞后于市场预期 1-2 个季度。</p>
+  </div>
+  <div class="card">
+    <h4>市场定价已处于较高水平</h4>
+    <p>无论 A 股还是美股，主权概念相关企业的市场定价普遍位于高位，PLTR 与寒武纪为典型例子。市场情绪一旦转向，调整幅度可能显著超越基本面变化。</p>
+  </div>
+  <div class="card">
+    <h4>概念落空风险</h4>
+    <p>大量"中国版 Palantir"仅有概念标签，缺乏标准化产品与可复制收入模型。若持续以定制化交付为主，利润率将面临持续性压缩。</p>
+  </div>
+  <div class="card">
+    <h4>地缘突变风险</h4>
+    <p>若中美关系出现阶段性缓和、出口限制放松，短期可能有利于部分企业，但会重构整个国产替代的定价逻辑框架。</p>
+  </div>
+</div>
+
+<!-- ===== 最终判断 ===== -->
+<div class="section-sep">· · ·</div>
+
+<h2>最后</h2>
+
+<p>
+  AI 主权并非短期题材，而是正在演进的产业趋势。全球 AI 体系从"单一供应链"走向"多区域技术栈"，这一方向在未来 3-5 年具备较高确定性。
+</p>
+
+<p>
+  在三层框架中，应用与工作流主权是最被低估、也是长期价值最大的一层。WorkBuddy 这类产品已经展现出 AI 助手的真实生产力——既能完成金融研究、代码生成、文档处理等高密度任务，又能把个人和团队的工作流沉淀为可复用资产。这正是 AI 主权从"算力领先"走向"应用领先"最后一公里的关键能力。能够占据工作入口、积累数据飞轮、形成网络效应的产品，将是这一轮主权周期中确定性最强的资产。从这一意义上说，WorkBuddy 不仅是当前应用层最具代表性的产品形态之一，也很可能成为未来 3-5 年中国 AI 主权叙事中的关键拼图。
+</p>
+
+<p style="margin-top:28px;font-size:14px;color:var(--ink-2);border-left:3px solid var(--cinnabar);padding-left:14px;">
+  以上为研究框架梳理，所有提及企业仅用于说明产业逻辑，不构成投资建议。
+</p>
+
+</article>
+
+<!-- ===================================================================
+   页脚
+   =================================================================== -->
+<footer class="page-footer">
+  <div class="disclaimer">
+    <strong>研究用途声明</strong><br>
+    本报告为研究型分析，所有提及企业仅用于说明产业逻辑，不构成任何投资建议。市场有风险，投资需谨慎。<br>
+    <span style="font-size:11px;color:var(--muted);margin-top:6px;display:inline-block;">
+      数据来源：白宫 AI 行动计划、欧盟 AI 大陆计划、国务院"人工智能+"意见、Palantir 主权白皮书、Reuters ·
+      部分企业数据为代理口径，未完成逐一核验
+    </span>
+  </div>
+</footer>
+
+</main>
+
+</body>
+</html>
