@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T09:01:50.905Z",
+  "generatedAt": "2026-08-05T01:24:58.647Z",
   "stage": "趋势确认期",
   "stageNote": "风险指标已明显退潮，等待价格延续确认",
   "markets": {
@@ -32,15 +32,15 @@
       }
     },
     "us": {
-      "asOf": "2026-08-03",
-      "score": 8,
+      "asOf": "2026-08-04",
+      "score": 17,
       "label": "技术中性偏强",
       "valid": 16,
-      "aboveMa20Pct": 81.3,
+      "aboveMa20Pct": 93.8,
       "weak": 0,
       "strong": 0,
-      "spy1dPct": 1.42,
-      "qqq1dPct": 1.76,
+      "spy1dPct": 1.8,
+      "qqq1dPct": 3.4,
       "coverage": {
         "valid": 22,
         "total": 22,
@@ -126,9 +126,9 @@
       "status": "第三方估算"
     },
     "us": {
-      "score": 50.5,
-      "label": "中性",
-      "asOf": "2026-08-04T08:43:31+00:00",
+      "score": 58.1,
+      "label": "贪婪",
+      "asOf": "2026-08-04T23:59:42+00:00",
       "previousClose": 45.8,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
@@ -220,26 +220,20 @@
     "equityChange": -0.08
   },
   "skew": {
-    "asOf": "2026-08-03",
-    "median25d": 0.79,
-    "valid": 13,
-    "highCount": 5,
+    "asOf": "2026-08-04",
+    "median25d": -2.57,
+    "valid": 5,
+    "highCount": 2,
     "status": "verified_close"
   },
   "breadth": {
     "aShareAsOf": "2026-08-04",
-    "aShareUpPct": 61.84,
+    "aShareUpPct": 65.87,
     "aShareUp": 3642,
     "aShareDown": 1747,
-    "aShareMainNetYi": 589.94,
-    "aShareUniverse": "全A股（含沪深北）",
-    "aShareCovered": 5889,
-    "crosscheck": {
-      "universe": "沪深全A（不含北交所）",
-      "activeSameDay": 5196,
-      "up": 3405,
-      "down": 1664,
-      "turnoverYi": 22130.62
-    }
+    "aShareMainNetYi": 4.05,
+    "aShareUniverse": "东方财富妙想平台聚合市场宽度 + 固定代表ETF组合",
+    "aShareCovered": 5529,
+    "crosscheck": {}
   }
 }
