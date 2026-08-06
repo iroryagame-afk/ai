@@ -1,0 +1,59 @@
+{
+  "status": "VERIFIED_FUTU_OPEND_WITH_DISCLOSED_EXCEPTIONS",
+  "report_date": "2026-08-06",
+  "title": "A股多周期一致性与弹性筛选",
+  "source": "Futu OpenD QFQ daily, 30-minute and 5-minute bars",
+  "generated_windows": {
+    "sequence_scan": "2026-08-06T15:36:33+08:00",
+    "sequence_audit": "2026-08-06T15:37:51+08:00",
+    "daily_30m_alignment": "2026-08-06T15:49:50+08:00",
+    "elasticity": "2026-08-06T15:53:53+08:00"
+  },
+  "coverage": {
+    "lane_a": {"verified": 204, "expected": 206, "daily_eligible": 48, "complete": 1},
+    "lane_b": {"verified": 203, "expected": 205, "daily_eligible": 91, "aligned": 41},
+    "note": "两轮OpenD读取时自选分母分别为206和205，按各轮独立口径披露。"
+  },
+  "market_gate": {
+    "state": "DEFENSIVE",
+    "all_share": {"above_ema20": true, "above_ema55": false, "ret20_pct": -6.47},
+    "star50": {"above_ema20": false, "above_ema55": false, "ret20_pct": -22.17},
+    "chinext": {"above_ema20": false, "above_ema55": false, "ret20_pct": -12.51}
+  },
+  "lane_a_complete": [
+    {
+      "code": "SZ.000636", "name": "风华高科", "close": 58.28,
+      "five_minute_start": "2026-08-06 14:15:00", "thirty_minute_confirm": "2026-08-06 15:00:00",
+      "trigger": 59.09, "support_zone": "55.38-54.82", "atr_pct": 9.81,
+      "status": "完整链条，高弹性高风险"
+    }
+  ],
+  "lane_a_waiting": [
+    {"code": "SZ.300017", "name": "网宿科技", "close": 14.73, "trigger": 15.11, "invalidation": 14.50, "status": "等待30分钟DIF掉头"},
+    {"code": "SZ.301376", "name": "致欧科技", "close": 20.34, "trigger": 20.48, "invalidation": 19.82, "status": "等待30分钟DIF掉头"},
+    {"code": "SH.688260", "name": "昀冢科技", "close": 106.82, "trigger": 110.55, "invalidation": 99.00, "status": "5分钟强，30分钟未确认"},
+    {"code": "SZ.000815", "name": "美利云", "close": 18.31, "trigger": 19.08, "invalidation": 17.87, "status": "高位等待30分钟确认"}
+  ],
+  "lane_b_focus": [
+    {"code": "SZ.300243", "name": "瑞丰高材", "close": 14.31, "target": "EMA21 14.356", "gap_pct": 0.32, "trigger": 14.40, "invalidation": 13.84},
+    {"code": "SH.603308", "name": "应流股份", "close": 48.07, "target": "EMA21 47.878 fresh break", "gap_pct": -0.40, "trigger": 48.74, "invalidation": 46.55},
+    {"code": "SZ.300236", "name": "上海新阳", "close": 91.89, "target": "EMA21 92.289", "gap_pct": 0.43, "trigger": 92.76, "invalidation": 87.67},
+    {"code": "SZ.002179", "name": "中航光电", "close": 34.67, "target": "EMA21 35.238", "gap_pct": 1.64, "trigger": 34.87, "invalidation": 33.90},
+    {"code": "SZ.301269", "name": "华大九天", "close": 94.40, "target": "EMA21 96.239", "gap_pct": 1.95, "trigger": 94.85, "invalidation": 91.06},
+    {"code": "SH.600549", "name": "厦门钨业", "close": 57.47, "target": "EMA55 59.199", "gap_pct": 3.01, "trigger": 58.23, "invalidation": 54.00}
+  ],
+  "elasticity": [
+    {"name": "风华高科", "score": 95.0, "atr_pct": 9.81, "rv20_pct": 116.94, "beta60": 2.17, "drawdown20_pct": -32.98, "rs20_pct_point": -3.10, "risk": "极高"},
+    {"name": "上海新阳", "score": 89.3, "atr_pct": 8.80, "rv20_pct": 100.90, "beta60": 2.25, "drawdown20_pct": -33.07, "rs20_pct_point": -23.55, "risk": "极高"},
+    {"name": "厦门钨业", "score": 63.6, "atr_pct": 7.56, "rv20_pct": 89.41, "beta60": 2.11, "drawdown20_pct": -28.97, "rs20_pct_point": -4.72, "risk": "极高"},
+    {"name": "瑞丰高材", "score": 60.7, "atr_pct": 7.97, "rv20_pct": 86.72, "beta60": 2.12, "drawdown20_pct": -20.18, "rs20_pct_point": -4.70, "risk": "极高"},
+    {"name": "应流股份", "score": 42.1, "atr_pct": 7.24, "rv20_pct": 83.68, "beta60": 1.90, "drawdown20_pct": -23.10, "rs20_pct_point": -5.42, "risk": "极高"},
+    {"name": "华大九天", "score": 35.0, "atr_pct": 6.73, "rv20_pct": 69.84, "beta60": 1.50, "drawdown20_pct": -28.66, "rs20_pct_point": -17.03, "risk": "高"},
+    {"name": "中航光电", "score": 14.3, "atr_pct": 4.31, "rv20_pct": 50.82, "beta60": 1.25, "drawdown20_pct": -17.47, "rs20_pct_point": -7.13, "risk": "中"}
+  ],
+  "boundaries": [
+    "A类与B类独立排序，不把弹性分直接当作买点。",
+    "公告与减持风险未完成实时排雷，页面仅为技术研究快照。",
+    "T日2026-08-06收盘信号用于T+1计划；2026-08-07新买普通A股最早2026-08-10可卖出。"
+  ]
+}
