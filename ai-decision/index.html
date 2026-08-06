@@ -27,40 +27,97 @@
   </style>
 </head>
 <body>
-<nav class="csn-topnav" aria-label="全站导航" data-nav-version="market-groups-v1">
+<style id="csnpk-market-nav-responsive">
+@media (max-width:760px) {
+  .csn-topnav .csn-drop {
+    position:fixed;
+    top:59px;
+    right:12px;
+    left:12px;
+    z-index:110;
+    width:auto;
+    min-width:0;
+    max-height:calc(100vh - 72px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    transform:translateY(6px);
+  }
+  .csn-topnav .csn-item:hover .csn-drop,
+  .csn-topnav .csn-item:focus-within .csn-drop,
+  .csn-topnav .csn-item[data-open="true"] .csn-drop { transform:none; }
+}
+</style>
+<nav class="csn-topnav" aria-label="全站导航" data-nav-version="market-groups-v2">
   <div class="csn-topnav-inner">
-    <a class="csn-brand" href="../"><span class="csn-brand-seal">研</span><span><span class="csn-brand-name">CSN 投研</span><span class="csn-brand-sub">Research Desk</span></span></a>
+    <a class="csn-brand" href="../">
+      <span class="csn-brand-seal">研</span>
+      <span><span class="csn-brand-name">CSN 投研</span><span class="csn-brand-sub">Research Desk</span></span>
+    </a>
     <div class="csn-menu">
-      <div class="csn-item" data-group="stocks"><button type="button" aria-haspopup="true">股票 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="../mda100/"><b>A股严选</b><small>科技核心池 · 候选排序 · 次日纪律</small></a><a href="../csn/"><b>美股严选</b><small>核心池 · OpenD核验 · 精选推荐</small></a><a href="../csn/hot/"><b>美股热门榜</b><small>全市场热榜 · 板块轮动 · 技术核验</small></a></div></div>
-      <div class="csn-item" data-group="a-tools"><button type="button" aria-haspopup="true">A股工具 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="../a-share-market/"><b>A股大盘观察</b><small>资金闸门 · 行业流向 · 风格轮动</small></a><a href="../a-share-thrust/"><b>A股 Thrust</b><small>行业ETF加速度 · 平均价格体感</small></a><a href="../a-share-rotation/"><b>A股轮动加速度雷达</b><small>四象限 · 底部修复 · 顶部衰竭</small></a><a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表</b><small>板块ETF · 自选股 · 机会与风险</small></a></div></div>
-      <div class="csn-item" data-group="us-tools"><button type="button" aria-haspopup="true">美股工具 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="../rs-thrust/"><b>美股相对强度加速图</b><small>找正在加速的强势股</small></a><a href="../rotation/"><b>美股轮动加速度雷达</b><small>看顶部衰竭与底部修复</small></a><a href="../us-skew/"><b>美股期权风险分布图</b><small>看保护需求与风险温度</small></a><a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表</b><small>机会、风险警报与历史信号</small></a></div></div>
-      <div class="csn-item active" data-group="progress"><a class="current" href="./">市场进度</a></div>
-      <div class="csn-item" data-group="research"><a href="../nav/">调研</a></div>
+      <div class="csn-item" data-group="stocks">
+        <button type="button" aria-haspopup="true">股票 <span class="csn-caret">▼</span></button>
+        <div class="csn-drop">
+          <a href="../mda100/" data-key="mda100"><b>A股综合优选</b><small>多指标综合评分 · T+1纪律</small></a>
+          <a href="../csn/" data-key="csn"><b>美股综合优选</b><small>多指标综合评分 · 动态5–10只</small></a>
+          <a href="../csn/hot/" data-key="csn-hot"><b>美股热门榜</b><small>全市场热榜 · 板块轮动 · 技术核验</small></a>
+        </div>
+      </div>
+      <div class="csn-item" data-group="a-tools">
+        <button type="button" aria-haspopup="true">A股工具 <span class="csn-caret">▼</span></button>
+        <div class="csn-drop">
+          <a href="../a-share-market/" data-key="a-share-market"><b>A股大盘观察</b><small>资金闸门 · 行业流向 · 风格轮动</small></a>
+          <a href="../a-share-thrust/" data-key="a-share-thrust"><b>A股 Thrust</b><small>行业ETF加速度 · 平均价格体感</small></a>
+          <a href="../a-share-rotation/" data-key="a-share-rotation"><b>A股轮动加速度雷达</b><small>四象限 · 底部修复 · 顶部衰竭</small></a>
+          <a href="../a-share-ai-software/" data-key="a-share-ai-software"><b>A股 AI 软件监控台</b><small>软件 · 安全 · AI应用 · 次日纪律</small></a>
+          <a href="../a-share-ai-hardware/" data-key="a-share-ai-hardware"><b>A股 AI 硬件监控台</b><small>算力 · 半导体 · 光通信 · 电力</small></a>
+          <a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表</b><small>板块ETF · 自选股 · 机会与风险</small></a>
+        </div>
+      </div>
+      <div class="csn-item" data-group="us-tools">
+        <button type="button" aria-haspopup="true">美股工具 <span class="csn-caret">▼</span></button>
+        <div class="csn-drop">
+          <a href="../us-market/" data-key="us-market"><b>美股大盘观察</b><small>指数状态 · 风险温度 · 风格轮动</small></a>
+          <a href="../rs-thrust/" data-key="rs-thrust"><b>美股相对强度加速图</b><small>找正在加速的强势股</small></a>
+          <a href="../rotation/" data-key="rotation"><b>美股轮动加速度雷达</b><small>看顶部衰竭与底部修复</small></a>
+          <a href="../ai-software-security-shovels/" data-key="ai-software-security-shovels"><b>AI 软件与安全监控台</b><small>固定股票池 · 轮动 · 量价 · 盘后动作</small></a>
+          <a href="../ai-hardware-shovels/" data-key="ai-hardware-shovels"><b>AI 硬件铲子监控台</b><small>SPY 基准 · 轮动 · 量价 · 盘后动作</small></a>
+          <a href="../us-skew/" data-key="us-skew"><b>美股期权风险分布图</b><small>看保护需求与风险温度</small></a>
+          <a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表</b><small>机会、风险警报与历史信号</small></a>
+        </div>
+      </div>
+      <div class="csn-item active" data-group="progress">
+        <button type="button" aria-haspopup="true">市场观察 <span class="csn-caret">▼</span></button>
+        <div class="csn-drop">
+          <a class="current" href="../ai-decision/" data-key="ai-decision"><b>中韩美市场进度</b><small>回调出清 · 去杠杆 · 贪恐与宽度</small></a>
+          <a href="../macro-fiscal-risk/" data-key="macro-fiscal-risk"><b>财政风险溢价监控</b><small>长端、美元、股债与信用扩散</small></a>
+        </div>
+      </div>
+      <div class="csn-item" data-group="research"><a href="../nav/" data-key="nav">调研</a></div>
     </div>
   </div>
 </nav>
 <main class="wrap">
-  <header class="top"><div><div class="eyebrow">CHINA · KOREA · US · CLOSE ONLY</div><h1>中韩美市场进度</h1></div><div class="date">A股 2026-08-05<br>韩股 2026-08-05<br>美股 2026-08-04</div></header>
+  <header class="top"><div><div class="eyebrow">CHINA · KOREA · US · CLOSE ONLY</div><h1>中韩美市场进度</h1></div><div class="date">A股 2026-08-06<br>韩股 2026-08-06<br>美股 2026-08-05</div></header>
   <section class="stage"><div><small>当前阶段</small><b>趋势确认期</b><small>风险指标已明显退潮，等待价格延续确认</small></div><div class="track"><span class="">风险释放</span><span class="">修复观察</span><span class="active">趋势确认</span></div></section>
   <div class="board-intro"><b>按市场查看</b><span>每个市场依次展示：杠杆 · 外部贪恐 · 技术广度 · 本市场确认指标</span></div>
   <section class="market-boards" aria-label="中国A股、韩国股和美股市场进度">
     <article class="market-board cn" aria-labelledby="market-cn-title">
-      <header class="market-board-head"><div class="market-board-title"><span class="market-code">CN</span><div><h2 id="market-cn-title">中国 A股</h2><p>CHINA A-SHARES</p></div></div><div class="market-date"><span>行情收盘</span><b>2026-08-05</b></div></header>
+      <header class="market-board-head"><div class="market-board-title"><span class="market-code">CN</span><div><h2 id="market-cn-title">中国 A股</h2><p>CHINA A-SHARES</p></div></div><div class="market-date"><span>行情收盘</span><b>2026-08-06</b></div></header>
       <section class="market-block"><div class="market-block-title"><span>杠杆出清 · 融资余额</span></div><div class="metric-asof">融资余额截至 · 2026-07-31</div><div class="metric-row"><div class="metric-main"><div class="metric-value">2.589<small>万亿</small></div><div class="metric-label">全A融资余额</div></div><div class="metric-side">一级线状态<br><b>已达到</b></div></div><div class="deleveraging-levels"><div class="deleveraging-level"><span>一级 · 基本观察位 2.60</span><b>100<small>%</small></b><div class="market-bar"><i style="width:100%"></i></div><em>基本出清进度</em></div><div class="deleveraging-level"><span>二级 · 较充分位 2.40</span><b>70<small>%</small></b><div class="market-bar"><i style="width:69.6%"></i></div><em>距二级 0.189 万亿</em></div></div><div class="market-meta">一级、二级目标线及倒计时均为研究推导，不是交易所阈值。</div><div class="market-links"><a href="https://www.sse.com.cn/market/othersdata/margin/sum/" target="_blank" rel="noopener">上交所 ↗</a><a href="https://www.szse.cn/disclosure/margin/margin/" target="_blank" rel="noopener">深交所 ↗</a><a href="https://www.bse.cn/disclosure/rzrq_trans_list.html" target="_blank" rel="noopener">北交所 ↗</a></div></section>
       <section class="market-block"><div class="market-block-title"><span>外部贪恐指数</span><span>日频 · 2026-08-04</span></div><div class="metric-row"><div class="metric-main"><div class="metric-value bad">11.4<small>/100</small></div><div class="metric-label">极度恐惧</div></div><div class="metric-side">来源更新<br><b>2026-08-04 10:05:37</b></div></div><div class="market-meta">股票强度、成交量、波动率、避险需求与期货升贴水五项标准化指标；与原百分位口径不可直接比较。</div><div class="market-links"><a href="https://qjr1997.github.io/fear-greed-index/" target="_blank" rel="noopener">A股恐贪指数（第三方5指标模型） ↗</a></div></section>
-      <section class="market-block"><div class="market-block-title"><span>技术广度与全A资金</span><span>28只境内股票ETF</span></div><div class="metric-row"><div class="metric-main"><div class="metric-value good">60.7<small>%</small></div><div class="metric-label">17 / 28 站上 MA20</div></div><div class="metric-side"><b>65.9% 上涨</b>主力 +4.05亿元</div></div><div class="market-stats"><div><span>上涨 / 下跌</span><b>3642 / 1747</b></div><div><span>显著弱势ETF</span><b>0</b></div></div><div class="market-meta">Futu OpenD · 2026-08-05 收盘；全A资金口径 2026-08-04。本栏是技术广度，不是贪恐指数。</div></section>
+      <section class="market-block"><div class="market-block-title"><span>技术广度与全A资金</span><span>28只境内股票ETF</span></div><div class="metric-row"><div class="metric-main"><div class="metric-value good">64.3<small>%</small></div><div class="metric-label">18 / 28 站上 MA20</div></div><div class="metric-side"><b>65.9% 上涨</b>主力 +4.05亿元</div></div><div class="market-stats"><div><span>上涨 / 下跌</span><b>3642 / 1747</b></div><div><span>显著弱势ETF</span><b>0</b></div></div><div class="market-meta">Futu OpenD · 2026-08-06 收盘；全A资金口径 2026-08-04。本栏是技术广度，不是贪恐指数。</div></section>
     </article>
     <article class="market-board kr" aria-labelledby="market-kr-title">
-      <header class="market-board-head"><div class="market-board-title"><span class="market-code">KR</span><div><h2 id="market-kr-title">韩国股市</h2><p>KOREA EQUITIES</p></div></div><div class="market-date"><span>行情收盘</span><b>2026-08-05</b></div></header>
+      <header class="market-board-head"><div class="market-board-title"><span class="market-code">KR</span><div><h2 id="market-kr-title">韩国股市</h2><p>KOREA EQUITIES</p></div></div><div class="market-date"><span>行情收盘</span><b>2026-08-06</b></div></header>
       <section class="market-block"><div class="market-block-title"><span>杠杆出清 · 信用融资</span></div><div class="metric-asof">信用融资截至 · 2026-08-04</div><div class="metric-row"><div class="metric-main"><div class="metric-value">27.404<small>万亿</small></div><div class="metric-label">韩国信用融资余额</div></div><div class="metric-side">一级线状态<br><b>已达到</b></div></div><div class="deleveraging-levels"><div class="deleveraging-level"><span>一级 · 基本观察位 30</span><b>100<small>%</small></b><div class="market-bar"><i style="width:100%"></i></div><em>基本出清进度</em></div><div class="deleveraging-level"><span>二级 · 较充分位 28</span><b>100<small>%</small></b><div class="market-bar"><i style="width:100%"></i></div><em>距二级 0.000 万亿</em></div></div><div class="market-meta">一级、二级目标线及倒计时均为研究推导，不是监管阈值。</div><div class="market-links"><a href="https://freesis.kofia.or.kr/stat/main.do" target="_blank" rel="noopener">KOFIA FreeSIS ↗</a></div></section>
       <section class="market-block"><div class="market-block-title"><span>外部贪恐指数</span><span>第三方估算</span></div><div class="metric-row"><div class="metric-main"><div class="metric-value bad">79<small>/100</small></div><div class="metric-label">贪婪</div></div><div class="metric-side">抓取<br><b>2026-08-05 08:02</b></div></div><div class="market-meta">CNN方法适配KOSPI/KOSDAQ</div><div class="market-links"><a href="https://feargreed.co.kr/" target="_blank" rel="noopener">feargreed.co.kr ↗</a></div></section>
-      <section class="market-block"><div class="market-block-title"><span>技术广度与资金确认</span><span>第三方已核验 · 2026-08-05</span></div><div class="metric-row"><div class="metric-main"><div class="metric-value good">62.5<small>%</small></div><div class="metric-label">10 / 16 站上 MA20</div></div><div class="metric-side">全市场外资 / 机构<b>+11,484 / −3,944亿</b></div></div><div class="market-stats"><div><span>半导体 外资 / 机构 5日</span><b>+482.0 / −175.3亿</b></div><div><span>海力士 / 三星 外资5日</span><b>+25,059.9 / +20,890.0亿</b></div></div><div class="market-meta">KRX 2026-08-05 · 16只ETF；海力士程序 +7,613.0亿 / 卖空 3.06%。第三方资金确认不计入杠杆或贪恐。</div><div class="market-links"><a href="https://ksinfo.co.kr/stocks/000660" target="_blank" rel="noopener">KSInfo ↗</a><a href="https://www.stockplus.com/m/stocks/KOREA-A000660/quotations/foreign" target="_blank" rel="noopener">Stockplus 辅助核验 ↗</a></div></section>
+      <section class="market-block"><div class="market-block-title"><span>技术广度与资金确认</span><span>第三方已核验 · 2026-08-05</span></div><div class="metric-row"><div class="metric-main"><div class="metric-value good">75<small>%</small></div><div class="metric-label">12 / 16 站上 MA20</div></div><div class="metric-side">全市场外资 / 机构<b>+11,484 / −3,944亿</b></div></div><div class="market-stats"><div><span>半导体 外资 / 机构 5日</span><b>+482.0 / −175.3亿</b></div><div><span>海力士 / 三星 外资5日</span><b>+25,059.9 / +20,890.0亿</b></div></div><div class="market-meta">KRX 2026-08-06 · 16只ETF；海力士程序 +7,613.0亿 / 卖空 3.06%。第三方资金确认不计入杠杆或贪恐。</div><div class="market-links"><a href="https://ksinfo.co.kr/stocks/000660" target="_blank" rel="noopener">KSInfo ↗</a><a href="https://www.stockplus.com/m/stocks/KOREA-A000660/quotations/foreign" target="_blank" rel="noopener">Stockplus 辅助核验 ↗</a></div></section>
     </article>
     <article class="market-board us" aria-labelledby="market-us-title">
-      <header class="market-board-head"><div class="market-board-title"><span class="market-code">US</span><div><h2 id="market-us-title">美国股市</h2><p>US EQUITIES</p></div></div><div class="market-date"><span>行情收盘</span><b>2026-08-04</b></div></header>
+      <header class="market-board-head"><div class="market-board-title"><span class="market-code">US</span><div><h2 id="market-us-title">美国股市</h2><p>US EQUITIES</p></div></div><div class="market-date"><span>行情收盘</span><b>2026-08-05</b></div></header>
       <section class="market-block"><div class="market-block-title"><span>杠杆 · Margin Debit</span></div><div class="metric-asof">FINRA截至 · Jun-26</div><div class="metric-row"><div class="metric-main"><div class="metric-value">$1502.1<small>bn</small></div><div class="metric-label">FINRA Margin Debt</div></div><div class="metric-side">环比 <b>+6.1%</b>出清进度不计算</div></div><div class="market-meta">无官方统一出清阈值，因此不虚构进度与倒计时。</div><div class="market-links"><a href="https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics" target="_blank" rel="noopener">FINRA Margin Statistics ↗</a></div></section>
-      <section class="market-block"><div class="market-block-title"><span>外部贪恐指数</span><span>原始发布方</span></div><div class="metric-row"><div class="metric-main"><div class="metric-value bad">59.2<small>/100</small></div><div class="metric-label">贪婪</div></div><div class="metric-side">前收<br><b>58.2</b></div></div><div class="market-meta">更新 2026-08-05 07:45</div><div class="market-links"><a href="https://www.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener">CNN Fear & Greed Index ↗</a></div></section>
-      <section class="market-block"><div class="market-block-title"><span>技术广度与风险保护</span><span>16只ETF · CBOE · 25Δ</span></div><div class="metric-row"><div class="metric-main"><div class="metric-value good">93.8<small>%</small></div><div class="metric-label">15 / 16 站上 MA20</div></div><div class="metric-side"><b>SPY +1.80%</b>QQQ +3.40%</div></div><div class="market-stats"><div><span>总 / 股票 Put-Call</span><b class="good">0.80 / 0.55</b></div><div><span>25Δ Skew · 高偏斜样本</span><b>-2.57 vol · 2</b></div></div><div class="market-meta">Futu 2026-08-04；Put/Call 2026-08-03（日变 -0.11）；Skew 2026-08-04。风险保护确认不等于贪恐指数。</div></section>
+      <section class="market-block"><div class="market-block-title"><span>外部贪恐指数</span><span>原始发布方</span></div><div class="metric-row"><div class="metric-main"><div class="metric-value bad">60.4<small>/100</small></div><div class="metric-label">贪婪</div></div><div class="metric-side">前收<br><b>59.7</b></div></div><div class="market-meta">更新 2026-08-06 12:43</div><div class="market-links"><a href="https://www.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener">CNN Fear & Greed Index ↗</a></div></section>
+      <section class="market-block"><div class="market-block-title"><span>技术广度与风险保护</span><span>16只ETF · CBOE · 25Δ</span></div><div class="metric-row"><div class="metric-main"><div class="metric-value good">87.5<small>%</small></div><div class="metric-label">14 / 16 站上 MA20</div></div><div class="metric-side"><b>SPY -0.20%</b>QQQ -0.90%</div></div><div class="market-stats"><div><span>总 / 股票 Put-Call</span><b class="bad">0.88 / 0.60</b></div><div><span>25Δ Skew · 高偏斜样本</span><b>0.39 vol · 7</b></div></div><div class="market-meta">Futu 2026-08-05；Put/Call 2026-08-05（日变 +0.19）；Skew 2026-08-05。风险保护确认不等于贪恐指数。</div></section>
     </article>
   </section>
   <section class="methodology" aria-label="指标说明"><div class="methodology-head"><b>口径与阅读顺序</b><p>页面按市场分栏；同一数值只出现一次。先看官方杠杆余额，再看外部贪恐指数，随后用技术广度和本市场确认项判断风险释放是否得到价格与资金响应。</p></div><div class="methodology-grid"><article><b>外部贪恐指数（0～100）</b><p>美股引用CNN原始发布；A股引用外部百分位日频指数；韩国引用第三方按CNN方法适配的估算。数值越低越恐惧，越高越贪婪，不是买卖信号。</p></article><article><b>本地技术广度</b><p>仅统计ETF站上MA20的比例与显著弱势样本，用于确认趋势覆盖面。它不是贪恐指数，也不参与改写任何外部指数。</p></article><article><b>杠杆与韩国资金</b><p>杠杆余额使用交易所、KOFIA和FINRA。KSInfo补充韩国外资、机构、半导体与权重股资金；Stockplus仅作动态页辅助核验。</p></article><article><b>美股风险保护</b><p>总Put/Call衡量期权保护成交；25Δ Skew衡量虚值Put相对Call的隐含波动溢价。两者只作为美股确认项展示。</p></article></div></section>

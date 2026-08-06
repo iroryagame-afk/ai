@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-05T13:00:02.721Z",
+  "generatedAt": "2026-08-06T13:03:28.041Z",
   "stage": "趋势确认期",
   "stageNote": "风险指标已明显退潮，等待价格延续确认",
   "markets": {
     "cn": {
-      "asOf": "2026-08-05",
-      "score": -8,
+      "asOf": "2026-08-06",
+      "score": -10,
       "label": "技术中性偏弱",
       "valid": 28,
-      "aboveMa20Pct": 60.7,
+      "aboveMa20Pct": 64.3,
       "weak": 0,
       "strong": 0,
       "coverage": {
@@ -18,11 +18,11 @@
       }
     },
     "kr": {
-      "asOf": "2026-08-05",
-      "score": -19,
+      "asOf": "2026-08-06",
+      "score": -13,
       "label": "技术中性偏弱",
       "valid": 16,
-      "aboveMa20Pct": 62.5,
+      "aboveMa20Pct": 75,
       "weak": 0,
       "strong": 0,
       "coverage": {
@@ -32,15 +32,15 @@
       }
     },
     "us": {
-      "asOf": "2026-08-04",
-      "score": 17,
+      "asOf": "2026-08-05",
+      "score": 16,
       "label": "技术中性偏强",
       "valid": 16,
-      "aboveMa20Pct": 93.8,
+      "aboveMa20Pct": 87.5,
       "weak": 0,
       "strong": 0,
-      "spy1dPct": 1.8,
-      "qqq1dPct": 3.4,
+      "spy1dPct": -0.2,
+      "qqq1dPct": -0.9,
       "coverage": {
         "valid": 22,
         "total": 22,
@@ -128,10 +128,10 @@
       "status": "第三方估算"
     },
     "us": {
-      "score": 59.2,
+      "score": 60.4,
       "label": "贪婪",
-      "asOf": "2026-08-05T07:45:46+00:00",
-      "previousClose": 58.2,
+      "asOf": "2026-08-06T12:43:16+00:00",
+      "previousClose": 59.7,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
       "sourceLabel": "CNN Fear & Greed Index",
@@ -210,22 +210,22 @@
   },
   "putCall": {
     "source": "Cboe Global Markets",
-    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-08-03",
-    "asOf": "2026-08-03",
-    "total": 0.8,
-    "totalPrevious": 0.91,
-    "equity": 0.55,
-    "equityPrevious": 0.63,
-    "previousAsOf": "2026-07-31",
+    "sourceUrl": "https://www.cboe.com/us/options/market_statistics/daily/?dt=2026-08-05",
+    "asOf": "2026-08-05",
+    "total": 0.88,
+    "totalPrevious": 0.69,
+    "equity": 0.6,
+    "equityPrevious": 0.46,
+    "previousAsOf": "2026-08-04",
     "status": "verified_official",
-    "totalChange": -0.11,
-    "equityChange": -0.08
+    "totalChange": 0.19,
+    "equityChange": 0.14
   },
   "skew": {
-    "asOf": "2026-08-04",
-    "median25d": -2.57,
-    "valid": 5,
-    "highCount": 2,
+    "asOf": "2026-08-05",
+    "median25d": 0.39,
+    "valid": 17,
+    "highCount": 7,
     "status": "verified_close"
   },
   "breadth": {
