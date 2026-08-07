@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T13:03:28.041Z",
+  "generatedAt": "2026-08-07T00:58:22.035Z",
   "stage": "趋势确认期",
   "stageNote": "风险指标已明显退潮，等待价格延续确认",
   "markets": {
@@ -32,15 +32,15 @@
       }
     },
     "us": {
-      "asOf": "2026-08-05",
-      "score": 16,
+      "asOf": "2026-08-06",
+      "score": 12,
       "label": "技术中性偏强",
       "valid": 16,
       "aboveMa20Pct": 87.5,
       "weak": 0,
       "strong": 0,
-      "spy1dPct": -0.2,
-      "qqq1dPct": -0.9,
+      "spy1dPct": -0.16,
+      "qqq1dPct": -0.37,
       "coverage": {
         "valid": 22,
         "total": 22,
@@ -128,9 +128,9 @@
       "status": "第三方估算"
     },
     "us": {
-      "score": 60.4,
+      "score": 59.7,
       "label": "贪婪",
-      "asOf": "2026-08-06T12:43:16+00:00",
+      "asOf": "2026-08-06T23:59:45+00:00",
       "previousClose": 59.7,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
@@ -226,7 +226,7 @@
     "median25d": 0.39,
     "valid": 17,
     "highCount": 7,
-    "status": "verified_close"
+    "status": "stale_reference"
   },
   "breadth": {
     "aShareAsOf": "2026-08-04",
