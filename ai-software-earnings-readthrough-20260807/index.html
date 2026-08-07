@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="NET、TEAM、TTD 2026年二季度财报对中国AI软件、云、安全与广告科技的A股港股映射。">
+  <title>NET · TEAM · TTD 财报映射：A股与港股 AI 软件判定 — CSNPK</title>
+  <style>
+    :root{
+      --paper:#f6f4ee;--panel:#fffefa;--panel-2:#faf8f2;--ink:#1f2430;--ink-2:#494f5e;
+      --muted:#727788;--line:#e3ded1;--line-2:#cfc8b6;--navy:#173a5e;--navy-soft:#eaf0f6;
+      --red:#b5452e;--red-soft:#f9ece7;--gold:#96702a;--gold-soft:#f5eeda;
+      --green:#2f6b4f;--green-soft:#e9f2ec;--violet:#5f4b7a;--violet-soft:#f0edf5;
+      --radius:12px;--shadow:0 1px 2px rgba(31,36,48,.04),0 10px 28px rgba(31,36,48,.055);
+      --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+      --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+      --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.68;-webkit-font-smoothing:antialiased}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(900px 400px at 50% -180px,rgba(23,58,94,.07),transparent 70%)}
+    a{color:var(--navy);text-underline-offset:3px}.nav{position:sticky;top:0;z-index:20;background:rgba(246,244,238,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav-in{max-width:1200px;min-height:58px;margin:auto;padding:0 22px;display:flex;align-items:center;gap:11px}.seal{width:30px;height:30px;border-radius:7px;background:var(--red);color:#fff;display:grid;place-items:center;font:700 15px var(--serif)}
+    .brand{font:700 17px var(--serif);color:var(--ink);text-decoration:none}.nav-meta{margin-left:auto;color:var(--muted);font:10px var(--mono);letter-spacing:.1em}.wrap{position:relative;max-width:1200px;margin:auto;padding:0 22px 60px}
+    .hero{padding:48px 0 28px;border-bottom:1px solid var(--line)}.kicker{display:flex;align-items:center;gap:9px;color:var(--gold);font:600 10px var(--mono);letter-spacing:.2em;text-transform:uppercase}.kicker:before{content:"";width:22px;height:1px;background:var(--gold)}
+    h1{max-width:980px;margin:14px 0 13px;font:700 clamp(30px,4.3vw,46px)/1.26 var(--serif);letter-spacing:-.02em}.lead{max-width:930px;margin:0;color:var(--ink-2);font-size:15px}.meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;color:var(--muted);font:11px var(--mono)}
+    .verified{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-weight:700}.verified:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+    .verdict{margin:22px 0 18px;padding:24px 26px;background:linear-gradient(135deg,#fffefa,#fbf7ed);border:1px solid #dbcba5;border-top:3px solid var(--gold);border-radius:15px;box-shadow:var(--shadow)}
+    .verdict h2{margin:0 0 10px;font:700 22px var(--serif)}.verdict p{margin:0;color:var(--ink-2);font-size:14px}.verdict strong{color:var(--ink)}
+    .pulse{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:18px 0 28px}.tile{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 17px;box-shadow:var(--shadow)}
+    .tile .l{color:var(--muted);font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}.tile .v{margin:5px 0 2px;font:700 25px var(--serif)}.tile .s{color:var(--muted);font-size:11px}.up{color:var(--green)}.down{color:var(--red)}.watch{color:var(--gold)}.core{color:var(--navy)}
+    .section{margin-top:36px}.section h2{display:flex;align-items:baseline;gap:9px;margin:0 0 15px;padding-bottom:10px;border-bottom:1px solid var(--line);font:700 22px var(--serif)}.num{color:var(--gold);font:600 12px var(--mono)}
+    .prints{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.print{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:19px;box-shadow:var(--shadow)}
+    .print-top{display:flex;justify-content:space-between;gap:10px;align-items:center}.print h3{margin:0;font:700 21px var(--serif)}.grade{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;font:800 14px var(--mono)}.grade.g{background:var(--green-soft);color:var(--green)}.grade.r{background:var(--red-soft);color:var(--red)}
+    .metrics{margin:13px 0;padding:10px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--ink-2);font:11.5px/1.8 var(--mono)}.print p{margin:0;color:var(--ink-2);font-size:12.5px}.print strong{color:var(--ink)}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:13px}.company{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:22px 23px;box-shadow:var(--shadow)}.company-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.company h3{margin:0;font:700 25px var(--serif)}
+    .ticker{margin-top:3px;color:var(--muted);font:10px var(--mono);letter-spacing:.08em}.signal{padding:4px 9px;border-radius:99px;font-size:10px;font-weight:800;white-space:nowrap}.signal.positive{background:var(--green-soft);color:var(--green)}.signal.mixed{background:var(--gold-soft);color:#856327}
+    .stack{display:grid;gap:8px;margin-top:17px}.row{display:grid;grid-template-columns:108px 1fr;gap:10px;padding-bottom:8px;border-bottom:1px dashed var(--line);font-size:12.5px}.row:last-child{border-bottom:0;padding-bottom:0}.row b{color:var(--ink)}.row span{color:var(--ink-2)}
+    .callout{margin-top:16px;padding:12px 13px;border-left:3px solid var(--navy);background:var(--navy-soft);color:var(--ink-2);font-size:12.5px}.company.alibaba .callout{border-left-color:var(--gold);background:var(--gold-soft)}
+    .table-wrap{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}table{width:100%;border-collapse:collapse;min-width:930px;font-size:12.5px}th{padding:10px 12px;background:var(--navy);color:#fff;text-align:left;font-size:11px;letter-spacing:.04em;white-space:nowrap}td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}tbody tr:last-child td{border-bottom:0}tbody tr:hover td{background:var(--panel-2)}
+    .code{font:700 11.5px var(--mono);white-space:nowrap}.name{font-weight:750;white-space:nowrap}.why{color:var(--ink-2);line-height:1.56}.chip{display:inline-block;padding:2px 7px;border-radius:99px;font-size:10px;font-weight:800;white-space:nowrap}.c-green{background:var(--green-soft);color:var(--green)}.c-red{background:var(--red-soft);color:var(--red)}.c-gold{background:var(--gold-soft);color:#856327}.c-blue{background:var(--navy-soft);color:var(--navy)}.c-violet{background:var(--violet-soft);color:var(--violet)}
+    .map-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.map-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}.map-card h3{margin:0 0 9px;font:700 16px var(--serif)}.map-card ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}.map-card li{display:flex;gap:8px;color:var(--ink-2);font-size:12.5px}.map-card li:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);margin-top:8px;flex:none}.map-card.risk li:before{background:var(--red)}.map-card.wait li:before{background:var(--gold)}.map-card.nochase li:before{background:var(--violet)}
+    .rank{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.rank-card{padding:15px 16px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}.rank-card .rank-no{color:var(--gold);font:700 10px var(--mono)}.rank-card h3{margin:5px 0 3px;font:700 17px var(--serif)}.rank-card p{margin:0;color:var(--muted);font-size:11.5px}.rank-card b{color:var(--ink-2)}
+    .sources{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.source{display:block;padding:11px 13px;background:var(--panel);border:1px solid var(--line);border-radius:8px;text-decoration:none}.source:hover{border-color:var(--line-2)}.source b{display:block;color:var(--ink);font-size:12px}.source span{color:var(--muted);font-size:10.5px}
+    .note{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:10.5px}
+    @media(max-width:860px){.pulse{grid-template-columns:repeat(2,1fr)}.prints{grid-template-columns:1fr}.compare{grid-template-columns:1fr}.rank{grid-template-columns:repeat(2,1fr)}.nav-meta{display:none}}
+    @media(max-width:560px){.wrap{padding:0 14px 38px}.nav-in{padding:0 14px}.hero{padding-top:31px}.lead{font-size:14px}.verdict{padding:19px}.map-grid,.sources{grid-template-columns:1fr}.row{grid-template-columns:92px 1fr}.rank{grid-template-columns:1fr}.tile{padding:13px}.tile .v{font-size:22px}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="nav-in"><span class="seal">莫</span><a class="brand" href="../">CSNPK</a><span class="nav-meta">AI SOFTWARE READ-THROUGH · 2026.08.07</span></div></nav>
+  <main class="wrap">
+    <header class="hero">
+      <div class="kicker">Post-earnings Cross-market Signal</div>
+      <h1>NET · TEAM · TTD 财报映射：谁真正受益于企业 Agent，谁被广告 AI 证伪</h1>
+      <p class="lead">以美东 2026 年 8 月 6 日盘后财报为信号源，拆解收入与指引、RPO、AI变现、客户扩张、利润率和现金流，并映射到腾讯、阿里及A股AI软件、安全与营销科技。</p>
+      <div class="meta"><span>数据截止：北京时间 2026-08-07 07:30</span><span class="verified">公司财报与官方产品资料已核验</span></div>
+    </header>
+
+    <section class="verdict">
+      <h2>核心结论</h2>
+      <p><strong>本轮强化的不是“所有AI软件”，而是拥有企业数据、组织权限、工作流与稳定现金流的平台。</strong> TEAM和NET证明AI能够兑现为RPO、云收入及大客户扩张；TTD则证明只有AI叙事、没有收入与指引支撑，会被迅速证伪。港股最直接受益是腾讯与阿里；A股优先验证金山办公、鼎捷数智及安全软件，营销科技方向降级为等待基本面修复。</p>
+    </section>
+
+    <section class="pulse" aria-label="核心判定">
+      <article class="tile"><div class="l">Cloudflare</div><div class="v up">A</div><div class="s">增长、RPO与指引共振</div></article>
+      <article class="tile"><div class="l">Atlassian</div><div class="v up">A−</div><div class="s">企业Agent与云迁移强化</div></article>
+      <article class="tile"><div class="l">The Trade Desk</div><div class="v down">D</div><div class="s">收入、指引与利润率证伪</div></article>
+      <article class="tile"><div class="l">China Read-through</div><div class="v core">分化</div><div class="s">平台软件强，广告科技弱</div></article>
+    </section>
+
+    <section class="section">
+      <h2><span class="num">01</span>三份财报：财务事实与产业信号</h2>
+      <div class="prints">
+        <article class="print">
+          <div class="print-top"><h3>NET · Cloudflare</h3><span class="grade g">A</span></div>
+          <div class="metrics">收入 $696.1M · +36% YoY<br>一致预期 $665.4M · 超约 4.6%<br>RPO $2.732B · +38%<br>Q3指引中值较预期高约 2.1%</div>
+          <p><strong>产业信号：</strong>AI Agent带来的机器流量，正在转化为网络、安全、边缘计算和开发平台收入。大客户、DBNRR与RPO同步改善，质量高于单纯EPS超预期。</p>
+        </article>
+        <article class="print">
+          <div class="print-top"><h3>TEAM · Atlassian</h3><span class="grade g">A−</span></div>
+          <div class="metrics">收入 $1.766B · +28% YoY<br>一致预期约 $1.66B · 超约 6.4%<br>Cloud +31% · RPO $4.817B · +44%<br>非GAAP经营利润率 36%</div>
+          <p><strong>产业信号：</strong>企业私域知识、组织权限和协作流程开始通过Agent变现。FY27总收入增速指引放缓，意味着行业方向成立，但高增长不能线性外推。</p>
+        </article>
+        <article class="print">
+          <div class="print-top"><h3>TTD · The Trade Desk</h3><span class="grade r">D</span></div>
+          <div class="metrics">收入 $715.1M · +3% YoY<br>一致预期 $752.6M · 低约 5.0%<br>Q3指引 ≥$650M · 低预期约 19.4%<br>调整后EBITDA率 34% · 同比下降</div>
+          <p><strong>产业信号：</strong>AI广告工具没有自动转化为收入增长。开放互联网程序化广告承压，但不能直接外推到微信、淘宝等拥有一方数据与交易闭环的平台。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2><span class="num">02</span>港股核心：腾讯与阿里并列第一梯队</h2>
+      <div class="compare">
+        <article class="company">
+          <div class="company-head"><div><h3>腾讯控股</h3><div class="ticker">0700.HK · WORKBUDDY / DOCS / WECOM</div></div><span class="signal positive">强映射</span></div>
+          <div class="stack">
+            <div class="row"><b>TEAM映射</b><span>WorkBuddy＋腾讯文档＋腾讯会议＋企业微信＋One ID，覆盖内容、会议上下文、组织权限与Agent执行。</span></div>
+            <div class="row"><b>NET映射</b><span>腾讯云、TokenHub、Agent Runtime及安全基础设施受益于AI推理与Agent流量增长。</span></div>
+            <div class="row"><b>TTD对照</b><span>微信一方数据、视频号、小程序与支付闭环比开放互联网广告更有韧性。</span></div>
+            <div class="row"><b>已有验证</b><span>2026Q1营销服务收入同比增长20%，商业服务收入同比增长20%；自由现金流同比增长20%。</span></div>
+          </div>
+          <div class="callout"><strong>判定：A−，稳健强化。</strong> 最大优势是入口、组织关系和协同数据；主要风险是新AI产品仍显著拖累经营利润，WorkBuddy独立收入规模尚未披露。</div>
+        </article>
+        <article class="company alibaba">
+          <div class="company-head"><div><h3>阿里巴巴-W</h3><div class="ticker">9988.HK · ALIYUN / QWEN / DINGTALK</div></div><span class="signal positive">高弹性</span></div>
+          <div class="stack">
+            <div class="row"><b>TEAM映射</b><span>钉钉组织架构、企业文档、通义与悟空Agent构成企业工作流入口。</span></div>
+            <div class="row"><b>NET映射</b><span>阿里云、Model Studio及MaaS直接承接模型训练、推理与企业Agent调用需求。</span></div>
+            <div class="row"><b>TTD对照</b><span>淘宝天猫广告拥有消费行为与交易闭环，但受到消费竞争和即时零售投入影响。</span></div>
+            <div class="row"><b>已有验证</b><span>2026年3月季度云外部收入同比增长40%，AI相关产品收入占云外部收入约30%。</span></div>
+          </div>
+          <div class="callout"><strong>判定：A，产业强化。</strong> AI云收入兑现度高于腾讯，但资本开支和即时零售投入对利润、现金流的压制也更大。</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2><span class="num">03</span>A股影响矩阵：利好不等于立即追涨</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>公司</th><th>代码</th><th>方向</th><th>对应信号</th><th>投资判定</th><th>核心风险</th></tr></thead>
+        <tbody>
+          <tr><td class="name">金山办公</td><td class="code">688111</td><td><span class="chip c-green">产业利好</span></td><td class="why">TEAM验证“文档＋知识＋权限＋Agent”可形成高价值企业平台。</td><td class="why"><strong>优先验证</strong> WPS 365、AI付费率和ARPU；业绩兑现后最纯。</td><td class="why">腾讯WorkBuddy＋文档＋会议形成直接竞争，只有MAU增长不能支撑追涨。</td></tr>
+          <tr><td class="name">鼎捷数智</td><td class="code">300378</td><td><span class="chip c-green">方向利好</span></td><td class="why">TEAM强化工业知识、流程权限和企业Agent进入生产经营环节的逻辑。</td><td class="why"><strong>等待订单验证</strong>，观察AI合同转收入、合同负债与经营现金流。</td><td class="why">项目制收入、回款周期和应收账款可能削弱软件订阅逻辑。</td></tr>
+          <tr><td class="name">深信服</td><td class="code">300454</td><td><span class="chip c-green">中强利好</span></td><td class="why">NET强化AI流量带动SASE、零信任、云安全和平台整合需求。</td><td class="why">看安全订阅、续费率、云业务与现金流共同改善。</td><td class="why">国内价格竞争以及政府、企业IT预算恢复节奏。</td></tr>
+          <tr><td class="name">奇安信</td><td class="code">688561</td><td><span class="chip c-gold">中性偏多</span></td><td class="why">Agent与机器流量增加扩大身份、接口、数据与网络安全面。</td><td class="why">先看收入质量、费用率和经营现金流，不以订单故事替代回款。</td><td class="why">盈利和现金流基础弱于海外高质量SaaS样本。</td></tr>
+          <tr><td class="name">用友网络</td><td class="code">600588</td><td><span class="chip c-gold">行业利好</span></td><td class="why">TEAM证明ERP、协同与企业知识适合承载Agent。</td><td class="why">只有订阅ARR、续费和现金流同步修复才进入强化。</td><td class="why">转云投入、亏损和回款质量仍是主要约束。</td></tr>
+          <tr><td class="name">泛微网络 / 致远互联</td><td class="code">603039 / 688369</td><td><span class="chip c-gold">主题利好</span></td><td class="why">OA、审批、组织权限与知识库天然适配企业Agent。</td><td class="why">适合事件观察，暂不等同于TEAM式高质量增长。</td><td class="why">规模、研发投入、客户扩张和现金流证据不足。</td></tr>
+          <tr><td class="name">易点天下</td><td class="code">301171</td><td><span class="chip c-red">风险警示</span></td><td class="why">TTD对海外程序化广告、客户预算和AI投放工具兑现形成负面读穿。</td><td class="why">至少等待两个季度收入再加速与利润率修复。</td><td class="why">与TTD业务结构并非完全相同，不能机械等同比较。</td></tr>
+          <tr><td class="name">蓝色光标</td><td class="code">300058</td><td><span class="chip c-red">风险警示</span></td><td class="why">AI营销叙事必须落到净收入、毛利率与现金流，TTD说明规模增长并不自动创造价值。</td><td class="why">没有盈利预测上修时，不追AI营销主题脉冲。</td><td class="why">代理业务口径、客户结构与平台型广告科技差异较大。</td></tr>
+          <tr><td class="name">浙文互联</td><td class="code">600986</td><td><span class="chip c-red">偏空观察</span></td><td class="why">开放广告技术承压，对低毛利、依赖投放规模的模式不利。</td><td class="why">等待净利润、经营现金流和大客户预算恢复。</td><td class="why">短线仍可能受AI营销题材驱动，基本面与情绪可能背离。</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section">
+      <h2><span class="num">04</span>港股扩散：直接受益与风险方向</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>公司</th><th>代码</th><th>影响</th><th>核心逻辑</th><th>执行条件</th></tr></thead>
+        <tbody>
+          <tr><td class="name">腾讯控股</td><td class="code">0700</td><td><span class="chip c-green">强利好</span></td><td class="why">WorkBuddy、腾讯文档、会议和企业微信完整映射TEAM；AI广告闭环相对TTD更强。</td><td class="why">广告与商业服务维持双位数增长，AI产品亏损不再扩大。</td></tr>
+          <tr><td class="name">阿里巴巴-W</td><td class="code">9988</td><td><span class="chip c-green">强利好</span></td><td class="why">NET对应阿里云，TEAM对应钉钉与企业Agent，AI收入披露最清晰。</td><td class="why">云外部收入维持35%左右以上增长，AI收入占比不下降，现金流止跌。</td></tr>
+          <tr><td class="name">金蝶国际</td><td class="code">0268</td><td><span class="chip c-green">中强利好</span></td><td class="why">企业云ERP、财务数据和组织流程与TEAM逻辑高度一致。</td><td class="why">订阅ARR、净留存、合同负债和自由现金流共同改善。</td></tr>
+          <tr><td class="name">金山软件</td><td class="code">3888</td><td><span class="chip c-gold">间接受益</span></td><td class="why">通过金山办公权益承接办公Agent重估，但上市公司还包含游戏业务。</td><td class="why">不能把金山办公全部AI弹性等比例计入金山软件。</td></tr>
+          <tr><td class="name">中国软件国际</td><td class="code">0354</td><td><span class="chip c-gold">方向利好</span></td><td class="why">企业AI实施和云迁移需求受益，但服务型收入质量弱于产品型SaaS。</td><td class="why">观察AI订单、毛利率和回款，而非只看合作公告。</td></tr>
+          <tr><td class="name">汇量科技</td><td class="code">1860</td><td><span class="chip c-red">风险警示</span></td><td class="why">程序化广告与移动应用增长平台对TTD的预算、转化率和利润率信号更敏感。</td><td class="why">业务侧重点不同，需用Mintegral收入、留存和利润率独立验证。</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section">
+      <h2><span class="num">05</span>资金优先级：产业纯度 × 财务兑现</h2>
+      <div class="rank">
+        <article class="rank-card"><span class="rank-no">PRIORITY 01</span><h3>腾讯控股</h3><p><b>确定性最高。</b> Agent入口、协同数据、广告变现和现金流兼备。</p></article>
+        <article class="rank-card"><span class="rank-no">PRIORITY 02</span><h3>阿里巴巴-W</h3><p><b>弹性最大。</b> AI云商业化最清晰，但利润与资本开支风险更高。</p></article>
+        <article class="rank-card"><span class="rank-no">PRIORITY 03</span><h3>金山办公</h3><p><b>A股最纯。</b> 必须验证WPS 365与AI付费，且正面面对腾讯竞争。</p></article>
+        <article class="rank-card"><span class="rank-no">PRIORITY 04</span><h3>鼎捷 / 深信服</h3><p><b>订单驱动。</b> 分别对应企业流程Agent与AI安全流量，需等待财务兑现。</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2><span class="num">06</span>四类交易条件</h2>
+      <div class="map-grid">
+        <article class="map-card"><h3>强化</h3><ul><li>AI付费转化、订阅ARR或合同负债同步提升</li><li>大客户数量和客单价共同增长</li><li>经营现金流增速不低于利润增速</li><li>财报后盈利预测获得上修</li></ul></article>
+        <article class="map-card risk"><h3>证伪</h3><ul><li>Agent活跃度上升，但ARPU、订单和收入没有增长</li><li>应收账款、销售费用或资本化投入快于收入</li><li>管理层下调收入、利润率或现金流指引</li><li>AI收入依然无法单独披露或量化</li></ul></article>
+        <article class="map-card wait"><h3>等待回踩</h3><ul><li>财报或主题跳空后等待缩量回踩5日/10日均线</li><li>回踩前高或突破平台不破，再观察承接</li><li>企业软件优先等待下一次ARR、RPO或合同负债数据</li><li>广告科技至少等待两个季度增长重新加速</li></ul></article>
+        <article class="map-card nochase"><h3>不追涨</h3><ul><li>单日高开或上涨6%–8%，但盈利预测没有上修</li><li>连续两日加速，AI收入仍只有产品发布与用户口径</li><li>成交量放大但现金流、回款和利润率没有改善</li><li>把TTD或TEAM结论机械套用到商业模式不同的公司</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2><span class="num">07</span>来源与核验边界</h2>
+      <div class="sources">
+        <a class="source" href="https://www.cloudflare.com/press/press-releases/2026/cloudflare-announces-second-quarter-2026-financial-results/" target="_blank" rel="noopener"><b>Cloudflare 2026Q2官方财报</b><span>收入、RPO、客户扩张、利润率与现金流</span></a>
+        <a class="source" href="https://www.businesswire.com/news/home/20260806396002/en/Atlassian-Announces-Fourth-Quarter-and-Fiscal-Year-2026-Results" target="_blank" rel="noopener"><b>Atlassian FY2026Q4官方财报</b><span>收入、Cloud、RPO、利润率与FY27指引</span></a>
+        <a class="source" href="https://investors.thetradedesk.com/news-and-events/news/news-details/2026/The-Trade-Desk-Reports-Second-Quarter-2026-Financial-Results/default.aspx" target="_blank" rel="noopener"><b>The Trade Desk 2026Q2官方财报</b><span>收入、Q3指引、EBITDA率与客户留存</span></a>
+        <a class="source" href="https://static.www.tencent.com/uploads/2026/05/13/47382ae415a209fd161bc19a1f9b3704.pdf" target="_blank" rel="noopener"><b>腾讯2026Q1官方财报</b><span>广告、商业服务、AI投入与自由现金流</span></a>
+        <a class="source" href="https://www.tencent.com/tencent-cloud-debuts-productivity-agent-suite-creating-a-new-gateway-to-ai-for-users-and-enterprises/" target="_blank" rel="noopener"><b>腾讯生产力Agent套件</b><span>WorkBuddy、腾讯文档、会议、One ID与AgentOps</span></a>
+        <a class="source" href="https://www.alibabagroup.com/en-US/document-1991364841188622336" target="_blank" rel="noopener"><b>阿里云与AI商业化披露</b><span>云外部收入、AI收入占比、Model Studio与ARR目标</span></a>
+      </div>
+    </section>
+
+    <footer class="note">说明：美股一致预期来自财报发布前公开市场汇总，不同数据商可能因GAAP/非GAAP口径产生差异；A股与港股映射属于产业链推演，不代表相关公司收入已由本轮美股财报直接确认。交易条件仅用于研究纪律，不构成投资建议。财报事实置信度：高；跨市场公司映射置信度：中高；短期股价方向置信度：中。</footer>
+  </main>
+</body>
+</html>
