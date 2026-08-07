@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="冰神 A 股观察池与通达信公式工具：17 只 A 股名单、富途 OpenD 导入文件及 15 个 TN6 公式包。">
+  <title>冰神 A 股观察池与公式工具｜CSNPK</title>
+  <style>
+    :root{--paper:#f5f1e8;--ink:#13243a;--muted:#657181;--line:#d9d2c5;--navy:#102842;--blue:#147d9a;--ice:#dff7fb;--red:#aa352b;--gold:#b98a2c;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65}
+    a{color:inherit}.top{position:sticky;top:0;z-index:10;background:rgba(245,241,232,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .top-inner,.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.top-inner{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{text-decoration:none;font-weight:900;letter-spacing:.08em}.nav{display:flex;gap:18px;font-size:14px}.nav a{text-decoration:none;color:#536174}.nav a:hover{color:var(--blue)}
+    .hero{background:linear-gradient(135deg,#0e2138 0%,#123c56 58%,#147d9a 100%);color:#fff;padding:76px 0 68px;overflow:hidden;position:relative}
+    .hero:after{content:"冰";position:absolute;right:4vw;top:-95px;font:800 360px/1 serif;color:rgba(255,255,255,.035)}
+    .eyebrow{color:#87e2ed;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.hero h1{font:800 clamp(38px,6vw,72px)/1.08 Georgia,"Songti SC",serif;margin:14px 0}
+    .hero p{max-width:760px;color:#d9edf2;font-size:18px}.metrics{display:flex;gap:34px;flex-wrap:wrap;margin-top:30px}.metric b{display:block;font:800 30px/1 Georgia,serif;color:#fff}.metric span{font-size:13px;color:#a9c6d1}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border:1px solid rgba(255,255,255,.45);border-radius:4px;text-decoration:none;font-weight:750}
+    .btn.primary{background:#fff;color:var(--navy);border-color:#fff}.section{padding:64px 0}.section.alt{background:#ece7dc}.head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px;border-bottom:2px solid var(--navy);padding-bottom:12px}
+    .head h2{font:800 clamp(28px,4vw,40px)/1.15 Georgia,"Songti SC",serif;margin:0}.head p{margin:0;color:var(--muted);max-width:600px;text-align:right}
+    .notice{border-left:5px solid var(--gold);background:#fff9e9;padding:16px 18px;margin-bottom:24px;color:#5f502e}.notice strong{color:#73591b}
+    .table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);box-shadow:0 8px 28px rgba(22,34,50,.06)}
+    table{width:100%;border-collapse:collapse;min-width:780px}th,td{padding:13px 14px;border-bottom:1px solid #e8e3da;text-align:left;white-space:nowrap}th{background:#172d48;color:#fff;font-size:13px;letter-spacing:.04em}tbody tr:hover{background:#f3fbfc}
+    td.code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:#244d72}.tag{display:inline-block;padding:2px 8px;border-radius:999px;background:#e7f5f7;color:#12677b;font-size:12px;font-weight:700}.tag.infer{background:#fff0cf;color:#805b16}
+    .download-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.download-row .btn{border-color:var(--navy);color:var(--navy);background:transparent}.download-row .btn.primary{background:var(--navy);color:#fff}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.step{background:#fff;border:1px solid var(--line);padding:20px}.step b{display:block;color:var(--blue);margin-bottom:7px}
+    .groups{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.group{background:#fff;border-top:4px solid var(--blue);padding:22px}.group h3{margin:0 0 14px;font:800 20px Georgia,"Songti SC",serif}.links{display:flex;flex-wrap:wrap;gap:9px}.links a{padding:8px 11px;border:1px solid #cfd9dc;background:#f7fcfd;border-radius:4px;text-decoration:none;font-size:14px}.links a:hover{border-color:var(--blue);color:var(--blue)}
+    .boundary{background:#17283e;color:#dbe4ec;padding:22px;border-left:5px solid #70d3df;margin-top:26px}.boundary strong{color:#fff}.footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+    @media(max-width:760px){.nav a:nth-child(2){display:none}.hero{padding:54px 0}.section{padding:46px 0}.head{align-items:start;flex-direction:column}.head p{text-align:left}.steps,.groups{grid-template-columns:1fr}.metrics{gap:22px}.top-inner,.wrap{width:min(100% - 24px,1180px)}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand" href="../">CSN 投研</a>
+      <nav class="nav" aria-label="页面导航">
+        <a href="../#a-share-tools">A股工具</a>
+        <a href="../futu-indicators/">富途主副图代码</a>
+        <a href="../nav/">投研导航</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Bingshen A-Share Watchlist</div>
+        <h1>冰神 A 股观察池<br>与公式工具</h1>
+        <p>本页把本次图片及文字中涉及的 A 股名单、富途 OpenD 导入文件和《冰神分享》通达信公式包放在同一个入口。名单是观察池，不是买入建议。</p>
+        <div class="metrics">
+          <div class="metric"><b>17</b><span>A 股观察标的</span></div>
+          <div class="metric"><b>15</b><span>通达信 TN6 公式包</span></div>
+          <div class="metric"><b>0</b><span>自动交易或下单</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="#watchlist">查看 A 股名单</a>
+          <a class="btn" href="#formulas">下载公式包</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="watchlist">
+      <div class="wrap">
+        <div class="head">
+          <h2>冰神 A 股观察池</h2>
+          <p>整理日期：2026-08-07。图片 5 只、文字 11 只，另补充阳光电源 1 只。</p>
+        </div>
+        <div class="notice"><strong>核验边界：</strong>“盈通→长盈通”“四川→四川黄金”根据本轮语境推定，已在表内单独标注；其余简称及代码已按整理时的证券信息核对。</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>证券简称</th><th>证券代码</th><th>富途 OpenD 代码</th><th>来源</th><th>状态</th></tr></thead>
+            <tbody>
+              <tr><td>01</td><td>科伦药业</td><td class="code">002422</td><td class="code">SZ.002422</td><td>图片 1</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>02</td><td>以岭药业</td><td class="code">002603</td><td class="code">SZ.002603</td><td>图片 1</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>03</td><td>葵花药业</td><td class="code">002737</td><td class="code">SZ.002737</td><td>图片 1</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>04</td><td>丸美生物</td><td class="code">603983</td><td class="code">SH.603983</td><td>图片 1</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>05</td><td>凯赛生物</td><td class="code">688065</td><td class="code">SH.688065</td><td>图片 2</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>06</td><td>商络电子</td><td class="code">300975</td><td class="code">SZ.300975</td><td>文字“商络”</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>07</td><td>富信科技</td><td class="code">688662</td><td class="code">SH.688662</td><td>文字“富信”</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>08</td><td>优迅股份</td><td class="code">688807</td><td class="code">SH.688807</td><td>文字“优迅”</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>09</td><td>长盈通</td><td class="code">688143</td><td class="code">SH.688143</td><td>文字“盈通”</td><td><span class="tag infer">语境推定</span></td></tr>
+              <tr><td>10</td><td>正帆科技</td><td class="code">688596</td><td class="code">SH.688596</td><td>文字“正帆”</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>11</td><td>赛分科技</td><td class="code">688758</td><td class="code">SH.688758</td><td>文字“赛分”</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>12</td><td>诺唯赞</td><td class="code">688105</td><td class="code">SH.688105</td><td>文字</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>13</td><td>义翘神州</td><td class="code">301047</td><td class="code">SZ.301047</td><td>文字</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>14</td><td>铜陵有色</td><td class="code">000630</td><td class="code">SZ.000630</td><td>文字“铜陵”</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>15</td><td>四川黄金</td><td class="code">001337</td><td class="code">SZ.001337</td><td>文字“四川”</td><td><span class="tag infer">语境推定</span></td></tr>
+              <tr><td>16</td><td>浩通科技</td><td class="code">301026</td><td class="code">SZ.301026</td><td>文字“浩通”</td><td><span class="tag">已核验</span></td></tr>
+              <tr><td>17</td><td>阳光电源</td><td class="code">300274</td><td class="code">SZ.300274</td><td>后续补充</td><td><span class="tag">已核验</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="download-row">
+          <a class="btn primary" href="downloads/冰神A股名单_富途格式.csv" download>下载 CSV 名单</a>
+          <a class="btn" href="downloads/富途OpenD代码_每行一个.txt" download>下载富途代码 TXT</a>
+          <a class="btn" href="downloads/一键加入富途自选组.py" download>下载导入脚本</a>
+        </div>
+        <div class="steps">
+          <div class="step"><b>01 · 启动 OpenD</b>先登录富途 OpenD，并在富途客户端创建目标自选分组，例如“冰神”。</div>
+          <div class="step"><b>02 · 先预览</b>运行脚本但不传 <code>--apply</code>，核对证券名称、已有标的和待加入标的。</div>
+          <div class="step"><b>03 · 确认写入</b>确认无误后再传写入参数；脚本仅修改自选分组，不下单、不创建提醒。</div>
+        </div>
+        <div class="boundary"><strong>脚本命令：</strong><br><code>.venv/bin/python 一键加入富途自选组.py --group 冰神</code><br><code>.venv/bin/python 一键加入富途自选组.py --group 冰神 --apply --confirm ADD_17_A_SHARES</code></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="formulas">
+      <div class="wrap">
+        <div class="head">
+          <h2>《冰神分享》公式包</h2>
+          <p>15 个通达信 TN6 原始公式包。TN6 不能直接导入富途；分类仅依据文件名，不代表内部公式已审计。</p>
+        </div>
+        <div class="groups">
+          <div class="group"><h3>主图与结构参考</h3><div class="links">
+            <a href="../futu-indicators/bingshen/赞爹主图.tn6" download>赞爹主图</a><a href="../futu-indicators/bingshen/六龙连山原版.tn6" download>六龙连山原版</a><a href="../futu-indicators/bingshen/六龙连山赞爹.tn6" download>六龙连山赞爹</a><a href="../futu-indicators/bingshen/生命诅咒线.tn6" download>生命诅咒线</a>
+          </div></div>
+          <div class="group"><h3>凛冬买点系列</h3><div class="links">
+            <a href="../futu-indicators/bingshen/凛冬买1.tn6" download>凛冬买1</a><a href="../futu-indicators/bingshen/凛冬买1宽松版.tn6" download>买1宽松版</a><a href="../futu-indicators/bingshen/凛冬买2.tn6" download>凛冬买2</a><a href="../futu-indicators/bingshen/凛冬买3严格版.tn6" download>买3严格版</a><a href="../futu-indicators/bingshen/凛冬买3宽松版.tn6" download>买3宽松版</a>
+          </div></div>
+          <div class="group"><h3>选股与突破候选</h3><div class="links">
+            <a href="../futu-indicators/bingshen/骑牛90.tn6" download>骑牛90</a><a href="../futu-indicators/bingshen/骑牛BBI水上选股.tn6" download>骑牛BBI水上选股</a><a href="../futu-indicators/bingshen/突破诅咒线选.tn6" download>突破诅咒线选</a>
+          </div></div>
+          <div class="group"><h3>量价与辅助观察</h3><div class="links">
+            <a href="../futu-indicators/bingshen/骑牛成交量.tn6" download>骑牛成交量</a><a href="../futu-indicators/bingshen/紫色分金定穴.tn6" download>紫色分金定穴</a><a href="../futu-indicators/bingshen/国漫黄金.tn6" download>国漫黄金</a>
+          </div></div>
+        </div>
+        <div class="download-row"><a class="btn" href="../futu-indicators/bingshen/冰神分享_使用说明.txt" download>下载通达信使用说明</a></div>
+        <div class="boundary"><strong>使用边界：</strong>先趋势、后触发、再量价复核；优先等待日线收盘确认。公式信号不等于交易指令，也未验证无未来函数或具有稳定胜率。</div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap">CSNPK Research Desk · 观察池仅用于研究记录，不构成投资建议。</div></footer>
+</body>
+</html>
