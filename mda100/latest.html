@@ -1,77 +1,14 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A股综合优选｜CSNPK</title>
-<meta name="description" content="A股多指标综合优选，纳入T+1执行约束。"><style>
-:root{--bg:#f4f1e9;--panel:#fffefa;--ink:#17201d;--muted:#6b746f;--line:#d9d8cf;--green:#08765a;--red:#b94b37;--gold:#a27624}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{width:min(1280px,calc(100% - 32px));margin:36px auto 80px}.hero{padding:30px;border:1px solid var(--line);border-radius:22px;background:var(--panel)}.eyebrow{font:700 12px ui-monospace;letter-spacing:.14em;color:var(--gold)}h1{margin:10px 0 8px;font:500 clamp(34px,5vw,62px) Georgia,serif}.hero p{color:var(--muted);line-height:1.7}.gate{display:flex;gap:24px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}.gate b{font-size:22px}.gate span{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}.pick,.empty{padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.pick-head{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px}.pick-head h2{margin:0;font-size:21px}.pick-head strong{font:600 34px Georgia;color:var(--green)}.meta,.news{color:var(--muted);line-height:1.6}.factors{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0}.factors div{padding:10px;background:#f4f3ee;border-radius:10px}.factors span,.factors b{display:block;font-size:12px}.factors span{color:var(--muted);margin-bottom:5px}.plan{padding:14px;border-left:4px solid var(--gold);background:#faf5e8}.plan b,.plan span{display:block}.plan p{margin:8px 0 0;line-height:1.6;font-size:13px}footer{margin-top:22px;color:var(--muted);font-size:12px;line-height:1.7}@media(max-width:760px){main{width:calc(100% - 20px);margin-top:18px}.hero{padding:20px}.grid{grid-template-columns:1fr}.factors{grid-template-columns:repeat(2,1fr)}}
-</style></head><body><style id="csnpk-market-nav-responsive">
-@media (max-width:760px) {
-  .csn-topnav .csn-drop {
-    position:fixed;
-    top:59px;
-    right:12px;
-    left:12px;
-    z-index:110;
-    width:auto;
-    min-width:0;
-    max-height:calc(100vh - 72px);
-    overflow-y:auto;
-    overscroll-behavior:contain;
-    transform:translateY(6px);
-  }
-  .csn-topnav .csn-item:hover .csn-drop,
-  .csn-topnav .csn-item:focus-within .csn-drop,
-  .csn-topnav .csn-item[data-open="true"] .csn-drop { transform:none; }
-}
-</style>
-<nav class="csn-topnav" aria-label="全站导航" data-nav-version="market-groups-v2">
-  <div class="csn-topnav-inner">
-    <a class="csn-brand" href="../">
-      <span class="csn-brand-seal">研</span>
-      <span><span class="csn-brand-name">CSN 投研</span><span class="csn-brand-sub">Research Desk</span></span>
-    </a>
-    <div class="csn-menu">
-      <div class="csn-item" data-group="stocks">
-        <button type="button" aria-haspopup="true">股票 <span class="csn-caret">▼</span></button>
-        <div class="csn-drop">
-          <a href="../mda100/" data-key="mda100"><b>A股综合优选</b><small>多指标综合评分 · T+1纪律</small></a>
-          <a href="../csn/" data-key="csn"><b>美股综合优选</b><small>多指标综合评分 · 动态5–10只</small></a>
-          <a href="../csn/hot/" data-key="csn-hot"><b>美股热门榜</b><small>全市场热榜 · 板块轮动 · 技术核验</small></a>
-        </div>
-      </div>
-      <div class="csn-item" data-group="a-tools">
-        <button type="button" aria-haspopup="true">A股工具 <span class="csn-caret">▼</span></button>
-        <div class="csn-drop">
-          <a href="../a-share-market/" data-key="a-share-market"><b>A股大盘观察</b><small>资金闸门 · 行业流向 · 风格轮动</small></a>
-          <a href="../a-share-thrust/" data-key="a-share-thrust"><b>A股 Thrust</b><small>行业ETF加速度 · 平均价格体感</small></a>
-          <a href="../a-share-rotation/" data-key="a-share-rotation"><b>A股轮动加速度雷达</b><small>四象限 · 底部修复 · 顶部衰竭</small></a>
-          <a href="../a-share-ai-software/" data-key="a-share-ai-software"><b>A股 AI 软件监控台</b><small>软件 · 安全 · AI应用 · 次日纪律</small></a>
-          <a href="../a-share-ai-hardware/" data-key="a-share-ai-hardware"><b>A股 AI 硬件监控台</b><small>算力 · 半导体 · 光通信 · 电力</small></a>
-          <a href="../futu-indicators/" data-key="futu-indicators"><b>富途主副图代码</b><small>5个指标 · 原版代码 · 安装说明</small></a>
-          <a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表</b><small>板块ETF · 自选股 · 机会与风险</small></a>
-        </div>
-      </div>
-      <div class="csn-item" data-group="us-tools">
-        <button type="button" aria-haspopup="true">美股工具 <span class="csn-caret">▼</span></button>
-        <div class="csn-drop">
-          <a href="../us-market/" data-key="us-market"><b>美股大盘观察</b><small>指数状态 · 风险温度 · 风格轮动</small></a>
-          <a href="../rs-thrust/" data-key="rs-thrust"><b>美股相对强度加速图</b><small>找正在加速的强势股</small></a>
-          <a href="../rotation/" data-key="rotation"><b>美股轮动加速度雷达</b><small>看顶部衰竭与底部修复</small></a>
-          <a href="../ai-software-security-shovels/" data-key="ai-software-security-shovels"><b>AI 软件与安全监控台</b><small>固定股票池 · 轮动 · 量价 · 盘后动作</small></a>
-          <a href="../ai-hardware-shovels/" data-key="ai-hardware-shovels"><b>AI 硬件铲子监控台</b><small>SPY 基准 · 轮动 · 量价 · 盘后动作</small></a>
-          <a href="../us-skew/" data-key="us-skew"><b>美股期权风险分布图</b><small>看保护需求与风险温度</small></a>
-          <a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表</b><small>机会、风险警报与历史信号</small></a>
-        </div>
-      </div>
-      <div class="csn-item" data-group="progress">
-        <button type="button" aria-haspopup="true">市场观察 <span class="csn-caret">▼</span></button>
-        <div class="csn-drop">
-          <a href="../ai-decision/" data-key="ai-decision"><b>中韩美市场进度</b><small>回调出清 · 去杠杆 · 贪恐与宽度</small></a>
-          <a href="../macro-fiscal-risk/" data-key="macro-fiscal-risk"><b>财政风险溢价监控</b><small>长端、美元、股债与信用扩散</small></a>
-        </div>
-      </div>
-      <div class="csn-item" data-group="bingshen"><a href="../bingshen/" data-key="bingshen">冰神分享</a></div>
-      <div class="csn-item" data-group="research"><a href="../nav/" data-key="nav">调研</a></div>
-    </div>
-  </div>
-</nav><main><section class="hero"><span class="eyebrow">A-SHARE INTEGRATED · T+1</span><h1>A股综合优选</h1><p>综合相对强度与轮动、趋势位置、技术质量、市场/行业资金、量能新闻与T+1可执行性。目标5–10只，但不凑数；所有信号均来自T日收盘。</p><div class="gate"><div><span>数据日期</span><br><b>2026-08-03</b></div><div><span>市场闸门</span><br><b>存量分化</b></div><div><span>入选门槛</span><br><b>67分</b></div><div><span>本次入选</span><br><b>1只</b></div></div><p class="marker">DOUBLE_VERIFIED_MDA100_DATA_INDEX_MATCH · VERIFIED_A_SHARE_INTEGRATED_RECOMMENDATIONS_T1</p></section><section class="grid"><article class="pick"><div class="pick-head"><span>#1</span><h2>000636 风华高科</h2><strong>69.1</strong></div>
-<p class="meta">MLCC整机/被动元件 · 领先加速 · RS Thrust 83.3 · 收盘 51.96（+5.29%）</p>
-<div class="factors"><div><span>强度轮动</span><b>23.1/25</b></div><div><span>趋势位置</span><b>19.0/25</b></div><div><span>技术质量</span><b>17.8/20</b></div><div><span>市场风格</span><b>5.5/10</b></div><div><span>量能新闻</span><b>6.7/10</b></div><div><span>T+1可执行</span><b>5.0/10</b></div></div><div class="plan"><b>等收盘确认</b><span>观察区 49.62–51.96 · 失效线 47.80</span><p>平开或小幅低开：守住观察区且量价不转弱，才考虑观察仓；明显高开：不追，等待回踩观察区或下一次收盘确认；低开跌破失效线：取消当日新开仓计划。</p></div>
-<p class="news">新闻核验：资本运作(正向)等2条利好</p></article></section><footer>T+1纪律：T日收盘生成候选，T+1仅按开盘情景执行；当天新买不可当天卖出，最早T+2卖出。高开不追、低开破失效线取消；涨跌停一字板和停牌不假设可成交。页面只提供观察与风险控制，不生成自动交易指令。</footer></main></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="refresh" content="0;url=/mda100/">
+  <link rel="canonical" href="https://csnpk.com/mda100/">
+  <title>正在前往 A股综合优选</title>
+  <script>location.replace('/mda100/' + location.search + location.hash);</script>
+</head>
+<body>
+  <p><a href="/mda100/">前往 A股综合优选</a></p>
+</body>
+</html>
