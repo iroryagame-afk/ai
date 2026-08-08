@@ -24,3 +24,10 @@
 - 一致预期会因样本、提供方与口径变化，正式财报验证前必须重新冻结。
 - GAAP/non-GAAP、币种、单位和财报期间在比较前必须统一。
 - 图中产业链映射为分析推断，不代表公司直接供应关系或交易建议。
+
+## 视觉模板
+
+- 默认模板仓库：https://github.com/iroryagame-afk/earnings-templates
+- 固定版本：`d832b6678f1c8c21b3c15bae0fe62f0032b15c35`
+- 总览图使用 `combined/template.html`；LITE、CRWV、AMAT 使用 `single-company/template.html`。
+- 导出文件均为 1080×1920 PNG，并完成逐张视觉检查。
