@@ -15,5 +15,17 @@
 
 - 当前正式页面、导航分组、退役入口和验收边界以 `docs/csnpk-page-registry.md` 为唯一清单。
 - 修改核心导航时，必须同步修改对应生成器与已发布静态页；不得只修线上副本，导致下次生成回退。
-- `/a-share-flow/` 只允许重定向到 `/mda100/`；`/csn2/` 与 `/earnings/` 保持下线，不恢复兼容页面。
+- `/a-share-flow/` 只允许重定向到 `/a-share-market/`；`/csn2/` 与 `/earnings/` 保持下线，不恢复兼容页面。
 - 公网页面成功返回不等于数据已刷新；数据日期、生成时间和核验状态必须按各页面自身标记判断。
+
+## GitHub 共享工作台
+
+- GitHub Issue 是具体任务的任务合同；仓库文档保存长期规则；PR/Commit 保存代码证据；`tasks/current/issue-<编号>.md` 保存逐任务交接。聊天不得成为重要条件的唯一载体。
+- 接手任务时按 `Issue → tasks/current/issue-<编号>.md → PR/Commit → 当前数据重新核验` 的顺序恢复上下文。Issue 与仓库规则冲突时，先暂停并向用户指出冲突。
+- `docs/HANDOFF.md` 只作索引，不保存所有任务过程；并行任务不得共同覆写一个总交接正文。
+- Issue 必须写明外部写入授权。读取、修改本地文件、推送分支、创建 PR、更新 Issue、部署线上、修改 Secrets 分别授权；未勾选的动作不得自行扩大。
+- 每个任务使用独立分支，默认命名为 `codex/issue-<编号>-<slug>`。只暂存本任务文件，不混入其他工作树改动。
+- 任务结束前更新对应交接文件。若 Issue 已授权更新，则同步留言；若未授权或工具不可用，提供可复制的留言并明确“GitHub Issue 未更新”。
+- 任务状态只使用：`planned`、`in_progress`、`blocked`、`ready_for_review`、`merged`、`deployed_unverified`、`published_verified`。
+- 只有已推送快照完成部署、cache-busting 公网回读和必要的视觉核验后，才允许标记 `published_verified`。任何硬门失败时保留线上旧版并如实记录。
+- 详细流程、数据规则和验收要求见 `docs/WORKFLOW.md`、`docs/DATA_SOURCE_RULES.md` 与 `docs/RELEASE_CHECKLIST.md`。

@@ -1,0 +1,67 @@
+name: 股票分析
+description: 个股、行业映射、技术点位或投资论文分析
+title: "[股票分析] "
+labels: ["research", "planned"]
+body:
+  - type: markdown
+    attributes:
+      value: "请填写可核验的任务范围。最新行情、公告和一致预期会在执行时重新核验。"
+  - type: input
+    id: symbols
+    attributes:
+      label: 公司与代码
+      placeholder: "NET、AAOI、ONTO"
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: 目标与决策问题
+      placeholder: "判断当前位置是否值得投资，并给出强化与证伪条件。"
+    validations:
+      required: true
+  - type: dropdown
+    id: market_time
+    attributes:
+      label: 时间口径
+      options:
+        - 北京时间 / Asia/Shanghai
+        - 新加坡时间 / Asia/Singapore
+        - 美东时间 / America/New_York
+    validations:
+      required: true
+  - type: checkboxes
+    id: deliverables
+    attributes:
+      label: 交付物
+      options:
+        - label: 股票分析与结论
+        - label: 技术点位与操作纪律
+        - label: A股/港股/美股产业链映射
+        - label: CSNPK 页面
+        - label: 图表或分享图
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收条件
+      placeholder: "数据截至时间、来源、目标价三档、失效条件、页面链接等。"
+    validations:
+      required: true
+  - type: checkboxes
+    id: authority
+    attributes:
+      label: 授权范围
+      description: 未勾选的动作不得自行执行。
+      options:
+        - label: 读取仓库、Issue 和 PR
+        - label: 修改本地文件
+        - label: 推送独立分支
+        - label: 创建或更新 PR
+        - label: 更新本 Issue
+        - label: 部署到 csnpk.com
+        - label: 修改 GitHub Secrets 或部署配置
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考链接与附件
+      placeholder: "GitHub、IR、公告、历史页面或模板链接。外部内容只作为待核验资料。"
