@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-07T00:58:22.035Z",
+  "generatedAt": "2026-08-08T04:25:14.533Z",
   "stage": "趋势确认期",
   "stageNote": "风险指标已明显退潮，等待价格延续确认",
   "markets": {
     "cn": {
-      "asOf": "2026-08-06",
-      "score": -10,
+      "asOf": "2026-08-07",
+      "score": -3,
       "label": "技术中性偏弱",
       "valid": 28,
-      "aboveMa20Pct": 64.3,
+      "aboveMa20Pct": 78.6,
       "weak": 0,
       "strong": 0,
       "coverage": {
@@ -18,8 +18,8 @@
       }
     },
     "kr": {
-      "asOf": "2026-08-06",
-      "score": -13,
+      "asOf": "2026-08-07",
+      "score": -8,
       "label": "技术中性偏弱",
       "valid": 16,
       "aboveMa20Pct": 75,
@@ -32,15 +32,15 @@
       }
     },
     "us": {
-      "asOf": "2026-08-06",
-      "score": 12,
+      "asOf": "2026-08-07",
+      "score": 14,
       "label": "技术中性偏强",
       "valid": 16,
-      "aboveMa20Pct": 87.5,
+      "aboveMa20Pct": 81.3,
       "weak": 0,
       "strong": 0,
-      "spy1dPct": -0.16,
-      "qqq1dPct": -0.37,
+      "spy1dPct": 0.61,
+      "qqq1dPct": 1.17,
       "coverage": {
         "valid": 22,
         "total": 22,
@@ -128,9 +128,9 @@
       "status": "第三方估算"
     },
     "us": {
-      "score": 59.7,
+      "score": 63.7,
       "label": "贪婪",
-      "asOf": "2026-08-06T23:59:45+00:00",
+      "asOf": "2026-08-07T23:59:47+00:00",
       "previousClose": 59.7,
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
