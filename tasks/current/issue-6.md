@@ -2,9 +2,9 @@
 issue: 6
 status: ready_for_review
 branch: "codex/issue-6-w33-earnings-preview"
-commit: "67332476ce7f41e8fbe9f8cbda190807b5266394"
+commit: "f40ec57143bb146a0940872140a102deec068256"
 pull_request: "https://github.com/iroryagame-afk/ai/pull/7"
-updated_at: "2026-08-08T13:40:00+08:00"
+updated_at: "2026-08-08T14:20:00+08:00"
 ---
 
 # Issue #6 任务交接
@@ -26,7 +26,7 @@ updated_at: "2026-08-08T13:40:00+08:00"
 ## 已完成
 
 - 冻结6家公司官方财报时间：LITE、CRWV、腾讯、鸿海、Cisco、AMAT。
-- 完成HTML预告页和4张1080×1920 SVG图。
+- 完成HTML预告页和4张1080×1920 PNG图；按 `earnings-templates` 固定版本重制。
 - 对公司指引、市场预期和分析推断进行分层。
 - 已创建Draft PR #7。
 
@@ -35,7 +35,7 @@ updated_at: "2026-08-08T13:40:00+08:00"
 - 未部署，未做公网回读。
 - 鸿海官方仅确认日期，本次将具体时刻标为待确认。
 - 财报前应再次冻结一致预期。
-- 浏览器桌面/390px视觉验收待PR审阅阶段完成。
+- 页面尚未部署，因此未做公网回读。
 
 ## 数据口径
 
@@ -57,9 +57,9 @@ updated_at: "2026-08-08T13:40:00+08:00"
 ## 产物
 
 - 页面：reports/earnings-preview-2026-w33/index.html
-- 图片：assets/charts/issue-6/*.svg
+- 图片：assets/charts/issue-6/*.png（并保留可追溯HTML源文件）
 - PR：https://github.com/iroryagame-afk/ai/pull/7
-- Commit：67332476ce7f41e8fbe9f8cbda190807b5266394
+- PNG基准 Commit：f40ec57143bb146a0940872140a102deec068256
 - 线上地址：未部署
 
 ## 验收状态
@@ -70,10 +70,10 @@ updated_at: "2026-08-08T13:40:00+08:00"
 - [ ] PR 已合并
 - [ ] 已从推送 Commit 部署
 - [ ] 公网 HTML/JSON/图片回读
-- [ ] 桌面和移动端视觉检查
+- [x] 4张1080×1920图片视觉检查
 
 ## 下一步
 
-1. 审阅Draft PR并确认图中文字密度与公司排序。
+1. 审阅Draft PR并确认最终文字与公司排序。
 2. 财报前重新冻结一致预期。
 3. 另行授权后才可部署。
