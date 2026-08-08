@@ -1,0 +1,68 @@
+name: CSNPK 页面发布
+description: 新增、更新或验收 csnpk.com 页面
+title: "[CSNPK] "
+labels: ["csnpk", "planned"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: 发布目标
+      placeholder: "更新页面内容、数据或交互，并完成公网验收。"
+    validations:
+      required: true
+  - type: input
+    id: routes
+    attributes:
+      label: 页面路径
+      placeholder: "/report-name/、/nav/"
+    validations:
+      required: true
+  - type: textarea
+    id: intended_files
+    attributes:
+      label: 允许修改的文件
+      placeholder: "逐行列出 intended files；禁止使用模糊目录替代。"
+    validations:
+      required: true
+  - type: textarea
+    id: data_gate
+    attributes:
+      label: 数据门禁与截至时间
+      placeholder: "主数据源、完整市场日、覆盖率、失败时是否保留旧版。"
+    validations:
+      required: true
+  - type: checkboxes
+    id: acceptance
+    attributes:
+      label: 验收要求
+      options:
+        - label: 本地构建与静态检查
+          required: true
+        - label: 只提交 intended files
+          required: true
+        - label: 从已推送 Commit 部署
+          required: true
+        - label: cache-busting 公网 HTML/JSON/图片回读
+          required: true
+        - label: 桌面与 390px 移动端视觉检查或明确记录未核验
+          required: true
+  - type: checkboxes
+    id: authority
+    attributes:
+      label: 授权范围
+      description: 部署和 Secrets 权限必须分别勾选。
+      options:
+        - label: 读取仓库、Issue 和 PR
+        - label: 修改本地文件
+        - label: 推送独立分支
+        - label: 创建或更新 PR
+        - label: 更新本 Issue
+        - label: 部署到 csnpk.com
+        - label: 修改 GitHub Secrets 或部署配置
+  - type: textarea
+    id: rollback
+    attributes:
+      label: 失败与回退要求
+      value: "任一硬门失败时保留线上已验证版本，不发布部分结果。"
+    validations:
+      required: true

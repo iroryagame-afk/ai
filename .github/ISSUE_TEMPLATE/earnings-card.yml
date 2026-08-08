@@ -1,0 +1,86 @@
+name: 财报预告或验证图
+description: 财报前预告、财报后验证、9:16 图片与页面
+title: "[财报] "
+labels: ["earnings", "planned"]
+body:
+  - type: dropdown
+    id: card_type
+    attributes:
+      label: 任务类型
+      options:
+        - 财报预告图
+        - 财报后验证图
+        - 预告图与验证图
+    validations:
+      required: true
+  - type: input
+    id: symbols
+    attributes:
+      label: 公司与代码
+      placeholder: "NET、AAOI、ONTO、VST、OKLO"
+    validations:
+      required: true
+  - type: input
+    id: period
+    attributes:
+      label: 财报期间
+      placeholder: "2026Q2"
+    validations:
+      required: true
+  - type: dropdown
+    id: market_time
+    attributes:
+      label: 展示时区
+      options:
+        - 北京时间 / Asia/Shanghai
+        - 新加坡时间 / Asia/Singapore
+        - 美东时间 / America/New_York
+    validations:
+      required: true
+  - type: checkboxes
+    id: deliverables
+    attributes:
+      label: 交付物
+      options:
+        - label: 财报预告页面
+        - label: 9:16 财报预告图
+        - label: 财报后验证页面
+        - label: 9:16 财报后验证图
+        - label: A股/港股映射
+        - label: CSNPK 线上链接
+  - type: checkboxes
+    id: judgment
+    attributes:
+      label: 判断要求
+      options:
+        - label: 实际值与一致预期逐项比较
+          required: true
+        - label: 区分收入、指引、利润率与现金流
+          required: true
+        - label: 区分同比增长与真正超过预期
+          required: true
+        - label: 给出强化、证伪、等待回踩和不追涨条件
+          required: true
+  - type: input
+    id: template
+    attributes:
+      label: 模板位置
+      placeholder: "assets/templates/earnings-preview/"
+  - type: checkboxes
+    id: authority
+    attributes:
+      label: 授权范围
+      description: 未勾选的动作不得自行执行。
+      options:
+        - label: 读取仓库、Issue 和 PR
+        - label: 修改本地文件
+        - label: 推送独立分支
+        - label: 创建或更新 PR
+        - label: 更新本 Issue
+        - label: 部署到 csnpk.com
+        - label: 修改 GitHub Secrets 或部署配置
+  - type: textarea
+    id: references
+    attributes:
+      label: 财报、预期和参考链接
+      placeholder: "公司 IR、SEC、预期来源、历史卡片。执行时仍会重新核验。"
