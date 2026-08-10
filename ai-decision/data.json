@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-08T04:25:14.533Z",
+  "generatedAt": "2026-08-10T12:43:01.467Z",
   "stage": "趋势确认期",
   "stageNote": "风险指标已明显退潮，等待价格延续确认",
   "markets": {
     "cn": {
-      "asOf": "2026-08-07",
-      "score": -3,
-      "label": "技术中性偏弱",
+      "asOf": "2026-08-10",
+      "score": 4,
+      "label": "技术中性偏强",
       "valid": 28,
       "aboveMa20Pct": 78.6,
       "weak": 0,
-      "strong": 0,
+      "strong": 1,
       "coverage": {
         "valid": 34,
         "total": 34,
@@ -18,11 +18,11 @@
       }
     },
     "kr": {
-      "asOf": "2026-08-07",
-      "score": -8,
+      "asOf": "2026-08-10",
+      "score": -6,
       "label": "技术中性偏弱",
       "valid": 16,
-      "aboveMa20Pct": 75,
+      "aboveMa20Pct": 81.3,
       "weak": 0,
       "strong": 0,
       "coverage": {
