@@ -2,439 +2,154 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A 股人形机器人产业链完整调研报告</title>
-  <meta name="description" content="A 股人形机器人产业链调研报告：按确定性、弹性、消耗/复购拆解执行器、丝杠、谐波减速器、感知、控制、能源、软件和本体。">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="机器人行业深度研究：拆分 Tesla Optimus 与国产机器人两条路线，核验产线、出货、工业部署、核心零部件、上市公司映射与证伪条件。">
+  <meta property="og:title" content="机器人行业深度研究：Tesla 与国产机器人，谁先跨过量产幻觉">
+  <meta property="og:description" content="产能、下线、交付、稳定作业和财务贡献，五道门逐层核验。">
+  <title>机器人行业深度研究：Tesla 与国产机器人｜CSN 投研</title>
   <style>
-    :root {
-      --ink:#10203f;
-      --muted:#64748b;
-      --bg:#f4f7fb;
-      --card:#ffffff;
-      --line:#dbe5f2;
-      --blue:#1f5fd4;
-      --cyan:#0f9ab4;
-      --orange:#e87918;
-      --red:#d44747;
-      --soft:#f8fbff;
-    }
-    * { box-sizing:border-box; }
-    html { overflow-x:hidden; }
-    body {
-      margin:0;
-      background:var(--bg);
-      color:var(--ink);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
-      font-size:16px;
-      line-height:1.75;
-      overflow-x:hidden;
-    }
-    a { color:var(--blue); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .hero {
-      background:#0d1830;
-      color:#fff;
-      padding:34px 28px 28px;
-      border-bottom:5px solid var(--blue);
-    }
-    .hero-inner { width:min(1180px, calc(100vw - 32px)); margin:0 auto; }
-    .eyebrow { color:#9cc8ff; font-size:14px; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
-    .hero h1 { margin:8px 0 12px; font-size:42px; line-height:1.15; letter-spacing:0; }
-    .hero p { margin:0; max-width:980px; color:#dbeafe; font-size:18px; }
-    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
-    .meta span { border:1px solid rgba(255,255,255,.22); background:rgba(255,255,255,.08); border-radius:999px; padding:7px 11px; font-weight:800; font-size:13px; }
-    .wrap { width:min(1180px, calc(100vw - 32px)); margin:20px auto 56px; }
-    .visual {
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:10px;
-      padding:12px;
-      box-shadow:0 8px 24px rgba(16,32,63,.06);
-      margin-bottom:18px;
-    }
-    .visual img { display:block; width:100%; height:auto; border-radius:8px; }
-    .toc {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-      gap:10px;
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:10px;
-      padding:14px;
-      margin-bottom:18px;
-      box-shadow:0 8px 24px rgba(16,32,63,.04);
-    }
-    .toc a { display:block; border:1px solid #e6edf7; border-radius:8px; padding:9px 10px; color:#223052; font-weight:850; background:#fbfdff; }
-    article {
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:10px;
-      padding:28px;
-      box-shadow:0 8px 24px rgba(16,32,63,.05);
-    }
-    article > h1:first-child { display:none; }
-    h1,h2,h3,h4 { line-height:1.35; letter-spacing:0; }
-    h2 {
-      margin:34px 0 14px;
-      padding:11px 14px;
-      border-radius:8px;
-      background:#10203f;
-      color:#fff;
-      font-size:24px;
-    }
-    h3 {
-      margin:26px 0 10px;
-      font-size:21px;
-      color:#123260;
-      border-left:5px solid var(--blue);
-      padding-left:10px;
-    }
-    h4 { margin:18px 0 8px; font-size:18px; }
-    p { margin:10px 0; }
-    strong { color:#0f2348; }
-    code {
-      background:#eef4fb;
-      color:#0f3f88;
-      border-radius:6px;
-      padding:2px 6px;
-      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-      font-weight:800;
-    }
-    .sep { border:0; border-top:1px solid var(--line); margin:26px 0; }
-    ul,ol { padding-left:1.35em; margin:10px 0 14px; }
-    li { margin:5px 0; }
-    .table-wrap {
-      width:100%;
-      max-width:100%;
-      overflow-x:auto;
-      margin:14px 0 22px;
-      border:1px solid var(--line);
-      border-radius:8px;
-    }
-    table { width:100%; min-width:760px; border-collapse:separate; border-spacing:0; background:#fff; }
-    th {
-      background:#13223f;
-      color:#fff;
-      text-align:left;
-      padding:10px 11px;
-      font-size:13px;
-      white-space:nowrap;
-    }
-    td {
-      border-top:1px solid #e8eef6;
-      padding:10px 11px;
-      vertical-align:top;
-      font-size:13px;
-      line-height:1.55;
-    }
-    tr:nth-child(even) td { background:#f8fbff; }
-    footer {
-      width:min(1180px, calc(100vw - 32px));
-      margin:0 auto 42px;
-      color:#64748b;
-      font-size:13px;
-      text-align:center;
-    }
-    @media (max-width: 760px) {
-      .hero { padding:28px 18px 24px; }
-      .hero h1 { font-size:30px; }
-      .hero p { font-size:16px; }
-      article { padding:18px; }
-      h2 { font-size:21px; }
-      h3 { font-size:19px; }
-    }
+    :root{color-scheme:light;--paper:#f3f0e8;--panel:#fffdf8;--ink:#20252e;--ink2:#4d5460;--muted:#767b84;--line:#ded7c9;--night:#111c28;--navy:#173a5e;--blue:#286b9a;--red:#ad422f;--gold:#a77a29;--green:#2f6b4f;--orange:#a75c26;--soft-blue:#edf4f8;--soft-red:#f7ece8;--soft-green:#eaf2ed;--shadow:0 10px 28px rgba(30,37,44,.07);--serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.72}a{color:var(--navy);text-underline-offset:3px}h1,h2,h3{font-family:var(--serif);text-wrap:balance}p{text-wrap:pretty}.topbar{height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 max(18px,calc((100vw - 1240px)/2));border-bottom:1px solid var(--line);background:rgba(255,253,248,.94);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}.topbar a{text-decoration:none}.back{font-size:13px;color:var(--ink2)}.brand{display:flex;align-items:center;gap:8px;color:var(--ink)}.seal{width:25px;height:25px;border-radius:6px;display:grid;place-items:center;background:var(--red);color:#fff;font:700 13px var(--serif)}.brand b{font:700 15px var(--serif);letter-spacing:.06em}.shell{width:min(1240px,calc(100% - 32px));margin:auto;padding:26px 0 72px}.hero{position:relative;overflow:hidden;border-radius:18px;background:radial-gradient(circle at 82% 14%,rgba(40,107,154,.55),transparent 31%),linear-gradient(138deg,#101923 0%,#173a5e 58%,#12283b 100%);color:#fff;padding:52px 54px 0}.hero:after{content:"PHYSICAL AI / 2026";position:absolute;right:42px;top:34px;color:rgba(255,255,255,.34);font:700 11px var(--mono);letter-spacing:.16em}.eyebrow{color:#bfd8e8;font:700 11px var(--mono);letter-spacing:.14em}.hero h1{max-width:950px;margin:13px 0 15px;font-size:clamp(38px,5.4vw,66px);line-height:1.1;letter-spacing:-.03em}.hero h1 em{font-style:normal;color:#e2c57f}.deck{max-width:900px;margin:0;color:rgba(255,255,255,.8);font-size:17px}.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.pill{padding:5px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:11px;color:rgba(255,255,255,.82)}.hero-grid{display:grid;grid-template-columns:repeat(4,1fr);margin:34px -54px 0;border-top:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.035)}.hero-stat{padding:20px 28px}.hero-stat+.hero-stat{border-left:1px solid rgba(255,255,255,.13)}.hero-stat b{display:block;font:800 24px/1.2 var(--serif)}.hero-stat b small{font:600 11px var(--sans);color:#e2c57f}.hero-stat span{display:block;margin-top:5px;color:rgba(255,255,255,.62);font-size:11px}.card{border:1px solid var(--line);border-radius:14px;background:var(--panel);box-shadow:var(--shadow)}.verdict{display:grid;grid-template-columns:1.45fr .55fr;margin:14px 0 18px;overflow:hidden}.verdict-main{padding:27px 30px}.label{color:var(--red);font:800 10px var(--mono);letter-spacing:.12em;text-transform:uppercase}.verdict h2{margin:7px 0 9px;font-size:25px;line-height:1.45}.verdict p{margin:0;color:var(--ink2)}.verdict-side{display:flex;flex-direction:column;justify-content:center;padding:24px 28px;border-left:1px solid var(--line);background:var(--soft-blue)}.verdict-side span{font-size:11px;font-weight:800;color:var(--navy)}.verdict-side strong{margin:5px 0;font:800 24px var(--serif);color:var(--navy)}.verdict-side small{color:#587084}.toc{padding:15px 20px;margin-bottom:42px;background:rgba(255,253,248,.66)}.toc b{font-family:var(--serif)}.toc nav{display:flex;gap:8px 18px;flex-wrap:wrap;margin-top:5px}.toc a{text-decoration:none;font-size:13px;border-bottom:1px solid rgba(23,58,94,.24)}section{scroll-margin-top:72px;margin-bottom:48px}.head{display:flex;align-items:end;justify-content:space-between;gap:16px;padding-bottom:10px;margin-bottom:16px;border-bottom:1px solid var(--line)}.head h2{margin:0;font-size:31px;line-height:1.25}.no{color:var(--red);font:700 11px var(--mono);letter-spacing:.08em}.lead{max-width:980px;color:var(--ink2);font-size:16px}.gates{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.gate{position:relative;padding:19px 16px;min-height:155px}.gate:after{content:"→";position:absolute;right:-10px;top:54%;z-index:2;color:var(--gold);font-weight:900}.gate:last-child:after{display:none}.gate i{font:700 11px var(--mono);font-style:normal;color:var(--red)}.gate h3{margin:12px 0 6px;font-size:18px}.gate p{margin:0;color:var(--muted);font-size:11.5px}.gate .stage{display:inline-block;margin-top:10px;padding:3px 8px;border-radius:99px;background:var(--soft-green);color:var(--green);font-size:10px;font-weight:800}.gate .stage.early{background:#f4ecdc;color:#86642a}.lanes{display:grid;grid-template-columns:1fr 1fr;gap:14px}.lane{overflow:hidden}.lane-top{padding:25px 26px;color:#fff}.tesla .lane-top{background:linear-gradient(135deg,#111820,#263443)}.china .lane-top{background:linear-gradient(135deg,#7e2e23,#ad422f)}.lane-top .flag{font:700 10px var(--mono);letter-spacing:.12em;opacity:.68}.lane-top h3{font-size:27px;margin:8px 0}.lane-top p{margin:0;opacity:.78;font-size:13px}.lane-body{padding:22px 25px}.check{display:grid;grid-template-columns:84px 1fr;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.check:last-child{border:0}.check b{font-size:12px}.check p{margin:0;color:var(--ink2);font-size:12.5px}.status{display:inline-block;padding:3px 8px;border-radius:99px;background:var(--soft-green);color:var(--green);font-size:10px;font-weight:800}.status.conditional{background:#f4ecdc;color:#86642a}.status.unverified{background:var(--soft-red);color:var(--red)}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.fact{padding:21px}.fact span{color:var(--red);font:800 10px var(--mono);letter-spacing:.08em}.fact strong{display:block;margin:6px 0 4px;font:800 27px var(--serif)}.fact p{margin:0;color:var(--muted);font-size:11.5px}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel)}table{width:100%;min-width:930px;border-collapse:collapse}th,td{padding:13px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{background:var(--navy);color:#fff;font-size:11px}td{color:var(--ink2);font-size:12.5px}td b{color:var(--ink)}tr:last-child td{border:0}.bar{display:grid;grid-template-columns:150px 1fr;overflow:hidden;margin-top:12px}.bar-title{display:grid;place-items:center;padding:18px;background:var(--soft-blue);color:var(--navy);font:800 18px var(--serif)}.bar-body{padding:17px 20px;border-left:1px solid var(--line)}.bar-body p{margin:0;color:var(--ink2);font-size:13px}.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.value{padding:23px;min-height:220px}.value .index{color:var(--red);font:700 11px var(--mono)}.value h3{margin:17px 0 8px;font-size:21px}.value p{margin:0;color:var(--ink2);font-size:13px}.value ul{margin:13px 0 0;padding-left:17px;color:var(--muted);font-size:11.5px}.value li+li{margin-top:5px}.stock-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.stock{padding:22px;position:relative;overflow:hidden}.stock:after{content:"";position:absolute;width:120px;height:120px;right:-65px;top:-65px;border-radius:50%;background:var(--tone,var(--navy));opacity:.08}.stock .ticker{color:var(--red);font:800 10px var(--mono);letter-spacing:.08em}.stock h3{margin:7px 0 2px;font-size:24px}.stock .role{color:var(--muted);font-size:11px}.stock p{margin:12px 0 0;color:var(--ink2);font-size:12.5px}.stock .proof{display:flex;align-items:center;gap:7px;margin-top:13px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--navy);font-weight:700}.watch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.watch{padding:23px}.watch h3{margin:5px 0 12px;font-size:22px}.watch ol{margin:0;padding-left:20px;color:var(--ink2);font-size:13px}.watch li+li{margin-top:7px}.risk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.risk{padding:21px}.risk b{display:block;color:var(--red);font:800 17px var(--serif)}.risk p{margin:7px 0 0;color:var(--ink2);font-size:12px}.sources{padding:26px 29px}.sources ol{margin:10px 0 0;padding-left:22px}.sources li{color:var(--ink2);font-size:12.5px}.sources li+li{margin-top:8px}.disclaimer{margin-top:17px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.footer{text-align:center;padding-top:20px;color:var(--muted);font-size:11px}
+    @media(max-width:980px){.hero-grid{grid-template-columns:1fr 1fr}.hero-stat:nth-child(3){border-left:0;border-top:1px solid rgba(255,255,255,.13)}.hero-stat:nth-child(4){border-top:1px solid rgba(255,255,255,.13)}.gates{grid-template-columns:repeat(3,1fr)}.gate:nth-child(3):after{display:none}.value-grid,.stock-grid{grid-template-columns:1fr 1fr}.risk-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:720px){.topbar{padding:0 14px}.shell{width:min(100% - 22px,1240px);padding-top:12px}.hero{padding:38px 24px 0}.hero:after{display:none}.hero h1{font-size:38px}.hero-grid{margin:28px -24px 0}.hero-stat{padding:17px 18px}.verdict,.lanes,.watch-grid{grid-template-columns:1fr}.verdict-side{border-left:0;border-top:1px solid var(--line)}.gates,.value-grid,.stock-grid,.risk-grid,.facts{grid-template-columns:1fr}.gate:after{display:none}.bar{grid-template-columns:1fr}.bar-body{border-left:0;border-top:1px solid var(--line)}.table-wrap{overflow:visible;border:0;background:transparent}.mobile{min-width:0;width:100%;border-collapse:separate;border-spacing:0 10px}.mobile thead{display:none}.mobile tbody,.mobile tr,.mobile td{display:block;width:100%}.mobile tr{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}.mobile td{position:relative;min-height:44px;padding:10px 12px 10px 108px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.mobile td:last-child{border-bottom:0}.mobile td:before{position:absolute;left:12px;top:10px;width:86px;color:var(--muted);font:600 10px/1.5 var(--mono)}.compare td:nth-child(1):before{content:"维度"}.compare td:nth-child(2):before{content:"Tesla"}.compare td:nth-child(3):before{content:"国产"}.stage-table td:nth-child(1):before{content:"主体"}.stage-table td:nth-child(2):before{content:"已核验"}.stage-table td:nth-child(3):before{content:"阶段"}.stage-table td:nth-child(4):before{content:"缺口"}.hero-stat b{font-size:19px}.head h2{font-size:27px}}
   </style>
-<style id="csn-unify">
-:root{--csn-paper:#f6f4ee;--csn-panel:#fffefa;--csn-ink:#1f2430;--csn-ink-2:#494f5e;--csn-muted:#6f7587;--csn-line:#e3ded1;--csn-accent:#173a5e;--csn-cinnabar:#b5452e;--csn-gold:#96702a;--csn-jade:#2f6b4f;--csn-serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;--csn-sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;--csn-mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace}
-.csn-backbar{box-sizing:border-box;height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 20px;background:var(--csn-paper);border-bottom:1px solid var(--csn-line);font-family:var(--csn-sans);position:relative;z-index:70}
-.csn-backbar a{text-decoration:none}
-.csn-bb-back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--csn-ink-2);padding:6px 10px;border-radius:8px}
-.csn-bb-back:hover{color:var(--csn-accent);background:rgba(23,58,94,.06)}
-.csn-bb-brand{display:inline-flex;align-items:center;gap:8px;color:var(--csn-ink)}
-.csn-bb-seal{width:22px;height:22px;border-radius:5px;background:var(--csn-cinnabar);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--csn-serif);font-size:12px;line-height:1}
-.csn-bb-name{font-family:var(--csn-serif);font-size:15px;letter-spacing:.06em}
-.csn-footnote{margin:0;padding:18px 20px 28px;border-top:1px solid var(--csn-line);background:var(--csn-paper);color:var(--csn-muted);font:12px/1.7 var(--csn-sans);text-align:center}
-</style>
 </head>
 <body>
-  <div class="csn-backbar"><a class="csn-bb-back" href="../nav/">← 报告目录</a><a class="csn-bb-brand" href="https://csnpk.com/" target="_blank" rel="noreferrer noopener"><span class="csn-bb-seal">研</span><span class="csn-bb-name">CSN 投研</span></a></div>
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="eyebrow">A-share robotics research</div>
-      <h1>A 股人形机器人产业链完整调研报告</h1>
-      <p>从整机、本体、执行器、丝杠、谐波减速器、感知、控制、能源、电源和软件大脑拆解，按确定性、弹性、消耗/复购筛选更值得研究的 A 股环节。</p>
-      <div class="meta">
-        <span>生成日期：2026-07-03</span>
-        <span>价格基准：腾讯行情收盘后</span>
-        <span>研究型目标价，不构成投资建议</span>
+  <nav class="topbar"><a class="back" href="../nav/">← 报告目录</a><a class="brand" href="../"><span class="seal">研</span><b>CSN 投研</b></a></nav>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">ROBOTICS DEEP DIVE · VERIFIED THROUGH 2026-08-11</div>
+      <h1>机器人行业：<em>Tesla 与国产</em>，谁先跨过量产幻觉？</h1>
+      <p class="deck">把“百万台产能”“千台出货”“工业试点”和“利润兑现”放回同一把尺子。真正的拐点不是机器人会跑会跳，而是它能否持续、便宜、安全地完成付费任务。</p>
+      <div class="meta"><span class="pill">Tesla Optimus</span><span class="pill">宇树 / 优必选 / 智元 / 小鹏</span><span class="pill">核心零部件</span><span class="pill">证据分层</span></div>
+      <div class="hero-grid">
+        <div class="hero-stat"><b>未披露 <small>商业销量</small></b><span>Tesla 截至 2026Q2 未拆分 Optimus 销量与收入</span></div>
+        <div class="hero-stat"><b>5,500+ <small>台</small></b><span>宇树 2025 年纯人形机器人出货，公司招股书口径</span></div>
+        <div class="hero-stat"><b>1,000 <small>台级</small></b><span>优必选 Walker S2 小批量生产交付，2025 年报口径</span></div>
+        <div class="hero-stat"><b>29.5 <small>万台</small></b><span>中国 2024 年工业机器人新增安装，成熟供应链底盘</span></div>
       </div>
-    </div>
-  </header>
-  <main class="wrap">
-    <section class="visual">
-      <img src="./a-share-robotics-value-chain.png" alt="A股人形机器人产业链价值图">
+    </header>
+
+    <section class="card verdict">
+      <div class="verdict-main"><span class="label">核心判断</span><h2>行业已进入工程化竞赛，但还没有进入“通用劳动力”规模替代。</h2><p>Tesla 的优势是 AI、芯片、工厂和垂直整合，短板是商业销量仍未披露；国产的优势是低成本、供应链密度和千台级交付，短板是工业连续作业、通用性与单位经济性。投资上先看有成熟主业、真实部件交付和现金流底盘的运动控制、感知与执行环节；未经双方公告确认的“Tesla 供应链”只列待证真。</p></div>
+      <aside class="verdict-side"><span>当前行动</span><strong>产业跟踪，价格另核验</strong><small>本页未核验 2026-08-11 实时价格、估值与技术位置，不给买点或目标价。</small></aside>
     </section>
-    <nav class="toc" aria-label="目录">
-      <a href="#1-核心结论">核心结论</a>
-      <a href="#2-产业阶段判断">产业阶段</a>
-      <a href="#4-产业链拆解">产业链拆解</a>
-      <a href="#5-a-股候选公司完整映射">公司映射</a>
-      <a href="#6-公司介绍与投资要点">公司介绍</a>
-      <a href="#8-6-12-个月研究型目标价区间">目标价区间</a>
-      <a href="#9-风险清单">风险清单</a>
-      <a href="#10-下一步验证清单">验证清单</a>
-    </nav>
-    <article>
-      <h1 id="a-股人形机器人产业链完整调研报告">A 股人形机器人产业链完整调研报告</h1>
-<p>生成日期：2026-07-03 研究范围：A 股机器人产业链，重点覆盖人形机器人、工业机器人、核心零部件、感知、控制、能源、软件、本体与系统集成。 价格基准：腾讯行情，2026-07-03 收盘后。 报告定位：研究框架与优先级排序，不构成投资建议。</p>
-<hr class="sep">
-<h2 id="1-核心结论">1. 核心结论</h2>
-<p>先排产业链层级，再排公司。机器人不是简单的“谁市值大谁受益”，而是要看三个问题：</p>
-<ol>
-<li><strong>确定性</strong>：公司是否已有成熟主业、客户基础、制造能力和财务兑现。</li>
-<li><strong>弹性</strong>：机器人放量后，相关收入和估值能否被重新定价。</li>
-<li><strong>消耗/复购</strong>：单台机器人需要多少个相关部件，是否随出货量线性放大，是否有维修替换或持续升级需求。</li>
-</ol>
-<p>按这个口径，A 股机器人链的价值优先级是：</p>
-<div class="table-wrap"><table><thead><tr><th>层级</th><th>价值判断</th><th>代表标的</th></tr></thead><tbody><tr><td>S 级</td><td>执行器、丝杠、轴承、谐波减速器。单机用量高、认证难、供给扩张慢，是最接近“机器人放量卡点”的层。</td><td>三花智控、拓普集团、绿的谐波、贝斯特、五洲新春、双环传动</td></tr><tr><td>A 级</td><td>伺服控制、运动控制、机器视觉、力传感、电源电控。确定性较强，但弹性和纯度分化明显。</td><td>汇川技术、柯力传感、奥比中光、凌云光、麦格米特、鸣志电器</td></tr><tr><td>B 级</td><td>本体、系统集成、软件大脑、电池。叙事强，但利润率、订单确认和机器人收入占比仍需验证。</td><td>埃斯顿、机器人、埃夫特、科大讯飞、中科创达、工业富联</td></tr></tbody></table></div>
-<p>一句话结论：<strong>机器人产业链目前最值得优先研究的不是整机，而是核心运动部件；最舒服的底仓不是最高弹性票，而是控制、伺服、传动里已有成熟主业的公司。</strong></p>
-<hr class="sep">
-<h2 id="2-产业阶段判断">2. 产业阶段判断</h2>
-<h3 id="2-1-工业机器人-已经是成熟产业-增速来自国产替代和应用扩散">2.1 工业机器人：已经是成熟产业，增速来自国产替代和应用扩散</h3>
-<p>IFR《World Robotics 2025》显示，2024 年全球工业机器人安装量为 542,076 台，全球运行存量为 4,663,698 台；中国 2024 年工业机器人安装量为 295,045 台，占全球 54%，运行存量为 2,027,190 台，占全球 43%。这说明中国不是“刚开始做机器人”，而是已经拥有全球最大应用市场和制造生态。</p>
-<p>工业机器人本身已经进入<strong>标准化普及期</strong>，投资价值更多来自：</p>
-<ul>
-<li>国产品牌替代外资；</li>
-<li>电子、金属加工、锂电、光伏、汽车等场景扩散；</li>
-<li>低成本机器人打开中小制造企业需求；</li>
-<li>伺服、控制器、减速器等核心部件国产化。</li>
-</ul>
-<h3 id="2-2-人形机器人-客户认证期到试点部署期-尚未真正财报放量">2.2 人形机器人：客户认证期到试点部署期，尚未真正财报放量</h3>
-<p>人形机器人还没有进入稳定大规模放量。当前阶段更接近：</p>
-<ul>
-<li><strong>工程样机期</strong>：整机厂发布产品、演示运动能力、展示灵巧手和大模型交互。</li>
-<li><strong>客户认证期</strong>：进入车厂、电子厂、物流仓储等场景做测试。</li>
-<li><strong>试点部署期</strong>：小批量进入工厂、展厅、服务场景，但尚未成为标准生产工具。</li>
-</ul>
-<p>按照你的“核心产品阶段”口径，机器人链拆开看：</p>
-<div class="table-wrap"><table><thead><tr><th>环节</th><th>当前阶段</th><th>判断</th></tr></thead><tbody><tr><td>工业机器人本体</td><td>规模放量期/标准化普及期</td><td>已有真实收入，弹性不如早期零部件</td></tr><tr><td>人形机器人整机</td><td>工程样机期到试点部署期</td><td>热度高，订单真实性需验证</td></tr><tr><td>执行器总成</td><td>客户认证期</td><td>最像未来放量前的核心卡点</td></tr><tr><td>谐波减速器</td><td>试点部署期</td><td>工业机器人已有基础，人形机器人增加新需求</td></tr><tr><td>丝杠/轴承</td><td>客户认证期</td><td>高弹性、高消耗，但良率和客户认证是关键</td></tr><tr><td>伺服/控制器</td><td>规模放量期</td><td>确定性高，机器人弹性被成熟主业稀释</td></tr><tr><td>机器视觉/力控</td><td>客户认证期</td><td>感知入口价值提升，但路线未完全定型</td></tr><tr><td>AI 软件大脑</td><td>技术验证期到客户认证期</td><td>长期空间大，短期商业化不如部件</td></tr></tbody></table></div>
-<hr class="sep">
-<h2 id="3-需求驱动-为什么机器人会成为-ai-下半场">3. 需求驱动：为什么机器人会成为 AI 下半场</h2>
-<p>机器人本质上是“AI 从数字世界进入物理世界”。大模型负责理解、规划和交互，机器人负责行动、搬运、装配、巡检和服务。</p>
-<p>需求驱动分四层：</p>
-<ol>
-<li><strong>劳动力成本与人口结构</strong></li>
-</ol>
-<p>制造业、物流、养老服务、危险作业都存在长期用工压力。</p>
-<ol>
-<li><strong>AI 模型能力提升</strong></li>
-</ol>
-<p>多模态大模型、端侧推理、仿真训练和遥操作数据采集，让机器人从“固定程序”走向“任务泛化”。</p>
-<ol>
-<li><strong>电动车供应链迁移</strong></li>
-</ol>
-<p>电机、电控、电池、热管理、传感器、结构件、线束、精密制造能力可以迁移到机器人。Time 对中国科技产业的分析也强调，EV 供应链与机器人零部件存在较高复用度。</p>
-<ol>
-<li><strong>中国制造生态优势</strong></li>
-</ol>
-<p>宇树、优必选、智元等本体厂推动产品迭代，背后需要大量 A 股零部件供应商配合。宇树官网已展示四足机器人、人形机器人、灵巧手、关节电机、伺服等产品线；优必选官网也覆盖人形服务机器人、商业、医疗、工业和教育场景。</p>
-<hr class="sep">
-<h2 id="4-产业链拆解">4. 产业链拆解</h2>
-<h3 id="4-1-本体厂-oem">4.1 本体厂/OEM</h3>
-<p>这一层负责整机定义、运动控制系统集成、场景部署和客户关系。代表公司包括 Tesla Optimus、宇树、优必选、智元、Figure、Agility、1X，以及 A 股的埃斯顿、机器人、埃夫特、拓斯达等。</p>
-<p>本体厂的优势是品牌和系统定义权，但短期投资难点在于：</p>
-<ul>
-<li>整机价格战可能压缩利润；</li>
-<li>零部件仍在快速迭代，BOM 不稳定；</li>
-<li>真正大规模订单还少；</li>
-<li>工厂场景需要长期验证稳定性、维护成本和安全性。</li>
-</ul>
-<p>结论：<strong>本体是产业牵引者，但 A 股投资上不一定是利润最好的层。</strong></p>
-<h3 id="4-2-执行器与运动部件">4.2 执行器与运动部件</h3>
-<p>执行器是人形机器人的“肌肉”。一个完整执行器通常涉及电机、减速器、丝杠、轴承、编码器、传感器、壳体、驱动器和热管理。</p>
-<p>价值来自：</p>
-<ul>
-<li>单机用量高；</li>
-<li>客户认证周期长；</li>
-<li>精度、寿命、噪音、重量和成本需要同时达标；</li>
-<li>从样机到量产会不断迭代，优质供应商更容易被锁定。</li>
-</ul>
-<p>重点公司：</p>
-<ul>
-<li>三花智控：执行器和热管理平台型公司，确定性高。</li>
-<li>拓普集团：汽车零部件平台迁移到机器人执行器，弹性高。</li>
-<li>绿的谐波：谐波减速器高纯度标的。</li>
-<li>贝斯特：滚珠丝杠/精密零部件方向弹性高。</li>
-<li>五洲新春：丝杠、轴承、精密传动，单机消耗逻辑强。</li>
-<li>双环传动：齿轮传动基础强，确定性好。</li>
-</ul>
-<p>结论：<strong>这是全产业链第一优先级。</strong></p>
-<h3 id="4-3-减速器-丝杠-轴承">4.3 减速器、丝杠、轴承</h3>
-<p>机器人关节需要把电机高速低扭矩输出变成低速高扭矩输出，同时保持精度和寿命。谐波减速器和 RV 减速器已经在工业机器人里验证，人形机器人进一步带来轻量化、小型化和高密度需求。</p>
-<p>丝杠的价值在于线性执行器和灵巧手。人形机器人若采用大量线性执行器，滚珠丝杠、行星滚柱丝杠、轴承和导轨的单机价值量可能显著提升。</p>
-<p>投资判断：</p>
-<ul>
-<li>谐波减速器：确定性较强，但市场已较拥挤，绿的谐波估值压力大。</li>
-<li>丝杠/轴承：弹性更高，但需要验证量产良率、客户认证和真实订单。</li>
-<li>齿轮传动：确定性较强，但机器人纯度通常低于谐波和丝杠。</li>
-</ul>
-<h3 id="4-4-伺服-控制器-运动控制">4.4 伺服、控制器、运动控制</h3>
-<p>控制系统是机器人的“小脑”和神经系统。它决定运动协调、响应速度、稳定性和能耗。</p>
-<p>代表公司：</p>
-<ul>
-<li>汇川技术：伺服、变频、PLC、工业自动化龙头，确定性最高。</li>
-<li>禾川科技：伺服系统弹性标的。</li>
-<li>雷赛智能：运动控制和伺服基础较强。</li>
-<li>固高科技：运动控制技术型公司。</li>
-<li>鸣志电器：电机、驱动、运动控制相关，机器人映射强。</li>
-</ul>
-<p>结论：<strong>控制和伺服适合作为机器人链的确定性底座，但股价弹性通常低于执行器和丝杠。</strong></p>
-<h3 id="4-5-感知与力控">4.5 感知与力控</h3>
-<p>机器人从“能动”变成“能干活”，关键在感知。包括 3D 视觉、CIS、激光雷达、IMU、六维力传感、触觉传感、环境传感等。</p>
-<p>重点公司：</p>
-<ul>
-<li>奥比中光：3D 视觉高弹性标的。</li>
-<li>柯力传感：力传感映射，机器人力控逻辑强。</li>
-<li>凌云光：机器视觉与工业检测，工业场景确定性较高。</li>
-<li>思特威/豪威集团：CIS 视觉传感器，机器人纯度被消费电子/汽车业务稀释。</li>
-<li>汉威科技：环境传感和气体传感，服务机器人映射。</li>
-</ul>
-<p>结论：<strong>感知是长期方向，但路线分散，当前优先级低于执行器。</strong></p>
-<h3 id="4-6-能源-电源和热管理">4.6 能源、电源和热管理</h3>
-<p>人形机器人对续航、重量和散热敏感。电池、电源管理、电控、散热结构件都会参与。</p>
-<p>重点公司：</p>
-<ul>
-<li>宁德时代、亿纬锂能、欣旺达、珠海冠宇：电池确定性强，但机器人收入占比低。</li>
-<li>德赛电池：小型电池封装映射。</li>
-<li>麦格米特：电源、电控属性更适合机器人链研究。</li>
-<li>三花智控：热管理和执行器交叉受益。</li>
-</ul>
-<p>结论：<strong>能源链确定性高，但多数公司机器人纯度低，除非出现明确机器人客户或产品线。</strong></p>
-<h3 id="4-7-软件大脑与边缘智能">4.7 软件大脑与边缘智能</h3>
-<p>机器人软件包括大模型、任务规划、操作系统、仿真训练、视觉算法、数据闭环和边缘推理。</p>
-<p>代表公司：</p>
-<ul>
-<li>科大讯飞：语音、多模态交互和模型能力。</li>
-<li>中科创达：操作系统、边缘智能、智能终端软件。</li>
-<li>虹软科技：视觉算法。</li>
-<li>云从科技：视觉 AI 和行业 AI。</li>
-<li>寒武纪：AI 芯片，机器人端侧推理有远期想象，但纯度低。</li>
-<li>海康威视：AIoT、机器视觉和工业视觉基础。</li>
-</ul>
-<p>结论：<strong>软件大脑长期空间大，但 A 股短期兑现要看具体订单和机器人收入占比；不应只因为“AI”就排在核心部件前面。</strong></p>
-<hr class="sep">
-<h2 id="5-a-股候选公司完整映射">5. A 股候选公司完整映射</h2>
-<h3 id="5-1-s-级-优先研究名单">5.1 S 级：优先研究名单</h3>
-<div class="table-wrap"><table><thead><tr><th>公司</th><th>代码</th><th>当前价</th><th>产业链位置</th><th>核心产品阶段</th><th>确定性</th><th>弹性</th><th>消耗</th><th>综合判断</th></tr></thead><tbody><tr><td>三花智控</td><td>002050</td><td>48.99</td><td>执行器/热管理/精密机电</td><td>客户认证期</td><td>高</td><td>中高</td><td>中高</td><td>平台型零部件龙头，适合作为机器人执行器确定性核心</td></tr><tr><td>拓普集团</td><td>601689</td><td>62.43</td><td>执行器总成/汽车零部件迁移</td><td>客户认证期</td><td>中高</td><td>高</td><td>中高</td><td>汽车链迁移机器人链，弹性强但需订单明朗</td></tr><tr><td>绿的谐波</td><td>688017</td><td>488.00</td><td>谐波减速器</td><td>试点部署期</td><td>中高</td><td>高</td><td>高</td><td>纯度高、卡点强，但估值和交易拥挤度高</td></tr><tr><td>贝斯特</td><td>300580</td><td>25.96</td><td>滚珠丝杠/精密零部件</td><td>客户认证期</td><td>中</td><td>高</td><td>高</td><td>丝杠弹性标的，关键看良率和客户认证</td></tr><tr><td>五洲新春</td><td>603667</td><td>76.15</td><td>丝杠/轴承/精密传动</td><td>客户认证期</td><td>中</td><td>高</td><td>高</td><td>单机消耗逻辑强，主题弹性大</td></tr><tr><td>双环传动</td><td>002472</td><td>47.01</td><td>齿轮/传动系统</td><td>客户认证期</td><td>中高</td><td>中</td><td>中</td><td>确定性强于弹性，适合传动链底仓观察</td></tr></tbody></table></div>
-<h3 id="5-2-a-级-确定性底座和关键入口">5.2 A 级：确定性底座和关键入口</h3>
-<div class="table-wrap"><table><thead><tr><th>公司</th><th>代码</th><th>当前价</th><th>产业链位置</th><th>核心产品阶段</th><th>判断</th></tr></thead><tbody><tr><td>汇川技术</td><td>300124</td><td>72.15</td><td>伺服/控制器/工业自动化</td><td>规模放量期</td><td>确定性最高，但机器人弹性被大主业稀释</td></tr><tr><td>麦格米特</td><td>002851</td><td>147.62</td><td>电源/电控</td><td>客户认证期</td><td>电源电控属性更纯，估值也需谨慎</td></tr><tr><td>鸣志电器</td><td>603728</td><td>68.02</td><td>空心杯电机/运动控制</td><td>客户认证期</td><td>机器人映射强，估值波动大</td></tr><tr><td>柯力传感</td><td>603662</td><td>80.00</td><td>力传感</td><td>客户认证期</td><td>力控入口价值高，需验证机器人收入贡献</td></tr><tr><td>奥比中光</td><td>688322</td><td>147.33</td><td>3D 视觉</td><td>客户认证期</td><td>高弹性视觉入口，亏损和估值压力需跟踪</td></tr><tr><td>凌云光</td><td>688400</td><td>71.41</td><td>机器视觉/工业检测</td><td>规模放量期</td><td>工业视觉确定性较高，机器人纯度中等</td></tr><tr><td>中大力德</td><td>002896</td><td>85.62</td><td>减速器/电机/驱动一体化</td><td>客户认证期</td><td>小市值高弹性，但交易波动较大</td></tr><tr><td>兆威机电</td><td>003021</td><td>100.80</td><td>微型传动系统</td><td>客户认证期</td><td>灵巧手/微传动映射，需订单验证</td></tr></tbody></table></div>
-<h3 id="5-3-b-级-主题强但兑现慢">5.3 B 级：主题强但兑现慢</h3>
-<div class="table-wrap"><table><thead><tr><th>公司</th><th>代码</th><th>当前价</th><th>产业链位置</th><th>判断</th></tr></thead><tbody><tr><td>埃斯顿</td><td>002747</td><td>44.77</td><td>工业机器人本体/控制</td><td>本体龙头之一，但本体利润率和订单质量需跟踪</td></tr><tr><td>机器人</td><td>300024</td><td>18.31</td><td>工业机器人/系统集成</td><td>老牌机器人平台，弹性来自国企改革和订单修复</td></tr><tr><td>埃夫特</td><td>688165</td><td>23.26</td><td>工业机器人本体</td><td>高弹性但盈利质量仍需验证</td></tr><tr><td>拓斯达</td><td>300607</td><td>52.96</td><td>自动化设备/系统集成</td><td>弹性强但波动大，需看订单可持续性</td></tr><tr><td>工业富联</td><td>601138</td><td>64.72</td><td>制造组装/AI 服务器/机器人代工线索</td><td>确定性强，但机器人纯度低</td></tr><tr><td>科大讯飞</td><td>002230</td><td>41.51</td><td>语音交互/AI 大脑</td><td>长期空间大，短期机器人收入不明朗</td></tr><tr><td>中科创达</td><td>300496</td><td>62.70</td><td>操作系统/边缘智能</td><td>软件底座型公司，机器人收入需验证</td></tr><tr><td>寒武纪</td><td>688256</td><td>1353.00</td><td>AI 芯片</td><td>端侧推理远期想象强，但机器人不是当前主要收入锚</td></tr></tbody></table></div>
-<hr class="sep">
-<h2 id="6-公司介绍与投资要点">6. 公司介绍与投资要点</h2>
-<h3 id="三花智控-002050">三花智控 002050</h3>
-<p>公司是全球制冷、空调、新能源车热管理领域的重要零部件供应商，官网产品覆盖电子膨胀阀、控制器、压力传感器、阀件、换热器等。机器人方向的核心看点不是传统制冷业务，而是其精密机电、热管理和大客户制造能力能否迁移到执行器。 定位：执行器平台型龙头。 优势：确定性高、客户认证能力强、制造体系成熟。 风险：机器人收入占比仍需公告验证，估值已包含较多预期。 评级：S 级核心研究。 目标价区间：保守 52，基准 60，乐观 70。</p>
-<h3 id="拓普集团-601689">拓普集团 601689</h3>
-<p>公司官网将其定位为科技平台型汽车零部件企业，产品线包括减震、内外饰、车身轻量化、底盘、热管理、空气悬架、智能驾驶和 Actuator。公司拥有超过 100 个制造基地、超过 4,000 人研发团队和超过 25,000 名员工。机器人方向的核心逻辑是汽车零部件平台向机器人执行器和结构件迁移。 定位：执行器总成和结构件平台。 优势：汽车链制造能力强，平台化产品多。 风险：机器人订单透明度不足，汽车主业周期影响估值。 评级：S 级核心研究。 目标价区间：保守 65，基准 76，乐观 90。</p>
-<h3 id="绿的谐波-688017">绿的谐波 688017</h3>
-<p>公司英文官网 Leaderdrive 把自身定位为精密机器人部件制造商，重点研发生产高性能谐波减速器，产品包括 strain wave gears、rotary actuators、frameless motors 等；官网披露其国内市场份额超过 60%，2025 年谐波减速器年销量超过 30 万台。 定位：谐波减速器高纯度龙头。 优势：纯度高，卡点清晰，机器人客户接受度高。 风险：估值极高，任何订单低于预期都会造成较大波动；谐波减速器竞争者增加。 评级：S 级但不适合无脑追高。 目标价区间：保守 430，基准 560，乐观 680。</p>
-<h3 id="贝斯特-300580">贝斯特 300580</h3>
-<p>公司原有主业偏汽车精密零部件和工装夹具，机器人方向市场主要关注滚珠丝杠、精密零部件和线性执行器链条。 定位：丝杠和精密零部件弹性标的。 优势：市值相对不大，机器人弹性较强。 风险：客户认证、良率和产能爬坡是核心验证点。 评级：S- 高弹性观察。 目标价区间：保守 28，基准 34，乐观 42。</p>
-<h3 id="五洲新春-603667">五洲新春 603667</h3>
-<p>公司主业为轴承、汽车零部件和精密制造，机器人方向市场关注丝杠、轴承和精密传动。 定位：丝杠/轴承消耗逻辑。 优势：单机消耗和替换逻辑更强，弹性高。 风险：主题拥挤、短线涨幅大，订单和利润贡献需核验。 评级：S- 高弹性观察。 目标价区间：保守 72，基准 88，乐观 105。</p>
-<h3 id="双环传动-002472">双环传动 002472</h3>
-<p>公司以齿轮和传动系统见长，新能源车和机械传动基础较强。机器人方向看齿轮、关节传动和精密制造能力迁移。 定位：传动系统确定性标的。 优势：制造能力和客户基础较好。 风险：机器人纯度不如谐波和丝杠，弹性相对中等。 评级：A+ 稳健研究。 目标价区间：保守 50，基准 58，乐观 68。</p>
-<h3 id="汇川技术-300124">汇川技术 300124</h3>
-<p>公司是国内工业自动化龙头，覆盖变频器、伺服、PLC、控制系统、新能源车电驱等。机器人方向看伺服系统、运动控制和工厂自动化生态。 定位：确定性底仓。 优势：财务质量和客户基础强，工业自动化底盘稳。 风险：机器人弹性被成熟主业稀释。 评级：A+ 稳健研究。 目标价区间：保守 75，基准 86，乐观 100。</p>
-<h3 id="鸣志电器-603728">鸣志电器 603728</h3>
-<p>公司在步进电机、控制电机、驱动系统等领域积累较深，机器人方向看空心杯电机、灵巧手、运动控制和执行器组件。 定位：电机与运动控制弹性标的。 优势：机器人映射清晰，单机用量逻辑较强。 风险：估值波动大，客户导入节奏不确定。 评级：A 高弹性观察。 目标价区间：保守 62，基准 76，乐观 90。</p>
-<h3 id="柯力传感-603662">柯力传感 603662</h3>
-<p>公司以传感器为主，机器人方向看力控、触觉和六维力传感映射。 定位：力传感入口。 优势：感知层关键性提升，力控是机器人从“会动”到“会干活”的重要环节。 风险：机器人收入占比和产品认证阶段需继续核验。 评级：A 高弹性观察。 目标价区间：保守 74，基准 90，乐观 105。</p>
-<h3 id="奥比中光-688322">奥比中光 688322</h3>
-<p>公司定位 3D 视觉感知，机器人、AIoT、消费电子、工业检测等场景均可应用。 定位：3D 视觉高弹性入口。 优势：机器人需要空间感知，长期逻辑顺。 风险：亏损压力、客户结构和机器人实际收入贡献需要确认。 评级：A- 主题弹性研究。 目标价区间：保守 130，基准 165，乐观 200。</p>
-<h3 id="麦格米特-002851">麦格米特 002851</h3>
-<p>公司覆盖电源、电控、智能家电、新能源和工业电源等，机器人方向看电源管理、电控模块和工业电气能力。 定位：电源电控。 优势：比纯电池公司更接近机器人电控。 风险：估值高，机器人业务明牌程度不足。 评级：A- 观察。 目标价区间：保守 135，基准 165，乐观 195。</p>
-<h3 id="埃斯顿-002747">埃斯顿 002747</h3>
-<p>公司是国内工业机器人本体和自动化核心公司，覆盖机器人本体、运动控制、伺服系统和智能制造系统。 定位：本体和控制一体化。 优势：机器人收入纯度高。 风险：本体竞争激烈，盈利能力和规模化订单是关键。 评级：B+ 主题核心但利润弹性待验证。 目标价区间：保守 40，基准 50，乐观 60。</p>
-<h3 id="工业富联-601138">工业富联 601138</h3>
-<p>公司是全球电子制造和 AI 服务器产业链核心公司，机器人方向看制造组装、工厂自动化和潜在整机代工能力。 定位：制造平台。 优势：制造能力强、客户基础强。 风险：机器人纯度低，更多是外围观察，不应因市值大就排前。 评级：B+ 外部观察。 目标价区间：保守 62，基准 72，乐观 85。</p>
-<hr class="sep">
-<h2 id="7-为什么不按市值排序">7. 为什么不按市值排序</h2>
-<p>市值排序会把宁德时代、工业富联、海康威视、寒武纪、汇川技术排得很靠前，但这不等于机器人链价值最高。</p>
-<p>机器人主题更应该看：</p>
-<ul>
-<li><strong>机器人收入纯度</strong>：机器人能否成为收入和利润的增量，而不是大公司业务里的一个小标签。</li>
-<li><strong>单机价值量</strong>：一台机器人需要多少部件，单个部件价格和数量是多少。</li>
-<li><strong>认证壁垒</strong>：客户换供应商难不难。</li>
-<li><strong>供给弹性</strong>：产能能否快速扩张，良率是否容易提升。</li>
-<li><strong>替代风险</strong>：技术路线改变后，公司会不会被绕开。</li>
-</ul>
-<p>因此：</p>
-<ul>
-<li>宁德时代、工业富联：确定性强，但机器人纯度低。</li>
-<li>寒武纪、科大讯飞：AI 叙事强，但机器人收入兑现慢。</li>
-<li>埃斯顿、机器人、埃夫特：本体纯度高，但本体利润率可能低于核心零部件。</li>
-<li>三花、拓普、绿的、贝斯特、五洲、双环：更接近“机器人放量时谁先被消耗”的问题。</li>
-</ul>
-<hr class="sep">
-<h2 id="8-6-12-个月研究型目标价区间">8. 6-12 个月研究型目标价区间</h2>
-<p>目标价按产业价值、当前价格、估值压力和主题弹性综合估算，仅作研究锚，不构成投资建议。</p>
-<div class="table-wrap"><table><thead><tr><th>公司</th><th>当前价</th><th>保守目标</th><th>基准目标</th><th>乐观目标</th><th>评级</th></tr></thead><tbody><tr><td>三花智控</td><td>48.99</td><td>52</td><td>60</td><td>70</td><td>S</td></tr><tr><td>拓普集团</td><td>62.43</td><td>65</td><td>76</td><td>90</td><td>S</td></tr><tr><td>绿的谐波</td><td>488.00</td><td>430</td><td>560</td><td>680</td><td>S-</td></tr><tr><td>贝斯特</td><td>25.96</td><td>28</td><td>34</td><td>42</td><td>S-</td></tr><tr><td>五洲新春</td><td>76.15</td><td>72</td><td>88</td><td>105</td><td>S-</td></tr><tr><td>双环传动</td><td>47.01</td><td>50</td><td>58</td><td>68</td><td>A+</td></tr><tr><td>汇川技术</td><td>72.15</td><td>75</td><td>86</td><td>100</td><td>A+</td></tr><tr><td>鸣志电器</td><td>68.02</td><td>62</td><td>76</td><td>90</td><td>A</td></tr><tr><td>柯力传感</td><td>80.00</td><td>74</td><td>90</td><td>105</td><td>A</td></tr><tr><td>奥比中光</td><td>147.33</td><td>130</td><td>165</td><td>200</td><td>A-</td></tr><tr><td>麦格米特</td><td>147.62</td><td>135</td><td>165</td><td>195</td><td>A-</td></tr><tr><td>埃斯顿</td><td>44.77</td><td>40</td><td>50</td><td>60</td><td>B+</td></tr></tbody></table></div>
-<hr class="sep">
-<h2 id="9-风险清单">9. 风险清单</h2>
-<ol>
-<li><strong>人形机器人量产低于预期</strong></li>
-</ol>
-<p>如果 2026-2027 年仍停留在演示、小批量试点，部件公司收入兑现会推迟。</p>
-<ol>
-<li><strong>整机价格战传导到零部件</strong></li>
-</ol>
-<p>一旦整机厂以低价抢市场，零部件供应商可能被压价。</p>
-<ol>
-<li><strong>技术路线变化</strong></li>
-</ol>
-<p>线性执行器、谐波减速器、丝杠、空心杯电机等路线仍可能变化，单一技术押注有风险。</p>
-<ol>
-<li><strong>估值过度提前反映</strong></li>
-</ol>
-<p>绿的谐波、五洲新春、鸣志电器、拓普集团等短期已经有较强预期，追高风险大。</p>
-<ol>
-<li><strong>客户认证不等于收入确认</strong></li>
-</ol>
-<p>送样、测试、定点和批量收入是四个阶段，不能混为一谈。</p>
-<ol>
-<li><strong>公司跨界讲故事</strong></li>
-</ol>
-<p>需要警惕低纯度公司用机器人概念抬高估值，但财报没有收入证明。</p>
-<hr class="sep">
-<h2 id="10-下一步验证清单">10. 下一步验证清单</h2>
-<p>建议后续按以下顺序继续精查：</p>
-<ol>
-<li><strong>公司年报/半年报</strong>：机器人相关产品是否单独披露收入、毛利率、客户和产能。</li>
-<li><strong>互动易/上证 e 互动</strong>：送样、定点、客户认证是否有正式表述。</li>
-<li><strong>产能和项目备案</strong>：丝杠、谐波减速器、执行器产线是否真实扩产。</li>
-<li><strong>应收、存货、合同负债</strong>：是否出现订单兑现信号。</li>
-<li><strong>客户交叉验证</strong>：是否进入 Tesla、宇树、优必选、智元、车厂或电子厂供应链。</li>
-<li><strong>技术路线跟踪</strong>：线性执行器、旋转执行器、灵巧手和关节设计是否发生路线切换。</li>
-<li><strong>K 线和资金面</strong>：对 S 级标的单独做择时，不用产业结论替代买点。</li>
-</ol>
-<hr class="sep">
-<h2 id="11-报告用到的主要公开来源">11. 报告用到的主要公开来源</h2>
-<ul>
-<li>IFR, *World Robotics 2025 - Industrial Robots Executive Summary*: https://ifr.org/img/worldrobotics/Executive_Summary_WR_2025_Industrial_Robots.pdf</li>
-<li>Tesla AI &amp; Robotics: https://www.tesla.com/AI</li>
-<li>Unitree Robotics 官方网站: https://www.unitree.com/</li>
-<li>UBTECH 官方网站: https://www.ubtrobot.com/</li>
-<li>Sanhua Europe 官方产品页: https://www.sanhuaeurope.com/</li>
-<li>Tuopu Group 官方网站: https://www.tuopu.com/</li>
-<li>Leaderdrive 官方网站: https://www.leaderdrive.com/</li>
-<li>Time, *The Shift East: How China's EV Boom Powers Its Tech Rise*: https://time.com/7288660/shift-east-china-electric-vehicles-economy-technology-trump-tariffs-ai/</li>
-<li>The Verge, *A humanoid robot-shaped bubble is forming, China warns*: https://www.theverge.com/news/831451/china-humanoid-robotics-bubble</li>
-<li>MarketWatch, UBS humanoid robot market discussion: https://www.marketwatch.com/story/300-million-humanoid-robots-are-coming-and-here-are-the-companies-that-will-benefit-04c36ae8</li>
-<li>腾讯行情接口，2026-07-03 收盘后拉取。</li>
-</ul>
-    </article>
+
+    <section class="card toc"><b>阅读路径</b><nav><a href="#gates">五道量产门</a><a href="#routes">两条路线</a><a href="#evidence">国产证据</a><a href="#chain">价值链</a><a href="#stocks">上市公司</a><a href="#signals">跟踪指标</a><a href="#sources">来源</a></nav></section>
+
+    <section id="gates">
+      <div class="head"><h2>先统一口径：量产有五道门</h2><span class="no">01 · STAGE GATES</span></div>
+      <p class="lead">行业最常见的误读，是把设计产能、产线下线和稳定替人都叫“量产”。它们对应完全不同的收入确定性。</p>
+      <div class="gates">
+        <article class="card gate"><i>GATE 01</i><h3>设计产能</h3><p>工厂、设备和节拍的目标。证明资本开支意愿，不证明产品能卖。</p><span class="stage early">Tesla 百万台线在此</span></article>
+        <article class="card gate"><i>GATE 02</i><h3>产品下线</h3><p>制造系统能产出产品；下线数不等于客户付款、终端部署。</p><span class="stage early">部分国产里程碑</span></article>
+        <article class="card gate"><i>GATE 03</i><h3>付费交付</h3><p>有客户、有合同、有回款。科研教育、数据采集也是真需求，但天花板不同。</p><span class="stage">国产头部已跨过</span></article>
+        <article class="card gate"><i>GATE 04</i><h3>稳定作业</h3><p>成功率、节拍、连续运行、人工接管与安全达到客户标准。</p><span class="stage early">工业试点主战场</span></article>
+        <article class="card gate"><i>GATE 05</i><h3>财务贡献</h3><p>收入、毛利、现金流可单独观察，降价后仍能形成正向单位经济。</p><span class="stage early">仅少数样本</span></article>
+      </div>
+    </section>
+
+    <section id="routes">
+      <div class="head"><h2>两条路线：同一个终点，不同的产业组织</h2><span class="no">02 · TESLA VS CHINA</span></div>
+      <div class="lanes">
+        <article class="card lane tesla"><div class="lane-top"><span class="flag">TESLA OPTIMUS</span><h3>单平台 × 强垂直整合</h3><p>汽车工厂、真实世界 AI、端侧芯片、软硬件联合设计和规模制造，押注设计冻结后的快速复制。</p></div><div class="lane-body">
+          <div class="check"><b><span class="status">已核验</span></b><p>2026Q2 10-Q：公司仍在为 Optimus 大规模生产做准备和投资。</p></div>
+          <div class="check"><b><span class="status">已核验</span></b><p>2025 10-K：Bots 尚未商业化，行业仍处早期，公司无法预测需求。</p></div>
+          <div class="check"><b><span class="status conditional">条件式</span></b><p>Fremont 100 万台、Texas 长期 1,000 万台是生产线设计产能；Q1 状态均为 Construction。</p></div>
+          <div class="check"><b><span class="status unverified">未核验</span></b><p>未披露 Optimus 商业销量、外部客户、收入、单位成本；三花/拓普具体定点和份额无双方公告级证据。</p></div>
+        </div></article>
+        <article class="card lane china"><div class="lane-top"><span class="flag">CHINA ROBOTICS</span><h3>多本体 × 低成本快速试错</h3><p>四足、双足、轮式双臂并行，用科研教育、数据采集、展示和工业试点形成早期现金流与数据闭环。</p></div><div class="lane-body">
+          <div class="check"><b><span class="status">已核验</span></b><p>宇树 2025 年纯人形出货超过 5,500 台；硬件工程化和标品交付领先。</p></div>
+          <div class="check"><b><span class="status">已核验</span></b><p>优必选 Walker S2 已达到 1,000 台级小批量生产交付，并进入工业现场。</p></div>
+          <div class="check"><b><span class="status conditional">条件式</span></b><p>智元自报 2026 年第 15,000 台机器人下线；下线不自动等于付费终端部署。</p></div>
+          <div class="check"><b><span class="status unverified">待证真</span></b><p>通用工业替人仍缺跨月连续运行、任务成功率、人工接管率和 ROI 的统一公开审计。</p></div>
+        </div></article>
+      </div>
+      <div class="table-wrap" style="margin-top:14px"><table class="mobile compare"><thead><tr><th>维度</th><th>Tesla Optimus</th><th>国产机器人</th></tr></thead><tbody>
+        <tr><td><b>核心优势</b></td><td>AI训练、芯片、工厂、自有部署场景、资本开支</td><td>成本、零部件密度、迭代速度、科研教育和开发者生态</td></tr>
+        <tr><td><b>当前最强证据</b></td><td>产线建设与大规模生产准备</td><td>千台级交付、少数审计收入、工业场景试点</td></tr>
+        <tr><td><b>最大缺口</b></td><td>商业销量、外部客户、单位经济性</td><td>长期稳定作业、通用性、售后成本和复购</td></tr>
+        <tr><td><b>供应链影响</b></td><td>设计冻结后可能快速放量，也可能自研和强压价</td><td>路线多样利于供应商试错，但 BOM 难统一、迭代淘汰快</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section id="evidence">
+      <div class="head"><h2>国产整机：出货领先，但结构决定含金量</h2><span class="no">03 · DOMESTIC EVIDENCE</span></div>
+      <div class="facts">
+        <article class="card fact"><span>UNITREE · 2025</span><strong>16.99 亿元</strong><p>收入；扣非净利约 5.91 亿元。2026Q1收入仍增68.49%，扣非净利同比降52.55%。</p></article>
+        <article class="card fact"><span>UBTECH · 2025</span><strong>1,000 台级</strong><p>Walker S2 小批量生产交付；工业客户仍需现场验证与二次开发。</p></article>
+        <article class="card fact"><span>AGIBOT · 2026</span><strong>15,000th</strong><p>公司自报机器人下线里程碑；需继续核验客户、回款、终端部署与产品结构。</p></article>
+      </div>
+      <div class="table-wrap" style="margin-top:14px"><table class="mobile stage-table"><thead><tr><th>主体</th><th>已核验证据</th><th>阶段判断</th><th>下一道门</th></tr></thead><tbody>
+        <tr><td><b>宇树</b></td><td>人形出货 5,500+；收入与利润闭环；四足和人形标品</td><td>科研教育/消费：规模放量；工业人形：试点部署</td><td>工业付费结构、复购、连续作业、2026利润质量</td></tr>
+        <tr><td><b>优必选</b></td><td>Walker S2 千台级交付；汽车与3C场景</td><td>工业人形：试点部署至小批量交付</td><td>单场景复制、现金流、毛利与维护成本</td></tr>
+        <tr><td><b>智元</b></td><td>多本体产品；公司自报出货和下线里程碑</td><td>批量制造已建立；终端应用结构待拆</td><td>审计收入、客户分布、付费部署和利用率</td></tr>
+        <tr><td><b>小鹏 IRON</b></td><td>复用VLA、芯片和汽车制造；计划2026年底规模量产</td><td>工程样机至客户认证</td><td>正式量产、付费客户与成本指标</td></tr>
+      </tbody></table></div>
+      <div class="bar card"><div class="bar-title">关键校正</div><div class="bar-body"><p><b>硬件工程化领先</b>和<b>通用劳动替代尚早</b>可以同时成立。宇树的科研教育客户、优必选的工业试点、智元的数据采集与多本体都是真实商业化，但不能把它们直接等同为全天候替代工人的通用机器人。</p></div></div>
+    </section>
+
+    <section id="chain">
+      <div class="head"><h2>价值链：从硬件 BOM 转向可用生产力</h2><span class="no">04 · VALUE CHAIN</span></div>
+      <div class="value-grid">
+        <article class="card value"><span class="index">01 · MOTION</span><h3>执行器与精密传动</h3><p>电机、驱动器、减速器、丝杠、轴承、编码器与关节模组决定重量、扭矩、热、寿命和成本。</p><ul><li>优先：有量产制造与客户认证能力</li><li>风险：QDD、谐波、行星、线性路线仍分化</li></ul></article>
+        <article class="card value"><span class="index">02 · SENSING</span><h3>3D 视觉、触觉与力控</h3><p>机器人从“会动”到“会干活”的核心。安全抓取、装配和人机协作需要闭环感知。</p><ul><li>优先：已有机器人收入与标准产品</li><li>风险：方案集成、自研替代和价格竞争</li></ul></article>
+        <article class="card value"><span class="index">03 · CONTROL</span><h3>伺服与实时控制</h3><p>低压伺服、运动控制、实时系统和安全控制是工业自动化能力迁移最直接的层。</p><ul><li>优先：成熟工业主业形成财务底盘</li><li>风险：人形业务纯度低、估值先走</li></ul></article>
+        <article class="card value"><span class="index">04 · INTELLIGENCE</span><h3>VLA / WMA 与数据闭环</h3><p>决定新任务需要多少演示数据、工程师天数，以及能否跨本体迁移。长期价值高，短期收费路径早。</p><ul><li>关注：真实数据、仿真、评估、部署工具</li><li>风险：演示指标不能外推生产成功率</li></ul></article>
+        <article class="card value"><span class="index">05 · DEPLOYMENT</span><h3>场景集成与运维</h3><p>工作站改造、安全认证、任务编排、远程接管、备件和维修直接决定客户 ROI。</p><ul><li>最被低估：从试点到复制的工程层</li><li>风险：项目制、人力重、毛利难标准化</li></ul></article>
+        <article class="card value"><span class="index">06 · BODY</span><h3>整机与平台生态</h3><p>整机掌握系统定义、数据和客户入口，但价格战、售后和BOM迭代可能吞噬利润。</p><ul><li>优先：标品、复购、开发者生态</li><li>风险：下线不等于部署，订单不等于利润</li></ul></article>
+      </div>
+    </section>
+
+    <section id="stocks">
+      <div class="head"><h2>上市公司：按证据，不按概念热度</h2><span class="no">05 · PUBLIC EQUITIES</span></div>
+      <p class="lead">下列是产业研究优先级，不是当前买入排序。没有本轮实时股价、估值和技术面，就不能把“产业龙头”直接写成“现在可追”。</p>
+      <div class="stock-grid">
+        <article class="card stock" style="--tone:#2f6b4f"><span class="ticker">300124.SZ · 确定性核心</span><h3>汇川技术</h3><div class="role">伺服 / 控制 / 关节模组 / 丝杠 / 编码器</div><p>2025年报明确第一代人形核心部件已开发交付，并持续推进主机厂和科研客户送样。工业自动化主业提供现金流底盘。</p><div class="proof"><span class="status">财报级</span> 商业化已跨过纯预研</div></article>
+        <article class="card stock" style="--tone:#286b9a"><span class="ticker">688160.SH · 高弹性部件</span><h3>步科股份</h3><div class="role">低压伺服 / 运动控制 / 人机交互</div><p>2025年机器人业务成为增长引擎，收入和利润已有兑现。规模较小带来弹性，也意味着客户集中和波动风险更高。</p><div class="proof"><span class="status">财报级</span> 机器人主业纯度较高</div></article>
+        <article class="card stock" style="--tone:#a77a29"><span class="ticker">688322.SH · 感知龙头</span><h3>奥比中光</h3><div class="role">3D 视觉 / 空间感知</div><p>2025年收入9.41亿元、归母净利1.28亿元并首次盈利，各类型机器人业务较快增长，是感知链少数已有财务拐点的样本。</p><div class="proof"><span class="status">财报级</span> 机器人收入仍需进一步拆分</div></article>
+        <article class="card stock"><span class="ticker">002050.SZ / 601689.SH · 北美映射</span><h3>三花 / 拓普</h3><div class="role">执行器平台 / 汽车制造能力迁移</div><p>制造、客户认证和降本逻辑强，是Optimus放量的高弹性映射；但本轮没有找到双方对具体定点、份额、订单和收入的公告级确认。</p><div class="proof"><span class="status unverified">待证真</span> 不能写成确认供应商</div></article>
+        <article class="card stock"><span class="ticker">688017.SH · 精密传动</span><h3>绿的谐波</h3><div class="role">谐波减速器 / 旋转执行器</div><p>产品纯度和工业机器人基础强，但人形机器人路线没有统一；需跟踪人形收入、价格、毛利和QDD/行星路线替代风险。</p><div class="proof"><span class="status conditional">条件式</span> 卡点强，路线风险也高</div></article>
+        <article class="card stock"><span class="ticker">9880.HK · 整机纯度</span><h3>优必选</h3><div class="role">工业人形整机 / 全栈技术 / 部署服务</div><p>上市整机中人形纯度最高、交付证据最强。下一步不看演示，看工业客户复购、现金流、整机毛利和售后成本。</p><div class="proof"><span class="status">交付级</span> 尚待规模工业ROI</div></article>
+      </div>
+      <div class="bar card"><div class="bar-title">第二观察层</div><div class="bar-body"><p><b>柯力传感、鸣志电器、兆威机电、贝斯特、五洲新春：</b>分别映射力传感、空心杯/运动控制、微型传动、丝杠与轴承。技术位置合理，但必须逐家公司核验量产定点、良率、机器人收入占比和客户集中度。<br><b>埃斯顿、埃夫特、机器人：</b>工业机器人主业真实，但工业机器人的成熟度不能替代人形机器人的商业验证。</p></div></div>
+    </section>
+
+    <section id="signals">
+      <div class="head"><h2>未来 12–24 个月，只盯这些数字</h2><span class="no">06 · SCOREBOARD</span></div>
+      <div class="watch-grid">
+        <article class="card watch"><span class="label">强化行业论文</span><h3>真正的右侧确认</h3><ol><li>Tesla正式披露外部客户、商业销量与Optimus收入。</li><li>国产整机在同一工业任务连续运行数月，并披露成功率和人工接管率。</li><li>客户复购，机器人每小时总成本低于人工或专机方案。</li><li>上市部件公司单列人形收入、毛利与量产良率。</li><li>VLA跨本体迁移显著降低新任务所需数据和工程师天数。</li></ol></article>
+        <article class="card watch"><span class="label">证伪行业论文</span><h3>最危险的左侧信号</h3><ol><li>下线量上升，但库存、应收、售后费用和现金流恶化。</li><li>客户试点停留在展示，不能复制或不复购。</li><li>整机降价快于BOM和服务成本下降，毛利持续被压缩。</li><li>技术路线切换使已扩产的减速器、丝杠或传感器方案被替代。</li><li>所谓Tesla供应链多年没有公告、订单和收入闭环。</li></ol></article>
+      </div>
+      <div class="risk-grid" style="margin-top:14px">
+        <article class="card risk"><b>产能幻觉</b><p>设计年产能是目标，不是当前产量、订单或收入。</p></article>
+        <article class="card risk"><b>出货口径</b><p>人形、轮式双臂、下线、出货、交付和部署定义不同。</p></article>
+        <article class="card risk"><b>BOM 外推</b><p>整机厂自研、改路线和压价会改变单机价值量。</p></article>
+        <article class="card risk"><b>演示偏差</b><p>舞蹈、奔跑、单次抓取不能证明生产节拍和经济性。</p></article>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="head"><h2>来源、证据等级与研究边界</h2><span class="no">07 · SOURCES</span></div>
+      <div class="card sources"><ol>
+        <li><a href="https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm" target="_blank" rel="noreferrer noopener">Tesla 2026Q2 Form 10-Q</a>——Optimus大规模生产准备、资本开支和风险。</li>
+        <li><a href="https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm" target="_blank" rel="noreferrer noopener">Tesla 2025 Form 10-K</a>——Bots尚未商业化及需求不确定性。</li>
+        <li><a href="https://www.sec.gov/Archives/edgar/data/1318605/000162828026026551/exhibit991.htm" target="_blank" rel="noreferrer noopener">Tesla Q1 2026 Update</a>——Fremont/Texas Optimus产线状态与设计产能。</li>
+        <li><a href="https://static.sse.com.cn/stock/disclosure/announcement/c/202603/002178_20260320_QY8F.pdf" target="_blank" rel="noreferrer noopener">宇树科技招股说明书</a>——出货、财务、客户结构、技术路线与风险。</li>
+        <li><a href="https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002178_20260525_V4H0.pdf" target="_blank" rel="noreferrer noopener">宇树审核中心意见落实函回复</a>——2026Q1增速与利润变化。</li>
+        <li><a href="https://owebsite-cdn.ubtrobot.com/resources/file/2026/04/21/797179114676293.pdf" target="_blank" rel="noreferrer noopener">优必选2025年报</a>——Walker S2千台级小批量生产交付。</li>
+        <li><a href="https://www.xpeng.com/pressroom/news/019a56f54fe99a2a0a8d8a0282e402b7" target="_blank" rel="noreferrer noopener">XPENG AI Day</a>——IRON路线、数据与量产难点。</li>
+        <li><a href="https://agibot.com/article/231/detail/82.html" target="_blank" rel="noreferrer noopener">智元第15,000台机器人下线公告</a>——公司自报，未当作终端部署数。</li>
+        <li><a href="https://ifr.org/downloads/press_docs/2025-09-25-IFR_press_release_China_in_English.pdf" target="_blank" rel="noreferrer noopener">IFR World Robotics 2025：中国</a>——工业机器人安装与运行存量。</li>
+        <li><a href="https://ifr.org/ifr-press-releases/news/humanoid-robots-vision-and-reality-paper-published-by-ifr" target="_blank" rel="noreferrer noopener">IFR：Humanoid Robots—Vision and Reality</a>——大规模应用尚未形成。</li>
+        <li><a href="https://wap.miit.gov.cn/jgsj/kjs/wjfb/art/2026/art_cd666691abf8471fb8553d463aa416e3.html" target="_blank" rel="noreferrer noopener">工信部、国资委2026实景实训行动</a>——成功率、效率、安全可靠性和经济可行性评价。</li>
+        <li><a href="https://www.stats.gov.cn/zt_18555/zthd/lhfw/2026lhzt/2026sjjd/202602/t20260202_1962442.html" target="_blank" rel="noreferrer noopener">国家统计局2025工业经济解读</a>——减速器、工业与服务机器人产量增速。</li>
+        <li><a href="https://static.cninfo.com.cn/finalpage/2026-04-28/1225208488.PDF" target="_blank" rel="noreferrer noopener">汇川技术2025年报</a>——人形核心部件开发、交付与送样。</li>
+        <li><a href="https://www.sse.com.cn/cpc/cpctheme/4th20thcpc/4th20thcpcgcxx/c/c_20260424_10816453.shtml" target="_blank" rel="noreferrer noopener">上交所科创板2025年报综述</a>——奥比中光、步科财务与机器人业务。</li>
+        <li><a href="https://nvidianews.nvidia.com/news/nvidia-open-humanoid-robot-reference-design" target="_blank" rel="noreferrer noopener">NVIDIA Isaac GR00T × Unitree参考人形平台</a>——开放开发生态与工具链。</li>
+      </ol><p class="disclaimer"><b>研究边界：</b>本页综合了 Obsidian 中的机器人剪藏、股票工作区既有研究与最新公开资料；剪藏只作线索，核心数字已回到监管文件、政府、IFR或公司正式材料。智元等私企数字标注为公司自报。未核验实时价格、估值、技术位置和一致预期，不构成证券买卖建议。浏览器CDP未连接，本轮只做代码级与公网静态回读，不能宣称完成桌面/移动端视觉QA。</p></div>
+    </section>
+    <footer class="footer">© 2026 CSN 投研 · 产能、出货、作业与利润分开核验</footer>
   </main>
-  <footer>Research only. Built from local report Markdown and public sources. Last updated 2026-07-03.</footer>
 </body>
 </html>
