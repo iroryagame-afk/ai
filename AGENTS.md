@@ -15,7 +15,7 @@
 
 - 当前正式页面、导航分组、退役入口和验收边界以 `docs/csnpk-page-registry.md` 为唯一清单。
 - 修改核心导航时，必须同步修改对应生成器与已发布静态页；不得只修线上副本，导致下次生成回退。
-- `/a-share-flow/` 只允许重定向到 `/a-share-market/`；`/csn2/` 与 `/earnings/` 保持下线，不恢复兼容页面。
+- `/mda100/`、`/a-share-market/`（含 `/etf/`）、`/a-share-thrust/`、`/a-share-rotation/`、`/a-share-ai-software/`、`/a-share-ai-hardware/` 与 `/a-share-flow/` 均已退役并保持 404；`/csn2/` 与 `/earnings/` 也保持下线。
 - 公网页面成功返回不等于数据已刷新；数据日期、生成时间和核验状态必须按各页面自身标记判断。
 
 ## GitHub 共享工作台
