@@ -2,15 +2,15 @@
   "version": "2.0",
   "research_date": "2026-08-18",
   "page_scope": "industry_map_with_stock_importance",
-  "importance_coverage": {"described": 72, "total": 72, "display": "inline_in_industry_tables"},
+  "importance_coverage": {"described": 78, "total": 78, "display": "inline_in_industry_tables"},
   "evidence_policy": "exchange_or_company_primary_first; obsidian_for_leads_and_cross_check",
-  "counts": {"total_unique": 72, "core": 37, "core_observation": 4, "related": 11, "verification": 11, "historical": 9},
+  "counts": {"total_unique": 78, "core": 38, "core_observation": 4, "related": 16, "verification": 11, "historical": 9},
   "classification": {
     "domestic_compute_core": ["寒武纪","海光信息","中科曙光","浪潮信息","锐捷网络","盛科通信","紫光股份","澜起科技","华大九天","利通电子"],
-    "ai_supply_tightness_core": ["工业富联","长电科技","深南电路","胜宏科技","生益电子","生益科技","沪电股份","中船特气","雅克科技","江丰电子","安集科技","鼎龙股份","华润微","中芯国际","华虹公司"],
+    "ai_supply_tightness_core": ["工业富联","长鑫科技","长电科技","深南电路","胜宏科技","生益电子","生益科技","沪电股份","中船特气","雅克科技","江丰电子","安集科技","鼎龙股份","华润微","中芯国际","华虹公司"],
     "next_generation_core": ["中际旭创","新易盛","天孚通信","仕佳光子","长盈通","中石科技","天通股份","光迅科技","联特科技","瑞可达","杰普特","东田微"],
     "core_observation": ["英维克","宏和科技","概伦电子","源杰科技"],
-    "related": ["华正新材","飞凯材料","通富微电","华天科技","新洁能","杰华特","芯朋微","仙鹤股份","TCL中环","潍柴动力","杰瑞股份"],
+    "related": ["华正新材","飞凯材料","通富微电","华天科技","新洁能","杰华特","芯朋微","仙鹤股份","TCL中环","潍柴动力","杰瑞股份","兆易创新","北京君正","东芯股份","江波龙","佰维存储"],
     "verification": ["富信科技","旭光电子","华特气体","中巨芯-U","铜冠铜箔","风华高科","福达合金","索辰科技","泰金新能","世名科技","兴业科技"],
     "historical": ["利和兴","昀冢科技","宝鼎科技","聚石化学","莱伯泰科","爱迪特","有研硅","唯特偶","金安国纪"]
   },
@@ -22,6 +22,7 @@
     {"mainline":"国产算力","segment":"国产EDA/IP","logic":"半导体设计工具与IP自主可控","stocks":"华大九天；观察：概伦电子","evidence":"公告核验，收入纯度跟踪"},
     {"mainline":"国产算力","segment":"算力运营","logic":"AIDC算力收入兑现，关注资本开支与回款","stocks":"利通电子","evidence":"公告＋Obsidian"},
     {"mainline":"AI供需紧张","segment":"AI服务器制造","logic":"全球云厂商AI服务器与高速交换机订单放量","stocks":"工业富联","evidence":"公司披露"},
+    {"mainline":"AI供需紧张","segment":"国产DRAM/存储芯片","logic":"AI服务器与端侧AI推升存储容量和带宽需求；长鑫补齐国产DRAM设计制造一体化核心，DRAM不等于HBM","stocks":"长鑫科技；观察：兆易创新、北京君正、东芯股份、江波龙、佰维存储","evidence":"上市公告＋公司年报；HBM规模量产待核验"},
     {"mainline":"AI供需紧张","segment":"先进封装","logic":"Chiplet/HBM提升封装复杂度与先进产能需求","stocks":"长电科技；观察：通富微电、华天科技","evidence":"公司年报"},
     {"mainline":"AI供需紧张","segment":"高速PCB","logic":"AI服务器与800G交换机推动层数、阶数和价值量提升","stocks":"深南电路、沪电股份、胜宏科技、生益电子","evidence":"公告＋Obsidian"},
     {"mainline":"AI供需紧张","segment":"高速CCL/覆铜板","logic":"M9等高频高速材料国产替代与产品升级","stocks":"生益科技；观察：华正新材","evidence":"年报＋Obsidian"},
@@ -45,12 +46,21 @@
   "primary_sources": [
     "https://static.cninfo.com.cn/finalpage/2025-03-18/1222821549.PDF",
     "https://static.cninfo.com.cn/finalpage/2026-04-16/1225107720.PDF",
-    "https://static.cninfo.com.cn/finalpage/2026-03-24/1225026470.PDF"
+    "https://static.cninfo.com.cn/finalpage/2026-03-24/1225026470.PDF",
+    "https://www.sse.com.cn/disclosure/announcement/listing/ipo/c/c_20260724_10826610.shtml",
+    "https://www.cxmt.com/?lang=zh-hans",
+    "https://static.cninfo.com.cn/finalpage/2026-03-31/1225061352.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-03-28/1225045085.PDF",
+    "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-23/688110_20260423_7YZ1.pdf",
+    "https://static.cninfo.com.cn/finalpage/2026-03-20/1225020225.PDF",
+    "https://static.cninfo.com.cn/finalpage/2025-03-21/1222976786.pdf"
   ],
   "obsidian_sources": [
     "文字直播/大盘与科技-2026-08-13.md",
     "文字直播/大盘与科技_20260816.md",
     "情报社/半导体/00 行业综述.md",
+    "情报社/半导体/兆易创新.md",
+    "情报社/半导体/北京君正.md",
     "情报社/光通信/00 行业综述.md"
   ]
 }
