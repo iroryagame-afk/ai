@@ -2,16 +2,16 @@
   "version": "2.0",
   "research_date": "2026-08-18",
   "page_scope": "industry_map_with_stock_importance",
-  "importance_coverage": {"described": 78, "total": 78, "display": "inline_in_industry_tables"},
+  "importance_coverage": {"described": 89, "total": 89, "display": "inline_in_industry_tables"},
   "evidence_policy": "exchange_or_company_primary_first; obsidian_for_leads_and_cross_check",
-  "counts": {"total_unique": 78, "core": 38, "core_observation": 4, "related": 16, "verification": 11, "historical": 9},
+  "counts": {"total_unique": 89, "core": 41, "core_observation": 9, "related": 16, "verification": 14, "historical": 9},
   "classification": {
-    "domestic_compute_core": ["寒武纪","海光信息","中科曙光","浪潮信息","锐捷网络","盛科通信","紫光股份","澜起科技","华大九天","利通电子"],
+    "domestic_compute_core": ["寒武纪","海光信息","中科曙光","浪潮信息","锐捷网络","盛科通信","紫光股份","澜起科技","华大九天","利通电子","润泽科技","东阳光"],
     "ai_supply_tightness_core": ["工业富联","长鑫科技","长电科技","深南电路","胜宏科技","生益电子","生益科技","沪电股份","中船特气","雅克科技","江丰电子","安集科技","鼎龙股份","华润微","中芯国际","华虹公司"],
-    "next_generation_core": ["中际旭创","新易盛","天孚通信","仕佳光子","长盈通","中石科技","天通股份","光迅科技","联特科技","瑞可达","杰普特","东田微"],
-    "core_observation": ["英维克","宏和科技","概伦电子","源杰科技"],
+    "next_generation_core": ["中际旭创","新易盛","天孚通信","仕佳光子","长盈通","中石科技","天通股份","光迅科技","联特科技","瑞可达","杰普特","东田微","华丰科技"],
+    "core_observation": ["英维克","宏和科技","概伦电子","源杰科技","航天电器","光环新网","奥飞数据","数据港","协创数据"],
     "related": ["华正新材","飞凯材料","通富微电","华天科技","新洁能","杰华特","芯朋微","仙鹤股份","TCL中环","潍柴动力","杰瑞股份","兆易创新","北京君正","东芯股份","江波龙","佰维存储"],
-    "verification": ["富信科技","旭光电子","华特气体","中巨芯-U","铜冠铜箔","风华高科","福达合金","索辰科技","泰金新能","世名科技","兴业科技"],
+    "verification": ["富信科技","旭光电子","华特气体","中巨芯-U","铜冠铜箔","风华高科","福达合金","索辰科技","泰金新能","世名科技","兴业科技","大位科技","宏景科技","润建股份"],
     "historical": ["利和兴","昀冢科技","宝鼎科技","聚石化学","莱伯泰科","爱迪特","有研硅","唯特偶","金安国纪"]
   },
   "industry_map": [
@@ -20,7 +20,8 @@
     {"mainline":"国产算力","segment":"交换芯片/交换机整机","logic":"AI集群带宽升级与400G/800G网络建设","stocks":"盛科通信、锐捷网络、紫光股份","evidence":"公告＋Obsidian"},
     {"mainline":"国产算力","segment":"内存互连/CXL","logic":"DDR5渗透与AI服务器内存带宽升级","stocks":"澜起科技","evidence":"公司年报"},
     {"mainline":"国产算力","segment":"国产EDA/IP","logic":"半导体设计工具与IP自主可控","stocks":"华大九天；观察：概伦电子","evidence":"公告核验，收入纯度跟踪"},
-    {"mainline":"国产算力","segment":"算力运营","logic":"AIDC算力收入兑现，关注资本开支与回款","stocks":"利通电子","evidence":"公告＋Obsidian"},
+    {"mainline":"国产算力","segment":"AIDC资产运营","logic":"AI机柜功率密度与算力基础设施需求提升；区分成熟IDC与高功率AIDC兑现","stocks":"润泽科技、东阳光；观察：光环新网、奥飞数据、数据港；验证：大位科技","evidence":"年报＋收购公告；上架率、资本开支与回款跟踪"},
+    {"mainline":"国产算力","segment":"算力租赁/服务","logic":"从算力设备、集群部署到云算力交付；区分自有直租、转租与项目集成收入","stocks":"利通电子；观察：协创数据；验证：宏景科技、润建股份","evidence":"年报核验，收入模式与客户集中度跟踪"},
     {"mainline":"AI供需紧张","segment":"AI服务器制造","logic":"全球云厂商AI服务器与高速交换机订单放量","stocks":"工业富联","evidence":"公司披露"},
     {"mainline":"AI供需紧张","segment":"国产DRAM/存储芯片","logic":"AI服务器与端侧AI推升存储容量和带宽需求；长鑫补齐国产DRAM设计制造一体化核心，DRAM不等于HBM","stocks":"长鑫科技；观察：兆易创新、北京君正、东芯股份、江波龙、佰维存储","evidence":"上市公告＋公司年报；HBM规模量产待核验"},
     {"mainline":"AI供需紧张","segment":"先进封装","logic":"Chiplet/HBM提升封装复杂度与先进产能需求","stocks":"长电科技；观察：通富微电、华天科技","evidence":"公司年报"},
@@ -35,6 +36,7 @@
     {"mainline":"AI供需紧张","segment":"数据中心电力","logic":"AIDC建设推升气发、内燃机与分布式供电需求","stocks":"潍柴动力、杰瑞股份","evidence":"订单/场景继续核验"},
     {"mainline":"下一代技术","segment":"800G/1.6T光模块","logic":"800G放量并向1.6T迁移","stocks":"中际旭创、新易盛、光迅科技、联特科技","evidence":"公告＋Obsidian"},
     {"mainline":"下一代技术","segment":"光引擎/CPO/NPO/无源器件","logic":"更高速率推动FAU、MT-FA、MPO、光引擎与滤光器件升级","stocks":"天孚通信、仕佳光子、长盈通、瑞可达、杰普特、东田微；观察：源杰科技","evidence":"分公司核验"},
+    {"mainline":"下一代技术","segment":"高速连接器","logic":"AI服务器、交换机与液冷系统提升高速铜互连、背板及高速线模组需求","stocks":"华丰科技；观察：航天电器","evidence":"公司年报；AI对应收入纯度继续跟踪"},
     {"mainline":"下一代技术","segment":"薄膜铌酸锂","logic":"高速调制器潜在路线，商业兑现仍需跟踪","stocks":"天通股份","evidence":"收入待证"},
     {"mainline":"下一代技术","segment":"散热/液冷","logic":"芯片与机柜功率密度提升","stocks":"中石科技；观察：英维克、富信科技","evidence":"公告＋局部Obsidian"},
     {"mainline":"下一代技术","segment":"磷化铟衬底","logic":"高速光器件上游材料，A股映射处小体量验证","stocks":"兴业科技","evidence":"已签收购协议，AI客户映射待证"}
@@ -53,7 +55,14 @@
     "https://static.cninfo.com.cn/finalpage/2026-03-28/1225045085.PDF",
     "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-23/688110_20260423_7YZ1.pdf",
     "https://static.cninfo.com.cn/finalpage/2026-03-20/1225020225.PDF",
-    "https://static.cninfo.com.cn/finalpage/2025-03-21/1222976786.pdf"
+    "https://static.cninfo.com.cn/finalpage/2025-03-21/1222976786.pdf",
+    "https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260414/d07822e827b34e85980072a1bd145cd0.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-03-31/1225054265.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-04-10/1225090821.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-04-10/1225090784.PDF",
+    "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-18/603881_20260418_YP0B.pdf",
+    "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-22/600589_20260422_NSGK.pdf",
+    "https://static.cninfo.com.cn/finalpage/2026-04-27/1225195098.PDF"
   ],
   "obsidian_sources": [
     "文字直播/大盘与科技-2026-08-13.md",
