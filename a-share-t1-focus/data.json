@@ -1,17 +1,17 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "research_date": "2026-08-18",
   "page_scope": "industry_map_with_stock_importance",
-  "importance_coverage": {"described": 89, "total": 89, "display": "inline_in_industry_tables"},
+  "importance_coverage": {"described": 97, "total": 97, "display": "inline_in_industry_tables"},
   "evidence_policy": "exchange_or_company_primary_first; obsidian_for_leads_and_cross_check",
-  "counts": {"total_unique": 89, "core": 41, "core_observation": 9, "related": 16, "verification": 14, "historical": 9},
+  "counts": {"total_unique": 97, "core": 43, "core_observation": 12, "related": 16, "verification": 17, "historical": 9},
   "classification": {
     "domestic_compute_core": ["寒武纪","海光信息","中科曙光","浪潮信息","锐捷网络","盛科通信","紫光股份","澜起科技","华大九天","利通电子","润泽科技","东阳光"],
     "ai_supply_tightness_core": ["工业富联","长鑫科技","长电科技","深南电路","胜宏科技","生益电子","生益科技","沪电股份","中船特气","雅克科技","江丰电子","安集科技","鼎龙股份","华润微","中芯国际","华虹公司"],
-    "next_generation_core": ["中际旭创","新易盛","天孚通信","仕佳光子","长盈通","中石科技","天通股份","光迅科技","联特科技","瑞可达","杰普特","东田微","华丰科技"],
-    "core_observation": ["英维克","宏和科技","概伦电子","源杰科技","航天电器","光环新网","奥飞数据","数据港","协创数据"],
+    "next_generation_core": ["中际旭创","新易盛","天孚通信","仕佳光子","中石科技","天通股份","光迅科技","联特科技","瑞可达","杰普特","华丰科技","光库科技","罗博特科","联讯仪器","太辰光"],
+    "core_observation": ["英维克","宏和科技","概伦电子","源杰科技","航天电器","光环新网","奥飞数据","数据港","协创数据","长光华芯","长盈通","东田微"],
     "related": ["华正新材","飞凯材料","通富微电","华天科技","新洁能","杰华特","芯朋微","仙鹤股份","TCL中环","潍柴动力","杰瑞股份","兆易创新","北京君正","东芯股份","江波龙","佰维存储"],
-    "verification": ["富信科技","旭光电子","华特气体","中巨芯-U","铜冠铜箔","风华高科","福达合金","索辰科技","泰金新能","世名科技","兴业科技","大位科技","宏景科技","润建股份"],
+    "verification": ["富信科技","旭光电子","华特气体","中巨芯-U","铜冠铜箔","风华高科","福达合金","索辰科技","泰金新能","世名科技","兴业科技","大位科技","宏景科技","润建股份","九州一轨","博众精工","凯格精机"],
     "historical": ["利和兴","昀冢科技","宝鼎科技","聚石化学","莱伯泰科","爱迪特","有研硅","唯特偶","金安国纪"]
   },
   "industry_map": [
@@ -35,15 +35,24 @@
     {"mainline":"AI供需紧张","segment":"DrMOS/电源管理","logic":"AI服务器功率密度提升增加电源管理器件用量","stocks":"杰华特、芯朋微","evidence":"产品相关，AI收入待拆"},
     {"mainline":"AI供需紧张","segment":"数据中心电力","logic":"AIDC建设推升气发、内燃机与分布式供电需求","stocks":"潍柴动力、杰瑞股份","evidence":"订单/场景继续核验"},
     {"mainline":"下一代技术","segment":"800G/1.6T光模块","logic":"800G放量并向1.6T迁移","stocks":"中际旭创、新易盛、光迅科技、联特科技","evidence":"公告＋Obsidian"},
-    {"mainline":"下一代技术","segment":"光引擎/CPO/NPO/无源器件","logic":"更高速率推动FAU、MT-FA、MPO、光引擎与滤光器件升级","stocks":"天孚通信、仕佳光子、长盈通、瑞可达、杰普特、东田微；观察：源杰科技","evidence":"分公司核验"},
-    {"mainline":"下一代技术","segment":"高速连接器","logic":"AI服务器、交换机与液冷系统提升高速铜互连、背板及高速线模组需求","stocks":"华丰科技；观察：航天电器","evidence":"公司年报；AI对应收入纯度继续跟踪"},
+    {"mainline":"下一代技术","segment":"NPO/CPO-CW外置光源与光芯片","logic":"外置激光光源与高功率CW DFB支撑硅光引擎和高通道互连","stocks":"仕佳光子；观察：源杰科技、长光华芯","evidence":"仕佳产品已披露；源杰、长光客户与收入纯度继续核验"},
+    {"mainline":"下一代技术","segment":"NPO/CPO-FAU/MT-FA/保偏阵列","logic":"通道密度提升使FAU、MT-FA和保偏光纤阵列成为精密耦合核心部件","stocks":"天孚通信、仕佳光子、光库科技、杰普特；观察：长盈通","evidence":"产品披露；长盈通送样验证且相关收入不足1%"},
+    {"mainline":"下一代技术","segment":"NPO/CPO-Shuffle/MPO高密度连接","logic":"光纤路由重排和多芯连接随端口通道数增长而提高价值量","stocks":"太辰光","evidence":"MPO规模产销、光柔性板批量出货；CPO方案联合开发"},
+    {"mainline":"下一代技术","segment":"NPO/CPO-PIC晶圆切割加工","logic":"硅光晶圆从制造进入封装前需要高精度隐形切割、减薄和分选","stocks":"验证：九州一轨","evidence":"全资子公司晶禧已有小规模收入；6.3亿元扩产处前期筹备，非设备销售"},
+    {"mainline":"下一代技术","segment":"NPO/CPO-耦合与封装设备","logic":"硅光/CPO量产对贴装、耦合精度、良率和自动化提出更高要求","stocks":"罗博特科；验证：博众精工、凯格精机","evidence":"罗博特科已有CPO设备验证及批量订单；其余以光模块设备交付为主"},
+    {"mainline":"下一代技术","segment":"NPO/CPO-光芯片与硅光测试","logic":"晶圆、KGD、光芯片及光模块测试决定量产良率与交付效率","stocks":"联讯仪器；观察：东田微","evidence":"联讯覆盖光模块至硅光晶圆测试；东田微CPO仍为研发储备"},
+    {"mainline":"下一代技术","segment":"高速连接器","logic":"AI服务器、交换机与液冷系统提升高速铜互连、背板及高速线模组需求","stocks":"华丰科技、瑞可达；观察：航天电器","evidence":"公司年报；瑞可达不以未核验FAU份额作为依据"},
     {"mainline":"下一代技术","segment":"薄膜铌酸锂","logic":"高速调制器潜在路线，商业兑现仍需跟踪","stocks":"天通股份","evidence":"收入待证"},
     {"mainline":"下一代技术","segment":"散热/液冷","logic":"芯片与机柜功率密度提升","stocks":"中石科技；观察：英维克、富信科技","evidence":"公告＋局部Obsidian"},
     {"mainline":"下一代技术","segment":"磷化铟衬底","logic":"高速光器件上游材料，A股映射处小体量验证","stocks":"兴业科技","evidence":"已签收购协议，AI客户映射待证"}
   ],
   "contradictions": [
     {"topic":"华正新材与ABF","obsidian_claim":"华正有ABF膜产能并通过部分客户验证","primary_evidence":"公司正式称CBF积层绝缘膜；CPU/GPU与IC载板客户处验证，部分产品小批量交付","resolution":"列入ABF国产替代方向，但标为CBF客户认证期，不称味之素ABF原厂膜或全面量产"},
-    {"topic":"日本限制ABF出口/大陆减量30%","obsidian_claim":"味之素对大陆减量或配额收紧","primary_evidence":"未找到日本政府或味之素正式公告","resolution":"待证真，不作为事实催化"}
+    {"topic":"日本限制ABF出口/大陆减量30%","obsidian_claim":"味之素对大陆减量或配额收紧","primary_evidence":"未找到日本政府或味之素正式公告","resolution":"待证真，不作为事实催化"},
+    {"topic":"九州一轨与PIC切割","obsidian_claim":"截图将九州一轨列为PIC切割","primary_evidence":"2026年6月完成收购晶禧半导体100%股权并并表；晶禧已有硅光芯片激光隐形切割业务","resolution":"映射成立，但标为并购取得的加工服务，不写成九州一轨原主营或切割设备制造"},
+    {"topic":"长盈通CPO规模化","obsidian_claim":"截图/市场将其作为CPO核心","primary_evidence":"公司2026年6月公告称器件保偏光纤收入不足1%、订单较少、尚未规模应用于CPO","resolution":"由核心降为核心观察，阶段为客户认证期"},
+    {"topic":"光迅股份/德东光","obsidian_claim":"截图使用光迅股份和德东光","primary_evidence":"A股正式简称为光迅科技；未找到德东光对应的A股正式简称","resolution":"统一写光迅科技；德东光在身份确认前不纳入"},
+    {"topic":"鹏鼎控股M-Cell及长芯博创Shuffle","obsidian_claim":"截图分别映射M-Cell与Shuffle","primary_evidence":"公司公开材料未形成对应NPO/CPO产品与规模收入的充分证据","resolution":"本轮不纳入NPO/CPO模块，等待产品、客户或收入证据"}
   ],
   "primary_sources": [
     "https://static.cninfo.com.cn/finalpage/2025-03-18/1222821549.PDF",
@@ -62,7 +71,18 @@
     "https://static.cninfo.com.cn/finalpage/2026-04-10/1225090784.PDF",
     "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-18/603881_20260418_YP0B.pdf",
     "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-22/600589_20260422_NSGK.pdf",
-    "https://static.cninfo.com.cn/finalpage/2026-04-27/1225195098.PDF"
+    "https://static.cninfo.com.cn/finalpage/2026-04-27/1225195098.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-04-01/1225070311.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-03-31/1225059372.PDF",
+    "https://dataclouds.cninfo.com.cn/sjother/documents/2025/20250815/4a95ab6a274e40dba7eb32087fe2408b.pdf",
+    "https://static.cninfo.com.cn/finalpage/2025-08-15/1224487631.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-04-18/1225123248.PDF",
+    "https://paper.cnstock.com/html/2026-06/11/content_2230143.htm",
+    "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12466080",
+    "https://www.bozhon.com/upload/file/2025%E5%B9%B4%E5%8D%8A%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+    "https://pdf.dfcfw.com/pdf/H2_AN202605071822035651_1.pdf",
+    "https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260327/e67ce100b4dd41fca62312c3acbbcd4a.PDF",
+    "https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260622/715837fc824c4640a84f03e438670ad0.PDF"
   ],
   "obsidian_sources": [
     "文字直播/大盘与科技-2026-08-13.md",
