@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="冰神 A 股观察池与通达信公式工具：17 只 A 股名单、富途 OpenD 导入文件及 15 个 TN6 公式包。">
-  <title>冰神 A 股观察池与公式工具｜CSNPK</title>
+  <meta name="description" content="冰神 A 股观察池：17 只 A 股名单与富途 OpenD 代码文件。公式与导入脚本统一收纳至代码中心。">
+  <title>冰神 A 股观察池｜CSNPK</title>
   <style>
     :root{--paper:#f5f1e8;--ink:#13243a;--muted:#657181;--line:#d9d2c5;--navy:#102842;--blue:#147d9a;--ice:#dff7fb;--red:#aa352b;--gold:#b98a2c;--white:#fff}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65}
@@ -35,8 +35,10 @@
       <a class="brand" href="../">CSN 投研</a>
       <nav class="nav" aria-label="页面导航">
         <a href="../">首页</a>
-        <a href="../#a-share-tools">A股工具</a>
-        <a href="../futu-indicators/">富途主副图代码</a>
+        <a href="../#stock-trends">股票</a>
+        <a href="../#market-overview">大盘观察</a>
+        <a href="../#dragon-signals">猎龙者</a>
+        <a href="../code/">代码</a>
         <a href="./" aria-current="page">冰神分享</a>
         <a href="../nav/">投研导航</a>
       </nav>
@@ -47,16 +49,16 @@
     <section class="hero">
       <div class="wrap">
         <div class="eyebrow">Bingshen A-Share Watchlist</div>
-        <h1>冰神 A 股观察池<br>与公式工具</h1>
-        <p>本页把本次图片及文字中涉及的 A 股名单、富途 OpenD 导入文件和《冰神分享》通达信公式包放在同一个入口。名单是观察池，不是买入建议。</p>
+        <h1>冰神 A 股观察池</h1>
+        <p>本页只保留图片及文字中涉及的 A 股名单与代码文件。主图、副图、通达信公式包和导入脚本已统一迁移至“代码”页面。名单是观察池，不是买入建议。</p>
         <div class="metrics">
           <div class="metric"><b>17</b><span>A 股观察标的</span></div>
-          <div class="metric"><b>15</b><span>通达信 TN6 公式包</span></div>
+          <div class="metric"><b>1</b><span>独立代码中心</span></div>
           <div class="metric"><b>0</b><span>自动交易或下单</span></div>
         </div>
         <div class="actions">
           <a class="btn primary" href="#watchlist">查看 A 股名单</a>
-          <a class="btn" href="#formulas">下载公式包</a>
+          <a class="btn" href="../code/">前往代码中心</a>
         </div>
       </div>
     </section>
@@ -95,39 +97,8 @@
         <div class="download-row">
           <a class="btn primary" href="downloads/冰神A股名单_富途格式.csv" download>下载 CSV 名单</a>
           <a class="btn" href="downloads/富途OpenD代码_每行一个.txt" download>下载富途代码 TXT</a>
-          <a class="btn" href="downloads/一键加入富途自选组.py" download>下载导入脚本</a>
+          <a class="btn" href="../code/">导入脚本与指标代码</a>
         </div>
-        <div class="steps">
-          <div class="step"><b>01 · 启动 OpenD</b>先登录富途 OpenD，并在富途客户端创建目标自选分组，例如“冰神”。</div>
-          <div class="step"><b>02 · 先预览</b>运行脚本但不传 <code>--apply</code>，核对证券名称、已有标的和待加入标的。</div>
-          <div class="step"><b>03 · 确认写入</b>确认无误后再传写入参数；脚本仅修改自选分组，不下单、不创建提醒。</div>
-        </div>
-        <div class="boundary"><strong>脚本命令：</strong><br><code>.venv/bin/python 一键加入富途自选组.py --group 冰神</code><br><code>.venv/bin/python 一键加入富途自选组.py --group 冰神 --apply --confirm ADD_17_A_SHARES</code></div>
-      </div>
-    </section>
-
-    <section class="section alt" id="formulas">
-      <div class="wrap">
-        <div class="head">
-          <h2>《冰神分享》公式包</h2>
-          <p>15 个通达信 TN6 原始公式包。TN6 不能直接导入富途；分类仅依据文件名，不代表内部公式已审计。</p>
-        </div>
-        <div class="groups">
-          <div class="group"><h3>主图与结构参考</h3><div class="links">
-            <a href="../futu-indicators/bingshen/赞爹主图.tn6" download>赞爹主图</a><a href="../futu-indicators/bingshen/六龙连山原版.tn6" download>六龙连山原版</a><a href="../futu-indicators/bingshen/六龙连山赞爹.tn6" download>六龙连山赞爹</a><a href="../futu-indicators/bingshen/生命诅咒线.tn6" download>生命诅咒线</a>
-          </div></div>
-          <div class="group"><h3>凛冬买点系列</h3><div class="links">
-            <a href="../futu-indicators/bingshen/凛冬买1.tn6" download>凛冬买1</a><a href="../futu-indicators/bingshen/凛冬买1宽松版.tn6" download>买1宽松版</a><a href="../futu-indicators/bingshen/凛冬买2.tn6" download>凛冬买2</a><a href="../futu-indicators/bingshen/凛冬买3严格版.tn6" download>买3严格版</a><a href="../futu-indicators/bingshen/凛冬买3宽松版.tn6" download>买3宽松版</a>
-          </div></div>
-          <div class="group"><h3>选股与突破候选</h3><div class="links">
-            <a href="../futu-indicators/bingshen/骑牛90.tn6" download>骑牛90</a><a href="../futu-indicators/bingshen/骑牛BBI水上选股.tn6" download>骑牛BBI水上选股</a><a href="../futu-indicators/bingshen/突破诅咒线选.tn6" download>突破诅咒线选</a>
-          </div></div>
-          <div class="group"><h3>量价与辅助观察</h3><div class="links">
-            <a href="../futu-indicators/bingshen/骑牛成交量.tn6" download>骑牛成交量</a><a href="../futu-indicators/bingshen/紫色分金定穴.tn6" download>紫色分金定穴</a><a href="../futu-indicators/bingshen/国漫黄金.tn6" download>国漫黄金</a>
-          </div></div>
-        </div>
-        <div class="download-row"><a class="btn" href="../futu-indicators/bingshen/冰神分享_使用说明.txt" download>下载通达信使用说明</a></div>
-        <div class="boundary"><strong>使用边界：</strong>先趋势、后触发、再量价复核；优先等待日线收盘确认。公式信号不等于交易指令，也未验证无未来函数或具有稳定胜率。</div>
       </div>
     </section>
   </main>

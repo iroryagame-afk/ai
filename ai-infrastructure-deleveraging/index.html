@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="截至2026年8月21日收市的AI基础设施去杠杆、SOXX产业层级与二次确认监控框架。">
+  <meta property="og:title" content="AI基础设施去杠杆：从SOXX到光通信、设备与算力尾部">
+  <meta property="og:description" content="按AI基础设施板块简洁观察系统性风险、核心资产和尾部出清。">
+  <title>AI基础设施去杠杆与二次确认｜CSN投研</title>
+  <style>
+    :root{color-scheme:light;--paper:#f5f1e8;--panel:#fffdf8;--ink:#202632;--ink2:#4e5562;--muted:#747a86;--line:#ddd5c6;--navy:#173a5e;--red:#ad422f;--gold:#94702b;--green:#35694f;--orange:#a45a2a;--blue:#396b9c;--shadow:0 18px 48px rgba(45,38,28,.09);--serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;--mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;overflow-x:hidden;color:var(--ink);background:var(--paper);font-family:var(--sans);line-height:1.72}main,article{min-width:0}a{color:var(--navy);text-underline-offset:3px}button{font:inherit}
+    .csn-topnav{position:sticky;top:0;z-index:100;overflow-x:clip;background:rgba(255,253,248,.92);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid var(--line)}.csn-topnav-inner{width:min(1480px,100%);min-height:58px;margin:0 auto;padding:0 20px;display:flex;align-items:stretch;gap:18px}.csn-brand{display:flex;align-items:center;gap:10px;flex:none;color:var(--ink);text-decoration:none}.csn-brand-seal{width:30px;height:30px;border-radius:7px;display:grid;place-items:center;flex:none;color:#fff;background:var(--red);font:700 14px var(--serif)}.csn-brand-name{display:block;white-space:nowrap;font:700 17px var(--serif)}.csn-brand-sub{display:block;margin-top:1px;color:var(--muted);font:600 10px/1 var(--mono);letter-spacing:.22em;text-transform:uppercase}.csn-menu{display:flex;align-items:stretch;min-width:0;margin-left:auto}.csn-item{position:relative;display:flex;align-items:stretch}.csn-item>a,.csn-item>button{display:flex;align-items:center;gap:6px;padding:0 16px;border:0;border-bottom:2px solid transparent;background:none;cursor:pointer;color:var(--ink2);text-decoration:none;font:600 14px/1 var(--sans)}.csn-item.active>a{color:var(--red);border-bottom-color:var(--red)}.csn-caret{color:var(--muted);font-size:9px;transition:transform .18s ease}.csn-drop{position:absolute;top:calc(100% + 1px);left:50%;width:250px;min-width:250px;z-index:110;transform:translate(-50%,6px);padding:8px;background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .16s ease,transform .16s ease,visibility .16s}.csn-item:hover .csn-drop,.csn-item:focus-within .csn-drop,.csn-item[data-open="true"] .csn-drop{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}.csn-item:hover .csn-caret,.csn-item:focus-within .csn-caret,.csn-item[data-open="true"] .csn-caret{transform:rotate(180deg)}.csn-drop a{display:block;min-height:58px;padding:9px 11px;border-radius:8px;color:var(--ink);text-decoration:none}.csn-drop a:hover{background:#f8f4eb}.csn-drop a b{display:block;font-size:13.5px}.csn-drop a small{display:block;margin-top:2px;color:var(--muted);font-size:11.5px;line-height:1.45;white-space:nowrap}
+    .shell{width:min(1480px,calc(100% - 32px));margin:0 auto;padding:34px 0 70px}.hero{position:relative;overflow:hidden;padding:48px 50px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,#fffdf9 0%,#f3ecdf 100%);box-shadow:var(--shadow)}.hero:after{content:"SOXX";position:absolute;right:10px;bottom:-36px;font:900 132px/1 var(--serif);color:rgba(23,58,94,.05);letter-spacing:-.08em}.eyebrow{position:relative;z-index:1;color:var(--red);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.hero h1{position:relative;z-index:1;max-width:1050px;margin:10px 0 16px;font:800 clamp(34px,5vw,62px)/1.12 var(--serif);letter-spacing:-.045em}.deck{position:relative;z-index:1;max-width:980px;margin:0;color:var(--ink2);font-size:18px}.meta{position:relative;z-index:1;display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;color:var(--muted);font-size:12px}.pill{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.72)}
+    .verdict{display:grid;grid-template-columns:1.38fr .62fr;gap:18px;margin:18px 0}.card{border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:0 8px 28px rgba(45,38,28,.055)}.call{padding:26px 28px;border-left:5px solid var(--gold)}.call h2{margin:0 0 8px;font:700 24px var(--serif)}.call p{margin:0;color:var(--ink2)}.rating{padding:22px 24px;display:flex;flex-direction:column;justify-content:center;background:var(--navy);color:#fff}.rating .label{font-size:12px;opacity:.72;letter-spacing:.12em}.rating strong{margin:5px 0;font:700 28px var(--serif)}.rating span{font-size:13px;opacity:.82}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 32px}.stat{padding:18px;border:1px solid var(--line);border-radius:15px;background:rgba(255,253,248,.82)}.stat b{display:block;color:var(--navy);font:800 25px var(--serif)}.stat span{display:block;margin-top:3px;color:var(--muted);font-size:12px}.toc{margin:0 0 30px;padding:19px 24px}.toc strong{font-family:var(--serif)}.toc nav{display:flex;gap:8px 18px;flex-wrap:wrap;margin-top:8px}.toc a{font-size:13px;text-decoration:none;border-bottom:1px solid rgba(23,58,94,.25)}
+    article>section{min-width:0;scroll-margin-top:76px;margin:0 0 48px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:15px;border-bottom:1px solid var(--line);padding-bottom:10px}.section-head h2{margin:0;font:800 30px/1.25 var(--serif)}.section-no{color:var(--red);font:700 12px var(--mono)}.lead{font-size:17px;color:var(--ink2);max-width:1000px}.note{margin:14px 0;padding:15px 18px;border-left:4px solid var(--gold);background:#fff9e9;color:var(--ink2);font-size:13px}.table-wrap{max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--panel)}table{width:100%;min-width:1100px;border-collapse:collapse;font-size:14px}th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{color:#fff;background:var(--navy);font-size:12px;letter-spacing:.04em}tr:last-child td{border-bottom:0}tbody tr:hover{background:#fbf7ef}.num{white-space:nowrap;font-family:var(--mono);font-size:13px}.good{color:var(--green);font-weight:800}.warn{color:var(--orange);font-weight:800}.hot{color:var(--red);font-weight:800}.muted{color:var(--muted);font-size:12px}.tag{display:inline-block;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:800}.inside{background:#e6edf5;color:var(--navy)}.outside{background:#f1ece1;color:var(--gold)}.verified{background:#e7f1eb;color:var(--green)}.conditional{background:#fff0da;color:var(--orange)}.risk{background:#f7e7e4;color:var(--red)}.sticky-table-head{position:fixed;top:58px;z-index:90;display:none;overflow:hidden;pointer-events:none;border-radius:0 0 10px 10px;box-shadow:0 5px 14px rgba(32,38,50,.18)}.sticky-table-head table{width:auto;min-width:0;margin:0;table-layout:fixed}.sticky-table-head th{box-sizing:border-box;white-space:nowrap}
+    .logic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.logic-card{padding:20px}.logic-card b{display:block;color:var(--red);font:800 12px var(--mono)}.logic-card h3{margin:5px 0 8px;font:700 19px var(--serif)}.logic-card p{margin:0;color:var(--ink2);font-size:13px}.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}.node{position:relative;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.node:not(:last-child):after{content:"→";position:absolute;right:-13px;top:50%;z-index:2;transform:translateY(-50%);width:25px;height:25px;display:grid;place-items:center;border-radius:50%;color:#fff;background:var(--red);font-weight:800}.node b{display:block;color:var(--red);font:700 12px var(--mono)}.node strong{display:block;margin:5px 0;font-family:var(--serif)}.node p{margin:0;color:var(--ink2);font-size:13px}.branch-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.branch{padding:22px;border-top:4px solid var(--gold)}.branch.pos{border-top-color:var(--green)}.branch.neg{border-top-color:var(--red)}.branch h3{margin:0 0 10px;font:700 19px var(--serif)}.branch ul{margin:0;padding-left:20px}.branch li+li{margin-top:7px}.sources{padding:25px 28px}.sources ol{margin:12px 0 0;padding-left:22px}.sources li+li{margin-top:8px}.sources li{color:var(--ink2);font-size:13px}.footer{padding:24px 0 0;text-align:center;color:var(--muted);font-size:12px}
+    @media(max-width:1000px){.logic,.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.node:nth-child(2):after{display:none}.branch-grid{grid-template-columns:1fr}}
+    @media(max-width:850px){.hero{padding:34px 26px}.verdict{grid-template-columns:minmax(0,1fr)}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head h2{font-size:25px}.csn-topnav-inner{padding:0 12px;gap:8px}.csn-brand-sub{display:none}.csn-brand-name{font-size:15px}.csn-menu{min-width:0;overflow-x:auto;overflow-y:hidden}.csn-item>a,.csn-item>button{padding:0 10px;font-size:13px}.csn-topnav .csn-drop{position:fixed;top:59px;right:12px;left:12px;width:auto;min-width:0;max-height:calc(100vh - 72px);overflow-y:auto;transform:translateY(6px)}.csn-topnav .csn-item:hover .csn-drop,.csn-topnav .csn-item:focus-within .csn-drop,.csn-topnav .csn-item[data-open="true"] .csn-drop{transform:none}}
+    @media(max-width:520px){.csn-topnav-inner{width:100%;max-width:100vw;overflow:hidden}.csn-brand{min-width:0}.csn-menu{flex:1;max-width:100%;overflow-x:auto}.shell{width:calc(100% - 18px);max-width:calc(100% - 18px);padding-top:16px;overflow:hidden}.hero,.card,.verdict,.stats,.toc,article>section{width:100%;max-width:100%;min-width:0}.hero{padding:27px 20px;border-radius:17px}.hero h1{max-width:100%;font-size:31px;white-space:normal;overflow-wrap:anywhere;word-break:break-all}.deck,.call p{max-width:100%;overflow-wrap:anywhere;word-break:break-word}.deck{font-size:15px}.call{padding:21px 19px}.stats,.logic,.flow{grid-template-columns:1fr}.stat{min-width:0;padding:14px 12px}.stat b{font-size:21px}.node:after{display:none!important}.sources,.branch{padding:18px}}
+.index-chart-card{overflow:hidden;padding:18px 20px 14px}.index-svg{display:block;width:100%;height:auto}.chart-summary{display:flex;justify-content:space-between;gap:20px;margin-top:8px;padding-top:12px;border-top:1px solid var(--line);font-size:13px}.chart-summary span{max-width:760px;color:var(--muted);text-align:right}@media(max-width:700px){.index-chart-card{padding:10px 8px}.chart-summary{display:block}.chart-summary span{display:block;margin-top:6px;text-align:left}.index-svg{min-width:720px}.index-chart-card{overflow-x:auto}}
+
+    /* table-controls:start */
+    .table-controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 10px;padding:10px;border:1px solid var(--line);border-radius:12px;background:rgba(255,253,248,.94)}
+    .table-controls input,.table-controls select,.table-controls button{min-height:38px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);font:600 13px/1.2 var(--sans);outline:none}
+    .table-controls input,.table-controls select{padding:8px 10px}.table-controls input{flex:1 1 220px;min-width:180px}.table-controls select{max-width:220px}
+    .table-controls button{padding:8px 12px;cursor:pointer}.table-controls button:hover{border-color:var(--gold);background:#fff9e9}.table-controls input:focus,.table-controls select:focus,.table-controls button:focus-visible{border-color:var(--gold);box-shadow:0 0 0 3px rgba(148,112,43,.14)}
+    .table-count{margin-left:auto;white-space:nowrap;color:var(--muted);font:700 12px/1.2 var(--mono)}
+    @media(max-width:700px){.table-controls{display:grid;grid-template-columns:1fr 1fr}.table-controls input{grid-column:1/-1;width:100%;min-width:0}.table-controls select{width:100%;max-width:none}.table-controls button{width:100%}.table-count{grid-column:1/-1;margin-left:0;text-align:right}}
+    /* table-controls:end */
+
+  </style>
+</head>
+<body>
+  <nav class="csn-topnav" aria-label="全站导航" data-nav-version="ia-20260822"><div class="csn-topnav-inner"><a class="csn-brand" href="../"><span class="csn-brand-seal">研</span><span><span class="csn-brand-name">CSN 投研</span><span class="csn-brand-sub">Research Desk</span></span></a><div class="csn-menu"><div class="csn-item" data-group="stocks"><button type="button" aria-haspopup="true" aria-expanded="false">股票 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="../a-share-software-deleveraging/"><b>A股软件走势总结</b><small>去杠杆 · 二次确认 · 个股分化</small></a><a href="../a-share-hardware-deleveraging/"><b>A股AI硬件走势总结</b><small>算力硬件 · 二次确认 · 个股分化</small></a><a class="current" href="../ai-infrastructure-deleveraging/"><b>AI基础设施走势总结</b><small>计算 · 内存 · 网络 · 电力</small></a><a href="../us-software-deleveraging/"><b>美股软件走势总结</b><small>IGV基准 · 二次确认 · 个股分化</small></a></div></div><div class="csn-item" data-group="a-tools"><button type="button" aria-haspopup="true" aria-expanded="false">A股工具 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="../a-share-t1-focus/"><b>A股 T+1 条件关注</b><small>产业主线 · 多周期 · 次日预案</small></a></div></div><div class="csn-item" data-group="us-tools"><button type="button" aria-haspopup="true" aria-expanded="false">美股工具 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="../rs-thrust/"><b>美股相对强度加速图</b><small>找正在加速的强势股</small></a><a href="../rotation/"><b>美股轮动加速度雷达</b><small>看顶部衰竭与底部修复</small></a><a href="../ai-software-security-shovels/"><b>AI 软件与安全监控台</b><small>固定股票池 · 轮动 · 量价</small></a><a href="../ai-hardware-shovels/"><b>AI 硬件铲子监控台</b><small>SPY基准 · 轮动 · 盘后动作</small></a><a href="../us-skew/"><b>美股期权风险分布图</b><small>保护需求与风险温度</small></a></div></div><div class="csn-item" data-group="market"><button type="button" aria-haspopup="true" aria-expanded="false">大盘观察 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="../us-market/"><b>美股大盘观察</b><small>指数状态 · 风险温度 · 风格轮动</small></a><a href="../macro-fiscal-risk/"><b>财政风险溢价监控</b><small>长端 · 美元 · 股债 · 信用扩散</small></a><a href="../ai-decision/"><b>中韩美市场进度</b><small>回调出清 · 去杠杆 · 技术广度</small></a></div></div><div class="csn-item" data-group="dragon"><button type="button" aria-haspopup="true" aria-expanded="false">猎龙者 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表</b><small>板块ETF · 自选股 · 机会与风险</small></a><a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表</b><small>机会 · 风险警报 · 历史信号</small></a></div></div><div class="csn-item" data-group="code"><a href="../code/" data-key="code">代码</a></div><div class="csn-item" data-group="bingshen"><a href="../bingshen/" data-key="bingshen">冰神分享</a></div><div class="csn-item" data-group="research"><a href="../nav/" data-key="nav">调研</a></div></div></div></nav>
+
+  <main class="shell"><article>
+    <header class="hero">
+      <div class="eyebrow">AI INFRASTRUCTURE · DELEVERAGING MAP</div>
+      <h1>AI基础设施去杠杆与二次确认</h1>
+      <p class="deck">以SOXX为行业基准，按计算与存储、AI网络、光通信、半导体设备、电力与算力交付及尾部资产分组，观察7月底流动性底是否仍然有效。</p>
+      <div class="meta"><span class="pill">行情截止：2026-08-21收市</span><span class="pill">Futu OpenD前复权日线</span><span class="pill">研究核验：2026-08-22</span><span class="pill">条件式监控，不构成投资建议</span></div>
+    </header>
+
+    <div class="verdict">
+      <section class="card call"><h2>结论：不是全面二次触底，而是板块分化</h2><p>7月底流动性底仍有效。计算、内存与部分核心设备较强；AVGO、KLAC、FN及部分矿商偏弱。机械卖压接近尾声，但自然买盘尚未全面接管。</p></section>
+      <aside class="card rating"><span class="label">CURRENT REGIME</span><strong>中性分化</strong><span>系统性底未破 · 核心未共振 · 尾部未出清完</span></aside>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>+12.1%</b><span>SOXX较7月底低点</span></div>
+      <div class="stat"><b>510–520</b><span>SOXX第一观察区</span></div>
+      <div class="stat"><b>80%+</b><span>Citadel已处理原组合综合风险</span></div>
+      <div class="stat"><b>8板块</b><span>从行业基准到尾部资产</span></div>
+    </div>
+
+    <aside class="card toc"><strong>目录</strong><nav><a href="#status">最终状态</a><a href="#index-chart">指数走势</a><a href="#order">观察顺序</a><a href="#snapshot">行情总表</a><a href="#scenarios">情景条件</a><a href="#sources">来源与边界</a></nav></aside>
+
+    <section id="status">
+      <div class="section-head"><h2>截至8月21日的最终状态</h2><span class="section-no">01 / STATUS</span></div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>板块概述</th><th>代表标的</th><th>简洁状态</th></tr></thead>
+        <tbody>
+          <tr><td><b>科技与半导体总水位</b></td><td>QQQ、SOXX</td><td class="warn">市场未破底，SOXX进入关键区</td></tr>
+          <tr><td><b>GPU、内存与存储</b></td><td>NVDA、AMD、MU、SNDK</td><td class="good">核心整体稳定</td></tr>
+          <tr><td><b>ASIC、互连芯片与AI网络</b></td><td>MRVL、AVGO、ANET</td><td class="warn">分化，AVGO偏弱</td></tr>
+          <tr><td><b>光器件与光传输设备</b></td><td>LITE、COHR、CIEN</td><td class="warn">主线未坏，等待确认</td></tr>
+          <tr><td><b>晶圆制造与制程设备</b></td><td>LRCX、AMAT、ASML、KLAC</td><td class="warn">分化，KLAC偏弱</td></tr>
+          <tr><td><b>电力、服务器与算力交付</b></td><td>VRT、ETN、DELL、SMCI、NBIS、CRWV、BE</td><td class="warn">回到支撑，尚未同步破位</td></tr>
+          <tr><td><b>光模块、衬底与材料扩散</b></td><td>AAOI、AXTI、GLW</td><td class="good">高位缩量回撤</td></tr>
+          <tr><td><b>制造服务、矿算力与融资敏感资产</b></td><td>FN、IREN、APLD、RIOT、CORZ、CIFR</td><td class="hot">尾部继续出清</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="index-chart">
+      <div class="section-head"><h2>板块指数走势</h2><span class="section-no">02 / INDEX</span></div>
+      <p class="lead"><b>2026年7月27日收盘统一设为100。</b> 数值越高，代表相对起点修复越充分；这不是价格点位。</p>
+      <div class="card index-chart-card"><svg class="index-svg" viewBox="0 0 1100 390" role="img" aria-label="7月27日起归一化指数走势"><style>.axis{font:12px ui-monospace,monospace;fill:#747a86}.legend{font:700 14px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif;fill:#202632}</style><line x1="68" y1="342.0" x2="1074" y2="342.0" stroke="#ddd5c6" stroke-width="1"/><text x="58" y="346.0" text-anchor="end" class="axis">85.0</text><line x1="68" y1="274.5" x2="1074" y2="274.5" stroke="#ddd5c6" stroke-width="1"/><text x="58" y="278.5" text-anchor="end" class="axis">92.5</text><line x1="68" y1="207.0" x2="1074" y2="207.0" stroke="#ddd5c6" stroke-width="1"/><text x="58" y="211.0" text-anchor="end" class="axis">100.0</text><line x1="68" y1="139.5" x2="1074" y2="139.5" stroke="#ddd5c6" stroke-width="1"/><text x="58" y="143.5" text-anchor="end" class="axis">107.5</text><line x1="68" y1="72.0" x2="1074" y2="72.0" stroke="#ddd5c6" stroke-width="1"/><text x="58" y="76.0" text-anchor="end" class="axis">115.0</text><line x1="68" y1="207.0" x2="1074" y2="207.0" stroke="#94702b" stroke-width="1.5" stroke-dasharray="6 5"/><text x="1072" y="200.0" text-anchor="end" class="axis">基准100</text><polyline points="68.0,207.0 120.9,215.7 173.9,233.9 226.8,205.1 279.8,199.3 332.7,183.3 385.7,151.9 438.6,160.6 491.6,164.1 544.5,153.0 597.5,155.9 650.4,159.1 703.4,152.1 756.3,141.1 809.3,142.4 862.2,144.0 915.2,160.3 968.1,162.2 1021.1,169.0 1074.0,165.7" fill="none" stroke="#173a5e" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><polyline points="68.0,207.0 120.9,250.2 173.9,296.3 226.8,227.4 279.8,226.8 332.7,221.9 385.7,161.7 438.6,181.8 491.6,178.6 544.5,159.9 597.5,184.1 650.4,175.7 703.4,154.0 756.3,146.8 809.3,147.4 862.2,132.2 915.2,180.6 968.1,201.0 1021.1,196.3 1074.0,200.3" fill="none" stroke="#ad422f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="68" cy="30" r="5" fill="#173a5e"/><text x="80" y="35" class="legend">QQQ市场基准 104.6</text><circle cx="378" cy="30" r="5" fill="#ad422f"/><text x="390" y="35" class="legend">SOXX硬件代理 100.7</text><text x="68.0" y="372" text-anchor="middle" class="axis">07-27</text><text x="597.5" y="372" text-anchor="middle" class="axis">08-10</text><text x="1074.0" y="372" text-anchor="middle" class="axis">08-21</text></svg><div class="chart-summary"><b>QQQ市场基准 104.6 · SOXX硬件代理 100.7</b><span>SOXX是美股半导体硬件代理，不覆盖电力、服务器、光模块与矿算力全部环节。</span></div></div>
+    </section>
+
+    <section id="order">
+      <div class="section-head"><h2>观察顺序</h2><span class="section-no">03 / ORDER</span></div>
+      <p class="lead"><b>QQQ/SOXX → 计算与内存 → ASIC与AI网络 → 光通信 → 半导体设备 → 电力与算力交付 → 高弹性 → 尾部。</b>先看行业，再看核心，最后看尾部。</p>
+    </section>
+
+    <section id="snapshot">
+      <div class="section-head"><h2>OpenD行情与结构总表</h2><span class="section-no">04 / DATA</span></div>
+      <p class="muted">前复权日线；“较前低”以2026年7月27日至8月3日期间低点为基准；“较高点”以该低点之后至8月21日的盘中高点为基准。价格为最新完整收盘，不是实时盘中价。</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>板块</th><th>标的</th><th>8/21收盘</th><th>较7月底低点</th><th>较8月反弹高点</th><th>第一观察区</th><th>简洁状态</th></tr></thead>
+        <tbody>
+          <tr><td>科技/半导体</td><td><b>QQQ</b></td><td class="num">713.44</td><td class="good">+7.9%</td><td>-2.9%</td><td class="num">698–705</td><td>大盘稳定</td></tr>
+          <tr><td>半导体</td><td><b>SOXX</b></td><td class="num">520.05</td><td class="good">+12.1%</td><td>-8.1%</td><td class="num">510–520</td><td class="warn">行业关键区</td></tr>
+          <tr><td>AI计算</td><td><b>NVDA</b></td><td class="num">214.72</td><td class="good">+13.0%</td><td>-5.8%</td><td class="num">204–209</td><td class="good">稳定</td></tr>
+          <tr><td>AI计算</td><td><b>AMD</b></td><td class="num">473.25</td><td class="good">+11.6%</td><td>-10.7%</td><td class="num">464–477</td><td class="warn">确认区</td></tr>
+          <tr><td>内存</td><td><b>MU</b></td><td class="num">966.78</td><td class="good">+31.0%</td><td>-6.7%</td><td class="num">880–900</td><td class="good">核心最稳</td></tr>
+          <tr><td>存储</td><td><b>SNDK</b></td><td class="num">1596.08</td><td class="good">+59.9%</td><td>-12.7%</td><td class="num">1410–1460</td><td class="good">强势回撤</td></tr>
+          <tr><td>定制计算/互连</td><td><b>MRVL</b></td><td class="num">237.04</td><td class="good">+45.5%</td><td>-6.1%</td><td class="num">228–233</td><td class="warn">放量冲高回落</td></tr>
+          <tr><td>ASIC/网络芯片</td><td><b>AVGO</b></td><td class="num">368.45</td><td class="hot">-0.3%</td><td>-14.9%</td><td class="num">需收复369–375</td><td class="hot">略破前低</td></tr>
+          <tr><td>AI网络设备</td><td><b>ANET</b></td><td class="num">188.65</td><td class="good">+20.3%</td><td>-12.2%</td><td class="num">183–186</td><td class="warn">止跌确认</td></tr>
+          <tr><td>光器件</td><td><b>LITE</b></td><td class="num">866.71</td><td class="good">+45.7%</td><td>-13.3%</td><td class="num">795–820</td><td class="good">光学最强</td></tr>
+          <tr><td>光器件</td><td><b>COHR</b></td><td class="num">289.52</td><td class="good">+31.2%</td><td>-26.0%</td><td class="num">283–290</td><td class="warn">关键确认</td></tr>
+          <tr><td>光传输系统</td><td><b>CIEN</b></td><td class="num">395.79</td><td class="good">+22.4%</td><td>-14.5%</td><td class="num">377–393</td><td class="warn">支撑测试</td></tr>
+          <tr><td>刻蚀/沉积</td><td><b>LRCX</b></td><td class="num">314.00</td><td class="good">+25.3%</td><td>-9.1%</td><td class="num">287–298</td><td class="good">设备最强</td></tr>
+          <tr><td>材料/沉积</td><td><b>AMAT</b></td><td class="num">492.32</td><td class="good">+13.0%</td><td>-12.6%</td><td class="num">484–500</td><td class="warn">确认区</td></tr>
+          <tr><td>光刻设备</td><td><b>ASML</b></td><td class="num">1763.76</td><td class="good">+15.2%</td><td>-7.0%</td><td class="num">1670–1715</td><td class="good">相对稳定</td></tr>
+          <tr><td>检测/量测</td><td><b>KLAC</b></td><td class="num">183.99</td><td class="good">+8.5%</td><td>-14.2%</td><td class="num">需收复187–192</td><td class="hot">设备弱项</td></tr>
+          <tr><td>电力/制冷</td><td><b>VRT</b></td><td class="num">261.95</td><td class="good">+18.6%</td><td>-12.8%</td><td class="num">251–261</td><td class="warn">支撑确认</td></tr>
+          <tr><td>电力设备</td><td><b>ETN</b></td><td class="num">419.20</td><td class="good">+17.3%</td><td>-12.3%</td><td class="num">403–418</td><td class="warn">接近支撑</td></tr>
+          <tr><td>服务器</td><td><b>DELL</b></td><td class="num">442.08</td><td class="good">+23.2%</td><td>-14.0%</td><td class="num">418–436</td><td>正常回撤</td></tr>
+          <tr><td>服务器</td><td><b>SMCI</b></td><td class="num">37.24</td><td class="good">+45.0%</td><td>-12.0%</td><td class="num">32–34</td><td>高弹性稳定</td></tr>
+          <tr><td>AI云算力</td><td><b>NBIS</b></td><td class="num">219.13</td><td class="good">+50.3%</td><td>-22.0%</td><td class="num">210–215</td><td class="warn">二次确认</td></tr>
+          <tr><td>AI云算力</td><td><b>CRWV</b></td><td class="num">87.85</td><td class="good">+45.1%</td><td>-25.2%</td><td class="num">82–89</td><td class="warn">二次确认</td></tr>
+          <tr><td>AI能源</td><td><b>BE</b></td><td class="num">201.45</td><td class="good">+28.0%</td><td>-20.5%</td><td class="num">194–202</td><td class="warn">关键支撑</td></tr>
+          <tr><td>光模块</td><td><b>AAOI</b></td><td class="num">124.82</td><td class="good">+64.2%</td><td>-22.5%</td><td class="num">118–122</td><td class="good">缩量回撤</td></tr>
+          <tr><td>InP衬底</td><td><b>AXTI</b></td><td class="num">70.74</td><td class="good">+92.6%</td><td>-27.7%</td><td class="num">67–70</td><td class="good">缩量回撤</td></tr>
+          <tr><td>光纤材料</td><td><b>GLW</b></td><td class="num">149.84</td><td class="good">+30.9%</td><td>-15.3%</td><td class="num">145–150</td><td class="warn">接近支撑</td></tr>
+          <tr><td>制造服务</td><td><b>FN</b></td><td class="num">436.67</td><td class="good">+8.2%</td><td>-27.6%</td><td class="num">403–425</td><td class="hot">放量探底</td></tr>
+          <tr><td>算力/矿商</td><td><b>IREN</b></td><td class="num">41.88</td><td class="good">+44.8%</td><td>-14.9%</td><td class="num">39–41</td><td>尾部相对强</td></tr>
+          <tr><td>数据中心</td><td><b>APLD</b></td><td class="num">27.21</td><td class="good">+18.7%</td><td>-17.6%</td><td class="num">26.8–28</td><td class="warn">二次探底</td></tr>
+          <tr><td>矿商</td><td><b>RIOT</b></td><td class="num">19.83</td><td class="good">+9.4%</td><td>-16.8%</td><td class="num">18.1–19</td><td class="warn">接近前低</td></tr>
+          <tr><td>矿商/HPC</td><td><b>CORZ</b></td><td class="num">17.81</td><td class="hot">-0.6%</td><td>-24.5%</td><td class="num">收复17.9–18.2</td><td class="hot">轻微破底</td></tr>
+          <tr><td>矿商/HPC</td><td><b>CIFR</b></td><td class="num">15.77</td><td class="hot">-9.6%</td><td>-37.5%</td><td class="num">收复17.4–17.8</td><td class="hot">明确破底</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="scenarios">
+      <div class="section-head"><h2>三种后续路径</h2><span class="section-no">05 / SCENARIO</span></div>
+      <div class="branch-grid">
+        <div class="card branch pos"><h3>偏积极：二次确认完成</h3><ul><li>SOXX守住510–520；</li><li>NVDA、MU、SNDK不补跌；</li><li>MRVL守住228，AVGO收复375；</li><li>COHR、AMAT、VRT在支撑区止跌；</li><li>CORZ、CIFR停止创新低。</li></ul></div>
+        <div class="card branch"><h3>中性：核心稳定，尾部继续出清</h3><ul><li>计算、内存和LITE保持强势；</li><li>AVGO、KLAC、FN和矿商偏弱；</li><li>SOXX横盘或弱于QQQ；</li><li>资金只保留确定性更高的AI基础设施资产。</li></ul></div>
+        <div class="card branch neg"><h3>偏空：第二轮系统性去杠杆</h3><ul><li>SOXX放量跌破500；</li><li>NVDA跌破204、MU跌破850；</li><li>MRVL跌破211、LITE跌破795；</li><li>半导体设备与电力设备同步补跌；</li><li>风险从尾部扩散到核心资产。</li></ul></div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="section-head"><h2>来源、口径与边界</h2><span class="section-no">06 / SOURCE</span></div>
+      <div class="card sources">
+        <p><span class="tag verified">已核验</span> 行情来自本机Futu OpenD，前复权日线，最新完整交易日为2026年8月21日；页面生成核验日为2026年8月22日。</p>
+        <p><span class="tag conditional">条件式</span> 观察区主要由7月底低点、8月反弹高点、50%与61.8%回撤及近期价格密集区综合推导，用于观察、触发、确认和失效，不代表确定买点。</p>
+        <p><span class="tag risk">边界</span> 板块分类仅用于监控；SALP转让组合的完整逐股清单未公开，不能把全部标的视为Citadel直接分销仓位。</p>
+        <ol>
+          <li><a href="https://au.marketscreener.com/news/ken-griffin-s-citadel-sheds-over-4-billion-of-situational-awareness-bets-ce7858dadd8cf425" target="_blank" rel="noopener">Reuters转引：Citadel已通过近100笔大宗交易处理原组合80%以上综合风险</a></li>
+          <li><a href="https://www.axios.com/2026/07/30/ai-hedge-fund-situational-awareness-citadel" target="_blank" rel="noopener">Axios：SALP于7月30日前后将公开股票组合转让给Citadel</a></li>
+          <li><a href="https://www.marvell.com/solutions/data-center.html" target="_blank" rel="noopener">Marvell官方：定制计算、交换、铜与光互连产品边界</a></li>
+          <li><a href="https://www.arista.com/en/company/news/press-release/19493-pr-20240605" target="_blank" rel="noopener">Arista官方：Etherlink AI网络平台</a></li>
+          <li><a href="https://www.appliedmaterials.com/us/en/the-ai-era.html" target="_blank" rel="noopener">Applied Materials官方：AI芯片、DRAM与先进封装设备逻辑</a></li>
+        </ol>
+      </div>
+      <p class="footer">本页面用于研究框架与风险监控，不构成任何投资建议。价格、估值与公司信息可能变化，后续更新必须重新连接OpenD并核验公司公告。</p>
+    </section>
+  </article></main>
+  <script>
+    (()=>{const items=[...document.querySelectorAll('.csn-item>button')];items.forEach(btn=>{btn.addEventListener('click',e=>{e.stopPropagation();const item=btn.parentElement;const open=item.dataset.open==='true';document.querySelectorAll('.csn-item[data-open="true"]').forEach(x=>{x.dataset.open='false';x.querySelector('button')?.setAttribute('aria-expanded','false')});if(!open){item.dataset.open='true';btn.setAttribute('aria-expanded','true')}})});document.addEventListener('click',()=>document.querySelectorAll('.csn-item[data-open="true"]').forEach(x=>{x.dataset.open='false';x.querySelector('button')?.setAttribute('aria-expanded','false')}));document.addEventListener('keydown',e=>{if(e.key==='Escape')document.dispatchEvent(new MouseEvent('click'))})})();
+    (()=>{const nav=document.querySelector('.csn-topnav');document.querySelectorAll('.table-wrap').forEach(wrap=>{const source=wrap.querySelector('table'),head=source?.querySelector('thead');if(!source||!head)return;const fixed=document.createElement('div'),clone=document.createElement('table');fixed.className='sticky-table-head';fixed.setAttribute('aria-hidden','true');clone.append(head.cloneNode(true));fixed.append(clone);document.body.append(fixed);const sync=()=>{const tableRect=source.getBoundingClientRect(),wrapRect=wrap.getBoundingClientRect(),headHeight=head.getBoundingClientRect().height,top=Math.max(0,Math.min(58,nav?.getBoundingClientRect().bottom||0)),show=tableRect.top+headHeight<=top&&tableRect.bottom>top+headHeight;fixed.style.display=show?'block':'none';if(!show)return;fixed.style.top=`${top}px`;fixed.style.left=`${wrapRect.left}px`;fixed.style.width=`${wrapRect.width}px`;clone.style.width=`${tableRect.width}px`;clone.style.transform=`translateX(${-wrap.scrollLeft}px)`;const src=[...head.querySelectorAll('th')],dst=[...clone.querySelectorAll('th')];src.forEach((cell,i)=>{const width=cell.getBoundingClientRect().width;dst[i].style.width=`${width}px`;dst[i].style.minWidth=`${width}px`;dst[i].style.maxWidth=`${width}px`})};wrap.addEventListener('scroll',sync,{passive:true});window.addEventListener('scroll',sync,{passive:true});window.addEventListener('resize',sync);sync()})})();
+  </script>
+
+  <!-- table-controls:start -->
+  <script>
+    (()=>{
+      const clean=value=>value.replace(/\s+/g,' ').trim();
+      const numeric=value=>{
+        const text=clean(value).replace(/,/g,'').replace(/^[+]/,'');
+        const match=text.match(/^-?\d+(?:\.\d+)?/);
+        return match?Number(match[0]):null;
+      };
+      document.querySelectorAll('.table-wrap').forEach((wrap,tableIndex)=>{
+        const table=wrap.querySelector('table'),tbody=table?.tBodies[0],headRow=table?.tHead?.rows[0];
+        if(!table||!tbody||!headRow||wrap.dataset.controlsReady==='true')return;
+        wrap.dataset.controlsReady='true';
+        const rows=[...tbody.rows].map((row,index)=>({row,index}));
+        const headers=[...headRow.cells].map(cell=>clean(cell.textContent));
+        const controls=document.createElement('div');
+        controls.className='table-controls';
+        controls.setAttribute('role','group');
+        controls.setAttribute('aria-label',`第${tableIndex+1}张表格的搜索、筛选和排序`);
+
+        const search=document.createElement('input');
+        search.type='search';search.placeholder='搜索代码、公司、板块';search.setAttribute('aria-label','搜索表格');
+        const makeSelect=(label,values)=>{
+          const select=document.createElement('select');select.setAttribute('aria-label',label);
+          select.append(new Option(label,''));
+          values.forEach(value=>select.append(new Option(value,value)));
+          return select;
+        };
+        const unique=index=>[...new Set(rows.map(({row})=>clean(row.cells[index]?.textContent||'')).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN',{numeric:true}));
+        const group=makeSelect(`全部${headers[0]||'板块'}`,unique(0));
+        const status=makeSelect(`全部${headers.at(-1)||'状态'}`,unique(headers.length-1));
+        const sort=document.createElement('select');sort.setAttribute('aria-label','选择排序列');sort.append(new Option('默认排序',''));
+        headers.forEach((label,index)=>sort.append(new Option(`按${label}`,String(index))));
+        const direction=document.createElement('button');direction.type='button';direction.textContent='升序 ↑';direction.setAttribute('aria-label','切换排序方向');
+        const reset=document.createElement('button');reset.type='button';reset.textContent='重置';
+        const count=document.createElement('span');count.className='table-count';count.setAttribute('aria-live','polite');
+        controls.append(search,group,status,sort,direction,reset,count);
+        wrap.before(controls);
+
+        let ascending=true;
+        const apply=()=>{
+          const query=clean(search.value).toLocaleLowerCase('zh-CN'),groupValue=group.value,statusValue=status.value;
+          const sortIndex=sort.value===''?null:Number(sort.value);
+          const ordered=[...rows].sort((a,b)=>{
+            if(sortIndex===null)return a.index-b.index;
+            const left=clean(a.row.cells[sortIndex]?.textContent||''),right=clean(b.row.cells[sortIndex]?.textContent||'');
+            const leftNumber=numeric(left),rightNumber=numeric(right);
+            const result=leftNumber!==null&&rightNumber!==null?leftNumber-rightNumber:left.localeCompare(right,'zh-CN',{numeric:true,sensitivity:'base'});
+            return (ascending?result:-result)||(a.index-b.index);
+          });
+          ordered.forEach(({row})=>tbody.append(row));
+          let visible=0;
+          ordered.forEach(({row})=>{
+            const fullText=clean(row.textContent).toLocaleLowerCase('zh-CN');
+            const matches=(!query||fullText.includes(query))&&(!groupValue||clean(row.cells[0]?.textContent||'')===groupValue)&&(!statusValue||clean(row.cells[headers.length-1]?.textContent||'')===statusValue);
+            row.hidden=!matches;if(matches)visible+=1;
+          });
+          count.textContent=`显示 ${visible} / ${rows.length}`;
+          window.dispatchEvent(new Event('resize'));
+        };
+        search.addEventListener('input',apply);group.addEventListener('change',apply);status.addEventListener('change',apply);sort.addEventListener('change',apply);
+        direction.addEventListener('click',()=>{ascending=!ascending;direction.textContent=ascending?'升序 ↑':'降序 ↓';apply()});
+        reset.addEventListener('click',()=>{search.value='';group.value='';status.value='';sort.value='';ascending=true;direction.textContent='升序 ↑';apply()});
+        apply();
+      });
+    })();
+  </script>
+  <!-- table-controls:end -->
+
+</body>
+</html>
