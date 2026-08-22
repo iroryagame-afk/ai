@@ -89,6 +89,7 @@ def nav(relative: str) -> str:
         ("macro", "宏观", [
             ("us-market/", "大盘观察", "指数状态 · 风险温度 · 风格轮动"),
             ("macro-fiscal-risk/", "财政风险溢价监控", "长端 · 美元 · 股债 · 信用扩散"),
+            ("us-market/x-consensus/", "全球注意力雷达", "中文X · 多语种长文 · Reddit · 作者原图"),
         ]),
         ("a-tools", "A股", [
             ("a-share-t1-focus/", "A股AI产业链关注图谱", "产业环节 · 公司映射 · 证据分层"),

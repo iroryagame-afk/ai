@@ -36,7 +36,15 @@ class SiteNavigationTests(unittest.TestCase):
         macro = re.search(r'data-group="macro".*?</div></div>', sample, re.S).group(0)
         self.assertIn('href="./us-market/"', macro)
         self.assertIn('href="./macro-fiscal-risk/"', macro)
+        self.assertIn('href="./us-market/x-consensus/"', macro)
+        self.assertIn("全球注意力雷达", macro)
         self.assertNotIn("政策导航", macro)
+
+    def test_market_page_no_longer_embeds_attention_radar(self):
+        text = (ROOT / "us-market/index.html").read_text(encoding="utf-8")
+        body = text.split("</nav>", 1)[1]
+        self.assertNotIn("全球股票注意力雷达", body)
+        self.assertNotIn('href="./x-consensus/"', body)
 
     def test_picker_owns_bingshen_and_no_top_level_bingshen(self):
         sample = SITE_NAV.nav("index.html")
