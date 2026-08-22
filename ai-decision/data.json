@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T12:43:01.467Z",
+  "generatedAt": "2026-08-22T13:32:37.583Z",
   "stage": "趋势确认期",
   "stageNote": "风险指标已明显退潮，等待价格延续确认",
   "markets": {
@@ -32,15 +32,15 @@
       }
     },
     "us": {
-      "asOf": "2026-08-07",
-      "score": 14,
+      "asOf": "2026-08-21",
+      "score": 11,
       "label": "技术中性偏强",
       "valid": 16,
-      "aboveMa20Pct": 81.3,
+      "aboveMa20Pct": 75,
       "weak": 0,
       "strong": 0,
-      "spy1dPct": 0.61,
-      "qqq1dPct": 1.17,
+      "spy1dPct": 0.41,
+      "qqq1dPct": 0.35,
       "coverage": {
         "valid": 22,
         "total": 22,
@@ -92,12 +92,12 @@
       "fastEtaTradingDays": 0
     },
     "us": {
-      "asOf": "Jun-26",
-      "currentUsdBn": 1502.072,
-      "previousUsdBn": 1415.557,
-      "momPct": 6.1,
+      "asOf": "Jul-26",
+      "currentUsdBn": 1417.225,
+      "previousUsdBn": 1502.072,
+      "momPct": -5.6,
       "recentPeakUsdBn": 1502.072,
-      "reductionFromRecentPeakPct": 0,
+      "reductionFromRecentPeakPct": 5.6,
       "officialProgressPct": null,
       "source": "https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics",
       "sourceLabel": "FINRA Margin Statistics",
@@ -135,7 +135,7 @@
       "source": "https://www.cnn.com/markets/fear-and-greed",
       "dataSource": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
       "sourceLabel": "CNN Fear & Greed Index",
-      "status": "原始发布方"
+      "status": "原始发布方缓存回读"
     }
   },
   "koreaCapitalFlow": {
@@ -229,13 +229,13 @@
     "status": "stale_reference"
   },
   "breadth": {
-    "aShareAsOf": "2026-08-04",
-    "aShareUpPct": 65.87,
-    "aShareUp": 3642,
-    "aShareDown": 1747,
-    "aShareMainNetYi": 4.05,
+    "aShareAsOf": "2026-08-14",
+    "aShareUpPct": 43.32,
+    "aShareUp": 2400,
+    "aShareDown": 2970,
+    "aShareMainNetYi": 0,
     "aShareUniverse": "东方财富妙想平台聚合市场宽度 + 固定代表ETF组合",
-    "aShareCovered": 5529,
+    "aShareCovered": 5540,
     "crosscheck": {}
   }
 }
