@@ -74,9 +74,9 @@ def nav(relative: str) -> str:
             '<div class="csn-item" data-group="picker"><button type="button" aria-haspopup="true" aria-expanded="false">选股器 <span class="csn-caret">▼</span></button><div class="csn-drop">',
             '<a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表</b><small>板块ETF · 自选股 · 机会与风险</small></a>',
             '<a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表</b><small>机会 · 风险警报 · 历史信号</small></a>',
+            link(prefix, "bingshen/", "冰神分享", "A股观察池 · 名单与代码文件", current),
             "</div></div>",
             f'<div class="csn-item" data-group="code"><a href="{prefix}code/" data-key="code">代码库</a></div>',
-            f'<div class="csn-item" data-group="bingshen"><a href="{prefix}bingshen/" data-key="bingshen">冰神分享</a></div>',
             f'<div class="csn-item" data-group="research"><a href="{prefix}nav/" data-key="nav">行业调研</a></div>',
             "</div></div></nav>",
         ]
