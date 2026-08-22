@@ -29,9 +29,9 @@ def nav(relative: str) -> str:
             "a-tools",
             "A股",
             [
-                ("a-share-t1-focus/", "A股 T+1 条件关注", "产业主线 · 多周期 · 次日预案"),
-                ("a-share-software-deleveraging/", "A股软件走势总结", "去杠杆 · 二次确认 · 个股分化"),
-                ("a-share-hardware-deleveraging/", "A股AI硬件走势总结", "算力硬件 · 二次确认 · 个股分化"),
+                ("a-share-t1-focus/", "A股AI产业链关注图谱", "产业环节 · 公司映射 · 证据分层"),
+                ("a-share-software-deleveraging/", "软件股", "去杠杆 · 二次确认 · 个股分化"),
+                ("a-share-hardware-deleveraging/", "硬件股", "算力硬件 · 二次确认 · 个股分化"),
             ],
         ),
         (
