@@ -22,7 +22,7 @@ class SiteNavigationTests(unittest.TestCase):
                 self.assertIn(f'data-nav-version="{SITE_NAV.NAV_VERSION}"', text)
 
     def test_top_level_order_and_labels_are_identical(self):
-        expected = ["首页", "宏观", "A股", "美股", "选股器", "代码库", "行业调研"]
+        expected = ["首页", "宏观", "事件", "A股", "美股", "选股器", "代码库", "行业调研"]
         for relative in SITE_NAV.active_pages():
             with self.subTest(page=relative):
                 text = (ROOT / relative).read_text(encoding="utf-8")
@@ -45,6 +45,11 @@ class SiteNavigationTests(unittest.TestCase):
         body = text.split("</nav>", 1)[1]
         self.assertNotIn("全球股票注意力雷达", body)
         self.assertNotIn('href="./x-consensus/"', body)
+
+    def test_event_is_directly_after_macro_and_uses_latest_registered_page(self):
+        sample = SITE_NAV.nav("index.html")
+        self.assertIn('data-group="event"><a href="./weekly-event-transmission-2026w34/">事件</a>', sample)
+        self.assertEqual(SITE_NAV.current_event_route(), "weekly-event-transmission-2026w34/")
 
     def test_picker_owns_bingshen_and_no_top_level_bingshen(self):
         sample = SITE_NAV.nav("index.html")

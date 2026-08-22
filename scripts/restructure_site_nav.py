@@ -34,6 +34,15 @@ ACTIVE_DYNAMIC = {
 RETIRED_REPORT_IDS = {"futu-indicators"}
 
 
+def current_event_route() -> str:
+    reports = json.loads((ROOT / "nav/reports.json").read_text(encoding="utf-8"))
+    events = [report for report in reports if report["id"].startswith("weekly-event-transmission-")]
+    if not events:
+        raise SystemExit("no registered weekly event page")
+    latest = max(events, key=lambda report: (report["date"], report["id"]))
+    return latest["url"].removeprefix("../").strip("/") + "/"
+
+
 def active_pages() -> list[str]:
     pages = set(ACTIVE_DYNAMIC)
     reports = json.loads((ROOT / "nav/reports.json").read_text(encoding="utf-8"))
@@ -114,6 +123,11 @@ def nav(relative: str) -> str:
     ]
     for key, title, items in groups:
         parts.append(group(prefix, key, title, items, current))
+        if key == "macro":
+            event_route = current_event_route()
+            event_active = " active" if current == event_route or current.startswith(event_route) else ""
+            event_current = ' aria-current="page"' if event_active else ""
+            parts.append(f'<div class="csn-item{event_active}" data-group="event"><a href="{prefix}{event_route}"{event_current}>事件</a></div>')
     picker_active = " active" if current == "bingshen/" else ""
     bingshen_current = ' class="current" aria-current="page"' if current == "bingshen/" else ""
     code_active = " active" if current == "code/" else ""
