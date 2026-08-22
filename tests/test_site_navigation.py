@@ -1,4 +1,5 @@
 import importlib.util
+import json
 import re
 import unittest
 from pathlib import Path
@@ -48,14 +49,36 @@ class SiteNavigationTests(unittest.TestCase):
 
     def test_event_is_directly_after_macro_and_uses_latest_registered_page(self):
         sample = SITE_NAV.nav("index.html")
-        self.assertIn('data-group="event"><a href="./weekly-event-transmission-2026w34/">事件</a>', sample)
-        self.assertEqual(SITE_NAV.current_event_route(), "weekly-event-transmission-2026w34/")
+        event_route = SITE_NAV.current_event_route()
+        self.assertIn(f'data-group="event"><a href="./{event_route}">事件</a>', sample)
+        self.assertEqual(event_route, "weekly-event-transmission-2026w35/")
 
-    def test_picker_owns_bingshen_and_no_top_level_bingshen(self):
+    def test_a_share_owns_split_pages_and_bingshen(self):
         sample = SITE_NAV.nav("index.html")
+        a_share = re.search(r'data-group="a-tools".*?</div></div>', sample, re.S).group(0)
         picker = re.search(r'data-group="picker".*?</div></div>', sample, re.S).group(0)
-        self.assertIn('href="./bingshen/"', picker)
+        self.assertIn('href="./a-share-domestic-compute/"', a_share)
+        self.assertIn('href="./a-share-supply-tightness/"', a_share)
+        self.assertIn('href="./a-share-next-generation/"', a_share)
+        self.assertIn('href="./bingshen/"', a_share)
+        self.assertNotIn('href="./bingshen/"', picker)
         self.assertEqual(sample.count(">冰神分享<"), 1)
+
+    def test_split_pages_only_publish_their_own_mainline(self):
+        expected = {
+            "a-share-domestic-compute": ("国产算力", "国产算力核心矩阵"),
+            "a-share-supply-tightness": ("AI供需紧张", "AI供需紧张矩阵"),
+            "a-share-next-generation": ("下一代技术", "下一代技术矩阵"),
+        }
+        all_headings = {heading for _, heading in expected.values()}
+        for slug, (mainline, heading) in expected.items():
+            with self.subTest(page=slug):
+                text = (ROOT / slug / "index.html").read_text(encoding="utf-8")
+                data = json.loads((ROOT / slug / "data.json").read_text(encoding="utf-8"))
+                self.assertIn(f"<h3>{heading}</h3>", text)
+                for other_heading in all_headings - {heading}:
+                    self.assertNotIn(f"<h3>{other_heading}</h3>", text)
+                self.assertEqual({row["mainline"] for row in data["industry_map"]}, {mainline})
 
     def test_shared_css_preserves_baseline_type_size(self):
         css = (ROOT / "assets/csnpk-nav.css").read_text(encoding="utf-8")

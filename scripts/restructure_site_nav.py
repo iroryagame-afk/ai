@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NAV_VERSION = "ia-20260823"
+NAV_VERSION = "ia-20260823c"
 ACTIVE_DYNAMIC = {
     "index.html",
     "a-share-software-deleveraging/index.html",
@@ -17,6 +17,9 @@ ACTIVE_DYNAMIC = {
     "ai-infrastructure-deleveraging/index.html",
     "us-software-deleveraging/index.html",
     "a-share-t1-focus/index.html",
+    "a-share-domestic-compute/index.html",
+    "a-share-supply-tightness/index.html",
+    "a-share-next-generation/index.html",
     "us-market/x-consensus/index.html",
     "rs-thrust/index.html",
     "rotation/index.html",
@@ -101,7 +104,10 @@ def nav(relative: str) -> str:
             ("us-market/x-consensus/", "全球注意力雷达", "中文X · 多语种长文 · Reddit · 作者原图"),
         ]),
         ("a-tools", "A股", [
-            ("a-share-t1-focus/", "A股AI产业链关注图谱", "产业环节 · 公司映射 · 证据分层"),
+            ("a-share-domestic-compute/", "国产算力", "芯片 · 服务器 · 网络 · AIDC"),
+            ("a-share-supply-tightness/", "供需紧张", "存储 · PCB · 材料 · 制造"),
+            ("a-share-next-generation/", "下一代技术", "光互连 · CPO · 液冷 · 连接"),
+            ("bingshen/", "冰神分享", "A股观察池 · 名单与代码文件"),
             ("a-share-software-deleveraging/", "软件股", "去杠杆 · 二次确认 · 个股分化"),
             ("a-share-hardware-deleveraging/", "硬件股", "算力硬件 · 二次确认 · 个股分化"),
         ]),
@@ -128,17 +134,14 @@ def nav(relative: str) -> str:
             event_active = " active" if current == event_route or current.startswith(event_route) else ""
             event_current = ' aria-current="page"' if event_active else ""
             parts.append(f'<div class="csn-item{event_active}" data-group="event"><a href="{prefix}{event_route}"{event_current}>事件</a></div>')
-    picker_active = " active" if current == "bingshen/" else ""
-    bingshen_current = ' class="current" aria-current="page"' if current == "bingshen/" else ""
     code_active = " active" if current == "code/" else ""
     code_current = ' aria-current="page"' if current == "code/" else ""
     research_active = " active" if current == "nav/" else ""
     research_current = ' aria-current="page"' if current == "nav/" else ""
     parts.extend([
-        f'<div class="csn-item{picker_active}" data-group="picker"><button type="button" aria-haspopup="true" aria-expanded="false">选股器 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop">',
+        '<div class="csn-item" data-group="picker"><button type="button" aria-haspopup="true" aria-expanded="false">选股器 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop">',
         '<a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表</b><small>板块ETF · 自选股 · 机会与风险</small></a>',
         '<a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表</b><small>机会 · 风险警报 · 历史信号</small></a>',
-        f'<a{bingshen_current} href="{prefix}bingshen/"><b>冰神分享</b><small>A股观察池 · 名单与代码文件</small></a>',
         "</div></div>",
         f'<div class="csn-item{code_active}" data-group="code"><a href="{prefix}code/"{code_current}>代码库</a></div>',
         f'<div class="csn-item{research_active}" data-group="research"><a href="{prefix}nav/"{research_current}>行业调研</a></div>',

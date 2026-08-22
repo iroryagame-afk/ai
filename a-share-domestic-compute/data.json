@@ -1,0 +1,116 @@
+{
+  "version": "2.1",
+  "research_date": "2026-08-18",
+  "page_scope": "single_mainline_industry_map",
+  "mainline": "国产算力",
+  "source_route": "/a-share-t1-focus/",
+  "counts": {
+    "segments": 7,
+    "core": 12,
+    "unique_names": 20
+  },
+  "core_stocks": [
+    "寒武纪",
+    "海光信息",
+    "中科曙光",
+    "浪潮信息",
+    "锐捷网络",
+    "盛科通信",
+    "紫光股份",
+    "澜起科技",
+    "华大九天",
+    "利通电子",
+    "润泽科技",
+    "东阳光"
+  ],
+  "industry_map": [
+    {
+      "mainline": "国产算力",
+      "segment": "AI训练/推理芯片",
+      "logic": "国产算力替代与智算需求放量",
+      "stocks": "寒武纪、海光信息",
+      "evidence": "公告＋Obsidian"
+    },
+    {
+      "mainline": "国产算力",
+      "segment": "AI服务器/超节点",
+      "logic": "本土AI芯片适配，服务器与智算系统交付",
+      "stocks": "中科曙光、浪潮信息",
+      "evidence": "公告＋局部Obsidian"
+    },
+    {
+      "mainline": "国产算力",
+      "segment": "交换芯片/交换机整机",
+      "logic": "AI集群带宽升级与400G/800G网络建设",
+      "stocks": "盛科通信、锐捷网络、紫光股份",
+      "evidence": "公告＋Obsidian"
+    },
+    {
+      "mainline": "国产算力",
+      "segment": "内存互连/CXL",
+      "logic": "DDR5渗透与AI服务器内存带宽升级",
+      "stocks": "澜起科技",
+      "evidence": "公司年报"
+    },
+    {
+      "mainline": "国产算力",
+      "segment": "国产EDA/IP",
+      "logic": "半导体设计工具与IP自主可控",
+      "stocks": "华大九天；观察：概伦电子",
+      "evidence": "公告核验，收入纯度跟踪"
+    },
+    {
+      "mainline": "国产算力",
+      "segment": "AIDC资产运营",
+      "logic": "AI机柜功率密度与算力基础设施需求提升；区分成熟IDC与高功率AIDC兑现",
+      "stocks": "润泽科技、东阳光；观察：光环新网、奥飞数据、数据港；验证：大位科技",
+      "evidence": "年报＋收购公告；上架率、资本开支与回款跟踪"
+    },
+    {
+      "mainline": "国产算力",
+      "segment": "算力租赁/服务",
+      "logic": "从算力设备、集群部署到云算力交付；区分自有直租、转租与项目集成收入",
+      "stocks": "利通电子；观察：协创数据；验证：宏景科技、润建股份",
+      "evidence": "年报核验，收入模式与客户集中度跟踪"
+    }
+  ],
+  "evidence_policy": "exchange_or_company_primary_first; obsidian_for_leads_and_cross_check",
+  "primary_sources": [
+    "https://static.cninfo.com.cn/finalpage/2025-03-18/1222821549.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-04-16/1225107720.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-03-24/1225026470.PDF",
+    "https://www.sse.com.cn/disclosure/announcement/listing/ipo/c/c_20260724_10826610.shtml",
+    "https://www.cxmt.com/?lang=zh-hans",
+    "https://static.cninfo.com.cn/finalpage/2026-03-31/1225061352.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-03-28/1225045085.PDF",
+    "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-23/688110_20260423_7YZ1.pdf",
+    "https://static.cninfo.com.cn/finalpage/2026-03-20/1225020225.PDF",
+    "https://static.cninfo.com.cn/finalpage/2025-03-21/1222976786.pdf",
+    "https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260414/d07822e827b34e85980072a1bd145cd0.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-03-31/1225054265.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-04-10/1225090821.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-04-10/1225090784.PDF",
+    "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-18/603881_20260418_YP0B.pdf",
+    "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-22/600589_20260422_NSGK.pdf",
+    "https://static.cninfo.com.cn/finalpage/2026-04-27/1225195098.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-04-01/1225070311.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-03-31/1225059372.PDF",
+    "https://dataclouds.cninfo.com.cn/sjother/documents/2025/20250815/4a95ab6a274e40dba7eb32087fe2408b.pdf",
+    "https://static.cninfo.com.cn/finalpage/2025-08-15/1224487631.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-04-18/1225123248.PDF",
+    "https://paper.cnstock.com/html/2026-06/11/content_2230143.htm",
+    "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12466080",
+    "https://www.bozhon.com/upload/file/2025%E5%B9%B4%E5%8D%8A%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+    "https://pdf.dfcfw.com/pdf/H2_AN202605071822035651_1.pdf",
+    "https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260327/e67ce100b4dd41fca62312c3acbbcd4a.PDF",
+    "https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260622/715837fc824c4640a84f03e438670ad0.PDF"
+  ],
+  "obsidian_sources": [
+    "文字直播/大盘与科技-2026-08-13.md",
+    "文字直播/大盘与科技_20260816.md",
+    "情报社/半导体/00 行业综述.md",
+    "情报社/半导体/兆易创新.md",
+    "情报社/半导体/北京君正.md",
+    "情报社/光通信/00 行业综述.md"
+  ]
+}
