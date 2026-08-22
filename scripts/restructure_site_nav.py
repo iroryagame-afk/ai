@@ -38,11 +38,12 @@ def nav(relative: str) -> str:
             "us-tools",
             "美股",
             [
-                ("rs-thrust/", "美股相对强度加速图", "找正在加速的强势股"),
-                ("rotation/", "美股轮动加速度雷达", "看顶部衰竭与底部修复"),
-                ("ai-software-security-shovels/", "AI 软件与安全监控台", "固定股票池 · 轮动 · 量价"),
-                ("ai-hardware-shovels/", "AI 硬件铲子监控台", "SPY基准 · 轮动 · 盘后动作"),
-                ("us-skew/", "美股期权风险分布图", "保护需求与风险温度"),
+                ("rotation/", "轮动加速度", "看顶部衰竭与底部修复"),
+                ("rs-thrust/", "相对强度", "找正在加速的强势股"),
+                ("us-skew/", "期权风险", "保护需求与风险温度"),
+                (None, "", ""),
+                ("ai-software-security-shovels/", "软件股", "固定股票池 · 轮动 · 量价"),
+                ("ai-hardware-shovels/", "硬件股", "SPY基准 · 轮动 · 盘后动作"),
             ],
         ),
         (
@@ -63,6 +64,9 @@ def nav(relative: str) -> str:
     for key, title, items in groups:
         parts.append(f'<div class="csn-item" data-group="{key}"><button type="button" aria-haspopup="true" aria-expanded="false">{title} <span class="csn-caret">▼</span></button><div class="csn-drop">')
         for path, item_title, note in items:
+            if path is None:
+                parts.append('<div class="csn-drop-separator" role="separator" aria-label="软件股与硬件股" style="height:1px;margin:6px 8px;background:var(--line)"></div>')
+                continue
             parts.append(link(prefix, path, item_title, note, current))
         parts.append("</div></div>")
     parts.extend(
