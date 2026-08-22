@@ -50,7 +50,10 @@ class SiteNavigationTests(unittest.TestCase):
     def test_event_is_directly_after_macro_and_uses_latest_registered_page(self):
         sample = SITE_NAV.nav("index.html")
         event_route = SITE_NAV.current_event_route()
-        self.assertIn(f'data-group="event"><a href="./{event_route}">事件</a>', sample)
+        event = re.search(r'data-group="event".*?</div></div>', sample, re.S).group(0)
+        self.assertIn(f'href="./{event_route}us/"', event)
+        self.assertIn(f'href="./{event_route}a-share/"', event)
+        self.assertEqual(re.findall(r"<b>([^<]+)</b>", event), ["美股事件", "A股财报"])
         self.assertEqual(event_route, "weekly-event-transmission-2026w35/")
 
     def test_a_share_owns_split_pages_and_bingshen(self):
@@ -62,6 +65,7 @@ class SiteNavigationTests(unittest.TestCase):
         self.assertIn('href="./a-share-next-generation/"', a_share)
         self.assertIn('href="./bingshen/"', a_share)
         self.assertNotIn('href="./bingshen/"', picker)
+        self.assertEqual(a_share.count('class="csn-drop-separator"'), 1)
         self.assertEqual(sample.count(">冰神分享<"), 1)
 
     def test_split_pages_only_publish_their_own_mainline(self):
@@ -79,6 +83,14 @@ class SiteNavigationTests(unittest.TestCase):
                 for other_heading in all_headings - {heading}:
                     self.assertNotIn(f"<h3>{other_heading}</h3>", text)
                 self.assertEqual({row["mainline"] for row in data["industry_map"]}, {mainline})
+
+    def test_homepage_promotes_macro_and_has_a_verified_update_note(self):
+        text = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertNotIn('id="stock-trends"', text)
+        self.assertIn('<section aria-label="宏观" id="market-overview">', text)
+        self.assertLess(text.index('id="market-overview"'), text.index('id="a-share-tools"'))
+        self.assertIn('class="verified">已核验</span>', text)
+        self.assertIn("国产算力、供需紧张、下一代技术、美股事件、A股财报", text)
 
     def test_shared_css_preserves_baseline_type_size(self):
         css = (ROOT / "assets/csnpk-nav.css").read_text(encoding="utf-8")

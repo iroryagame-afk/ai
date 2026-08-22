@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NAV_VERSION = "ia-20260823c"
+NAV_VERSION = "ia-20260823d"
 ACTIVE_DYNAMIC = {
     "index.html",
     "a-share-software-deleveraging/index.html",
@@ -38,16 +38,19 @@ RETIRED_REPORT_IDS = {"futu-indicators"}
 
 
 def current_event_route() -> str:
-    reports = json.loads((ROOT / "nav/reports.json").read_text(encoding="utf-8"))
-    events = [report for report in reports if report["id"].startswith("weekly-event-transmission-")]
-    if not events:
-        raise SystemExit("no registered weekly event page")
-    latest = max(events, key=lambda report: (report["date"], report["id"]))
-    return latest["url"].removeprefix("../").strip("/") + "/"
+    event_roots = [
+        path for path in ROOT.glob("weekly-event-transmission-*")
+        if path.is_dir() and (path / "us/index.html").is_file() and (path / "a-share/index.html").is_file()
+    ]
+    if not event_roots:
+        raise SystemExit("no complete weekly event page set")
+    return max(event_roots, key=lambda path: path.name).name + "/"
 
 
 def active_pages() -> list[str]:
     pages = set(ACTIVE_DYNAMIC)
+    event_root = ROOT / current_event_route()
+    pages.update(str(path.relative_to(ROOT)) for path in event_root.rglob("index.html"))
     reports = json.loads((ROOT / "nav/reports.json").read_text(encoding="utf-8"))
     for report in reports:
         if report["id"] in RETIRED_REPORT_IDS:
@@ -76,9 +79,16 @@ def item_link(prefix: str, path: str, title: str, note: str, current: str) -> st
     return f'<a{css} href="{prefix}{path}"><b>{title}</b><small>{note}</small></a>'
 
 
-def group(prefix: str, key: str, title: str, items: list[tuple[str | None, str, str]], current: str) -> str:
+def group(
+    prefix: str,
+    key: str,
+    title: str,
+    items: list[tuple[str | None, str, str]],
+    current: str,
+    active_prefixes: tuple[str, ...] = (),
+) -> str:
     paths = {path for path, _, _ in items if path}
-    active = " active" if current in paths else ""
+    active = " active" if current in paths or any(current.startswith(path) for path in active_prefixes) else ""
     out = [
         f'<div class="csn-item{active}" data-group="{key}">',
         f'<button type="button" aria-haspopup="true" aria-expanded="false">{title} <span class="csn-caret" aria-hidden="true">▼</span></button>',
@@ -86,7 +96,7 @@ def group(prefix: str, key: str, title: str, items: list[tuple[str | None, str, 
     ]
     for path, label, note in items:
         if path is None:
-            out.append('<div class="csn-drop-separator" role="separator" aria-label="软件股与硬件股"></div>')
+            out.append('<div class="csn-drop-separator" role="separator" aria-label="栏目分隔线"></div>')
         else:
             out.append(item_link(prefix, path, label, note, current))
     out.append("</div></div>")
@@ -108,6 +118,7 @@ def nav(relative: str) -> str:
             ("a-share-supply-tightness/", "供需紧张", "存储 · PCB · 材料 · 制造"),
             ("a-share-next-generation/", "下一代技术", "光互连 · CPO · 液冷 · 连接"),
             ("bingshen/", "冰神分享", "A股观察池 · 名单与代码文件"),
+            (None, "", ""),
             ("a-share-software-deleveraging/", "软件股", "去杠杆 · 二次确认 · 个股分化"),
             ("a-share-hardware-deleveraging/", "硬件股", "算力硬件 · 二次确认 · 个股分化"),
         ]),
@@ -131,9 +142,10 @@ def nav(relative: str) -> str:
         parts.append(group(prefix, key, title, items, current))
         if key == "macro":
             event_route = current_event_route()
-            event_active = " active" if current == event_route or current.startswith(event_route) else ""
-            event_current = ' aria-current="page"' if event_active else ""
-            parts.append(f'<div class="csn-item{event_active}" data-group="event"><a href="{prefix}{event_route}"{event_current}>事件</a></div>')
+            parts.append(group(prefix, "event", "事件", [
+                (f"{event_route}us/", "美股事件", "重大事件 · 财报 · 宏观传导"),
+                (f"{event_route}a-share/", "A股财报", "预约披露 · 预期管理 · 行业映射"),
+            ], current, active_prefixes=(event_route,)))
     code_active = " active" if current == "code/" else ""
     code_current = ' aria-current="page"' if current == "code/" else ""
     research_active = " active" if current == "nav/" else ""
