@@ -26,23 +26,17 @@ def nav(relative: str) -> str:
     home = prefix
     groups = [
         (
-            "stocks",
-            "股票",
+            "a-tools",
+            "A股",
             [
+                ("a-share-t1-focus/", "A股 T+1 条件关注", "产业主线 · 多周期 · 次日预案"),
                 ("a-share-software-deleveraging/", "A股软件走势总结", "去杠杆 · 二次确认 · 个股分化"),
                 ("a-share-hardware-deleveraging/", "A股AI硬件走势总结", "算力硬件 · 二次确认 · 个股分化"),
-                ("ai-infrastructure-deleveraging/", "AI基础设施走势总结", "计算 · 内存 · 网络 · 电力"),
-                ("us-software-deleveraging/", "美股软件走势总结", "IGV基准 · 二次确认 · 个股分化"),
             ],
         ),
         (
-            "a-tools",
-            "A股工具",
-            [("a-share-t1-focus/", "A股 T+1 条件关注", "产业主线 · 多周期 · 次日预案")],
-        ),
-        (
             "us-tools",
-            "美股工具",
+            "美股",
             [
                 ("rs-thrust/", "美股相对强度加速图", "找正在加速的强势股"),
                 ("rotation/", "美股轮动加速度雷达", "看顶部衰竭与底部修复"),
@@ -74,13 +68,13 @@ def nav(relative: str) -> str:
         parts.append("</div></div>")
     parts.extend(
         [
-            '<div class="csn-item" data-group="dragon"><button type="button" aria-haspopup="true" aria-expanded="false">猎龙者 <span class="csn-caret">▼</span></button><div class="csn-drop">',
+            '<div class="csn-item" data-group="picker"><button type="button" aria-haspopup="true" aria-expanded="false">选股器 <span class="csn-caret">▼</span></button><div class="csn-drop">',
             '<a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表</b><small>板块ETF · 自选股 · 机会与风险</small></a>',
             '<a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表</b><small>机会 · 风险警报 · 历史信号</small></a>',
             "</div></div>",
-            f'<div class="csn-item" data-group="code"><a href="{prefix}code/" data-key="code">代码</a></div>',
+            f'<div class="csn-item" data-group="code"><a href="{prefix}code/" data-key="code">代码库</a></div>',
             f'<div class="csn-item" data-group="bingshen"><a href="{prefix}bingshen/" data-key="bingshen">冰神分享</a></div>',
-            f'<div class="csn-item" data-group="research"><a href="{prefix}nav/" data-key="nav">调研</a></div>',
+            f'<div class="csn-item" data-group="research"><a href="{prefix}nav/" data-key="nav">行业调研</a></div>',
             "</div></div></nav>",
         ]
     )

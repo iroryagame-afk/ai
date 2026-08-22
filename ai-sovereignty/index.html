@@ -149,7 +149,8 @@
     display: flex;
     align-items: center;
   }
-  .csnpk-nav .nav-group > button {
+  .csnpk-nav .nav-group > button,
+  .csnpk-nav .nav-group > a {
     background: none;
     border: none;
     font-family: var(--sans);
@@ -164,9 +165,12 @@
     align-items: center;
     gap: 4px;
     transition: color .15s;
+    text-decoration: none;
   }
-  .csnpk-nav .nav-group > button:hover { color: var(--ink); }
-  .csnpk-nav .nav-group > button:focus-visible {
+  .csnpk-nav .nav-group > button:hover,
+  .csnpk-nav .nav-group > a:hover { color: var(--ink); }
+  .csnpk-nav .nav-group > button:focus-visible,
+  .csnpk-nav .nav-group > a:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
@@ -706,7 +710,8 @@
     .kpi-row { grid-template-columns: 1fr 1fr; }
     .card-grid.cols-3,
     .card-grid.cols-2 { grid-template-columns: 1fr; }
-    .csnpk-nav .nav-group > button { font-size: 13px; padding: 6px 10px; }
+    .csnpk-nav .nav-group > button,
+    .csnpk-nav .nav-group > a { font-size: 13px; padding: 6px 10px; }
     .pull-quote { font-size: 17px; }
     .page-main { padding: 0 20px; }
     .csnpk-nav .nav-inner { padding: 0 20px; }
@@ -736,7 +741,8 @@
       mask-image: linear-gradient(to right, #000 92%, transparent);
       -webkit-mask-image: linear-gradient(to right, #000 92%, transparent);
     }
-    .csnpk-nav .nav-group > button {
+    .csnpk-nav .nav-group > button,
+    .csnpk-nav .nav-group > a {
       font-size: 12px;
       padding: 6px 8px;
       scroll-snap-align: start;
@@ -778,42 +784,14 @@
     </a>
 
     <div class="nav-groups">
-      <div class="nav-group">
-        <button type="button" aria-expanded="false">股票 <span class="arrow">▾</span></button>
-        <div class="nav-dropdown">
-          <a href="/code/">A 股概览<small>沪深市场全景</small></a>
-          <a href="/nav/">港股概览<small>港股研究入口</small></a>
-          <a href="/us-market/">美股概览<small>标普 / 纳斯达克</small></a>
-        </div>
-      </div>
-
-      <div class="nav-group">
-        <button type="button" aria-expanded="false">A 股工具 <span class="arrow">▾</span></button>
-        <div class="nav-dropdown">
-          <a href="/code/">候选筛选<small>多条件选股</small></a>
-          <a href="/code/">轮动雷达<small>板块强度追踪</small></a>
-          <a href="/code/">资金面<small>ETF与市场资金观察</small></a>
-        </div>
-      </div>
-
-      <div class="nav-group">
-        <button type="button" aria-expanded="false">美股工具 <span class="arrow">▾</span></button>
-        <div class="nav-dropdown">
-          <a href="/us-skew/">美股偏斜<small>期权偏斜监控</small></a>
-          <a href="/code/">MDA 100<small>动量宽度仪表盘</small></a>
-        </div>
-      </div>
-
-      <div class="nav-group">
-        <button type="button" aria-expanded="false">市场观察 <span class="arrow">▾</span></button>
-        <div class="nav-dropdown">
-          <a href="/macro-fiscal-risk/">宏观财政风险<small>债务 & 利率追踪</small></a>
-          <a href="/code/">行业轮动<small>A 股板块迁移</small></a>
-        </div>
-      </div>
+      <div class="nav-group"><a href="/#a-share-tools">A股</a></div>
+      <div class="nav-group"><a href="/#us-tools">美股</a></div>
+      <div class="nav-group"><a href="/#market-overview">大盘观察</a></div>
+      <div class="nav-group"><a href="/#dragon-signals">选股器</a></div>
+      <div class="nav-group"><a href="/code/">代码库</a></div>
 
       <div class="nav-group current">
-        <button type="button" aria-expanded="false" aria-current="page">调研 <span class="arrow">▾</span></button>
+        <button type="button" aria-expanded="false" aria-current="page">行业调研 <span class="arrow">▾</span></button>
         <div class="nav-dropdown">
           <a href="/ai-sovereignty/" style="color:var(--cinnabar);font-weight:600">AI 主权<small>当前阅读</small></a>
           <a href="/nav/">半导体<small>设备 & 材料</small></a>
