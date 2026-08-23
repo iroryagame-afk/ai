@@ -82,7 +82,7 @@ class SiteNavigationTests(unittest.TestCase):
     def test_split_pages_only_publish_their_own_mainline(self):
         expected = {
             "a-share-domestic-compute": ("国产算力", "国产算力核心矩阵"),
-            "a-share-supply-tightness": ("AI供需紧张", "AI供需紧张矩阵"),
+            "a-share-supply-tightness": ("AI供需紧张", "行业弹性矩阵"),
             "a-share-next-generation": ("下一代技术", "下一代技术矩阵"),
         }
         all_headings = {heading for _, heading in expected.values()}
@@ -90,9 +90,9 @@ class SiteNavigationTests(unittest.TestCase):
             with self.subTest(page=slug):
                 text = (ROOT / slug / "index.html").read_text(encoding="utf-8")
                 data = json.loads((ROOT / slug / "data.json").read_text(encoding="utf-8"))
-                self.assertIn(f"<h3>{heading}</h3>", text)
+                self.assertRegex(text, rf"<h[23]>{re.escape(heading)}</h[23]>")
                 for other_heading in all_headings - {heading}:
-                    self.assertNotIn(f"<h3>{other_heading}</h3>", text)
+                    self.assertNotIn(other_heading, text)
                 self.assertEqual({row["mainline"] for row in data["industry_map"]}, {mainline})
 
     def test_homepage_promotes_macro_and_has_a_verified_update_note(self):

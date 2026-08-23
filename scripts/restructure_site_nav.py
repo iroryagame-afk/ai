@@ -9,11 +9,13 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NAV_VERSION = "ia-20260823f"
+NAV_VERSION = "ia-20260823g"
 ACTIVE_DYNAMIC = {
     "index.html",
     "a-share-software-deleveraging/index.html",
     "a-share-hardware-deleveraging/index.html",
+    "a-share-biotech-trend/index.html",
+    "a-share-dividend-defense/index.html",
     "a-share-trend-candidates/index.html",
     "ai-infrastructure-deleveraging/index.html",
     "us-software-deleveraging/index.html",
@@ -53,8 +55,10 @@ PAGE_REFRESH_DATES = {
     "a-share-supply-tightness/": "2026-08-23",
     "a-share-next-generation/": "2026-08-23",
     "bingshen/": "2026-08-22",
-    "a-share-software-deleveraging/": "2026-08-22",
-    "a-share-hardware-deleveraging/": "2026-08-22",
+    "a-share-software-deleveraging/": "2026-08-23",
+    "a-share-hardware-deleveraging/": "2026-08-23",
+    "a-share-biotech-trend/": "2026-08-23",
+    "a-share-dividend-defense/": "2026-08-23",
     "us-trend-candidates/": "2026-08-23",
     "rotation/": "2026-08-22",
     "rs-thrust/": "2026-08-22",
@@ -161,8 +165,10 @@ def nav(relative: str) -> str:
             ("a-share-next-generation/", "下一代技术", "光互连 · CPO · 液冷 · 连接"),
             ("bingshen/", "冰神分享", "A股观察池 · 名单与代码文件"),
             (None, "", ""),
-            ("a-share-software-deleveraging/", "软件股", "去杠杆 · 二次确认 · 个股分化"),
-            ("a-share-hardware-deleveraging/", "硬件股", "算力硬件 · 二次确认 · 个股分化"),
+            ("a-share-software-deleveraging/", "软件股", "相对强弱 · 趋势结构 · 风险边界"),
+            ("a-share-hardware-deleveraging/", "硬件股", "算力硬件 · 趋势结构 · 细分轮动"),
+            ("a-share-biotech-trend/", "生物科技", "医药生物 · 相对强弱 · 趋势结构"),
+            ("a-share-dividend-defense/", "红利防守", "银行 · 公用事业 · 稳定现金流"),
         ]),
         ("us-tools", "美股", [
             ("us-trend-candidates/", "趋势候选", "硬件 · 软件 · AI4S · 加密"),
