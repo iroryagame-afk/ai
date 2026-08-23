@@ -4,356 +4,772 @@
 <meta http-equiv="Cache-Control" content="no-store"><title>美股趋势候选矩阵 · CSN投研</title>
 <style>
 :root{--paper:#f5f2e9;--panel:#fffdf7;--ink:#202735;--muted:#6f7581;--line:#ddd6c7;--navy:#183b5d;--red:#b44732;--gold:#997129;--green:#317052;--serif:"Songti SC","STSong","SimSun",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55}main{width:min(1480px,100%);margin:auto;padding:34px 20px 64px}.hero{padding:22px 0 28px;border-bottom:1px solid var(--line)}.kicker{font:700 11px/1 ui-monospace,monospace;letter-spacing:.2em;color:var(--gold)}h1{font:700 clamp(32px,5vw,52px)/1.16 var(--serif);margin:12px 0 10px}.lede{max-width:900px;color:#4f5664;margin:0}.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.fact{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(255,253,247,.72);font-size:12px}.fact b{font-size:15px;margin-right:5px}.warn{margin:18px 0 0;padding:11px 13px;border-left:3px solid var(--red);background:#f8eae5;color:#7d3528;font-size:13px}.legend{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 14px}.badge{font-style:normal;font-size:11px;font-weight:700;padding:4px 8px;border-radius:999px;white-space:nowrap}.recommend{background:#e4f1e8;color:#276144}.wait{background:#f6ecd3;color:#73561d}.watch{background:#e9eef4;color:#3c536a}.avoid{background:#f7e4df;color:#8e3928}.defense{background:#eee8f3;color:#654a78}.matrix-wrap{overflow-x:auto;padding-bottom:8px}.matrix{min-width:1080px;display:grid;grid-template-columns:140px repeat(3,minmax(300px,1fr));border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}.matrix-head,.matrix-label,.matrix-cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.matrix-head{position:sticky;top:0;z-index:2;padding:15px 14px;background:#ebe7dc;font:700 18px/1 var(--serif)}.matrix-head small{display:block;margin-top:6px;color:var(--muted);font:500 11px/1.4 var(--sans)}.matrix-label{padding:18px 12px;background:#f0ece2;font:700 19px/1.3 var(--serif)}.matrix-cell{position:relative;padding:13px;background:var(--panel);min-height:130px}.cell-count{position:absolute;top:8px;right:10px;color:var(--muted);font-size:10px}.stock-card{margin:0 0 9px;padding:12px;border:1px solid var(--line);border-radius:11px;background:#fff;box-shadow:0 5px 16px rgba(30,36,48,.04)}.stock-card:last-child{margin-bottom:0}.stock-head{display:flex;justify-content:space-between;align-items:flex-start;gap:9px}.stock-head b{display:block;font:700 18px/1.1 ui-monospace,monospace;color:var(--navy)}.stock-head span{display:block;margin-top:3px;color:var(--muted);font-size:11px}.signal{margin:9px 0 4px;font-size:12px;font-weight:700}.meta,.invalidation{margin:3px 0;color:var(--muted);font-size:10.5px}.invalidation{color:#805d28}.empty{display:grid;place-items:center;min-height:90px;color:#9a9da5;font:700 22px/1 var(--serif)}.method{margin-top:25px;padding:18px;border:1px solid var(--line);border-radius:13px;background:var(--panel)}.method h2{margin:0 0 10px;font:700 20px/1.2 var(--serif)}.method p{margin:6px 0;color:#505765;font-size:13px}footer{margin-top:28px;color:var(--muted);font-size:11px}@media(max-width:700px){main{padding:20px 12px 44px}.matrix{min-width:980px}}
-</style><link rel="stylesheet" href="../assets/csnpk-nav.css" data-csnpk-nav-style>
-<script src="../assets/csnpk-nav.js" defer data-csnpk-nav-script></script>
-</head><body>
-<nav class="csn-topnav" aria-label="全站导航" data-nav-version="ia-20260823d"><div class="csn-topnav-inner"><a class="csn-brand" href="../" aria-label="CSN 投研首页"><span class="csn-brand-seal">研</span><span><span class="csn-brand-name">CSN 投研</span><span class="csn-brand-sub">Research Desk</span></span></a><div class="csn-menu"><div class="csn-item csn-home"><a href="../">首页</a></div><div class="csn-item" data-group="macro"><button type="button" aria-haspopup="true" aria-expanded="false">宏观 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../us-market/"><b>大盘观察</b><small>指数状态 · 风险温度 · 风格轮动</small></a><a href="../macro-fiscal-risk/"><b>财政风险溢价监控</b><small>长端 · 美元 · 股债 · 信用扩散</small></a><a href="../us-market/x-consensus/"><b>全球注意力雷达</b><small>中文X · 多语种长文 · Reddit · 作者原图</small></a></div></div><div class="csn-item" data-group="event"><button type="button" aria-haspopup="true" aria-expanded="false">事件 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../weekly-event-transmission-2026w35/us/"><b>美股事件</b><small>重大事件 · 财报 · 宏观传导</small></a><a href="../weekly-event-transmission-2026w35/a-share/"><b>A股财报</b><small>预约披露 · 预期管理 · 行业映射</small></a></div></div><div class="csn-item" data-group="a-tools"><button type="button" aria-haspopup="true" aria-expanded="false">A股 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../a-share-domestic-compute/"><b>国产算力</b><small>芯片 · 服务器 · 网络 · AIDC</small></a><a href="../a-share-supply-tightness/"><b>供需紧张</b><small>存储 · PCB · 材料 · 制造</small></a><a href="../a-share-next-generation/"><b>下一代技术</b><small>光互连 · CPO · 液冷 · 连接</small></a><a href="../bingshen/"><b>冰神分享</b><small>A股观察池 · 名单与代码文件</small></a><div class="csn-drop-separator" role="separator" aria-label="栏目分隔线"></div><a href="../a-share-software-deleveraging/"><b>软件股</b><small>去杠杆 · 二次确认 · 个股分化</small></a><a href="../a-share-hardware-deleveraging/"><b>硬件股</b><small>算力硬件 · 二次确认 · 个股分化</small></a></div></div><div class="csn-item" data-group="us-tools"><button type="button" aria-haspopup="true" aria-expanded="false">美股 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../rotation/"><b>轮动加速度</b><small>看顶部衰竭与底部修复</small></a><a href="../rs-thrust/"><b>相对强度</b><small>找正在加速的强势股</small></a><a href="../us-skew/"><b>期权风险</b><small>保护需求与风险温度</small></a><div class="csn-drop-separator" role="separator" aria-label="栏目分隔线"></div><a href="../ai-software-security-shovels/"><b>软件股</b><small>固定股票池 · 轮动 · 量价</small></a><a href="../ai-hardware-shovels/"><b>硬件股</b><small>SPY基准 · 轮动 · 盘后动作</small></a></div></div><div class="csn-item active" data-group="picker"><button type="button" aria-haspopup="true" aria-expanded="false">选股器 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a class="current" aria-current="page" href="../us-trend-candidates/"><b>美股趋势候选矩阵</b><small>硬件 · 软件 · AI4S · 加密</small></a><a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表</b><small>板块ETF · 自选股 · 机会与风险</small></a><a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表</b><small>机会 · 风险警报 · 历史信号</small></a></div></div><div class="csn-item" data-group="code"><a href="../code/">代码库</a></div><div class="csn-item" data-group="research"><a href="../nav/">行业调研</a></div></div></div></nav><main>
-<section class="hero"><div class="kicker">US TREND CANDIDATES · 4 × 3 MATRIX</div><h1>美股趋势候选矩阵</h1><p class="lede">先判断主升、回调或反转的主导结构，再判断当日买点与执行等级。状态名单不等于开盘买点；页面不限数量，没有符合者明确写“无”。</p>
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.45}main{width:min(1480px,100%);margin:auto;padding:24px 18px 48px}.hero{padding:12px 0 18px;border-bottom:1px solid var(--line)}.kicker{font:700 10px/1 ui-monospace,monospace;letter-spacing:.18em;color:var(--gold)}h1{font:700 clamp(28px,4vw,42px)/1.15 var(--serif);margin:8px 0 7px}.lede{max-width:980px;color:#4f5664;margin:0;font-size:13px}.facts{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.fact{padding:6px 9px;border:1px solid var(--line);border-radius:7px;background:rgba(255,253,247,.72);font-size:11px}.fact b{font-size:13px;margin-right:4px}.warn{margin:11px 0 0;padding:8px 10px;border-left:3px solid var(--red);background:#f8eae5;color:#7d3528;font-size:11px}.badge{display:inline-block;font-style:normal;font-size:10px;font-weight:700;padding:3px 7px;border-radius:999px;white-space:nowrap}.recommend{background:#e4f1e8;color:#276144}.wait{background:#f6ecd3;color:#73561d}.watch{background:#e9eef4;color:#3c536a}.avoid{background:#f7e4df;color:#8e3928}.defense{background:#eee8f3;color:#654a78}.toolbar{display:grid;grid-template-columns:minmax(190px,1.7fr) repeat(3,minmax(120px,.8fr)) auto;gap:8px;margin:16px 0 9px}.toolbar input,.toolbar select,.toolbar button{height:36px;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--ink);font:600 12px var(--sans);padding:0 10px}.toolbar button{cursor:pointer;background:#ebe7dc}.result-line{display:flex;justify-content:space-between;gap:12px;margin:0 0 7px;color:var(--muted);font-size:11px}.table-wrap{overflow:auto;max-height:72vh;border:1px solid var(--line);border-radius:10px;background:var(--panel)}table{width:100%;min-width:1220px;border-collapse:separate;border-spacing:0;font-size:11px}thead{position:sticky;top:0;z-index:3}th{background:#e9e4d8;border-bottom:1px solid #cfc6b5;text-align:left;padding:0;white-space:nowrap}th button{display:flex;align-items:center;gap:5px;width:100%;padding:9px 8px;border:0;background:transparent;color:var(--ink);font:700 11px var(--sans);cursor:pointer}th button::after{content:"↕";color:#9a927f;font-size:10px}th button[data-direction="asc"]::after{content:"↑";color:var(--red)}th button[data-direction="desc"]::after{content:"↓";color:var(--red)}td{padding:7px 8px;border-bottom:1px solid #ece6da;vertical-align:middle;white-space:nowrap}tbody tr:hover{background:#f4f0e6}tbody tr[hidden]{display:none}.ticker{font:700 13px ui-monospace,monospace;color:var(--navy)}.name{max-width:150px;overflow:hidden;text-overflow:ellipsis}.signal{font-weight:650;max-width:270px;overflow:hidden;text-overflow:ellipsis}.subtheme,.hour{max-width:180px;overflow:hidden;text-overflow:ellipsis;color:#555e6b}.num{text-align:right;font-variant-numeric:tabular-nums}.tag{display:inline-block;padding:2px 6px;border-radius:5px;background:#eee9df;white-space:nowrap}.state-主升{color:#235e43;background:#e4f1e8}.state-回调{color:#77571c;background:#f6ecd3}.state-反转{color:#7e3a30;background:#f5e5df}.empty-row td{padding:42px;text-align:center;color:#999;font:700 18px var(--serif)}details{margin-top:14px;border:1px solid var(--line);border-radius:9px;background:var(--panel)}summary{cursor:pointer;padding:10px 12px;font:700 14px var(--serif)}.method{padding:0 12px 10px}.method p{margin:5px 0;color:#505765;font-size:11px}footer{margin-top:16px;color:var(--muted);font-size:10px}@media(max-width:760px){main{padding:16px 10px 36px}.toolbar{grid-template-columns:1fr 1fr}.toolbar input{grid-column:1/-1}.table-wrap{max-height:none}}
+</style></head><body><main>
+<section class="hero"><div class="kicker">US TREND CANDIDATES · FILTERABLE TABLE</div><h1>美股趋势候选表</h1><p class="lede">四类行业与主升、回调、反转三种状态合并为一张表。状态名单不等于开盘买点；可按任意字段筛选、点击表头排序。</p>
 <div class="facts"><span class="fact"><b>2026-08-21</b>最新完整收盘</span><span class="fact"><b>68</b>状态候选</span><span class="fact"><b>3</b>推荐级</span><span class="fact"><b>98.5%</b>OpenD覆盖</span><span class="fact"><b>正常盘前筛选</b>市场闸门</span></div>
 <div class="warn">财报日历：已核验｜来源标识：2026-08-21T11:02:35+08:00。一小时线只作执行确认；ATR只展示弹性，不影响入选和排序。</div></section>
-<div class="legend"><em class="badge recommend">推荐</em><em class="badge wait">等待确认</em><em class="badge watch">可关注</em><em class="badge avoid">不追</em><em class="badge defense">防守市场·仅观察</em></div>
-<div class="matrix-wrap"><div class="matrix"><div class="matrix-head">大类 ＼ 状态</div><div class="matrix-head">主升<small>趋势延续；买点优先EMA21回踩收回</small></div><div class="matrix-head">回调<small>长期结构未破；低位信号为或关系</small></div><div class="matrix-head">反转<small>早期修复；单信号只等待，共振才试错</small></div><div class="matrix-label"><b>硬件</b></div><section class="matrix-cell state-主升" data-state="主升"><div class="cell-count">0 只</div><div class="empty">无</div></section><section class="matrix-cell state-回调" data-state="回调"><div class="cell-count">14 只</div><article class="stock-card" data-level="推荐">
-      <div class="stock-head"><div><b>ASML</b><span>阿斯麦</span></div><em class="badge recommend">推荐</em></div>
-      <p class="signal">C3收复EMA21</p>
-      <p class="meta">SOX/算力芯片 · 1小时同向改善 · ATR 3.3%</p>
-      <p class="invalidation">信号低点 1741.00</p>
-    </article><article class="stock-card" data-level="推荐">
-      <div class="stock-head"><div><b>ANET</b><span>Arista Networks</span></div><em class="badge recommend">推荐</em></div>
-      <p class="signal">C2 KDJ低位拐头、C3收复EMA21</p>
-      <p class="meta">AI网络/交换机 · 1小时同向改善 · ATR 5.1%</p>
-      <p class="invalidation">信号低点 183.59</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>LPTH</b><span>LightPath Technologies</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">光通信/光器件 · 1小时同向改善 · ATR 8.2%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>SNDK</b><span>闪迪</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">内存/HBM/存储 · 1小时同向改善 · ATR 8.3%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>INDI</b><span>indie Semiconductor</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">SOX/算力芯片 · 1小时同向改善 · ATR 10.4%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>SMCI</b><span>超微电脑</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">AI服务器/硬件 · 1小时同向改善 · ATR 6.8%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>TSM</b><span>台积电</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">C2 KDJ低位拐头、C3收复EMA21</p>
-      <p class="meta">SOX/算力芯片 · 1小时仍有冲突 · ATR 2.7%</p>
-      <p class="invalidation">信号低点 416.70</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>MU</b><span>美光科技</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">内存/HBM/存储 · 1小时仍有冲突 · ATR 5.8%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>ENTG</b><span>英特格</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">SOX/算力芯片 · 未确认 · ATR 6.4%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>MRVL</b><span>迈威尔科技</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">SOX/算力芯片 · 1小时仍有冲突 · ATR 7.4%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>DELL</b><span>戴尔科技</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">AI服务器/硬件 · 未确认 · ATR 6.7%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>NVDA</b><span>英伟达</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">SOX/算力芯片 · 未确认 · ATR 2.7%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>HPE</b><span>慧与科技</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">AI服务器/硬件 · 未确认 · ATR 5.7%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>LITE</b><span>Lumentum</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">光通信/光器件 · 1小时仍有冲突 · ATR 9.7%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article></section><section class="matrix-cell state-反转" data-state="反转"><div class="cell-count">20 只</div><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>UMC</b><span>联电</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">D2 KDJ极低拐头</p>
-      <p class="meta">SOX/算力芯片 · 1小时同向改善 · ATR 4.9%</p>
-      <p class="invalidation">信号低点 18.27</p>
-    </article><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>APH</b><span>安费诺</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">D2 KDJ极低拐头</p>
-      <p class="meta">AI服务器/硬件 · 1小时同向改善 · ATR 3.9%</p>
-      <p class="invalidation">信号低点 153.81</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>AMD</b><span>美国超微公司</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">SOX/算力芯片 · 1小时同向改善 · ATR 4.9%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>TEL</b><span>泰科电子</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">D2 KDJ极低拐头</p>
-      <p class="meta">AI服务器/硬件 · 未确认 · ATR 3.0%</p>
-      <p class="invalidation">信号低点 200.20</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>TER</b><span>泰瑞达</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">SOX/算力芯片 · 未确认 · ATR 7.2%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>AMBA</b><span>安霸</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">SOX/算力芯片 · 未确认 · ATR 5.3%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>VIAV</b><span>Viavi Solutions</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">光通信/光器件 · 未确认 · ATR 8.3%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>RMBS</b><span>Rambus</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">D2 KDJ极低拐头</p>
-      <p class="meta">内存/HBM/存储 · 未确认 · ATR 6.1%</p>
-      <p class="invalidation">信号低点 89.80</p>
-    </article><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>VRT</b><span>Vertiv Holdings</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">D2 KDJ极低拐头</p>
-      <p class="meta">AI服务器/硬件 · 未确认 · ATR 5.3%</p>
-      <p class="invalidation">信号低点 257.49</p>
-    </article><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>STM</b><span>意法半导体</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">D2 KDJ极低拐头</p>
-      <p class="meta">SOX/算力芯片 · 未确认 · ATR 4.3%</p>
-      <p class="invalidation">信号低点 49.91</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>CIEN</b><span>Ciena</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">光通信/光器件 · 未确认 · ATR 7.6%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>AAOI</b><span>Applied Optoelectronics</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">D2 KDJ极低拐头</p>
-      <p class="meta">光通信/光器件 · 未确认 · ATR 13.7%</p>
-      <p class="invalidation">信号低点 121.89</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>WDC</b><span>西部数据</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">内存/HBM/存储 · 未确认 · ATR 8.6%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>PENG</b><span>Penguin Solutions</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">内存/HBM/存储 · 未确认 · ATR 8.2%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>ARM</b><span>Arm Holdings</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">SOX/算力芯片 · 未确认 · ATR 7.8%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>VICR</b><span>Vicor电子</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">AI服务器/硬件 · 未确认 · ATR 8.3%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>COHR</b><span>Coherent</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">D2 KDJ极低拐头</p>
-      <p class="meta">光通信/光器件 · 未确认 · ATR 12.3%</p>
-      <p class="invalidation">信号低点 283.40</p>
-    </article><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>FN</b><span>Fabrinet</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">D2 KDJ极低拐头</p>
-      <p class="meta">光通信/光器件 · 未确认 · ATR 10.6%</p>
-      <p class="invalidation">信号低点 424.97</p>
-    </article><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>JBL</b><span>捷普科技</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">D2 KDJ极低拐头</p>
-      <p class="meta">AI服务器/硬件 · 未确认 · ATR 5.1%</p>
-      <p class="invalidation">信号低点 311.22</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>AVGO</b><span>博通</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">SOX/算力芯片 · 未确认 · ATR 4.1%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article></section><div class="matrix-label"><b>软件</b></div><section class="matrix-cell state-主升" data-state="主升"><div class="cell-count">6 只</div><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>ZETA</b><span>Zeta Global</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">云/软件 · 1小时同向改善 · ATR 5.9%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>SNOW</b><span>Snowflake</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">云/软件 · 1小时同向改善 · ATR 3.8%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>ZS</b><span>Zscaler</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">网络安全 · 1小时同向改善 · ATR 4.5%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>PLTR</b><span>Palantir</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">云/软件 · 1小时仍有冲突 · ATR 5.3%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>ADBE</b><span>Adobe</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">云/软件 · 1小时仍有冲突 · ATR 3.8%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>PATH</b><span>UiPath</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">云/软件 · 1小时仍有冲突 · ATR 5.5%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article></section><section class="matrix-cell state-回调" data-state="回调"><div class="cell-count">8 只</div><article class="stock-card" data-level="推荐">
-      <div class="stock-head"><div><b>NET</b><span>Cloudflare</span></div><em class="badge recommend">推荐</em></div>
-      <p class="signal">C2 KDJ低位拐头、C3收复EMA21</p>
-      <p class="meta">云/软件 · 1小时同向改善 · ATR 6.3%</p>
-      <p class="invalidation">信号低点 274.03</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>FTNT</b><span>飞塔信息</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">网络安全 · 1小时同向改善 · ATR 3.8%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>PANW</b><span>Palo Alto Networks</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">网络安全 · 1小时同向改善 · ATR 4.3%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>NOW</b><span>ServiceNow</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">云/软件 · 1小时仍有冲突 · ATR 4.6%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>MSFT</b><span>微软</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">云/软件 · 1小时仍有冲突 · ATR 2.2%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>OKTA</b><span>Okta</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">C1低位十字星</p>
-      <p class="meta">网络安全 · 未确认 · ATR 5.1%</p>
-      <p class="invalidation">信号低点 131.69</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>AMZN</b><span>亚马逊</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">云/软件 · 未确认 · ATR 2.5%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>CRWD</b><span>CrowdStrike</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">C1低位十字星</p>
-      <p class="meta">网络安全 · 未确认 · ATR 4.8%</p>
-      <p class="invalidation">信号低点 187.01</p>
-    </article></section><section class="matrix-cell state-反转" data-state="反转"><div class="cell-count">3 只</div><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>ORCL</b><span>甲骨文</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">D5收复EMA21</p>
-      <p class="meta">云/软件 · 1小时仍有冲突 · ATR 4.4%</p>
-      <p class="invalidation">信号低点 142.60</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>CRM</b><span>赛富时</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">云/软件 · 1小时仍有冲突 · ATR 3.7%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>DDOG</b><span>Datadog</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">云/软件 · 未确认 · ATR 7.4%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article></section><div class="matrix-label"><b>医药（AI4S）</b></div><section class="matrix-cell state-主升" data-state="主升"><div class="cell-count">6 只</div><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>NTRA</b><span>Natera</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">生物科技/医疗 · 1小时同向改善 · ATR 4.3%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>ILMN</b><span>Illumina</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">生物科技/医疗 · 1小时仍有冲突 · ATR 4.0%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>GH</b><span>Guardant Health</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">生物科技/医疗 · 1小时仍有冲突 · ATR 4.1%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>LLY</b><span>礼来</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">生物科技/医疗 · 1小时仍有冲突 · ATR 3.6%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="不追">
-      <div class="stock-head"><div><b>TEM</b><span>Tempus AI</span></div><em class="badge avoid">不追</em></div>
-      <p class="signal">B1放量突破</p>
-      <p class="meta">生物科技/医疗 · 1小时仍有冲突 · ATR 6.0%</p>
-      <p class="invalidation">信号低点 65.25</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>SDGR</b><span>Schrodinger</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">生物科技/医疗 · 1小时仍有冲突 · ATR 4.9%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article></section><section class="matrix-cell state-回调" data-state="回调"><div class="cell-count">1 只</div><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>RXRX</b><span>Recursion Pharmaceuticals</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">生物科技/医疗 · 1小时仍有冲突 · ATR 5.3%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article></section><section class="matrix-cell state-反转" data-state="反转"><div class="cell-count">2 只</div><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>NTLA</b><span>Intellia Therapeutics</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">生物科技/医疗 · 1小时仍有冲突 · ATR 5.3%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>NVO</b><span>诺和诺德</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">D5收复EMA21</p>
-      <p class="meta">生物科技/医疗 · 1小时仍有冲突 · ATR 3.2%</p>
-      <p class="invalidation">信号低点 46.34</p>
-    </article></section><div class="matrix-label"><b>加密货币</b></div><section class="matrix-cell state-主升" data-state="主升"><div class="cell-count">0 只</div><div class="empty">无</div></section><section class="matrix-cell state-回调" data-state="回调"><div class="cell-count">2 只</div><article class="stock-card" data-level="等待确认">
-      <div class="stock-head"><div><b>HOOD</b><span>Robinhood</span></div><em class="badge wait">等待确认</em></div>
-      <p class="signal">C3收复EMA21</p>
-      <p class="meta">加密货币/交易与矿企 · 1小时仍有冲突 · ATR 4.9%</p>
-      <p class="invalidation">信号低点 98.77</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>CRCL</b><span>Circle</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">加密货币/交易与矿企 · 1小时仍有冲突 · ATR 6.2%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article></section><section class="matrix-cell state-反转" data-state="反转"><div class="cell-count">6 只</div><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>COIN</b><span>Coinbase</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">加密货币/交易与矿企 · 1小时仍有冲突 · ATR 4.7%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>MSTR</b><span>Strategy</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">加密货币/交易与矿企 · 1小时仍有冲突 · ATR 5.1%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>CLSK</b><span>CleanSpark</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">加密货币/交易与矿企 · 1小时仍有冲突 · ATR 8.7%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>IREN</b><span>IREN Ltd</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">加密货币/交易与矿企 · 1小时仍有冲突 · ATR 8.3%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>RIOT</b><span>Riot Platforms</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">加密货币/交易与矿企 · 1小时仍有冲突 · ATR 9.8%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article><article class="stock-card" data-level="可关注">
-      <div class="stock-head"><div><b>CORZ</b><span>Core Scientific</span></div><em class="badge watch">可关注</em></div>
-      <p class="signal">可关注</p>
-      <p class="meta">加密货币/交易与矿企 · 未确认 · ATR 7.4%</p>
-      <p class="invalidation">尚无买点失效位</p>
-    </article></section></div></div>
-<section class="method"><h2>当前执行规则</h2><p><b>主升：</b>放量突破、EMA21回踩收回、缩量整理突破，满足任一且通过一小时确认才可升级。</p><p><b>回调：</b>低位十字星、KDJ低位拐头、收复EMA21为或关系；单一早期信号先等待。</p><p><b>反转：</b>末端低位十字星、KDJ极低拐头、放量止跌、收复EMA21；至少两项共振加一小时确认才能升级。</p><p><b>统一硬门：</b>财报排雷、流动性、数据完整性和QQQ/SPY软闸门。页面仅供研究观察，不下单。</p></section>
+<div class="toolbar" role="search"><input id="query" type="search" placeholder="搜索代码、名称、买点、主题…" aria-label="搜索候选"><select id="category" aria-label="筛选大类"><option value="">全部大类</option><option>硬件</option><option>软件</option><option>医药（AI4S）</option><option>加密货币</option></select><select id="state" aria-label="筛选状态"><option value="">全部状态</option><option>主升</option><option>回调</option><option>反转</option></select><select id="level" aria-label="筛选执行等级"><option value="">全部执行等级</option><option>推荐</option><option>等待确认</option><option>可关注</option><option>不追</option><option>防守市场·仅观察</option></select><button id="reset" type="button">重置</button></div>
+<div class="result-line"><span id="resultCount">显示 68 / 68 只</span><span>点击表头切换升序 / 降序</span></div>
+<div class="table-wrap"><table id="candidateTable"><thead><tr><th><button data-column="0">代码</button></th><th><button data-column="1">股票</button></th><th><button data-column="2">大类</button></th><th><button data-column="3">状态</button></th><th><button data-column="4">执行</button></th><th><button data-column="5">买点 / 信号</button></th><th><button data-column="6">细分主题</button></th><th><button data-column="7">1小时</button></th><th><button data-column="8" data-type="number">ATR</button></th><th><button data-column="9" data-type="number">信号低点</button></th></tr></thead><tbody><tr data-category="硬件" data-state="回调" data-level="推荐">
+      <td data-sort="ASML"><b class="ticker">ASML</b></td>
+      <td data-sort="阿斯麦" class="name">阿斯麦</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="推荐"><em class="badge recommend">推荐</em></td>
+      <td data-sort="C3收复EMA21" class="signal">C3收复EMA21</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="3.3" class="num">3.3%</td>
+      <td data-sort="1741.0" class="num">1741.00</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="推荐">
+      <td data-sort="ANET"><b class="ticker">ANET</b></td>
+      <td data-sort="Arista Networks" class="name">Arista Networks</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="推荐"><em class="badge recommend">推荐</em></td>
+      <td data-sort="C2 KDJ低位拐头、C3收复EMA21" class="signal">C2 KDJ低位拐头、C3收复EMA21</td>
+      <td data-sort="AI网络/交换机" class="subtheme">AI网络/交换机</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="5.1" class="num">5.1%</td>
+      <td data-sort="183.59" class="num">183.59</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="可关注">
+      <td data-sort="LPTH"><b class="ticker">LPTH</b></td>
+      <td data-sort="LightPath Technologies" class="name">LightPath Technologies</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="光通信/光器件" class="subtheme">光通信/光器件</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="8.2" class="num">8.2%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="可关注">
+      <td data-sort="SNDK"><b class="ticker">SNDK</b></td>
+      <td data-sort="闪迪" class="name">闪迪</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="内存/HBM/存储" class="subtheme">内存/HBM/存储</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="8.3" class="num">8.3%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="可关注">
+      <td data-sort="INDI"><b class="ticker">INDI</b></td>
+      <td data-sort="indie Semiconductor" class="name">indie Semiconductor</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="10.4" class="num">10.4%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="可关注">
+      <td data-sort="SMCI"><b class="ticker">SMCI</b></td>
+      <td data-sort="超微电脑" class="name">超微电脑</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="AI服务器/硬件" class="subtheme">AI服务器/硬件</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="6.8" class="num">6.8%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="等待确认">
+      <td data-sort="TSM"><b class="ticker">TSM</b></td>
+      <td data-sort="台积电" class="name">台积电</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="C2 KDJ低位拐头、C3收复EMA21" class="signal">C2 KDJ低位拐头、C3收复EMA21</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="2.7" class="num">2.7%</td>
+      <td data-sort="416.7" class="num">416.70</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="可关注">
+      <td data-sort="MU"><b class="ticker">MU</b></td>
+      <td data-sort="美光科技" class="name">美光科技</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="内存/HBM/存储" class="subtheme">内存/HBM/存储</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="5.8" class="num">5.8%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="可关注">
+      <td data-sort="ENTG"><b class="ticker">ENTG</b></td>
+      <td data-sort="英特格" class="name">英特格</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="6.4" class="num">6.4%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="可关注">
+      <td data-sort="MRVL"><b class="ticker">MRVL</b></td>
+      <td data-sort="迈威尔科技" class="name">迈威尔科技</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="7.4" class="num">7.4%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="可关注">
+      <td data-sort="DELL"><b class="ticker">DELL</b></td>
+      <td data-sort="戴尔科技" class="name">戴尔科技</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="AI服务器/硬件" class="subtheme">AI服务器/硬件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="6.7" class="num">6.7%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="可关注">
+      <td data-sort="NVDA"><b class="ticker">NVDA</b></td>
+      <td data-sort="英伟达" class="name">英伟达</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="2.7" class="num">2.7%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="可关注">
+      <td data-sort="HPE"><b class="ticker">HPE</b></td>
+      <td data-sort="慧与科技" class="name">慧与科技</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="AI服务器/硬件" class="subtheme">AI服务器/硬件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="5.7" class="num">5.7%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="回调" data-level="可关注">
+      <td data-sort="LITE"><b class="ticker">LITE</b></td>
+      <td data-sort="Lumentum" class="name">Lumentum</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="光通信/光器件" class="subtheme">光通信/光器件</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="9.7" class="num">9.7%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="等待确认">
+      <td data-sort="UMC"><b class="ticker">UMC</b></td>
+      <td data-sort="联电" class="name">联电</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="D2 KDJ极低拐头" class="signal">D2 KDJ极低拐头</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="4.9" class="num">4.9%</td>
+      <td data-sort="18.275" class="num">18.27</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="等待确认">
+      <td data-sort="APH"><b class="ticker">APH</b></td>
+      <td data-sort="安费诺" class="name">安费诺</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="D2 KDJ极低拐头" class="signal">D2 KDJ极低拐头</td>
+      <td data-sort="AI服务器/硬件" class="subtheme">AI服务器/硬件</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="3.9" class="num">3.9%</td>
+      <td data-sort="153.81" class="num">153.81</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="可关注">
+      <td data-sort="AMD"><b class="ticker">AMD</b></td>
+      <td data-sort="美国超微公司" class="name">美国超微公司</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="4.9" class="num">4.9%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="可关注">
+      <td data-sort="TEL"><b class="ticker">TEL</b></td>
+      <td data-sort="泰科电子" class="name">泰科电子</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="D2 KDJ极低拐头" class="signal">D2 KDJ极低拐头</td>
+      <td data-sort="AI服务器/硬件" class="subtheme">AI服务器/硬件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="3.0" class="num">3.0%</td>
+      <td data-sort="200.2" class="num">200.20</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="可关注">
+      <td data-sort="TER"><b class="ticker">TER</b></td>
+      <td data-sort="泰瑞达" class="name">泰瑞达</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="7.2" class="num">7.2%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="可关注">
+      <td data-sort="AMBA"><b class="ticker">AMBA</b></td>
+      <td data-sort="安霸" class="name">安霸</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="5.3" class="num">5.3%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="可关注">
+      <td data-sort="VIAV"><b class="ticker">VIAV</b></td>
+      <td data-sort="Viavi Solutions" class="name">Viavi Solutions</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="光通信/光器件" class="subtheme">光通信/光器件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="8.3" class="num">8.3%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="等待确认">
+      <td data-sort="RMBS"><b class="ticker">RMBS</b></td>
+      <td data-sort="Rambus" class="name">Rambus</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="D2 KDJ极低拐头" class="signal">D2 KDJ极低拐头</td>
+      <td data-sort="内存/HBM/存储" class="subtheme">内存/HBM/存储</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="6.1" class="num">6.1%</td>
+      <td data-sort="89.8008" class="num">89.80</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="等待确认">
+      <td data-sort="VRT"><b class="ticker">VRT</b></td>
+      <td data-sort="Vertiv Holdings" class="name">Vertiv Holdings</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="D2 KDJ极低拐头" class="signal">D2 KDJ极低拐头</td>
+      <td data-sort="AI服务器/硬件" class="subtheme">AI服务器/硬件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="5.3" class="num">5.3%</td>
+      <td data-sort="257.485" class="num">257.49</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="等待确认">
+      <td data-sort="STM"><b class="ticker">STM</b></td>
+      <td data-sort="意法半导体" class="name">意法半导体</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="D2 KDJ极低拐头" class="signal">D2 KDJ极低拐头</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="4.3" class="num">4.3%</td>
+      <td data-sort="49.91" class="num">49.91</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="可关注">
+      <td data-sort="CIEN"><b class="ticker">CIEN</b></td>
+      <td data-sort="Ciena" class="name">Ciena</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="光通信/光器件" class="subtheme">光通信/光器件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="7.6" class="num">7.6%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="等待确认">
+      <td data-sort="AAOI"><b class="ticker">AAOI</b></td>
+      <td data-sort="Applied Optoelectronics" class="name">Applied Optoelectronics</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="D2 KDJ极低拐头" class="signal">D2 KDJ极低拐头</td>
+      <td data-sort="光通信/光器件" class="subtheme">光通信/光器件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="13.7" class="num">13.7%</td>
+      <td data-sort="121.89" class="num">121.89</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="可关注">
+      <td data-sort="WDC"><b class="ticker">WDC</b></td>
+      <td data-sort="西部数据" class="name">西部数据</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="内存/HBM/存储" class="subtheme">内存/HBM/存储</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="8.6" class="num">8.6%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="可关注">
+      <td data-sort="PENG"><b class="ticker">PENG</b></td>
+      <td data-sort="Penguin Solutions" class="name">Penguin Solutions</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="内存/HBM/存储" class="subtheme">内存/HBM/存储</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="8.2" class="num">8.2%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="可关注">
+      <td data-sort="ARM"><b class="ticker">ARM</b></td>
+      <td data-sort="Arm Holdings" class="name">Arm Holdings</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="7.8" class="num">7.8%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="可关注">
+      <td data-sort="VICR"><b class="ticker">VICR</b></td>
+      <td data-sort="Vicor电子" class="name">Vicor电子</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="AI服务器/硬件" class="subtheme">AI服务器/硬件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="8.3" class="num">8.3%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="等待确认">
+      <td data-sort="COHR"><b class="ticker">COHR</b></td>
+      <td data-sort="Coherent" class="name">Coherent</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="D2 KDJ极低拐头" class="signal">D2 KDJ极低拐头</td>
+      <td data-sort="光通信/光器件" class="subtheme">光通信/光器件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="12.3" class="num">12.3%</td>
+      <td data-sort="283.405" class="num">283.40</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="等待确认">
+      <td data-sort="FN"><b class="ticker">FN</b></td>
+      <td data-sort="Fabrinet" class="name">Fabrinet</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="D2 KDJ极低拐头" class="signal">D2 KDJ极低拐头</td>
+      <td data-sort="光通信/光器件" class="subtheme">光通信/光器件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="10.6" class="num">10.6%</td>
+      <td data-sort="424.97" class="num">424.97</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="等待确认">
+      <td data-sort="JBL"><b class="ticker">JBL</b></td>
+      <td data-sort="捷普科技" class="name">捷普科技</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="D2 KDJ极低拐头" class="signal">D2 KDJ极低拐头</td>
+      <td data-sort="AI服务器/硬件" class="subtheme">AI服务器/硬件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="5.1" class="num">5.1%</td>
+      <td data-sort="311.22" class="num">311.22</td>
+    </tr><tr data-category="硬件" data-state="反转" data-level="可关注">
+      <td data-sort="AVGO"><b class="ticker">AVGO</b></td>
+      <td data-sort="博通" class="name">博通</td>
+      <td data-sort="硬件"><span class="tag category">硬件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="SOX/算力芯片" class="subtheme">SOX/算力芯片</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="4.1" class="num">4.1%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="主升" data-level="可关注">
+      <td data-sort="ZETA"><b class="ticker">ZETA</b></td>
+      <td data-sort="Zeta Global" class="name">Zeta Global</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="主升"><span class="tag state state-主升">主升</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="云/软件" class="subtheme">云/软件</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="5.9" class="num">5.9%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="主升" data-level="可关注">
+      <td data-sort="SNOW"><b class="ticker">SNOW</b></td>
+      <td data-sort="Snowflake" class="name">Snowflake</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="主升"><span class="tag state state-主升">主升</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="云/软件" class="subtheme">云/软件</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="3.8" class="num">3.8%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="主升" data-level="可关注">
+      <td data-sort="ZS"><b class="ticker">ZS</b></td>
+      <td data-sort="Zscaler" class="name">Zscaler</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="主升"><span class="tag state state-主升">主升</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="网络安全" class="subtheme">网络安全</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="4.5" class="num">4.5%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="主升" data-level="可关注">
+      <td data-sort="PLTR"><b class="ticker">PLTR</b></td>
+      <td data-sort="Palantir" class="name">Palantir</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="主升"><span class="tag state state-主升">主升</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="云/软件" class="subtheme">云/软件</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="5.3" class="num">5.3%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="主升" data-level="可关注">
+      <td data-sort="ADBE"><b class="ticker">ADBE</b></td>
+      <td data-sort="Adobe" class="name">Adobe</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="主升"><span class="tag state state-主升">主升</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="云/软件" class="subtheme">云/软件</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="3.8" class="num">3.8%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="主升" data-level="可关注">
+      <td data-sort="PATH"><b class="ticker">PATH</b></td>
+      <td data-sort="UiPath" class="name">UiPath</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="主升"><span class="tag state state-主升">主升</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="云/软件" class="subtheme">云/软件</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="5.5" class="num">5.5%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="回调" data-level="推荐">
+      <td data-sort="NET"><b class="ticker">NET</b></td>
+      <td data-sort="Cloudflare" class="name">Cloudflare</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="推荐"><em class="badge recommend">推荐</em></td>
+      <td data-sort="C2 KDJ低位拐头、C3收复EMA21" class="signal">C2 KDJ低位拐头、C3收复EMA21</td>
+      <td data-sort="云/软件" class="subtheme">云/软件</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="6.3" class="num">6.3%</td>
+      <td data-sort="274.03" class="num">274.03</td>
+    </tr><tr data-category="软件" data-state="回调" data-level="可关注">
+      <td data-sort="FTNT"><b class="ticker">FTNT</b></td>
+      <td data-sort="飞塔信息" class="name">飞塔信息</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="网络安全" class="subtheme">网络安全</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="3.8" class="num">3.8%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="回调" data-level="可关注">
+      <td data-sort="PANW"><b class="ticker">PANW</b></td>
+      <td data-sort="Palo Alto Networks" class="name">Palo Alto Networks</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="网络安全" class="subtheme">网络安全</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="4.3" class="num">4.3%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="回调" data-level="可关注">
+      <td data-sort="NOW"><b class="ticker">NOW</b></td>
+      <td data-sort="ServiceNow" class="name">ServiceNow</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="云/软件" class="subtheme">云/软件</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="4.6" class="num">4.6%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="回调" data-level="可关注">
+      <td data-sort="MSFT"><b class="ticker">MSFT</b></td>
+      <td data-sort="微软" class="name">微软</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="云/软件" class="subtheme">云/软件</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="2.2" class="num">2.2%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="回调" data-level="等待确认">
+      <td data-sort="OKTA"><b class="ticker">OKTA</b></td>
+      <td data-sort="Okta" class="name">Okta</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="C1低位十字星" class="signal">C1低位十字星</td>
+      <td data-sort="网络安全" class="subtheme">网络安全</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="5.1" class="num">5.1%</td>
+      <td data-sort="131.69" class="num">131.69</td>
+    </tr><tr data-category="软件" data-state="回调" data-level="可关注">
+      <td data-sort="AMZN"><b class="ticker">AMZN</b></td>
+      <td data-sort="亚马逊" class="name">亚马逊</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="云/软件" class="subtheme">云/软件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="2.5" class="num">2.5%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="回调" data-level="等待确认">
+      <td data-sort="CRWD"><b class="ticker">CRWD</b></td>
+      <td data-sort="CrowdStrike" class="name">CrowdStrike</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="C1低位十字星" class="signal">C1低位十字星</td>
+      <td data-sort="网络安全" class="subtheme">网络安全</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="4.8" class="num">4.8%</td>
+      <td data-sort="187.01" class="num">187.01</td>
+    </tr><tr data-category="软件" data-state="反转" data-level="等待确认">
+      <td data-sort="ORCL"><b class="ticker">ORCL</b></td>
+      <td data-sort="甲骨文" class="name">甲骨文</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="D5收复EMA21" class="signal">D5收复EMA21</td>
+      <td data-sort="云/软件" class="subtheme">云/软件</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="4.4" class="num">4.4%</td>
+      <td data-sort="142.6" class="num">142.60</td>
+    </tr><tr data-category="软件" data-state="反转" data-level="可关注">
+      <td data-sort="CRM"><b class="ticker">CRM</b></td>
+      <td data-sort="赛富时" class="name">赛富时</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="云/软件" class="subtheme">云/软件</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="3.7" class="num">3.7%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="软件" data-state="反转" data-level="可关注">
+      <td data-sort="DDOG"><b class="ticker">DDOG</b></td>
+      <td data-sort="Datadog" class="name">Datadog</td>
+      <td data-sort="软件"><span class="tag category">软件</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="云/软件" class="subtheme">云/软件</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="7.4" class="num">7.4%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="医药（AI4S）" data-state="主升" data-level="可关注">
+      <td data-sort="NTRA"><b class="ticker">NTRA</b></td>
+      <td data-sort="Natera" class="name">Natera</td>
+      <td data-sort="医药（AI4S）"><span class="tag category">医药（AI4S）</span></td>
+      <td data-sort="主升"><span class="tag state state-主升">主升</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="生物科技/医疗" class="subtheme">生物科技/医疗</td>
+      <td data-sort="1小时同向改善" class="hour">1小时同向改善</td>
+      <td data-sort="4.3" class="num">4.3%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="医药（AI4S）" data-state="主升" data-level="可关注">
+      <td data-sort="ILMN"><b class="ticker">ILMN</b></td>
+      <td data-sort="Illumina" class="name">Illumina</td>
+      <td data-sort="医药（AI4S）"><span class="tag category">医药（AI4S）</span></td>
+      <td data-sort="主升"><span class="tag state state-主升">主升</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="生物科技/医疗" class="subtheme">生物科技/医疗</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="4.0" class="num">4.0%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="医药（AI4S）" data-state="主升" data-level="可关注">
+      <td data-sort="GH"><b class="ticker">GH</b></td>
+      <td data-sort="Guardant Health" class="name">Guardant Health</td>
+      <td data-sort="医药（AI4S）"><span class="tag category">医药（AI4S）</span></td>
+      <td data-sort="主升"><span class="tag state state-主升">主升</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="生物科技/医疗" class="subtheme">生物科技/医疗</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="4.1" class="num">4.1%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="医药（AI4S）" data-state="主升" data-level="可关注">
+      <td data-sort="LLY"><b class="ticker">LLY</b></td>
+      <td data-sort="礼来" class="name">礼来</td>
+      <td data-sort="医药（AI4S）"><span class="tag category">医药（AI4S）</span></td>
+      <td data-sort="主升"><span class="tag state state-主升">主升</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="生物科技/医疗" class="subtheme">生物科技/医疗</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="3.6" class="num">3.6%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="医药（AI4S）" data-state="主升" data-level="不追">
+      <td data-sort="TEM"><b class="ticker">TEM</b></td>
+      <td data-sort="Tempus AI" class="name">Tempus AI</td>
+      <td data-sort="医药（AI4S）"><span class="tag category">医药（AI4S）</span></td>
+      <td data-sort="主升"><span class="tag state state-主升">主升</span></td>
+      <td data-sort="不追"><em class="badge avoid">不追</em></td>
+      <td data-sort="B1放量突破" class="signal">B1放量突破</td>
+      <td data-sort="生物科技/医疗" class="subtheme">生物科技/医疗</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="6.0" class="num">6.0%</td>
+      <td data-sort="65.25" class="num">65.25</td>
+    </tr><tr data-category="医药（AI4S）" data-state="主升" data-level="可关注">
+      <td data-sort="SDGR"><b class="ticker">SDGR</b></td>
+      <td data-sort="Schrodinger" class="name">Schrodinger</td>
+      <td data-sort="医药（AI4S）"><span class="tag category">医药（AI4S）</span></td>
+      <td data-sort="主升"><span class="tag state state-主升">主升</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="生物科技/医疗" class="subtheme">生物科技/医疗</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="4.9" class="num">4.9%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="医药（AI4S）" data-state="回调" data-level="可关注">
+      <td data-sort="RXRX"><b class="ticker">RXRX</b></td>
+      <td data-sort="Recursion Pharmaceuticals" class="name">Recursion Pharmaceuticals</td>
+      <td data-sort="医药（AI4S）"><span class="tag category">医药（AI4S）</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="生物科技/医疗" class="subtheme">生物科技/医疗</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="5.3" class="num">5.3%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="医药（AI4S）" data-state="反转" data-level="可关注">
+      <td data-sort="NTLA"><b class="ticker">NTLA</b></td>
+      <td data-sort="Intellia Therapeutics" class="name">Intellia Therapeutics</td>
+      <td data-sort="医药（AI4S）"><span class="tag category">医药（AI4S）</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="生物科技/医疗" class="subtheme">生物科技/医疗</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="5.3" class="num">5.3%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="医药（AI4S）" data-state="反转" data-level="可关注">
+      <td data-sort="NVO"><b class="ticker">NVO</b></td>
+      <td data-sort="诺和诺德" class="name">诺和诺德</td>
+      <td data-sort="医药（AI4S）"><span class="tag category">医药（AI4S）</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="D5收复EMA21" class="signal">D5收复EMA21</td>
+      <td data-sort="生物科技/医疗" class="subtheme">生物科技/医疗</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="3.2" class="num">3.2%</td>
+      <td data-sort="46.34" class="num">46.34</td>
+    </tr><tr data-category="加密货币" data-state="回调" data-level="等待确认">
+      <td data-sort="HOOD"><b class="ticker">HOOD</b></td>
+      <td data-sort="Robinhood" class="name">Robinhood</td>
+      <td data-sort="加密货币"><span class="tag category">加密货币</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="等待确认"><em class="badge wait">等待确认</em></td>
+      <td data-sort="C3收复EMA21" class="signal">C3收复EMA21</td>
+      <td data-sort="加密货币/交易与矿企" class="subtheme">加密货币/交易与矿企</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="4.9" class="num">4.9%</td>
+      <td data-sort="98.77" class="num">98.77</td>
+    </tr><tr data-category="加密货币" data-state="回调" data-level="可关注">
+      <td data-sort="CRCL"><b class="ticker">CRCL</b></td>
+      <td data-sort="Circle" class="name">Circle</td>
+      <td data-sort="加密货币"><span class="tag category">加密货币</span></td>
+      <td data-sort="回调"><span class="tag state state-回调">回调</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="加密货币/交易与矿企" class="subtheme">加密货币/交易与矿企</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="6.2" class="num">6.2%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="加密货币" data-state="反转" data-level="可关注">
+      <td data-sort="COIN"><b class="ticker">COIN</b></td>
+      <td data-sort="Coinbase" class="name">Coinbase</td>
+      <td data-sort="加密货币"><span class="tag category">加密货币</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="加密货币/交易与矿企" class="subtheme">加密货币/交易与矿企</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="4.7" class="num">4.7%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="加密货币" data-state="反转" data-level="可关注">
+      <td data-sort="MSTR"><b class="ticker">MSTR</b></td>
+      <td data-sort="Strategy" class="name">Strategy</td>
+      <td data-sort="加密货币"><span class="tag category">加密货币</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="加密货币/交易与矿企" class="subtheme">加密货币/交易与矿企</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="5.1" class="num">5.1%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="加密货币" data-state="反转" data-level="可关注">
+      <td data-sort="CLSK"><b class="ticker">CLSK</b></td>
+      <td data-sort="CleanSpark" class="name">CleanSpark</td>
+      <td data-sort="加密货币"><span class="tag category">加密货币</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="加密货币/交易与矿企" class="subtheme">加密货币/交易与矿企</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="8.7" class="num">8.7%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="加密货币" data-state="反转" data-level="可关注">
+      <td data-sort="IREN"><b class="ticker">IREN</b></td>
+      <td data-sort="IREN Ltd" class="name">IREN Ltd</td>
+      <td data-sort="加密货币"><span class="tag category">加密货币</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="加密货币/交易与矿企" class="subtheme">加密货币/交易与矿企</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="8.3" class="num">8.3%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="加密货币" data-state="反转" data-level="可关注">
+      <td data-sort="RIOT"><b class="ticker">RIOT</b></td>
+      <td data-sort="Riot Platforms" class="name">Riot Platforms</td>
+      <td data-sort="加密货币"><span class="tag category">加密货币</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="加密货币/交易与矿企" class="subtheme">加密货币/交易与矿企</td>
+      <td data-sort="1小时仍有冲突" class="hour">1小时仍有冲突</td>
+      <td data-sort="9.8" class="num">9.8%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr data-category="加密货币" data-state="反转" data-level="可关注">
+      <td data-sort="CORZ"><b class="ticker">CORZ</b></td>
+      <td data-sort="Core Scientific" class="name">Core Scientific</td>
+      <td data-sort="加密货币"><span class="tag category">加密货币</span></td>
+      <td data-sort="反转"><span class="tag state state-反转">反转</span></td>
+      <td data-sort="可关注"><em class="badge watch">可关注</em></td>
+      <td data-sort="可关注" class="signal">可关注</td>
+      <td data-sort="加密货币/交易与矿企" class="subtheme">加密货币/交易与矿企</td>
+      <td data-sort="未确认" class="hour">未确认</td>
+      <td data-sort="7.4" class="num">7.4%</td>
+      <td data-sort="-1" class="num">—</td>
+    </tr><tr id="emptyRow" class="empty-row" hidden><td colspan="10">无</td></tr></tbody></table></div>
+<details><summary>查看当前执行规则</summary><section class="method"><p><b>主升：</b>放量突破、EMA21回踩收回、缩量整理突破，满足任一且通过一小时确认才可升级。</p><p><b>回调：</b>低位十字星、KDJ低位拐头、收复EMA21为或关系；单一早期信号先等待。</p><p><b>反转：</b>末端低位十字星、KDJ极低拐头、放量止跌、收复EMA21；至少两项共振加一小时确认才能升级。</p><p><b>统一硬门：</b>财报排雷、流动性、数据完整性和QQQ/SPY软闸门。页面仅供研究观察，不下单。</p></section></details>
 <footer>生成时间（北京）：2026-08-23T01:18:43+08:00｜仅使用已完成日线和已完成美股常规时段1小时K线。</footer>
+<script>
+const table=document.getElementById("candidateTable"),body=table.tBodies[0],empty=document.getElementById("emptyRow");
+const rows=[...body.querySelectorAll("tr:not(.empty-row)")],query=document.getElementById("query"),category=document.getElementById("category"),state=document.getElementById("state"),level=document.getElementById("level"),count=document.getElementById("resultCount");
+const collator=new Intl.Collator("zh-CN",{numeric:true,sensitivity:"base"});let activeButton=null,direction=1;
+function filterRows(){const q=query.value.trim().toLocaleLowerCase("zh-CN");let visible=0;rows.forEach(row=>{const show=(!q||row.textContent.toLocaleLowerCase("zh-CN").includes(q))&&(!category.value||row.dataset.category===category.value)&&(!state.value||row.dataset.state===state.value)&&(!level.value||row.dataset.level===level.value);row.hidden=!show;if(show)visible++;});empty.hidden=visible!==0;count.textContent=`显示 ${visible} / ${rows.length} 只`;}
+function sortRows(button){const index=Number(button.dataset.column),numeric=button.dataset.type==="number";if(activeButton===button)direction*=-1;else{if(activeButton)activeButton.removeAttribute("data-direction");activeButton=button;direction=1;}button.dataset.direction=direction===1?"asc":"desc";rows.sort((a,b)=>{const av=a.cells[index].dataset.sort??a.cells[index].textContent.trim(),bv=b.cells[index].dataset.sort??b.cells[index].textContent.trim();const result=numeric?(Number(av)-Number(bv)):collator.compare(av,bv);return result*direction;}).forEach(row=>body.insertBefore(row,empty));filterRows();}
+[query,category,state,level].forEach(control=>control.addEventListener(control===query?"input":"change",filterRows));
+document.querySelectorAll("th button").forEach(button=>button.addEventListener("click",()=>sortRows(button)));
+document.getElementById("reset").addEventListener("click",()=>{query.value="";category.value="";state.value="";level.value="";filterRows();query.focus();});
+</script>
 </main></body></html>
