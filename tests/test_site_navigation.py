@@ -38,6 +38,7 @@ class SiteNavigationTests(unittest.TestCase):
         self.assertIn('href="./us-market/"', macro)
         self.assertIn('href="./macro-fiscal-risk/"', macro)
         self.assertIn('href="./us-market/x-consensus/"', macro)
+        self.assertIn('href="./macro-event-radar/"', macro)
         self.assertIn("全球注意力雷达", macro)
         self.assertNotIn("政策导航", macro)
 
@@ -53,7 +54,7 @@ class SiteNavigationTests(unittest.TestCase):
         event = re.search(r'data-group="event".*?</div></div>', sample, re.S).group(0)
         self.assertIn(f'href="./{event_route}us/"', event)
         self.assertIn(f'href="./{event_route}a-share/"', event)
-        self.assertEqual(re.findall(r"<b>([^<]+)</b>", event), ["美股事件", "A股财报"])
+        self.assertEqual([label.strip() for label in re.findall(r"<b>([^<]+)", event)], ["美股事件", "A股财报"])
         self.assertEqual(event_route, "weekly-event-transmission-2026w35/")
 
     def test_a_share_owns_split_pages_and_bingshen(self):
@@ -66,7 +67,7 @@ class SiteNavigationTests(unittest.TestCase):
         self.assertIn('href="./bingshen/"', a_share)
         self.assertNotIn('href="./bingshen/"', picker)
         self.assertEqual(a_share.count('class="csn-drop-separator"'), 1)
-        self.assertEqual(sample.count(">冰神分享<"), 1)
+        self.assertEqual(sample.count("<b>冰神分享 "), 1)
 
     def test_trend_candidate_pages_live_under_their_market_navigation(self):
         sample = SITE_NAV.nav("index.html")
@@ -100,7 +101,16 @@ class SiteNavigationTests(unittest.TestCase):
         self.assertIn('<section aria-label="宏观" id="market-overview">', text)
         self.assertLess(text.index('id="market-overview"'), text.index('id="a-share-tools"'))
         self.assertIn('class="verified">已核验</span>', text)
-        self.assertIn("国产算力、供需紧张、下一代技术、美股事件、A股财报", text)
+        self.assertIn("全球核心事件雷达、AI基础设施走势、A股与美股趋势候选", text)
+        self.assertIn('href="./macro-event-radar/"', text)
+        self.assertIn('href="./ai-infrastructure-deleveraging/"', text)
+
+    def test_new_pages_are_grouped_under_macro_and_us(self):
+        sample = SITE_NAV.nav("index.html")
+        macro = re.search(r'data-group="macro".*?</div></div>', sample, re.S).group(0)
+        us = re.search(r'data-group="us-tools".*?</div></div>', sample, re.S).group(0)
+        self.assertIn('href="./macro-event-radar/"', macro)
+        self.assertIn('href="./ai-infrastructure-deleveraging/"', us)
 
     def test_homepage_metrics_are_driven_by_navigation_and_report_registry(self):
         text = (ROOT / "index.html").read_text(encoding="utf-8")
@@ -119,6 +129,13 @@ class SiteNavigationTests(unittest.TestCase):
         self.assertIn("padding: 0 16px", css)
         self.assertIn("font-size: 13px", css)
         self.assertIn("font-size: 9px", css)
+
+    def test_refresh_dates_follow_dropdown_titles(self):
+        sample = SITE_NAV.nav("index.html")
+        self.assertIn('轮动加速度 <time class="csn-nav-refresh"', sample)
+        self.assertIn('08-22 更新</time>', sample)
+        self.assertIn('趋势候选 <time class="csn-nav-refresh"', sample)
+        self.assertNotIn('class="csn-nav-refresh"', re.search(r'<div class="csn-menu">(.*?)data-group="macro"', sample, re.S).group(1))
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NAV_VERSION = "ia-20260823e"
+NAV_VERSION = "ia-20260823f"
 ACTIVE_DYNAMIC = {
     "index.html",
     "a-share-software-deleveraging/index.html",
@@ -30,6 +30,7 @@ ACTIVE_DYNAMIC = {
     "us-skew/index.html",
     "us-market/index.html",
     "macro-fiscal-risk/index.html",
+    "macro-event-radar/index.html",
     "code/index.html",
     "bingshen/index.html",
     "csn/index.html",
@@ -37,6 +38,36 @@ ACTIVE_DYNAMIC = {
     "nav/index.html",
 }
 RETIRED_REPORT_IDS = {"futu-indicators"}
+
+# Per-page content refresh dates. These are deliberately independent from the
+# navigation build time so a shared-nav release never makes every page look new.
+PAGE_REFRESH_DATES = {
+    "us-market/": "2026-08-22",
+    "macro-fiscal-risk/": "2026-08-22",
+    "macro-event-radar/": "2026-08-23",
+    "us-market/x-consensus/": "2026-08-23",
+    "weekly-event-transmission-2026w35/us/": "2026-08-23",
+    "weekly-event-transmission-2026w35/a-share/": "2026-08-23",
+    "a-share-trend-candidates/": "2026-08-23",
+    "a-share-domestic-compute/": "2026-08-23",
+    "a-share-supply-tightness/": "2026-08-23",
+    "a-share-next-generation/": "2026-08-23",
+    "bingshen/": "2026-08-22",
+    "a-share-software-deleveraging/": "2026-08-22",
+    "a-share-hardware-deleveraging/": "2026-08-22",
+    "us-trend-candidates/": "2026-08-23",
+    "rotation/": "2026-08-22",
+    "rs-thrust/": "2026-08-22",
+    "us-skew/": "2026-08-22",
+    "ai-software-security-shovels/": "2026-08-22",
+    "ai-hardware-shovels/": "2026-08-22",
+    "ai-infrastructure-deleveraging/": "2026-08-22",
+}
+
+PICKER_REFRESH_DATES = {
+    "A股猎龙者信号表": "2026-08-23",
+    "美股猎龙者信号表": "2026-08-23",
+}
 
 
 def current_event_route() -> str:
@@ -78,7 +109,14 @@ def current_route(relative: str) -> str:
 
 def item_link(prefix: str, path: str, title: str, note: str, current: str) -> str:
     css = ' class="current" aria-current="page"' if current == path else ""
-    return f'<a{css} href="{prefix}{path}"><b>{title}</b><small>{note}</small></a>'
+    refresh = PAGE_REFRESH_DATES.get(path)
+    refresh_html = refresh_label(refresh) if refresh else ""
+    return f'<a{css} href="{prefix}{path}"><b>{title}{refresh_html}</b><small>{note}</small></a>'
+
+
+def refresh_label(refresh: str) -> str:
+    short = refresh[5:]
+    return f' <time class="csn-nav-refresh" datetime="{refresh}" title="内容刷新日期：{refresh}">{short} 更新</time>'
 
 
 def group(
@@ -113,6 +151,7 @@ def nav(relative: str) -> str:
         ("macro", "宏观", [
             ("us-market/", "大盘观察", "指数状态 · 风险温度 · 风格轮动"),
             ("macro-fiscal-risk/", "财政风险溢价监控", "长端 · 美元 · 股债 · 信用扩散"),
+            ("macro-event-radar/", "全球核心事件雷达", "政策 · 加密 · AI · 事件传导"),
             ("us-market/x-consensus/", "全球注意力雷达", "中文X · 多语种长文 · Reddit · 作者原图"),
         ]),
         ("a-tools", "A股", [
@@ -133,6 +172,7 @@ def nav(relative: str) -> str:
             (None, "", ""),
             ("ai-software-security-shovels/", "软件股", "固定股票池 · 轮动 · 量价"),
             ("ai-hardware-shovels/", "硬件股", "SPY基准 · 轮动 · 盘后动作"),
+            ("ai-infrastructure-deleveraging/", "AI基础设施", "SOXX · 光通信 · 设备 · 算力"),
         ]),
     ]
     parts = [
@@ -156,8 +196,8 @@ def nav(relative: str) -> str:
     research_current = ' aria-current="page"' if current == "nav/" else ""
     parts.extend([
         '<div class="csn-item" data-group="picker"><button type="button" aria-haspopup="true" aria-expanded="false">选股器 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop">',
-        '<a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表</b><small>板块ETF · 自选股 · 机会与风险</small></a>',
-        '<a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表</b><small>机会 · 风险警报 · 历史信号</small></a>',
+        f'<a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表{refresh_label(PICKER_REFRESH_DATES["A股猎龙者信号表"])}</b><small>板块ETF · 自选股 · 机会与风险</small></a>',
+        f'<a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表{refresh_label(PICKER_REFRESH_DATES["美股猎龙者信号表"])}</b><small>机会 · 风险警报 · 历史信号</small></a>',
         "</div></div>",
         f'<div class="csn-item{code_active}" data-group="code"><a href="{prefix}code/"{code_current}>代码库</a></div>',
         f'<div class="csn-item{research_active}" data-group="research"><a href="{prefix}nav/"{research_current}>行业调研</a></div>',

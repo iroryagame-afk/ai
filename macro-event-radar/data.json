@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "page_status": "live",
+  "verification_status": "partial",
+  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-08-23_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
+  "generated_at": "2026-08-23T10:45:00+08:00",
+  "window": {"recent_hours": 240, "calendar_days": 30, "timezone": "Asia/Shanghai"},
+  "brief": {
+    "title": "利率与关税是当前主线，加密强势但白宫会议仍待官方确认",
+    "summary": "最近10天最重要的增量是美联储7月纪要显示更强的加息分歧、美加关税进入反制阶段，以及美国加密监管进入正式公开议程。AI侧采集池发现DeepSeek视觉模型与GLM-5.3，GLM已回查Z.ai官方发布；模型自报榜单和商业影响仍需第三方验证。",
+    "discipline": "候选来自真实采集池，但采集不等于核验：一手源必须读取正文，专业媒体与社交信息必须回链官方原文。价格只验证市场响应，不能反向证明传闻。",
+    "core_count": 5,
+    "pending_count": 1,
+    "next_event_count": 4
+  },
+  "events": [
+    {
+      "id": "fomc-july-minutes-2026-08-19",
+      "headline": "美联储7月纪要偏鹰：3名委员主张加息，通胀不降或需继续收紧",
+      "category": "macro",
+      "event_type": "policy",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-08-19T14:00:00-04:00",
+      "observed_at": "2026-08-20T02:05:00+08:00",
+      "verified_at": "2026-08-23T10:20:00+08:00",
+      "fact": "FOMC以9比3维持联邦基金目标区间3.50%–3.75%；3名委员倾向加息25个基点。纪要称，如果通胀没有如预期下降，许多与会者认为可能需要进一步收紧政策。",
+      "new_information": "内部鹰派分歧比单纯“按兵不动”更强；纪要还把AI投资热潮列入通胀、资本开支和金融稳定讨论。",
+      "inference": "推断：短端利率预期与实际利率上行会压制长久期资产估值；若后续通胀不降，9月加息风险将继续抬升。",
+      "unverified": "9月是否实际加息仍取决于就业、通胀和金融条件，不能由本次纪要直接推出。",
+      "transmission": [
+        {"level": "A", "path": "鹰派纪要 → 加息预期/实际利率 → 长债与高久期成长估值"},
+        {"level": "B", "path": "AI资本开支与杠杆风险讨论 → AI基础设施估值和信用利差"}
+      ],
+      "affected_assets": [
+        {"market": "美债", "direction": "偏空", "horizon": "1–10日", "reason": "TLT从8月19日至21日下跌约1.17%，出现初步价格响应。"},
+        {"market": "美股高久期成长", "direction": "承压", "horizon": "1–10日", "reason": "同期QQQ下跌约0.37%，幅度有限。"},
+        {"market": "美元", "direction": "偏多但未确认", "horizon": "1–10日", "reason": "同期UUP仅上涨约0.07%，美元尚未形成明显确认。"}
+      ],
+      "market_confirmation": {"stage": "initial_confirmation", "checked_at": "2026-08-23T10:10:00+08:00", "detail": "Futu OpenD完整交易日：TLT 83.02→82.05，QQQ 716.08→713.44，UUP 27.88→27.90（8月19日至21日）。相关不等于因果。"},
+      "next_checkpoint": "关注下一轮通胀与就业数据，以及9月15–16日FOMC会议。",
+      "invalidation": "通胀与就业明显走弱，或Fed后续沟通转向降息/中性。",
+      "sources": [
+        {"role": "primary", "name": "Federal Reserve — July FOMC Minutes", "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm", "published_at": "2026-08-19T14:00:00-04:00", "note": "正式会议纪要。"},
+        {"role": "primary", "name": "Federal Reserve — FOMC Calendar", "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm", "published_at": null, "note": "核验下一次会议日期。"}
+      ]
+    },
+    {
+      "id": "us-canada-tariff-escalation-2026-08-22",
+      "headline": "美加关税升级：美国50%附加税生效，加拿大宣布等额反制",
+      "category": "policy",
+      "event_type": "policy",
+      "status": "verified",
+      "change_type": "upgraded",
+      "importance": 5,
+      "event_time": "2026-08-22T12:00:00-04:00",
+      "observed_at": "2026-08-23T07:30:00+08:00",
+      "verified_at": "2026-08-23T10:25:00+08:00",
+      "fact": "美国依据Section 338对部分加拿大商品加征50%附加税，8月19日生效；白宫称涉及近200亿美元进口，并列出能源、钾肥及已适用Section 232等豁免。加拿大总理8月22日宣布等额反制，将在9月8日生效。",
+      "new_information": "事件已从美国单边执行进入加拿大反制阶段；加拿大具体商品清单仍待公布。",
+      "inference": "推断：直接受税商品及北美跨境供应链成本风险上升；由于豁免较多，不能理解为对全部加拿大商品统一加征50%。",
+      "unverified": "加拿大最终反制清单、税则覆盖额和双方是否在生效前谈判降级。",
+      "transmission": [
+        {"level": "A", "path": "附加关税 → 直接商品进口成本 → 企业利润率/终端价格"},
+        {"level": "B", "path": "加拿大反制 → 跨境订单与供应链重排 → 加拿大权益与加元"}
+      ],
+      "affected_assets": [
+        {"market": "加拿大股市", "direction": "结构分化", "horizon": "1–20日", "reason": "同期EWC上涨约0.86%，尚未出现广泛风险规避。"},
+        {"market": "加元", "direction": "双向", "horizon": "1–20日", "reason": "同期FXC上涨约0.31%，市场暂未确认持续性利空。"},
+        {"market": "北美贸易链", "direction": "偏空", "horizon": "1–3个月", "reason": "需等加拿大清单后按商品编码映射，不能泛化交易。"}
+      ],
+      "market_confirmation": {"stage": "mixed", "checked_at": "2026-08-23T10:10:00+08:00", "detail": "Futu OpenD完整交易日：EWC 61.83→62.36，FXC 70.7111→70.9328（8月19日至21日）。尚未确认广泛风险溢价。"},
+      "next_checkpoint": "等待加拿大反制商品清单；按行业、公司和供应链逐项映射实际敞口。",
+      "invalidation": "双方达成延期、豁免或撤销安排，或反制范围显著小于当前表述。",
+      "sources": [
+        {"role": "primary", "name": "White House — Section 338 Proclamation", "url": "https://www.whitehouse.gov/presidential-actions/2026/07/imposing-additional-duties-to-offset-canadian-discrimination-against-the-commerce-of-the-united-states-with-respect-to-dairy/", "published_at": "2026-07-31T00:00:00-04:00", "note": "核验税率、依据与生效时间。"},
+        {"role": "primary", "name": "White House — Canada Tariff Fact Sheet", "url": "https://www.whitehouse.gov/fact-sheets/2026/07/fact-sheet-president-donald-j-trump-imposes-additional-tariffs-on-canada/", "published_at": "2026-07-31T00:00:00-04:00", "note": "核验覆盖金额与豁免。"},
+        {"role": "primary", "name": "Prime Minister of Canada — First Ministers Readout", "url": "https://www.pm.gc.ca/en/news/readouts/2026/08/22/prime-minister-carney-chairs-first-ministers-meeting", "published_at": "2026-08-22T00:00:00-04:00", "note": "核验等额反制与9月8日生效安排。"}
+      ]
+    },
+    {
+      "id": "cftc-innovation-advisory-2026-08-20",
+      "headline": "CFTC首次创新咨询会议：加密监管、AI与预测市场进入正式议程",
+      "category": "crypto",
+      "event_type": "meeting",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-08-20T13:00:00-04:00",
+      "observed_at": "2026-08-21T02:00:00+08:00",
+      "verified_at": "2026-08-23T10:28:00+08:00",
+      "fact": "CFTC于8月20日举行创新咨询委员会首次会议，公开议程覆盖加密资产监管演进、AI和预测市场；公众意见征集截至8月27日。",
+      "new_information": "行业议题已进入监管机构正式、可提交公众意见的流程，但委员会讨论不等于最终规则。",
+      "inference": "推断：若形成清晰的市场结构、托管和合规规则，交易平台及合规基础设施的政策折价可能下降。",
+      "unverified": "最终规则文本、立法时间表，以及会议观点会在多大程度上被采纳。",
+      "transmission": [
+        {"level": "A", "path": "监管公开议程 → 市场结构/托管规则预期 → 合规成本与准入"},
+        {"level": "B", "path": "政策风险折价下降 → 币价与加密相关权益弹性"}
+      ],
+      "affected_assets": [
+        {"market": "加密相关美股", "direction": "偏多但高波动", "horizon": "1–20日", "reason": "COIN与MSTR同期分别上涨约16.41%和14.39%。"},
+        {"market": "比特币ETF", "direction": "偏多", "horizon": "1–20日", "reason": "IBIT同期上涨约12.64%，但涨幅不能单独归因于监管会议。"}
+      ],
+      "market_confirmation": {"stage": "initial_confirmation", "checked_at": "2026-08-23T10:10:00+08:00", "detail": "Futu OpenD：COIN 160.20→186.49，IBIT 38.78→43.68，MSTR 104.25→119.25（8月19日至21日）。存在强共振，不能证明单一催化因果。"},
+      "next_checkpoint": "8月27日前查看公开意见与后续文件；区分讨论、提案和正式规则。",
+      "invalidation": "后续无规则推进，或市场结构法案与监管口径重新出现重大分歧。",
+      "sources": [
+        {"role": "primary", "name": "CFTC — Innovation Advisory Committee Meeting", "url": "https://www.cftc.gov/PressRoom/PressReleases/9283-26", "published_at": "2026-08-20T00:00:00-04:00", "note": "核验会议、议程和公众意见截止日。"},
+        {"role": "primary", "name": "SEC — 2026 Regulatory Agenda", "url": "https://www.sec.gov/newsroom/speeches-statements/atkins-statement-2026-regulatory-agenda-070726", "published_at": "2026-07-07T00:00:00-04:00", "note": "监管背景，不代表本次会议结论。"}
+      ]
+    },
+    {
+      "id": "deepseek-v4-flash-vision-exp-2026-08-21",
+      "headline": "DeepSeek上线V4 Flash Vision实验模型：视觉能力进入API，但效果仍待复现",
+      "category": "ai",
+      "event_type": "product",
+      "status": "partially_verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-08-21T00:00:00+08:00",
+      "observed_at": "2026-08-23T09:15:00+08:00",
+      "verified_at": "2026-08-23T10:32:00+08:00",
+      "fact": "DeepSeek官方视觉API文档入口已出现，AI HOT收录信息显示可用模型标识为deepseek-v4-flash-vision-exp，定位为实验性视觉模型。",
+      "new_information": "DeepSeek产品线从纯文本推理扩展到可通过API调用的视觉能力，新增多模态入口。",
+      "inference": "推断：若真实推理成本、图像理解与稳定性具有优势，可能提高应用层调用；当前还不足以推导算力链收入。",
+      "unverified": "官方动态页面本轮未完整抓取；第三方评测、价格、吞吐、许可证、客户采用和收入贡献仍待核验。",
+      "transmission": [
+        {"level": "A", "path": "视觉API可调用 → 开发者接入 → 多模态应用采用"},
+        {"level": "C", "path": "能力/成本优势 → 调用量扩大 → 推理算力与云服务需求"}
+      ],
+      "affected_assets": [
+        {"market": "中国AI软件", "direction": "结构分化", "horizon": "1–3个月", "reason": "先看API可用性与采用，不以模型发布直接映射收入。"},
+        {"market": "中概科技", "direction": "未确认", "horizon": "1–10日", "reason": "同期KWEB下跌约2.06%，没有形成板块级价格确认。"}
+      ],
+      "market_confirmation": {"stage": "not_confirmed", "checked_at": "2026-08-23T10:10:00+08:00", "detail": "Futu OpenD：KWEB 27.22→26.66（8月19日至21日），板块价格未确认正向产业影响。"},
+      "next_checkpoint": "核验官方模型卡、API价格与限制，等待第三方视觉基准、稳定性和真实调用量。",
+      "invalidation": "模型无法稳定调用、第三方测试不能复现，或使用限制显著压制商业采用。",
+      "sources": [
+        {"role": "primary", "name": "DeepSeek API Docs — Vision", "url": "https://api-docs.deepseek.com/guides/vision/", "published_at": "2026-08-21T00:00:00+08:00", "note": "官方入口已识别；动态正文未完整读取，保留部分核验。"},
+        {"role": "secondary", "name": "AI HOT — DeepSeek-V4-Flash-Vision-Exp", "url": "https://aihot.virxact.com/items/cmt2qvfnj03zxro6tehwcikx4", "published_at": "2026-08-21T00:00:00+08:00", "note": "发现源；参数仍需官方文档和第三方测试。"}
+      ]
+    },
+    {
+      "id": "zai-glm-5-3-2026-08-14",
+      "headline": "Z.ai发布GLM-5.3：API已上线，权重仍待安全评估后开放",
+      "category": "ai",
+      "event_type": "product",
+      "status": "partially_verified",
+      "change_type": "upgraded",
+      "importance": 4,
+      "event_time": "2026-08-14T00:00:00+08:00",
+      "observed_at": "2026-08-23T10:36:32+08:00",
+      "verified_at": "2026-08-23T11:05:00+08:00",
+      "fact": "自动采集池先从AI HOT发现GLM-5.3线索，随后回查Z.ai官方发布页。官方称模型沿用GLM-5.2基座，能力提升来自后训练扩展；API已上线，支持low、high、max三档推理强度，不再支持关闭思考；权重计划在发布约两周后开放。",
+      "new_information": "这不是单纯参数规模升级，增量集中在长程编码、智能体任务和网络安全能力；API先行、权重后发，当前处于可调用但尚未完全开源阶段。",
+      "inference": "推断：若第三方编码与安全测试能够复现，同时调用成本保持优势，可能提高Z.ai开发者采用；在权重开放和调用量出现前，不能直接映射为算力或上市公司收入。",
+      "unverified": "官方公布的基准成绩、漏洞发现数量和成本优势主要为厂商自报；独立复现、实际API稳定性、客户调用量及权重如期开放仍待确认。",
+      "transmission": [
+        {"level": "A", "path": "API正式可用 → 编码智能体接入 → 开发者采用与调用量"},
+        {"level": "B", "path": "权重开放/第三方复现 → 开源生态扩散 → 国产模型竞争格局"},
+        {"level": "C", "path": "真实调用增长 → 推理基础设施需求 → 云与算力链收入"}
+      ],
+      "affected_assets": [
+        {"market": "中国AI软件", "direction": "结构性利好", "horizon": "1–3个月", "reason": "优先观察API调用、开发工具接入和价格，而不是自报榜单。"},
+        {"market": "国产算力链", "direction": "待确认", "horizon": "1–6个月", "reason": "模型发布本身不等于订单，需看到部署规模和收入。"},
+        {"market": "中概科技", "direction": "未确认", "horizon": "1–10日", "reason": "同期KWEB未形成模型发布驱动的板块级确认。"}
+      ],
+      "market_confirmation": {"stage": "not_confirmed", "checked_at": "2026-08-23T10:10:00+08:00", "detail": "Futu OpenD显示KWEB从8月19日至21日下跌约2.06%；没有观察到可归因于GLM-5.3的板块确认。"},
+      "next_checkpoint": "检查权重是否按计划开放、官方模型卡与许可证，并等待第三方编码、安全和成本复现。",
+      "invalidation": "权重延期、API稳定性或成本不及预期，或第三方测试无法复现核心能力。",
+      "candidate_refs": ["aihot-19abffd342019d1f"],
+      "sources": [
+        {"role": "primary", "name": "Z.ai — GLM-5.3: Frontier Coding with Emergent Cyber Capabilities", "url": "https://z.ai/blog/glm-5.3", "published_at": "2026-08-14T00:00:00+08:00", "note": "官方发布与API迁移说明；基准数据仍属于厂商自报。"},
+        {"role": "secondary", "name": "AI HOT — GLM-5.3上线", "url": "https://aihot.virxact.com/items/cmszeb2mx0b3srodpef1ub0j0", "published_at": "2026-08-19T09:03:29+08:00", "note": "采集池发现源；核心事实已回到Z.ai官方页面。"}
+      ]
+    },
+    {
+      "id": "white-house-crypto-ceo-meeting-claim-2026-08-19",
+      "headline": "待证真：特朗普被报道将参加白宫加密CEO会议，尚无官方会后文件",
+      "category": "crypto",
+      "event_type": "meeting",
+      "status": "pending",
+      "change_type": "new",
+      "importance": 3,
+      "event_time": "2026-08-19T14:00:00-04:00",
+      "observed_at": "2026-08-23T09:40:00+08:00",
+      "verified_at": null,
+      "fact": "CoinDesk援引知情人士称，特朗普预计参加一场与加密、预测市场和AI企业高管有关的白宫会议。",
+      "new_information": "若官方确认参会人与议程，事件可从行业消息升级为政策沟通信号。",
+      "inference": "推断：闭门会议不足以改变监管路径，真正可交易的增量来自会后声明、法案妥协或部门规则。",
+      "unverified": "白宫官方日程、特朗普是否实际出席、完整参会名单、会议纪要和政策承诺均未找到官方原文。",
+      "transmission": [
+        {"level": "B", "path": "高层沟通预期 → 加密政策风险偏好 → 币价与相关权益"},
+        {"level": "A", "path": "若形成正式规则/法案推进 → 市场结构与托管合规 → 行业盈利模型"}
+      ],
+      "affected_assets": [
+        {"market": "加密资产与相关美股", "direction": "传闻驱动、高波动", "horizon": "盘中至5日", "reason": "价格同期强势，但不能据此证明会议发生或政策改变。"}
+      ],
+      "market_confirmation": {"stage": "price_only", "checked_at": "2026-08-23T10:10:00+08:00", "detail": "COIN、IBIT、MSTR同期明显上涨；缺少官方会后材料，仅记录价格共振。"},
+      "next_checkpoint": "继续查找白宫正式日程、照片、讲话、事实清单或监管机构会后文件。",
+      "invalidation": "白宫否认、参会人披露会议未举行，或后续没有任何政策文件。",
+      "sources": [
+        {"role": "secondary", "name": "CoinDesk — White House crypto CEO meeting", "url": "https://www.coindesk.com/policy/2026/08/14/trump-expected-to-attend-white-house-meeting-with-crypto-ceos-sources-say", "published_at": "2026-08-14T00:00:00-04:00", "note": "匿名消息源；白宫未回应，不能升级为已核验。"}
+      ]
+    }
+  ],
+  "calendar": [
+    {"stage": "T-3", "title": "NVIDIA二季度业绩", "time": "北京时间8月27日约04:20发布，05:00电话会", "status": "confirmed", "check": "重点看数据中心收入、Blackwell交付、毛利率与下一季指引。"},
+    {"stage": "T-4", "title": "CFTC创新议题公众意见截止", "time": "美国时间8月27日", "status": "confirmed", "check": "区分行业诉求、委员会建议和正式监管提案。"},
+    {"stage": "T-9", "title": "加拿大反制清单预期窗口", "time": "未来数日，9月8日生效", "status": "watching", "check": "按商品编码映射公司敞口，避免泛化。"},
+    {"stage": "T-23", "title": "美联储9月FOMC", "time": "9月15–16日", "status": "confirmed", "check": "判断7月鹰派分歧是否延续。"}
+  ],
+  "source_health": [
+    {"group": "第一层 · 一手来源", "status": "verified", "last_success_at": "2026-08-23T10:36:32+08:00", "coverage": "12/12自动源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register、Z.ai HF共抓取542条，相关性筛选保留36条候选"},
+    {"group": "第二层 · 专业发现", "status": "partial", "last_success_at": "2026-08-23T11:18:00+08:00", "coverage": "AI HOT自动源1/1成功，抓取47条；MX_FinSearch本轮按需检索成功。Reuters、Bloomberg、FT、WSJ、金十、财联社、富途已登记但尚未自动轮询"},
+    {"group": "第三层 · 社交抢先", "status": "registered", "last_success_at": null, "coverage": "官方X、Truth Social、微信公众号、Telegram和行业记者已登记；当前0个自动源，任何内容默认仅线索"},
+    {"group": "市场验证", "status": "verified", "last_success_at": "2026-08-23T10:10:00+08:00", "coverage": "Futu OpenD截至2026-08-21最新完整交易日；价格相关不作因果证明"}
+  ],
+  "collection_run": {
+    "generated_at": "2026-08-23T10:36:32+08:00",
+    "configured_sources": 36,
+    "active_sources": 13,
+    "successful_sources": 13,
+    "failed_sources": 0,
+    "registered_manual_sources": 23,
+    "tier1_fetched": 542,
+    "tier1_candidates": 36,
+    "tier2_fetched": 47,
+    "candidate_pool_after_dedupe": 58,
+    "manual_connectors_succeeded": ["MX_FinSearch"],
+    "artifacts": ["sources.json", "candidates.json", "collection-status.json"]
+  },
+  "methodology": {
+    "priority_formula": "影响范围30% + 传导直接度25% + 证据可靠度20% + 预期差15% + 时间紧迫度10%",
+    "core_rule": "核心区只接受verified或partially_verified事件，并至少包含一个一手来源；匿名消息进入待证真。",
+    "limitations": "本页为2026-08-23北京时间快照。候选池由真实RSS/API采集生成，但核心事件仍需逐条正文核验；本轮13/13自动源成功，23个付费、登录或专用连接器来源只登记未自动化。市场价格来自Futu OpenD截至8月21日完整交易日，价格共振不代表因果。"
+  }
+}

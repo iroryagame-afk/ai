@@ -28,7 +28,11 @@
 .csn-item:hover .csn-drop, .csn-item:focus-within .csn-drop, .csn-item[data-open="true"] .csn-drop { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); }
 .csn-drop a { display: block; padding: 9px 11px; border-radius: 8px; color: var(--csn-nav-ink); text-decoration: none; }
 .csn-drop a:hover, .csn-drop a.current { background: var(--csn-nav-panel-2); }
-.csn-drop a b { display: block; font: 600 13.5px/1.35 var(--csn-nav-sans); }
+.csn-drop a b { display: flex; align-items: baseline; gap: 7px; font: 600 13.5px/1.35 var(--csn-nav-sans); }
+.csn-nav-refresh {
+  flex: none; color: #397153; font: 600 10px/1 var(--csn-nav-sans);
+  letter-spacing: .01em; white-space: nowrap; font-variant-numeric: tabular-nums;
+}
 .csn-drop a small { display: block; margin-top: 2px; color: var(--csn-nav-muted); font: 400 11.5px/1.45 var(--csn-nav-sans); }
 .csn-drop-separator { height: 1px; margin: 6px 8px; background: var(--csn-nav-line); }
 @media (max-width: 760px) {
