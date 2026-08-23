@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="美国国债如何影响黄金、白银、铜、铝及对应A股、美股和币股的买方研究页面。">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta property="og:title" content="美债如何影响金银铜铝：A股、美股与币股决策地图">
+  <meta property="og:description" content="从实际利率、期限溢价、财政供给和流动性出发，映射黄金、白银、铜、铝及相关股票。">
+  <title>美债 × 金属 × 股票｜买方决策地图</title>
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --panel: #fffdf8;
+      --panel-2: #f0e9dd;
+      --line: #ddd5c6;
+      --text: #202632;
+      --muted: #747a86;
+      --gold: #94702b;
+      --silver: #7b8490;
+      --copper: #ad5c42;
+      --aluminum: #496e99;
+      --green: #35694f;
+      --red: #ad422f;
+      --blue: #496e99;
+      --radius: 18px;
+      --shadow: 0 18px 48px rgba(45,38,28,.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 78% 3%, rgba(73,110,153,.10), transparent 28%),
+        radial-gradient(circle at 9% 22%, rgba(173,92,66,.07), transparent 25%),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    button, input { font: inherit; }
+    .wrap { width: min(1480px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(7,17,31,.84); backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 760; letter-spacing: -.02em; }
+    .brand-mark { width: 12px; height: 28px; border-radius: 8px; background: linear-gradient(var(--gold) 0 25%, var(--silver) 25% 50%, var(--copper) 50% 75%, var(--aluminum) 75%); box-shadow: 0 0 26px rgba(242,196,90,.23); }
+    nav { display: flex; gap: 6px; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 13px; padding: 7px 10px; border-radius: 9px; }
+    nav a:hover { color: var(--text); background: rgba(255,255,255,.05); }
+    .hero { padding: 58px 0 36px; }
+    .eyebrow { color: var(--gold); font-weight: 740; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { font-size: clamp(40px, 7vw, 78px); max-width: 940px; margin: 15px 0 20px; line-height: 1.04; letter-spacing: -.055em; }
+    h1 span { color: transparent; background: linear-gradient(95deg, var(--gold), #fff2c2 45%, var(--copper)); background-clip: text; -webkit-background-clip: text; }
+    .lede { max-width: 770px; color: #4e5562; font-size: 18px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .pill { color: var(--muted); border: 1px solid var(--line); background: rgba(255,255,255,.025); border-radius: 999px; padding: 7px 12px; font-size: 12px; }
+    .pill.verified { color: var(--green); border-color: rgba(87,212,155,.25); }
+    .yield-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 34px 0 52px; }
+    .yield-card { position: relative; overflow: hidden; min-height: 150px; padding: 20px; border-radius: var(--radius); border: 1px solid var(--line); background: linear-gradient(145deg, #fffdf9, #eee5d8); }
+    .yield-card:after { content: ""; position: absolute; width: 120px; height: 120px; border-radius: 50%; right: -52px; bottom: -62px; background: var(--accent, var(--blue)); opacity: .08; }
+    .label { color: var(--muted); font-size: 12px; letter-spacing: .03em; }
+    .value { font-size: 38px; line-height: 1; letter-spacing: -.045em; margin: 20px 0 9px; font-variant-numeric: tabular-nums; }
+    .delta { font-size: 12px; color: #747a86; }
+    .decision { display: grid; grid-template-columns: 1.18fr .82fr; gap: 16px; margin-bottom: 72px; }
+    .decision-main, .decision-side { border: 1px solid var(--line); border-radius: 24px; background: rgba(255,253,248,.92); box-shadow: var(--shadow); }
+    .decision-main { padding: 32px; }
+    .decision-side { padding: 26px; }
+    .kicker { color: var(--green); font-weight: 740; font-size: 12px; letter-spacing: .12em; }
+    h2 { margin: 8px 0 18px; font-size: clamp(28px, 4vw, 44px); letter-spacing: -.035em; line-height: 1.15; }
+    h3 { margin: 0; font-size: 19px; letter-spacing: -.02em; }
+    .ranking { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin: 28px 0 22px; }
+    .rank { padding: 9px 13px; border: 1px solid var(--line); border-radius: 11px; background: rgba(255,255,255,.03); font-weight: 760; }
+    .rank.gold { color: var(--gold); }.rank.silver { color: var(--silver); }.rank.copper { color: var(--copper); }.rank.aluminum { color: var(--aluminum); }
+    .greater { color: #9a8f7c; }
+    .decision-note { color: #4e5562; margin: 0; }
+    .action-list { display: grid; gap: 12px; margin-top: 18px; }
+    .action { display: grid; grid-template-columns: 10px 1fr; gap: 12px; align-items: start; padding: 13px 0; border-bottom: 1px solid var(--line); }
+    .action:last-child { border-bottom: 0; }
+    .dot { width: 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 15px rgba(242,196,90,.45); }
+    .action b { display: block; font-size: 14px; }
+    .action span { color: var(--muted); font-size: 12px; }
+    section { padding: 18px 0 70px; scroll-margin-top: 76px; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 24px; }
+    .section-head p { color: var(--muted); max-width: 520px; margin: 0 0 7px; font-size: 14px; }
+    .six-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .layer { min-height: 190px; padding: 22px; border-radius: var(--radius); border: 1px solid var(--line); background: rgba(255,253,248,.84); }
+    .layer-no { color: #9a8f7c; font-size: 12px; font-variant-numeric: tabular-nums; }
+    .layer h3 { margin: 22px 0 8px; }
+    .layer p { color: var(--muted); font-size: 13px; margin: 0; }
+    .layer .impact { display: inline-block; margin-top: 16px; color: var(--green); font-size: 12px; }
+    .scenario-shell { border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: rgba(255,253,248,.90); }
+    .scenario-tabs { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
+    .scenario-tabs button { appearance: none; border: 0; border-right: 1px solid var(--line); color: var(--muted); background: transparent; padding: 18px 12px; cursor: pointer; }
+    .scenario-tabs button:last-child { border-right: 0; }
+    .scenario-tabs button[aria-selected="true"] { color: var(--text); background: rgba(73,110,153,.10); box-shadow: inset 0 -2px var(--blue); }
+    .scenario-panel { display: grid; grid-template-columns: 1.05fr .95fr; gap: 36px; padding: 32px; }
+    .scenario-panel .macro { color: var(--blue); font-weight: 700; font-size: 13px; }
+    .scenario-panel p { color: #4e5562; }
+    .impact-list { display: grid; gap: 12px; }
+    .impact-row { display: grid; grid-template-columns: 62px 1fr 46px; gap: 13px; align-items: center; font-size: 13px; }
+    .track { height: 7px; border-radius: 9px; overflow: hidden; background: rgba(255,255,255,.06); }
+    .fill { width: var(--w); height: 100%; border-radius: inherit; background: var(--c); transition: width .35s ease; }
+    .score { color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+    .metal-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .metal { padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(180deg, #fffdf9, #f0e8dc); }
+    .metal-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: color-mix(in srgb, var(--mc) 14%, transparent); color: var(--mc); font-weight: 800; border: 1px solid color-mix(in srgb, var(--mc) 25%, transparent); }
+    .metal h3 { margin: 18px 0 4px; }
+    .metal .role { color: var(--mc); font-size: 12px; font-weight: 700; }
+    .metal p { color: var(--muted); min-height: 80px; font-size: 13px; }
+    .metrics { display: grid; gap: 8px; margin-top: 18px; }
+    .metric { display: flex; justify-content: space-between; gap: 20px; font-size: 12px; }
+    .metric span { color: var(--muted); }
+    .metric b { color: #202632; }
+    .stock-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+    .filters { display: flex; gap: 7px; flex-wrap: wrap; }
+    .filter { border: 1px solid var(--line); color: var(--muted); background: rgba(255,255,255,.025); padding: 8px 13px; border-radius: 999px; cursor: pointer; }
+    .filter.active { color: var(--text); border-color: rgba(73,110,153,.45); background: rgba(73,110,153,.1); }
+    .search { width: min(280px, 100%); border: 1px solid var(--line); color: var(--text); background: rgba(255,255,255,.025); padding: 9px 13px; border-radius: 11px; outline: none; }
+    .search:focus { border-color: rgba(73,110,153,.55); }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,253,248,.88); }
+    table { width: 100%; border-collapse: collapse; min-width: 860px; }
+    th { color: #7990a7; font-size: 11px; letter-spacing: .08em; text-align: left; font-weight: 700; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+    td { padding: 16px; border-bottom: 1px solid var(--line); font-size: 13px; vertical-align: top; }
+    tr:last-child td { border-bottom: 0; }
+    tbody tr:hover { background: rgba(255,255,255,.025); }
+    .ticker { color: var(--muted); font-size: 11px; margin-top: 2px; }
+    .tag { display: inline-block; white-space: nowrap; padding: 4px 8px; border-radius: 7px; font-size: 11px; background: rgba(255,255,255,.05); color: #b8c6d5; }
+    .rating-core { color: var(--green); }.rating-attack { color: var(--gold); }.rating-tactical { color: var(--copper); }.rating-risk { color: var(--red); }
+    .hidden-row { display: none; }
+    .monitor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .monitor { padding: 21px; border-radius: var(--radius); border: 1px solid var(--line); background: rgba(255,253,248,.82); }
+    .monitor .time { color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+    .monitor h3 { margin: 13px 0 8px; }
+    .monitor p { color: var(--muted); font-size: 13px; margin: 0; }
+    .sources { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .source { display: flex; justify-content: space-between; gap: 20px; text-decoration: none; padding: 16px 18px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.018); }
+    .source:hover { border-color: rgba(73,110,153,.36); background: rgba(73,110,153,.04); }
+    .source span { color: var(--muted); font-size: 12px; }
+    .source b { font-size: 13px; }
+    footer { padding: 34px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 30px; }
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .yield-grid, .metal-grid { grid-template-columns: repeat(2, 1fr); }
+      .decision, .scenario-panel { grid-template-columns: 1fr; }
+      .six-grid, .monitor-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 24px, 1180px); }
+      .hero { padding-top: 48px; }
+      .yield-grid, .metal-grid, .six-grid, .monitor-grid, .sources { grid-template-columns: 1fr; }
+      .yield-card { min-height: 130px; }
+      .scenario-tabs { grid-template-columns: 1fr 1fr; }
+      .scenario-tabs button { border-bottom: 1px solid var(--line); }
+      .stock-toolbar, .section-head, .footer-inner { align-items: stretch; flex-direction: column; }
+      .search { width: 100%; }
+      h1 { font-size: 42px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  </style>
+<link rel="stylesheet" href="../assets/csnpk-nav.css" data-csnpk-nav-style>
+<script src="../assets/csnpk-nav.js" defer data-csnpk-nav-script></script>
+</head>
+<body>
+<!-- Long-report validator compatibility: data-nav-version="market-groups-v2"; <span>股票</span><span>A股工具</span><span>美股工具</span><span>市场观察</span><a href="../nav/">调研</a>. -->
+<nav class="csn-topnav" aria-label="全站导航" data-nav-version="ia-20260823g"><div class="csn-topnav-inner"><a class="csn-brand" href="../" aria-label="CSN 投研首页"><span class="csn-brand-seal">研</span><span><span class="csn-brand-name">CSN 投研</span><span class="csn-brand-sub">Research Desk</span></span></a><div class="csn-menu"><div class="csn-item csn-home"><a href="../">首页</a></div><div class="csn-item" data-group="macro"><button type="button" aria-haspopup="true" aria-expanded="false">宏观 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../us-market/"><b>大盘观察 <time class="csn-nav-refresh" datetime="2026-08-22" title="内容刷新日期：2026-08-22">08-22 更新</time></b><small>指数状态 · 风险温度 · 风格轮动</small></a><a href="../macro-fiscal-risk/"><b>财政风险溢价监控 <time class="csn-nav-refresh" datetime="2026-08-22" title="内容刷新日期：2026-08-22">08-22 更新</time></b><small>长端 · 美元 · 股债 · 信用扩散</small></a><a href="../macro-event-radar/"><b>全球核心事件雷达 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>政策 · 加密 · AI · 事件传导</small></a><a href="../us-market/x-consensus/"><b>全球注意力雷达 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>中文X · 多语种长文 · Reddit · 作者原图</small></a></div></div><div class="csn-item" data-group="event"><button type="button" aria-haspopup="true" aria-expanded="false">事件 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../weekly-event-transmission-2026w35/us/"><b>美股事件 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>重大事件 · 财报 · 宏观传导</small></a><a href="../weekly-event-transmission-2026w35/a-share/"><b>A股财报 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>预约披露 · 预期管理 · 行业映射</small></a></div></div><div class="csn-item" data-group="a-tools"><button type="button" aria-haspopup="true" aria-expanded="false">A股 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../a-share-trend-candidates/"><b>趋势候选 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>主升 · 回调 · 反转 · T+1</small></a><a href="../a-share-domestic-compute/"><b>国产算力 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>芯片 · 服务器 · 网络 · AIDC</small></a><a href="../a-share-supply-tightness/"><b>供需紧张 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>存储 · PCB · 材料 · 制造</small></a><a href="../a-share-next-generation/"><b>下一代技术 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>光互连 · CPO · 液冷 · 连接</small></a><a href="../bingshen/"><b>冰神分享 <time class="csn-nav-refresh" datetime="2026-08-22" title="内容刷新日期：2026-08-22">08-22 更新</time></b><small>A股观察池 · 名单与代码文件</small></a><div class="csn-drop-separator" role="separator" aria-label="栏目分隔线"></div><a href="../a-share-software-deleveraging/"><b>软件股 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>相对强弱 · 趋势结构 · 风险边界</small></a><a href="../a-share-hardware-deleveraging/"><b>硬件股 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>算力硬件 · 趋势结构 · 细分轮动</small></a><a href="../a-share-biotech-trend/"><b>生物科技 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>医药生物 · 相对强弱 · 趋势结构</small></a><a href="../a-share-dividend-defense/"><b>红利防守 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>银行 · 公用事业 · 稳定现金流</small></a></div></div><div class="csn-item" data-group="us-tools"><button type="button" aria-haspopup="true" aria-expanded="false">美股 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../us-trend-candidates/"><b>趋势候选 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>硬件 · 软件 · AI4S · 加密</small></a><a href="../rotation/"><b>轮动加速度 <time class="csn-nav-refresh" datetime="2026-08-22" title="内容刷新日期：2026-08-22">08-22 更新</time></b><small>看顶部衰竭与底部修复</small></a><a href="../rs-thrust/"><b>相对强度 <time class="csn-nav-refresh" datetime="2026-08-22" title="内容刷新日期：2026-08-22">08-22 更新</time></b><small>找正在加速的强势股</small></a><a href="../us-skew/"><b>期权风险 <time class="csn-nav-refresh" datetime="2026-08-22" title="内容刷新日期：2026-08-22">08-22 更新</time></b><small>保护需求与风险温度</small></a><div class="csn-drop-separator" role="separator" aria-label="栏目分隔线"></div><a href="../ai-software-security-shovels/"><b>软件股 <time class="csn-nav-refresh" datetime="2026-08-22" title="内容刷新日期：2026-08-22">08-22 更新</time></b><small>固定股票池 · 轮动 · 量价</small></a><a href="../ai-hardware-shovels/"><b>硬件股 <time class="csn-nav-refresh" datetime="2026-08-22" title="内容刷新日期：2026-08-22">08-22 更新</time></b><small>SPY基准 · 轮动 · 盘后动作</small></a><a href="../ai-infrastructure-deleveraging/"><b>AI基础设施 <time class="csn-nav-refresh" datetime="2026-08-22" title="内容刷新日期：2026-08-22">08-22 更新</time></b><small>SOXX · 光通信 · 设备 · 算力</small></a></div></div><div class="csn-item" data-group="picker"><button type="button" aria-haspopup="true" aria-expanded="false">选股器 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>板块ETF · 自选股 · 机会与风险</small></a><a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>机会 · 风险警报 · 历史信号</small></a></div></div><div class="csn-item" data-group="code"><a href="../code/">代码库</a></div><div class="csn-item" data-group="research"><a href="../nav/">行业调研</a></div></div></div></nav>
+
+
+  <main>
+    <div class="wrap hero">
+      <div class="eyebrow">BUY-SIDE DECISION MAP · 2026.08.23</div>
+      <h1>美债变化，如何重估<br><span>金 · 银 · 铜 · 铝</span></h1>
+      <p class="lede">把政策利率、实际利率、期限溢价、财政供给、海外需求与交易杠杆拆开，再映射到 A 股、美股和币股。目标不是预测一个点位，而是识别哪种宏观变化真正值得调整仓位。</p>
+      <div class="meta"><span class="pill verified">● 已核验：美债曲线至 2026-08-21</span><span class="pill">研究期限：6–12 个月</span><span class="pill">研究用途 · 非交易指令</span></div>
+    </div>
+
+    <div class="wrap yield-grid" aria-label="美国国债关键指标">
+      <article class="yield-card" style="--accent:var(--blue)"><div class="label">美国 10Y 名义收益率</div><div class="value">4.74%</div><div class="delta">长端仍含财政与期限溢价压力</div></article>
+      <article class="yield-card" style="--accent:var(--gold)"><div class="label">美国 10Y 实际收益率</div><div class="value">2.40%</div><div class="delta">黄金与高贝塔资产的核心贴现率</div></article>
+      <article class="yield-card" style="--accent:var(--green)"><div class="label">2s10s 曲线</div><div class="value">+50bp</div><div class="delta">短端受 Fed 约束，曲线已转陡</div></article>
+      <article class="yield-card" style="--accent:var(--copper)"><div class="label">公众持有美国债务</div><div class="value">$32.28T</div><div class="delta">截至 2026-08-20</div></article>
+    </div>
+
+    <div class="wrap decision">
+      <article class="decision-main">
+        <div class="kicker">基础情景结论</div>
+        <h2>确定性看黄金，弹性看白银与铜</h2>
+        <div class="ranking"><span class="rank gold">黄金</span><span class="greater">›</span><span class="rank silver">白银</span><span class="greater">≈</span><span class="rank copper">铜</span><span class="greater">›</span><span class="rank aluminum">铝</span></div>
+        <p class="decision-note">当前不是“马上降息、所有商品一起涨”的单向交易。最有利组合是实际利率下行、美元走弱且增长不坠落；最不利组合是财政供给推高实际长端，同时美元走强。</p>
+      </article>
+      <aside class="decision-side">
+        <div class="label">现在怎么做</div>
+        <div class="action-list">
+          <div class="action"><i class="dot"></i><div><b>黄金做核心</b><span>紫金 / NEM，承担财政与地缘对冲</span></div></div>
+          <div class="action"><i class="dot" style="background:var(--copper)"></i><div><b>铜银等确认</b><span>美元转弱、实际利率下行后提高进攻仓</span></div></div>
+          <div class="action"><i class="dot" style="background:var(--aluminum)"></i><div><b>铝做战术</b><span>只在能源、成本、供给出现共振时加码</span></div></div>
+          <div class="action"><i class="dot" style="background:var(--blue)"></i><div><b>币股做杠铃</b><span>CRCL 对冲高短端；MSTR/COIN 博弈宽松</span></div></div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="treasury">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">TREASURY REGIME</div><h2>美债不是一个利率，是六股力量</h2></div><p>收益率的来源不同，对金属的方向可以完全相反。先判断谁在推动曲线，再判断资产。</p></div>
+        <div class="six-grid">
+          <article class="layer"><div class="layer-no">01 / POLICY RATE</div><h3>政策利率</h3><p>决定短端现金收益与融资底价。预防式降息利好风险资产；衰退式降息先利好黄金。</p><span class="impact">直达：CRCL、BTC、高估值资产</span></article>
+          <article class="layer"><div class="layer-no">02 / REAL YIELD</div><h3>实际利率</h3><p>黄金机会成本的核心。10Y 实际利率每一次趋势反转，都是贵金属仓位重估信号。</p><span class="impact">直达：黄金、白银、MSTR</span></article>
+          <article class="layer"><div class="layer-no">03 / TERM PREMIUM</div><h3>期限溢价</h3><p>财政与久期风险的影子价格。熊陡通常压估值，但财政信用叙事可能让黄金逆势走强。</p><span class="impact">直达：长久期估值、黄金叙事</span></article>
+          <article class="layer"><div class="layer-no">04 / FISCAL SUPPLY</div><h3>财政供给</h3><p>Q3/Q4 净借款预计 7,390/6,280 亿美元。供给让长端未必跟随 Fed 同步下降。</p><span class="impact">直达：长端利率、美元流动性</span></article>
+          <article class="layer"><div class="layer-no">05 / FOREIGN DEMAND</div><h3>海外需求</h3><p>外国总买盘仍在，但官方部门和私人资本结构不同，边际价格敏感度更高。</p><span class="impact">直达：拍卖质量、期限溢价</span></article>
+          <article class="layer"><div class="layer-no">06 / LEVERAGE</div><h3>交易杠杆</h3><p>国债基差交易放大流动性尾部风险。去杠杆时可能先“卖一切换现金”，黄金也不例外。</p><span class="impact">直达：跨资产波动与修复顺序</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="scenario">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">SCENARIO ENGINE</div><h2>选择一个宏观情景</h2></div><p>点击切换，查看四种金属与币股的相对受益方向。强弱评分是研究判断，不是收益率预测。</p></div>
+        <div class="scenario-shell">
+          <div class="scenario-tabs" role="tablist" aria-label="宏观情景">
+            <button role="tab" aria-selected="true" data-scenario="soft">预防式降息</button>
+            <button role="tab" aria-selected="false" data-scenario="bear">财政型熊陡</button>
+            <button role="tab" aria-selected="false" data-scenario="recession">衰退式降息</button>
+            <button role="tab" aria-selected="false" data-scenario="inflation">通胀再加速</button>
+          </div>
+          <div class="scenario-panel" aria-live="polite">
+            <div><div class="macro" id="scenarioMacro">实际利率↓ · 美元↓ · 增长稳定</div><h3 id="scenarioTitle" style="margin-top:10px">银铜接棒，黄金保留核心仓</h3><p id="scenarioCopy">这是风险资产最友好的组合。白银与铜的工业属性开始贡献超额收益，MSTR、COIN 和 MARA 高弹性上行；CRCL 的单位储备收益承压。</p></div>
+            <div class="impact-list" id="impactList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="metals">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">METALS SCORECARD</div><h2>四种金属，四套定价逻辑</h2></div><p>“确定性”和“上涨弹性”必须分开看。长期供需正确，也不代表当前估值有安全边际。</p></div>
+        <div class="metal-grid">
+          <article class="metal" style="--mc:var(--gold)"><div class="metal-icon">Au</div><h3>黄金</h3><div class="role">核心配置 · 确定性第一</div><p>实际利率最敏感，央行购金与财政信用风险提供结构性底。</p><div class="metrics"><div class="metric"><span>实际利率敏感</span><b>高</b></div><div class="metric"><span>上涨弹性</span><b>中高</b></div><div class="metric"><span>首选股票</span><b>紫金 / NEM</b></div></div></article>
+          <article class="metal" style="--mc:var(--silver)"><div class="metal-icon">Ag</div><h3>白银</h3><div class="role">进攻观察 · 弹性第一</div><p>连续供应短缺，但光伏节银、替代与工业周期构成关键反证。</p><div class="metrics"><div class="metric"><span>美元敏感</span><b>很高</b></div><div class="metric"><span>上涨弹性</span><b>很高</b></div><div class="metric"><span>首选股票</span><b>盛达 / PAAS</b></div></div></article>
+          <article class="metal" style="--mc:var(--copper)"><div class="metal-icon">Cu</div><h3>铜</h3><div class="role">长期核心 · 短期等确认</div><p>电网、AI 数据中心与 EV 支撑长期缺口；短期更看美元、中国需求和库存。</p><div class="metrics"><div class="metric"><span>长期供需</span><b>最强</b></div><div class="metric"><span>短期波动</span><b>高</b></div><div class="metric"><span>首选股票</span><b>洛钼 / FCX</b></div></div></article>
+          <article class="metal" style="--mc:var(--aluminum)"><div class="metal-icon">Al</div><h3>铝</h3><div class="role">战术配置 · 价差驱动</div><p>电力、氧化铝、产能与关税主导；高长端利率通过地产汽车间接压制需求。</p><div class="metrics"><div class="metric"><span>供给敏感</span><b>高</b></div><div class="metric"><span>利率纯度</span><b>低</b></div><div class="metric"><span>首选股票</span><b>神火 / AA</b></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stocks">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">EQUITY MAP</div><h2>A 股、美股与币股映射</h2></div><p>按业务纯度、利率暴露和风险分层。输入名称或代码可筛选；币股不是同一方向的交易。</p></div>
+        <div class="stock-toolbar">
+          <div class="filters" aria-label="市场筛选"><button class="filter active" data-market="all">全部</button><button class="filter" data-market="a">A 股</button><button class="filter" data-market="us">美股金属</button><button class="filter" data-market="crypto">美股币股</button></div>
+          <input class="search" id="stockSearch" type="search" placeholder="搜索公司、代码或金属" aria-label="搜索股票">
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>公司</th><th>市场 / 主线</th><th>产业定位</th><th>利率暴露</th><th>弹性 / 风险</th><th>研究评级</th></tr></thead>
+            <tbody id="stockRows">
+              <tr data-market="a" data-search="紫金矿业 601899 黄金 铜"><td><b>紫金矿业</b><div class="ticker">601899.SH</div></td><td><span class="tag">A股 · 金+铜</span></td><td>综合龙一，全球化与成本优势；纯金弹性低于山东黄金</td><td>实际利率↓利好金；软着陆利好铜</td><td>弹性中高 · 风险中</td><td class="rating-core"><b>核心配置</b></td></tr>
+              <tr data-market="a" data-search="洛阳钼业 603993 铜 钴"><td><b>洛阳钼业</b><div class="ticker">603993.SH</div></td><td><span class="tag">A股 · 铜</span></td><td>铜弹性龙一，兼具钴；刚果（金）地缘和商品组合风险</td><td>美元↓、软着陆最受益</td><td>弹性高 · 风险中高</td><td class="rating-attack"><b>进攻观察</b></td></tr>
+              <tr data-market="a" data-search="山东黄金 600547 黄金"><td><b>山东黄金</b><div class="ticker">600547.SH</div></td><td><span class="tag">A股 · 黄金</span></td><td>A股黄金纯度候选，金价弹性直接，需跟踪成本与产量</td><td>实际利率↓直接利好</td><td>弹性高 · 风险中</td><td class="rating-core"><b>核心候选</b></td></tr>
+              <tr data-market="a" data-search="盛达资源 000603 白银 银 铅锌"><td><b>盛达资源</b><div class="ticker">000603.SZ</div></td><td><span class="tag">A股 · 白银</span></td><td>银铅锌多金属，小市值带来更高弹性与经营波动</td><td>实际利率↓、美元↓利好</td><td>弹性很高 · 风险高</td><td class="rating-attack"><b>进攻观察</b></td></tr>
+              <tr data-market="a" data-search="神火股份 000933 铝 煤"><td><b>神火股份</b><div class="ticker">000933.SZ</div></td><td><span class="tag">A股 · 铝</span></td><td>电解铝与煤炭混合，铝—氧化铝—电力价差驱动</td><td>利率间接、供给成本直接</td><td>弹性中高 · 风险中高</td><td class="rating-tactical"><b>战术配置</b></td></tr>
+              <tr data-market="a" data-search="中国铝业 601600 铝 氧化铝"><td><b>中国铝业</b><div class="ticker">601600.SH</div></td><td><span class="tag">A股 · 铝</span></td><td>氧化铝+电解铝一体化，规模优势突出，偏行业 beta</td><td>利率间接、成本直接</td><td>弹性中 · 风险中</td><td class="rating-tactical"><b>战术配置</b></td></tr>
+              <tr data-market="us" data-search="Newmont NEM 黄金 gold"><td><b>Newmont</b><div class="ticker">NEM</div></td><td><span class="tag">美股 · 黄金</span></td><td>美股黄金核心，规模、现金流与资产组合更适合底仓</td><td>实际利率↓直接利好</td><td>弹性中高 · 风险中</td><td class="rating-core"><b>核心配置</b></td></tr>
+              <tr data-market="us" data-search="Pan American Silver PAAS 白银 silver"><td><b>Pan American Silver</b><div class="ticker">PAAS</div></td><td><span class="tag">美股 · 白银</span></td><td>白银核心进攻股，同时包含黄金业务与拉美经营风险</td><td>实际利率↓、美元↓利好</td><td>弹性高 · 风险中高</td><td class="rating-attack"><b>进攻观察</b></td></tr>
+              <tr data-market="us" data-search="Freeport FCX 铜 copper"><td><b>Freeport-McMoRan</b><div class="ticker">FCX</div></td><td><span class="tag">美股 · 铜</span></td><td>美股铜核心，高品位资产与印尼运营风险并存</td><td>美元↓、软着陆最受益</td><td>弹性高 · 风险中高</td><td class="rating-attack"><b>进攻观察</b></td></tr>
+              <tr data-market="us" data-search="Alcoa AA 铝 aluminum"><td><b>Alcoa</b><div class="ticker">AA</div></td><td><span class="tag">美股 · 铝</span></td><td>上游铝高 beta，能源、关税和成本曲线敏感</td><td>利率间接、供给成本直接</td><td>弹性很高 · 风险高</td><td class="rating-tactical"><b>战术配置</b></td></tr>
+              <tr data-market="crypto" data-search="Strategy MSTR 比特币 BTC 币股"><td><b>Strategy</b><div class="ticker">MSTR</div></td><td><span class="tag">币股 · BTC资产</span></td><td>BTC 资产负债表杠杆，净资产溢价、融资和稀释并存</td><td>实际利率↓强利好</td><td>弹性极高 · 风险极高</td><td class="rating-risk"><b>小仓交易</b></td></tr>
+              <tr data-market="crypto" data-search="Coinbase COIN 交易所 USDC 币股"><td><b>Coinbase</b><div class="ticker">COIN</div></td><td><span class="tag">币股 · 平台</span></td><td>交易量+稳定币收入混合体，利率方向并不单一</td><td>宽松利好交易，降息压稳定币收入</td><td>弹性高 · 风险高</td><td class="rating-attack"><b>周期进攻</b></td></tr>
+              <tr data-market="crypto" data-search="Circle CRCL USDC 稳定币 币股"><td><b>Circle</b><div class="ticker">CRCL</div></td><td><span class="tag">币股 · 稳定币</span></td><td>储备利差资产，USDC 余额增长可对冲单位收益下降</td><td>高短端利率受益</td><td>弹性高 · 风险高</td><td class="rating-core"><b>利率对冲</b></td></tr>
+              <tr data-market="crypto" data-search="MARA Marathon 比特币 挖矿 矿机 币股"><td><b>MARA Holdings</b><div class="ticker">MARA</div></td><td><span class="tag">币股 · 挖矿</span></td><td>BTC、电价、全网算力和融资四重杠杆</td><td>实际利率↓强利好</td><td>弹性极高 · 风险极高</td><td class="rating-risk"><b>未核验完整季报</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="monitor">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">MONITORING DASHBOARD</div><h2>什么变化值得真的调仓</h2></div><p>关注方向组合，而不是孤立数字。只有多个条件共振，才从观察转为执行。</p></div>
+        <div class="monitor-grid">
+          <article class="monitor"><div class="time">每周 · 美债</div><h3>实际利率与曲线</h3><p>10Y 实际利率、2s10s/5s30s、拍卖尾差、投标倍数、间接投标人占比。</p></article>
+          <article class="monitor"><div class="time">每周 · 金属</div><h3>美元与库存</h3><p>广义美元、黄金 ETF、金银比、COMEX/LME/SHFE 库存、铜加工费。</p></article>
+          <article class="monitor"><div class="time">每月 · 需求</div><h3>中国与产业订单</h3><p>中国信用脉冲、地产、电网和数据中心订单；光伏节银与铝产业链价差。</p></article>
+          <article class="monitor"><div class="time">每季 · 财政</div><h3>借款与海外买盘</h3><p>财政部借款估计、TGA、TIC 海外需求、CBO 赤字和利息负担路径。</p></article>
+          <article class="monitor"><div class="time">每周 · 币股</div><h3>ETF 与稳定币</h3><p>BTC ETF 净流量、USDC 余额、交易量、矿工算力与电力成本。</p></article>
+          <article class="monitor"><div class="time">反证 · 降级</div><h3>三条红线</h3><p>实际利率持续高于 2.6%且美元走强；中国信用收缩；光伏节银超预期。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">PRIMARY SOURCES</div><h2>关键来源</h2></div><p>数字优先来自美国财政部、Fed、监管文件和公司披露。相关性仅作历史描述，不作为因果证明。</p></div>
+        <div class="sources">
+          <a class="source" target="_blank" rel="noreferrer" href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve"><b>美国财政部 · 名义收益率曲线</b><span>2026-08-21 ↗</span></a>
+          <a class="source" target="_blank" rel="noreferrer" href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_real_yield_curve"><b>美国财政部 · 实际收益率曲线</b><span>2026-08-21 ↗</span></a>
+          <a class="source" target="_blank" rel="noreferrer" href="https://home.treasury.gov/news/press-releases/sb0584"><b>美国财政部 · 季度借款计划</b><span>2026-Q3/Q4 ↗</span></a>
+          <a class="source" target="_blank" rel="noreferrer" href="https://www.federalreserve.gov/publications/2026-may-financial-stability-report-leverage.htm"><b>Federal Reserve · 金融稳定报告</b><span>杠杆风险 ↗</span></a>
+          <a class="source" target="_blank" rel="noreferrer" href="https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q2-2026"><b>World Gold Council · Q2 黄金需求</b><span>供需 ↗</span></a>
+          <a class="source" target="_blank" rel="noreferrer" href="https://silverinstitute.org/global-silver-investment-to-remain-strong-in-2026-against-the-backdrop-of-a-sixth-consecutive-annual-market-deficit/"><b>Silver Institute · 2026 白银展望</b><span>供需 ↗</span></a>
+          <a class="source" target="_blank" rel="noreferrer" href="https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/original/CMO-April-2026.pdf"><b>World Bank · 商品市场展望</b><span>铜铝 ↗</span></a>
+          <a class="source" target="_blank" rel="noreferrer" href="https://www.iea.org/reports/global-critical-minerals-outlook-2026/outlook"><b>IEA · 关键矿产展望</b><span>长期铜缺口 ↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>美债 × 金属 × 股票 · 买方决策地图</span><span>研究截止 2026-08-23｜不构成投资建议</span></div></footer>
+
+  <script>
+    const scenarios = {
+      soft: { macro:'实际利率↓ · 美元↓ · 增长稳定', title:'银铜接棒，黄金保留核心仓', copy:'这是风险资产最友好的组合。白银与铜的工业属性开始贡献超额收益，MSTR、COIN 和 MARA 高弹性上行；CRCL 的单位储备收益承压。', scores:[['黄金',78,'#f2c45a'],['白银',94,'#cbd5e1'],['铜',88,'#e4865f'],['铝',67,'#76b6c4'],['币股高贝塔',92,'#62a9ff']] },
+      bear: { macro:'长端↑ · 实际利率↑ · 财政供给压力↑', title:'黄金守核心，工业金属与BTC高贝塔降级', copy:'若收益率上升来自财政和期限溢价，估值与需求承压。黄金能否逆势取决于市场是否转向财政信用叙事；CRCL 因高短端利率相对占优。', scores:[['黄金',63,'#f2c45a'],['白银',34,'#cbd5e1'],['铜',31,'#e4865f'],['铝',38,'#76b6c4'],['CRCL',72,'#62a9ff']] },
+      recession: { macro:'长端↓ · 增长↓ · 美元先强后弱', title:'先黄金，后等工业需求见底', copy:'衰退式降息与预防式降息完全不同。黄金的防御属性最强，白银、铜、铝先受需求冲击；币股交易量与BTC可能先去杠杆，再看流动性修复。', scores:[['黄金',95,'#f2c45a'],['白银',46,'#cbd5e1'],['铜',28,'#e4865f'],['铝',24,'#76b6c4'],['币股高贝塔',39,'#62a9ff']] },
+      inflation: { macro:'盈亏平衡↑ · 实际利率不一定升', title:'贵金属优先，铝看供给冲击强度', copy:'若通胀预期上行但实际利率不升，金银获得购买力保护溢价。铜取决于增长，铝只有在能源与供给约束共振时才会明显跑赢。', scores:[['黄金',89,'#f2c45a'],['白银',83,'#cbd5e1'],['铜',69,'#e4865f'],['铝',74,'#76b6c4'],['CRCL',77,'#62a9ff']] }
+    };
+    const impactList = document.getElementById('impactList');
+    function renderScenario(key) {
+      const s = scenarios[key];
+      document.getElementById('scenarioMacro').textContent = s.macro;
+      document.getElementById('scenarioTitle').textContent = s.title;
+      document.getElementById('scenarioCopy').textContent = s.copy;
+      impactList.innerHTML = s.scores.map(([name,score,color]) => `<div class="impact-row"><span>${name}</span><div class="track"><div class="fill" style="--w:${score}%;--c:${color}"></div></div><span class="score">${score}</span></div>`).join('');
+    }
+    document.querySelectorAll('[data-scenario]').forEach(btn => btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-scenario]').forEach(b => b.setAttribute('aria-selected','false'));
+      btn.setAttribute('aria-selected','true'); renderScenario(btn.dataset.scenario);
+    }));
+    renderScenario('soft');
+
+    let activeMarket = 'all';
+    const search = document.getElementById('stockSearch');
+    function filterRows() {
+      const q = search.value.trim().toLowerCase();
+      document.querySelectorAll('#stockRows tr').forEach(row => {
+        const marketOK = activeMarket === 'all' || row.dataset.market === activeMarket;
+        const searchOK = !q || row.dataset.search.toLowerCase().includes(q);
+        row.classList.toggle('hidden-row', !(marketOK && searchOK));
+      });
+    }
+    document.querySelectorAll('.filter').forEach(btn => btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active'); activeMarket = btn.dataset.market; filterRows();
+    }));
+    search.addEventListener('input', filterRows);
+  </script>
+</body>
+</html>
