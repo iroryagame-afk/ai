@@ -68,6 +68,16 @@ class SiteNavigationTests(unittest.TestCase):
         self.assertEqual(a_share.count('class="csn-drop-separator"'), 1)
         self.assertEqual(sample.count(">冰神分享<"), 1)
 
+    def test_trend_candidate_pages_live_under_their_market_navigation(self):
+        sample = SITE_NAV.nav("index.html")
+        a_share = re.search(r'data-group="a-tools".*?</div></div>', sample, re.S).group(0)
+        us_share = re.search(r'data-group="us-tools".*?</div></div>', sample, re.S).group(0)
+        picker = re.search(r'data-group="picker".*?</div></div>', sample, re.S).group(0)
+        self.assertIn('href="./a-share-trend-candidates/"', a_share)
+        self.assertIn('href="./us-trend-candidates/"', us_share)
+        self.assertNotIn("trend-candidates", picker)
+        self.assertEqual(picker.count("docs.google.com/spreadsheets"), 2)
+
     def test_split_pages_only_publish_their_own_mainline(self):
         expected = {
             "a-share-domestic-compute": ("国产算力", "国产算力核心矩阵"),

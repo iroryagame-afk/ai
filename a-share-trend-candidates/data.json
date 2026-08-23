@@ -1,0 +1,47 @@
+{
+  "market": "CN",
+  "title": "A股趋势候选表",
+  "data_date": "2026-08-21",
+  "generated_at_bj": "2026-08-21T15:16:22+08:00",
+  "coverage_ratio": 0.9971,
+  "market_mode": "弱市软门控",
+  "earnings_calendar_verified": false,
+  "earnings_source": "源数据未提供，全部降级为观察",
+  "matrix": [
+    {
+      "category": "其他",
+      "主升": [
+        {
+          "ticker": "300522",
+          "name": "世名科技",
+          "state": "主升",
+          "level": "等待确认",
+          "subtheme": "弱市逆势候选",
+          "buy_points": [
+            "盘整后二次启动"
+          ],
+          "kind": "盘整后二次启动",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.3,
+          "signal_low": null
+        },
+        {
+          "ticker": "603061",
+          "name": "金海通",
+          "state": "主升",
+          "level": "等待确认",
+          "subtheme": "弱市逆势候选",
+          "buy_points": [
+            "趋势加速"
+          ],
+          "kind": "趋势加速",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.9,
+          "signal_low": null
+        }
+      ],
+      "回调": [],
+      "反转": []
+    }
+  ]
+}

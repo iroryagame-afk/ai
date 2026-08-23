@@ -9,11 +9,12 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NAV_VERSION = "ia-20260823d"
+NAV_VERSION = "ia-20260823e"
 ACTIVE_DYNAMIC = {
     "index.html",
     "a-share-software-deleveraging/index.html",
     "a-share-hardware-deleveraging/index.html",
+    "a-share-trend-candidates/index.html",
     "ai-infrastructure-deleveraging/index.html",
     "us-software-deleveraging/index.html",
     "a-share-t1-focus/index.html",
@@ -25,6 +26,7 @@ ACTIVE_DYNAMIC = {
     "rotation/index.html",
     "ai-software-security-shovels/index.html",
     "ai-hardware-shovels/index.html",
+    "us-trend-candidates/index.html",
     "us-skew/index.html",
     "us-market/index.html",
     "macro-fiscal-risk/index.html",
@@ -114,6 +116,7 @@ def nav(relative: str) -> str:
             ("us-market/x-consensus/", "全球注意力雷达", "中文X · 多语种长文 · Reddit · 作者原图"),
         ]),
         ("a-tools", "A股", [
+            ("a-share-trend-candidates/", "趋势候选", "主升 · 回调 · 反转 · T+1"),
             ("a-share-domestic-compute/", "国产算力", "芯片 · 服务器 · 网络 · AIDC"),
             ("a-share-supply-tightness/", "供需紧张", "存储 · PCB · 材料 · 制造"),
             ("a-share-next-generation/", "下一代技术", "光互连 · CPO · 液冷 · 连接"),
@@ -123,6 +126,7 @@ def nav(relative: str) -> str:
             ("a-share-hardware-deleveraging/", "硬件股", "算力硬件 · 二次确认 · 个股分化"),
         ]),
         ("us-tools", "美股", [
+            ("us-trend-candidates/", "趋势候选", "硬件 · 软件 · AI4S · 加密"),
             ("rotation/", "轮动加速度", "看顶部衰竭与底部修复"),
             ("rs-thrust/", "相对强度", "找正在加速的强势股"),
             ("us-skew/", "期权风险", "保护需求与风险温度"),
