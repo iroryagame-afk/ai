@@ -331,9 +331,9 @@ footer.site-footer {
     <h1 class="hero-title csn-rise d1">研究驱动的<br />一站式<em>投研工作台</em></h1>
     <p class="hero-lede csn-rise d2">A股、美股、宏观、事件、选股器、代码库与行业调研，统一入口、持续更新。</p>
     <div class="hero-stats csn-rise d3">
-      <div class="hero-stat"><b>4</b><span>股票走势总结</span></div>
-      <div class="hero-stat"><b>3</b><span>独立决策入口</span></div>
-      <div class="hero-stat"><b id="reportCount">14</b><span>公开调研报告</span></div>
+      <div class="hero-stat" data-metric-source="shared-navigation"><b id="topNavCount">–</b><span>顶层导航栏目</span></div>
+      <div class="hero-stat" data-metric-source="shared-navigation"><b id="internalPageCount">–</b><span>站内页面入口</span></div>
+      <div class="hero-stat" data-metric-source="nav/reports.json"><b id="reportCount">–</b><span>公开调研报告</span></div>
     </div>
     <div class="hero-update csn-rise d4" aria-label="最近更新说明">
       <span class="verified">已核验</span>
@@ -413,6 +413,19 @@ footer.site-footer {
 
 <script>
 (function () {
+  var menu = document.querySelector('.csn-menu');
+  var topLevelItems = menu ? menu.querySelectorAll(':scope > .csn-item') : [];
+  var internalRoutes = new Set();
+  if (menu) {
+    menu.querySelectorAll('a[href]').forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (!href || href === './' || /^(?:https?:)?\/\//.test(href)) return;
+      internalRoutes.add(new URL(href, document.baseURI).pathname.replace(/index\.html$/, ''));
+    });
+  }
+  document.getElementById('topNavCount').textContent = topLevelItems.length || '–';
+  document.getElementById('internalPageCount').textContent = internalRoutes.size || '–';
+
   fetch("./nav/reports.json", { cache: "no-store" })
     .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
     .then(function (entries) {

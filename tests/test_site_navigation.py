@@ -92,6 +92,17 @@ class SiteNavigationTests(unittest.TestCase):
         self.assertIn('class="verified">已核验</span>', text)
         self.assertIn("国产算力、供需紧张、下一代技术、美股事件、A股财报", text)
 
+    def test_homepage_metrics_are_driven_by_navigation_and_report_registry(self):
+        text = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertNotIn("股票走势总结</span>", text)
+        self.assertNotIn("独立决策入口</span>", text)
+        self.assertIn('id="topNavCount">–</b><span>顶层导航栏目</span>', text)
+        self.assertIn('id="internalPageCount">–</b><span>站内页面入口</span>', text)
+        self.assertIn('data-metric-source="nav/reports.json"', text)
+        self.assertIn("querySelectorAll(':scope > .csn-item')", text)
+        self.assertIn("internalRoutes.size", text)
+        self.assertIn("entries.length", text)
+
     def test_shared_css_preserves_baseline_type_size(self):
         css = (ROOT / "assets/csnpk-nav.css").read_text(encoding="utf-8")
         self.assertIn("font: 600 14px/1", css)
