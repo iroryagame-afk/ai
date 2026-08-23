@@ -130,6 +130,11 @@ class SiteNavigationTests(unittest.TestCase):
         self.assertIn("font-size: 13px", css)
         self.assertIn("font-size: 9px", css)
 
+    def test_shared_script_preempts_legacy_nav_click_handlers(self):
+        script = (ROOT / "assets/csnpk-nav.js").read_text(encoding="utf-8")
+        self.assertIn("event.stopImmediatePropagation()", script)
+        self.assertIn("{ capture: true }", script)
+
     def test_refresh_dates_follow_dropdown_titles(self):
         sample = SITE_NAV.nav("index.html")
         self.assertIn('轮动加速度 <time class="csn-nav-refresh"', sample)

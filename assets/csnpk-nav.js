@@ -13,7 +13,7 @@
       const button = item.querySelector(':scope > button');
       if (!button) return;
       button.addEventListener('click', (event) => {
-        event.stopPropagation();
+        event.stopImmediatePropagation();
         const opening = item.getAttribute('data-open') !== 'true';
         closeAll(item);
         if (opening) {
@@ -24,7 +24,7 @@
           nav.removeAttribute('data-menu-open');
         }
         button.setAttribute('aria-expanded', String(opening));
-      });
+      }, { capture: true });
     });
     document.addEventListener('click', () => closeAll());
     nav.addEventListener('keydown', (event) => {
