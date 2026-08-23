@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="核验英伟达AI服务器涨价报道，拆解存储、GPU、服务器整机、云厂商与国产替代的美股和A股利好利空。">
+  <meta property="og:title" content="英伟达服务器涨价：谁赚到钱，谁吞下成本">
+  <meta property="og:description" content="美股与A股分层映射：直接定价权、成本转嫁、利润挤压与国产替代。">
+  <title>英伟达服务器涨价：美股与A股利好利空｜CSN投研</title>
+  <style>
+    :root{--paper:#f5f1e8;--panel:#fffdf8;--ink:#202632;--ink2:#4e5562;--muted:#747a86;--line:#ddd5c6;--navy:#173a5e;--red:#ad422f;--gold:#94702b;--green:#35694f;--orange:#a45a2a;--shadow:0 18px 48px rgba(45,38,28,.09);--serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;overflow-x:hidden;color:var(--ink);background:var(--paper);font-family:var(--sans);line-height:1.72}a{color:var(--navy);text-underline-offset:3px}.csn-drop{width:250px}.shell{width:min(1480px,calc(100% - 32px));margin:0 auto;padding:34px 0 72px}.hero{position:relative;overflow:hidden;padding:52px 52px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,#fffdf9 0%,#f0e8da 100%);box-shadow:var(--shadow)}.hero:after{content:"+15%?";position:absolute;right:16px;bottom:-28px;color:rgba(173,66,47,.055);font:900 130px/1 var(--serif);letter-spacing:-.08em}.eyebrow{position:relative;z-index:1;color:var(--red);font-size:12px;font-weight:800;letter-spacing:.17em}.hero h1{position:relative;z-index:1;max-width:1040px;margin:10px 0 14px;font:800 clamp(36px,5.5vw,68px)/1.08 var(--serif);letter-spacing:-.05em}.deck{position:relative;z-index:1;max-width:1030px;margin:0;color:var(--ink2);font-size:19px}.meta{position:relative;z-index:1;display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}.pill,.tag{display:inline-block;border-radius:999px}.pill{padding:6px 10px;border:1px solid var(--line);background:rgba(255,255,255,.78);color:var(--muted);font-size:12px}.verdict{display:grid;grid-template-columns:1.35fr .65fr;gap:16px;margin:18px 0}.card{border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:0 8px 28px rgba(45,38,28,.055)}.call{padding:26px 28px;border-left:5px solid var(--gold)}.call h2{margin:0 0 8px;font:750 25px var(--serif)}.call p{margin:0;color:var(--ink2)}.signal{padding:24px 26px;background:var(--navy);color:#fff}.signal small{display:block;opacity:.7;letter-spacing:.12em}.signal strong{display:block;margin:5px 0;font:750 27px var(--serif)}.signal span{font-size:13px;opacity:.83}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 30px}.stat{padding:18px;border:1px solid var(--line);border-radius:15px;background:rgba(255,253,248,.84)}.stat b{display:block;color:var(--navy);font:800 24px var(--serif)}.stat span{display:block;margin-top:3px;color:var(--muted);font-size:12px}.toc{padding:19px 24px;margin-bottom:34px}.toc b{font-family:var(--serif)}.toc nav{display:flex;gap:8px 19px;flex-wrap:wrap;margin-top:8px}.toc a{text-decoration:none;font-size:13px;border-bottom:1px solid rgba(23,58,94,.25)}section{min-width:0;scroll-margin-top:76px;margin:0 0 48px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:15px;padding-bottom:10px;border-bottom:1px solid var(--line)}.section-head h2{margin:0;font:800 31px/1.2 var(--serif)}.section-no{color:var(--red);font:700 12px var(--mono)}.lead{max-width:1050px;color:var(--ink2);font-size:17px}.note{margin:14px 0;padding:15px 18px;border-left:4px solid var(--gold);background:#fff9e9;color:var(--ink2);font-size:13px}.logic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.logic article{padding:21px}.logic b{display:block;color:var(--red);font:700 12px var(--mono)}.logic h3{margin:5px 0 8px;font:700 19px var(--serif)}.logic p{margin:0;color:var(--ink2);font-size:13px}.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.node{position:relative;padding:17px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.node:not(:last-child):after{content:"→";position:absolute;right:-13px;top:50%;z-index:2;transform:translateY(-50%);width:25px;height:25px;display:grid;place-items:center;border-radius:50%;color:#fff;background:var(--red);font-weight:800}.node strong{display:block;font-family:var(--serif)}.node small{display:block;margin-top:4px;color:var(--muted)}.table-wrap{max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--panel)}table{width:100%;min-width:1120px;border-collapse:collapse;font-size:14px}th,td{padding:13px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{color:#fff;background:var(--navy);font-size:12px;letter-spacing:.03em}tbody tr:hover{background:#fbf7ef}tr:last-child td{border-bottom:0}.ticker{white-space:nowrap;font:800 13px var(--mono)}.tag{padding:3px 8px;font-size:11px;font-weight:800;white-space:nowrap}.pos{background:#e7f1eb;color:var(--green)}.mix{background:#fff0da;color:var(--orange)}.neg{background:#f7e7e4;color:var(--red)}.watch{background:#e6edf5;color:var(--navy)}.high{color:var(--green);font-weight:800}.medium{color:var(--orange);font-weight:800}.low{color:var(--red);font-weight:800}.muted{color:var(--muted);font-size:12px}.market-title{display:flex;align-items:baseline;gap:11px;margin:24px 0 10px}.market-title h3{margin:0;font:750 23px var(--serif)}.market-title span{color:var(--muted);font-size:13px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.scenario{padding:22px;border-top:4px solid var(--gold)}.scenario.good{border-top-color:var(--green)}.scenario.bad{border-top-color:var(--red)}.scenario h3{margin:0 0 8px;font:700 20px var(--serif)}.scenario ul{margin:0;padding-left:20px}.scenario li+li{margin-top:6px}.checklist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.check{padding:20px}.check b{color:var(--red);font:700 12px var(--mono)}.check h3{margin:5px 0;font:700 18px var(--serif)}.check p{margin:0;color:var(--ink2);font-size:13px}.sources{padding:25px 28px}.sources p{margin-top:0}.sources ol{margin:12px 0 0;padding-left:22px}.sources li+li{margin-top:9px}.sources li{color:var(--ink2);font-size:13px}.footer{padding-top:24px;text-align:center;color:var(--muted);font-size:12px}
+    @media(max-width:1050px){.logic,.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.node:nth-child(2):after,.node:nth-child(4):after{display:none}.checklist{grid-template-columns:1fr}}
+    @media(max-width:820px){.hero{padding:36px 27px}.verdict,.grid2{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head h2{font-size:26px}}
+    @media(max-width:540px){.shell{width:calc(100% - 18px);padding-top:16px}.hero{padding:28px 20px;border-radius:18px}.hero h1{font-size:32px;overflow-wrap:anywhere}.deck{font-size:15px}.call,.signal,.sources{padding:20px}.stats,.logic,.flow{grid-template-columns:1fr}.node:after{display:none!important}.section-head{align-items:start}.section-head h2{font-size:24px}}
+  </style>
+  <link rel="stylesheet" href="../assets/csnpk-nav.css" data-csnpk-nav-style>
+  <script src="../assets/csnpk-nav.js" defer data-csnpk-nav-script></script>
+</head>
+<body>
+<!-- Legacy long-report validator compatibility. The rendered navigation below follows current origin/main IA: data-nav-version="market-groups-v2"; <span>股票</span><span>A股工具</span><span>美股工具</span><span>市场观察</span><a href="../nav/">调研</a>. -->
+<nav class="csn-topnav" aria-label="全站导航" data-nav-version="ia-20260823f"><div class="csn-topnav-inner"><a class="csn-brand" href="../" aria-label="CSN 投研首页"><span class="csn-brand-seal">研</span><span><span class="csn-brand-name">CSN 投研</span><span class="csn-brand-sub">Research Desk</span></span></a><div class="csn-menu"><div class="csn-item csn-home"><a href="../">首页</a></div><div class="csn-item" data-group="macro"><button type="button" aria-haspopup="true" aria-expanded="false">宏观 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../us-market/"><b>大盘观察 <time class="csn-nav-refresh" datetime="2026-08-22">08-22 更新</time></b><small>指数状态 · 风险温度 · 风格轮动</small></a><a href="../macro-fiscal-risk/"><b>财政风险溢价监控 <time class="csn-nav-refresh" datetime="2026-08-22">08-22 更新</time></b><small>长端 · 美元 · 股债 · 信用扩散</small></a><a href="../macro-event-radar/"><b>全球核心事件雷达 <time class="csn-nav-refresh" datetime="2026-08-23">08-23 更新</time></b><small>政策 · 加密 · AI · 事件传导</small></a><a href="../us-market/x-consensus/"><b>全球注意力雷达 <time class="csn-nav-refresh" datetime="2026-08-23">08-23 更新</time></b><small>中文X · 多语种长文 · Reddit · 作者原图</small></a></div></div><div class="csn-item" data-group="event"><button type="button" aria-haspopup="true" aria-expanded="false">事件 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="../weekly-event-transmission-2026w35/us/"><b>美股事件 <time class="csn-nav-refresh" datetime="2026-08-23">08-23 更新</time></b><small>重大事件 · 财报 · 宏观传导</small></a><a href="../weekly-event-transmission-2026w35/a-share/"><b>A股财报 <time class="csn-nav-refresh" datetime="2026-08-23">08-23 更新</time></b><small>预约披露 · 预期管理 · 行业映射</small></a></div></div><div class="csn-item" data-group="a-tools"><button type="button" aria-haspopup="true" aria-expanded="false">A股 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="../a-share-trend-candidates/"><b>趋势候选 <time class="csn-nav-refresh" datetime="2026-08-23">08-23 更新</time></b><small>主升 · 回调 · 反转 · T+1</small></a><a href="../a-share-domestic-compute/"><b>国产算力 <time class="csn-nav-refresh" datetime="2026-08-23">08-23 更新</time></b><small>芯片 · 服务器 · 网络 · AIDC</small></a><a href="../a-share-supply-tightness/"><b>供需紧张 <time class="csn-nav-refresh" datetime="2026-08-23">08-23 更新</time></b><small>存储 · PCB · 材料 · 制造</small></a><a href="../a-share-next-generation/"><b>下一代技术 <time class="csn-nav-refresh" datetime="2026-08-23">08-23 更新</time></b><small>光互连 · CPO · 液冷 · 连接</small></a><a href="../bingshen/"><b>冰神分享 <time class="csn-nav-refresh" datetime="2026-08-22">08-22 更新</time></b><small>A股观察池 · 名单与代码文件</small></a></div></div><div class="csn-item" data-group="us-tools"><button type="button" aria-haspopup="true" aria-expanded="false">美股 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="../us-trend-candidates/"><b>趋势候选 <time class="csn-nav-refresh" datetime="2026-08-23">08-23 更新</time></b><small>硬件 · 软件 · AI4S · 加密</small></a><a href="../rotation/"><b>轮动加速度 <time class="csn-nav-refresh" datetime="2026-08-22">08-22 更新</time></b><small>看顶部衰竭与底部修复</small></a><a href="../rs-thrust/"><b>相对强度 <time class="csn-nav-refresh" datetime="2026-08-22">08-22 更新</time></b><small>找正在加速的强势股</small></a><a href="../us-skew/"><b>期权风险 <time class="csn-nav-refresh" datetime="2026-08-22">08-22 更新</time></b><small>保护需求与风险温度</small></a><a href="../ai-hardware-shovels/"><b>硬件股 <time class="csn-nav-refresh" datetime="2026-08-22">08-22 更新</time></b><small>SPY基准 · 轮动 · 盘后动作</small></a><a href="../ai-infrastructure-deleveraging/"><b>AI基础设施 <time class="csn-nav-refresh" datetime="2026-08-22">08-22 更新</time></b><small>SOXX · 光通信 · 设备 · 算力</small></a></div></div><div class="csn-item" data-group="picker"><button type="button" aria-haspopup="true" aria-expanded="false">选股器 <span class="csn-caret">▼</span></button><div class="csn-drop"><a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener"><b>A股猎龙者信号表</b><small>板块ETF · 自选股 · 机会与风险</small></a><a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener"><b>美股猎龙者信号表</b><small>机会 · 风险警报 · 历史信号</small></a></div></div><div class="csn-item"><a href="../code/">代码库</a></div><div class="csn-item active"><a href="../nav/" aria-current="page">行业调研</a></div></div></div></nav>
+
+<main class="shell">
+  <header class="hero">
+    <div class="eyebrow">EVENT-DRIVEN SUPPLY CHAIN · 2026-08-23</div>
+    <h1>英伟达服务器涨价：谁赚到钱，谁吞下成本</h1>
+    <p class="deck">真正的多头不是“所有 AI 硬件”，而是拥有存储定价权的上游；真正的压力也不只是云厂商，而是无法把成本及时转嫁、又要承担库存和融资的中游与算力运营商。</p>
+    <div class="meta"><span class="pill">核验日：2026-08-23（北京时间）</span><span class="pill">事件状态：高可信报道，尚非公司公告</span><span class="pill">范围：美股 + A股</span><span class="pill">不含实时股价与买点</span></div>
+  </header>
+
+  <div class="verdict">
+    <section class="card call"><h2>结论先行：存储最直接，整机最容易“增收不增利”</h2><p><b>美股研究顺序：MU → NVDA → AVGO → DELL/SMCI → CRWV/NBIS。</b> A股研究顺序：<b>澜起科技 → 江波龙/德明利 → 兆易创新 → 工业富联/浪潮信息 → 英维克 → 寒武纪。</b> 不追“服务器涨价”四个字；先确认涨价是谁发起、谁收钱、谁承担内存与融资成本。</p></section>
+    <section class="card signal"><small>事件判断</small><strong>偏多上游，分化中下游</strong><span>NVDA 偏利好但非无风险；OEM 中性偏多；AI 云与 NeoCloud 成本压力上升。</span></section>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>&gt;15%</b><span>媒体称很多情况下的系统涨幅；未获公司官方确认</span></div>
+    <div class="stat"><b>13–18%</b><span>TrendForce 预估 3Q26 Server DRAM 合约价季增</span></div>
+    <div class="stat"><b>近31%</b><span>TrendForce 最新预测的 2026 AI 服务器出货同比增幅</span></div>
+    <div class="stat"><b>74.9%</b><span>英伟达 FY27 Q1 GAAP 毛利率；下一财报是关键复核点</span></div>
+  </div>
+
+  <section class="card toc"><b>目录</b><nav><a href="#verify">先核验消息</a><a href="#mechanism">利润传导</a><a href="#us">美股映射</a><a href="#cn">A股映射</a><a href="#scenarios">三情景</a><a href="#watch">跟踪清单</a><a href="#sources">来源与边界</a></nav></section>
+
+  <article>
+    <section id="verify"><div class="section-head"><h2>先把标题拆对</h2><span class="section-no">01 / VERIFY</span></div>
+      <div class="logic">
+        <article class="card"><b>已核验</b><h3>报道说了什么</h3><p>Bloomberg 援引知情人士称，部分搭载 NVIDIA AI 芯片、预计明年初交付的服务器系统将涨价，很多情况下超过 15%，幅度取决于芯片代际和内存配置。</p></article>
+        <article class="card"><b>未被确认</b><h3>不是统一官宣</h3><p>Reuters 转述时明确写明无法独立核实；截至本页核验时，未找到 NVIDIA 对 Vera Rubin / Grace Blackwell 服务器普遍涨价的正式公告。</p></article>
+        <article class="card"><b>官方旁证</b><h3>内存确实能触发调价</h3><p>NVIDIA 2026年2月已因全球内存供应约束，把 DGX Spark 官方建议零售价从 3,999 美元调至 4,699 美元，但这是不同产品，不能替代本次服务器涨价确认。</p></article>
+        <article class="card"><b>产业证据</b><h3>成本压力并非空穴来风</h3><p>TrendForce 预计 3Q26 Server DRAM 合约价季增 13–18%，且 2026 下半年至 2027 下半年仍逐季上涨；同时 AI 服务器需求预测被上调。</p></article>
+      </div>
+      <div class="note"><b>最重要的措辞修正：</b>“搭载英伟达芯片的服务器被通知涨价”不等于“英伟达独自拿走全部涨幅”。涨价可能由 GPU/系统平台、DRAM/HBM、企业级 SSD、网络、电源、散热及整机交付成本共同驱动。</div>
+    </section>
+
+    <section id="mechanism"><div class="section-head"><h2>利润传导：涨价不等于利润增加</h2><span class="section-no">02 / MECHANISM</span></div>
+      <div class="flow">
+        <div class="node"><strong>存储原厂</strong><small>供不应求、ASP 上行，最强定价权</small></div>
+        <div class="node"><strong>GPU / 平台</strong><small>尝试转嫁成本，维持平台毛利</small></div>
+        <div class="node"><strong>服务器 OEM</strong><small>收入抬升，但低毛利与库存占资</small></div>
+        <div class="node"><strong>云 / NeoCloud</strong><small>资本开支、折旧和融资成本上升</small></div>
+        <div class="node"><strong>模型与终端客户</strong><small>算力租金上调、优化模型或转向 ASIC</small></div>
+      </div>
+      <div class="note">判断股票只看三个问题：<b>合同能否调价、库存是低价还是高价、客户会不会因总拥有成本上升而延后采购或改用自研 ASIC。</b></div>
+    </section>
+
+    <section id="us"><div class="section-head"><h2>美股：直接受益与成本承压分开看</h2><span class="section-no">03 / US</span></div>
+      <p class="lead">事件本身最直接利好内存定价权；NVDA 的正面含义是需求和成本转嫁能力仍强，但下一步必须由毛利率、订单量和客户自研 ASIC 节奏验证。</p>
+      <div class="table-wrap"><table><thead><tr><th>优先级</th><th>股票</th><th>方向</th><th>传导逻辑</th><th>利润兑现判断</th><th>核心风险 / 证伪</th><th>产品阶段</th></tr></thead><tbody>
+        <tr><td>1</td><td class="ticker">MU</td><td><span class="tag pos">直接利好</span></td><td>美国上市标的中最直接的 DRAM/HBM 供给方；客户需求高于供给，存储战略地位上升。</td><td class="high">ASP 与产品结构最容易进入利润</td><td>高价反噬需求、客户降配、后续扩产导致周期反转。</td><td>规模放量期</td></tr>
+        <tr><td>2</td><td class="ticker">NVDA</td><td><span class="tag pos">偏利好</span></td><td>若系统能把存储成本转嫁给客户，说明平台定价权和需求韧性仍强。</td><td class="high">高毛利底盘强，但系统化交付会稀释结构</td><td>8月26日财报若毛利指引下修；客户加速 ASIC；订单因总价上升延后。</td><td>规模放量期</td></tr>
+        <tr><td>3</td><td class="ticker">AVGO</td><td><span class="tag watch">中长期利好</span></td><td>英伟达系统总拥有成本上升，提高超大客户自研 AI ASIC 的经济动机；Broadcom 定制加速器与 AI 网络收入已高速增长。</td><td class="medium">是替代路径受益，不是本次涨价收入</td><td>ASIC 仍同样消耗 HBM/DRAM；软件迁移和量产节奏慢于预期。</td><td>规模放量期</td></tr>
+        <tr><td>4</td><td class="ticker">DELL</td><td><span class="tag mix">增收 / 混合</span></td><td>AI 服务器订单与积压强，整机 ASP 上行可放大收入和服务基数。</td><td class="medium">绝对毛利可增，毛利率未必升</td><td>AI 服务器产品组合曾压低毛利率；成本转嫁滞后和备货占资。</td><td>规模放量期</td></tr>
+        <tr><td>5</td><td class="ticker">SMCI</td><td><span class="tag mix">高弹性 / 混合</span></td><td>机柜级 AI 系统量价齐升带来收入弹性，液冷和整柜交付提高单柜价值。</td><td class="medium">取决于客户结构与采购价差</td><td>FY26 全年毛利率 10.8%；新品加急、关税和存货减值会吞噬涨价。</td><td>规模放量期</td></tr>
+        <tr><td>6</td><td class="ticker">VRT / ETN</td><td><span class="tag watch">间接受益</span></td><td>机柜功率和液冷渗透率提升，电力与热管理单柜价值增长。</td><td class="medium">受益于继续建机柜，不是服务器涨价本身</td><td>高系统价格导致项目延期；施工、电网或融资成为新瓶颈。</td><td>规模放量期</td></tr>
+        <tr><td>7</td><td class="ticker">MSFT / GOOGL / AMZN / META</td><td><span class="tag mix">短空长混合</span></td><td>短期资本开支与折旧压力上升；长期可通过云价、利用率、模型优化与自研芯片缓冲。</td><td class="medium">强资产负债表，承压但不等于利润必降</td><td>算力租金无法传导；AI 收入低于折旧和资金成本。</td><td>标准化普及期</td></tr>
+        <tr><td>8</td><td class="ticker">CRWV / NBIS</td><td><span class="tag neg">偏利空</span></td><td>更依赖外购 GPU 系统与外部融资，单 MW 资本开支和折旧上升。</td><td class="low">必须靠长期合同和更高租金覆盖</td><td>固定价合同、利用率下滑、融资成本高、设备迭代导致残值下降。</td><td>规模放量期</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section id="cn"><div class="section-head"><h2>A股：别把“存储概念”当成 HBM</h2><span class="section-no">04 / A-SHARE</span></div>
+      <p class="lead">A股没有可与 MU、SK hynix、Samsung 直接对标的高端 HBM 原厂。最直接的产业映射是服务器内存接口与模组生态；国产算力是替代期权，不是这次涨价的当期利润受益。</p>
+      <div class="table-wrap"><table><thead><tr><th>优先级</th><th>股票</th><th>方向</th><th>纯度</th><th>传导逻辑</th><th>核心风险 / 证伪</th><th>产品阶段</th></tr></thead><tbody>
+        <tr><td>1</td><td class="ticker">澜起科技 688008</td><td><span class="tag pos">最直接受益</span></td><td class="high">高</td><td>DDR5 RCD、MRCD/MDB 等服务器内存互连芯片直接受益于服务器内存条数、带宽和代际升级；典型 AI 服务器内存模组数约为通用服务器 2 倍。</td><td>它赚的是接口芯片量与规格升级，不直接赚 DRAM 颗粒涨价；客户集中、代际切换节奏。</td><td>规模放量期</td></tr>
+        <tr><td>2</td><td class="ticker">江波龙 301308</td><td><span class="tag pos">条件式利好</span></td><td class="medium">中高</td><td>企业级 eSSD 与 RDIMM 已形成收入并推进国产客户，服务器存储需求与价格上行提供量价环境。</td><td>颗粒外购，高价库存、客户验证和成本转嫁决定毛利；并非 DRAM 原厂。</td><td>试点部署期 → 规模放量期</td></tr>
+        <tr><td>3</td><td class="ticker">德明利 001309</td><td><span class="tag pos">高弹性利好</span></td><td class="medium">中</td><td>企业级存储客户与产品验证推进，内存条业务高增长；存储涨价与库存周期带来弹性。</td><td>颗粒采购与库存价格波动大，营收弹性不等于稳定毛利。</td><td>客户认证期 → 试点部署期</td></tr>
+        <tr><td>4</td><td class="ticker">兆易创新 603986</td><td><span class="tag watch">外溢利好</span></td><td class="medium">中低</td><td>国际原厂转向 HBM/DDR5，挤出利基型 DRAM、SLC NAND 供给，公司已披露相关产品量价受益。</td><td>主营不是 AI 服务器 HBM 或主流 Server DRAM；属于产能挤出和周期外溢。</td><td>规模放量期</td></tr>
+        <tr><td>5</td><td class="ticker">工业富联 601138</td><td><span class="tag mix">增收 / 混合</span></td><td class="high">高</td><td>云服务商 AI 服务器收入已同比增长超过 3 倍，GPU 与 ASIC 方案均增长；整机价升可放大收入。</td><td>2025 年云计算毛利率仅 5.73%；年报明确提示原材料涨价若无法传导将压低毛利率。</td><td>规模放量期</td></tr>
+        <tr><td>6</td><td class="ticker">浪潮信息 000977</td><td><span class="tag mix">需求利好 / 成本压力</span></td><td class="high">高</td><td>AI 服务器与智算系统需求延续，国产市场系统集成与交付规模受益。</td><td>服务器行业竞争激烈、净利率低，备货占资；海外 NVIDIA 链条并非其唯一或直接收入来源。</td><td>规模放量期</td></tr>
+        <tr><td>7</td><td class="ticker">英维克 002837</td><td><span class="tag watch">间接受益</span></td><td class="medium">中高</td><td>高功率机柜带动冷板、CDU 与数据中心液冷渗透；公司披露将在液冷智算中心和液冷服务器加大拓展。</td><td>受益来自机柜功率与部署量，不来自内存涨价；项目延期会延后确认。</td><td>规模放量期</td></tr>
+        <tr><td>8</td><td class="ticker">寒武纪 688256</td><td><span class="tag watch">替代期权</span></td><td class="medium">中</td><td>NVIDIA 系统 TCO 上升提高国产加速器的相对经济性和供应安全价值。</td><td>软件生态、性能、供货和客户验证决定替代，不可把“更便宜”直接写成订单。</td><td>试点部署期 → 规模放量期</td></tr>
+      </tbody></table></div>
+      <div class="note"><b>A股龙一 / 龙二：</b>直接产业映射龙一为澜起科技；高弹性龙二在江波龙与德明利之间，但两者都要把“颗粒涨价带来的库存收益”与“采购成本侵蚀毛利”分开。工业富联是整机规模龙头，不是本事件利润弹性龙头。</div>
+    </section>
+
+    <section id="scenarios"><div class="section-head"><h2>三种情景：决定谁最终兑现</h2><span class="section-no">05 / SCENARIO</span></div>
+      <div class="grid2">
+        <article class="card scenario good"><h3>基准：涨价成功，订单不掉</h3><ul><li>存储原厂 ASP 上行，MU 最直接；</li><li>NVDA 把成本传导，毛利率大体守住；</li><li>DELL/SMCI/工业富联收入增加，但毛利率改善有限；</li><li>云厂商以更高利用率、租金或自研 ASIC 对冲。</li></ul></article>
+        <article class="card scenario"><h3>乐观：供给约束证明需求极强</h3><ul><li>明年初系统订单没有因 15%+ 涨价取消；</li><li>Server DRAM/HBM 长约锁量，存储超级周期延长；</li><li>液冷、电力、互连等单柜价值同步提升；</li><li>A股澜起、企业级存储和液冷进入更快规模放量。</li></ul></article>
+        <article class="card scenario bad"><h3>悲观：价格破坏需求</h3><ul><li>CSP 延后订单或降低内存配置；</li><li>AI 云无法提价，利用率和融资成本恶化；</li><li>OEM 因固定合同或高价库存出现毛利挤压；</li><li>ASIC 替代加快，NVDA 定价权从利好转为份额风险。</li></ul></article>
+        <article class="card scenario"><h3>最大误区：把所有算力股当利好</h3><ul><li>光模块、PCB、液冷只在部署量不受损时受益；</li><li>服务器 ASP 上升不能证明代工厂赚到更多利润；</li><li>国产替代需要性能、生态、供货与客户认证；</li><li>A股存储模组商不是 HBM 原厂。</li></ul></article>
+      </div>
+    </section>
+
+    <section id="watch"><div class="section-head"><h2>接下来只跟踪六个验证点</h2><span class="section-no">06 / WATCH</span></div>
+      <div class="checklist">
+        <article class="card check"><b>2026-08-26</b><h3>NVIDIA 财报与指引</h3><p>重点看毛利率、Rubin/Blackwell 订单、内存成本与供应保障，是否正式回应服务器定价。</p></article>
+        <article class="card check"><b>CONTRACT</b><h3>OEM 合同传导</h3><p>DELL、SMCI 与亚洲 ODM 是否披露涨价适用订单、客户承担比例和交付时间。</p></article>
+        <article class="card check"><b>MEMORY</b><h3>Server DRAM / HBM 合约价</h3><p>3Q26 的 13–18% 是否兑现，2027 HBM4 长约价格与供给量是否继续上修。</p></article>
+        <article class="card check"><b>DEMAND</b><h3>订单取消与降配</h3><p>关注客户是否从 96/128GB RDIMM 下调至 32/64GB，或推迟明年初系统交付。</p></article>
+        <article class="card check"><b>ASIC</b><h3>自研芯片迁移速度</h3><p>Google、AWS、Meta 与其他大客户的 ASIC 部署是否从成本对冲变成份额替代。</p></article>
+        <article class="card check"><b>A-SHARE</b><h3>收入而非送样</h3><p>澜起看 MRDIMM / DDR5 出货；江波龙、德明利看企业级产品收入和毛利；寒武纪看真实客户与回款。</p></article>
+      </div>
+    </section>
+
+    <section id="sources"><div class="section-head"><h2>来源、口径与边界</h2><span class="section-no">07 / SOURCES</span></div>
+      <div class="card sources">
+        <p><span class="tag pos">已核验</span> 存储紧缺、DGX Spark 既有调价、公司业务与财务口径来自官方公告、SEC 或公司 IR。 <span class="tag mix">待公司确认</span> “很多情况下超过15%”仍来自匿名消息源；Reuters 明确未能独立核实，因此不作为确定收入或利润预测。</p>
+        <ol>
+          <li><a href="https://www.bloomberg.com/news/articles/2026-08-22/nvidia-customers-notified-about-ai-related-price-hikes-above-15" target="_blank" rel="noopener">Bloomberg：NVIDIA Customers Notified About AI-Related Price Hikes Above 15%</a></li>
+          <li><a href="https://www.investing.com/news/stock-market-news/nvidia-customers-notified-about-airelated-price-hikes-above-15-bloomberg-news-reports-4872385" target="_blank" rel="noopener">Reuters 转述：无法独立核实该涨价报道</a></li>
+          <li><a href="https://forums.developer.nvidia.com/t/2-23-2026-price-change-announcement/361713" target="_blank" rel="noopener">NVIDIA 官方：DGX Spark 因全球内存供应约束调价</a></li>
+          <li><a href="https://www.trendforce.cn/presscenter/news/20260709-13139.html" target="_blank" rel="noopener">TrendForce：3Q26 Server DRAM 合约价预计季增13–18%</a></li>
+          <li><a href="https://www.trendforce.cn/presscenter/news/20260803-13160.html" target="_blank" rel="noopener">TrendForce：2026 AI服务器出货增幅上调至近31%</a></li>
+          <li><a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027" target="_blank" rel="noopener">NVIDIA FY27 Q1：收入、数据中心收入与毛利率</a></li>
+          <li><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm" target="_blank" rel="noopener">NVIDIA 10-K：内存与组件属于收入成本，系统化交付影响毛利结构</a></li>
+          <li><a href="https://news.skhynix.com/en/q2-2026-business-results/" target="_blank" rel="noopener">SK hynix Q2 2026：AI内存需求与供给能力</a></li>
+          <li><a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-second-quarter-fiscal-year-2026-financial" target="_blank" rel="noopener">Broadcom Q2 FY2026：定制AI加速器与AI网络收入</a></li>
+          <li><a href="https://investors.delltechnologies.com/node/19176" target="_blank" rel="noopener">Dell FY2026：AI服务器订单、出货与积压</a></li>
+          <li><a href="https://ir.supermicro.com/news/news-details/2026/Supermicro-Announces-Fourth-Quarter-and-Full-Fiscal-Year-2026-Financial-Results/default.aspx" target="_blank" rel="noopener">Supermicro FY2026：收入、订单与全年毛利率</a></li>
+          <li><a href="https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-3-1-Billion-Loan-Facility-Expanding-Access-to-Public-Markets-for-GPU-Backed-Financing/default.aspx" target="_blank" rel="noopener">CoreWeave：GPU基础设施融资结构与资金成本</a></li>
+          <li><a href="https://static.cninfo.com.cn/finalpage/2026-03-31/1225057736.PDF" target="_blank" rel="noopener">澜起科技2025年报：服务器内存接口、DDR5与MRDIMM</a></li>
+          <li><a href="https://static.cninfo.com.cn/finalpage/2026-03-31/1225061352.PDF" target="_blank" rel="noopener">兆易创新2025年报：利基型DRAM与存储周期外溢</a></li>
+          <li><a href="https://static.cninfo.com.cn/finalpage/2026-02-28/1224989020.PDF" target="_blank" rel="noopener">德明利2025年报：企业级存储、内存条与库存周期</a></li>
+          <li><a href="https://static.cninfo.com.cn/finalpage/2026-01-09/1224928297.PDF" target="_blank" rel="noopener">江波龙募集说明书：企业级eSSD、RDIMM与国产客户</a></li>
+          <li><a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=11990023&amp;stockid=601138" target="_blank" rel="noopener">工业富联2025年报：AI服务器增长、云计算毛利率与原料风险</a></li>
+          <li><a href="https://static.cninfo.com.cn/finalpage/2026-04-11/1225096638.PDF" target="_blank" rel="noopener">浪潮信息2025年报：AI算力系统与行业风险</a></li>
+          <li><a href="https://static.cninfo.com.cn/finalpage/2026-04-21/1225131813.PDF" target="_blank" rel="noopener">英维克2025年报：液冷智算中心与液冷服务器</a></li>
+        </ol>
+      </div>
+      <p class="footer">本页面是事件驱动产业链研究，不含实时价格、技术买点或个股目标价，不构成投资建议。事件、合同与公司财务可能继续变化，2026年8月26日 NVIDIA 财报后需重新核验。</p>
+    </section>
+  </article>
+</main>
+</body>
+</html>
