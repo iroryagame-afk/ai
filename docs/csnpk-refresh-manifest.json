@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "registry": "docs/csnpk-page-registry.md",
+  "pages": [
+    {"route": "/", "state": "active", "refreshClass": "derived_portal", "files": ["index.html"]},
+    {"route": "/a-share-software-deleveraging/", "state": "active", "refreshClass": "cn_close", "files": ["index.html", "data.json", "index-chart.json"], "freshness": {"file": "data.json", "field": "data_date"}},
+    {"route": "/a-share-hardware-deleveraging/", "state": "active", "refreshClass": "cn_close", "files": ["index.html", "data.json", "index-chart.json"], "freshness": {"file": "data.json", "field": "data_date"}},
+    {"route": "/a-share-biotech-trend/", "state": "active", "refreshClass": "cn_close", "files": ["index.html", "data.json", "index-chart.json"], "freshness": {"file": "data.json", "field": "data_date"}},
+    {"route": "/a-share-dividend-defense/", "state": "active", "refreshClass": "cn_close", "files": ["index.html", "data.json", "index-chart.json"], "freshness": {"file": "data.json", "field": "data_date"}},
+    {"route": "/a-share-trend-candidates/", "state": "active", "refreshClass": "cn_close", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "data_date"}},
+    {"route": "/ai-infrastructure-deleveraging/", "state": "active", "refreshClass": "us_close", "files": ["index.html", "index-chart.json"], "freshness": {"file": "index-chart.json", "field": "data_date"}},
+    {"route": "/us-software-deleveraging/", "state": "active", "refreshClass": "us_close", "files": ["index.html", "data.json", "index-chart.json"], "freshness": {"file": "data.json", "field": "data_date"}},
+    {"route": "/rs-thrust/", "state": "active", "refreshClass": "us_close", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "dataDate"}},
+    {"route": "/rotation/", "state": "active", "refreshClass": "us_close", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "dataDate"}},
+    {"route": "/ai-software-security-shovels/", "state": "active", "refreshClass": "us_close", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "dataDate"}},
+    {"route": "/ai-hardware-shovels/", "state": "active", "refreshClass": "us_close", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "dataDate"}},
+    {"route": "/us-trend-candidates/", "state": "active", "refreshClass": "us_close", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "data_date"}},
+    {"route": "/us-skew/", "state": "active", "refreshClass": "us_close", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "market_date"}},
+    {"route": "/us-market/", "state": "active", "refreshClass": "us_close_aggregate", "files": ["index.html", "index.md", "data.json"], "freshness": {"file": "data.json", "field": "market.asOf"}},
+    {"route": "/macro-fiscal-risk/", "state": "active", "refreshClass": "us_close_multi_frequency", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "data_date"}},
+    {"route": "/csn/", "state": "compatibility", "refreshClass": "us_close", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "dataDate"}},
+    {"route": "/csn/hot/", "state": "compatibility", "refreshClass": "us_close", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "dataDate"}},
+    {"route": "/us-market/x-consensus/", "state": "active", "refreshClass": "independent_attention_scan", "files": ["index.html", "index.md", "data.json"], "freshness": {"file": "data.json", "field": "scanned_at"}},
+    {"route": "/macro-event-radar/", "state": "active", "refreshClass": "independent_event_scan", "files": ["index.html", "data.json", "sources.json", "collection-status.json"], "freshness": {"file": "data.json", "field": "generated_at"}},
+    {"route": "/a-share-domestic-compute/", "state": "active", "refreshClass": "research_on_change", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "research_date"}},
+    {"route": "/a-share-supply-tightness/", "state": "active", "refreshClass": "research_on_change", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "research_date"}},
+    {"route": "/a-share-next-generation/", "state": "active", "refreshClass": "research_on_change", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "research_date"}},
+    {"route": "/a-share-t1-focus/", "state": "compatibility", "refreshClass": "research_on_change", "files": ["index.html", "data.json"]},
+    {"route": "/code/", "state": "active", "refreshClass": "content_on_change", "files": ["index.html"]},
+    {"route": "/bingshen/", "state": "active", "refreshClass": "content_on_change", "files": ["index.html"]},
+    {"route": "/nav/", "state": "active", "refreshClass": "report_index_on_change", "files": ["index.html", "reports.json"]},
+    {"route": "/futu-indicators/", "state": "compatibility_redirect", "refreshClass": "redirect_only", "files": ["index.html"]}
+  ],
+  "versionedRoutes": [
+    {
+      "pattern": "/weekly-event-transmission-YYYYwWW/",
+      "refreshClass": "weekly_snapshot",
+      "rule": "Create a new week directory; never rewrite old weeks as current. Update shared navigation only after the new US and A-share child pages both pass validation."
+    }
+  ],
+  "retiredRoutes": [
+    "/mda100/",
+    "/a-share-market/",
+    "/a-share-market/etf/",
+    "/a-share-thrust/",
+    "/a-share-rotation/",
+    "/a-share-ai-software/",
+    "/a-share-ai-hardware/",
+    "/a-share-flow/",
+    "/csn2/",
+    "/earnings/",
+    "/yanpan-ai/",
+    "/ai-decision/",
+    "/chanlun/",
+    "/chanlun/a-share/",
+    "/chanlun/us-share/"
+  ]
+}
