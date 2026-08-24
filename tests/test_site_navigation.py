@@ -101,7 +101,7 @@ class SiteNavigationTests(unittest.TestCase):
         self.assertIn('<section aria-label="宏观" id="market-overview">', text)
         self.assertLess(text.index('id="market-overview"'), text.index('id="a-share-tools"'))
         self.assertIn('class="verified">已核验</span>', text)
-        self.assertIn("全球核心事件雷达、AI基础设施走势、A股与美股趋势候选", text)
+        self.assertIn("A股软件、AI硬件、生物科技、红利防守与趋势候选五页", text)
         self.assertIn('href="./macro-event-radar/"', text)
         self.assertIn('href="./ai-infrastructure-deleveraging/"', text)
 
