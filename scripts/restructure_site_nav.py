@@ -44,8 +44,8 @@ RETIRED_REPORT_IDS = {"futu-indicators"}
 # Per-page content refresh dates. These are deliberately independent from the
 # navigation build time so a shared-nav release never makes every page look new.
 PAGE_REFRESH_DATES = {
-    "us-market/": "2026-08-22",
-    "macro-fiscal-risk/": "2026-08-22",
+    "us-market/": "2026-08-24",
+    "macro-fiscal-risk/": "2026-08-21",
     "macro-event-radar/": "2026-08-23",
     "us-market/x-consensus/": "2026-08-23",
     "weekly-event-transmission-2026w35/us/": "2026-08-23",
@@ -59,13 +59,13 @@ PAGE_REFRESH_DATES = {
     "a-share-hardware-deleveraging/": "2026-08-24",
     "a-share-biotech-trend/": "2026-08-24",
     "a-share-dividend-defense/": "2026-08-24",
-    "us-trend-candidates/": "2026-08-23",
-    "rotation/": "2026-08-22",
-    "rs-thrust/": "2026-08-22",
-    "us-skew/": "2026-08-22",
-    "ai-software-security-shovels/": "2026-08-22",
-    "ai-hardware-shovels/": "2026-08-22",
-    "ai-infrastructure-deleveraging/": "2026-08-22",
+    "us-trend-candidates/": "2026-08-24",
+    "rotation/": "2026-08-24",
+    "rs-thrust/": "2026-08-24",
+    "us-skew/": "2026-08-24",
+    "ai-software-security-shovels/": "2026-08-24",
+    "ai-hardware-shovels/": "2026-08-24",
+    "ai-infrastructure-deleveraging/": "2026-08-24",
 }
 
 PICKER_REFRESH_DATES = {
@@ -245,12 +245,32 @@ def replace_or_insert_nav(text: str, relative: str) -> str:
     return text[:start] + "\n" + nav(relative) + text[start:]
 
 
+def ensure_external_link_safety(text: str) -> str:
+    anchor = re.compile(r'<a\b[^>]*\btarget=["\']_blank["\'][^>]*>', re.I)
+
+    def repair(match: re.Match[str]) -> str:
+        tag = match.group(0)
+        rel_match = re.search(r'\brel=(["\'])(.*?)\1', tag, re.I)
+        if rel_match:
+            values = rel_match.group(2).split()
+            for value in ("noopener", "noreferrer"):
+                if value not in values:
+                    values.append(value)
+            replacement = f'rel={rel_match.group(1)}{" ".join(values)}{rel_match.group(1)}'
+            return tag[:rel_match.start()] + replacement + tag[rel_match.end():]
+        return tag[:-1] + ' rel="noopener noreferrer">'
+
+    return anchor.sub(repair, text)
+
+
 def main() -> None:
     pages = active_pages()
     for relative in pages:
         path = ROOT / relative
         text = path.read_text(encoding="utf-8")
-        updated = ensure_asset_tags(replace_or_insert_nav(text, relative), relative)
+        updated = ensure_external_link_safety(
+            ensure_asset_tags(replace_or_insert_nav(text, relative), relative)
+        )
         path.write_text(updated, encoding="utf-8")
     for relative in pages:
         path = ROOT / relative
