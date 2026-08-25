@@ -1,8 +1,8 @@
 {
   "status": "OPEN_D_VERIFIED_NORMALIZED_INDEX_CHART",
-  "generated_at": "2026-08-24T17:50:43+08:00",
+  "generated_at": "2026-08-25T17:53:32+08:00",
   "base_date": "2026-07-27",
-  "data_date": "2026-08-24",
+  "data_date": "2026-08-25",
   "method": "first close on or after 2026-07-27 = 100; custom line is daily equal weight",
   "note": "科创半导体ETF主要代表半导体；硬件篮子与下方分组一致，包含国产算力与服务器、光通信、PCB、元器件、半导体设备与材料。",
   "lines": [
@@ -93,6 +93,10 @@
         {
           "date": "2026-08-24",
           "value": 88.627
+        },
+        {
+          "date": "2026-08-25",
+          "value": 88.752
         }
       ]
     },
@@ -183,6 +187,10 @@
         {
           "date": "2026-08-24",
           "value": 95.442
+        },
+        {
+          "date": "2026-08-25",
+          "value": 92.688
         }
       ]
     },
@@ -293,6 +301,11 @@
         {
           "date": "2026-08-24",
           "value": 103.221,
+          "coverage": 95
+        },
+        {
+          "date": "2026-08-25",
+          "value": 102.934,
           "coverage": 95
         }
       ]

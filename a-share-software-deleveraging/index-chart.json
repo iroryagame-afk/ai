@@ -1,8 +1,8 @@
 {
   "status": "OPEN_D_VERIFIED_NORMALIZED_INDEX_CHART",
-  "generated_at": "2026-08-24T17:50:43+08:00",
+  "generated_at": "2026-08-25T17:53:32+08:00",
   "base_date": "2026-07-27",
-  "data_date": "2026-08-24",
+  "data_date": "2026-08-25",
   "method": "first close on or after 2026-07-27 = 100; custom line is daily equal weight",
   "note": "软件ETF代表A股软件行业交易表现；自选等权线覆盖本页22只IT服务与软件开发标的。",
   "lines": [
@@ -93,6 +93,10 @@
         {
           "date": "2026-08-24",
           "value": 88.627
+        },
+        {
+          "date": "2026-08-25",
+          "value": 88.752
         }
       ]
     },
@@ -183,6 +187,10 @@
         {
           "date": "2026-08-24",
           "value": 100.0
+        },
+        {
+          "date": "2026-08-25",
+          "value": 100.607
         }
       ]
     },
@@ -193,107 +201,112 @@
         {
           "date": "2026-07-27",
           "value": 100.0,
-          "coverage": 22
+          "coverage": 23
         },
         {
           "date": "2026-07-28",
-          "value": 97.981,
-          "coverage": 22
+          "value": 98.163,
+          "coverage": 23
         },
         {
           "date": "2026-07-29",
-          "value": 97.014,
-          "coverage": 22
+          "value": 97.375,
+          "coverage": 23
         },
         {
           "date": "2026-07-30",
-          "value": 95.305,
-          "coverage": 22
+          "value": 96.013,
+          "coverage": 23
         },
         {
           "date": "2026-07-31",
-          "value": 105.628,
-          "coverage": 22
+          "value": 105.936,
+          "coverage": 23
         },
         {
           "date": "2026-08-03",
-          "value": 106.447,
-          "coverage": 22
+          "value": 106.683,
+          "coverage": 23
         },
         {
           "date": "2026-08-04",
-          "value": 112.514,
-          "coverage": 22
+          "value": 112.498,
+          "coverage": 23
         },
         {
           "date": "2026-08-05",
-          "value": 117.463,
-          "coverage": 22
+          "value": 117.258,
+          "coverage": 23
         },
         {
           "date": "2026-08-06",
-          "value": 117.607,
-          "coverage": 22
+          "value": 117.711,
+          "coverage": 23
         },
         {
           "date": "2026-08-07",
-          "value": 116.958,
-          "coverage": 22
+          "value": 116.738,
+          "coverage": 23
         },
         {
           "date": "2026-08-10",
-          "value": 115.541,
-          "coverage": 22
+          "value": 115.318,
+          "coverage": 23
         },
         {
           "date": "2026-08-11",
-          "value": 116.237,
-          "coverage": 22
+          "value": 115.978,
+          "coverage": 23
         },
         {
           "date": "2026-08-12",
-          "value": 116.441,
-          "coverage": 22
+          "value": 116.193,
+          "coverage": 23
         },
         {
           "date": "2026-08-13",
-          "value": 115.477,
-          "coverage": 22
+          "value": 115.192,
+          "coverage": 23
         },
         {
           "date": "2026-08-14",
-          "value": 117.694,
-          "coverage": 22
+          "value": 117.25,
+          "coverage": 23
         },
         {
           "date": "2026-08-17",
-          "value": 120.301,
-          "coverage": 22
+          "value": 119.729,
+          "coverage": 23
         },
         {
           "date": "2026-08-18",
-          "value": 118.239,
-          "coverage": 22
+          "value": 117.701,
+          "coverage": 23
         },
         {
           "date": "2026-08-19",
-          "value": 110.087,
-          "coverage": 22
+          "value": 109.678,
+          "coverage": 23
         },
         {
           "date": "2026-08-20",
-          "value": 109.055,
-          "coverage": 22
+          "value": 108.956,
+          "coverage": 23
         },
         {
           "date": "2026-08-21",
-          "value": 109.334,
-          "coverage": 22
+          "value": 109.467,
+          "coverage": 23
         },
         {
           "date": "2026-08-24",
-          "value": 105.29,
-          "coverage": 22
+          "value": 105.771,
+          "coverage": 23
+        },
+        {
+          "date": "2026-08-25",
+          "value": 106.907,
+          "coverage": 23
         }
       ]
     }
