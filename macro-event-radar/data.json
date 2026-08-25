@@ -2,14 +2,14 @@
   "schema_version": 1,
   "page_status": "live",
   "verification_status": "partial",
-  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-08-24_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
-  "generated_at": "2026-08-24T22:41:00+08:00",
+  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-08-25_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
+  "generated_at": "2026-08-25T22:36:30+08:00",
   "window": {"recent_hours": 240, "calendar_days": 30, "timezone": "Asia/Shanghai"},
   "brief": {
-    "title": "利率与关税仍主导宏观，Strategy流动性框架改变加密股传导",
-    "summary": "最新增量是Strategy在SEC 8-K中新增15.9亿美元USD Cash，并保留51亿美元USD Reserve；上周通过MSTR ATM融资约20.07亿美元、未买卖比特币。现金提高了逢市场错位买入BTC或回购证券的选择权，但尚未形成实际比特币买盘，新增普通股供给仍构成稀释约束。",
+    "title": "美国扩大对伊朗经济孤立，AI硬件进入新一轮产品兑现",
+    "summary": "最新政策增量是白宫宣布对伊朗启动Operation Economic Outcast，覆盖数字资产、科技、黄金、航空与航运等领域并扩大次级制裁风险；AI侧，NVIDIA确认Groq 3 LPX量产且Nebius首批采用，Apple正式发布M6与M5 Ultra。政策执行文本、厂商性能和真实采用仍需分别验证。",
     "discipline": "候选来自真实采集池，但采集不等于核验：一手源必须读取正文，专业媒体与社交信息必须回链官方原文。价格只验证市场响应，不能反向证明传闻。",
-    "core_count": 7,
+    "core_count": 10,
     "pending_count": 1,
     "next_event_count": 4
   },
@@ -116,7 +116,7 @@
       "category": "crypto",
       "event_type": "filing",
       "status": "verified",
-      "change_type": "new",
+      "change_type": "unchanged",
       "importance": 4,
       "event_time": "2026-08-24T08:00:15-04:00",
       "observed_at": "2026-08-24T22:35:25+08:00",
@@ -140,6 +140,104 @@
       "invalidation": "USD Cash主要用于偿债、股息或证券回购且未形成BTC增量买盘，或持续增发使每股BTC敞口与净资产溢价明显收缩。",
       "sources": [
         {"role": "primary", "name": "SEC EDGAR — Strategy Inc. Form 8-K (2026-08-24)", "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526361845/mstr-20260824.htm", "published_at": "2026-08-24T08:00:15-04:00", "note": "核验USD Cash、USD Reserve、ATM融资、STRC回购及BTC持仓变化。"}
+      ]
+    },
+    {
+      "id": "us-iran-operation-economic-outcast-2026-08-24",
+      "headline": "美国启动对伊朗“经济孤立”行动：五大领域次级制裁风险上升",
+      "category": "geopolitics",
+      "event_type": "policy",
+      "status": "partially_verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-08-24T15:15:08-04:00",
+      "observed_at": "2026-08-25T22:33:34+08:00",
+      "verified_at": "2026-08-25T22:36:30+08:00",
+      "fact": "白宫8月24日宣布，美国财政部及其他机构已启动Operation Economic Outcast，政策目标是切断伊朗的全球金融与收入渠道。白宫列明当日发布的部门制裁决定覆盖数字资产、科技、黄金、航空和航运，并称将扩大与伊朗交易主体面临的次级制裁风险。",
+      "new_information": "事件从既有对伊朗制裁升级为跨五个关键领域的集中行动，明确把境外交易对手、美元体系准入和次级制裁暴露纳入执行框架。",
+      "inference": "推断：若财政部和OFAC按零泄漏口径持续执行，伊朗相关航运、贸易结算、黄金与数字资产通道的合规成本和交易折价将上升，并可能推高区域能源与运输风险溢价。",
+      "unverified": "本轮尚未逐份读取财政部、OFAC和其他机构的部门制裁决定、实体清单及法律适用边界；白宫对行动效果和伊朗能力的表述属于行政当局立场，不能视为独立评估。",
+      "transmission": [
+        {"level": "A", "path": "部门制裁与次级制裁 → 交易对手合规/美元清算约束 → 伊朗外贸与融资成本"},
+        {"level": "B", "path": "航运与航空限制 → 物流保险/绕行成本 → 能源与区域贸易风险溢价"},
+        {"level": "C", "path": "数字资产与黄金通道执法 → 替代结算受限 → 加密平台、贵金属与跨境支付合规"}
+      ],
+      "affected_assets": [
+        {"market": "原油与航运", "direction": "风险溢价偏上、待执行确认", "horizon": "1–30日", "reason": "政策直接覆盖航运并强化区域制裁；实际价格方向仍取决于出口中断、豁免和执法力度。"},
+        {"market": "美元结算与跨境支付", "direction": "合规约束上升", "horizon": "1–3个月", "reason": "白宫明确把美元体系准入与伊朗相关洗钱作为执行抓手。"},
+        {"market": "数字资产与黄金", "direction": "结构分化", "horizon": "1–30日", "reason": "替代结算通道面临更高执法风险，但避险需求与合规冲击可能方向相反。"}
+      ],
+      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-25T22:36:30+08:00", "detail": "事件页不以盘中单点波动证明政策效果；本轮未用未完成交易日价格替代正式执行文本。"},
+      "next_checkpoint": "逐份核验财政部、OFAC及其他机构发布的部门决定、实体清单、豁免与生效条款，并观察是否出现真实贸易、航运或结算中断。",
+      "invalidation": "执行文件范围显著窄于白宫表述、出现广泛豁免或延期，或后续执法没有形成可观察的跨境交易约束。",
+      "sources": [
+        {"role": "primary", "name": "White House — Operation Economic Outcast", "url": "https://www.whitehouse.gov/releases/2026/08/operation-economic-outcast-total-isolation-of-the-iranian-regime/", "published_at": "2026-08-24T15:15:08-04:00", "note": "核验行动启动、政策目标、五个覆盖领域和次级制裁表述；具体法律文件仍待逐份读取。"}
+      ]
+    },
+    {
+      "id": "nvidia-groq-3-lpx-production-2026-08-24",
+      "headline": "NVIDIA Groq 3 LPX进入量产：Nebius确认首批采用，Rubin推理走向专用化",
+      "category": "ai",
+      "event_type": "product",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-08-24T08:00:00-07:00",
+      "observed_at": "2026-08-25T22:33:34+08:00",
+      "verified_at": "2026-08-25T22:36:30+08:00",
+      "fact": "NVIDIA 8月24日宣布面向低延迟token生成的Groq 3 LPX已进入量产，并作为Vera Rubin平台的推理解码加速扩展；Nebius同日确认成为首个采用该平台的AI云厂商，计划把LPX接入Token Factory。",
+      "new_information": "Rubin不再只以通用GPU机架交付，而是把长上下文处理与低延迟token生成拆分到不同专用平台；首个云厂商采用为产品化提供了比单纯跑分更强的客户侧证据。",
+      "inference": "推断：若低延迟解码平台按计划进入云服务，AI推理架构可能进一步走向GPU、LPU、网络与软件的分工协同，增量更直接映射机架级系统和云推理资本开支，而非单一芯片性能。",
+      "unverified": "3,400 tokens/s、相对竞品4倍和Rubin能效/成本提升主要来自厂商与合作方披露；Nebius正式可用时间、部署规模、定价、客户负载和收入贡献尚未披露。",
+      "transmission": [
+        {"level": "A", "path": "LPX量产与云厂商采用 → 推理平台部署 → NVIDIA/Nebius产品供给"},
+        {"level": "B", "path": "专用解码加速 → 单用户响应与token成本 → Agent工作负载采用"},
+        {"level": "C", "path": "Rubin机架扩展 → 网络/存储/液冷协同 → AI基础设施资本开支结构"}
+      ],
+      "affected_assets": [
+        {"market": "NVDA与AI基础设施", "direction": "产业兑现偏正面、价格待确认", "horizon": "1–6个月", "reason": "量产与客户侧采用提升产品兑现证据，但部署规模和收入尚未披露。"},
+        {"market": "NBIS与AI云", "direction": "产品能力增强、商业化待确认", "horizon": "1–6个月", "reason": "Nebius确认首批采用，但尚未披露正式可用日、资本开支和客户使用量。"},
+        {"market": "推理加速生态", "direction": "结构分化", "horizon": "3–12个月", "reason": "专用解码加速可能改变GPU、ASIC/LPU与云推理服务之间的价值分配。"}
+      ],
+      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-25T22:36:30+08:00", "detail": "产品发布已由NVIDIA与Nebius双方官方页面确认；本轮未把未完成交易日价格作为商业化证据。"},
+      "next_checkpoint": "关注Nebius正式上线时间、支持模型、定价、部署规模与客户用量，并等待独立基准复现和NVIDIA收入拆分。",
+      "invalidation": "量产交付或云端上线延迟，独立测试无法复现关键性能，或客户采用规模不足以影响资本开支与收入。",
+      "sources": [
+        {"role": "primary", "name": "NVIDIA Newsroom — Groq 3 LPX Full Production", "url": "https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai", "published_at": "2026-08-24T08:00:00-07:00", "note": "核验量产状态、产品定位与首批采用表述；性能数据仍需独立复现。"},
+        {"role": "primary", "name": "Nebius — First AI Cloud to Adopt NVIDIA Groq 3 LPX", "url": "https://nebius.com/blog/posts/nvidia-groq-3-lpx-nebius-token-factory", "published_at": "2026-08-24T00:00:00-07:00", "note": "客户侧确认采用及Token Factory接入计划。"}
+      ]
+    },
+    {
+      "id": "apple-m6-m5-ultra-launch-2026-08-25",
+      "headline": "Apple发布M6与M5 Ultra：2nm芯片和512GB统一内存强化本地AI",
+      "category": "ai",
+      "event_type": "product",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-08-25T00:00:00-07:00",
+      "observed_at": "2026-08-25T20:58:13+08:00",
+      "verified_at": "2026-08-25T22:36:30+08:00",
+      "fact": "Apple 8月25日正式发布M6与M5 Ultra，并同步推出搭载M6的Mac mini和搭载M5 Ultra的Mac Studio。M6是Apple首款2nm芯片；M5 Ultra采用首个四die架构，最高支持512GB统一内存和1.2TB/s带宽。两款整机已开放预购，计划9月22日上市。",
+      "new_information": "Apple把本地AI从轻量终端推向可运行更大模型的桌面系统，并通过统一内存、Thunderbolt 5/RDMA集群与Core AI/MLX工具链强化本地推理入口。",
+      "inference": "推断：若开发者真正采用本地大模型与多机集群，Apple可扩大高端Mac在AI开发和私有推理中的定位；对上游供应链的弹性仍取决于销量、配置结构和实际备货。",
+      "unverified": "Apple披露的性能倍数、能效优势和“可运行数千亿参数模型”等表述尚未独立复现；首销需求、512GB高配交付、晶圆与封装供应链归属及收入贡献仍待确认。",
+      "transmission": [
+        {"level": "A", "path": "新品预购与9月交付 → 高端Mac销量/ASP → Apple硬件收入"},
+        {"level": "B", "path": "2nm与四die统一内存 → 本地AI性能/模型容量 → 开发者与企业采用"},
+        {"level": "C", "path": "终端配置升级 → 先进制程/封装/内存与高速互连需求 → 上游供应链"}
+      ],
+      "affected_assets": [
+        {"market": "AAPL与高端Mac", "direction": "产品催化、需求待确认", "horizon": "1–3个月", "reason": "预购和上市时间已明确，但尚无销量、产品组合与毛利率证据。"},
+        {"market": "先进制程与封装", "direction": "产业需求偏正面、归属待核验", "horizon": "3–12个月", "reason": "M6采用2nm、M5 Ultra采用四die架构，但具体代工、封装和增量规模未在发布稿披露。"},
+        {"market": "本地AI软件生态", "direction": "可用能力提升", "horizon": "1–6个月", "reason": "Core AI、MLX与更大统一内存提高本地模型部署上限，真实采用仍看开发工具与工作负载。"}
+      ],
+      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-25T22:36:30+08:00", "detail": "官方产品、预购与上市时间已确认；美国交易日尚未完成，未用盘中价格证明需求。"},
+      "next_checkpoint": "跟踪9月22日上市后的交付周期、渠道库存、高配占比和第三方AI基准，并核验先进制程、封装和内存供应链。",
+      "invalidation": "首销需求和高配占比弱、第三方性能复现低于厂商表述，或本地AI工作负载未形成持续使用。",
+      "sources": [
+        {"role": "primary", "name": "Apple Newsroom — M6 and M5 Ultra", "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/", "published_at": "2026-08-25T00:00:00-07:00", "note": "核验芯片架构、统一内存与AI定位；性能数据为Apple自报。"},
+        {"role": "primary", "name": "Apple Newsroom — Mac Studio with M5 Ultra", "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/", "published_at": "2026-08-25T00:00:00-07:00", "note": "核验预购、上市时间、配置与定价。"}
       ]
     },
     {
@@ -272,34 +370,34 @@
     }
   ],
   "calendar": [
-    {"stage": "T-3", "title": "NVIDIA二季度业绩", "time": "北京时间8月27日约04:20发布，05:00电话会", "status": "confirmed", "check": "重点看数据中心收入、Blackwell交付、毛利率与下一季指引。"},
-    {"stage": "T-3", "title": "CFTC创新议题公众意见截止", "time": "美国时间8月27日", "status": "confirmed", "check": "区分行业诉求、委员会建议和正式监管提案。"},
-    {"stage": "T-9", "title": "加拿大反制清单预期窗口", "time": "未来数日，9月8日生效", "status": "watching", "check": "按商品编码映射公司敞口，避免泛化。"},
-    {"stage": "T-23", "title": "美联储9月FOMC", "time": "9月15–16日", "status": "confirmed", "check": "判断7月鹰派分歧是否延续。"}
+    {"stage": "T-1", "title": "NVIDIA二季度业绩", "time": "北京时间8月27日约04:20发布，05:00电话会", "status": "confirmed", "check": "重点看数据中心收入、Blackwell/Rubin交付、毛利率与下一季指引。"},
+    {"stage": "T-2", "title": "CFTC创新议题公众意见截止", "time": "美国时间8月27日", "status": "confirmed", "check": "区分行业诉求、委员会建议和正式监管提案。"},
+    {"stage": "T-14", "title": "加拿大反制清单预期窗口", "time": "未来数日，9月8日生效", "status": "watching", "check": "按商品编码映射公司敞口，避免泛化。"},
+    {"stage": "T-21", "title": "美联储9月FOMC", "time": "9月15–16日", "status": "confirmed", "check": "判断7月鹰派分歧是否延续。"}
   ],
   "source_health": [
-    {"group": "第一层 · 一手来源", "status": "verified", "last_success_at": "2026-08-24T22:39:01+08:00", "coverage": "12/12自动源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register、Z.ai HF共抓取542条，保留24条一手候选；新增Strategy事件已回查SEC 8-K原文"},
-    {"group": "第二层 · 专业发现", "status": "partial", "last_success_at": "2026-08-24T22:35:25+08:00", "coverage": "AI HOT自动源1/1成功，抓取41条、保留13条发现候选；本轮没有由专业发现源升级的新事件。Reuters、Bloomberg、FT、WSJ、金十、财联社、富途已登记但尚未自动轮询"},
+    {"group": "第一层 · 一手来源", "status": "verified", "last_success_at": "2026-08-25T22:33:34+08:00", "coverage": "12/12自动源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register、Z.ai HF共抓取542条，保留21条一手候选；新增伊朗政策已回查白宫原文，AI硬件事件已回查NVIDIA、Nebius与Apple官方页面"},
+    {"group": "第二层 · 专业发现", "status": "partial", "last_success_at": "2026-08-25T22:33:34+08:00", "coverage": "AI HOT自动源1/1成功，抓取37条、保留12条发现候选；Apple与NVIDIA线索已升级到官方原文。Reuters、Bloomberg、FT、WSJ、金十、财联社、富途已登记但尚未自动轮询"},
     {"group": "第三层 · 社交抢先", "status": "registered", "last_success_at": null, "coverage": "官方X、Truth Social、微信公众号、Telegram和行业记者已登记；当前0个自动源，任何内容默认仅线索"},
     {"group": "市场验证", "status": "verified", "last_success_at": "2026-08-23T10:10:00+08:00", "coverage": "Futu OpenD截至2026-08-21最新完整交易日；价格相关不作因果证明"}
   ],
   "collection_run": {
-    "generated_at": "2026-08-24T22:39:01+08:00",
+    "generated_at": "2026-08-25T22:33:34+08:00",
     "configured_sources": 36,
     "active_sources": 13,
     "successful_sources": 13,
     "failed_sources": 0,
     "registered_manual_sources": 23,
     "tier1_fetched": 542,
-    "tier1_candidates": 24,
-    "tier2_fetched": 41,
-    "candidate_pool_after_dedupe": 36,
-    "manual_connectors_succeeded": ["SEC EDGAR 8-K官方原文核验"],
+    "tier1_candidates": 21,
+    "tier2_fetched": 37,
+    "candidate_pool_after_dedupe": 33,
+    "manual_connectors_succeeded": ["White House官方原文核验", "NVIDIA与Nebius官方原文核验", "Apple Newsroom官方原文核验"],
     "artifacts": ["sources.json", "candidates.json", "collection-status.json"]
   },
   "methodology": {
     "priority_formula": "影响范围30% + 传导直接度25% + 证据可靠度20% + 预期差15% + 时间紧迫度10%",
     "core_rule": "核心区只接受verified或partially_verified事件，并至少包含一个一手来源；匿名消息进入待证真。",
-    "limitations": "本页为2026-08-24北京时间快照。候选池由真实RSS/API采集生成，但核心事件仍需逐条正文核验；本轮13/13自动源成功，23个付费、登录或专用连接器来源只登记未自动化。Strategy事件已由SEC 8-K原文核验；8月24日美股尚无完整收盘，市场价格仍以Futu OpenD截至8月21日完整交易日为基线，盘中波动与价格共振均不代表因果。"
+    "limitations": "本页为2026-08-25北京时间快照。候选池由真实RSS/API采集生成，但核心事件仍需逐条正文核验；本轮13/13自动源成功，23个付费、登录或专用连接器来源只登记未自动化。伊朗行动已核验白宫发布但具体财政部/OFAC文件仍待逐份读取；NVIDIA、Nebius与Apple产品事件已由公司官方页面核验，性能和商业化仍需独立验证。美国交易日尚未完成，未用盘中波动证明事件因果。"
   }
 }
