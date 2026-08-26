@@ -1,17 +1,60 @@
 {
   "market": "US",
   "title": "美股趋势候选矩阵",
-  "data_date": "2026-08-24",
-  "generated_at_bj": "2026-08-25T09:57:47+08:00",
+  "data_date": "2026-08-25",
+  "generated_at_bj": "2026-08-26T09:44:05+08:00",
   "coverage_ratio": 0.9855,
-  "market_mode": "防守市场·仅观察",
+  "market_mode": "正常盘前筛选",
   "earnings_calendar_verified": true,
-  "earnings_source": "2026-08-24T11:01:55+08:00",
+  "earnings_source": "2026-08-25T11:02:25+08:00",
   "matrix": [
     {
       "category": "硬件",
       "主升": [],
       "回调": [
+        {
+          "ticker": "TSM",
+          "name": "台积电",
+          "state": "回调",
+          "level": "推荐",
+          "subtheme": "SOX/算力芯片",
+          "buy_points": [
+            "C2 KDJ低位拐头",
+            "C3收复EMA21"
+          ],
+          "kind": "回调·C2 KDJ低位拐头 + C3收复EMA21",
+          "hour": "1小时同向改善",
+          "atr_pct": 2.6,
+          "signal_low": 414.03
+        },
+        {
+          "ticker": "LITE",
+          "name": "Lumentum",
+          "state": "回调",
+          "level": "推荐",
+          "subtheme": "光通信/光器件",
+          "buy_points": [
+            "C3收复EMA21"
+          ],
+          "kind": "回调·C3收复EMA21",
+          "hour": "1小时同向改善",
+          "atr_pct": 9.4,
+          "signal_low": 841.1
+        },
+        {
+          "ticker": "MU",
+          "name": "美光科技",
+          "state": "回调",
+          "level": "推荐",
+          "subtheme": "内存/HBM/存储",
+          "buy_points": [
+            "C3收复EMA21"
+          ],
+          "kind": "回调·C3收复EMA21",
+          "hour": "1小时同向改善",
+          "atr_pct": 6.0,
+          "signal_low": 916.3
+        },
         {
           "ticker": "MRVL",
           "name": "迈威尔科技",
@@ -20,76 +63,34 @@
           "subtheme": "SOX/算力芯片",
           "buy_points": [],
           "kind": "回调·可关注",
-          "hour": "1小时同向改善",
-          "atr_pct": 7.3,
-          "signal_low": null
-        },
-        {
-          "ticker": "ASML",
-          "name": "阿斯麦",
-          "state": "回调",
-          "level": "防守市场·仅观察",
-          "subtheme": "SOX/算力芯片",
-          "buy_points": [
-            "C2 KDJ低位拐头"
-          ],
-          "kind": "回调·C2 KDJ低位拐头",
-          "hour": "未确认",
-          "atr_pct": 3.2,
-          "signal_low": 1727.57
-        },
-        {
-          "ticker": "HPE",
-          "name": "慧与科技",
-          "state": "回调",
-          "level": "防守市场·仅观察",
-          "subtheme": "AI服务器/硬件",
-          "buy_points": [
-            "C1低位十字星",
-            "C2 KDJ低位拐头"
-          ],
-          "kind": "回调·C1低位十字星 + C2 KDJ低位拐头",
-          "hour": "未确认",
-          "atr_pct": 5.8,
-          "signal_low": 51.3001
-        },
-        {
-          "ticker": "MU",
-          "name": "美光科技",
-          "state": "回调",
-          "level": "可关注",
-          "subtheme": "内存/HBM/存储",
-          "buy_points": [],
-          "kind": "回调·可关注",
-          "hour": "未确认",
-          "atr_pct": 6.2,
+          "hour": "1小时仍有冲突",
+          "atr_pct": 7.1,
           "signal_low": null
         },
         {
           "ticker": "DELL",
           "name": "戴尔科技",
           "state": "回调",
-          "level": "防守市场·仅观察",
+          "level": "等待确认",
           "subtheme": "AI服务器/硬件",
           "buy_points": [
-            "C1低位十字星",
-            "C2 KDJ低位拐头"
+            "C3收复EMA21"
           ],
-          "kind": "回调·C1低位十字星 + C2 KDJ低位拐头",
+          "kind": "回调·C3收复EMA21",
           "hour": "1小时仍有冲突",
-          "atr_pct": 6.5,
-          "signal_low": 424.0
+          "atr_pct": 6.2,
+          "signal_low": 441.7
         },
         {
-          "ticker": "ANET",
-          "name": "Arista Networks",
+          "ticker": "ASML",
+          "name": "阿斯麦",
           "state": "回调",
           "level": "可关注",
-          "subtheme": "AI网络/交换机",
+          "subtheme": "SOX/算力芯片",
           "buy_points": [],
           "kind": "回调·可关注",
           "hour": "1小时仍有冲突",
-          "atr_pct": 4.9,
+          "atr_pct": 3.1,
           "signal_low": null
         },
         {
@@ -100,20 +101,34 @@
           "subtheme": "AI服务器/硬件",
           "buy_points": [],
           "kind": "回调·可关注",
-          "hour": "未确认",
-          "atr_pct": 7.2,
+          "hour": "1小时仍有冲突",
+          "atr_pct": 7.0,
           "signal_low": null
         },
         {
-          "ticker": "LITE",
-          "name": "Lumentum",
+          "ticker": "ANET",
+          "name": "Arista Networks",
+          "state": "回调",
+          "level": "等待确认",
+          "subtheme": "AI网络/交换机",
+          "buy_points": [
+            "C3收复EMA21"
+          ],
+          "kind": "回调·C3收复EMA21",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 4.1,
+          "signal_low": 188.06
+        },
+        {
+          "ticker": "APH",
+          "name": "安费诺",
           "state": "回调",
           "level": "可关注",
-          "subtheme": "光通信/光器件",
+          "subtheme": "AI服务器/硬件",
           "buy_points": [],
           "kind": "回调·可关注",
-          "hour": "未确认",
-          "atr_pct": 10.0,
+          "hour": "1小时仍有冲突",
+          "atr_pct": 3.6,
           "signal_low": null
         },
         {
@@ -125,22 +140,76 @@
           "buy_points": [],
           "kind": "回调·可关注",
           "hour": "1小时仍有冲突",
-          "atr_pct": 8.9,
+          "atr_pct": 8.8,
+          "signal_low": null
+        },
+        {
+          "ticker": "HPE",
+          "name": "慧与科技",
+          "state": "回调",
+          "level": "等待确认",
+          "subtheme": "AI服务器/硬件",
+          "buy_points": [
+            "C3收复EMA21"
+          ],
+          "kind": "回调·C3收复EMA21",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 5.6,
+          "signal_low": 53.0
+        },
+        {
+          "ticker": "INDI",
+          "name": "indie Semiconductor",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "SOX/算力芯片",
+          "buy_points": [],
+          "kind": "回调·可关注",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 10.6,
           "signal_low": null
         }
       ],
       "反转": [
         {
+          "ticker": "AMD",
+          "name": "美国超微公司",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "SOX/算力芯片",
+          "buy_points": [
+            "D2 KDJ极低拐头"
+          ],
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "1小时同向改善",
+          "atr_pct": 4.3,
+          "signal_low": 469.07
+        },
+        {
+          "ticker": "CIEN",
+          "name": "Ciena",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "光通信/光器件",
+          "buy_points": [],
+          "kind": "反转·可关注",
+          "hour": "1小时同向改善",
+          "atr_pct": 7.5,
+          "signal_low": null
+        },
+        {
           "ticker": "UMC",
           "name": "联电",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "SOX/算力芯片",
-          "buy_points": [],
-          "kind": "反转·可关注",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
           "hour": "1小时仍有冲突",
-          "atr_pct": 4.3,
-          "signal_low": null
+          "atr_pct": 4.0,
+          "signal_low": 19.42
         },
         {
           "ticker": "SNDK",
@@ -151,88 +220,44 @@
           "buy_points": [],
           "kind": "反转·可关注",
           "hour": "未确认",
-          "atr_pct": 9.0,
+          "atr_pct": 9.1,
           "signal_low": null
         },
         {
-          "ticker": "APH",
-          "name": "安费诺",
+          "ticker": "VIAV",
+          "name": "Viavi Solutions",
           "state": "反转",
           "level": "可关注",
-          "subtheme": "AI服务器/硬件",
+          "subtheme": "光通信/光器件",
           "buy_points": [],
           "kind": "反转·可关注",
           "hour": "未确认",
-          "atr_pct": 3.7,
+          "atr_pct": 8.2,
           "signal_low": null
         },
         {
           "ticker": "ENTG",
           "name": "英特格",
           "state": "反转",
-          "level": "防守市场·仅观察",
-          "subtheme": "SOX/算力芯片",
-          "buy_points": [
-            "D2 KDJ极低拐头"
-          ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "未确认",
-          "atr_pct": 6.1,
-          "signal_low": 134.49
-        },
-        {
-          "ticker": "VIAV",
-          "name": "Viavi Solutions",
-          "state": "反转",
-          "level": "防守市场·仅观察",
-          "subtheme": "光通信/光器件",
-          "buy_points": [
-            "D2 KDJ极低拐头"
-          ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "未确认",
-          "atr_pct": 8.6,
-          "signal_low": 36.11
-        },
-        {
-          "ticker": "INDI",
-          "name": "indie Semiconductor",
-          "state": "反转",
           "level": "可关注",
           "subtheme": "SOX/算力芯片",
           "buy_points": [],
           "kind": "反转·可关注",
           "hour": "1小时仍有冲突",
-          "atr_pct": 11.0,
+          "atr_pct": 6.0,
           "signal_low": null
-        },
-        {
-          "ticker": "TEL",
-          "name": "泰科电子",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "AI服务器/硬件",
-          "buy_points": [
-            "D1末端低位十字星"
-          ],
-          "kind": "反转·D1末端低位十字星",
-          "hour": "未确认",
-          "atr_pct": 2.7,
-          "signal_low": 199.52
         },
         {
           "ticker": "TER",
           "name": "泰瑞达",
           "state": "反转",
-          "level": "防守市场·仅观察",
+          "level": "可关注",
           "subtheme": "SOX/算力芯片",
-          "buy_points": [
-            "D2 KDJ极低拐头"
-          ],
-          "kind": "反转·D2 KDJ极低拐头",
+          "buy_points": [],
+          "kind": "反转·可关注",
           "hour": "未确认",
-          "atr_pct": 7.1,
-          "signal_low": 349.0101
+          "atr_pct": 7.0,
+          "signal_low": null
         },
         {
           "ticker": "WDC",
@@ -240,118 +265,6 @@
           "state": "反转",
           "level": "可关注",
           "subtheme": "内存/HBM/存储",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "未确认",
-          "atr_pct": 9.2,
-          "signal_low": null
-        },
-        {
-          "ticker": "STM",
-          "name": "意法半导体",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "SOX/算力芯片",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "未确认",
-          "atr_pct": 4.2,
-          "signal_low": null
-        },
-        {
-          "ticker": "RMBS",
-          "name": "Rambus",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "内存/HBM/存储",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "未确认",
-          "atr_pct": 6.1,
-          "signal_low": null
-        },
-        {
-          "ticker": "PENG",
-          "name": "Penguin Solutions",
-          "state": "反转",
-          "level": "防守市场·仅观察",
-          "subtheme": "内存/HBM/存储",
-          "buy_points": [
-            "D2 KDJ极低拐头"
-          ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "未确认",
-          "atr_pct": 8.1,
-          "signal_low": 49.07
-        },
-        {
-          "ticker": "ARM",
-          "name": "Arm Holdings",
-          "state": "反转",
-          "level": "防守市场·仅观察",
-          "subtheme": "SOX/算力芯片",
-          "buy_points": [
-            "D2 KDJ极低拐头"
-          ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "未确认",
-          "atr_pct": 7.0,
-          "signal_low": 233.29
-        },
-        {
-          "ticker": "VRT",
-          "name": "Vertiv Holdings",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "AI服务器/硬件",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "未确认",
-          "atr_pct": 5.4,
-          "signal_low": null
-        },
-        {
-          "ticker": "AMBA",
-          "name": "安霸",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "SOX/算力芯片",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "未确认",
-          "atr_pct": 5.6,
-          "signal_low": null
-        },
-        {
-          "ticker": "AAOI",
-          "name": "Applied Optoelectronics",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "光通信/光器件",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "未确认",
-          "atr_pct": 15.6,
-          "signal_low": null
-        },
-        {
-          "ticker": "AMD",
-          "name": "美国超微公司",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "SOX/算力芯片",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 4.8,
-          "signal_low": null
-        },
-        {
-          "ticker": "VICR",
-          "name": "Vicor电子",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "AI服务器/硬件",
           "buy_points": [],
           "kind": "反转·可关注",
           "hour": "未确认",
@@ -367,22 +280,120 @@
           "buy_points": [],
           "kind": "反转·可关注",
           "hour": "未确认",
-          "atr_pct": 12.4,
+          "atr_pct": 11.6,
           "signal_low": null
         },
         {
-          "ticker": "CIEN",
-          "name": "Ciena",
+          "ticker": "AMBA",
+          "name": "安霸",
           "state": "反转",
-          "level": "防守市场·仅观察",
-          "subtheme": "光通信/光器件",
+          "level": "等待确认",
+          "subtheme": "SOX/算力芯片",
           "buy_points": [
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
           "hour": "未确认",
-          "atr_pct": 8.0,
-          "signal_low": 362.48
+          "atr_pct": 5.4,
+          "signal_low": 69.2
+        },
+        {
+          "ticker": "RMBS",
+          "name": "Rambus",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "内存/HBM/存储",
+          "buy_points": [],
+          "kind": "反转·可关注",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 5.6,
+          "signal_low": null
+        },
+        {
+          "ticker": "STM",
+          "name": "意法半导体",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "SOX/算力芯片",
+          "buy_points": [],
+          "kind": "反转·可关注",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 4.1,
+          "signal_low": null
+        },
+        {
+          "ticker": "PENG",
+          "name": "Penguin Solutions",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "内存/HBM/存储",
+          "buy_points": [],
+          "kind": "反转·可关注",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 8.2,
+          "signal_low": null
+        },
+        {
+          "ticker": "TEL",
+          "name": "泰科电子",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "AI服务器/硬件",
+          "buy_points": [],
+          "kind": "反转·可关注",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 2.8,
+          "signal_low": null
+        },
+        {
+          "ticker": "ARM",
+          "name": "Arm Holdings",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "SOX/算力芯片",
+          "buy_points": [],
+          "kind": "反转·可关注",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 6.8,
+          "signal_low": null
+        },
+        {
+          "ticker": "VRT",
+          "name": "Vertiv Holdings",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "AI服务器/硬件",
+          "buy_points": [],
+          "kind": "反转·可关注",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 5.3,
+          "signal_low": null
+        },
+        {
+          "ticker": "VICR",
+          "name": "Vicor电子",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "AI服务器/硬件",
+          "buy_points": [
+            "D2 KDJ极低拐头"
+          ],
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "未确认",
+          "atr_pct": 8.3,
+          "signal_low": 191.69
+        },
+        {
+          "ticker": "AAOI",
+          "name": "Applied Optoelectronics",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "光通信/光器件",
+          "buy_points": [],
+          "kind": "反转·可关注",
+          "hour": "未确认",
+          "atr_pct": 14.6,
+          "signal_low": null
         },
         {
           "ticker": "JBL",
@@ -393,19 +404,7 @@
           "buy_points": [],
           "kind": "反转·可关注",
           "hour": "未确认",
-          "atr_pct": 4.9,
-          "signal_low": null
-        },
-        {
-          "ticker": "FN",
-          "name": "Fabrinet",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "光通信/光器件",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 9.9,
+          "atr_pct": 4.8,
           "signal_low": null
         },
         {
@@ -419,24 +418,24 @@
           "hour": "1小时仍有冲突",
           "atr_pct": 3.8,
           "signal_low": null
+        },
+        {
+          "ticker": "FN",
+          "name": "Fabrinet",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "光通信/光器件",
+          "buy_points": [],
+          "kind": "反转·可关注",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 9.3,
+          "signal_low": null
         }
       ]
     },
     {
       "category": "软件",
       "主升": [
-        {
-          "ticker": "ADBE",
-          "name": "Adobe",
-          "state": "主升",
-          "level": "可关注",
-          "subtheme": "云/软件",
-          "buy_points": [],
-          "kind": "主升·可关注",
-          "hour": "1小时同向改善",
-          "atr_pct": 3.6,
-          "signal_low": null
-        },
         {
           "ticker": "PATH",
           "name": "UiPath",
@@ -445,8 +444,20 @@
           "subtheme": "云/软件",
           "buy_points": [],
           "kind": "主升·可关注",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 5.2,
+          "hour": "未确认",
+          "atr_pct": 5.1,
+          "signal_low": null
+        },
+        {
+          "ticker": "ADBE",
+          "name": "Adobe",
+          "state": "主升",
+          "level": "可关注",
+          "subtheme": "云/软件",
+          "buy_points": [],
+          "kind": "主升·可关注",
+          "hour": "未确认",
+          "atr_pct": 3.7,
           "signal_low": null
         },
         {
@@ -458,31 +469,7 @@
           "buy_points": [],
           "kind": "主升·可关注",
           "hour": "1小时仍有冲突",
-          "atr_pct": 2.0,
-          "signal_low": null
-        },
-        {
-          "ticker": "PLTR",
-          "name": "Palantir",
-          "state": "主升",
-          "level": "可关注",
-          "subtheme": "云/软件",
-          "buy_points": [],
-          "kind": "主升·可关注",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 4.2,
-          "signal_low": null
-        },
-        {
-          "ticker": "ZETA",
-          "name": "Zeta Global",
-          "state": "主升",
-          "level": "可关注",
-          "subtheme": "云/软件",
-          "buy_points": [],
-          "kind": "主升·可关注",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 5.8,
+          "atr_pct": 1.9,
           "signal_low": null
         }
       ],
@@ -495,36 +482,73 @@
           "subtheme": "云/软件",
           "buy_points": [],
           "kind": "回调·可关注",
-          "hour": "1小时同向改善",
-          "atr_pct": 4.4,
+          "hour": "未确认",
+          "atr_pct": 4.5,
           "signal_low": null
         },
         {
           "ticker": "AMZN",
           "name": "亚马逊",
           "state": "回调",
-          "level": "防守市场·仅观察",
+          "level": "可关注",
           "subtheme": "云/软件",
-          "buy_points": [
-            "C2 KDJ低位拐头",
-            "C3收复EMA21"
-          ],
-          "kind": "回调·C2 KDJ低位拐头 + C3收复EMA21",
+          "buy_points": [],
+          "kind": "回调·可关注",
           "hour": "1小时仍有冲突",
-          "atr_pct": 2.3,
-          "signal_low": 259.05
+          "atr_pct": 2.1,
+          "signal_low": null
         },
         {
-          "ticker": "SNOW",
-          "name": "Snowflake",
+          "ticker": "PLTR",
+          "name": "Palantir",
           "state": "回调",
           "level": "可关注",
           "subtheme": "云/软件",
           "buy_points": [],
           "kind": "回调·可关注",
           "hour": "1小时仍有冲突",
-          "atr_pct": 3.7,
+          "atr_pct": 4.3,
           "signal_low": null
+        },
+        {
+          "ticker": "FTNT",
+          "name": "飞塔信息",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "网络安全",
+          "buy_points": [],
+          "kind": "回调·可关注",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 3.4,
+          "signal_low": null
+        },
+        {
+          "ticker": "SNOW",
+          "name": "Snowflake",
+          "state": "回调",
+          "level": "等待确认",
+          "subtheme": "云/软件",
+          "buy_points": [
+            "C1低位十字星"
+          ],
+          "kind": "回调·C1低位十字星",
+          "hour": "未确认",
+          "atr_pct": 4.0,
+          "signal_low": 308.62
+        },
+        {
+          "ticker": "ZETA",
+          "name": "Zeta Global",
+          "state": "回调",
+          "level": "等待确认",
+          "subtheme": "云/软件",
+          "buy_points": [
+            "C1低位十字星"
+          ],
+          "kind": "回调·C1低位十字星",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 5.0,
+          "signal_low": 27.605
         },
         {
           "ticker": "ZS",
@@ -534,89 +558,51 @@
           "subtheme": "网络安全",
           "buy_points": [],
           "kind": "回调·可关注",
-          "hour": "未确认",
-          "atr_pct": 4.5,
-          "signal_low": null
-        },
-        {
-          "ticker": "FTNT",
-          "name": "飞塔信息",
-          "state": "回调",
-          "level": "防守市场·仅观察",
-          "subtheme": "网络安全",
-          "buy_points": [
-            "C1低位十字星"
-          ],
-          "kind": "回调·C1低位十字星",
           "hour": "1小时仍有冲突",
-          "atr_pct": 3.7,
-          "signal_low": 150.4
-        },
-        {
-          "ticker": "CRWD",
-          "name": "CrowdStrike",
-          "state": "回调",
-          "level": "防守市场·仅观察",
-          "subtheme": "网络安全",
-          "buy_points": [
-            "C2 KDJ低位拐头"
-          ],
-          "kind": "回调·C2 KDJ低位拐头",
-          "hour": "未确认",
-          "atr_pct": 4.7,
-          "signal_low": 188.43
+          "atr_pct": 4.9,
+          "signal_low": null
         },
         {
           "ticker": "PANW",
           "name": "Palo Alto Networks",
           "state": "回调",
-          "level": "防守市场·仅观察",
+          "level": "可关注",
           "subtheme": "网络安全",
-          "buy_points": [
-            "C2 KDJ低位拐头"
-          ],
-          "kind": "回调·C2 KDJ低位拐头",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 4.2,
-          "signal_low": 347.0466
+          "buy_points": [],
+          "kind": "回调·可关注",
+          "hour": "未确认",
+          "atr_pct": 4.4,
+          "signal_low": null
         },
         {
           "ticker": "NET",
           "name": "Cloudflare",
           "state": "回调",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "云/软件",
-          "buy_points": [],
-          "kind": "回调·可关注",
-          "hour": "1小时仍有冲突",
+          "buy_points": [
+            "C2 KDJ低位拐头"
+          ],
+          "kind": "回调·C2 KDJ低位拐头",
+          "hour": "未确认",
           "atr_pct": 6.3,
-          "signal_low": null
+          "signal_low": 273.2101
         }
       ],
       "反转": [
         {
-          "ticker": "CRM",
-          "name": "赛富时",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "云/软件",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 3.6,
-          "signal_low": null
-        },
-        {
           "ticker": "ORCL",
           "name": "甲骨文",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "云/软件",
-          "buy_points": [],
-          "kind": "反转·可关注",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
           "hour": "1小时仍有冲突",
           "atr_pct": 4.4,
-          "signal_low": null
+          "signal_low": 142.51
         },
         {
           "ticker": "DDOG",
@@ -636,6 +622,30 @@
       "category": "医药（AI4S）",
       "主升": [
         {
+          "ticker": "NTRA",
+          "name": "Natera",
+          "state": "主升",
+          "level": "可关注",
+          "subtheme": "生物科技/医疗",
+          "buy_points": [],
+          "kind": "主升·可关注",
+          "hour": "1小时同向改善",
+          "atr_pct": 4.3,
+          "signal_low": null
+        },
+        {
+          "ticker": "SDGR",
+          "name": "Schrodinger",
+          "state": "主升",
+          "level": "可关注",
+          "subtheme": "生物科技/医疗",
+          "buy_points": [],
+          "kind": "主升·可关注",
+          "hour": "1小时同向改善",
+          "atr_pct": 5.1,
+          "signal_low": null
+        },
+        {
           "ticker": "ILMN",
           "name": "Illumina",
           "state": "主升",
@@ -646,55 +656,33 @@
           "hour": "1小时仍有冲突",
           "atr_pct": 4.1,
           "signal_low": null
-        },
-        {
-          "ticker": "NTRA",
-          "name": "Natera",
-          "state": "主升",
-          "level": "可关注",
-          "subtheme": "生物科技/医疗",
-          "buy_points": [],
-          "kind": "主升·可关注",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 4.3,
-          "signal_low": null
-        },
-        {
-          "ticker": "LLY",
-          "name": "礼来",
-          "state": "主升",
-          "level": "可关注",
-          "subtheme": "生物科技/医疗",
-          "buy_points": [],
-          "kind": "主升·可关注",
-          "hour": "未确认",
-          "atr_pct": 3.6,
-          "signal_low": null
         }
       ],
       "回调": [
         {
-          "ticker": "SDGR",
-          "name": "Schrodinger",
+          "ticker": "RXRX",
+          "name": "Recursion Pharmaceuticals",
           "state": "回调",
           "level": "可关注",
           "subtheme": "生物科技/医疗",
-          "buy_points": [],
-          "kind": "回调·可关注",
-          "hour": "未确认",
-          "atr_pct": 5.3,
-          "signal_low": null
+          "buy_points": [
+            "C3收复EMA21"
+          ],
+          "kind": "回调·C3收复EMA21",
+          "hour": "1小时同向改善",
+          "atr_pct": 5.5,
+          "signal_low": 3.26
         },
         {
-          "ticker": "TEM",
-          "name": "Tempus AI",
+          "ticker": "NVO",
+          "name": "诺和诺德",
           "state": "回调",
           "level": "可关注",
           "subtheme": "生物科技/医疗",
           "buy_points": [],
           "kind": "回调·可关注",
           "hour": "1小时仍有冲突",
-          "atr_pct": 7.1,
+          "atr_pct": 2.4,
           "signal_low": null
         },
         {
@@ -706,23 +694,23 @@
           "buy_points": [],
           "kind": "回调·可关注",
           "hour": "1小时仍有冲突",
-          "atr_pct": 4.4,
+          "atr_pct": 4.3,
+          "signal_low": null
+        },
+        {
+          "ticker": "TEM",
+          "name": "Tempus AI",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "生物科技/医疗",
+          "buy_points": [],
+          "kind": "回调·可关注",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 7.4,
           "signal_low": null
         }
       ],
       "反转": [
-        {
-          "ticker": "NVO",
-          "name": "诺和诺德",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "生物科技/医疗",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "未确认",
-          "atr_pct": 2.5,
-          "signal_low": null
-        },
         {
           "ticker": "NTLA",
           "name": "Intellia Therapeutics",
@@ -731,20 +719,8 @@
           "subtheme": "生物科技/医疗",
           "buy_points": [],
           "kind": "反转·可关注",
-          "hour": "未确认",
-          "atr_pct": 5.5,
-          "signal_low": null
-        },
-        {
-          "ticker": "RXRX",
-          "name": "Recursion Pharmaceuticals",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "生物科技/医疗",
-          "buy_points": [],
-          "kind": "反转·可关注",
           "hour": "1小时仍有冲突",
-          "atr_pct": 5.9,
+          "atr_pct": 5.4,
           "signal_low": null
         }
       ]
@@ -753,6 +729,18 @@
       "category": "加密货币",
       "主升": [],
       "回调": [
+        {
+          "ticker": "CRCL",
+          "name": "Circle",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "加密货币/交易与矿企",
+          "buy_points": [],
+          "kind": "回调·可关注",
+          "hour": "1小时同向改善",
+          "atr_pct": 6.4,
+          "signal_low": null
+        },
         {
           "ticker": "HOOD",
           "name": "Robinhood",
@@ -764,21 +752,49 @@
           "hour": "1小时仍有冲突",
           "atr_pct": 5.1,
           "signal_low": null
-        },
-        {
-          "ticker": "CRCL",
-          "name": "Circle",
-          "state": "回调",
-          "level": "可关注",
-          "subtheme": "加密货币/交易与矿企",
-          "buy_points": [],
-          "kind": "回调·可关注",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 6.4,
-          "signal_low": null
         }
       ],
       "反转": [
+        {
+          "ticker": "COIN",
+          "name": "Coinbase",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "加密货币/交易与矿企",
+          "buy_points": [],
+          "kind": "反转·可关注",
+          "hour": "1小时同向改善",
+          "atr_pct": 5.2,
+          "signal_low": null
+        },
+        {
+          "ticker": "CORZ",
+          "name": "Core Scientific",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "加密货币/交易与矿企",
+          "buy_points": [
+            "D2 KDJ极低拐头"
+          ],
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "1小时同向改善",
+          "atr_pct": 6.9,
+          "signal_low": 17.52
+        },
+        {
+          "ticker": "IREN",
+          "name": "IREN Ltd",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "加密货币/交易与矿企",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 8.2,
+          "signal_low": 40.03
+        },
         {
           "ticker": "MSTR",
           "name": "Strategy",
@@ -788,70 +804,36 @@
           "buy_points": [],
           "kind": "反转·可关注",
           "hour": "1小时仍有冲突",
-          "atr_pct": 5.2,
-          "signal_low": null
-        },
-        {
-          "ticker": "COIN",
-          "name": "Coinbase",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "加密货币/交易与矿企",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 5.1,
-          "signal_low": null
-        },
-        {
-          "ticker": "RIOT",
-          "name": "Riot Platforms",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "加密货币/交易与矿企",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 9.6,
-          "signal_low": null
-        },
-        {
-          "ticker": "IREN",
-          "name": "IREN Ltd",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "加密货币/交易与矿企",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 8.6,
+          "atr_pct": 5.4,
           "signal_low": null
         },
         {
           "ticker": "CLSK",
           "name": "CleanSpark",
           "state": "反转",
-          "level": "可关注",
-          "subtheme": "加密货币/交易与矿企",
-          "buy_points": [],
-          "kind": "反转·可关注",
-          "hour": "1小时仍有冲突",
-          "atr_pct": 8.7,
-          "signal_low": null
-        },
-        {
-          "ticker": "CORZ",
-          "name": "Core Scientific",
-          "state": "反转",
-          "level": "防守市场·仅观察",
+          "level": "等待确认",
           "subtheme": "加密货币/交易与矿企",
           "buy_points": [
-            "D1末端低位十字星"
+            "D5收复EMA21"
           ],
-          "kind": "反转·D1末端低位十字星",
+          "kind": "反转·D5收复EMA21",
           "hour": "1小时仍有冲突",
-          "atr_pct": 7.4,
-          "signal_low": 17.145
+          "atr_pct": 8.2,
+          "signal_low": 11.8
+        },
+        {
+          "ticker": "RIOT",
+          "name": "Riot Platforms",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "加密货币/交易与矿企",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "1小时仍有冲突",
+          "atr_pct": 8.9,
+          "signal_low": 19.57
         }
       ]
     }

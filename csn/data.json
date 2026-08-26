@@ -2,20 +2,18 @@
   "schemaVersion": 1,
   "title": "美股综合优选",
   "status": "VERIFIED",
-  "verifyMarker": "VERIFIED_US_INTEGRATED_RECOMMENDATIONS_ALL_INPUTS_SAME_CLOSE",
-  "modelVersion": "US_INTEGRATED_V1_20260804",
-  "generatedAt": "2026-08-25T10:10:16+08:00",
-  "dataDate": "2026-08-24",
+  "verifyMarker": "VERIFIED_US_INTEGRATED_RECOMMENDATIONS_DIRECT_INPUTS_SAME_CLOSE",
+  "modelVersion": "US_INTEGRATED_V2_20260826",
+  "generatedAt": "2026-08-26T09:52:54+08:00",
+  "dataDate": "2026-08-25",
   "sourceDates": {
-    "csnSignal": "2026-08-24",
-    "hot": "2026-08-24",
-    "thrust": "2026-08-24",
-    "rotation": "2026-08-24",
-    "skew": "2026-08-24",
-    "software": "2026-08-24",
-    "hardware": "2026-08-24",
-    "usMarket": "2026-08-24",
-    "macroMarket": "2026-08-24"
+    "csnSignal": "2026-08-25",
+    "hot": "2026-08-25",
+    "thrust": "2026-08-25",
+    "rotation": "2026-08-25",
+    "skew": "2026-08-25",
+    "software": "2026-08-25",
+    "hardware": "2026-08-25"
   },
   "weights": {
     "strengthRotation": 30,
@@ -26,21 +24,17 @@
     "riskReward": 10
   },
   "marketGate": {
-    "mode": "defensive",
-    "label": "防守",
-    "maxCount": 5,
-    "threshold": 73.0,
+    "mode": "neutral",
+    "label": "中性观察",
+    "maxCount": 7,
+    "threshold": 66.0,
     "reasons": [
       "科技股偏谨慎：QQQ低于MA50",
-      "防守升级",
-      "CNN贪恐 63.7 · 贪婪",
-      "CBOE总Put/Call 0.88"
+      "25Δ Skew QQQ 2.21 / SPY 1.74"
     ],
-    "marketScore": 11,
-    "aboveMa20Pct": 75,
-    "fearGreed": 63.7,
-    "putCall": 0.88,
-    "fiscalStatus": "red"
+    "qqqSkew": 2.21,
+    "spySkew": 1.744,
+    "protectiveSkew": 2.21
   },
   "selectionPolicy": {
     "targetCount": "5-10; never pad below threshold",
@@ -58,29 +52,29 @@
     "xConsensusPolicy": "context_only_not_scored"
   },
   "selectionStats": {
-    "universeCount": 703,
-    "scoredCount": 56,
-    "qualifiedBeforeDiversification": 4,
+    "universeCount": 712,
+    "scoredCount": 57,
+    "qualifiedBeforeDiversification": 8,
     "exclusions": {
-      "singleSource": 340,
-      "csnRiskGate": 186,
+      "singleSource": 352,
+      "csnRiskGate": 182,
       "highRiskProduct": 121,
-      "sectorCap": 1
+      "sectorCap": 3
     }
   },
-  "selectedCount": 3,
+  "selectedCount": 5,
   "rows": [
     {
-      "ticker": "EAT",
-      "name": "布林克国际",
+      "ticker": "V",
+      "name": "Visa",
       "assetClass": "us_stock",
       "sector": "未分类",
-      "score": 79.6,
+      "score": 76.7,
       "factors": {
-        "strengthRotation": 28.0,
+        "strengthRotation": 27.3,
         "trendEntry": 25.0,
-        "heatTheme": 7.6,
-        "volumeStructure": 5.8,
+        "heatTheme": 4.7,
+        "volumeStructure": 6.5,
         "specialMonitor": 5.0,
         "riskReward": 8.2
       },
@@ -100,12 +94,50 @@
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "EMA10 238.13 / EMA20 227.55",
-      "invalidation": "EMA55 200.10",
+      "confirmZone": "EMA10 371.17 / EMA20 366.64",
+      "invalidation": "EMA55 354.08",
       "skew": null,
-      "atrPct": 4.44,
+      "atrPct": 1.66,
       "distanceEma20": null,
       "rank": 1,
+      "action": "等待回踩确认"
+    },
+    {
+      "ticker": "EAT",
+      "name": "布林克国际",
+      "assetClass": "us_stock",
+      "sector": "未分类",
+      "score": 76.4,
+      "factors": {
+        "strengthRotation": 27.1,
+        "trendEntry": 25.0,
+        "heatTheme": 6.9,
+        "volumeStructure": 4.2,
+        "specialMonitor": 5.0,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "HOT",
+        "THRUST_ROTATION"
+      ],
+      "sourceCount": 2,
+      "rotationPhase": "领先加速",
+      "csnCall": "无独立信号",
+      "reasons": [
+        "趋势/位置",
+        "相对强度/轮动",
+        "风险收益",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "EMA10 240.05 / EMA20 229.56",
+      "invalidation": "EMA55 201.84",
+      "skew": null,
+      "atrPct": 4.54,
+      "distanceEma20": null,
+      "rank": 2,
       "action": "等待回踩确认"
     },
     {
@@ -113,13 +145,13 @@
       "name": "Adobe",
       "assetClass": "us_stock",
       "sector": "下游验证",
-      "score": 74.1,
+      "score": 69.7,
       "factors": {
-        "strengthRotation": 28.4,
-        "trendEntry": 22.0,
+        "strengthRotation": 24.8,
+        "trendEntry": 21.6,
         "heatTheme": 5.2,
-        "volumeStructure": 2.0,
-        "specialMonitor": 8.3,
+        "volumeStructure": 1.8,
+        "specialMonitor": 8.1,
         "riskReward": 8.2
       },
       "sources": [
@@ -130,44 +162,44 @@
       "rotationPhase": "领先加速",
       "csnCall": "无独立信号",
       "reasons": [
-        "相对强度/轮动",
         "趋势/位置",
-        "专项监控",
+        "相对强度/轮动",
+        "风险收益",
         "领先加速"
       ],
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "256.45–264.27",
+      "confirmZone": "257.73–265.58",
       "invalidation": "241.23",
       "skew": null,
-      "atrPct": 3.64,
-      "distanceEma20": 6.11,
-      "rank": 2,
-      "action": "等待回踩确认"
+      "atrPct": 3.71,
+      "distanceEma20": 4.69,
+      "rank": 3,
+      "action": "观察"
     },
     {
-      "ticker": "MA",
-      "name": "万事达",
+      "ticker": "MSFT",
+      "name": "微软",
       "assetClass": "us_stock",
-      "sector": "未分类",
-      "score": 73.7,
+      "sector": "6 软件·互联网",
+      "score": 67.4,
       "factors": {
-        "strengthRotation": 27.7,
-        "trendEntry": 20.4,
-        "heatTheme": 5.7,
-        "volumeStructure": 6.7,
+        "strengthRotation": 26.6,
+        "trendEntry": 18.9,
+        "heatTheme": 5.2,
+        "volumeStructure": 3.5,
         "specialMonitor": 5.0,
         "riskReward": 8.2
       },
       "sources": [
         "CSN",
-        "HOT",
-        "THRUST_ROTATION"
+        "THRUST_ROTATION",
+        "SKEW"
       ],
       "sourceCount": 3,
       "rotationPhase": "领先加速",
-      "csnCall": "持有",
+      "csnCall": "买入观察",
       "reasons": [
         "相对强度/轮动",
         "风险收益",
@@ -177,13 +209,52 @@
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "576.138 / 567.649 / 544.748",
-      "invalidation": "551.804",
+      "confirmZone": "485.198 / 472.954 / 440.801",
+      "invalidation": "446.383",
+      "skew": 1.125,
+      "atrPct": 1.91,
+      "distanceEma20": 3.97,
+      "rank": 4,
+      "action": "观察"
+    },
+    {
+      "ticker": "CRM",
+      "name": "赛富时",
+      "assetClass": "us_stock",
+      "sector": "下游验证",
+      "score": 67.0,
+      "factors": {
+        "strengthRotation": 23.7,
+        "trendEntry": 19.9,
+        "heatTheme": 5.2,
+        "volumeStructure": 2.2,
+        "specialMonitor": 7.8,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "买入观察",
+      "reasons": [
+        "风险收益",
+        "趋势/位置",
+        "相对强度/轮动",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "192.39–198.25",
+      "invalidation": "175.9",
       "skew": null,
-      "atrPct": 1.75,
-      "distanceEma20": 5.67,
-      "rank": 3,
-      "action": "等待回踩确认"
+      "atrPct": 3.73,
+      "distanceEma20": 5.31,
+      "rank": 5,
+      "action": "观察"
     }
   ]
 }
