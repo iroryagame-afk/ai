@@ -2,18 +2,51 @@
   "schema_version": 1,
   "page_status": "live",
   "verification_status": "partial",
-  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-08-25_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
-  "generated_at": "2026-08-25T22:36:30+08:00",
+  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-08-26_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
+  "generated_at": "2026-08-26T22:36:30+08:00",
   "window": {"recent_hours": 240, "calendar_days": 30, "timezone": "Asia/Shanghai"},
   "brief": {
-    "title": "美国扩大对伊朗经济孤立，AI硬件进入新一轮产品兑现",
-    "summary": "最新政策增量是白宫宣布对伊朗启动Operation Economic Outcast，覆盖数字资产、科技、黄金、航空与航运等领域并扩大次级制裁风险；AI侧，NVIDIA确认Groq 3 LPX量产且Nebius首批采用，Apple正式发布M6与M5 Ultra。政策执行文本、厂商性能和真实采用仍需分别验证。",
+    "title": "美国增长放缓与通胀黏性同现，美加反制清单落地",
+    "summary": "BEA二次估计确认美国二季度GDP年化增长1.5%，同时将二季度核心PCE年化增速上修至3.6%；7月PCE同比3.7%、核心3.3%，增长与通胀组合继续约束宽松空间。加拿大已公布覆盖276亿加元美国进口的反制清单；AI侧，Z.ai开放GLM-5.3-Flash权重，真实性已核验，性能、价格优势与采用仍待独立验证。",
     "discipline": "候选来自真实采集池，但采集不等于核验：一手源必须读取正文，专业媒体与社交信息必须回链官方原文。价格只验证市场响应，不能反向证明传闻。",
-    "core_count": 10,
+    "core_count": 12,
     "pending_count": 1,
     "next_event_count": 4
   },
   "events": [
+    {
+      "id": "us-gdp-pce-stagflation-signal-2026-08-26",
+      "headline": "美国二季度GDP仅增1.5%，7月PCE同比3.7%：增长放缓与通胀黏性并存",
+      "category": "macro",
+      "event_type": "data",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-08-26T08:30:00-04:00",
+      "observed_at": "2026-08-26T22:32:55+08:00",
+      "verified_at": "2026-08-26T22:36:30+08:00",
+      "fact": "BEA二次估计显示，美国2026年二季度实际GDP按年率增长1.5%，一季度为2.1%；实际私人国内最终销售增长4.2%。二季度PCE价格指数年化增长5.3%，核心PCE增长3.6%，均较初值上修0.2个百分点。7月PCE价格指数环比增长0.2%、同比增长3.7%，核心PCE同比增长3.3%。",
+      "new_information": "GDP总量仅较初值下修不足0.1个百分点，但私人内需被上修；同时季度与月度PCE均显示通胀黏性，形成“总量放缓、内需仍有韧性、价格压力偏高”的组合。",
+      "inference": "推断：该组合会限制市场快速定价宽松，短端利率与美元可能获得支撑，高久期成长估值承压；若后续就业同步走弱，政策与资产方向将取决于Fed对增长和通胀权重的取舍。",
+      "unverified": "本轮未接入一致预期数据库，不能宣称数据相对市场预期超预期或低于预期；8月26日美国交易日尚未完成，价格反应和跨资产扩散仍待收盘验证。",
+      "transmission": [
+        {"level": "A", "path": "PCE通胀黏性 → 降息/加息路径重估 → 短端利率、美元与长久期估值"},
+        {"level": "B", "path": "GDP放缓但私人内需上修 → 盈利与软着陆预期分化 → 周期、消费与防御资产轮动"},
+        {"level": "C", "path": "增长与通胀信号冲突 → Fed反应函数不确定性 → 波动率与跨资产相关性"}
+      ],
+      "affected_assets": [
+        {"market": "美债与美元", "direction": "短端偏空债、美元偏多，待市场确认", "horizon": "1–10日", "reason": "季度与月度PCE仍偏高，可能延后宽松预期；尚无本交易日完整收盘。"},
+        {"market": "美股高久期成长", "direction": "估值承压、盈利支撑分化", "horizon": "1–20日", "reason": "较高实际利率压制估值，但私人内需上修降低立即衰退概率。"},
+        {"market": "周期与消费", "direction": "结构分化", "horizon": "1–3个月", "reason": "总量增速放缓与私人国内需求4.2%形成分歧，需要就业和企业利润继续确认。"}
+      ],
+      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-26T22:36:30+08:00", "detail": "数据发布后美国交易日尚未完成；本轮不以盘中单点波动证明宏观传导。"},
+      "next_checkpoint": "查看8月26日完整收盘、后续就业与通胀数据，并等待9月30日GDP第三次估计及8月PCE。",
+      "invalidation": "后续通胀快速回落、就业显著走弱并促使Fed明确转鸽，或GDP第三次估计大幅改写当前增长与价格组合。",
+      "sources": [
+        {"role": "primary", "name": "BEA — GDP Second Estimate and Corporate Profits, Q2 2026", "url": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-2nd-quarter-2026", "published_at": "2026-08-26T08:30:00-04:00", "note": "核验GDP、私人国内最终销售、PCE价格与修订幅度。"},
+        {"role": "primary", "name": "BEA — Personal Income and Outlays, July 2026", "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026", "published_at": "2026-08-26T08:30:00-04:00", "note": "核验7月收入、消费、储蓄率及PCE环比和同比。"}
+      ]
+    },
     {
       "id": "fomc-july-minutes-2026-08-19",
       "headline": "美联储7月纪要偏鹰：3名委员主张加息，通胀不降或需继续收紧",
@@ -48,19 +81,19 @@
     },
     {
       "id": "us-canada-tariff-escalation-2026-08-22",
-      "headline": "美加关税升级：美国50%附加税生效，加拿大宣布等额反制",
+      "headline": "美加关税升级：加拿大公布276亿加元反制清单，9月8日生效",
       "category": "policy",
       "event_type": "policy",
       "status": "verified",
-      "change_type": "unchanged",
+      "change_type": "upgraded",
       "importance": 5,
       "event_time": "2026-08-22T12:00:00-04:00",
       "observed_at": "2026-08-23T07:30:00+08:00",
-      "verified_at": "2026-08-23T10:25:00+08:00",
-      "fact": "美国依据Section 338对部分加拿大商品加征50%附加税，8月19日生效；白宫称涉及近200亿美元进口，并列出能源、钾肥及已适用Section 232等豁免。加拿大总理8月22日宣布等额反制，将在9月8日生效。",
-      "new_information": "事件已从美国单边执行进入加拿大反制阶段；加拿大具体商品清单仍待公布。",
-      "inference": "推断：直接受税商品及北美跨境供应链成本风险上升；由于豁免较多，不能理解为对全部加拿大商品统一加征50%。",
-      "unverified": "加拿大最终反制清单、税则覆盖额和双方是否在生效前谈判降级。",
+      "verified_at": "2026-08-26T22:36:30+08:00",
+      "fact": "美国依据Section 338对部分加拿大商品加征50%附加税，8月22日生效。加拿大财政部现已发布逐项商品清单：自9月8日00:01起，对来自美国、覆盖276亿加元进口的商品征收15%、25%或50%反制税，税率按对应美国措施匹配，重点涉及钢铁、乳制品、家电、农业设备、纸浆造纸和电子产品。",
+      "new_information": "事件已从反制意向升级为有金额、税率、商品编码和明确生效时间的执行清单；加拿大确认按Section 338与Section 232受影响商品逐项匹配。",
+      "inference": "推断：北美跨境供应链成本风险已可按商品编码映射，钢铁、家电、农业设备和电子等行业的直接敞口上升；清单仍是定向措施，不能泛化为全部美加贸易统一加税。",
+      "unverified": "双方是否在9月8日前谈判降级、企业是否获得豁免或退税安排，以及实际进口转移和终端价格传导幅度。",
       "transmission": [
         {"level": "A", "path": "附加关税 → 直接商品进口成本 → 企业利润率/终端价格"},
         {"level": "B", "path": "加拿大反制 → 跨境订单与供应链重排 → 加拿大权益与加元"}
@@ -71,12 +104,13 @@
         {"market": "北美贸易链", "direction": "偏空", "horizon": "1–3个月", "reason": "需等加拿大清单后按商品编码映射，不能泛化交易。"}
       ],
       "market_confirmation": {"stage": "mixed", "checked_at": "2026-08-23T10:10:00+08:00", "detail": "Futu OpenD完整交易日：EWC 61.83→62.36，FXC 70.7111→70.9328（8月19日至21日）。尚未确认广泛风险溢价。"},
-      "next_checkpoint": "等待加拿大反制商品清单；按行业、公司和供应链逐项映射实际敞口。",
+      "next_checkpoint": "在9月8日前按加拿大财政部商品编码映射行业与公司敞口，并核验是否出现延期、豁免或谈判降级。",
       "invalidation": "双方达成延期、豁免或撤销安排，或反制范围显著小于当前表述。",
       "sources": [
         {"role": "primary", "name": "White House — Section 338 Proclamation", "url": "https://www.whitehouse.gov/presidential-actions/2026/07/imposing-additional-duties-to-offset-canadian-discrimination-against-the-commerce-of-the-united-states-with-respect-to-dairy/", "published_at": "2026-07-31T00:00:00-04:00", "note": "核验税率、依据与生效时间。"},
         {"role": "primary", "name": "White House — Canada Tariff Fact Sheet", "url": "https://www.whitehouse.gov/fact-sheets/2026/07/fact-sheet-president-donald-j-trump-imposes-additional-tariffs-on-canada/", "published_at": "2026-07-31T00:00:00-04:00", "note": "核验覆盖金额与豁免。"},
-        {"role": "primary", "name": "Prime Minister of Canada — First Ministers Readout", "url": "https://www.pm.gc.ca/en/news/readouts/2026/08/22/prime-minister-carney-chairs-first-ministers-meeting", "published_at": "2026-08-22T00:00:00-04:00", "note": "核验等额反制与9月8日生效安排。"}
+        {"role": "primary", "name": "Prime Minister of Canada — First Ministers Readout", "url": "https://www.pm.gc.ca/en/news/readouts/2026/08/22/prime-minister-carney-chairs-first-ministers-meeting", "published_at": "2026-08-22T00:00:00-04:00", "note": "核验等额反制与9月8日生效安排。"},
+        {"role": "primary", "name": "Canada Department of Finance — Counter-tariff Product List", "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html", "published_at": "2026-08-26T00:00:00-04:00", "note": "核验276亿加元覆盖额、15%/25%/50%税率、重点行业、商品编码与生效时间。"}
       ]
     },
     {
@@ -148,7 +182,7 @@
       "category": "geopolitics",
       "event_type": "policy",
       "status": "partially_verified",
-      "change_type": "new",
+      "change_type": "unchanged",
       "importance": 5,
       "event_time": "2026-08-24T15:15:08-04:00",
       "observed_at": "2026-08-25T22:33:34+08:00",
@@ -180,7 +214,7 @@
       "category": "ai",
       "event_type": "product",
       "status": "verified",
-      "change_type": "new",
+      "change_type": "unchanged",
       "importance": 4,
       "event_time": "2026-08-24T08:00:00-07:00",
       "observed_at": "2026-08-25T22:33:34+08:00",
@@ -213,7 +247,7 @@
       "category": "ai",
       "event_type": "product",
       "status": "verified",
-      "change_type": "new",
+      "change_type": "unchanged",
       "importance": 4,
       "event_time": "2026-08-25T00:00:00-07:00",
       "observed_at": "2026-08-25T20:58:13+08:00",
@@ -238,6 +272,39 @@
       "sources": [
         {"role": "primary", "name": "Apple Newsroom — M6 and M5 Ultra", "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/", "published_at": "2026-08-25T00:00:00-07:00", "note": "核验芯片架构、统一内存与AI定位；性能数据为Apple自报。"},
         {"role": "primary", "name": "Apple Newsroom — Mac Studio with M5 Ultra", "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/", "published_at": "2026-08-25T00:00:00-07:00", "note": "核验预购、上市时间、配置与定价。"}
+      ]
+    },
+    {
+      "id": "zai-glm-5-3-flash-open-weights-2026-08-26",
+      "headline": "Z.ai开放GLM-5.3-Flash权重：320B总参数、18B激活并加入原生多模态",
+      "category": "ai",
+      "event_type": "product",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-08-26T21:50:10+08:00",
+      "observed_at": "2026-08-26T22:32:55+08:00",
+      "verified_at": "2026-08-26T22:36:30+08:00",
+      "fact": "Z.ai官方Hugging Face模型卡已开放GLM-5.3-Flash及BF16权重，许可证为MIT。官方说明该模型是GLM-5系列首个原生多模态模型，总参数320B、每次激活18B，并采用稀疏与线性注意力混合架构；API入口已同步提供。",
+      "new_information": "相较8月14日API先行的GLM-5.3，Flash版本首次把原生多模态、低激活参数和开放权重组合到同一产品，降低第三方部署与复现门槛。",
+      "inference": "推断：若真实吞吐、长上下文成本和多模态能力能被第三方复现，模型可能提升Z.ai在本地部署、云API和编码智能体中的采用；开放权重本身不等于调用量、收入或国产算力订单。",
+      "unverified": "官方声称其跨基准和真实工作负载优于GLM-5.2、价格为GLM-5.3的十分之一并接近Claude Opus 4.8，这些性能与成本结论仍属厂商自报；下载量、稳定性、硬件适配、企业采用和收入贡献尚未确认。",
+      "transmission": [
+        {"level": "A", "path": "MIT开放权重与API → 第三方部署/接入门槛下降 → 开发者采用"},
+        {"level": "B", "path": "18B激活与混合注意力 → 推理成本/长上下文效率 → 云服务价格竞争"},
+        {"level": "C", "path": "真实调用与本地部署增长 → 推理算力与软件生态需求 → 云与算力链收入"}
+      ],
+      "affected_assets": [
+        {"market": "中国AI模型与软件", "direction": "竞争加剧、采用待确认", "horizon": "1–3个月", "reason": "开放权重和API提高可用性，但自报性能不能替代真实用户留存与调用量。"},
+        {"market": "国产算力与云", "direction": "潜在需求、尚未兑现", "horizon": "1–6个月", "reason": "模型可部署不等于新增订单，需核验硬件适配、部署规模和收入。"},
+        {"market": "闭源前沿模型价格", "direction": "价格竞争加剧", "horizon": "1–6个月", "reason": "官方主打低价与开放权重，实际影响取决于第三方能力和成本复现。"}
+      ],
+      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-08-26T22:36:30+08:00", "detail": "Z.ai并非独立上市公司，模型发布与A/H上市资产之间缺少可隔离的价格映射；本轮不以盘中波动替代采用证据。"},
+      "next_checkpoint": "等待第三方编码、多模态、长上下文和吞吐复现，核验API稳定性、真实价格、硬件适配、下载量与企业客户采用。",
+      "invalidation": "第三方测试无法复现性能/成本优势、部署资源显著高于预期，或开放权重与API未形成持续采用。",
+      "sources": [
+        {"role": "primary", "name": "Z.ai Hugging Face — GLM-5.3-Flash", "url": "https://huggingface.co/zai-org/GLM-5.3-Flash", "published_at": "2026-08-26T13:50:10+00:00", "note": "核验权重开放、MIT许可证、参数规模、原生多模态、架构与API入口；性能数据仍属厂商自报。"},
+        {"role": "primary", "name": "Z.ai Hugging Face — GLM-5.3-Flash-BF16", "url": "https://huggingface.co/zai-org/GLM-5.3-Flash-BF16", "published_at": "2026-08-26T13:49:55+00:00", "note": "核验BF16权重仓库已公开。"}
       ]
     },
     {
@@ -370,34 +437,34 @@
     }
   ],
   "calendar": [
-    {"stage": "T-1", "title": "NVIDIA二季度业绩", "time": "北京时间8月27日约04:20发布，05:00电话会", "status": "confirmed", "check": "重点看数据中心收入、Blackwell/Rubin交付、毛利率与下一季指引。"},
-    {"stage": "T-2", "title": "CFTC创新议题公众意见截止", "time": "美国时间8月27日", "status": "confirmed", "check": "区分行业诉求、委员会建议和正式监管提案。"},
-    {"stage": "T-14", "title": "加拿大反制清单预期窗口", "time": "未来数日，9月8日生效", "status": "watching", "check": "按商品编码映射公司敞口，避免泛化。"},
-    {"stage": "T-21", "title": "美联储9月FOMC", "time": "9月15–16日", "status": "confirmed", "check": "判断7月鹰派分歧是否延续。"}
+    {"stage": "T-0", "title": "NVIDIA二季度业绩", "time": "北京时间8月27日约04:20发布，05:00电话会", "status": "confirmed", "check": "重点看数据中心收入、Blackwell/Rubin交付、毛利率与下一季指引。"},
+    {"stage": "T-1", "title": "CFTC创新议题公众意见截止", "time": "美国时间8月27日", "status": "confirmed", "check": "区分行业诉求、委员会建议和正式监管提案。"},
+    {"stage": "T-13", "title": "加拿大反制税正式生效", "time": "加拿大东部时间9月8日00:01", "status": "confirmed", "check": "清单与商品编码已公布，继续核验延期、豁免及企业直接敞口。"},
+    {"stage": "T-20", "title": "美联储9月FOMC", "time": "9月15–16日", "status": "confirmed", "check": "判断7月鹰派分歧及最新PCE通胀信号是否延续。"}
   ],
   "source_health": [
-    {"group": "第一层 · 一手来源", "status": "verified", "last_success_at": "2026-08-25T22:33:34+08:00", "coverage": "12/12自动源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register、Z.ai HF共抓取542条，保留21条一手候选；新增伊朗政策已回查白宫原文，AI硬件事件已回查NVIDIA、Nebius与Apple官方页面"},
-    {"group": "第二层 · 专业发现", "status": "partial", "last_success_at": "2026-08-25T22:33:34+08:00", "coverage": "AI HOT自动源1/1成功，抓取37条、保留12条发现候选；Apple与NVIDIA线索已升级到官方原文。Reuters、Bloomberg、FT、WSJ、金十、财联社、富途已登记但尚未自动轮询"},
+    {"group": "第一层 · 一手来源", "status": "verified", "last_success_at": "2026-08-26T22:32:55+08:00", "coverage": "12/12自动源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register、Z.ai HF共抓取543条，保留29条一手候选；BEA宏观数据、加拿大反制清单与GLM-5.3-Flash权重均已读取官方原文"},
+    {"group": "第二层 · 专业发现", "status": "partial", "last_success_at": "2026-08-26T22:32:55+08:00", "coverage": "AI HOT自动源1/1成功，抓取40条、保留21条发现候选；GLM线索已升级到官方模型卡。Qwen线索因官方正文未完整读取未进入核心区；Reuters、Bloomberg、FT、WSJ、金十、财联社、富途已登记但尚未自动轮询"},
     {"group": "第三层 · 社交抢先", "status": "registered", "last_success_at": null, "coverage": "官方X、Truth Social、微信公众号、Telegram和行业记者已登记；当前0个自动源，任何内容默认仅线索"},
-    {"group": "市场验证", "status": "verified", "last_success_at": "2026-08-23T10:10:00+08:00", "coverage": "Futu OpenD截至2026-08-21最新完整交易日；价格相关不作因果证明"}
+    {"group": "市场验证", "status": "partial", "last_success_at": "2026-08-23T10:10:00+08:00", "coverage": "既有事件的Futu OpenD核验截至2026-08-21完整交易日；8月26日美国交易日尚未完成，新事件不以盘中价格证明因果"}
   ],
   "collection_run": {
-    "generated_at": "2026-08-25T22:33:34+08:00",
+    "generated_at": "2026-08-26T22:32:55+08:00",
     "configured_sources": 36,
     "active_sources": 13,
     "successful_sources": 13,
     "failed_sources": 0,
     "registered_manual_sources": 23,
-    "tier1_fetched": 542,
-    "tier1_candidates": 21,
-    "tier2_fetched": 37,
-    "candidate_pool_after_dedupe": 33,
-    "manual_connectors_succeeded": ["White House官方原文核验", "NVIDIA与Nebius官方原文核验", "Apple Newsroom官方原文核验"],
+    "tier1_fetched": 543,
+    "tier1_candidates": 29,
+    "tier2_fetched": 40,
+    "candidate_pool_after_dedupe": 48,
+    "manual_connectors_succeeded": ["BEA官方原文核验", "加拿大财政部反制清单核验", "Z.ai/Hugging Face官方模型卡核验"],
     "artifacts": ["sources.json", "candidates.json", "collection-status.json"]
   },
   "methodology": {
     "priority_formula": "影响范围30% + 传导直接度25% + 证据可靠度20% + 预期差15% + 时间紧迫度10%",
     "core_rule": "核心区只接受verified或partially_verified事件，并至少包含一个一手来源；匿名消息进入待证真。",
-    "limitations": "本页为2026-08-25北京时间快照。候选池由真实RSS/API采集生成，但核心事件仍需逐条正文核验；本轮13/13自动源成功，23个付费、登录或专用连接器来源只登记未自动化。伊朗行动已核验白宫发布但具体财政部/OFAC文件仍待逐份读取；NVIDIA、Nebius与Apple产品事件已由公司官方页面核验，性能和商业化仍需独立验证。美国交易日尚未完成，未用盘中波动证明事件因果。"
+    "limitations": "本页为2026-08-26北京时间快照。候选池由真实RSS/API采集生成，但核心事件仍需逐条正文核验；本轮13/13自动源成功，23个付费、登录或专用连接器来源只登记未自动化。BEA数据、加拿大反制清单和GLM-5.3-Flash权重已回查一手原文；未接入一致预期数据库，Qwen官方正文未完整读取，厂商性能与价格仍需独立复现。8月26日美国交易日尚未完成，未用盘中波动证明事件因果。"
   }
 }

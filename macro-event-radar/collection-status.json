@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-25T14:33:34.703801+00:00",
+  "generated_at": "2026-08-26T14:32:55.363561+00:00",
   "sources": [
     {
       "source_id": "aihot",
       "name": "AI HOT Selected",
       "tier": 2,
       "state": "success",
-      "fetched": 37,
-      "accepted": 12,
-      "skipped_old": 25,
+      "fetched": 40,
+      "accepted": 21,
+      "skipped_old": 19,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 564,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "elapsed_ms": 740,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
@@ -20,12 +20,12 @@
       "name": "U.S. Bureau of Economic Analysis",
       "tier": 1,
       "state": "success",
-      "fetched": 47,
-      "accepted": 0,
-      "skipped_old": 46,
+      "fetched": 48,
+      "accepted": 2,
+      "skipped_old": 45,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 2306,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "elapsed_ms": 1278,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
@@ -34,11 +34,11 @@
       "tier": 1,
       "state": "success",
       "fetched": 10,
-      "accepted": 1,
-      "skipped_old": 9,
+      "accepted": 0,
+      "skipped_old": 10,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 856,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "elapsed_ms": 816,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
@@ -47,11 +47,11 @@
       "tier": 1,
       "state": "success",
       "fetched": 15,
-      "accepted": 0,
-      "skipped_old": 15,
+      "accepted": 1,
+      "skipped_old": 14,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 904,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "elapsed_ms": 937,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
@@ -60,11 +60,11 @@
       "tier": 1,
       "state": "success",
       "fetched": 20,
-      "accepted": 0,
-      "skipped_old": 20,
+      "accepted": 1,
+      "skipped_old": 19,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 887,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "elapsed_ms": 978,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
@@ -76,8 +76,8 @@
       "accepted": 0,
       "skipped_old": 15,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 1038,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "elapsed_ms": 784,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
@@ -86,11 +86,11 @@
       "tier": 1,
       "state": "success",
       "fetched": 100,
-      "accepted": 15,
+      "accepted": 16,
       "skipped_old": 0,
-      "skipped_low_relevance": 85,
-      "elapsed_ms": 31275,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "skipped_low_relevance": 84,
+      "elapsed_ms": 1475,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
@@ -102,8 +102,8 @@
       "accepted": 0,
       "skipped_old": 0,
       "skipped_low_relevance": 100,
-      "elapsed_ms": 4893,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "elapsed_ms": 1476,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
@@ -115,8 +115,8 @@
       "accepted": 0,
       "skipped_old": 0,
       "skipped_low_relevance": 100,
-      "elapsed_ms": 1660,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "elapsed_ms": 1421,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
@@ -128,8 +128,8 @@
       "accepted": 0,
       "skipped_old": 25,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 1081,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "elapsed_ms": 1105,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
@@ -138,11 +138,11 @@
       "tier": 1,
       "state": "success",
       "fetched": 30,
-      "accepted": 0,
-      "skipped_old": 30,
+      "accepted": 1,
+      "skipped_old": 29,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 2864,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "elapsed_ms": 2316,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
@@ -151,11 +151,11 @@
       "tier": 1,
       "state": "success",
       "fetched": 30,
-      "accepted": 5,
-      "skipped_old": 25,
+      "accepted": 6,
+      "skipped_old": 24,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 2815,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "elapsed_ms": 2120,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
@@ -164,11 +164,11 @@
       "tier": 1,
       "state": "success",
       "fetched": 50,
-      "accepted": 0,
-      "skipped_old": 50,
+      "accepted": 2,
+      "skipped_old": 48,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 20989,
-      "checked_at": "2026-08-25T14:33:34.703801+00:00",
+      "elapsed_ms": 1238,
+      "checked_at": "2026-08-26T14:32:55.363561+00:00",
       "error": null
     },
     {
