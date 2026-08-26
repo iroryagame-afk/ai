@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NAV_VERSION = "ia-20260823g"
+NAV_VERSION = "ia-20260826a"
 ACTIVE_DYNAMIC = {
     "index.html",
     "a-share-software-deleveraging/index.html",
@@ -50,15 +50,15 @@ PAGE_REFRESH_DATES = {
     "us-market/x-consensus/": "2026-08-23",
     "weekly-event-transmission-2026w35/us/": "2026-08-23",
     "weekly-event-transmission-2026w35/a-share/": "2026-08-23",
-    "a-share-trend-candidates/": "2026-08-25",
+    "a-share-trend-candidates/": "2026-08-26",
     "a-share-domestic-compute/": "2026-08-23",
     "a-share-supply-tightness/": "2026-08-23",
     "a-share-next-generation/": "2026-08-23",
     "bingshen/": "2026-08-22",
-    "a-share-software-deleveraging/": "2026-08-25",
-    "a-share-hardware-deleveraging/": "2026-08-25",
-    "a-share-biotech-trend/": "2026-08-25",
-    "a-share-dividend-defense/": "2026-08-25",
+    "a-share-software-deleveraging/": "2026-08-26",
+    "a-share-hardware-deleveraging/": "2026-08-26",
+    "a-share-biotech-trend/": "2026-08-26",
+    "a-share-dividend-defense/": "2026-08-26",
     "us-trend-candidates/": "2026-08-25",
     "rotation/": "2026-08-25",
     "rs-thrust/": "2026-08-25",

@@ -47,5 +47,6 @@
   .csn-item > a, .csn-item > button { padding: 0 10px; font-size: 13px; }
   .csn-drop { position: fixed; top: 59px; right: 12px; left: 12px; width: auto; min-width: 0; max-height: calc(100vh - 72px); overflow-y: auto; overscroll-behavior: contain; transform: translateY(6px); }
   .csn-item:hover .csn-drop, .csn-item:focus-within .csn-drop, .csn-item[data-open="true"] .csn-drop { transform: none; }
+  .csn-item:not([data-open="true"]) .csn-drop { opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(6px); }
 }
 @media (prefers-reduced-motion: reduce) { .csn-topnav *, .csn-topnav *::before, .csn-topnav *::after { transition: none !important; } }
