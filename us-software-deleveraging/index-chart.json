@@ -1,8 +1,8 @@
 {
   "status": "OPEN_D_VERIFIED_NORMALIZED_INDEX_CHART",
-  "generated_at": "2026-08-26T09:48:32+08:00",
+  "generated_at": "2026-08-27T09:54:19+08:00",
   "base_date": "2026-07-27",
-  "data_date": "2026-08-25",
+  "data_date": "2026-08-26",
   "method": "first close on or after 2026-07-27 = 100; custom line is daily equal weight",
   "note": "QQQ保留市场背景，IGV与SOXX分别代表软件和硬件；自选等权线剔除页面中单列的8只非纯软件边界标的。",
   "lines": [
@@ -97,6 +97,10 @@
         {
           "date": "2026-08-25",
           "value": 104.193
+        },
+        {
+          "date": "2026-08-26",
+          "value": 104.288
         }
       ]
     },
@@ -191,6 +195,10 @@
         {
           "date": "2026-08-25",
           "value": 112.034
+        },
+        {
+          "date": "2026-08-26",
+          "value": 112.628
         }
       ]
     },
@@ -285,6 +293,10 @@
         {
           "date": "2026-08-25",
           "value": 99.58
+        },
+        {
+          "date": "2026-08-26",
+          "value": 99.839
         }
       ]
     },
@@ -400,6 +412,11 @@
         {
           "date": "2026-08-25",
           "value": 116.971,
+          "coverage": 24
+        },
+        {
+          "date": "2026-08-26",
+          "value": 118.094,
           "coverage": 24
         }
       ]
