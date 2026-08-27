@@ -2,18 +2,84 @@
   "schema_version": 1,
   "page_status": "live",
   "verification_status": "partial",
-  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-08-26_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
-  "generated_at": "2026-08-26T22:36:30+08:00",
+  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-08-27_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
+  "generated_at": "2026-08-27T22:44:30+08:00",
   "window": {"recent_hours": 240, "calendar_days": 30, "timezone": "Asia/Shanghai"},
   "brief": {
-    "title": "美国增长放缓与通胀黏性同现，美加反制清单落地",
-    "summary": "BEA二次估计确认美国二季度GDP年化增长1.5%，同时将二季度核心PCE年化增速上修至3.6%；7月PCE同比3.7%、核心3.3%，增长与通胀组合继续约束宽松空间。加拿大已公布覆盖276亿加元美国进口的反制清单；AI侧，Z.ai开放GLM-5.3-Flash权重，真实性已核验，性能、价格优势与采用仍待独立验证。",
+    "title": "美国大电网进入国家紧急状态，NVIDIA业绩确认AI基建仍在加速",
+    "summary": "白宫行政令依据IEEPA与国家紧急状态法限制高风险外国大电网设备、关键软件和数字能力，具体国家、厂商与设备范围等待能源部120日内规则。NVIDIA FY2027 Q2营收962.21亿美元、数据中心收入890亿美元，FY2027 Q3指引1080亿美元且未计入中国数据中心计算收入。Federal Register同步公布OFAC决定，补齐伊朗航空、数字资产、黄金、航运和科技五行业制裁的正式法律适用范围。",
     "discipline": "候选来自真实采集池，但采集不等于核验：一手源必须读取正文，专业媒体与社交信息必须回链官方原文。价格只验证市场响应，不能反向证明传闻。",
-    "core_count": 12,
+    "core_count": 14,
     "pending_count": 1,
     "next_event_count": 4
   },
   "events": [
+    {
+      "id": "us-bulk-power-national-emergency-2026-08-26",
+      "headline": "美国宣布大电网设备国家紧急状态：外国高风险设备、软件与数字能力进入限制框架",
+      "category": "policy",
+      "event_type": "policy",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-08-26T15:59:10-04:00",
+      "observed_at": "2026-08-27T22:38:28+08:00",
+      "verified_at": "2026-08-27T22:44:30+08:00",
+      "fact": "白宫8月26日发布行政令14420，依据IEEPA与国家紧急状态法宣布外国来源大电网设备构成国家紧急状态。行政令允许能源部长禁止、附条件批准或要求更换涉及Covered Foreign Entity的高风险大电网设备交易，范围包括相关关键软件和数字能力，但不适用于本地配电设施。能源部长须在120日内按需发布实施规则。",
+      "new_information": "美国电网供应链风险已从政策倡议升级为可禁止交易、附加缓释条件、要求设备更换并设置许可和预审名单的行政权限框架；具体国家、主体、设备与豁免仍待实施规则确定。",
+      "inference": "推断：若实施规则覆盖关键变压器、控制系统或相关软件，公用事业设备替换与合规资本开支可能上升，本土及合格供应商的订单可见度改善；AI数据中心扩张会放大电网可靠性需求，但不能据此直接映射到任何未获点名的上市公司订单。",
+      "unverified": "行政令尚未列出具体受限国家、厂商、设备清单、存量设备更换规模、许可标准和执行预算；白宫对外国威胁与政策效果的表述属于行政当局立场，仍需等待能源部规则、执法案例与采购数据。",
+      "transmission": [
+        {"level": "A", "path": "行政令授权 → 能源部受限设备/主体规则 → 电网设备采购与更换约束"},
+        {"level": "B", "path": "供应链安全审查 → 合规认证与本土替代 → 变压器、开关设备、控制系统订单结构"},
+        {"level": "C", "path": "AI与先进制造用电增长 → 电网可靠性资本开支 → 公用事业费率、建设周期与数据中心接电"}
+      ],
+      "affected_assets": [
+        {"market": "美国电网设备与合格供应商", "direction": "政策支持偏正面、范围待规则", "horizon": "1–12个月", "reason": "行政令可限制高风险外国设备并建立预审名单，但尚未点名厂商或确定采购规模。"},
+        {"market": "美国公用事业", "direction": "资本开支与成本双升", "horizon": "3–24个月", "reason": "存量设备缓释或更换可能提高可靠性投资，同时形成成本、工期和费率压力。"},
+        {"market": "AI数据中心与电力基础设施", "direction": "供给安全重要性上升", "horizon": "3–24个月", "reason": "行政令明确把AI用电增长列为背景，但接电速度仍取决于实施规则、设备产能与电网扩建。"}
+      ],
+      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-27T22:44:30+08:00", "detail": "行政令在8月26日美股尾盘附近发布，且与NVIDIA业绩时点重叠；本轮未把单日电力或设备股波动归因为该政策。"},
+      "next_checkpoint": "等待能源部在120日内公布实施规则，重点核对Covered Foreign Entity、设备和软件范围、许可/预审标准、存量设备处置及生效安排。",
+      "invalidation": "实施规则范围显著收窄、关键设备获得广泛豁免，或执行不产生可观察的采购替代、设备更换和合规支出。",
+      "sources": [
+        {"role": "primary", "name": "White House — Executive Order 14420 on the Bulk-Power System", "url": "https://www.whitehouse.gov/presidential-actions/2026/08/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system/", "published_at": "2026-08-26T15:59:10-04:00", "note": "核验国家紧急状态、交易限制权限、Covered Foreign Entity、设备/软件范围、许可与120日规则期限。"},
+        {"role": "primary", "name": "White House — Bulk-Power System Fact Sheet", "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-declares-a-national-emergency-to-secure-americas-bulk-power-system/", "published_at": "2026-08-26T15:59:27-04:00", "note": "核验政策摘要、本地配电排除项及AI和先进制造用电背景；效果表述仍按行政当局口径阅读。"}
+      ]
+    },
+    {
+      "id": "nvidia-q2-fy2027-ai-infrastructure-2026-08-26",
+      "headline": "NVIDIA FY2027 Q2营收962亿美元：数据中心增长117%，下季指引1080亿美元",
+      "category": "ai",
+      "event_type": "data",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-08-26T16:20:00-04:00",
+      "observed_at": "2026-08-27T22:38:28+08:00",
+      "verified_at": "2026-08-27T22:44:30+08:00",
+      "fact": "NVIDIA FY2027 Q2营收962.21亿美元，同比增长106%、环比增长18%；数据中心收入890亿美元，同比增长117%、环比增长18%。GAAP与non-GAAP毛利率均为75.0%，GAAP稀释EPS为2.46美元、non-GAAP为2.22美元。公司给出FY2027 Q3营收1080亿美元、上下浮动2%的指引，且明确未假设中国数据中心计算收入。",
+      "new_information": "实际营收比公司此前910亿美元指引中值高52.21亿美元；公司同时确认Vera Rubin正进入全面量产，机架已在CoreWeave、Google Cloud、Microsoft Azure、Oracle Cloud和Nebius等合作伙伴运行，Spectrum-6系统开始进入全球AI工厂。",
+      "inference": "推断：收入、数据中心增速与下一季指引共同表明AI基础设施需求仍处高速兑现阶段，价值量继续向机架、网络、光互连和系统交付扩散；但合作伙伴部署不等于各供应链环节已形成同等收入弹性。",
+      "unverified": "本轮未接入卖方一致预期，不能宣称相对市场预期超预期幅度；Rubin各客户部署规模、Spectrum-6中可插拔与CPO占比、AWS新增200万颗GPU和具体A股供应商订单均未获官方直接确认。",
+      "transmission": [
+        {"level": "A", "path": "数据中心收入与Q3指引 → NVIDIA供给和客户资本开支 → AI算力平台收入"},
+        {"level": "B", "path": "Rubin全面量产与云厂商运行 → 机架/网络/光互连交付 → AI基础设施供应链"},
+        {"level": "C", "path": "中国收入未计入指引 → 出口限制与区域供给重排 → 收入结构和估值风险溢价"}
+      ],
+      "affected_assets": [
+        {"market": "NVDA", "direction": "基本面偏正面、波动仍高", "horizon": "1–90日", "reason": "收入、数据中心增速与Q3指引均由公司正式披露；估值反应仍取决于一致预期和后续交付。"},
+        {"market": "AI网络与光互连", "direction": "产业映射偏正面、订单待逐项核验", "horizon": "1–12个月", "reason": "Spectrum-6和Rubin部署提升网络价值量，但公司未披露各光学方案占比或A股直接供应商。"},
+        {"market": "中国AI芯片与供应链", "direction": "政策约束与替代并存", "horizon": "1–12个月", "reason": "Q3指引未假设中国数据中心计算收入，出口边界仍是收入与区域供给结构的重要变量。"}
+      ],
+      "market_confirmation": {"stage": "initial_confirmation", "checked_at": "2026-08-27T09:49:53+08:00", "detail": "Futu OpenD已核验8月26日完整常规交易时段：NVDA收209.66美元、日跌1.59%；业绩后市场快照219.53美元、较收盘涨4.71%。这是即时价格响应，不证明中期业绩兑现。"},
+      "next_checkpoint": "跟踪FY2027 Q3实际收入、75%附近毛利率、Rubin量产交付、Spectrum-6部署、客户资本开支及中国数据中心计算收入边界。",
+      "invalidation": "Q3收入或毛利率显著低于公司区间、Rubin交付延期、客户资本开支降速，或出口限制导致未被其他地区需求抵消的收入缺口。",
+      "sources": [
+        {"role": "primary", "name": "NVIDIA IR — Q2 FY2027 Financial Results", "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx", "published_at": "2026-08-26T16:20:00-04:00", "note": "核验营收、数据中心收入、毛利率、GAAP/non-GAAP EPS、Q3指引、中国口径及Rubin/Spectrum-6进展。"},
+        {"role": "primary", "name": "NVIDIA IR — Q1 FY2027 Financial Results", "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx", "published_at": "2026-05-20T16:20:00-04:00", "note": "核验此前FY2027 Q2营收910亿美元、上下浮动2%的公司指引中值。"}
+      ]
+    },
     {
       "id": "us-gdp-pce-stagflation-signal-2026-08-26",
       "headline": "美国二季度GDP仅增1.5%，7月PCE同比3.7%：增长放缓与通胀黏性并存",
@@ -28,7 +94,7 @@
       "fact": "BEA二次估计显示，美国2026年二季度实际GDP按年率增长1.5%，一季度为2.1%；实际私人国内最终销售增长4.2%。二季度PCE价格指数年化增长5.3%，核心PCE增长3.6%，均较初值上修0.2个百分点。7月PCE价格指数环比增长0.2%、同比增长3.7%，核心PCE同比增长3.3%。",
       "new_information": "GDP总量仅较初值下修不足0.1个百分点，但私人内需被上修；同时季度与月度PCE均显示通胀黏性，形成“总量放缓、内需仍有韧性、价格压力偏高”的组合。",
       "inference": "推断：该组合会限制市场快速定价宽松，短端利率与美元可能获得支撑，高久期成长估值承压；若后续就业同步走弱，政策与资产方向将取决于Fed对增长和通胀权重的取舍。",
-      "unverified": "本轮未接入一致预期数据库，不能宣称数据相对市场预期超预期或低于预期；8月26日美国交易日尚未完成，价格反应和跨资产扩散仍待收盘验证。",
+      "unverified": "本轮未接入一致预期数据库，不能宣称数据相对市场预期超预期或低于预期；股指收盘反应温和，利率、美元和跨资产扩散仍待独立核验。",
       "transmission": [
         {"level": "A", "path": "PCE通胀黏性 → 降息/加息路径重估 → 短端利率、美元与长久期估值"},
         {"level": "B", "path": "GDP放缓但私人内需上修 → 盈利与软着陆预期分化 → 周期、消费与防御资产轮动"},
@@ -39,8 +105,8 @@
         {"market": "美股高久期成长", "direction": "估值承压、盈利支撑分化", "horizon": "1–20日", "reason": "较高实际利率压制估值，但私人内需上修降低立即衰退概率。"},
         {"market": "周期与消费", "direction": "结构分化", "horizon": "1–3个月", "reason": "总量增速放缓与私人国内需求4.2%形成分歧，需要就业和企业利润继续确认。"}
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-26T22:36:30+08:00", "detail": "数据发布后美国交易日尚未完成；本轮不以盘中单点波动证明宏观传导。"},
-      "next_checkpoint": "查看8月26日完整收盘、后续就业与通胀数据，并等待9月30日GDP第三次估计及8月PCE。",
+      "market_confirmation": {"stage": "mixed", "checked_at": "2026-08-27T09:49:53+08:00", "detail": "Futu OpenD已核验8月26日完整收盘：SPY +0.02%、QQQ +0.09%，股指层面未出现广泛风险规避；本轮未核验同日美债与美元，相关不等于因果。"},
+      "next_checkpoint": "继续核验利率与美元反应、后续就业和通胀数据，并等待9月30日GDP第三次估计及8月PCE。",
       "invalidation": "后续通胀快速回落、就业显著走弱并促使Fed明确转鸽，或GDP第三次估计大幅改写当前增长与价格组合。",
       "sources": [
         {"role": "primary", "name": "BEA — GDP Second Estimate and Corporate Profits, Q2 2026", "url": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-2nd-quarter-2026", "published_at": "2026-08-26T08:30:00-04:00", "note": "核验GDP、私人国内最终销售、PCE价格与修订幅度。"},
@@ -181,16 +247,16 @@
       "headline": "美国启动对伊朗“经济孤立”行动：五大领域次级制裁风险上升",
       "category": "geopolitics",
       "event_type": "policy",
-      "status": "partially_verified",
-      "change_type": "unchanged",
+      "status": "verified",
+      "change_type": "upgraded",
       "importance": 5,
       "event_time": "2026-08-24T15:15:08-04:00",
       "observed_at": "2026-08-25T22:33:34+08:00",
-      "verified_at": "2026-08-25T22:36:30+08:00",
-      "fact": "白宫8月24日宣布，美国财政部及其他机构已启动Operation Economic Outcast，政策目标是切断伊朗的全球金融与收入渠道。白宫列明当日发布的部门制裁决定覆盖数字资产、科技、黄金、航空和航运，并称将扩大与伊朗交易主体面临的次级制裁风险。",
-      "new_information": "事件从既有对伊朗制裁升级为跨五个关键领域的集中行动，明确把境外交易对手、美元体系准入和次级制裁暴露纳入执行框架。",
+      "verified_at": "2026-08-27T22:44:30+08:00",
+      "fact": "白宫8月24日宣布启动Operation Economic Outcast。Federal Register现已公布OFAC正式决定：依据行政令13902第1(a)(i)条，航空、数字资产、黄金、航运和科技被确定为伊朗经济受制裁行业，任何被认定在这些行业经营的人均可依该条受到制裁；决定自2026年8月24日起生效。",
+      "new_information": "事件已从白宫行动说明升级为可直接读取的OFAC法律决定，五个行业、法源、适用对象和生效日均已核验；具体被制裁实体、后续指定与执法节奏仍需逐项跟踪。",
       "inference": "推断：若财政部和OFAC按零泄漏口径持续执行，伊朗相关航运、贸易结算、黄金与数字资产通道的合规成本和交易折价将上升，并可能推高区域能源与运输风险溢价。",
-      "unverified": "本轮尚未逐份读取财政部、OFAC和其他机构的部门制裁决定、实体清单及法律适用边界；白宫对行动效果和伊朗能力的表述属于行政当局立场，不能视为独立评估。",
+      "unverified": "五行业法律适用边界已核验，但本轮尚未逐份核对后续实体指定、许可证、豁免、执法案例及其他机构文件；白宫对行动效果和伊朗能力的表述仍属于行政当局立场。",
       "transmission": [
         {"level": "A", "path": "部门制裁与次级制裁 → 交易对手合规/美元清算约束 → 伊朗外贸与融资成本"},
         {"level": "B", "path": "航运与航空限制 → 物流保险/绕行成本 → 能源与区域贸易风险溢价"},
@@ -202,10 +268,11 @@
         {"market": "数字资产与黄金", "direction": "结构分化", "horizon": "1–30日", "reason": "替代结算通道面临更高执法风险，但避险需求与合规冲击可能方向相反。"}
       ],
       "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-25T22:36:30+08:00", "detail": "事件页不以盘中单点波动证明政策效果；本轮未用未完成交易日价格替代正式执行文本。"},
-      "next_checkpoint": "逐份核验财政部、OFAC及其他机构发布的部门决定、实体清单、豁免与生效条款，并观察是否出现真实贸易、航运或结算中断。",
+      "next_checkpoint": "跟踪OFAC后续实体指定、许可证、豁免与执法案例，并观察是否出现真实贸易、航运或结算中断。",
       "invalidation": "执行文件范围显著窄于白宫表述、出现广泛豁免或延期，或后续执法没有形成可观察的跨境交易约束。",
       "sources": [
-        {"role": "primary", "name": "White House — Operation Economic Outcast", "url": "https://www.whitehouse.gov/releases/2026/08/operation-economic-outcast-total-isolation-of-the-iranian-regime/", "published_at": "2026-08-24T15:15:08-04:00", "note": "核验行动启动、政策目标、五个覆盖领域和次级制裁表述；具体法律文件仍待逐份读取。"}
+        {"role": "primary", "name": "White House — Operation Economic Outcast", "url": "https://www.whitehouse.gov/releases/2026/08/operation-economic-outcast-total-isolation-of-the-iranian-regime/", "published_at": "2026-08-24T15:15:08-04:00", "note": "核验行动启动、政策目标、五个覆盖领域和次级制裁表述。"},
+        {"role": "primary", "name": "Federal Register / OFAC — Determination Pursuant to Executive Order 13902", "url": "https://www.federalregister.gov/documents/2026/08/27/2026-17487/publication-of-a-determination-issued-pursuant-to-executive-order-13902", "published_at": "2026-08-27T00:00:00-04:00", "note": "核验行政令13902适用于航空、数字资产、黄金、航运和科技行业，并自8月24日起生效。"}
       ]
     },
     {
@@ -437,34 +504,34 @@
     }
   ],
   "calendar": [
-    {"stage": "T-0", "title": "NVIDIA二季度业绩", "time": "北京时间8月27日约04:20发布，05:00电话会", "status": "confirmed", "check": "重点看数据中心收入、Blackwell/Rubin交付、毛利率与下一季指引。"},
-    {"stage": "T-1", "title": "CFTC创新议题公众意见截止", "time": "美国时间8月27日", "status": "confirmed", "check": "区分行业诉求、委员会建议和正式监管提案。"},
-    {"stage": "T-13", "title": "加拿大反制税正式生效", "time": "加拿大东部时间9月8日00:01", "status": "confirmed", "check": "清单与商品编码已公布，继续核验延期、豁免及企业直接敞口。"},
-    {"stage": "T-20", "title": "美联储9月FOMC", "time": "9月15–16日", "status": "confirmed", "check": "判断7月鹰派分歧及最新PCE通胀信号是否延续。"}
+    {"stage": "T-0", "title": "CFTC创新议题公众意见截止", "time": "美国时间8月27日", "status": "confirmed", "check": "区分行业诉求、委员会建议和正式监管提案。"},
+    {"stage": "T-12", "title": "加拿大反制税正式生效", "time": "加拿大东部时间9月8日00:01", "status": "confirmed", "check": "清单与商品编码已公布，继续核验延期、豁免及企业直接敞口。"},
+    {"stage": "T-19", "title": "美联储9月FOMC", "time": "9月15–16日", "status": "confirmed", "check": "判断7月鹰派分歧及最新PCE通胀信号是否延续。"},
+    {"stage": "120日内", "title": "美国大电网设备实施规则", "time": "行政令要求能源部长在120日内按需发布", "status": "confirmed", "check": "核对受限国家、主体、设备/软件、许可、预审名单、存量设备与生效安排。"}
   ],
   "source_health": [
-    {"group": "第一层 · 一手来源", "status": "verified", "last_success_at": "2026-08-26T22:32:55+08:00", "coverage": "12/12自动源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register、Z.ai HF共抓取543条，保留29条一手候选；BEA宏观数据、加拿大反制清单与GLM-5.3-Flash权重均已读取官方原文"},
-    {"group": "第二层 · 专业发现", "status": "partial", "last_success_at": "2026-08-26T22:32:55+08:00", "coverage": "AI HOT自动源1/1成功，抓取40条、保留21条发现候选；GLM线索已升级到官方模型卡。Qwen线索因官方正文未完整读取未进入核心区；Reuters、Bloomberg、FT、WSJ、金十、财联社、富途已登记但尚未自动轮询"},
+    {"group": "第一层 · 一手来源", "status": "verified", "last_success_at": "2026-08-27T22:39:31+08:00", "coverage": "12/12自动一手源在两次采集内均成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register、Z.ai HF合计抓取543条，保留32条一手候选。白宫大电网行政令、NVIDIA IR业绩与OFAC/Federal Register伊朗行业决定已读取官方原文"},
+    {"group": "第二层 · 专业发现", "status": "partial", "last_success_at": "2026-08-27T22:39:31+08:00", "coverage": "AI HOT自动源1/1成功，抓取52条、保留36条发现候选；NVIDIA业绩线索已升级到公司IR。Amazon新增200万颗GPU、Qwen性能和中国日均词元500万亿等线索未取得足以进入核心区的一手证据；Reuters、Bloomberg、FT、WSJ、金十、财联社、富途已登记但尚未自动轮询"},
     {"group": "第三层 · 社交抢先", "status": "registered", "last_success_at": null, "coverage": "官方X、Truth Social、微信公众号、Telegram和行业记者已登记；当前0个自动源，任何内容默认仅线索"},
-    {"group": "市场验证", "status": "partial", "last_success_at": "2026-08-23T10:10:00+08:00", "coverage": "既有事件的Futu OpenD核验截至2026-08-21完整交易日；8月26日美国交易日尚未完成，新事件不以盘中价格证明因果"}
+    {"group": "市场验证", "status": "partial", "last_success_at": "2026-08-27T09:49:53+08:00", "coverage": "Futu OpenD已核验截至2026-08-26完整交易日及业绩后快照：SPY +0.02%、QQQ +0.09%，NVDA常规时段-1.59%、业绩后快照+4.71%；价格只记录响应，不证明事件因果"}
   ],
   "collection_run": {
-    "generated_at": "2026-08-26T22:32:55+08:00",
+    "generated_at": "2026-08-27T22:39:31+08:00",
     "configured_sources": 36,
     "active_sources": 13,
     "successful_sources": 13,
     "failed_sources": 0,
     "registered_manual_sources": 23,
     "tier1_fetched": 543,
-    "tier1_candidates": 29,
-    "tier2_fetched": 40,
-    "candidate_pool_after_dedupe": 48,
-    "manual_connectors_succeeded": ["BEA官方原文核验", "加拿大财政部反制清单核验", "Z.ai/Hugging Face官方模型卡核验"],
+    "tier1_candidates": 32,
+    "tier2_fetched": 52,
+    "candidate_pool_after_dedupe": 52,
+    "manual_connectors_succeeded": ["白宫大电网行政令核验", "NVIDIA IR业绩与指引核验", "OFAC/Federal Register伊朗行业决定核验", "Futu OpenD 8月26日收盘与业绩后快照回读"],
     "artifacts": ["sources.json", "candidates.json", "collection-status.json"]
   },
   "methodology": {
     "priority_formula": "影响范围30% + 传导直接度25% + 证据可靠度20% + 预期差15% + 时间紧迫度10%",
     "core_rule": "核心区只接受verified或partially_verified事件，并至少包含一个一手来源；匿名消息进入待证真。",
-    "limitations": "本页为2026-08-26北京时间快照。候选池由真实RSS/API采集生成，但核心事件仍需逐条正文核验；本轮13/13自动源成功，23个付费、登录或专用连接器来源只登记未自动化。BEA数据、加拿大反制清单和GLM-5.3-Flash权重已回查一手原文；未接入一致预期数据库，Qwen官方正文未完整读取，厂商性能与价格仍需独立复现。8月26日美国交易日尚未完成，未用盘中波动证明事件因果。"
+    "limitations": "本页为2026-08-27北京时间快照。候选池由真实RSS/API采集生成，但核心事件仍需逐条正文核验；本轮两次采集互补完成13/13自动源，单次各有一个官方源超时，最终未用失败结果覆盖旧快照。23个付费、登录或专用连接器来源只登记未自动化。白宫大电网行政令、NVIDIA正式业绩与OFAC/Federal Register伊朗行业决定已回查一手原文；未接入卖方一致预期数据库，Amazon新增200万颗GPU、Qwen性能与中国日均词元等线索未进入核心区。Futu OpenD价格只记录响应，不证明事件因果。"
   }
 }
