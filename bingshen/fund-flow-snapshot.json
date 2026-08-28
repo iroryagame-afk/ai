@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 1,
+  "data_date": "2026-08-28",
+  "generated_at": "2026-08-28T18:28:00+08:00",
+  "source": "腾讯自选股 MCP（授权只读）",
+  "metric": "单日主力净流入",
+  "unit": "元",
+  "coverage": {
+    "stocks": 5208,
+    "sectors": 124
+  },
+  "marketNetInflow": -32391518300,
+  "stocksIn": [
+    {
+      "code": "sz002396",
+      "name": "星网锐捷",
+      "mainNetInflow": 757994400
+    },
+    {
+      "code": "sh601360",
+      "name": "三六零",
+      "mainNetInflow": 639763700
+    },
+    {
+      "code": "sh688205",
+      "name": "德科立",
+      "mainNetInflow": 592410800
+    },
+    {
+      "code": "sz300475",
+      "name": "香农芯创",
+      "mainNetInflow": 561331500
+    },
+    {
+      "code": "sz300408",
+      "name": "三环集团",
+      "mainNetInflow": 518622100
+    },
+    {
+      "code": "sz300620",
+      "name": "光库科技",
+      "mainNetInflow": 505264300
+    },
+    {
+      "code": "sz301511",
+      "name": "德福科技",
+      "mainNetInflow": 493707500
+    },
+    {
+      "code": "sz301171",
+      "name": "易点天下",
+      "mainNetInflow": 490488000
+    },
+    {
+      "code": "sz002155",
+      "name": "湖南黄金",
+      "mainNetInflow": 487926800
+    },
+    {
+      "code": "sz002165",
+      "name": "红 宝 丽",
+      "mainNetInflow": 462192500
+    },
+    {
+      "code": "sh600722",
+      "name": "金牛化工",
+      "mainNetInflow": 451193000
+    },
+    {
+      "code": "sz002354",
+      "name": "天娱数科",
+      "mainNetInflow": 445392300
+    },
+    {
+      "code": "sz300170",
+      "name": "汉得信息",
+      "mainNetInflow": 398729400
+    },
+    {
+      "code": "sz002129",
+      "name": "TCL中环",
+      "mainNetInflow": 390372100
+    },
+    {
+      "code": "sz000062",
+      "name": "深圳华强",
+      "mainNetInflow": 372185100
+    }
+  ],
+  "stocksOut": [
+    {
+      "code": "sz300476",
+      "name": "胜宏科技",
+      "mainNetInflow": -2328565700
+    },
+    {
+      "code": "sh603986",
+      "name": "兆易创新",
+      "mainNetInflow": -1651398700
+    },
+    {
+      "code": "sh600487",
+      "name": "亨通光电",
+      "mainNetInflow": -1482849600
+    },
+    {
+      "code": "sh601869",
+      "name": "长飞光纤",
+      "mainNetInflow": -1375638900
+    },
+    {
+      "code": "sh688008",
+      "name": "澜起科技",
+      "mainNetInflow": -1354052800
+    },
+    {
+      "code": "sz300502",
+      "name": "新易盛",
+      "mainNetInflow": -934236000
+    },
+    {
+      "code": "sh600522",
+      "name": "中天科技",
+      "mainNetInflow": -855361700
+    },
+    {
+      "code": "sz002428",
+      "name": "云南锗业",
+      "mainNetInflow": -854079100
+    },
+    {
+      "code": "sh688766",
+      "name": "普冉股份",
+      "mainNetInflow": -688693000
+    },
+    {
+      "code": "sh688836",
+      "name": "宇树科技-W",
+      "mainNetInflow": -683405300
+    },
+    {
+      "code": "sh688825",
+      "name": "长鑫科技",
+      "mainNetInflow": -637859900
+    },
+    {
+      "code": "sh688521",
+      "name": "芯原股份",
+      "mainNetInflow": -618269900
+    },
+    {
+      "code": "sz002491",
+      "name": "通鼎互联",
+      "mainNetInflow": -610512000
+    },
+    {
+      "code": "sz002384",
+      "name": "东山精密",
+      "mainNetInflow": -610450200
+    },
+    {
+      "code": "sh601166",
+      "name": "兴业银行",
+      "mainNetInflow": -548789000
+    }
+  ],
+  "sectorsIn": [
+    {
+      "code": "pt01801104",
+      "name": "软件开发",
+      "changePct": 0.6,
+      "upCount": "79/130",
+      "mainNetInflow": 2246049000,
+      "mainNetInflow5d": 4095836600,
+      "leader": {
+        "code": "sh688152",
+        "name": "麒麟信安",
+        "changePct": 20
+      }
+    },
+    {
+      "code": "pt01801034",
+      "name": "化学制品",
+      "changePct": 2.1,
+      "upCount": "126/171",
+      "mainNetInflow": 1795698100,
+      "mainNetInflow5d": 935540700,
+      "leader": {
+        "code": "sz301076",
+        "name": "新瀚新材",
+        "changePct": 10.6
+      }
+    },
+    {
+      "code": "pt01801033",
+      "name": "化学原料",
+      "changePct": 2.42,
+      "upCount": "51/57",
+      "mainNetInflow": 1044420600,
+      "mainNetInflow5d": 1388617700,
+      "leader": {
+        "code": "sh600929",
+        "name": "雪天盐业",
+        "changePct": 10.02
+      }
+    },
+    {
+      "code": "pt01801056",
+      "name": "能源金属",
+      "changePct": 1.25,
+      "upCount": "7/11",
+      "mainNetInflow": 891701900,
+      "mainNetInflow5d": 14935000,
+      "leader": {
+        "code": "sz002466",
+        "name": "天齐锂业",
+        "changePct": 3.88
+      }
+    },
+    {
+      "code": "pt01801082",
+      "name": "其他电子Ⅱ",
+      "changePct": -0.27,
+      "upCount": "7/33",
+      "mainNetInflow": 796767800,
+      "mainNetInflow5d": 504980100,
+      "leader": {
+        "code": "sz000062",
+        "name": "深圳华强",
+        "changePct": 10
+      }
+    },
+    {
+      "code": "pt01801765",
+      "name": "广告营销",
+      "changePct": 0.56,
+      "upCount": "19/28",
+      "mainNetInflow": 772674200,
+      "mainNetInflow5d": 572832000,
+      "leader": {
+        "code": "sz002354",
+        "name": "天娱数科",
+        "changePct": 9.94
+      }
+    },
+    {
+      "code": "pt01801963",
+      "name": "炼化及贸易",
+      "changePct": 2.66,
+      "upCount": "30/30",
+      "mainNetInflow": 641241900,
+      "mainNetInflow5d": 400746100,
+      "leader": {
+        "code": "sz000059",
+        "name": "华锦股份",
+        "changePct": 10.08
+      }
+    },
+    {
+      "code": "pt01801055",
+      "name": "工业金属",
+      "changePct": 0.85,
+      "upCount": "44/59",
+      "mainNetInflow": 451074200,
+      "mainNetInflow5d": 3277305300,
+      "leader": {
+        "code": "sz002578",
+        "name": "闽发铝业",
+        "changePct": 9.9
+      }
+    },
+    {
+      "code": "pt01801742",
+      "name": "航空装备Ⅱ",
+      "changePct": 1.05,
+      "upCount": "26/46",
+      "mainNetInflow": 313721300,
+      "mainNetInflow5d": 936120000,
+      "leader": {
+        "code": "sh600316",
+        "name": "洪都航空",
+        "changePct": 5.3
+      }
+    },
+    {
+      "code": "pt01801016",
+      "name": "种植业",
+      "changePct": 2.16,
+      "upCount": "16/20",
+      "mainNetInflow": 303135100,
+      "mainNetInflow5d": 1460019100,
+      "leader": {
+        "code": "sh600354",
+        "name": "敦煌种业",
+        "changePct": 10.05
+      }
+    },
+    {
+      "code": "pt01801036",
+      "name": "塑料",
+      "changePct": 0.25,
+      "upCount": "37/72",
+      "mainNetInflow": 287349500,
+      "mainNetInflow5d": 1623129100,
+      "leader": {
+        "code": "sz301591",
+        "name": "肯特股份",
+        "changePct": 14.09
+      }
+    },
+    {
+      "code": "pt01801103",
+      "name": "IT服务Ⅱ",
+      "changePct": -0.08,
+      "upCount": "60/122",
+      "mainNetInflow": 275490300,
+      "mainNetInflow5d": -1573891500,
+      "leader": {
+        "code": "sz002229",
+        "name": "鸿博股份",
+        "changePct": 10.03
+      }
+    },
+    {
+      "code": "pt01801183",
+      "name": "房地产服务",
+      "changePct": 3.75,
+      "upCount": "12/12",
+      "mainNetInflow": 248343100,
+      "mainNetInflow5d": 301715500,
+      "leader": {
+        "code": "sz000560",
+        "name": "我爱我家",
+        "changePct": 10
+      }
+    },
+    {
+      "code": "pt01801203",
+      "name": "一般零售",
+      "changePct": 1.59,
+      "upCount": "51/60",
+      "mainNetInflow": 222886400,
+      "mainNetInflow5d": 622311000,
+      "leader": {
+        "code": "sh605188",
+        "name": "国光连锁",
+        "changePct": 10.04
+      }
+    },
+    {
+      "code": "pt01801764",
+      "name": "游戏Ⅱ",
+      "changePct": 0.02,
+      "upCount": "15/26",
+      "mainNetInflow": 213839700,
+      "mainNetInflow5d": 14856300,
+      "leader": {
+        "code": "sz300467",
+        "name": "迅游科技",
+        "changePct": 3.85
+      }
+    }
+  ],
+  "sectorsOut": [
+    {
+      "code": "pt01801081",
+      "name": "半导体",
+      "changePct": -2.12,
+      "upCount": "32/180",
+      "mainNetInflow": -12258175300,
+      "mainNetInflow5d": -14949863300,
+      "leader": {
+        "code": "sh688209",
+        "name": "英集芯",
+        "changePct": 19.98
+      }
+    },
+    {
+      "code": "pt01801102",
+      "name": "通信设备",
+      "changePct": -1.56,
+      "upCount": "21/85",
+      "mainNetInflow": -5919985900,
+      "mainNetInflow5d": -8583911500,
+      "leader": {
+        "code": "sh688205",
+        "name": "德科立",
+        "changePct": 10.41
+      }
+    },
+    {
+      "code": "pt01801083",
+      "name": "元件",
+      "changePct": -0.78,
+      "upCount": "22/61",
+      "mainNetInflow": -2442438200,
+      "mainNetInflow5d": 6424691000,
+      "leader": {
+        "code": "sz300319",
+        "name": "麦捷科技",
+        "changePct": 10.11
+      }
+    },
+    {
+      "code": "pt01801078",
+      "name": "自动化设备",
+      "changePct": -1.55,
+      "upCount": "27/81",
+      "mainNetInflow": -1963644300,
+      "mainNetInflow5d": -2726769200,
+      "leader": {
+        "code": "sh603082",
+        "name": "北自科技",
+        "changePct": 10.01
+      }
+    },
+    {
+      "code": "pt01801054",
+      "name": "小金属",
+      "changePct": -0.44,
+      "upCount": "10/27",
+      "mainNetInflow": -1607587100,
+      "mainNetInflow5d": -1566252700,
+      "leader": {
+        "code": "sz002738",
+        "name": "中矿资源",
+        "changePct": 3.41
+      }
+    },
+    {
+      "code": "pt01801085",
+      "name": "消费电子",
+      "changePct": -1.19,
+      "upCount": "29/91",
+      "mainNetInflow": -1545660600,
+      "mainNetInflow5d": 1979614700,
+      "leader": {
+        "code": "sz002855",
+        "name": "捷荣技术",
+        "changePct": 9.99
+      }
+    },
+    {
+      "code": "pt01801156",
+      "name": "医疗服务",
+      "changePct": -2.13,
+      "upCount": "2/51",
+      "mainNetInflow": -1483483900,
+      "mainNetInflow5d": -3049810100,
+      "leader": {
+        "code": "sz002044",
+        "name": "美年健康",
+        "changePct": 0.43
+      }
+    },
+    {
+      "code": "pt01801072",
+      "name": "通用设备",
+      "changePct": -1.51,
+      "upCount": "89/219",
+      "mainNetInflow": -1374467400,
+      "mainNetInflow5d": 593680800,
+      "leader": {
+        "code": "sh603269",
+        "name": "海鸥股份",
+        "changePct": 10.02
+      }
+    },
+    {
+      "code": "pt01801084",
+      "name": "光学光电子",
+      "changePct": -0.78,
+      "upCount": "29/93",
+      "mainNetInflow": -1348410600,
+      "mainNetInflow5d": -3241771600,
+      "leader": {
+        "code": "sz002952",
+        "name": "亚世光电",
+        "changePct": 9.99
+      }
+    },
+    {
+      "code": "pt01801093",
+      "name": "汽车零部件",
+      "changePct": -0.12,
+      "upCount": "113/243",
+      "mainNetInflow": -1221345400,
+      "mainNetInflow5d": 686166900,
+      "leader": {
+        "code": "sh603007",
+        "name": "顺景科技",
+        "changePct": 10.04
+      }
+    },
+    {
+      "code": "pt01801101",
+      "name": "计算机设备",
+      "changePct": -0.84,
+      "upCount": "30/82",
+      "mainNetInflow": -1011170400,
+      "mainNetInflow5d": 95341100,
+      "leader": {
+        "code": "sz002528",
+        "name": "*ST英飞",
+        "changePct": 9.02
+      }
+    },
+    {
+      "code": "pt01801151",
+      "name": "化学制药",
+      "changePct": -0.73,
+      "upCount": "50/149",
+      "mainNetInflow": -994240100,
+      "mainNetInflow5d": -1168433800,
+      "leader": {
+        "code": "sz002742",
+        "name": "冀衡医药",
+        "changePct": 10.05
+      }
+    },
+    {
+      "code": "pt01801745",
+      "name": "军工电子Ⅱ",
+      "changePct": -0.86,
+      "upCount": "27/60",
+      "mainNetInflow": -898531000,
+      "mainNetInflow5d": -2150615300,
+      "leader": {
+        "code": "sh600562",
+        "name": "国睿科技",
+        "changePct": 6.12
+      }
+    },
+    {
+      "code": "pt01801152",
+      "name": "生物制品",
+      "changePct": -2.73,
+      "upCount": "4/51",
+      "mainNetInflow": -864176700,
+      "mainNetInflow5d": -1681184600,
+      "leader": {
+        "code": "sz002773",
+        "name": "康弘药业",
+        "changePct": 1.31
+      }
+    },
+    {
+      "code": "pt01801086",
+      "name": "电子化学品Ⅱ",
+      "changePct": -1.8,
+      "upCount": "8/35",
+      "mainNetInflow": -790547300,
+      "mainNetInflow5d": 371580300,
+      "leader": {
+        "code": "sh603002",
+        "name": "宏昌电子",
+        "changePct": 4.49
+      }
+    }
+  ]
+}
+
