@@ -27,7 +27,7 @@
     {"route": "/a-share-next-generation/", "state": "active", "refreshClass": "research_on_change", "files": ["index.html", "data.json"], "freshness": {"file": "data.json", "field": "research_date"}},
     {"route": "/a-share-t1-focus/", "state": "compatibility", "refreshClass": "research_on_change", "files": ["index.html", "data.json"]},
     {"route": "/code/", "state": "active", "refreshClass": "content_on_change", "files": ["index.html"]},
-    {"route": "/bingshen/", "state": "active", "refreshClass": "cn_close", "files": ["index.html", "app.css", "app.js", "data.json"], "freshness": {"file": "data.json", "field": "data_date"}},
+    {"route": "/bingshen/", "state": "active", "refreshClass": "cn_close", "files": ["index.html", "app.css", "app.js", "data.json", "tencent-snapshot.json", "og.png"], "freshness": {"file": "data.json", "field": "data_date"}},
     {"route": "/nav/", "state": "active", "refreshClass": "report_index_on_change", "files": ["index.html", "reports.json"]},
     {"route": "/futu-indicators/", "state": "compatibility_redirect", "refreshClass": "redirect_only", "files": ["index.html"]}
   ],

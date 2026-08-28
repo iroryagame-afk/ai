@@ -4408,14 +4408,14 @@
   ],
   "slowData": {
     "institutions": {
-      "status": "not_connected",
-      "label": "未接入",
-      "note": "机构持仓为季报低频数据，当前版本不以历史样例冒充最新数据。"
+      "status": "connected_observation_pool",
+      "label": "已接入",
+      "note": "腾讯自选股：观察池十大流通股东机构席位与北向季度持仓；不等于全基金持仓穿透。"
     },
     "chips": {
-      "status": "not_connected",
-      "label": "未接入",
-      "note": "股东户数需公告级或专业数据源，当前版本暂不展示未经核验的榜单。"
+      "status": "connected_observation_pool",
+      "label": "已接入",
+      "note": "腾讯自选股：观察池当日筹码获利率、平均成本与 70%/90% 集中度。"
     }
   },
   "sources": [
@@ -4433,6 +4433,11 @@
       "name": "Futu OpenD",
       "role": "行业与概念板块、上证指数K线",
       "access": "本机只读"
+    },
+    {
+      "name": "腾讯自选股",
+      "role": "观察池筹码、十大股东与北向季度持仓",
+      "access": "授权只读"
     }
   ],
   "display": {

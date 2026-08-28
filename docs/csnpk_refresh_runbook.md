@@ -50,7 +50,7 @@
    - /a-share-biotech-trend/
    - /a-share-dividend-defense/
 
-7. `scripts/generate_bingshen_market_radar.py`：使用 Futu OpenD 全市场只读快照与腾讯指数日期交叉核验，生成 `/bingshen/data.json`；有效覆盖低于 5000 只、日期不一致或 15:00 完整收盘未就绪时保留公网上一版。资金流、机构持仓和筹码数据未接入时必须明确留空，不用演示数据补位。
+7. `scripts/generate_bingshen_market_radar.py`：使用 Futu OpenD 全市场只读快照与腾讯指数日期交叉核验，生成 `/bingshen/data.json`；有效覆盖低于 5000 只、日期不一致或 15:00 完整收盘未就绪时保留公网上一版。再通过腾讯自选股只读接口生成同交易日 `/bingshen/tencent-snapshot.json`，只覆盖冰神 17 只观察池的筹码、十大流通股东机构席位和北向季度持仓。资金流等未接入字段必须明确留空，不用演示数据补位。
 
 六页必须分别读取自己的 data.json 日期，不能互相代替。产业图谱 /a-share-domestic-compute/、/a-share-supply-tightness/、/a-share-next-generation/ 和兼容总表 /a-share-t1-focus/ 属于研究更新，不随每日收盘强制重写。
 

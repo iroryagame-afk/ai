@@ -377,13 +377,14 @@ def build() -> dict:
         "limits": limits,
         "watchlist": watch,
         "slowData": {
-            "institutions": {"status": "not_connected", "label": "未接入", "note": "机构持仓为季报低频数据，当前版本不以历史样例冒充最新数据。"},
-            "chips": {"status": "not_connected", "label": "未接入", "note": "股东户数需公告级或专业数据源，当前版本暂不展示未经核验的榜单。"},
+            "institutions": {"status": "separate_snapshot", "label": "独立快照", "note": "由同交易日 tencent-snapshot.json 提供观察池十大流通股东机构席位与北向季度持仓。"},
+            "chips": {"status": "separate_snapshot", "label": "独立快照", "note": "由同交易日 tencent-snapshot.json 提供观察池筹码获利率、平均成本与集中度。"},
         },
         "sources": [
             {"name": "Futu OpenD", "role": "A股全市场快照与覆盖率硬门", "access": "本机只读"},
             {"name": "腾讯财经", "role": "指数收盘与交易日期交叉核验", "access": "公开零密钥"},
             {"name": "Futu OpenD", "role": "行业与概念板块、上证指数K线", "access": "本机只读"},
+            {"name": "腾讯自选股", "role": "观察池筹码、十大股东与北向季度持仓", "access": "授权只读；独立快照"},
         ],
         "display": {"amount": compact_amount(sum(x["amount"] for x in stocks)), "mainFlow": "未接入"},
     }
