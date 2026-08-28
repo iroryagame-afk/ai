@@ -2,9 +2,9 @@
   "schema_version": 1,
   "verification_status": "complete",
   "verification_marker": "VERIFIED_MACRO_FISCAL_RISK_ALL_REQUIRED_SOURCES",
-  "generated_at": "2026-08-27T09:57:07+08:00",
-  "data_date": "2026-08-25",
-  "latest_market_date": "2026-08-26",
+  "generated_at": "2026-08-28T09:51:53+08:00",
+  "data_date": "2026-08-26",
+  "latest_market_date": "2026-08-27",
   "regime": {
     "status": "yellow",
     "score": 2,
@@ -19,7 +19,7 @@
       "id": "long_yield",
       "group": "core",
       "title": "长期国债压力",
-      "value": 5.18,
+      "value": 5.19,
       "unit": "%",
       "status": "yellow",
       "detail": "30年期收益率；5.20%以上进入高压区",
@@ -32,34 +32,34 @@
       "value": 99.0,
       "unit": "bp",
       "status": "red",
-      "detail": "2s30s；近5个交易日 -1bp",
+      "detail": "2s30s；近5个交易日 -5bp",
       "source": "U.S. Treasury"
     },
     {
       "id": "yield_dollar",
       "group": "core",
       "title": "收益率升＋美元弱",
-      "value": -1.41,
+      "value": -0.43,
       "unit": "% / 20D",
       "status": "yellow",
-      "detail": "30Y同期 -2bp；UUP美元代理同期 -1.41%",
+      "detail": "30Y同期 -2bp；UUP美元代理同期 -0.43%",
       "source": "Treasury + Futu OpenD"
     },
     {
       "id": "stock_bond",
       "group": "spread",
       "title": "股债对冲失效",
-      "value": 0.27,
+      "value": 0.28,
       "unit": "50D corr",
       "status": "red",
-      "detail": "SPY +5.02% / TLT +0.95%（20D）",
+      "detail": "SPY +3.97% / TLT +0.80%（20D）",
       "source": "Futu OpenD"
     },
     {
       "id": "credit",
       "group": "spread",
       "title": "信用扩散",
-      "value": 0.36,
+      "value": 0.26,
       "unit": "% / 20D",
       "status": "green",
       "detail": "HYG/LQD相对表现；走弱代表信用风险扩散",
@@ -69,20 +69,20 @@
       "id": "growth",
       "group": "spread",
       "title": "高久期成长压力",
-      "value": 7.5,
+      "value": 5.49,
       "unit": "% / 20D",
       "status": "green",
-      "detail": "QQQ +7.50% / 等权RSP +2.96% / TLT +0.95%",
+      "detail": "QQQ +5.49% / 等权RSP +2.82% / TLT +0.80%",
       "source": "Futu OpenD"
     },
     {
       "id": "hard_assets",
       "group": "confirmation",
       "title": "硬资产相对确认",
-      "value": 8.11,
+      "value": 7.77,
       "unit": "% / 20D",
       "status": "red",
-      "detail": "GLD/SPY；10Y实际利率同期 -9bp",
+      "detail": "GLD/SPY；10Y实际利率同期 -7bp",
       "source": "Futu OpenD + FRED"
     }
   ],
@@ -168,19 +168,19 @@
       {
         "id": "jgb_30y",
         "title": "30年期 JGB 收益率",
-        "value": 4.039,
+        "value": 4.038,
         "unit": "%",
         "status": "red",
-        "detail": "近20个交易日 +6bp；10Y 2.892%",
+        "detail": "近20个交易日 +10bp；10Y 2.897%",
         "source": "Japan MOF"
       },
       {
         "id": "jgb_40y",
         "title": "40年期 JGB 收益率",
-        "value": 4.051,
+        "value": 4.043,
         "unit": "%",
         "status": "red",
-        "detail": "近20个交易日 +8bp；4%为超长端高压线",
+        "detail": "近20个交易日 +10bp；4%为超长端高压线",
         "source": "Japan MOF"
       },
       {
@@ -205,10 +205,6 @@
   },
   "history": {
     "yield_2y": [
-      {
-        "date": "2026-05-26",
-        "value": 4.01
-      },
       {
         "date": "2026-05-27",
         "value": 4.0
@@ -464,13 +460,13 @@
       {
         "date": "2026-08-26",
         "value": 4.19
+      },
+      {
+        "date": "2026-08-27",
+        "value": 4.2
       }
     ],
     "yield_30y": [
-      {
-        "date": "2026-05-26",
-        "value": 5.03
-      },
       {
         "date": "2026-05-27",
         "value": 5.01
@@ -726,13 +722,13 @@
       {
         "date": "2026-08-26",
         "value": 5.18
+      },
+      {
+        "date": "2026-08-27",
+        "value": 5.19
       }
     ],
     "spread_2s30s": [
-      {
-        "date": "2026-05-26",
-        "value": 102.0
-      },
       {
         "date": "2026-05-27",
         "value": 101.0
@@ -988,13 +984,13 @@
       {
         "date": "2026-08-26",
         "value": 99.0
+      },
+      {
+        "date": "2026-08-27",
+        "value": 99.0
       }
     ],
     "dollar_uup": [
-      {
-        "date": "2026-05-26",
-        "value": 27.75
-      },
       {
         "date": "2026-05-27",
         "value": 27.75
@@ -1250,13 +1246,13 @@
       {
         "date": "2026-08-26",
         "value": 28.02
+      },
+      {
+        "date": "2026-08-27",
+        "value": 28.02
       }
     ],
     "spy": [
-      {
-        "date": "2026-05-26",
-        "value": 748.66174
-      },
       {
         "date": "2026-05-27",
         "value": 748.53207
@@ -1512,13 +1508,13 @@
       {
         "date": "2026-08-26",
         "value": 766.08
+      },
+      {
+        "date": "2026-08-27",
+        "value": 771.1
       }
     ],
     "qqq": [
-      {
-        "date": "2026-05-26",
-        "value": 729.47787
-      },
       {
         "date": "2026-05-27",
         "value": 728.64878
@@ -1774,13 +1770,13 @@
       {
         "date": "2026-08-26",
         "value": 711.37
+      },
+      {
+        "date": "2026-08-27",
+        "value": 721.11
       }
     ],
     "tlt": [
-      {
-        "date": "2026-05-26",
-        "value": 84.11555
-      },
       {
         "date": "2026-05-27",
         "value": 84.31324
@@ -2036,13 +2032,13 @@
       {
         "date": "2026-08-26",
         "value": 83.3
+      },
+      {
+        "date": "2026-08-27",
+        "value": 83.13
       }
     ],
     "gld": [
-      {
-        "date": "2026-05-26",
-        "value": 414.0
-      },
       {
         "date": "2026-05-27",
         "value": 408.49
@@ -2298,13 +2294,13 @@
       {
         "date": "2026-08-26",
         "value": 421.32
+      },
+      {
+        "date": "2026-08-27",
+        "value": 422.6
       }
     ],
     "hyg_lqd": [
-      {
-        "date": "2026-05-26",
-        "value": 0.7349
-      },
       {
         "date": "2026-05-27",
         "value": 0.73343
@@ -2560,6 +2556,10 @@
       {
         "date": "2026-08-26",
         "value": 0.74827
+      },
+      {
+        "date": "2026-08-27",
+        "value": 0.74834
       }
     ],
     "usd_jpy": [
@@ -2826,10 +2826,6 @@
     ],
     "jgb_10y": [
       {
-        "date": "2026-05-26",
-        "value": 2.713
-      },
-      {
         "date": "2026-05-27",
         "value": 2.687
       },
@@ -3084,13 +3080,13 @@
       {
         "date": "2026-08-26",
         "value": 2.892
+      },
+      {
+        "date": "2026-08-27",
+        "value": 2.897
       }
     ],
     "jgb_30y": [
-      {
-        "date": "2026-05-26",
-        "value": 3.866
-      },
       {
         "date": "2026-05-27",
         "value": 3.856
@@ -3346,13 +3342,13 @@
       {
         "date": "2026-08-26",
         "value": 4.039
+      },
+      {
+        "date": "2026-08-27",
+        "value": 4.038
       }
     ],
     "jgb_40y": [
-      {
-        "date": "2026-05-26",
-        "value": 3.836
-      },
       {
         "date": "2026-05-27",
         "value": 3.796
@@ -3608,6 +3604,10 @@
       {
         "date": "2026-08-26",
         "value": 4.051
+      },
+      {
+        "date": "2026-08-27",
+        "value": 4.043
       }
     ]
   },
@@ -3625,12 +3625,12 @@
     "japan_intervention": "https://www.mof.go.jp/english/policy/international_policy/reference/feio/monthly/index.html"
   },
   "source_health": {
-    "treasury": "2026-08-26",
-    "dollar_uup": "2026-08-26",
-    "equity_etfs": "2026-08-26",
-    "real_yield": "2026-08-25",
+    "treasury": "2026-08-27",
+    "dollar_uup": "2026-08-27",
+    "equity_etfs": "2026-08-27",
+    "real_yield": "2026-08-26",
     "usd_jpy": "2026-08-21",
-    "japan_jgb": "2026-08-26",
+    "japan_jgb": "2026-08-27",
     "japan_reserves": "2026-07-31",
     "japan_intervention": "2026-07-29"
   },
