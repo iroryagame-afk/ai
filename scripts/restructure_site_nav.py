@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NAV_VERSION = "ia-20260828a"
+NAV_VERSION = "ia-20260828b"
 ACTIVE_DYNAMIC = {
     "index.html",
     "a-share-software-deleveraging/index.html",
@@ -163,7 +163,7 @@ def nav(relative: str) -> str:
             ("a-share-domestic-compute/", "国产算力", "芯片 · 服务器 · 网络 · AIDC"),
             ("a-share-supply-tightness/", "供需紧张", "存储 · PCB · 材料 · 制造"),
             ("a-share-next-generation/", "下一代技术", "光互连 · CPO · 液冷 · 连接"),
-            ("bingshen/", "盘鉴收盘雷达", "大盘 · 情绪 · 板块 · 涨跌停"),
+            ("bingshen/", "冰神盘鉴", "大盘 · 情绪 · 板块 · 涨跌停"),
             (None, "", ""),
             ("a-share-software-deleveraging/", "软件股", "相对强弱 · 趋势结构 · 风险边界"),
             ("a-share-hardware-deleveraging/", "硬件股", "算力硬件 · 趋势结构 · 细分轮动"),

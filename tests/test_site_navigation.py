@@ -67,7 +67,7 @@ class SiteNavigationTests(unittest.TestCase):
         self.assertIn('href="./bingshen/"', a_share)
         self.assertNotIn('href="./bingshen/"', picker)
         self.assertEqual(a_share.count('class="csn-drop-separator"'), 1)
-        self.assertEqual(sample.count("<b>盘鉴收盘雷达 "), 1)
+        self.assertEqual(sample.count("<b>冰神盘鉴 "), 1)
 
     def test_trend_candidate_pages_live_under_their_market_navigation(self):
         sample = SITE_NAV.nav("index.html")
