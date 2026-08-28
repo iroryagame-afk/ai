@@ -67,7 +67,7 @@ class SiteNavigationTests(unittest.TestCase):
         self.assertIn('href="./bingshen/"', a_share)
         self.assertNotIn('href="./bingshen/"', picker)
         self.assertEqual(a_share.count('class="csn-drop-separator"'), 1)
-        self.assertEqual(sample.count("<b>冰神分享 "), 1)
+        self.assertEqual(sample.count("<b>盘鉴收盘雷达 "), 1)
 
     def test_trend_candidate_pages_live_under_their_market_navigation(self):
         sample = SITE_NAV.nav("index.html")
@@ -138,7 +138,7 @@ class SiteNavigationTests(unittest.TestCase):
     def test_refresh_dates_follow_dropdown_titles(self):
         sample = SITE_NAV.nav("index.html")
         self.assertIn('轮动加速度 <time class="csn-nav-refresh"', sample)
-        self.assertIn('08-22 更新</time>', sample)
+        self.assertIn('08-28 更新</time>', sample)
         self.assertIn('趋势候选 <time class="csn-nav-refresh"', sample)
         self.assertNotIn('class="csn-nav-refresh"', re.search(r'<div class="csn-menu">(.*?)data-group="macro"', sample, re.S).group(1))
 

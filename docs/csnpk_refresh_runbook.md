@@ -50,7 +50,9 @@
    - /a-share-biotech-trend/
    - /a-share-dividend-defense/
 
-五页必须分别读取自己的 data.json 日期，不能互相代替。产业图谱 /a-share-domestic-compute/、/a-share-supply-tightness/、/a-share-next-generation/ 和兼容总表 /a-share-t1-focus/ 属于研究更新，不随每日收盘强制重写。
+7. `scripts/generate_bingshen_market_radar.py`：使用 Futu OpenD 全市场只读快照与腾讯指数日期交叉核验，生成 `/bingshen/data.json`；有效覆盖低于 5000 只、日期不一致或 15:00 完整收盘未就绪时保留公网上一版。资金流、机构持仓和筹码数据未接入时必须明确留空，不用演示数据补位。
+
+六页必须分别读取自己的 data.json 日期，不能互相代替。产业图谱 /a-share-domestic-compute/、/a-share-supply-tightness/、/a-share-next-generation/ 和兼容总表 /a-share-t1-focus/ 属于研究更新，不随每日收盘强制重写。
 
 ### 3.2 US 完整收盘组
 
@@ -84,7 +86,7 @@
 ### 3.4 内容变更组
 
 - /nav/：只有长期报告新增、删除、改名或路径变化时更新，并运行 scripts/validate_report_nav.py。
-- /code/、/bingshen/：只在代码包、说明或观察名单改变时更新。
+- /code/：只在代码包或说明改变时更新；/bingshen/ 已转为 A 股每日收盘型页面，按 3.1 的独立数据门禁刷新。
 - 长期行业、专题和公司报告：不参与每日全站刷新；更新时按 docs/report-nav-policy.md 发布。
 - /futu-indicators/：只核验跳转到 /code/，不得恢复为独立工具页。
 
