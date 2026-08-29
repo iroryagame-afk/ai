@@ -26,6 +26,25 @@ def route_dir(root: Path, route: str) -> Path:
     return root if route == "/" else root / route.strip("/")
 
 
+def retired_redirect_conflicts(path: Path, retired: list[str]) -> list[tuple[int, str, str]]:
+    if not path.is_file():
+        return []
+    conflicts: list[tuple[int, str, str]] = []
+    retired_sources = {
+        source: route
+        for route in retired
+        for source in (route.rstrip("/"), route, route.rstrip("/") + "/*")
+    }
+    for line_number, raw_line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        source = line.split()[0]
+        if source in retired_sources:
+            conflicts.append((line_number, source, retired_sources[source]))
+    return conflicts
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--site-root", type=Path, default=Path(__file__).resolve().parents[1])
@@ -69,6 +88,11 @@ def main() -> int:
         target = route_dir(root, route)
         if target.exists():
             errors.append(f"retired route still exists: {route} -> {target}")
+
+    for line_number, source, route in retired_redirect_conflicts(root / "_redirects", retired):
+        errors.append(
+            f"retired route still redirected: {route} via _redirects:{line_number} ({source})"
+        )
 
     registry_path = root / contract["registry"]
     if not registry_path.is_file():
