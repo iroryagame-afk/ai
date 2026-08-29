@@ -2,16 +2,16 @@
   "schema_version": 1,
   "verification_status": "complete",
   "verification_marker": "VERIFIED_MACRO_FISCAL_RISK_ALL_REQUIRED_SOURCES",
-  "generated_at": "2026-08-28T09:51:53+08:00",
-  "data_date": "2026-08-26",
-  "latest_market_date": "2026-08-27",
+  "generated_at": "2026-08-29T14:03:21+08:00",
+  "data_date": "2026-08-27",
+  "latest_market_date": "2026-08-28",
   "regime": {
     "status": "yellow",
     "score": 2,
     "label": "黄色警报",
     "action": "黄色警报：不追高，缩短债券久期，等待信用与价格二次确认。",
     "red_core": 1,
-    "red_total": 3,
+    "red_total": 2,
     "yellow_total": 2
   },
   "signals": [
@@ -19,9 +19,9 @@
       "id": "long_yield",
       "group": "core",
       "title": "长期国债压力",
-      "value": 5.19,
+      "value": 5.22,
       "unit": "%",
-      "status": "yellow",
+      "status": "red",
       "detail": "30年期收益率；5.20%以上进入高压区",
       "source": "U.S. Treasury"
     },
@@ -29,37 +29,37 @@
       "id": "curve",
       "group": "core",
       "title": "长端主导陡峭化",
-      "value": 99.0,
+      "value": 88.0,
       "unit": "bp",
-      "status": "red",
-      "detail": "2s30s；近5个交易日 -5bp",
+      "status": "yellow",
+      "detail": "2s30s；近5个交易日 -15bp",
       "source": "U.S. Treasury"
     },
     {
       "id": "yield_dollar",
       "group": "core",
       "title": "收益率升＋美元弱",
-      "value": -0.43,
+      "value": 0.04,
       "unit": "% / 20D",
-      "status": "yellow",
-      "detail": "30Y同期 -2bp；UUP美元代理同期 -0.43%",
+      "status": "green",
+      "detail": "30Y同期 -5bp；UUP美元代理同期 +0.04%",
       "source": "Treasury + Futu OpenD"
     },
     {
       "id": "stock_bond",
       "group": "spread",
       "title": "股债对冲失效",
-      "value": 0.28,
+      "value": 0.3,
       "unit": "50D corr",
       "status": "red",
-      "detail": "SPY +3.97% / TLT +0.80%（20D）",
+      "detail": "SPY +2.99% / TLT +1.17%（20D）",
       "source": "Futu OpenD"
     },
     {
       "id": "credit",
       "group": "spread",
       "title": "信用扩散",
-      "value": 0.26,
+      "value": 0.29,
       "unit": "% / 20D",
       "status": "green",
       "detail": "HYG/LQD相对表现；走弱代表信用风险扩散",
@@ -69,19 +69,19 @@
       "id": "growth",
       "group": "spread",
       "title": "高久期成长压力",
-      "value": 5.49,
+      "value": 4.13,
       "unit": "% / 20D",
       "status": "green",
-      "detail": "QQQ +5.49% / 等权RSP +2.82% / TLT +0.80%",
+      "detail": "QQQ +4.13% / 等权RSP +2.64% / TLT +1.17%",
       "source": "Futu OpenD"
     },
     {
       "id": "hard_assets",
       "group": "confirmation",
       "title": "硬资产相对确认",
-      "value": 7.77,
+      "value": 6.86,
       "unit": "% / 20D",
-      "status": "red",
+      "status": "yellow",
       "detail": "GLD/SPY；10Y实际利率同期 -7bp",
       "source": "Futu OpenD + FRED"
     }
@@ -146,15 +146,15 @@
     {
       "asset": "日元套息 / 全球风险资产",
       "bias": "条件风险",
-      "status": "yellow",
+      "status": "red",
       "rule": "USD/JPY快速下行且JGB波动上升时，警惕套息平仓向美股高Beta扩散。"
     }
   ],
   "japan": {
-    "status": "yellow",
-    "label": "日本市场黄色警报",
-    "action": "关注日元与超长端4%附近是否同步恶化；暂不把单项异动定性为系统性危机。",
-    "data_date": "2026-07-29",
+    "status": "red",
+    "label": "日本市场共振高压",
+    "action": "防范干预或套息交易快速反向；降低高杠杆与高估值暴露。",
+    "data_date": "2026-07-31",
     "signals": [
       {
         "id": "usd_jpy",
@@ -195,20 +195,16 @@
       {
         "id": "japan_intervention",
         "title": "最新月度外汇干预",
-        "value": 0.0,
+        "value": 15399.3,
         "unit": "JPY bn",
-        "status": "green",
-        "detail": "June 29, 2026 - July 29, 2026",
+        "status": "red",
+        "detail": "July 30, 2026 - August 26, 2026",
         "source": "Japan MOF"
       }
     ]
   },
   "history": {
     "yield_2y": [
-      {
-        "date": "2026-05-27",
-        "value": 4.0
-      },
       {
         "date": "2026-05-28",
         "value": 3.99
@@ -464,13 +460,13 @@
       {
         "date": "2026-08-27",
         "value": 4.2
+      },
+      {
+        "date": "2026-08-28",
+        "value": 4.34
       }
     ],
     "yield_30y": [
-      {
-        "date": "2026-05-27",
-        "value": 5.01
-      },
       {
         "date": "2026-05-28",
         "value": 4.98
@@ -726,13 +722,13 @@
       {
         "date": "2026-08-27",
         "value": 5.19
+      },
+      {
+        "date": "2026-08-28",
+        "value": 5.22
       }
     ],
     "spread_2s30s": [
-      {
-        "date": "2026-05-27",
-        "value": 101.0
-      },
       {
         "date": "2026-05-28",
         "value": 99.0
@@ -988,13 +984,13 @@
       {
         "date": "2026-08-27",
         "value": 99.0
+      },
+      {
+        "date": "2026-08-28",
+        "value": 88.0
       }
     ],
     "dollar_uup": [
-      {
-        "date": "2026-05-27",
-        "value": 27.75
-      },
       {
         "date": "2026-05-28",
         "value": 27.7
@@ -1250,13 +1246,13 @@
       {
         "date": "2026-08-27",
         "value": 28.02
+      },
+      {
+        "date": "2026-08-28",
+        "value": 28.18
       }
     ],
     "spy": [
-      {
-        "date": "2026-05-27",
-        "value": 748.53207
-      },
       {
         "date": "2026-05-28",
         "value": 752.66144
@@ -1512,13 +1508,13 @@
       {
         "date": "2026-08-27",
         "value": 771.1
+      },
+      {
+        "date": "2026-08-28",
+        "value": 769.35
       }
     ],
     "qqq": [
-      {
-        "date": "2026-05-27",
-        "value": 728.64878
-      },
       {
         "date": "2026-05-28",
         "value": 734.79202
@@ -1774,13 +1770,13 @@
       {
         "date": "2026-08-27",
         "value": 721.11
+      },
+      {
+        "date": "2026-08-28",
+        "value": 716.43
       }
     ],
     "tlt": [
-      {
-        "date": "2026-05-27",
-        "value": 84.31324
-      },
       {
         "date": "2026-05-28",
         "value": 84.74815
@@ -2036,13 +2032,13 @@
       {
         "date": "2026-08-27",
         "value": 83.13
+      },
+      {
+        "date": "2026-08-28",
+        "value": 82.88
       }
     ],
     "gld": [
-      {
-        "date": "2026-05-27",
-        "value": 408.49
-      },
       {
         "date": "2026-05-28",
         "value": 412.77
@@ -2298,13 +2294,13 @@
       {
         "date": "2026-08-27",
         "value": 422.6
+      },
+      {
+        "date": "2026-08-28",
+        "value": 408.89
       }
     ],
     "hyg_lqd": [
-      {
-        "date": "2026-05-27",
-        "value": 0.73343
-      },
       {
         "date": "2026-05-28",
         "value": 0.73213
@@ -2560,6 +2556,10 @@
       {
         "date": "2026-08-27",
         "value": 0.74834
+      },
+      {
+        "date": "2026-08-28",
+        "value": 0.74979
       }
     ],
     "usd_jpy": [
@@ -3625,14 +3625,14 @@
     "japan_intervention": "https://www.mof.go.jp/english/policy/international_policy/reference/feio/monthly/index.html"
   },
   "source_health": {
-    "treasury": "2026-08-27",
-    "dollar_uup": "2026-08-27",
-    "equity_etfs": "2026-08-27",
-    "real_yield": "2026-08-26",
+    "treasury": "2026-08-28",
+    "dollar_uup": "2026-08-28",
+    "equity_etfs": "2026-08-28",
+    "real_yield": "2026-08-27",
     "usd_jpy": "2026-08-21",
     "japan_jgb": "2026-08-27",
     "japan_reserves": "2026-07-31",
-    "japan_intervention": "2026-07-29"
+    "japan_intervention": "2026-08-26"
   },
   "methodology": {
     "decision_rule": "美国主状态至少两个核心异常且扩散至四项以上才升级红色；日本模块仅作外部放大器，不与美国信号重复计分。",

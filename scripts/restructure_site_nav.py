@@ -44,8 +44,8 @@ RETIRED_REPORT_IDS = {"futu-indicators"}
 # Per-page content refresh dates. These are deliberately independent from the
 # navigation build time so a shared-nav release never makes every page look new.
 PAGE_REFRESH_DATES = {
-    "us-market/": "2026-08-27",
-    "macro-fiscal-risk/": "2026-08-26",
+    "us-market/": "2026-08-28",
+    "macro-fiscal-risk/": "2026-08-27",
     "macro-event-radar/": "2026-08-23",
     "us-market/x-consensus/": "2026-08-23",
     "weekly-event-transmission-2026w35/us/": "2026-08-23",
@@ -59,13 +59,13 @@ PAGE_REFRESH_DATES = {
     "a-share-hardware-deleveraging/": "2026-08-26",
     "a-share-biotech-trend/": "2026-08-26",
     "a-share-dividend-defense/": "2026-08-26",
-    "us-trend-candidates/": "2026-08-27",
-    "rotation/": "2026-08-27",
-    "rs-thrust/": "2026-08-27",
-    "us-skew/": "2026-08-27",
-    "ai-software-security-shovels/": "2026-08-27",
-    "ai-hardware-shovels/": "2026-08-27",
-    "ai-infrastructure-deleveraging/": "2026-08-27",
+    "us-trend-candidates/": "2026-08-28",
+    "rotation/": "2026-08-28",
+    "rs-thrust/": "2026-08-28",
+    "us-skew/": "2026-08-28",
+    "ai-software-security-shovels/": "2026-08-28",
+    "ai-hardware-shovels/": "2026-08-28",
+    "ai-infrastructure-deleveraging/": "2026-08-28",
 }
 
 PICKER_REFRESH_DATES = {
