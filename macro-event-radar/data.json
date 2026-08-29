@@ -2,18 +2,151 @@
   "schema_version": 1,
   "page_status": "live",
   "verification_status": "partial",
-  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-08-28_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
-  "generated_at": "2026-08-28T22:39:00+08:00",
+  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-08-29_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
+  "generated_at": "2026-08-29T23:45:00+08:00",
   "window": {"recent_hours": 240, "calendar_days": 30, "timezone": "Asia/Shanghai"},
   "brief": {
-    "title": "美联储把通胀置于首位，美国用临时牛肉配额压价格",
-    "summary": "美联储主席Warsh在Jackson Hole明确表示PCE同比3.7%、六个月折年4.1%，政策当前应以价格为主要焦点，且2%目标固定不变。白宫同时把瘦牛肉低关税配额临时增加30万吨，分9月至11月三批开放，并要求监测进口折价是否达到25%。AI侧，Google正式推出Gemini 3.5 Transcribe并开放API公测，但厂商精度与延迟指标仍需第三方复现。",
+    "title": "霍尔木兹能源流与AI分发规则同时变化",
+    "summary": "白宫披露霍尔木兹海峡在美方保护下已通过近1,500艘商船、运载7.5亿桶原油，并称伊朗自7月恢复封锁以来原油出口为零；这些数字属于官方口径，仍待航运和装运数据独立复核。AI侧，OpenAI拟于11月12日终止向Cursor供模合同，联邦法院撤销五角大楼对Anthropic的供应链风险认定，Z.ai则正式开放GLM-5.3权重。",
     "discipline": "候选来自真实采集池，但采集不等于核验：一手源必须读取正文，专业媒体与社交信息必须回链官方原文。价格只验证市场响应，不能反向证明传闻。",
-    "core_count": 17,
+    "core_count": 21,
     "pending_count": 1,
-    "next_event_count": 4
+    "next_event_count": 5
   },
   "events": [
+    {
+      "id": "zai-glm-5-3-2026-08-14",
+      "headline": "Z.ai开放GLM-5.3权重：753B模型进入本地部署，商业服务附安全审查条款",
+      "category": "ai",
+      "event_type": "product",
+      "status": "verified",
+      "change_type": "upgraded",
+      "importance": 4,
+      "event_time": "2026-08-29T09:51:13+00:00",
+      "observed_at": "2026-08-29T23:38:35+08:00",
+      "verified_at": "2026-08-29T23:43:00+08:00",
+      "fact": "Z.ai官方Hugging Face仓库已提供GLM-5.3模型文件、本地部署说明和自定义GLM-5.3许可证。仓库标注模型规模753B参数，支持Transformers、vLLM、SGLang、KTransformers及昇腾NPU相关推理框架；许可证允许使用、修改、分发、部署和微调，但年收入超过100亿美元且经营模型即服务业务的机构，在商业使用前须通过Z.ai安全审查。",
+      "new_information": "8月14日发布时承诺约两周后开放的权重已经兑现，事件从API先行和权重待开放升级为可下载、可本地部署；同时确认许可证并非MIT，而是包含大型模型即服务商安全审查条件的自定义条款。",
+      "inference": "推断：开放权重降低本地部署与二次开发门槛，昇腾等框架支持有利于国产推理生态验证；但753B参数带来较高部署资源需求，且许可约束可能影响大型云厂商的商业采用速度。",
+      "unverified": "官方公布的编码、智能体和网络安全基准仍属厂商自报；第三方复现、真实吞吐、显存需求、下载转化、企业采用、API调用量和收入贡献均未确认。",
+      "transmission": [
+        {"level": "A", "path": "权重与部署说明开放 → 本地运行/微调门槛下降 → 开发者与企业试用"},
+        {"level": "B", "path": "753B模型与多框架适配 → 推理硬件和软件栈验证 → 国产算力生态"},
+        {"level": "C", "path": "真实采用与调用增长 → 云与推理基础设施需求 → 产业链收入，仍待订单验证"}
+      ],
+      "affected_assets": [
+        {"market": "中国AI模型与软件", "direction": "生态扩展、采用待确认", "horizon": "1–6个月", "reason": "权重开放支持本地部署和定制，但大型服务商许可与资源门槛会影响扩散速度。"},
+        {"market": "国产算力与推理框架", "direction": "验证机会增加", "horizon": "1–12个月", "reason": "官方列出昇腾相关推理支持；支持声明不等于量产订单或收入。"},
+        {"market": "大型云模型服务商", "direction": "许可约束分化", "horizon": "1–12个月", "reason": "收入超过100亿美元且经营模型即服务者需先通过Z.ai安全审查。"}
+      ],
+      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-08-29T23:43:00+08:00", "detail": "Z.ai并非独立上市公司，周末也没有可与其他因素分离的市场确认；本轮不以相关概念股波动替代采用证据。"},
+      "next_checkpoint": "跟踪第三方编码、网络安全、吞吐与显存复现，核验昇腾适配、下载量、企业试点以及大型模型服务商的许可证合规路径。",
+      "invalidation": "权重无法稳定部署、第三方测试显著不及官方口径、资源成本过高，或许可证约束明显抑制商业采用。",
+      "candidate_refs": ["zai_huggingface-79d579d8c2afee93", "aihot-1183bbf1b890989e"],
+      "sources": [
+        {"role": "primary", "name": "Z.ai Hugging Face — GLM-5.3", "url": "https://huggingface.co/zai-org/GLM-5.3", "published_at": "2026-08-29T09:51:13+00:00", "note": "核验权重仓库、753B参数、本地部署框架、昇腾支持与厂商基准口径。"},
+        {"role": "primary", "name": "Z.ai — GLM-5.3 License", "url": "https://huggingface.co/zai-org/GLM-5.3/raw/main/LICENSE", "published_at": "2026-08-29T09:51:13+00:00", "note": "核验使用、修改与分发许可，以及大型模型即服务商的安全审查条件。"},
+        {"role": "primary", "name": "Z.ai — GLM-5.3发布说明", "url": "https://z.ai/blog/glm-5.3", "published_at": "2026-08-14T00:00:00+08:00", "note": "核验初始API发布与后训练定位；基准数据仍属厂商自报。"}
+      ]
+    },
+    {
+      "id": "us-hormuz-blockade-energy-flow-2026-08-28",
+      "headline": "白宫披露霍尔木兹护航与封锁数据：近1,500艘商船通过，伊朗原油出口据称归零",
+      "category": "geopolitics",
+      "event_type": "incident",
+      "status": "partially_verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-08-29T00:00:05+00:00",
+      "observed_at": "2026-08-29T23:38:35+08:00",
+      "verified_at": "2026-08-29T23:43:00+08:00",
+      "fact": "白宫8月28日发布材料称，美军已清除霍尔木兹海峡国际航道中的伊朗水雷，近1,500艘商船在美方保护下通过并运载7.5亿桶原油；75艘试图突破封锁的船只被迫返航，伊朗自7月恢复封锁以来没有从本国海岸出口原油，海湾原油出口恢复到行动前约三分之二。",
+      "new_information": "相较8月24日以金融和次级制裁为主的“经济孤立”行动，本次首次集中给出航道清雷、护航船数、原油运输量、伊朗出口与海湾供给恢复比例，把事件推进到实物流量和能源供给层。",
+      "inference": "推断：若官方数字被航运和装运数据确认，海湾非伊朗原油外运恢复可缓解全球供应冲击，而伊朗出口归零会强化对其财政与外汇的压力；两股力量对油价方向相反，净效应取决于区域供给、保险和风险溢价。",
+      "unverified": "7.5亿桶、1,500艘、伊朗零出口及三分之二恢复比例尚未由独立船舶追踪、港口装运和库存数据完整复核；白宫对封锁效果和控制权的表述属于行政当局口径。",
+      "transmission": [
+        {"level": "A", "path": "航道清雷与护航 → 海湾非伊朗原油外运恢复 → 现货供应与运费保险"},
+        {"level": "B", "path": "伊朗原油出口受阻 → 财政与外汇压力 → 制裁与地区风险升级"},
+        {"level": "C", "path": "供应恢复与地缘溢价对冲 → 油价波动 → 通胀预期、能源股与航空化工成本"}
+      ],
+      "affected_assets": [
+        {"market": "原油与成品油", "direction": "供给恢复偏空、地缘风险偏多", "horizon": "盘中至3个月", "reason": "海湾外运恢复缓解供应，但封锁和军事风险继续支撑风险溢价。"},
+        {"market": "航运与保险", "direction": "通行改善、风险成本仍高", "horizon": "1–12周", "reason": "护航与清雷有利于通行，实际保费和绕航仍需独立数据确认。"},
+        {"market": "伊朗财政与地区风险", "direction": "压力上升", "horizon": "1–6个月", "reason": "若零出口得到确认，能源收入和进口能力将受更强约束。"}
+      ],
+      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-29T23:43:00+08:00", "detail": "材料发布于周末前后且油价受供需、库存与战争预期共同影响；本轮未用单日价格反向证明白宫数字。"},
+      "next_checkpoint": "用Kpler/Vortexa、港口装运、AIS、油轮保险费率和EIA/OPEC流量数据独立复核船数、桶数、伊朗出口与海湾恢复比例。",
+      "invalidation": "独立航运与装运数据显著低于官方口径，航道重新受阻，或海湾供应恢复不能持续。",
+      "sources": [
+        {"role": "primary", "name": "White House — America Controls the Strait of Hormuz", "url": "https://www.whitehouse.gov/releases/2026/08/president-trump-was-right-america-controls-the-strait-of-hormuz/", "published_at": "2026-08-28T00:00:00-04:00", "note": "核验白宫披露的清雷、护航船数、运输量、伊朗出口与海湾供给恢复口径；数字仍待独立复核。"}
+      ]
+    },
+    {
+      "id": "openai-cursor-contract-winddown-2026-08-28",
+      "headline": "OpenAI拟终止向Cursor供模合同：11月12日为提议停供日，BYOK与Codex扩展保留通道",
+      "category": "ai",
+      "event_type": "policy",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-08-28T00:00:00-07:00",
+      "observed_at": "2026-08-29T23:38:35+08:00",
+      "verified_at": "2026-08-29T23:43:00+08:00",
+      "fact": "OpenAI官方宣布，在Cursor被SpaceX收购后，公司已通知SpaceX拟终止向Cursor提供OpenAI模型的合同，提议停供日期为2026年11月12日；OpenAI帮助中心明确该日期仍待双方确认，Cursor也可能更早终止。用户仍可在受支持的本地Chat和Agent功能中使用自有OpenAI API密钥、Codex IDE扩展或兼容网关，但这些路径不覆盖Cursor Tab、Auto、云端/后台Agent、自动化、CLI及API/SDK等功能。",
+      "new_information": "OpenAI与主流AI编程工具的分发关系从深度供模转向有限过渡和替代接入，且未来OpenAI模型不会继续通过Cursor原合同更新；影响范围因功能而异，并非Cursor内所有OpenAI调用在同一日期全部失效。",
+      "inference": "推断：Cursor需要加快自有模型、其他供应商与网关路由替代，OpenAI则把更多开发者入口引向直接API和Codex扩展；短期可能增加开发者迁移摩擦，中期会重塑AI编程工具的模型议价与分发结构。",
+      "unverified": "最终停供日期、Cursor是否提前终止、受影响用户和调用量、合同收入、SpaceX与Cursor的替代供应商安排以及开发者流失率尚未披露。",
+      "transmission": [
+        {"level": "A", "path": "供模合同拟终止 → Cursor模型可用性与路由变化 → 开发者迁移与留存"},
+        {"level": "B", "path": "BYOK/Codex/网关替代 → OpenAI直接分发占比变化 → API与订阅收入结构"},
+        {"level": "C", "path": "多模型供应重排 → AI编程工具议价与成本 → 应用层竞争格局"}
+      ],
+      "affected_assets": [
+        {"market": "AI编程工具", "direction": "竞争与迁移风险上升", "horizon": "1–6个月", "reason": "核心供模合同拟终止，受影响功能不能全部由BYOK直接覆盖。"},
+        {"market": "OpenAI开发者生态", "direction": "直接分发机会增加", "horizon": "1–12个月", "reason": "API与Codex扩展保留独立入口，但净调用与收入变化尚未披露。"},
+        {"market": "多模型网关与替代供应商", "direction": "潜在需求增加", "horizon": "1–6个月", "reason": "Cursor需重构供应，但最终替代路径与份额仍待确认。"}
+      ],
+      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-08-29T23:43:00+08:00", "detail": "OpenAI、Cursor与SpaceX并非可独立交易的对应资产，无法从单一上市公司价格中隔离该合同变化。"},
+      "next_checkpoint": "等待双方确认最终停供日、Cursor官方迁移说明、受影响功能清单、替代模型供应商与开发者留存数据。",
+      "invalidation": "双方续签或大幅缩小停供范围，Cursor获得无缝替代且用户与调用量不受影响，或11月12日并非最终安排。",
+      "sources": [
+        {"role": "primary", "name": "OpenAI — Our decision on Cursor following its acquisition by SpaceX", "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/", "published_at": "2026-08-28T00:00:00-07:00", "note": "核验合同拟终止、提议停供日、原因与未来模型不再供给。"},
+        {"role": "primary", "name": "OpenAI Help Center — Using OpenAI models in Cursor", "url": "https://help.openai.com/en/articles/20001506-using-openai-models-in-cursor", "published_at": "2026-08-29T00:00:00+00:00", "note": "核验日期尚待确认、BYOK/Codex/网关替代以及不受BYOK覆盖的功能边界。"}
+      ]
+    },
+    {
+      "id": "anthropic-pentagon-blacklist-ruling-2026-08-27",
+      "headline": "美国联邦法院撤销五角大楼对Anthropic的供应链风险认定：政府仍可选择其他AI供应商",
+      "category": "policy",
+      "event_type": "policy",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-08-27T00:00:00-07:00",
+      "observed_at": "2026-08-29T23:38:35+08:00",
+      "verified_at": "2026-08-29T23:43:00+08:00",
+      "fact": "美国加州北区联邦地区法院8月27日裁决，在Anthropic诉美国战争部案中，政府对Anthropic采取的供应链风险认定和广泛惩罚构成第一修正案意义上的非法报复、缺少第五修正案要求的事前程序，并违反10 U.S.C. §3252及行政法要求。法院给予Anthropic大部分简易判决，但驳回其越权分权主张及对部分未采取相关行动机构的请求。",
+      "new_information": "争议从3月临时禁令升级为实体简易判决：供应链风险认定及相关广泛措施被判非法和缺乏依据，但裁决同时明确，战争部仍可自由选择其希望使用的AI供应商。",
+      "inference": "推断：裁决降低Anthropic被全面排除在联邦及国防承包链之外的近期风险，并为美国AI供应商在政府采购中的言论、程序和供应链风险认定边界提供先例；政府上诉和另一宗案件仍可能改变最终影响。",
+      "unverified": "政府是否上诉、上诉期间执行状态、被恢复的具体合同与收入、其他机构重新采购节奏及另一宗华盛顿特区案件结果尚未确认。",
+      "transmission": [
+        {"level": "A", "path": "供应链风险认定被撤销 → 联邦与承包商使用障碍下降 → Anthropic政府业务机会"},
+        {"level": "B", "path": "AI安全红线获程序保护 → 政府采购合同条款重谈 → 前沿模型合规边界"},
+        {"level": "C", "path": "若政府上诉或改用其他采购权力 → 不确定性延续 → AI供应商估值与合作节奏"}
+      ],
+      "affected_assets": [
+        {"market": "美国政府AI采购", "direction": "供应商竞争重新打开", "horizon": "1–12个月", "reason": "广泛排除措施被撤销，但政府仍可自主选择供应商。"},
+        {"market": "前沿模型公司", "direction": "合规边界更清晰", "horizon": "3–18个月", "reason": "裁决约束报复性和无程序的风险认定，后续仍取决于上诉和合同条款。"},
+        {"market": "国防承包链", "direction": "Claude使用限制缓解，执行待确认", "horizon": "1–6个月", "reason": "裁决降低广泛禁用风险，但具体机构和承包商恢复流程尚未披露。"}
+      ],
+      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-08-29T23:43:00+08:00", "detail": "Anthropic并非独立上市公司，裁决影响也与AI政策、国防采购及IPO预期交织，无法用单一资产价格隔离。"},
+      "next_checkpoint": "核验政府上诉与暂停执行申请、各机构撤销指令的状态报告、Anthropic政府合同恢复及另一宗特区上诉案件。",
+      "invalidation": "上级法院暂停或推翻裁决，政府通过其他合法采购权力维持实质排除，或合同与收入未恢复。",
+      "sources": [
+        {"role": "primary", "name": "U.S. District Court NDCA — Filing 250, Anthropic PBC v. U.S. Department of War", "url": "https://docs.justia.com/cases/federal/district-courts/california/candce/3%3A2026cv01996/465515/250", "published_at": "2026-08-27T00:00:00-07:00", "note": "核验简易判决范围、第一与第五修正案、10 U.S.C. §3252及政府仍可选择供应商的边界。"},
+        {"role": "secondary", "name": "Associated Press — Judge says Pentagon measures against Anthropic were illegal and baseless", "url": "https://apnews.com/article/anthropic-pentagon-lawsuit-supply-chain-risk-f15e3c30186385e73e72bee82d85b05c", "published_at": "2026-08-28T03:08:09+00:00", "note": "核验裁决背景、政府预计抗辩及Anthropic回应；最终法律状态以法院文件为准。"}
+      ]
+    },
     {
       "id": "fed-warsh-jackson-hole-inflation-2026-08-28",
       "headline": "美联储主席Jackson Hole讲话偏鹰：通胀仍高，政策当前应以价格为主要焦点",
@@ -110,6 +243,39 @@
       "sources": [
         {"role": "primary", "name": "Google — Introducing Gemini 3.5 Transcribe", "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/", "published_at": "2026-08-26T10:00:00-07:00", "note": "核验产品发布、两种API、公测范围、应用场景与厂商性能声明。"},
         {"role": "primary", "name": "Google Cloud Documentation — Gemini 3.5 Transcribe", "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-transcribe", "published_at": "2026-08-26T00:00:00+00:00", "note": "核验preview模型ID、global区域与功能边界。"}
+      ]
+    },
+    {
+      "id": "ofac-terror-sanctions-shift-2026-08-24-26",
+      "headline": "OFAC调整反恐制裁名单：解除HTS相关主体并新增Palestine Action等组织与个人",
+      "category": "policy",
+      "event_type": "policy",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 3,
+      "event_time": "2026-08-26T00:00:00-04:00",
+      "observed_at": "2026-08-29T23:38:35+08:00",
+      "verified_at": "2026-08-29T23:43:00+08:00",
+      "fact": "美国财政部OFAC公告显示，8月24日解除Hayat Tahrir al-Sham/Al-Nusrah Front及12名相关个人的SDN冻结，同时将两名被指支持Al Qa'ida或Hurras al-Din的个人列入SDN；8月26日又将Palestine Action、Autistici Inventati、Masar Badil及两名相关个人列入特别指定全球恐怖分子名单。相关被冻结财产受美国司法管辖，且美国人通常不得与被列名者交易。",
+      "new_information": "反恐名单同时出现解除和新增：对叙利亚HTS相关主体的限制继续调整，而面向Palestine Action、数字基础设施组织和跨国倡议网络的新增认定扩大了合规对象范围。Federal Register正式刊载日为8月31日，但公告明确实际行动日期为8月24日和26日。",
+      "inference": "推断：直接市场影响有限，主要传导到银行、支付、托管、云与网络服务商的制裁筛查和客户尽调；HTS相关解除可能配合美国对叙利亚政策调整，但不能据此推断全面外交承认或制裁正常化。",
+      "unverified": "各主体与被指行为的完整证据材料、欧洲及其他司法辖区是否跟随、金融机构执行范围、账户冻结金额及政府更广泛的叙利亚政策安排尚未确认。",
+      "transmission": [
+        {"level": "A", "path": "SDN新增/解除 → 银行与支付名单筛查 → 账户、交易与服务可用性"},
+        {"level": "B", "path": "数字与跨国组织被列名 → 云、托管与网络服务合规 → 服务终止和法律风险"},
+        {"level": "C", "path": "HTS相关解除 → 叙利亚政策预期变化 → 地缘与重建资产，仍待正式政策确认"}
+      ],
+      "affected_assets": [
+        {"market": "全球银行与支付合规", "direction": "筛查成本上升", "horizon": "即时至3个月", "reason": "新增与解除并行要求及时更新客户和交易名单。"},
+        {"market": "云与网络基础设施", "direction": "客户审查风险上升", "horizon": "即时至3个月", "reason": "被列名对象包含数字基础设施相关组织，服务商需核验适用范围。"},
+        {"market": "叙利亚相关政策预期", "direction": "限制边际调整", "horizon": "1–6个月", "reason": "HTS相关解除是政策信号，但并不等于全面制裁解除。"}
+      ],
+      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-08-29T23:43:00+08:00", "detail": "被列名主体与上市资产缺少直接映射，本轮以合规事件记录，不以宽泛地缘资产波动证明影响。"},
+      "next_checkpoint": "核验OFAC制裁搜索名单更新、财政部配套说明、金融与云服务商执行，以及美国对叙利亚政策的后续正式文件。",
+      "invalidation": "OFAC更正或撤回名单、法院或行政程序暂停执行，或后续文件显著改变本次新增与解除范围。",
+      "sources": [
+        {"role": "primary", "name": "Federal Register — Notice of OFAC Sanctions Action 2026-17724", "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17724/notice-of-ofac-sanctions-action", "published_at": "2026-08-31T00:00:00-04:00", "note": "核验8月26日新增Palestine Action、Autistici Inventati、Masar Badil及相关个人。"},
+        {"role": "primary", "name": "Federal Register — Notice of OFAC Sanctions Actions 2026-17725", "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17725/notice-of-ofac-sanctions-actions", "published_at": "2026-08-31T00:00:00-04:00", "note": "核验8月24日HTS相关解除及两名个人新增；刊载日与实际行动日分开。"}
       ]
     },
     {
@@ -504,40 +670,6 @@
       ]
     },
     {
-      "id": "zai-glm-5-3-2026-08-14",
-      "headline": "Z.ai发布GLM-5.3：API已上线，权重仍待安全评估后开放",
-      "category": "ai",
-      "event_type": "product",
-      "status": "partially_verified",
-      "change_type": "unchanged",
-      "importance": 4,
-      "event_time": "2026-08-14T00:00:00+08:00",
-      "observed_at": "2026-08-23T10:36:32+08:00",
-      "verified_at": "2026-08-23T11:05:00+08:00",
-      "fact": "自动采集池先从AI HOT发现GLM-5.3线索，随后回查Z.ai官方发布页。官方称模型沿用GLM-5.2基座，能力提升来自后训练扩展；API已上线，支持low、high、max三档推理强度，不再支持关闭思考；权重计划在发布约两周后开放。",
-      "new_information": "这不是单纯参数规模升级，增量集中在长程编码、智能体任务和网络安全能力；API先行、权重后发，当前处于可调用但尚未完全开源阶段。",
-      "inference": "推断：若第三方编码与安全测试能够复现，同时调用成本保持优势，可能提高Z.ai开发者采用；在权重开放和调用量出现前，不能直接映射为算力或上市公司收入。",
-      "unverified": "官方公布的基准成绩、漏洞发现数量和成本优势主要为厂商自报；独立复现、实际API稳定性、客户调用量及权重如期开放仍待确认。",
-      "transmission": [
-        {"level": "A", "path": "API正式可用 → 编码智能体接入 → 开发者采用与调用量"},
-        {"level": "B", "path": "权重开放/第三方复现 → 开源生态扩散 → 国产模型竞争格局"},
-        {"level": "C", "path": "真实调用增长 → 推理基础设施需求 → 云与算力链收入"}
-      ],
-      "affected_assets": [
-        {"market": "中国AI软件", "direction": "结构性利好", "horizon": "1–3个月", "reason": "优先观察API调用、开发工具接入和价格，而不是自报榜单。"},
-        {"market": "国产算力链", "direction": "待确认", "horizon": "1–6个月", "reason": "模型发布本身不等于订单，需看到部署规模和收入。"},
-        {"market": "中概科技", "direction": "未确认", "horizon": "1–10日", "reason": "同期KWEB未形成模型发布驱动的板块级确认。"}
-      ],
-      "market_confirmation": {"stage": "not_confirmed", "checked_at": "2026-08-23T10:10:00+08:00", "detail": "Futu OpenD显示KWEB从8月19日至21日下跌约2.06%；没有观察到可归因于GLM-5.3的板块确认。"},
-      "next_checkpoint": "检查权重是否按计划开放、官方模型卡与许可证，并等待第三方编码、安全和成本复现。",
-      "invalidation": "权重延期、API稳定性或成本不及预期，或第三方测试无法复现核心能力。",
-      "candidate_refs": ["aihot-19abffd342019d1f"],
-      "sources": [
-        {"role": "primary", "name": "Z.ai — GLM-5.3: Frontier Coding with Emergent Cyber Capabilities", "url": "https://z.ai/blog/glm-5.3", "published_at": "2026-08-14T00:00:00+08:00", "note": "官方发布与API迁移说明；基准数据仍属于厂商自报。"},
-        {"role": "secondary", "name": "AI HOT — GLM-5.3上线", "url": "https://aihot.virxact.com/items/cmszeb2mx0b3srodpef1ub0j0", "published_at": "2026-08-19T09:03:29+08:00", "note": "采集池发现源；核心事实已回到Z.ai官方页面。"}
-      ]
-    },
-    {
       "id": "openai-frontier-training-cyber-safeguards-2026-08-18",
       "headline": "OpenAI因网络安全能力与代理入侵放缓训练：最大前沿RL运行仍暂停",
       "category": "ai",
@@ -605,31 +737,32 @@
     {"stage": "T-4", "title": "美国瘦牛肉低关税配额首批开放", "time": "9月1日至30日，首批100,000公吨", "status": "confirmed", "check": "核验CBP/USTR执行通知、使用率、来源国、进口折价及零售传导。"},
     {"stage": "T-11", "title": "加拿大反制税正式生效", "time": "加拿大东部时间9月8日00:01", "status": "confirmed", "check": "清单与商品编码已公布，继续核验延期、豁免及企业直接敞口。"},
     {"stage": "T-18", "title": "美联储9月FOMC", "time": "9月15–16日", "status": "confirmed", "check": "判断Warsh的通胀优先表述、7月鹰派分歧及最新PCE信号是否延续。"},
+    {"stage": "T-75", "title": "OpenAI向Cursor供模合同拟终止", "time": "提议停供日11月12日，最终日期待双方确认", "status": "confirmed", "check": "核验最终停供日、Cursor迁移方案、受影响功能、替代模型和开发者留存。"},
     {"stage": "120日内", "title": "美国大电网设备实施规则", "time": "行政令要求能源部长在120日内按需发布", "status": "confirmed", "check": "核对受限国家、主体、设备/软件、许可、预审名单、存量设备与生效安排。"}
   ],
   "source_health": [
-    {"group": "第一层 · 一手来源", "status": "verified", "last_success_at": "2026-08-28T22:33:31+08:00", "coverage": "12/12自动一手源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register、Z.ai HF合计抓取543条，保留46条一手候选。美联储Jackson Hole讲话、白宫牛肉配额公告、Google官方发布与Cloud文档已读取原文"},
-    {"group": "第二层 · 专业发现", "status": "partial", "last_success_at": "2026-08-28T22:33:31+08:00", "coverage": "AI HOT自动源1/1成功，抓取54条、保留45条发现候选；Gemini 3.5 Transcribe线索已升级到Google官方发布与文档。NVIDIA FY2028销售预测、xAI诉讼、Qwen性能等线索未取得足以进入核心区的一手证据；Reuters、Bloomberg、FT、WSJ、金十、财联社、富途已登记但尚未自动轮询"},
+    {"group": "第一层 · 一手来源", "status": "verified", "last_success_at": "2026-08-29T23:38:35+08:00", "coverage": "12/12自动一手源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register、Z.ai HF合计抓取543条，保留38条一手候选。Z.ai权重与许可证、OpenAI供模公告与帮助文档、美国联邦法院裁决、白宫霍尔木兹材料及两份OFAC原文已读取"},
+    {"group": "第二层 · 专业发现", "status": "partial", "last_success_at": "2026-08-29T23:38:35+08:00", "coverage": "AI HOT自动源1/1成功，抓取61条、保留43条发现候选；OpenAI/Cursor与Anthropic裁决线索已回到OpenAI官方和法院原文。Anthropic自动研究、OpenAI-Hugging Face评论、数学发现等线索未形成新增核心事件；Reuters、Bloomberg、FT、WSJ、金十、财联社、富途已登记但尚未自动轮询"},
     {"group": "第三层 · 社交抢先", "status": "registered", "last_success_at": null, "coverage": "官方X、Truth Social、微信公众号、Telegram和行业记者已登记；当前0个自动源，任何内容默认仅线索"},
     {"group": "市场验证", "status": "partial", "last_success_at": "2026-08-27T09:49:53+08:00", "coverage": "Futu OpenD已核验截至2026-08-26完整交易日及业绩后快照：SPY +0.02%、QQQ +0.09%，NVDA常规时段-1.59%、业绩后快照+4.71%；价格只记录响应，不证明事件因果"}
   ],
   "collection_run": {
-    "generated_at": "2026-08-28T22:33:31+08:00",
+    "generated_at": "2026-08-29T23:38:35+08:00",
     "configured_sources": 36,
     "active_sources": 13,
     "successful_sources": 13,
     "failed_sources": 0,
     "registered_manual_sources": 23,
     "tier1_fetched": 543,
-    "tier1_candidates": 46,
-    "tier2_fetched": 54,
-    "candidate_pool_after_dedupe": 65,
-    "manual_connectors_succeeded": ["美联储Jackson Hole讲话核验", "白宫牛肉配额公告与事实清单核验", "Google Gemini官方发布与Cloud文档核验"],
+    "tier1_candidates": 38,
+    "tier2_fetched": 61,
+    "candidate_pool_after_dedupe": 56,
+    "manual_connectors_succeeded": ["Z.ai GLM-5.3权重与许可证核验", "OpenAI Cursor供模公告与帮助文档核验", "Anthropic联邦法院裁决原文核验", "白宫霍尔木兹运输口径核验", "Federal Register两份OFAC原文核验"],
     "artifacts": ["sources.json", "candidates.json", "collection-status.json"]
   },
   "methodology": {
     "priority_formula": "影响范围30% + 传导直接度25% + 证据可靠度20% + 预期差15% + 时间紧迫度10%",
     "core_rule": "核心区只接受verified或partially_verified事件，并至少包含一个一手来源；匿名消息进入待证真。",
-    "limitations": "本页为2026-08-28北京时间快照。候选池由真实RSS/API采集生成，但核心事件仍需逐条正文核验；本轮13/13自动源成功，23个付费、登录或专用连接器来源只登记未自动化。美联储Jackson Hole讲话、白宫牛肉配额公告、Google Gemini官方发布与Cloud文档已回查一手原文；Google性能指标仍按厂商口径标记待复现，NVIDIA FY2028销售预测、xAI诉讼与Qwen性能等线索未进入核心区。8月28日美股交易尚未完成，未用盘中价格冒充市场确认；Futu OpenD价格只记录响应，不证明事件因果。"
+    "limitations": "本页为2026-08-29北京时间快照。候选池由真实RSS/API采集生成，但核心事件仍需逐条正文核验；本轮13/13自动源成功，23个付费、登录或专用连接器来源只登记未自动化。GLM-5.3权重与许可证、OpenAI/Cursor、Anthropic法院裁决、霍尔木兹官方材料和OFAC原文已回查；GLM性能、白宫航运与出口数字仍待第三方复现或独立流量数据确认。Space Academy仅成立研究委员会且无新增拨款，不进入核心区；其他AI研究、评论与社交线索未取得足以进入核心区的新一手证据。价格只记录响应，不证明事件因果。"
   }
 }
