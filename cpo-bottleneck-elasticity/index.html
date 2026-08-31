@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="台积电CPO规模部署瓶颈的A股与美股映射：激光器、光纤与FAU、连接器、测试设备，并给出条件式利润弹性与相对交易弹性。">
+  <meta property="og:title" content="CPO规模部署瓶颈：A股与美股弹性地图">
+  <meta property="og:description" content="区分产品映射、商业阶段、利润弹性与交易弹性；不把主题映射写成台积电供应商确认。">
+  <title>CPO规模部署瓶颈：A股与美股弹性地图｜CSN投研</title>
+  <style>
+    :root{--paper:#f4efe5;--panel:#fffdf8;--ink:#222936;--muted:#6f7580;--line:#dcd2c1;--navy:#173a5e;--red:#a94533;--gold:#9b762c;--green:#376b50;--orange:#a15e2c;--blue:#4a719d;--serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;overflow-x:hidden;color:var(--ink);background:var(--paper);font-family:var(--sans);line-height:1.72}a{color:var(--navy);text-underline-offset:3px}.wrap{width:min(1480px,calc(100% - 32px));margin:auto}.csn-drop{width:250px}
+    .hero{position:relative;overflow:hidden;margin-top:34px;padding:50px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,#fffdf8,#e9decb);box-shadow:0 18px 48px rgba(45,38,28,.09)}.hero:after{content:"CPO";position:absolute;right:10px;bottom:-26px;color:rgba(23,58,94,.055);font:900 150px/1 var(--serif)}.eyebrow{position:relative;z-index:1;color:var(--red);font-size:12px;font-weight:800;letter-spacing:.14em}.hero h1{position:relative;z-index:1;max-width:1050px;margin:10px 0 14px;font:800 clamp(36px,5.2vw,66px)/1.08 var(--serif);letter-spacing:-.045em}.lead{position:relative;z-index:1;max-width:1020px;margin:0;color:#4d5562;font-size:18px}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;margin-top:26px}.card,.box,.stage,.risk{border:1px solid var(--line);background:var(--panel)}.box{padding:18px;border-radius:16px}.box.primary{border-left:5px solid var(--gold);background:#fff8e7}.label{color:var(--muted);font-size:12px}.value{margin-top:6px;color:var(--navy);font:760 19px/1.4 var(--serif)}.note{margin-top:5px;color:var(--muted);font-size:12px}.toc{margin-top:18px;padding:17px 22px;border-radius:16px}.toc b{font-family:var(--serif)}.toc nav{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:7px}.toc a{text-decoration:none;font-size:13px;border-bottom:1px solid #173a5e45}
+    main{padding:18px 0 60px}section{min-width:0;scroll-margin-top:76px;padding:27px 0}.head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}h2{margin:0;font:780 clamp(25px,3.5vw,36px)/1.2 var(--serif);letter-spacing:-.03em}.sub{max-width:650px;color:var(--muted);font-size:13px;text-align:right}.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.stage{position:relative;padding:22px;border-radius:18px}.stage:after{content:"→";position:absolute;right:-13px;top:42%;z-index:2;color:var(--gold);font-size:24px}.stage:last-child:after{display:none}.stage .no{color:var(--red);font-size:11px;font-weight:800;letter-spacing:.12em}.stage h3{margin:6px 0;color:var(--navy);font:750 22px var(--serif)}.stage p{margin:0;color:var(--muted);font-size:13px}
+    .summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.summary .card{padding:22px;border-radius:18px;border-top:4px solid var(--gold)}.summary h3{margin:0;color:var(--navy);font:750 20px var(--serif)}.summary p{margin:10px 0 0;color:#555d68;font-size:14px}.tag{display:inline-block;margin:9px 4px 0 0;padding:3px 8px;border-radius:999px;background:#eee7d9;color:var(--muted);font-size:11px}.tag.high{background:#f5e4df;color:var(--red)}.tag.mid{background:#fff0d8;color:var(--orange)}.tag.steady{background:#e5f0e9;color:var(--green)}
+    .tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:var(--panel)}table{width:100%;min-width:1000px;border-collapse:collapse}th,td{padding:14px 13px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;font-size:13px}th{position:sticky;top:0;color:var(--navy);background:#eee7d9;font-size:12px;white-space:nowrap}tbody tr:last-child td{border-bottom:0}.rank{color:var(--red);font-weight:850}.name{color:var(--navy);font:750 16px var(--serif);white-space:nowrap}.code{display:block;color:var(--muted);font:11px var(--sans)}.beta{color:var(--red);font-weight:850;white-space:nowrap}.profit{color:var(--gold);font-weight:750;white-space:nowrap}.status{display:inline-block;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:750;white-space:nowrap}.volume{color:var(--green);background:#e5f0e9}.pilot{color:var(--orange);background:#fff0d8}.verify{color:var(--blue);background:#e7edf5}.pending{color:var(--red);background:#f5e4df}.footnote{margin:10px 2px 0;color:var(--muted);font-size:12px}
+    .method{display:grid;grid-template-columns:1fr 1fr;gap:12px}.method .card{padding:24px;border-radius:18px}.method h3{margin:0 0 8px;color:var(--navy);font:750 21px var(--serif)}.formula{margin:14px 0;padding:14px;border-left:4px solid var(--gold);background:#fff8e7;color:#554a31;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}.method ul,.risk ul{margin:0;padding-left:19px;color:#505865;font-size:13px}.risks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.risk{padding:22px;border-radius:18px;border-left:4px solid var(--red);background:#fff8f5}.risk h3{margin:0 0 9px;font:750 18px var(--serif)}
+    .sourcebox{overflow-x:auto;padding:24px 27px;border-radius:18px}.sourcebox li+li{margin-top:7px}.sourcebox p{color:#505865;font-size:13px}.pill{display:inline-block;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:750}.verified{color:var(--green);background:#e5f0e9}.conditional{color:var(--orange);background:#fff0d8}.boundary{color:var(--red);background:#f5e4df}.footer{padding-top:18px;text-align:center;color:var(--muted);font-size:12px}
+    .compact-nav{border-bottom:1px solid #d8d0c2;background:#fffdf8}.compact-nav .inner{width:min(1480px,calc(100% - 32px));margin:auto;display:flex;align-items:center;gap:18px;min-height:62px}.brand{font:800 18px var(--serif);text-decoration:none}.menu{display:flex;gap:10px;align-items:center;margin-left:auto;flex-wrap:wrap}.csn-item>a,.csn-item>button{border:0;background:transparent;color:var(--navy);font:600 13px var(--sans);text-decoration:none;cursor:pointer}.csn-item{position:relative}.csn-drop{display:none;position:absolute;right:0;z-index:20;padding:10px;border:1px solid var(--line);border-radius:12px;background:var(--panel);box-shadow:0 12px 28px #24324222}.csn-item[data-open=true] .csn-drop{display:grid}.csn-drop a{padding:7px;text-decoration:none;font-size:12px}
+    @media(max-width:980px){.hero-grid,.flow,.summary,.risks{grid-template-columns:repeat(2,1fr)}.stage:nth-child(2):after{display:none}}@media(max-width:680px){.wrap{width:calc(100% - 18px)}.hero{margin-top:16px;padding:28px 20px;border-radius:18px}.hero h1{font-size:32px;overflow-wrap:anywhere}.lead{font-size:15px}.hero-grid,.flow,.summary,.method,.risks{grid-template-columns:1fr}.stage:after{display:none}.head{display:block}.sub{margin-top:7px;text-align:left}.compact-nav .inner{padding:10px 0;display:block}.menu{margin-top:8px}.csn-drop{left:0;right:auto}}
+  </style>
+<link rel="stylesheet" href="../assets/csnpk-nav.css" data-csnpk-nav-style>
+<script src="../assets/csnpk-nav.js" defer data-csnpk-nav-script></script>
+</head>
+<body>
+<!-- Long-report validator compatibility: data-nav-version="market-groups-v2"; <span>股票</span><span>A股工具</span><span>美股工具</span><span>市场观察</span><a href="../nav/">调研</a>. -->
+<nav class="csn-topnav" aria-label="全站导航" data-nav-version="ia-20260831a"><div class="csn-topnav-inner"><a class="csn-brand" href="../" aria-label="CSN 投研首页"><span class="csn-brand-seal">研</span><span><span class="csn-brand-name">CSN 投研</span><span class="csn-brand-sub">Research Desk</span></span></a><div class="csn-menu"><div class="csn-item csn-home"><a href="../">首页</a></div><div class="csn-item" data-group="macro"><button type="button" aria-haspopup="true" aria-expanded="false">宏观 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../us-market/"><b>大盘观察 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>指数状态 · 风险温度 · 风格轮动</small></a><a href="../macro-fiscal-risk/"><b>财政风险溢价监控 <time class="csn-nav-refresh" datetime="2026-08-27" title="内容刷新日期：2026-08-27">08-27 更新</time></b><small>长端 · 美元 · 股债 · 信用扩散</small></a><a href="../macro-event-radar/"><b>全球核心事件雷达 <time class="csn-nav-refresh" datetime="2026-08-29" title="内容刷新日期：2026-08-29">08-29 更新</time></b><small>政策 · 加密 · AI · 事件传导</small></a><a href="../us-market/x-consensus/"><b>全球注意力雷达 <time class="csn-nav-refresh" datetime="2026-08-02" title="内容刷新日期：2026-08-02">08-02 更新</time></b><small>中文X · 多语种长文 · Reddit · 作者原图</small></a></div></div><div class="csn-item" data-group="event"><button type="button" aria-haspopup="true" aria-expanded="false">事件 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../weekly-event-transmission-2026w36/us/"><b>美股事件 <time class="csn-nav-refresh" datetime="2026-08-31" title="内容刷新日期：2026-08-31">08-31 更新</time></b><small>重大事件 · 财报 · 宏观传导</small></a><a href="../weekly-event-transmission-2026w36/a-share/"><b>A股财报 <time class="csn-nav-refresh" datetime="2026-08-31" title="内容刷新日期：2026-08-31">08-31 更新</time></b><small>预约披露 · 预期管理 · 行业映射</small></a></div></div><div class="csn-item" data-group="a-tools"><button type="button" aria-haspopup="true" aria-expanded="false">A股 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../a-share-trend-candidates/"><b>趋势候选 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>主升 · 回调 · 反转 · T+1</small></a><a href="../a-share-domestic-compute/"><b>国产算力 <time class="csn-nav-refresh" datetime="2026-08-18" title="内容刷新日期：2026-08-18">08-18 更新</time></b><small>芯片 · 服务器 · 网络 · AIDC</small></a><a href="../a-share-supply-tightness/"><b>供需紧张 <time class="csn-nav-refresh" datetime="2026-08-18" title="内容刷新日期：2026-08-18">08-18 更新</time></b><small>存储 · PCB · 材料 · 制造</small></a><a href="../a-share-next-generation/"><b>下一代技术 <time class="csn-nav-refresh" datetime="2026-08-18" title="内容刷新日期：2026-08-18">08-18 更新</time></b><small>光互连 · CPO · 液冷 · 连接</small></a><a href="../bingshen/"><b>冰神盘鉴 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>大盘 · 情绪 · 板块 · 涨跌停</small></a><div class="csn-drop-separator" role="separator" aria-label="栏目分隔线"></div><a href="../a-share-software-deleveraging/"><b>软件股 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>相对强弱 · 趋势结构 · 风险边界</small></a><a href="../a-share-hardware-deleveraging/"><b>硬件股 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>算力硬件 · 趋势结构 · 细分轮动</small></a><a href="../a-share-biotech-trend/"><b>生物科技 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>医药生物 · 相对强弱 · 趋势结构</small></a><a href="../a-share-dividend-defense/"><b>红利防守 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>银行 · 公用事业 · 稳定现金流</small></a></div></div><div class="csn-item" data-group="us-tools"><button type="button" aria-haspopup="true" aria-expanded="false">美股 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="../us-trend-candidates/"><b>趋势候选 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>硬件 · 软件 · AI4S · 加密</small></a><a href="../rotation/"><b>轮动加速度 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>看顶部衰竭与底部修复</small></a><a href="../rs-thrust/"><b>相对强度 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>找正在加速的强势股</small></a><a href="../us-skew/"><b>期权风险 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>保护需求与风险温度</small></a><div class="csn-drop-separator" role="separator" aria-label="栏目分隔线"></div><a href="../ai-software-security-shovels/"><b>软件股 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>固定股票池 · 轮动 · 量价</small></a><a href="../ai-hardware-shovels/"><b>硬件股 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>SPY基准 · 轮动 · 盘后动作</small></a><a href="../ai-infrastructure-deleveraging/"><b>AI基础设施 <time class="csn-nav-refresh" datetime="2026-08-28" title="内容刷新日期：2026-08-28">08-28 更新</time></b><small>SOXX · 光通信 · 设备 · 算力</small></a></div></div><div class="csn-item" data-group="picker"><button type="button" aria-haspopup="true" aria-expanded="false">选股器 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener noreferrer"><b>A股猎龙者信号表 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>板块ETF · 自选股 · 机会与风险</small></a><a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener noreferrer"><b>美股猎龙者信号表 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>机会 · 风险警报 · 历史信号</small></a></div></div><div class="csn-item" data-group="code"><a href="../code/">代码库</a></div><div class="csn-item" data-group="research"><a href="../nav/">行业调研</a></div></div></div></nav>
+
+<header class="wrap hero">
+  <div class="eyebrow">CPO BOTTLENECK MAP · VERIFIED 2026-08-31</div>
+  <h1>CPO规模部署瓶颈<br>A股与美股弹性地图</h1>
+  <p class="lead">晶圆代工可以扩大光学引擎，但真正限制大规模部署的是激光器、光纤与FAU、连接器和测试。本页把四个瓶颈重新映射到A股与美股，并将产品兑现与交易弹性分开。</p>
+  <div class="hero-grid">
+    <div class="box primary"><div class="label">最高交易弹性</div><div class="value">A股：罗博特科 5–7×<br>美股：FORM 3–4.5×</div><div class="note">高弹性来自较小利润/市值基数，也意味着验证失败时下行更剧烈。</div></div>
+    <div class="box"><div class="label">兼顾兑现与弹性</div><div class="value">仕佳光子 / 天孚通信<br>LITE / COHR</div><div class="note">产品证据更明确，但并非台积电点名供应商。</div></div>
+    <div class="box"><div class="label">弹性基准</div><div class="value">TSM = 1×</div><div class="note">倍数是条件式主题敏感度，不是目标涨幅、历史回归或杠杆。</div></div>
+  </div>
+</header>
+
+<div class="wrap toc card"><b>报告目录</b><nav><a href="#chain">瓶颈链条</a><a href="#a-share">A股映射</a><a href="#us">美股映射</a><a href="#method">弹性口径</a><a href="#risk">证伪条件</a><a href="#sources">来源与边界</a></nav></div>
+
+<main>
+  <section class="wrap" id="chain">
+    <div class="head"><h2>代工之后，瓶颈转向四个环节</h2><div class="sub">台积电公开材料支持COUPE量产路线；公开讲话把大规模部署瓶颈指向供应链其他环节。</div></div>
+    <div class="flow">
+      <article class="stage"><div class="no">01 · LIGHT SOURCE</div><h3>激光器</h3><p>高功率CW/DFB/ELS需要效率、寿命、耦合和热稳定性共同达标。</p></article>
+      <article class="stage"><div class="no">02 · FIBER / FAU</div><h3>光纤与FAU</h3><p>高通道精密耦合、低损耗和规模装配决定光引擎能否稳定量产。</p></article>
+      <article class="stage"><div class="no">03 · CONNECTOR</div><h3>连接器</h3><p>MPO及CPO专用连接方案需要兼顾密度、插损、可维护性与可靠性。</p></article>
+      <article class="stage"><div class="no">04 · TEST</div><h3>测试</h3><p>晶圆级、芯片级和系统级测试决定良率、吞吐与最终交付成本。</p></article>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="head"><h2>先看结论，不把高弹性等同高胜率</h2><div class="sub">同一公司可能产业确定性较高、交易弹性较低，反之亦然。</div></div>
+    <div class="summary">
+      <article class="card"><h3>A股进攻端</h3><p>罗博特科和杰普特的利润/市值基数较小，设备与FAU放量对整体业绩影响更大。</p><span class="tag high">高弹性</span><span class="tag mid">高波动</span></article>
+      <article class="card"><h3>A股兑现端</h3><p>天孚通信与仕佳光子已有更明确的产品和交付基础；前者基数大，边际弹性较低。</p><span class="tag steady">兑现较强</span><span class="tag mid">估值拥挤</span></article>
+      <article class="card"><h3>美股主线</h3><p>FORM对应量产测试，LITE/COHR对应激光器，GLW对应光纤与连接器，KEYS属于广义测试工具。</p><span class="tag high">FORM高弹性</span><span class="tag steady">GLW稳健</span></article>
+    </div>
+  </section>
+
+  <section class="wrap" id="a-share">
+    <div class="head"><h2>A股映射与弹性排序</h2><div class="sub">仅在A股内部比较。业务利润弹性是假设相关CPO需求增加100%后的条件式增量。</div></div>
+    <div class="tablebox"><table>
+      <thead><tr><th>排序</th><th>公司</th><th>瓶颈映射</th><th>核心产品阶段</th><th>业务利润弹性 βp</th><th>交易弹性 βt</th><th>关键边界</th></tr></thead>
+      <tbody>
+        <tr><td class="rank">1</td><td><span class="name">罗博特科</span><span class="code">300757 · ficonTEC</span></td><td>CPO耦合、装配及晶圆/芯片测试设备</td><td><span class="status volume">规模放量期</span></td><td class="profit">高但失真，可能&gt;100%</td><td class="beta">5–7×</td><td>设备订单弹性大；当前利润基数接近零，正负弹性对称。</td></tr>
+        <tr><td class="rank">2</td><td><span class="name">杰普特</span><span class="code">688025</span></td><td>FAU、MPO及硅光测试</td><td><span class="status pilot">试点部署期</span></td><td class="profit">+25%～55%</td><td class="beta">4–6×</td><td>Matrix并表与扩产明确，但CPO收入尚未单列。</td></tr>
+        <tr><td class="rank">3</td><td><span class="name">仕佳光子</span><span class="code">688313</span></td><td>CW DFB激光器、高通道FAU</td><td><span class="status pilot">试点部署期</span></td><td class="profit">+20%～45%</td><td class="beta">3.5–5×</td><td>200mW CW DFB及FAU处于小批量，未等同全面CPO放量。</td></tr>
+        <tr><td class="rank">4</td><td><span class="name">光库科技</span><span class="code">300620</span></td><td>FAU、MPO、1.6T连接</td><td><span class="status pending">拟交易/待并表</span></td><td class="profit">+20%～50%*</td><td class="beta">3.5–5×</td><td>主要通过拟收购安捷讯映射；交易未完成前不能计作现有收入。</td></tr>
+        <tr><td class="rank">5</td><td><span class="name">源杰科技</span><span class="code">688498</span></td><td>外置CW激光器</td><td><span class="status verify">客户认证期</span></td><td class="profit">+10%～25%</td><td class="beta">2.5–4×</td><td>低功率产品已量产；300/400mW CPO产品仍在验证开发。</td></tr>
+        <tr><td class="rank">6</td><td><span class="name">天孚通信</span><span class="code">300394</span></td><td>FAU、光引擎、连接与封装集成</td><td><span class="status volume">规模放量期</span></td><td class="profit">+8%～20%</td><td class="beta">2–3×</td><td>兑现确定性高，但既有利润和市值基数大，边际弹性下降。</td></tr>
+      </tbody>
+    </table></div>
+    <p class="footnote">* 光库科技区间只有在安捷讯交易完成、并表并形成收入贡献后才适用。A股暂未找到与Corning同等清晰、同时覆盖原始光纤与CPO连接方案的上市映射。</p>
+  </section>
+
+  <section class="wrap" id="us">
+    <div class="head"><h2>美股映射与弹性排序</h2><div class="sub">TSM设为1×基准；排序是CPO主题敏感度，不是公司质量或长期回报排名。</div></div>
+    <div class="tablebox"><table>
+      <thead><tr><th>排序</th><th>公司</th><th>瓶颈映射</th><th>产品/商业证据</th><th>业务利润弹性 βp</th><th>交易弹性 βt</th><th>关键边界</th></tr></thead>
+      <tbody>
+        <tr><td class="rank">1</td><td><span class="name">FormFactor</span><span class="code">NASDAQ · FORM</span></td><td>硅光/CPO晶圆级测试</td><td><span class="status volume">量产测试单元</span></td><td class="profit">+15%～35%</td><td class="beta">3–4.5×</td><td>市值基数较小且直接对应HVM测试；CPO收入未单列。</td></tr>
+        <tr><td class="rank">2</td><td><span class="name">Lumentum</span><span class="code">NASDAQ · LITE</span></td><td>外置激光器、ELS</td><td><span class="status volume">规模放量期</span></td><td class="profit">+12%～30%</td><td class="beta">2–3×</td><td>激光器纯度较高，但市场预期与估值已经扩张。</td></tr>
+        <tr><td class="rank">3</td><td><span class="name">Coherent</span><span class="code">NYSE · COHR</span></td><td>激光器、InP、光引擎</td><td><span class="status volume">规模放量期</span></td><td class="profit">+10%～25%</td><td class="beta">2–3×</td><td>光子产品链更完整，同时整体业务基数更大。</td></tr>
+        <tr><td class="rank">4</td><td><span class="name">Corning</span><span class="code">NYSE · GLW</span></td><td>光纤、FAU与连接器</td><td><span class="status volume">完整CPO方案</span></td><td class="profit">+5%～12%</td><td class="beta">1.5–2×</td><td>瓶颈映射最完整之一，但集团业务高度多元。</td></tr>
+        <tr><td class="rank">5</td><td><span class="name">Keysight</span><span class="code">NYSE · KEYS</span></td><td>高速光电与系统测试</td><td><span class="status volume">成熟工具平台</span></td><td class="profit">+3%～8%</td><td class="beta">1.2–1.6×</td><td>工具覆盖广，CPO只是AI基础设施测试的一部分。</td></tr>
+        <tr><td>基准</td><td><span class="name">台积电</span><span class="code">NYSE · TSM</span></td><td>COUPE平台与先进代工</td><td><span class="status pilot">试点部署期</span></td><td class="profit">&lt;2%</td><td class="beta">1×</td><td>产业地位最确定，但当前CPO对集团利润占比很小。</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="wrap" id="method">
+    <div class="head"><h2>弹性倍数怎么读</h2><div class="sub">将基本面增量与股票交易敏感度分开，避免伪精确。</div></div>
+    <div class="method">
+      <article class="card"><h3>业务利润弹性 βp</h3><p>假设相关CPO瓶颈需求较基准增加100%，估计对公司正常化利润的增量区间。</p><div class="formula">βp ≈ CPO增量收入 × 增量利润率 ÷ 当前正常化利润</div><ul><li>没有单列CPO收入，结果只能是条件式区间。</li><li>利润接近零时百分比失真，罗博特科因此不报伪精确单点。</li><li>并购待并表资产不计作上市公司当前收入。</li></ul></article>
+      <article class="card"><h3>交易弹性 βt</h3><p>以TSM的CPO主题股价敏感度为1×，综合产品纯度、商业阶段、收入基数、市值和估值拥挤度。</p><div class="formula">βt = 相对主题敏感度区间；不是预期收益率</div><ul><li>没有历史回归，不称统计Beta。</li><li>A股和美股只在各自市场内部排序。</li><li>高倍数既放大利好，也放大验证失败和估值回撤。</li></ul></article>
+    </div>
+  </section>
+
+  <section class="wrap" id="risk">
+    <div class="head"><h2>三个最重要的证伪信号</h2><div class="sub">产业方向正确，不代表所有环节都能兑现利润。</div></div>
+    <div class="risks">
+      <article class="risk"><h3>产品停留在认证</h3><ul><li>高功率激光器、FAU或测试设备长期没有小批量转量产。</li><li>公司仍只披露送样、验证或合作开发。</li></ul></article>
+      <article class="risk"><h3>收入不进利润</h3><ul><li>设备验收延迟、毛利率下滑或经营现金流持续恶化。</li><li>订单增长但利润转换明显低于模型。</li></ul></article>
+      <article class="risk"><h3>估值先于兑现</h3><ul><li>市值和PE已交易多年放量，财报却未单列相关收入。</li><li>并购失败、并表推迟或客户路线发生变化。</li></ul></article>
+    </div>
+  </section>
+
+  <section class="wrap" id="sources">
+    <div class="head"><h2>来源、口径与边界</h2><div class="sub"><span class="pill verified">产品映射已核验</span> <span class="pill conditional">弹性为条件式</span> <span class="pill boundary">供应商关系未确认</span></div></div>
+    <div class="sourcebox card">
+      <ol>
+        <li><a href="https://pr.tsmc.com/system/files/newspdf/attachment/49337b40ff139d51d533076cf7a945b30e107e07/2026%20Tech%20Symposium%20(E)_Final_wmn.pdf" target="_blank" rel="noopener noreferrer">TSMC 2026 Technology Symposium：COUPE路线</a></li>
+        <li><a href="https://money.udn.com/money/story/5612/9724326" target="_blank" rel="noopener noreferrer">联合新闻网：激光器、光纤、连接器与测试瓶颈公开讲话</a></li>
+        <li><a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12568498&stockid=688498" target="_blank" rel="noopener noreferrer">源杰科技2026年半年度报告</a>；<a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?CompanyCode=81087658&gather=1&id=12472952" target="_blank" rel="noopener noreferrer">仕佳光子2026年半年度报告</a></li>
+        <li><a href="https://www.jptoe.com/about/newsroom/company-news/230" target="_blank" rel="noopener noreferrer">杰普特FAU/MPO布局</a>；<a href="https://static.cninfo.com.cn/finalpage/2026-01-28/1224955082.PDF" target="_blank" rel="noopener noreferrer">光库科技收购安捷讯问询回复</a></li>
+        <li><a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-19/788b066c-b687-4f11-8ae4-c6197f019370.PDF" target="_blank" rel="noopener noreferrer">天孚通信2026年半年度报告</a>；<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12540182&stockid=300757" target="_blank" rel="noopener noreferrer">罗博特科2026年半年度报告</a></li>
+        <li><a href="https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Demonstrates-Industry-Leading-Technologies-and-Products-for-Scale-Out-Scale-Up-and-Scale-Across-AI-Infrastructure-at-OFC-2026/default.aspx" target="_blank" rel="noopener noreferrer">Lumentum CPO产品</a>；<a href="https://www.coherent.com/news/press-releases/coherent-co-packaged-optics-cpo-technologies-ofc-2026" target="_blank" rel="noopener noreferrer">Coherent CPO技术</a></li>
+        <li><a href="https://www.corning.com/oem-solutions/worldwide/en/home/products-solutions/optical-communication-components/co-packaged-optics.html" target="_blank" rel="noopener noreferrer">Corning CPO连接方案</a>；<a href="https://www.formfactor.com/press-release/formfactor-and-advantest-partner-on-silicon-photonics-wafer-level-test-cell-to-enable-high-volume-manufacturing/" target="_blank" rel="noopener noreferrer">FormFactor/Advantest硅光量产测试</a>；<a href="https://www.keysight.com/ca/en/industries/data-center-networking/ai-infrastructure.html" target="_blank" rel="noopener noreferrer">Keysight AI基础设施测试</a></li>
+      </ol>
+      <p><span class="pill verified">核验日期</span> 2026-08-31。产品阶段采用“技术验证、工程样机、客户认证、试点部署、规模放量、标准化普及”六阶段口径。</p>
+      <p><span class="pill conditional">计算口径</span> βp和βt均为透明情景判断，不是公司指引、卖方一致预期、历史统计Beta或目标价。</p>
+      <p><span class="pill boundary">未核验边界</span> 台积电没有在引用材料中点名上述A股或美股公司为COUPE供应商；原帖列名和本页映射均不能证明直接订单。</p>
+    </div>
+    <p class="footer">本页用于产业链研究与条件式风险比较，不构成自动下单指令、收益承诺或个性化投资建议。</p>
+  </section>
+</main>
+</body>
+</html>
