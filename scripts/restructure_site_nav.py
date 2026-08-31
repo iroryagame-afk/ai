@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NAV_VERSION = "ia-20260828b"
+NAV_VERSION = "ia-20260831a"
 ACTIVE_DYNAMIC = {
     "index.html",
     "a-share-software-deleveraging/index.html",
@@ -41,32 +41,53 @@ ACTIVE_DYNAMIC = {
 }
 RETIRED_REPORT_IDS = {"futu-indicators"}
 
-# Per-page content refresh dates. These are deliberately independent from the
-# navigation build time so a shared-nav release never makes every page look new.
-PAGE_REFRESH_DATES = {
-    "us-market/": "2026-08-28",
-    "macro-fiscal-risk/": "2026-08-27",
-    "macro-event-radar/": "2026-08-23",
-    "us-market/x-consensus/": "2026-08-23",
-    "weekly-event-transmission-2026w35/us/": "2026-08-23",
-    "weekly-event-transmission-2026w35/a-share/": "2026-08-23",
-    "a-share-trend-candidates/": "2026-08-26",
-    "a-share-domestic-compute/": "2026-08-23",
-    "a-share-supply-tightness/": "2026-08-23",
-    "a-share-next-generation/": "2026-08-23",
-    "bingshen/": "2026-08-28",
-    "a-share-software-deleveraging/": "2026-08-26",
-    "a-share-hardware-deleveraging/": "2026-08-26",
-    "a-share-biotech-trend/": "2026-08-26",
-    "a-share-dividend-defense/": "2026-08-26",
-    "us-trend-candidates/": "2026-08-28",
-    "rotation/": "2026-08-28",
-    "rs-thrust/": "2026-08-28",
-    "us-skew/": "2026-08-28",
-    "ai-software-security-shovels/": "2026-08-28",
-    "ai-hardware-shovels/": "2026-08-28",
-    "ai-infrastructure-deleveraging/": "2026-08-28",
-}
+def nested_value(payload: object, field: str) -> object | None:
+    value = payload
+    for part in field.split("."):
+        if not isinstance(value, dict) or part not in value:
+            return None
+        value = value[part]
+    return value
+
+
+def normalized_date(value: object) -> str | None:
+    if not isinstance(value, str):
+        return None
+    match = re.match(r"^(\d{4}-\d{2}-\d{2})", value)
+    return match.group(1) if match else None
+
+
+def page_refresh_dates() -> dict[str, str]:
+    """Read each page's own manifest freshness field instead of a stale map."""
+    manifest = json.loads((ROOT / "docs/csnpk-refresh-manifest.json").read_text(encoding="utf-8"))
+    dates: dict[str, str] = {}
+    for page in manifest["pages"]:
+        freshness = page.get("freshness")
+        if not freshness:
+            continue
+        route = page["route"].strip("/")
+        data_file = ROOT / route / freshness["file"] if route else ROOT / freshness["file"]
+        try:
+            payload = json.loads(data_file.read_text(encoding="utf-8"))
+        except (FileNotFoundError, json.JSONDecodeError):
+            continue
+        date = normalized_date(nested_value(payload, freshness["field"]))
+        if date:
+            dates[f"{route}/" if route else ""] = date
+
+    event_route = current_event_route()
+    for child in ("us", "a-share"):
+        html_file = ROOT / event_route / child / "index.html"
+        match = re.search(
+            r'<meta\s+name=["\']csnpk-refresh-date["\']\s+content=["\'](\d{4}-\d{2}-\d{2})["\']',
+            html_file.read_text(encoding="utf-8"),
+        )
+        if match:
+            dates[f"{event_route}{child}/"] = match.group(1)
+    return dates
+
+
+PAGE_REFRESH_DATES: dict[str, str] = {}
 
 PICKER_REFRESH_DATES = {
     "A股猎龙者信号表": "2026-08-23",
@@ -148,6 +169,9 @@ def group(
 
 
 def nav(relative: str) -> str:
+    global PAGE_REFRESH_DATES
+    if not PAGE_REFRESH_DATES:
+        PAGE_REFRESH_DATES = page_refresh_dates()
     prefix = prefix_for(relative)
     current = current_route(relative)
     home_current = ' aria-current="page"' if current == "" else ""

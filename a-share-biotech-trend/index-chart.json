@@ -1,8 +1,8 @@
 {
   "status": "OPEN_D_VERIFIED_NORMALIZED_INDEX_CHART",
-  "generated_at": "2026-08-26T17:52:12+08:00",
+  "generated_at": "2026-08-28T17:55:58+08:00",
   "base_date": "2026-07-27",
-  "data_date": "2026-08-26",
+  "data_date": "2026-08-28",
   "method": "first close on or after 2026-07-27 = 100; custom line is daily equal weight",
   "note": "行业ETF用于观察医药生物整体交易表现；自选等权篮子覆盖本页创新药、生物制品、CXO、医疗器械、中药与流通标的。",
   "lines": [
@@ -101,6 +101,14 @@
         {
           "date": "2026-08-26",
           "value": 97.626
+        },
+        {
+          "date": "2026-08-27",
+          "value": 98.466
+        },
+        {
+          "date": "2026-08-28",
+          "value": 98.017
         }
       ]
     },
@@ -199,6 +207,14 @@
         {
           "date": "2026-08-26",
           "value": 104.554
+        },
+        {
+          "date": "2026-08-27",
+          "value": 105.545
+        },
+        {
+          "date": "2026-08-28",
+          "value": 103.96
         }
       ]
     },
@@ -319,6 +335,16 @@
         {
           "date": "2026-08-26",
           "value": 111.418,
+          "coverage": 22
+        },
+        {
+          "date": "2026-08-27",
+          "value": 111.568,
+          "coverage": 22
+        },
+        {
+          "date": "2026-08-28",
+          "value": 108.888,
           "coverage": 22
         }
       ]
