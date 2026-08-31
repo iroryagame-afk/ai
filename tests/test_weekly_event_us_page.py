@@ -25,25 +25,18 @@ class WeeklyUsEventPageTest(unittest.TestCase):
         self.assertIn("不是Nasdaq提供的数据", self.html)
         self.assertRegex(self.html, r"待补充核验|暂不量化")
 
-    def test_premarket_section_precedes_after_hours_section(self):
-        premarket = self.html.index("盘前｜按北京时间升序")
-        after_hours = self.html.index("盘后｜按北京时间升序")
-        self.assertLess(premarket, after_hours)
-
-        premarket_html = self.html[premarket:after_hours]
-        after_hours_html = self.html[after_hours:]
-        self.assertNotIn('<span class="tag">盘后</span>', premarket_html)
-        self.assertNotIn('<span class="tag">盘前</span>', after_hours_html)
-
-    def test_each_session_is_sorted_by_beijing_placeholder(self):
-        premarket, after_hours = self.html.split(
-            '<tr class="session-row"><th colspan="6">盘后｜按北京时间升序</th></tr>',
-            maxsplit=1,
+    def test_rows_are_sorted_by_date_then_session(self):
+        self.assertIn("先按日期升序；同一日期内，盘前排在盘后前面", self.html)
+        pattern = re.compile(
+            r'(\d+)月(\d+)日 \d+:\d+<br><span class="tag">(盘前|盘后)</span>'
         )
-        pattern = re.compile(r"(\d+)月(\d+)日 (\d+):(\d+)")
-        for section in (premarket.split("盘前｜按北京时间升序", maxsplit=1)[1], after_hours):
-            times = [tuple(map(int, match.groups())) for match in pattern.finditer(section)]
-            self.assertEqual(times, sorted(times))
+        rows = pattern.findall(self.html)
+        self.assertTrue(rows)
+        keys = [
+            (int(month), int(day), 0 if session == "盘前" else 1)
+            for month, day, session in rows
+        ]
+        self.assertEqual(keys, sorted(keys))
 
 
 if __name__ == "__main__":
