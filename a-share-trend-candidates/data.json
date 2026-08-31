@@ -1,12 +1,12 @@
 {
   "market": "CN",
   "title": "A股趋势候选表",
-  "data_date": "2026-08-28",
-  "generated_at_bj": "2026-08-28T17:48:13+08:00",
-  "coverage_ratio": 0.9949,
+  "data_date": "2026-08-31",
+  "generated_at_bj": "2026-08-31T17:52:49+08:00",
+  "coverage_ratio": 0.993,
   "market_mode": "弱市软门控",
   "earnings_calendar_verified": true,
-  "earnings_source": "2026-08-28T11:01:40+08:00",
+  "earnings_source": "2026-08-31T11:02:19+08:00",
   "matrix": [
     {
       "category": "AI服务器/硬件",
@@ -22,8 +22,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.0,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.1,
           "signal_low": null
         }
       ],
@@ -38,8 +38,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.2,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.0,
           "signal_low": null
         }
       ]
@@ -58,7 +58,7 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 8.0,
           "signal_low": null
         },
@@ -72,8 +72,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.9,
           "signal_low": null
         },
         {
@@ -86,8 +86,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.3,
+          "hour": "等待30分钟确认",
+          "atr_pct": 8.6,
           "signal_low": null
         },
         {
@@ -114,8 +114,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.4,
+          "hour": "等待30分钟确认",
+          "atr_pct": 7.7,
           "signal_low": null
         },
         {
@@ -128,8 +128,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.4,
+          "hour": "等待30分钟确认",
+          "atr_pct": 7.5,
           "signal_low": null
         },
         {
@@ -142,8 +142,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 11.8,
+          "hour": "等待30分钟确认",
+          "atr_pct": 11.9,
           "signal_low": null
         },
         {
@@ -156,8 +156,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.6,
           "signal_low": null
         },
         {
@@ -170,8 +170,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.4,
           "signal_low": null
         }
       ],
@@ -180,15 +180,15 @@
           "ticker": "002281",
           "name": "光迅科技",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "光通信/通信",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.5,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.2,
+          "signal_low": 167.9
         },
         {
           "ticker": "300308",
@@ -200,9 +200,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.3,
-          "signal_low": 856.63
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.2,
+          "signal_low": 830.0
         },
         {
           "ticker": "300502",
@@ -214,9 +214,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.0,
-          "signal_low": 398.99
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.9,
+          "signal_low": 385.0
         },
         {
           "ticker": "600498",
@@ -228,7 +228,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟已确认顶背离",
           "atr_pct": 6.6,
           "signal_low": null
         },
@@ -243,7 +243,7 @@
           ],
           "kind": "反转·状态观察",
           "hour": "等待30分钟确认",
-          "atr_pct": 8.4,
+          "atr_pct": 8.6,
           "signal_low": null
         }
       ]
@@ -252,8 +252,22 @@
       "category": "其他",
       "主升": [
         {
-          "ticker": "002165",
-          "name": "红宝丽",
+          "ticker": "002396",
+          "name": "星网锐捷",
+          "state": "主升",
+          "level": "不追",
+          "subtheme": "其他",
+          "buy_points": [
+            "B1放量突破"
+          ],
+          "kind": "主升·B1放量突破",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.6,
+          "signal_low": 35.5
+        },
+        {
+          "ticker": "300684",
+          "name": "中石科技",
           "state": "主升",
           "level": "不追",
           "subtheme": "其他",
@@ -262,35 +276,7 @@
           ],
           "kind": "主升·状态观察",
           "hour": "30分钟同向改善",
-          "atr_pct": 7.5,
-          "signal_low": null
-        },
-        {
-          "ticker": "301591",
-          "name": "肯特股份",
-          "state": "主升",
-          "level": "不追",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "主升·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 8.1,
-          "signal_low": null
-        },
-        {
-          "ticker": "601899",
-          "name": "紫金矿业",
-          "state": "主升",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "主升·状态观察",
-          "hour": "30分钟同向改善",
-          "atr_pct": 3.9,
+          "atr_pct": 8.9,
           "signal_low": null
         },
         {
@@ -303,7 +289,7 @@
             "状态观察"
           ],
           "kind": "主升·状态观察",
-          "hour": "等待30分钟确认",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.2,
           "signal_low": null
         }
@@ -319,8 +305,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 3.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.7,
           "signal_low": null
         },
         {
@@ -330,12 +316,26 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "C2 KDJ低位拐头"
+            "C3收复EMA21"
           ],
-          "kind": "回调·C2 KDJ低位拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.3,
-          "signal_low": 54.5
+          "kind": "回调·C3收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.8,
+          "signal_low": 52.22
+        },
+        {
+          "ticker": "000811",
+          "name": "冰轮环境",
+          "state": "回调",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "C3收复EMA21"
+          ],
+          "kind": "回调·C3收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.8,
+          "signal_low": 38.82
         },
         {
           "ticker": "000887",
@@ -347,8 +347,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.0,
           "signal_low": null
         },
         {
@@ -358,12 +358,12 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "C2 KDJ低位拐头"
+            "C3收复EMA21"
           ],
-          "kind": "回调·C2 KDJ低位拐头",
-          "hour": "30分钟仍有冲突",
+          "kind": "回调·C3收复EMA21",
+          "hour": "30分钟已确认顶背离",
           "atr_pct": 5.7,
-          "signal_low": 35.88
+          "signal_low": 34.86
         },
         {
           "ticker": "001337",
@@ -375,8 +375,50 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.4,
+          "signal_low": null
+        },
+        {
+          "ticker": "001359",
+          "name": "平安电工",
+          "state": "回调",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "C3收复EMA21"
+          ],
+          "kind": "回调·C3收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.2,
+          "signal_low": 86.33
+        },
+        {
+          "ticker": "002165",
+          "name": "红宝丽",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
           "hour": "等待30分钟确认",
-          "atr_pct": 6.3,
+          "atr_pct": 7.7,
+          "signal_low": null
+        },
+        {
+          "ticker": "002180",
+          "name": "奔图科技",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.1,
           "signal_low": null
         },
         {
@@ -389,9 +431,9 @@
             "C1近8日低位十字星"
           ],
           "kind": "回调·C1近8日低位十字星",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 2.4,
-          "signal_low": 35.01
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 2.2,
+          "signal_low": 34.8
         },
         {
           "ticker": "002428",
@@ -403,8 +445,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.1,
           "signal_low": null
         },
         {
@@ -417,8 +459,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 10.2,
+          "hour": "30分钟同向改善",
+          "atr_pct": 10.0,
           "signal_low": null
         },
         {
@@ -431,7 +473,7 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 7.2,
           "signal_low": null
         },
@@ -445,9 +487,37 @@
             "C2 KDJ低位拐头"
           ],
           "kind": "回调·C2 KDJ低位拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.9,
-          "signal_low": 24.8
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.8,
+          "signal_low": 23.48
+        },
+        {
+          "ticker": "002848",
+          "name": "高斯贝尔",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 3.9,
+          "signal_low": null
+        },
+        {
+          "ticker": "002886",
+          "name": "沃特股份",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "等待30分钟确认",
+          "atr_pct": 5.6,
+          "signal_low": null
         },
         {
           "ticker": "002975",
@@ -459,8 +529,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.6,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.5,
           "signal_low": null
         },
         {
@@ -473,7 +543,7 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 8.0,
           "signal_low": null
         },
@@ -487,8 +557,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.2,
+          "hour": "30分钟仍有冲突",
+          "atr_pct": 6.1,
           "signal_low": null
         },
         {
@@ -501,8 +571,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.3,
           "signal_low": null
         },
         {
@@ -515,8 +585,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.4,
           "signal_low": null
         },
         {
@@ -530,22 +600,22 @@
           ],
           "kind": "回调·状态观察",
           "hour": "30分钟同向改善",
-          "atr_pct": 8.2,
+          "atr_pct": 8.6,
           "signal_low": null
         },
         {
           "ticker": "300209",
           "name": "行云科技",
           "state": "回调",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "C3收复EMA21"
           ],
-          "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 9.0,
-          "signal_low": null
+          "kind": "回调·C3收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.4,
+          "signal_low": 32.3
         },
         {
           "ticker": "300243",
@@ -558,7 +628,7 @@
           ],
           "kind": "回调·状态观察",
           "hour": "30分钟仍有冲突",
-          "atr_pct": 7.9,
+          "atr_pct": 8.1,
           "signal_low": null
         },
         {
@@ -571,22 +641,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.1,
-          "signal_low": null
-        },
-        {
-          "ticker": "300299",
-          "name": "富春股份",
-          "state": "回调",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 3.0,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.2,
           "signal_low": null
         },
         {
@@ -599,8 +655,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.5,
           "signal_low": null
         },
         {
@@ -613,13 +669,13 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.3,
+          "hour": "30分钟仍有冲突",
+          "atr_pct": 6.2,
           "signal_low": null
         },
         {
-          "ticker": "300454",
-          "name": "深信服",
+          "ticker": "300468",
+          "name": "四方精创",
           "state": "回调",
           "level": "可关注",
           "subtheme": "其他",
@@ -628,7 +684,7 @@
           ],
           "kind": "回调·状态观察",
           "hour": "等待30分钟确认",
-          "atr_pct": 5.6,
+          "atr_pct": 5.0,
           "signal_low": null
         },
         {
@@ -641,8 +697,22 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 10.3,
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 10.5,
+          "signal_low": null
+        },
+        {
+          "ticker": "300545",
+          "name": "联得装备",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.3,
           "signal_low": null
         },
         {
@@ -655,7 +725,7 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.0,
           "signal_low": null
         },
@@ -669,22 +739,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.1,
-          "signal_low": null
-        },
-        {
-          "ticker": "300684",
-          "name": "中石科技",
-          "state": "回调",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "回调·状态观察",
           "hour": "等待30分钟确认",
-          "atr_pct": 8.8,
+          "atr_pct": 8.1,
           "signal_low": null
         },
         {
@@ -697,8 +753,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.6,
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 5.5,
           "signal_low": null
         },
         {
@@ -711,9 +767,9 @@
             "C2 KDJ低位拐头"
           ],
           "kind": "回调·C2 KDJ低位拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.4,
-          "signal_low": 43.1
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.1,
+          "signal_low": 42.28
         },
         {
           "ticker": "300811",
@@ -725,8 +781,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.2,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.9,
           "signal_low": null
         },
         {
@@ -739,8 +795,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.6,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.2,
           "signal_low": null
         },
         {
@@ -753,8 +809,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.8,
           "signal_low": null
         },
         {
@@ -767,8 +823,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.4,
+          "hour": "30分钟仍有冲突",
+          "atr_pct": 7.1,
           "signal_low": null
         },
         {
@@ -781,8 +837,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 10.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 10.2,
           "signal_low": null
         },
         {
@@ -795,7 +851,7 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 8.2,
           "signal_low": null
         },
@@ -809,8 +865,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.6,
           "signal_low": null
         },
         {
@@ -824,7 +880,21 @@
           ],
           "kind": "回调·状态观察",
           "hour": "30分钟同向改善",
-          "atr_pct": 5.5,
+          "atr_pct": 5.6,
+          "signal_low": null
+        },
+        {
+          "ticker": "301041",
+          "name": "金百泽",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 4.5,
           "signal_low": null
         },
         {
@@ -834,26 +904,27 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
+            "C1低位十字星",
             "C2 KDJ低位拐头"
           ],
-          "kind": "回调·C2 KDJ低位拐头",
+          "kind": "回调·C1低位十字星 + C2 KDJ低位拐头",
           "hour": "等待30分钟确认",
-          "atr_pct": 12.9,
-          "signal_low": 101.31
+          "atr_pct": 12.8,
+          "signal_low": 96.0
         },
         {
           "ticker": "301080",
           "name": "百普赛斯",
           "state": "回调",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "C2 KDJ低位拐头"
           ],
-          "kind": "回调·状态观察",
+          "kind": "回调·C2 KDJ低位拐头",
           "hour": "等待30分钟确认",
-          "atr_pct": 10.8,
-          "signal_low": null
+          "atr_pct": 11.4,
+          "signal_low": 72.79
         },
         {
           "ticker": "301127",
@@ -866,7 +937,7 @@
           ],
           "kind": "回调·状态观察",
           "hour": "等待30分钟确认",
-          "atr_pct": 6.3,
+          "atr_pct": 7.9,
           "signal_low": null
         },
         {
@@ -876,26 +947,41 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
+            "C3收复EMA21",
             "C2 KDJ低位拐头"
           ],
-          "kind": "回调·C2 KDJ低位拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 8.6,
-          "signal_low": 117.88
+          "kind": "回调·C3收复EMA21 + C2 KDJ低位拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.3,
+          "signal_low": 114.24
         },
         {
           "ticker": "301171",
           "name": "易点天下",
           "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.2,
+          "signal_low": null
+        },
+        {
+          "ticker": "301200",
+          "name": "大族数控",
+          "state": "回调",
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "C2 KDJ低位拐头"
+            "C3收复EMA21"
           ],
-          "kind": "回调·C2 KDJ低位拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.2,
-          "signal_low": 34.66
+          "kind": "回调·C3收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.4,
+          "signal_low": 259.23
         },
         {
           "ticker": "301209",
@@ -907,23 +993,23 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.6,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.5,
           "signal_low": null
         },
         {
           "ticker": "301217",
           "name": "铜冠铜箔",
           "state": "回调",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "C2 KDJ低位拐头"
+            "状态观察"
           ],
-          "kind": "回调·C2 KDJ低位拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.1,
-          "signal_low": 113.01
+          "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.6,
+          "signal_low": null
         },
         {
           "ticker": "301282",
@@ -935,8 +1021,22 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟已确认顶背离",
           "atr_pct": 9.0,
+          "signal_low": null
+        },
+        {
+          "ticker": "301285",
+          "name": "鸿日达",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.6,
           "signal_low": null
         },
         {
@@ -949,8 +1049,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.8,
+          "hour": "等待30分钟确认",
+          "atr_pct": 7.9,
           "signal_low": null
         },
         {
@@ -960,12 +1060,12 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "C3收复EMA21"
           ],
-          "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.8,
-          "signal_low": null
+          "kind": "回调·C3收复EMA21",
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 5.6,
+          "signal_low": 115.95
         },
         {
           "ticker": "301580",
@@ -977,8 +1077,22 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.6,
+          "signal_low": null
+        },
+        {
+          "ticker": "301591",
+          "name": "肯特股份",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "等待30分钟确认",
+          "atr_pct": 8.9,
           "signal_low": null
         },
         {
@@ -991,8 +1105,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.3,
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 5.4,
           "signal_low": null
         },
         {
@@ -1005,8 +1119,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.8,
           "signal_low": null
         },
         {
@@ -1020,7 +1134,7 @@
           ],
           "kind": "回调·状态观察",
           "hour": "等待30分钟确认",
-          "atr_pct": 7.6,
+          "atr_pct": 7.8,
           "signal_low": null
         },
         {
@@ -1033,9 +1147,9 @@
             "C2 KDJ低位拐头"
           ],
           "kind": "回调·C2 KDJ低位拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.0,
-          "signal_low": 51.56
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.8,
+          "signal_low": 49.65
         },
         {
           "ticker": "600330",
@@ -1047,7 +1161,7 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "等待30分钟确认",
           "atr_pct": 7.7,
           "signal_low": null
         },
@@ -1061,8 +1175,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 9.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 9.2,
           "signal_low": null
         },
         {
@@ -1089,8 +1203,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.6,
           "signal_low": null
         },
         {
@@ -1103,8 +1217,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.0,
           "signal_low": null
         },
         {
@@ -1118,7 +1232,7 @@
           ],
           "kind": "回调·状态观察",
           "hour": "30分钟同向改善",
-          "atr_pct": 2.7,
+          "atr_pct": 2.4,
           "signal_low": null
         },
         {
@@ -1131,8 +1245,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.5,
+          "hour": "等待30分钟确认",
+          "atr_pct": 4.7,
           "signal_low": null
         },
         {
@@ -1145,8 +1259,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.8,
           "signal_low": null
         },
         {
@@ -1173,8 +1287,22 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.8,
+          "signal_low": null
+        },
+        {
+          "ticker": "601899",
+          "name": "紫金矿业",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.9,
           "signal_low": null
         },
         {
@@ -1187,7 +1315,7 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 4.4,
           "signal_low": null
         },
@@ -1201,8 +1329,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.9,
           "signal_low": null
         },
         {
@@ -1215,8 +1343,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.5,
           "signal_low": null
         },
         {
@@ -1229,8 +1357,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.1,
           "signal_low": null
         },
         {
@@ -1240,12 +1368,13 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
+            "C3收复EMA21",
             "C2 KDJ低位拐头"
           ],
-          "kind": "回调·C2 KDJ低位拐头",
+          "kind": "回调·C3收复EMA21 + C2 KDJ低位拐头",
           "hour": "30分钟同向改善",
-          "atr_pct": 6.7,
-          "signal_low": 39.33
+          "atr_pct": 6.3,
+          "signal_low": 38.89
         },
         {
           "ticker": "603061",
@@ -1257,8 +1386,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.7,
           "signal_low": null
         },
         {
@@ -1271,8 +1400,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.6,
+          "hour": "等待30分钟确认",
+          "atr_pct": 8.7,
           "signal_low": null
         },
         {
@@ -1285,23 +1414,23 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.0,
           "signal_low": null
         },
         {
           "ticker": "603259",
           "name": "药明康德",
           "state": "回调",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "C2 KDJ低位拐头"
           ],
-          "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.2,
-          "signal_low": null
+          "kind": "回调·C2 KDJ低位拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.3,
+          "signal_low": 150.22
         },
         {
           "ticker": "603588",
@@ -1313,23 +1442,24 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.8,
           "signal_low": null
         },
         {
           "ticker": "603629",
           "name": "利通电子",
           "state": "回调",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
+            "C3收复EMA21",
             "C2 KDJ低位拐头"
           ],
-          "kind": "回调·C2 KDJ低位拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.9,
-          "signal_low": 119.62
+          "kind": "回调·C3收复EMA21 + C2 KDJ低位拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.8,
+          "signal_low": 114.28
         },
         {
           "ticker": "603936",
@@ -1341,8 +1471,22 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.4,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.5,
+          "signal_low": null
+        },
+        {
+          "ticker": "605258",
+          "name": "协和电子",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.6,
           "signal_low": null
         },
         {
@@ -1355,8 +1499,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.0,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.9,
           "signal_low": null
         },
         {
@@ -1369,8 +1513,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.8,
+          "hour": "等待30分钟确认",
+          "atr_pct": 7.7,
           "signal_low": null
         },
         {
@@ -1383,8 +1527,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟已确认顶背离",
-          "atr_pct": 6.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.0,
           "signal_low": null
         },
         {
@@ -1397,13 +1541,13 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.8,
           "signal_low": null
         },
         {
-          "ticker": "688105",
-          "name": "诺唯赞",
+          "ticker": "688082",
+          "name": "盛美上海",
           "state": "回调",
           "level": "可关注",
           "subtheme": "其他",
@@ -1411,9 +1555,23 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 10.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.3,
           "signal_low": null
+        },
+        {
+          "ticker": "688105",
+          "name": "诺唯赞",
+          "state": "回调",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "C1低位十字星"
+          ],
+          "kind": "回调·C1低位十字星",
+          "hour": "等待30分钟确认",
+          "atr_pct": 10.1,
+          "signal_low": 20.3
         },
         {
           "ticker": "688114",
@@ -1425,23 +1583,23 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 10.4,
+          "hour": "等待30分钟确认",
+          "atr_pct": 9.9,
           "signal_low": null
         },
         {
           "ticker": "688120",
           "name": "华海清科",
           "state": "回调",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "C1低位十字星"
+            "状态观察"
           ],
-          "kind": "回调·C1低位十字星",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.5,
-          "signal_low": 260.2
+          "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.3,
+          "signal_low": null
         },
         {
           "ticker": "688138",
@@ -1453,9 +1611,23 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.0,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.9,
           "signal_low": null
+        },
+        {
+          "ticker": "688146",
+          "name": "中船特气",
+          "state": "回调",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "C2 KDJ低位拐头"
+          ],
+          "kind": "回调·C2 KDJ低位拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.0,
+          "signal_low": 240.71
         },
         {
           "ticker": "688183",
@@ -1467,8 +1639,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.5,
           "signal_low": null
         },
         {
@@ -1481,7 +1653,7 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.6,
           "signal_low": null
         },
@@ -1489,15 +1661,15 @@
           "ticker": "688202",
           "name": "美迪西",
           "state": "回调",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "C1低位十字星"
           ],
-          "kind": "回调·状态观察",
+          "kind": "回调·C1低位十字星",
           "hour": "等待30分钟确认",
-          "atr_pct": 8.8,
-          "signal_low": null
+          "atr_pct": 8.6,
+          "signal_low": 93.0
         },
         {
           "ticker": "688206",
@@ -1509,23 +1681,9 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.5,
           "signal_low": null
-        },
-        {
-          "ticker": "688222",
-          "name": "成都先导",
-          "state": "回调",
-          "level": "等待确认",
-          "subtheme": "其他",
-          "buy_points": [
-            "C2 KDJ低位拐头"
-          ],
-          "kind": "回调·C2 KDJ低位拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 8.2,
-          "signal_low": 32.81
         },
         {
           "ticker": "688235",
@@ -1537,8 +1695,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.3,
           "signal_low": null
         },
         {
@@ -1551,22 +1709,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 11.0,
-          "signal_low": null
-        },
-        {
-          "ticker": "688293",
-          "name": "奥浦迈",
-          "state": "回调",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 10.0,
           "signal_low": null
         },
         {
@@ -1579,8 +1723,22 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.5,
+          "signal_low": null
+        },
+        {
+          "ticker": "688352",
+          "name": "颀中科技",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.5,
           "signal_low": null
         },
         {
@@ -1593,7 +1751,7 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.9,
           "signal_low": null
         },
@@ -1607,8 +1765,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 8.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.4,
           "signal_low": null
         },
         {
@@ -1621,8 +1779,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.0,
           "signal_low": null
         },
         {
@@ -1635,22 +1793,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.6,
-          "signal_low": null
-        },
-        {
-          "ticker": "688432",
-          "name": "有研硅",
-          "state": "回调",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "回调·状态观察",
           "hour": "30分钟同向改善",
-          "atr_pct": 9.5,
+          "atr_pct": 7.5,
           "signal_low": null
         },
         {
@@ -1663,9 +1807,23 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.8,
           "signal_low": null
+        },
+        {
+          "ticker": "688475",
+          "name": "萤石网络",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "C2 KDJ低位拐头"
+          ],
+          "kind": "回调·C2 KDJ低位拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 2.3,
+          "signal_low": 28.4
         },
         {
           "ticker": "688485",
@@ -1677,8 +1835,22 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 9.0,
+          "signal_low": null
+        },
+        {
+          "ticker": "688502",
+          "name": "茂莱光学",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.1,
           "signal_low": null
         },
         {
@@ -1691,23 +1863,23 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.6,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.4,
           "signal_low": null
         },
         {
           "ticker": "688530",
           "name": "欧莱新材",
           "state": "回调",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "C3收复EMA21"
           ],
-          "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.4,
-          "signal_low": null
+          "kind": "回调·C3收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.2,
+          "signal_low": 58.88
         },
         {
           "ticker": "688585",
@@ -1720,21 +1892,7 @@
           ],
           "kind": "回调·状态观察",
           "hour": "等待30分钟确认",
-          "atr_pct": 9.9,
-          "signal_low": null
-        },
-        {
-          "ticker": "688596",
-          "name": "正帆科技",
-          "state": "回调",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "回调·状态观察",
-          "hour": "30分钟已确认顶背离",
-          "atr_pct": 8.6,
+          "atr_pct": 9.7,
           "signal_low": null
         },
         {
@@ -1747,8 +1905,22 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 9.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 9.1,
+          "signal_low": null
+        },
+        {
+          "ticker": "688610",
+          "name": "埃科光电",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.0,
           "signal_low": null
         },
         {
@@ -1761,8 +1933,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.4,
           "signal_low": null
         },
         {
@@ -1775,7 +1947,7 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 7.2,
           "signal_low": null
         },
@@ -1789,8 +1961,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 9.0,
+          "hour": "30分钟同向改善",
+          "atr_pct": 9.3,
           "signal_low": null
         },
         {
@@ -1803,27 +1975,13 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.3,
           "signal_low": null
         },
         {
           "ticker": "688702",
           "name": "盛科通信-U",
-          "state": "回调",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.0,
-          "signal_low": null
-        },
-        {
-          "ticker": "688758",
-          "name": "赛分科技",
           "state": "回调",
           "level": "等待确认",
           "subtheme": "其他",
@@ -1831,9 +1989,23 @@
             "C3收复EMA21"
           ],
           "kind": "回调·C3收复EMA21",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.1,
-          "signal_low": 26.63
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.8,
+          "signal_low": 345.0
+        },
+        {
+          "ticker": "688758",
+          "name": "赛分科技",
+          "state": "回调",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "回调·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.0,
+          "signal_low": null
         },
         {
           "ticker": "688807",
@@ -1845,26 +2017,12 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 9.6,
+          "hour": "等待30分钟确认",
+          "atr_pct": 9.5,
           "signal_low": null
         }
       ],
       "反转": [
-        {
-          "ticker": "000032",
-          "name": "深桑达A",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.9,
-          "signal_low": null
-        },
         {
           "ticker": "000657",
           "name": "中钨高新",
@@ -1875,8 +2033,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.6,
           "signal_low": null
         },
         {
@@ -1889,13 +2047,27 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 3.0,
           "signal_low": null
         },
         {
-          "ticker": "000811",
-          "name": "冰轮环境",
+          "ticker": "000815",
+          "name": "美利云",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "D2 KDJ极低拐头"
+          ],
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 7.0,
+          "signal_low": 15.81
+        },
+        {
+          "ticker": "000823",
+          "name": "超声电子",
           "state": "反转",
           "level": "可关注",
           "subtheme": "其他",
@@ -1903,23 +2075,9 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.0,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.0,
           "signal_low": null
-        },
-        {
-          "ticker": "000815",
-          "name": "美利云",
-          "state": "反转",
-          "level": "等待确认",
-          "subtheme": "其他",
-          "buy_points": [
-            "D2 KDJ极低拐头"
-          ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.4,
-          "signal_low": 16.32
         },
         {
           "ticker": "000962",
@@ -1931,13 +2089,13 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.8,
           "signal_low": null
         },
         {
-          "ticker": "001359",
-          "name": "平安电工",
+          "ticker": "001309",
+          "name": "德明利",
           "state": "反转",
           "level": "可关注",
           "subtheme": "其他",
@@ -1945,27 +2103,41 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.4,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.8,
           "signal_low": null
         },
         {
           "ticker": "002008",
           "name": "大族激光",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.1,
-          "signal_low": null
+          "signal_low": 85.73
         },
         {
           "ticker": "002025",
           "name": "航天电器",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.1,
+          "signal_low": 61.18
+        },
+        {
+          "ticker": "002049",
+          "name": "紫光国微",
           "state": "反转",
           "level": "可关注",
           "subtheme": "其他",
@@ -1973,8 +2145,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.2,
+          "hour": "30分钟同向改善",
+          "atr_pct": 2.9,
           "signal_low": null
         },
         {
@@ -1984,12 +2156,13 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 3.4,
-          "signal_low": 36.16
+          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.1,
+          "signal_low": 35.45
         },
         {
           "ticker": "002080",
@@ -2001,8 +2174,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.6,
           "signal_low": null
         },
         {
@@ -2015,7 +2188,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "等待30分钟确认",
           "atr_pct": 4.2,
           "signal_low": null
         },
@@ -2023,15 +2196,15 @@
           "ticker": "002138",
           "name": "顺络电子",
           "state": "反转",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D5收复EMA21"
+            "状态观察"
           ],
-          "kind": "反转·D5收复EMA21",
+          "kind": "反转·状态观察",
           "hour": "30分钟同向改善",
-          "atr_pct": 6.2,
-          "signal_low": 47.91
+          "atr_pct": 5.7,
+          "signal_low": null
         },
         {
           "ticker": "002156",
@@ -2043,7 +2216,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.3,
           "signal_low": null
         },
@@ -2057,22 +2230,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 3.3,
-          "signal_low": null
-        },
-        {
-          "ticker": "002180",
-          "name": "奔图科技",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 4.3,
           "signal_low": null
         },
         {
@@ -2085,8 +2244,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.8,
           "signal_low": null
         },
         {
@@ -2099,8 +2258,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟已确认顶背离",
-          "atr_pct": 5.4,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.5,
           "signal_low": null
         },
         {
@@ -2113,8 +2272,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.2,
           "signal_low": null
         },
         {
@@ -2127,8 +2286,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 4.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.2,
           "signal_low": null
         },
         {
@@ -2141,23 +2300,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.3,
           "signal_low": null
         },
         {
           "ticker": "002409",
           "name": "雅克科技",
           "state": "反转",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D6 MACD反转前置"
+            "状态观察"
           ],
-          "kind": "反转·D6 MACD反转前置",
-          "hour": "30分钟仍有冲突",
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.8,
-          "signal_low": 141.91
+          "signal_low": null
         },
         {
           "ticker": "002430",
@@ -2170,7 +2329,7 @@
           ],
           "kind": "反转·状态观察",
           "hour": "30分钟同向改善",
-          "atr_pct": 2.8,
+          "atr_pct": 2.9,
           "signal_low": null
         },
         {
@@ -2183,8 +2342,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.6,
           "signal_low": null
         },
         {
@@ -2197,7 +2356,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.4,
           "signal_low": null
         },
@@ -2208,13 +2367,12 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D1末端低位十字星",
             "D2 KDJ极低拐头"
           ],
-          "kind": "反转·D1末端低位十字星 + D2 KDJ极低拐头",
+          "kind": "反转·D2 KDJ极低拐头",
           "hour": "等待30分钟确认",
-          "atr_pct": 3.5,
-          "signal_low": 35.63
+          "atr_pct": 3.3,
+          "signal_low": 35.05
         },
         {
           "ticker": "002484",
@@ -2226,8 +2384,22 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.6,
+          "signal_low": null
+        },
+        {
+          "ticker": "002579",
+          "name": "中京电子",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.3,
           "signal_low": null
         },
         {
@@ -2240,8 +2412,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟同向改善",
-          "atr_pct": 1.7,
+          "hour": "等待30分钟确认",
+          "atr_pct": 2.0,
           "signal_low": null
         },
         {
@@ -2254,8 +2426,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.2,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.8,
           "signal_low": null
         },
         {
@@ -2268,7 +2440,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.5,
           "signal_low": null
         },
@@ -2276,15 +2448,16 @@
           "ticker": "002782",
           "name": "可立克",
           "state": "反转",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
+            "D5收复EMA21",
             "D2 KDJ极低拐头"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.5,
-          "signal_low": 15.05
+          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头",
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 4.6,
+          "signal_low": 14.8
         },
         {
           "ticker": "002815",
@@ -2296,7 +2469,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.3,
           "signal_low": null
         },
@@ -2310,37 +2483,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 3.5,
-          "signal_low": null
-        },
-        {
-          "ticker": "002848",
-          "name": "高斯贝尔",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 3.8,
           "signal_low": null
         },
         {
           "ticker": "002850",
           "name": "科达利",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D2 KDJ极低拐头"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.1,
-          "signal_low": null
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.5,
+          "signal_low": 174.28
         },
         {
           "ticker": "002851",
@@ -2352,7 +2511,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.6,
           "signal_low": null
         },
@@ -2366,37 +2525,23 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.4,
-          "signal_low": 65.44
-        },
-        {
-          "ticker": "002886",
-          "name": "沃特股份",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.6,
-          "signal_low": null
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.7,
+          "signal_low": 64.2
         },
         {
           "ticker": "002897",
           "name": "意华股份",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.7,
-          "signal_low": null
+          "signal_low": 55.5
         },
         {
           "ticker": "002916",
@@ -2408,8 +2553,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.4,
           "signal_low": null
         },
         {
@@ -2419,27 +2564,54 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头",
-            "D6 MACD反转前置"
+            "D5收复EMA21"
           ],
-          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.8,
-          "signal_low": 87.99
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.9,
+          "signal_low": 86.45
         },
         {
           "ticker": "002971",
           "name": "和远气体",
           "state": "反转",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D5收复EMA21"
+            "状态观察"
           ],
-          "kind": "反转·D5收复EMA21",
+          "kind": "反转·状态观察",
           "hour": "30分钟同向改善",
-          "atr_pct": 6.0,
-          "signal_low": 43.15
+          "atr_pct": 6.1,
+          "signal_low": null
+        },
+        {
+          "ticker": "003026",
+          "name": "中晶科技",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.0,
+          "signal_low": null
+        },
+        {
+          "ticker": "300053",
+          "name": "航宇微",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 3.8,
+          "signal_low": null
         },
         {
           "ticker": "300054",
@@ -2451,23 +2623,25 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.0,
           "signal_low": null
         },
         {
           "ticker": "300063",
           "name": "天龙集团",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "D5收复EMA21",
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.1,
-          "signal_low": 8.7
+          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.2,
+          "signal_low": 8.46
         },
         {
           "ticker": "300115",
@@ -2476,12 +2650,12 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D2 KDJ极低拐头"
           ],
-          "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.8,
-          "signal_low": null
+          "signal_low": 22.99
         },
         {
           "ticker": "300136",
@@ -2493,37 +2667,37 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.2,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.8,
           "signal_low": null
         },
         {
           "ticker": "300166",
           "name": "东方国信",
           "state": "反转",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.2,
-          "signal_low": null
-        },
-        {
-          "ticker": "300223",
-          "name": "君正股份",
-          "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.0,
+          "signal_low": 12.21
+        },
+        {
+          "ticker": "300223",
+          "name": "君正股份",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D2 KDJ极低拐头"
+          ],
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.9,
-          "signal_low": 135.5
+          "signal_low": 132.0
         },
         {
           "ticker": "300236",
@@ -2535,7 +2709,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.8,
           "signal_low": null
         },
@@ -2549,8 +2723,36 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.4,
+          "signal_low": null
+        },
+        {
+          "ticker": "300299",
+          "name": "富春股份",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "D6 MACD反转前置"
+          ],
+          "kind": "反转·D6 MACD反转前置",
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.0,
+          "signal_low": 5.35
+        },
+        {
+          "ticker": "300327",
+          "name": "中颖电子",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 3.7,
           "signal_low": null
         },
         {
@@ -2563,7 +2765,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 4.4,
           "signal_low": null
         },
@@ -2574,28 +2776,27 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
+            "D5收复EMA21",
             "D2 KDJ极低拐头"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
+          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头",
           "hour": "30分钟同向改善",
-          "atr_pct": 5.2,
-          "signal_low": 22.48
+          "atr_pct": 5.3,
+          "signal_low": 23.08
         },
         {
           "ticker": "300378",
           "name": "鼎捷数智",
           "state": "反转",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D5收复EMA21",
-            "D2 KDJ极低拐头",
-            "D6 MACD反转前置"
+            "状态观察"
           ],
-          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头 + D6 MACD反转前置",
-          "hour": "30分钟同向改善",
-          "atr_pct": 5.5,
-          "signal_low": 35.56
+          "kind": "反转·状态观察",
+          "hour": "等待30分钟确认",
+          "atr_pct": 5.7,
+          "signal_low": null
         },
         {
           "ticker": "300383",
@@ -2604,12 +2805,13 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
+          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
           "atr_pct": 3.7,
-          "signal_low": 12.21
+          "signal_low": 12.05
         },
         {
           "ticker": "300397",
@@ -2621,8 +2823,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 4.6,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.3,
           "signal_low": null
         },
         {
@@ -2632,12 +2834,13 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.9,
-          "signal_low": 112.07
+          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.3,
+          "signal_low": 107.79
         },
         {
           "ticker": "300409",
@@ -2646,12 +2849,12 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D1末端低位十字星"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 3.6,
-          "signal_low": null
+          "kind": "反转·D1末端低位十字星",
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.7,
+          "signal_low": 17.7
         },
         {
           "ticker": "300433",
@@ -2663,8 +2866,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.9,
           "signal_low": null
         },
         {
@@ -2674,16 +2877,17 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
+            "D5收复EMA21",
             "D2 KDJ极低拐头"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
+          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头",
+          "hour": "30分钟同向改善",
           "atr_pct": 4.5,
-          "signal_low": 63.11
+          "signal_low": 61.54
         },
         {
-          "ticker": "300468",
-          "name": "四方精创",
+          "ticker": "300454",
+          "name": "深信服",
           "state": "反转",
           "level": "可关注",
           "subtheme": "其他",
@@ -2691,9 +2895,24 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.6,
           "signal_low": null
+        },
+        {
+          "ticker": "300458",
+          "name": "全志科技",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21",
+            "D2 KDJ极低拐头"
+          ],
+          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头",
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 5.0,
+          "signal_low": 30.78
         },
         {
           "ticker": "300476",
@@ -2705,7 +2924,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.1,
           "signal_low": null
         },
@@ -2719,23 +2938,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 4.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.8,
           "signal_low": null
         },
         {
           "ticker": "300522",
           "name": "世名科技",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.4,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.2,
+          "signal_low": 13.71
         },
         {
           "ticker": "300531",
@@ -2747,22 +2966,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 2.8,
-          "signal_low": null
-        },
-        {
-          "ticker": "300545",
-          "name": "联得装备",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟已确认顶背离",
-          "atr_pct": 5.9,
           "signal_low": null
         },
         {
@@ -2775,9 +2980,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.6,
-          "signal_low": 29.76
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.2,
+          "signal_low": 29.14
         },
         {
           "ticker": "300579",
@@ -2789,9 +2994,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.2,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.3,
           "signal_low": null
+        },
+        {
+          "ticker": "300657",
+          "name": "弘信电子",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.3,
+          "signal_low": 33.8
         },
         {
           "ticker": "300666",
@@ -2803,37 +3022,37 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.4,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.3,
           "signal_low": null
         },
         {
           "ticker": "300720",
           "name": "海川智能",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D2 KDJ极低拐头"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 9.8,
-          "signal_low": null
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 9.9,
+          "signal_low": 68.57
         },
         {
           "ticker": "300726",
           "name": "宏达电子",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.9,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.6,
+          "signal_low": 50.8
         },
         {
           "ticker": "300738",
@@ -2842,12 +3061,12 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D1末端低位十字星"
+            "D2 KDJ极低拐头"
           ],
-          "kind": "反转·D1末端低位十字星",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.5,
-          "signal_low": 20.5
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "等待30分钟确认",
+          "atr_pct": 4.6,
+          "signal_low": 19.81
         },
         {
           "ticker": "300750",
@@ -2856,13 +3075,12 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D1末端低位十字星",
             "D2 KDJ极低拐头"
           ],
-          "kind": "反转·D1末端低位十字星 + D2 KDJ极低拐头",
+          "kind": "反转·D2 KDJ极低拐头",
           "hour": "等待30分钟确认",
-          "atr_pct": 2.5,
-          "signal_low": 364.13
+          "atr_pct": 2.7,
+          "signal_low": 357.3
         },
         {
           "ticker": "300846",
@@ -2871,12 +3089,13 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
+          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.9,
-          "signal_low": 18.45
+          "signal_low": 17.92
         },
         {
           "ticker": "300953",
@@ -2888,23 +3107,23 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.2,
-          "signal_low": 92.02
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.7,
+          "signal_low": 90.41
         },
         {
           "ticker": "300975",
           "name": "商络电子",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.0,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.8,
+          "signal_low": 24.67
         },
         {
           "ticker": "301013",
@@ -2916,23 +3135,23 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.2,
-          "signal_low": 39.0
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.3,
+          "signal_low": 38.13
         },
         {
           "ticker": "301095",
           "name": "广立微",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.8,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.7,
+          "signal_low": 75.87
         },
         {
           "ticker": "301191",
@@ -2944,22 +3163,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.6,
-          "signal_low": null
-        },
-        {
-          "ticker": "301200",
-          "name": "大族数控",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.7,
           "signal_low": null
         },
         {
@@ -2972,8 +3177,22 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.3,
+          "signal_low": null
+        },
+        {
+          "ticker": "301297",
+          "name": "富乐德",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
           "hour": "30分钟仍有冲突",
-          "atr_pct": 5.5,
+          "atr_pct": 5.0,
           "signal_low": null
         },
         {
@@ -2986,8 +3205,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.9,
           "signal_low": null
         },
         {
@@ -3000,13 +3219,27 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 9.6,
-          "signal_low": 103.83
+          "hour": "30分钟同向改善",
+          "atr_pct": 9.3,
+          "signal_low": 99.8
         },
         {
           "ticker": "301338",
           "name": "凯格精机",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.7,
+          "signal_low": 96.0
+        },
+        {
+          "ticker": "301348",
+          "name": "蓝箭电子",
           "state": "反转",
           "level": "可关注",
           "subtheme": "其他",
@@ -3014,8 +3247,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.9,
           "signal_low": null
         },
         {
@@ -3028,7 +3261,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.8,
           "signal_low": null
         },
@@ -3042,8 +3275,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.3,
+          "hour": "等待30分钟确认",
+          "atr_pct": 8.8,
           "signal_low": null
         },
         {
@@ -3053,12 +3286,14 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "D5收复EMA21",
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
+          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.5,
-          "signal_low": 402.74
+          "signal_low": 396.01
         },
         {
           "ticker": "301389",
@@ -3071,7 +3306,7 @@
           ],
           "kind": "反转·状态观察",
           "hour": "30分钟仍有冲突",
-          "atr_pct": 8.5,
+          "atr_pct": 8.7,
           "signal_low": null
         },
         {
@@ -3084,7 +3319,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.7,
           "signal_low": null
         },
@@ -3092,29 +3327,29 @@
           "ticker": "301396",
           "name": "宏景科技",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 9.2,
-          "signal_low": 175.8
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.8,
+          "signal_low": 170.1
         },
         {
           "ticker": "301413",
           "name": "安培龙",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D2 KDJ极低拐头"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.3,
-          "signal_low": null
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.7,
+          "signal_low": 57.95
         },
         {
           "ticker": "301421",
@@ -3126,8 +3361,22 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.6,
+          "signal_low": null
+        },
+        {
+          "ticker": "301458",
+          "name": "钧崴电子",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.4,
           "signal_low": null
         },
         {
@@ -3140,23 +3389,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.1,
           "signal_low": null
         },
         {
           "ticker": "301511",
           "name": "德福科技",
           "state": "反转",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D5收复EMA21"
+            "状态观察"
           ],
-          "kind": "反转·D5收复EMA21",
+          "kind": "反转·状态观察",
           "hour": "30分钟同向改善",
-          "atr_pct": 8.2,
-          "signal_low": 86.0
+          "atr_pct": 8.1,
+          "signal_low": null
         },
         {
           "ticker": "301526",
@@ -3168,9 +3417,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.1,
-          "signal_low": 30.12
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.6,
+          "signal_low": 28.7
         },
         {
           "ticker": "301550",
@@ -3182,8 +3431,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 8.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.4,
           "signal_low": null
         },
         {
@@ -3196,8 +3445,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.6,
           "signal_low": null
         },
         {
@@ -3207,27 +3456,40 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟已确认顶背离",
           "atr_pct": 6.4,
-          "signal_low": null
+          "signal_low": 61.79
+        },
+        {
+          "ticker": "301678",
+          "name": "新恒汇",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.8,
+          "signal_low": 44.01
         },
         {
           "ticker": "600089",
           "name": "特变电工",
           "state": "反转",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D1末端低位十字星",
-            "D2 KDJ极低拐头"
+            "状态观察"
           ],
-          "kind": "反转·D1末端低位十字星 + D2 KDJ极低拐头",
+          "kind": "反转·状态观察",
           "hour": "等待30分钟确认",
           "atr_pct": 2.3,
-          "signal_low": 19.21
+          "signal_low": null
         },
         {
           "ticker": "600105",
@@ -3239,7 +3501,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.3,
           "signal_low": null
         },
@@ -3253,8 +3515,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.0,
+          "hour": "等待30分钟确认",
+          "atr_pct": 4.7,
           "signal_low": null
         },
         {
@@ -3268,23 +3530,36 @@
           ],
           "kind": "反转·状态观察",
           "hour": "等待30分钟确认",
-          "atr_pct": 2.1,
+          "atr_pct": 2.2,
           "signal_low": null
         },
         {
           "ticker": "600160",
           "name": "巨化股份",
           "state": "反转",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D5收复EMA21",
-            "D2 KDJ极低拐头"
+            "状态观察"
           ],
-          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头",
+          "kind": "反转·状态观察",
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 3.3,
+          "signal_low": null
+        },
+        {
+          "ticker": "600171",
+          "name": "上海贝岭",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
           "hour": "30分钟同向改善",
-          "atr_pct": 3.5,
-          "signal_low": 39.83
+          "atr_pct": 2.6,
+          "signal_low": 22.6
         },
         {
           "ticker": "600176",
@@ -3296,23 +3571,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.3,
           "signal_low": null
         },
         {
           "ticker": "600246",
           "name": "万通发展",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.2,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.1,
+          "signal_low": 11.97
         },
         {
           "ticker": "600378",
@@ -3324,8 +3599,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.6,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.8,
           "signal_low": null
         },
         {
@@ -3338,8 +3613,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.4,
           "signal_low": null
         },
         {
@@ -3352,8 +3627,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.6,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.5,
           "signal_low": null
         },
         {
@@ -3366,8 +3641,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.2,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.1,
           "signal_low": null
         },
         {
@@ -3380,8 +3655,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.2,
           "signal_low": null
         },
         {
@@ -3394,7 +3669,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟同向改善",
+          "hour": "30分钟仍有冲突",
           "atr_pct": 2.7,
           "signal_low": null
         },
@@ -3408,9 +3683,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.1,
-          "signal_low": 19.52
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.6,
+          "signal_low": 18.62
         },
         {
           "ticker": "600673",
@@ -3419,12 +3694,27 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
+            "D5收复EMA21",
             "D2 KDJ极低拐头"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
+          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.4,
-          "signal_low": 31.88
+          "signal_low": 31.11
+        },
+        {
+          "ticker": "600864",
+          "name": "哈投股份",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.3,
+          "signal_low": null
         },
         {
           "ticker": "600888",
@@ -3436,7 +3726,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 3.8,
           "signal_low": null
         },
@@ -3447,13 +3737,26 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D1末端低位十字星",
             "D2 KDJ极低拐头"
           ],
-          "kind": "反转·D1末端低位十字星 + D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 3.3,
-          "signal_low": 30.43
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.4,
+          "signal_low": 29.8
+        },
+        {
+          "ticker": "601066",
+          "name": "中信建投",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 2.2,
+          "signal_low": null
         },
         {
           "ticker": "601100",
@@ -3465,8 +3768,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 4.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.4,
           "signal_low": null
         },
         {
@@ -3476,13 +3779,12 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头",
-            "D6 MACD反转前置"
+            "状态观察"
           ],
-          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
-          "hour": "30分钟同向改善",
-          "atr_pct": 2.4,
-          "signal_low": 50.31
+          "kind": "反转·状态观察",
+          "hour": "等待30分钟确认",
+          "atr_pct": 2.5,
+          "signal_low": null
         },
         {
           "ticker": "601133",
@@ -3494,8 +3796,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.7,
           "signal_low": null
         },
         {
@@ -3508,23 +3810,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.7,
           "signal_low": null
         },
         {
           "ticker": "603019",
           "name": "中科曙光",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
           "atr_pct": 3.2,
-          "signal_low": null
+          "signal_low": 84.28
         },
         {
           "ticker": "603045",
@@ -3536,8 +3838,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟同向改善",
-          "atr_pct": 5.4,
+          "hour": "等待30分钟确认",
+          "atr_pct": 6.1,
           "signal_low": null
         },
         {
@@ -3550,8 +3852,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.5,
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 6.2,
           "signal_low": null
         },
         {
@@ -3564,8 +3866,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.7,
           "signal_low": null
         },
         {
@@ -3578,9 +3880,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.0,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.1,
           "signal_low": null
+        },
+        {
+          "ticker": "603160",
+          "name": "汇顶科技",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 3.0,
+          "signal_low": 48.29
         },
         {
           "ticker": "603163",
@@ -3592,8 +3908,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 4.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.0,
           "signal_low": null
         },
         {
@@ -3603,13 +3919,13 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D5收复EMA21",
-            "D2 KDJ极低拐头"
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
           ],
-          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头",
-          "hour": "30分钟同向改善",
-          "atr_pct": 4.8,
-          "signal_low": 40.91
+          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "等待30分钟确认",
+          "atr_pct": 5.1,
+          "signal_low": 42.09
         },
         {
           "ticker": "603256",
@@ -3618,12 +3934,12 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.5,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 6.4,
+          "signal_low": 133.34
         },
         {
           "ticker": "603267",
@@ -3635,8 +3951,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 4.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.9,
           "signal_low": null
         },
         {
@@ -3649,8 +3965,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.5,
           "signal_low": null
         },
         {
@@ -3663,23 +3979,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.3,
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 5.7,
           "signal_low": null
         },
         {
           "ticker": "603379",
           "name": "三美股份",
           "state": "反转",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "状态观察"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
+          "kind": "反转·状态观察",
           "hour": "30分钟同向改善",
-          "atr_pct": 3.7,
-          "signal_low": 59.16
+          "atr_pct": 3.8,
+          "signal_low": null
         },
         {
           "ticker": "603618",
@@ -3691,8 +4007,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.1,
           "signal_low": null
         },
         {
@@ -3705,9 +4021,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.1,
-          "signal_low": 62.13
+          "signal_low": 61.02
         },
         {
           "ticker": "603663",
@@ -3719,7 +4035,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.8,
           "signal_low": null
         },
@@ -3733,8 +4049,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.2,
           "signal_low": null
         },
         {
@@ -3747,8 +4063,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 4.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.0,
           "signal_low": null
         },
         {
@@ -3758,13 +4074,12 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头",
-            "D6 MACD反转前置"
+            "D5收复EMA21"
           ],
-          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
+          "kind": "反转·D5收复EMA21",
           "hour": "30分钟同向改善",
-          "atr_pct": 4.2,
-          "signal_low": 47.56
+          "atr_pct": 4.1,
+          "signal_low": 47.88
         },
         {
           "ticker": "603773",
@@ -3776,8 +4091,38 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.9,
+          "signal_low": null
+        },
+        {
+          "ticker": "603893",
+          "name": "瑞芯微",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21",
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
+          ],
+          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.6,
+          "signal_low": 188.0
+        },
+        {
+          "ticker": "603920",
+          "name": "世运电路",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.6,
           "signal_low": null
         },
         {
@@ -3790,7 +4135,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.5,
           "signal_low": null
         },
@@ -3804,8 +4149,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.6,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.5,
           "signal_low": null
         },
         {
@@ -3818,8 +4163,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.4,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.5,
           "signal_low": null
         },
         {
@@ -3832,23 +4177,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.6,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.5,
           "signal_low": null
         },
         {
           "ticker": "603989",
           "name": "艾华集团",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "D5收复EMA21"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.3,
-          "signal_low": 28.29
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.9,
+          "signal_low": 27.88
         },
         {
           "ticker": "603993",
@@ -3860,51 +4205,37 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟已确认顶背离",
-          "atr_pct": 4.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.0,
           "signal_low": null
         },
         {
           "ticker": "605020",
           "name": "永和股份",
           "state": "反转",
-          "level": "等待确认",
-          "subtheme": "其他",
-          "buy_points": [
-            "D2 KDJ极低拐头"
-          ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 3.8,
-          "signal_low": 33.85
-        },
-        {
-          "ticker": "605258",
-          "name": "协和电子",
-          "state": "反转",
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.4,
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.8,
           "signal_low": null
         },
         {
           "ticker": "688001",
           "name": "华兴源创",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.5,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.3,
+          "signal_low": 51.46
         },
         {
           "ticker": "688006",
@@ -3916,8 +4247,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.2,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.4,
           "signal_low": null
         },
         {
@@ -3930,8 +4261,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.8,
           "signal_low": null
         },
         {
@@ -3944,23 +4275,23 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.9,
-          "signal_low": 291.0
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.0,
+          "signal_low": 284.4
         },
         {
           "ticker": "688020",
           "name": "方邦股份",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 9.5,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 9.8,
+          "signal_low": 119.31
         },
         {
           "ticker": "688031",
@@ -3969,12 +4300,13 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
+            "D5收复EMA21",
             "D2 KDJ极低拐头"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.7,
-          "signal_low": 99.65
+          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.8,
+          "signal_low": 95.0
         },
         {
           "ticker": "688041",
@@ -3987,9 +4319,23 @@
             "D6 MACD反转前置"
           ],
           "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.1,
-          "signal_low": 244.0
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.2,
+          "signal_low": 238.33
+        },
+        {
+          "ticker": "688047",
+          "name": "龙芯中科",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.6,
+          "signal_low": null
         },
         {
           "ticker": "688048",
@@ -4001,37 +4347,37 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.9,
           "signal_low": null
+        },
+        {
+          "ticker": "688049",
+          "name": "炬芯科技",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.3,
+          "signal_low": 39.84
         },
         {
           "ticker": "688056",
           "name": "莱伯泰科",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.4,
-          "signal_low": null
-        },
-        {
-          "ticker": "688082",
-          "name": "盛美上海",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.4,
-          "signal_low": null
+          "signal_low": 41.2
         },
         {
           "ticker": "688106",
@@ -4043,7 +4389,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 4.9,
           "signal_low": null
         },
@@ -4051,15 +4397,15 @@
           "ticker": "688110",
           "name": "东芯股份",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.7,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.8,
+          "signal_low": 111.47
         },
         {
           "ticker": "688111",
@@ -4068,26 +4414,28 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "D5收复EMA21",
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
+          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
           "atr_pct": 3.8,
-          "signal_low": 241.0
+          "signal_low": 237.0
         },
         {
           "ticker": "688123",
           "name": "聚辰股份",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.9,
-          "signal_low": null
+          "signal_low": 132.0
         },
         {
           "ticker": "688126",
@@ -4099,7 +4447,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.4,
           "signal_low": null
         },
@@ -4113,23 +4461,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 9.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.8,
           "signal_low": null
         },
         {
-          "ticker": "688146",
-          "name": "中船特气",
+          "ticker": "688153",
+          "name": "唯捷创芯",
           "state": "反转",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "状态观察"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.4,
-          "signal_low": 249.1
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.4,
+          "signal_low": null
         },
         {
           "ticker": "688158",
@@ -4141,9 +4489,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.0,
-          "signal_low": 29.95
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.7,
+          "signal_low": 29.14
         },
         {
           "ticker": "688160",
@@ -4152,26 +4500,12 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "D6 MACD反转前置"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.3,
-          "signal_low": 97.83
-        },
-        {
-          "ticker": "688172",
-          "name": "燕东微",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.3,
-          "signal_low": null
+          "kind": "反转·D6 MACD反转前置",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.8,
+          "signal_low": 96.5
         },
         {
           "ticker": "688181",
@@ -4183,9 +4517,37 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.6,
           "signal_low": null
+        },
+        {
+          "ticker": "688220",
+          "name": "翱捷科技-U",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.5,
+          "signal_low": 96.78
+        },
+        {
+          "ticker": "688222",
+          "name": "成都先导",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D2 KDJ极低拐头"
+          ],
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.1,
+          "signal_low": 30.9
         },
         {
           "ticker": "688229",
@@ -4194,12 +4556,13 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
+          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟已确认顶背离",
           "atr_pct": 5.2,
-          "signal_low": 64.77
+          "signal_low": 61.88
         },
         {
           "ticker": "688233",
@@ -4211,9 +4574,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.1,
-          "signal_low": 103.66
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.9,
+          "signal_low": 98.7
         },
         {
           "ticker": "688234",
@@ -4225,9 +4588,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 7.2,
-          "signal_low": 105.5
+          "signal_low": 102.1
         },
         {
           "ticker": "688249",
@@ -4239,27 +4602,27 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.9,
           "signal_low": null
         },
         {
           "ticker": "688256",
           "name": "寒武纪",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.0,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.9,
+          "signal_low": 1015.0
         },
         {
-          "ticker": "688268",
-          "name": "华特气体",
+          "ticker": "688262",
+          "name": "国芯科技",
           "state": "反转",
           "level": "可关注",
           "subtheme": "其他",
@@ -4267,9 +4630,37 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.8,
           "signal_low": null
+        },
+        {
+          "ticker": "688268",
+          "name": "华特气体",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.2,
+          "signal_low": 137.09
+        },
+        {
+          "ticker": "688293",
+          "name": "奥浦迈",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D2 KDJ极低拐头"
+          ],
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "等待30分钟确认",
+          "atr_pct": 8.2,
+          "signal_low": 51.0
         },
         {
           "ticker": "688322",
@@ -4278,16 +4669,17 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.8,
-          "signal_low": 95.06
+          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.3,
+          "signal_low": 93.0
         },
         {
-          "ticker": "688347",
-          "name": "华虹宏力",
+          "ticker": "688325",
+          "name": "赛微微电",
           "state": "反转",
           "level": "可关注",
           "subtheme": "其他",
@@ -4296,8 +4688,22 @@
           ],
           "kind": "反转·状态观察",
           "hour": "30分钟仍有冲突",
-          "atr_pct": 7.1,
+          "atr_pct": 5.1,
           "signal_low": null
+        },
+        {
+          "ticker": "688347",
+          "name": "华虹宏力",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.0,
+          "signal_low": 238.62
         },
         {
           "ticker": "688372",
@@ -4306,12 +4712,12 @@
           "level": "可关注",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟已确认顶背离",
           "atr_pct": 5.9,
-          "signal_low": null
+          "signal_low": 117.11
         },
         {
           "ticker": "688376",
@@ -4323,8 +4729,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.0,
           "signal_low": null
         },
         {
@@ -4338,26 +4744,12 @@
           ],
           "kind": "反转·状态观察",
           "hour": "30分钟仍有冲突",
-          "atr_pct": 6.4,
+          "atr_pct": 6.5,
           "signal_low": null
         },
         {
           "ticker": "688401",
           "name": "路维光电",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.7,
-          "signal_low": null
-        },
-        {
-          "ticker": "688403",
-          "name": "汇成股份",
           "state": "反转",
           "level": "等待确认",
           "subtheme": "其他",
@@ -4365,27 +4757,41 @@
             "D5收复EMA21"
           ],
           "kind": "反转·D5收复EMA21",
-          "hour": "等待30分钟确认",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.4,
+          "signal_low": 66.1
+        },
+        {
+          "ticker": "688403",
+          "name": "汇成股份",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
           "atr_pct": 6.7,
-          "signal_low": 23.63
+          "signal_low": null
         },
         {
           "ticker": "688416",
           "name": "恒烁股份",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.1,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.0,
+          "signal_low": 73.17
         },
         {
-          "ticker": "688475",
-          "name": "萤石网络",
+          "ticker": "688484",
+          "name": "南芯科技",
           "state": "反转",
           "level": "可关注",
           "subtheme": "其他",
@@ -4393,22 +4799,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 2.3,
-          "signal_low": null
-        },
-        {
-          "ticker": "688502",
-          "name": "茂莱光学",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.8,
           "signal_low": null
         },
         {
@@ -4421,8 +4813,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 9.2,
+          "hour": "等待30分钟确认",
+          "atr_pct": 9.3,
           "signal_low": null
         },
         {
@@ -4435,9 +4827,23 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.9,
-          "signal_low": 151.06
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.5,
+          "signal_low": 145.01
+        },
+        {
+          "ticker": "688515",
+          "name": "裕太微-U",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.5,
+          "signal_low": 144.54
         },
         {
           "ticker": "688521",
@@ -4446,12 +4852,12 @@
           "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "D5收复EMA21"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.6,
-          "signal_low": 186.25
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.5,
+          "signal_low": 180.56
         },
         {
           "ticker": "688525",
@@ -4463,9 +4869,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.3,
           "signal_low": null
+        },
+        {
+          "ticker": "688535",
+          "name": "华海诚科",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.7,
+          "signal_low": 98.92
         },
         {
           "ticker": "688545",
@@ -4477,9 +4897,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.5,
-          "signal_low": 77.0
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.2,
+          "signal_low": 74.91
         },
         {
           "ticker": "688548",
@@ -4491,8 +4911,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 7.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.0,
           "signal_low": null
         },
         {
@@ -4505,23 +4925,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 8.8,
-          "signal_low": 24.5
-        },
-        {
-          "ticker": "688556",
-          "name": "高测股份",
-          "state": "反转",
-          "level": "等待确认",
-          "subtheme": "其他",
-          "buy_points": [
-            "D1末端低位十字星"
-          ],
-          "kind": "反转·D1末端低位十字星",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.2,
-          "signal_low": 7.83
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.6,
+          "signal_low": 23.5
         },
         {
           "ticker": "688584",
@@ -4533,13 +4939,13 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.6,
           "signal_low": null
         },
         {
-          "ticker": "688610",
-          "name": "埃科光电",
+          "ticker": "688591",
+          "name": "泰凌微",
           "state": "反转",
           "level": "可关注",
           "subtheme": "其他",
@@ -4547,13 +4953,28 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 8.2,
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 4.0,
           "signal_low": null
         },
         {
           "ticker": "688615",
           "name": "合合信息",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
+          ],
+          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.3,
+          "signal_low": 93.61
+        },
+        {
+          "ticker": "688629",
+          "name": "华丰科技",
           "state": "反转",
           "level": "等待确认",
           "subtheme": "其他",
@@ -4561,23 +4982,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.6,
-          "signal_low": 94.6
-        },
-        {
-          "ticker": "688629",
-          "name": "华丰科技",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "其他",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.8,
-          "signal_low": null
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.3,
+          "signal_low": 116.0
         },
         {
           "ticker": "688652",
@@ -4589,8 +4996,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.1,
           "signal_low": null
         },
         {
@@ -4603,8 +5010,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.9,
           "signal_low": null
         },
         {
@@ -4617,8 +5024,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 9.1,
+          "hour": "30分钟同向改善",
+          "atr_pct": 9.2,
           "signal_low": null
         },
         {
@@ -4631,8 +5038,22 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟已确认顶背离",
           "atr_pct": 7.9,
+          "signal_low": null
+        },
+        {
+          "ticker": "688691",
+          "name": "灿芯股份",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "其他",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.0,
           "signal_low": null
         },
         {
@@ -4645,9 +5066,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.5,
-          "signal_low": 215.31
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.3,
+          "signal_low": 209.38
         },
         {
           "ticker": "688700",
@@ -4659,7 +5080,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.8,
           "signal_low": null
         },
@@ -4673,8 +5094,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.4,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.1,
           "signal_low": null
         },
         {
@@ -4687,8 +5108,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.8,
           "signal_low": null
         },
         {
@@ -4701,52 +5122,51 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.7,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.8,
           "signal_low": null
         },
         {
           "ticker": "688766",
           "name": "普冉股份",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D2 KDJ极低拐头"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 9.4,
-          "signal_low": null
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 9.1,
+          "signal_low": 384.03
         },
         {
           "ticker": "688777",
           "name": "中控技术",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "D2 KDJ极低拐头",
-            "D6 MACD反转前置"
+            "D5收复EMA21"
           ],
-          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.8,
-          "signal_low": 91.61
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.2,
+          "signal_low": 84.1
         },
         {
           "ticker": "688783",
           "name": "西安奕材-U",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D2 KDJ极低拐头"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.1,
-          "signal_low": null
+          "kind": "反转·D2 KDJ极低拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.0,
+          "signal_low": 29.58
         },
         {
           "ticker": "688785",
@@ -4758,8 +5178,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.4,
           "signal_low": null
         },
         {
@@ -4772,9 +5192,24 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.7,
-          "signal_low": 93.74
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.8,
+          "signal_low": 91.25
+        },
+        {
+          "ticker": "688795",
+          "name": "摩尔线程-U",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
+          ],
+          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.3,
+          "signal_low": 520.03
         },
         {
           "ticker": "688796",
@@ -4786,9 +5221,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 8.8,
-          "signal_low": 116.23
+          "hour": "30分钟同向改善",
+          "atr_pct": 8.2,
+          "signal_low": 113.91
         },
         {
           "ticker": "688800",
@@ -4800,37 +5235,52 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.5,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.4,
           "signal_low": null
+        },
+        {
+          "ticker": "688802",
+          "name": "沐曦股份-U",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "其他",
+          "buy_points": [
+            "D2 KDJ极低拐头",
+            "D6 MACD反转前置"
+          ],
+          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.2,
+          "signal_low": 670.0
         },
         {
           "ticker": "688809",
           "name": "强一股份",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.4,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.5,
+          "signal_low": 426.0
         },
         {
           "ticker": "688981",
           "name": "中芯国际",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "其他",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 3.9,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.0,
+          "signal_low": 122.75
         }
       ]
     },
@@ -4842,16 +5292,15 @@
           "ticker": "301015",
           "name": "百洋医药",
           "state": "回调",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "医药/医疗",
           "buy_points": [
-            "C2 KDJ低位拐头",
-            "C3收复EMA21"
+            "C2 KDJ低位拐头"
           ],
-          "kind": "回调·C2 KDJ低位拐头 + C3收复EMA21",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.7,
-          "signal_low": 24.24
+          "kind": "回调·C2 KDJ低位拐头",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.0,
+          "signal_low": 23.67
         }
       ],
       "反转": [
@@ -4866,22 +5315,23 @@
           ],
           "kind": "反转·状态观察",
           "hour": "等待30分钟确认",
-          "atr_pct": 5.6,
+          "atr_pct": 5.7,
           "signal_low": null
         },
         {
           "ticker": "002432",
           "name": "九安医疗",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "医药/医疗",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21",
+            "D6 MACD反转前置"
           ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.5,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21 + D6 MACD反转前置",
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.4,
+          "signal_low": 66.62
         },
         {
           "ticker": "002603",
@@ -4893,8 +5343,22 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟同向改善",
+          "hour": "30分钟已确认顶背离",
           "atr_pct": 3.6,
+          "signal_low": null
+        },
+        {
+          "ticker": "002737",
+          "name": "葵花药业",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "医药/医疗",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "等待30分钟确认",
+          "atr_pct": 3.9,
           "signal_low": null
         },
         {
@@ -4907,9 +5371,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 9.5,
-          "signal_low": 30.88
+          "hour": "等待30分钟确认",
+          "atr_pct": 8.5,
+          "signal_low": 29.9
         },
         {
           "ticker": "600276",
@@ -4918,12 +5382,12 @@
           "level": "可关注",
           "subtheme": "医药/医疗",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "状态观察"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
+          "kind": "反转·状态观察",
           "hour": "等待30分钟确认",
           "atr_pct": 3.2,
-          "signal_low": 47.1
+          "signal_low": null
         },
         {
           "ticker": "603716",
@@ -4936,24 +5400,23 @@
           ],
           "kind": "反转·D6 MACD反转前置",
           "hour": "30分钟同向改善",
-          "atr_pct": 6.4,
-          "signal_low": 16.1
+          "atr_pct": 6.1,
+          "signal_low": 16.44
         },
         {
           "ticker": "603983",
           "name": "丸美生物",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "医药/医疗",
           "buy_points": [
-            "D5收复EMA21",
             "D2 KDJ极低拐头",
             "D6 MACD反转前置"
           ],
-          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头 + D6 MACD反转前置",
+          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
           "hour": "30分钟同向改善",
-          "atr_pct": 4.5,
-          "signal_low": 26.89
+          "atr_pct": 4.4,
+          "signal_low": 27.22
         },
         {
           "ticker": "688065",
@@ -4962,12 +5425,12 @@
           "level": "可关注",
           "subtheme": "医药/医疗",
           "buy_points": [
-            "D2 KDJ极低拐头"
+            "状态观察"
           ],
-          "kind": "反转·D2 KDJ极低拐头",
+          "kind": "反转·状态观察",
           "hour": "等待30分钟确认",
-          "atr_pct": 3.3,
-          "signal_low": 43.15
+          "atr_pct": 3.1,
+          "signal_low": null
         },
         {
           "ticker": "688382",
@@ -4980,7 +5443,7 @@
           ],
           "kind": "反转·状态观察",
           "hour": "30分钟同向改善",
-          "atr_pct": 7.7,
+          "atr_pct": 7.3,
           "signal_low": null
         }
       ]
@@ -4999,8 +5462,8 @@
             "状态观察"
           ],
           "kind": "回调·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.8,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.7,
           "signal_low": null
         }
       ],
@@ -5015,7 +5478,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 4.6,
           "signal_low": null
         },
@@ -5029,13 +5492,27 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.2,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.1,
           "signal_low": null
         },
         {
           "ticker": "300398",
           "name": "飞凯材料",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "半导体/设备",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.1,
+          "signal_low": 34.45
+        },
+        {
+          "ticker": "300456",
+          "name": "赛微电子",
           "state": "反转",
           "level": "可关注",
           "subtheme": "半导体/设备",
@@ -5044,7 +5521,7 @@
           ],
           "kind": "反转·状态观察",
           "hour": "30分钟仍有冲突",
-          "atr_pct": 5.2,
+          "atr_pct": 5.6,
           "signal_low": null
         },
         {
@@ -5057,8 +5534,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 4.4,
+          "hour": "30分钟同向改善",
+          "atr_pct": 4.2,
           "signal_low": null
         },
         {
@@ -5071,8 +5548,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.7,
+          "hour": "30分钟仍有冲突",
+          "atr_pct": 5.9,
           "signal_low": null
         },
         {
@@ -5085,7 +5562,7 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.6,
           "signal_low": null
         },
@@ -5099,22 +5576,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.0,
-          "signal_low": null
-        },
-        {
-          "ticker": "603690",
-          "name": "至纯科技",
-          "state": "反转",
-          "level": "可关注",
-          "subtheme": "半导体/设备",
-          "buy_points": [
-            "状态观察"
-          ],
-          "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.1,
           "signal_low": null
         },
         {
@@ -5127,8 +5590,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.6,
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.5,
           "signal_low": null
         },
         {
@@ -5141,9 +5604,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
+          "hour": "30分钟同向改善",
           "atr_pct": 5.9,
-          "signal_low": 43.17
+          "signal_low": 41.72
         },
         {
           "ticker": "688019",
@@ -5155,8 +5618,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.4,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.6,
           "signal_low": null
         },
         {
@@ -5169,9 +5632,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.4,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.3,
           "signal_low": null
+        },
+        {
+          "ticker": "688261",
+          "name": "东微半导",
+          "state": "反转",
+          "level": "等待确认",
+          "subtheme": "半导体/设备",
+          "buy_points": [
+            "D5收复EMA21"
+          ],
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.5,
+          "signal_low": 69.12
         },
         {
           "ticker": "688362",
@@ -5183,23 +5660,23 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 7.4,
+          "hour": "30分钟同向改善",
+          "atr_pct": 7.2,
           "signal_low": null
         },
         {
           "ticker": "688396",
           "name": "华润微",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "半导体/设备",
           "buy_points": [
-            "状态观察"
+            "D5收复EMA21"
           ],
-          "kind": "反转·状态观察",
-          "hour": "等待30分钟确认",
-          "atr_pct": 5.4,
-          "signal_low": null
+          "kind": "反转·D5收复EMA21",
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.5,
+          "signal_low": 59.05
         },
         {
           "ticker": "688605",
@@ -5211,8 +5688,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.3,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.2,
           "signal_low": null
         }
       ]
@@ -5232,9 +5709,9 @@
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 6.6,
-          "signal_low": 67.03
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.2,
+          "signal_low": 65.46
         },
         {
           "ticker": "688097",
@@ -5246,8 +5723,8 @@
             "状态观察"
           ],
           "kind": "反转·状态观察",
-          "hour": "30分钟仍有冲突",
-          "atr_pct": 5.9,
+          "hour": "30分钟同向改善",
+          "atr_pct": 5.8,
           "signal_low": null
         }
       ]
@@ -5283,22 +5760,22 @@
           ],
           "kind": "反转·D2 KDJ极低拐头",
           "hour": "等待30分钟确认",
-          "atr_pct": 7.2,
-          "signal_low": 43.22
+          "atr_pct": 7.1,
+          "signal_low": 42.01
         },
         {
           "ticker": "300274",
           "name": "阳光电源",
           "state": "反转",
-          "level": "可关注",
+          "level": "等待确认",
           "subtheme": "电力/新能源",
           "buy_points": [
-            "D1末端低位十字星"
+            "D2 KDJ极低拐头"
           ],
-          "kind": "反转·D1末端低位十字星",
+          "kind": "反转·D2 KDJ极低拐头",
           "hour": "等待30分钟确认",
-          "atr_pct": 6.1,
-          "signal_low": 96.1
+          "atr_pct": 6.4,
+          "signal_low": 89.5
         }
       ]
     },
@@ -5311,15 +5788,15 @@
           "ticker": "603881",
           "name": "数据港",
           "state": "反转",
-          "level": "等待确认",
+          "level": "可关注",
           "subtheme": "软件/网安",
           "buy_points": [
             "D2 KDJ极低拐头"
           ],
           "kind": "反转·D2 KDJ极低拐头",
-          "hour": "等待30分钟确认",
-          "atr_pct": 6.9,
-          "signal_low": 25.1
+          "hour": "30分钟同向改善",
+          "atr_pct": 6.7,
+          "signal_low": 24.5
         },
         {
           "ticker": "688095",
@@ -5328,14 +5805,76 @@
           "level": "等待确认",
           "subtheme": "软件/网安",
           "buy_points": [
-            "D5收复EMA21",
             "D2 KDJ极低拐头",
             "D6 MACD反转前置"
           ],
-          "kind": "反转·D5收复EMA21 + D2 KDJ极低拐头 + D6 MACD反转前置",
-          "hour": "30分钟同向改善",
+          "kind": "反转·D2 KDJ极低拐头 + D6 MACD反转前置",
+          "hour": "等待30分钟确认",
           "atr_pct": 5.0,
-          "signal_low": 59.66
+          "signal_low": 60.06
+        }
+      ]
+    },
+    {
+      "category": "金融",
+      "主升": [],
+      "回调": [],
+      "反转": [
+        {
+          "ticker": "002670",
+          "name": "国盛证券",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "金融",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.0,
+          "signal_low": null
+        },
+        {
+          "ticker": "002673",
+          "name": "西部证券",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "金融",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟已确认顶背离",
+          "atr_pct": 1.8,
+          "signal_low": null
+        },
+        {
+          "ticker": "002736",
+          "name": "国信证券",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "金融",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "等待30分钟确认",
+          "atr_pct": 1.3,
+          "signal_low": null
+        },
+        {
+          "ticker": "002945",
+          "name": "华林证券",
+          "state": "反转",
+          "level": "可关注",
+          "subtheme": "金融",
+          "buy_points": [
+            "状态观察"
+          ],
+          "kind": "反转·状态观察",
+          "hour": "30分钟同向改善",
+          "atr_pct": 3.0,
+          "signal_low": null
         }
       ]
     }
