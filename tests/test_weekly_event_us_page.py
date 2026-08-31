@@ -22,8 +22,31 @@ class WeeklyUsEventPageTest(unittest.TestCase):
         self.assertIn("分析师预测样本数", self.html)
         self.assertIn("参与EPS共识的预测数量", self.html)
         self.assertIn("Beat概率（条件式研究）", self.html)
-        self.assertIn("不是Nasdaq提供的数据", self.html)
-        self.assertRegex(self.html, r"待补充核验|暂不量化")
+        self.assertIn("不是 Nasdaq 原始字段", self.html)
+        self.assertNotIn("待补充核验", self.html)
+        self.assertNotIn("暂不量化", self.html)
+        probability_cells = re.findall(
+            r'<span class="prob"><strong>(\d+)%</strong><span class="prob-range">区间 (\d+)%—(\d+)%</span>',
+            self.html,
+        )
+        self.assertEqual(len(probability_cells), 11)
+        for midpoint, low, high in probability_cells:
+            self.assertLess(int(low), int(midpoint))
+            self.assertLess(int(midpoint), int(high))
+
+    def test_previous_earnings_and_post_earnings_performance_are_complete(self):
+        self.assertIn("上次财报", self.html)
+        self.assertIn("财报后表现", self.html)
+        previous_dates = re.findall(
+            r'class="source-link"[^>]*>(2026-\d{2}-\d{2})</a>', self.html
+        )
+        reactions = re.findall(
+            r'<span class="reaction (?:up|down)">首日 [^<]+</span><span class="reaction (?:up|down)">T\+5 [^<]+</span>',
+            self.html,
+        )
+        self.assertEqual(len(previous_dates), 11)
+        self.assertEqual(len(reactions), 11)
+        self.assertIn("Futu OpenD（K_DAY、QFQ", self.html)
 
     def test_rows_are_sorted_by_date_then_session(self):
         self.assertIn("先按日期升序；同一日期内，盘前排在盘后前面", self.html)
