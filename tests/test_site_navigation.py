@@ -55,7 +55,25 @@ class SiteNavigationTests(unittest.TestCase):
         self.assertIn(f'href="./{event_route}us/"', event)
         self.assertIn(f'href="./{event_route}a-share/"', event)
         self.assertEqual([label.strip() for label in re.findall(r"<b>([^<]+)", event)], ["美股事件", "A股财报"])
-        self.assertEqual(event_route, "weekly-event-transmission-2026w35/")
+        complete_event_roots = sorted(
+            path.name + "/"
+            for path in ROOT.glob("weekly-event-transmission-*")
+            if (path / "us/index.html").is_file() and (path / "a-share/index.html").is_file()
+        )
+        self.assertEqual(event_route, complete_event_roots[-1])
+
+    def test_refresh_labels_come_from_page_freshness_data(self):
+        SITE_NAV.PAGE_REFRESH_DATES = {}
+        SITE_NAV.nav("index.html")
+        expected = {
+            "a-share-trend-candidates/": json.loads((ROOT / "a-share-trend-candidates/data.json").read_text())["data_date"],
+            "us-market/": json.loads((ROOT / "us-market/data.json").read_text())["market"]["asOf"],
+            "macro-event-radar/": json.loads((ROOT / "macro-event-radar/data.json").read_text())["generated_at"][:10],
+            "us-market/x-consensus/": json.loads((ROOT / "us-market/x-consensus/data.json").read_text())["scanned_at"][:10],
+        }
+        for route, date in expected.items():
+            with self.subTest(route=route):
+                self.assertEqual(SITE_NAV.PAGE_REFRESH_DATES[route], date)
 
     def test_a_share_owns_split_pages_and_bingshen(self):
         sample = SITE_NAV.nav("index.html")
