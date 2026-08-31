@@ -61,6 +61,15 @@ class WeeklyUsEventPageTest(unittest.TestCase):
         ]
         self.assertEqual(keys, sorted(keys))
 
+    def test_table_reflows_without_horizontal_scrolling(self):
+        inline_css = re.search(r"<style>(.*?)</style>", self.html, re.S).group(1)
+        self.assertNotIn("overflow-x:auto", inline_css)
+        self.assertNotRegex(inline_css, r"table\{[^}]*min-width")
+        self.assertIn("table-layout:fixed", inline_css)
+        self.assertIn("grid-template-columns:repeat(2,minmax(0,1fr))", inline_css)
+        self.assertIn("colgroup,thead{display:none}", inline_css)
+        self.assertIn("viewport-fit=cover", self.html)
+
 
 if __name__ == "__main__":
     unittest.main()
