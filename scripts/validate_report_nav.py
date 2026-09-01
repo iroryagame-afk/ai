@@ -13,6 +13,7 @@ FORBIDDEN_PREFIXES = (
     "../csn2/",
     "../a-share-flow/",
     "../us-sector-flow/",
+    "../futu-indicators/",
     "../skill-packages/",
     "../summer-classics/",
 )
