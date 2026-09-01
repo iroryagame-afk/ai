@@ -1,8 +1,8 @@
 {
   "status": "OPEN_D_VERIFIED_NORMALIZED_INDEX_CHART",
-  "generated_at": "2026-08-31T18:04:26+08:00",
+  "generated_at": "2026-09-01T17:57:37+08:00",
   "base_date": "2026-07-27",
-  "data_date": "2026-08-31",
+  "data_date": "2026-09-01",
   "method": "first close on or after 2026-07-27 = 100; custom line is daily equal weight",
   "note": "红利ETF用于观察高股息风格；自选等权篮子覆盖银行、电力、公用事业、通信、交通运输、保险与稳定现金流资源品。",
   "lines": [
@@ -113,6 +113,10 @@
         {
           "date": "2026-08-31",
           "value": 98.355
+        },
+        {
+          "date": "2026-09-01",
+          "value": 98.065
         }
       ]
     },
@@ -223,6 +227,10 @@
         {
           "date": "2026-08-31",
           "value": 107.952
+        },
+        {
+          "date": "2026-09-01",
+          "value": 107.735
         }
       ]
     },
@@ -358,6 +366,11 @@
         {
           "date": "2026-08-31",
           "value": 107.724,
+          "coverage": 7
+        },
+        {
+          "date": "2026-09-01",
+          "value": 108.882,
           "coverage": 7
         }
       ]
