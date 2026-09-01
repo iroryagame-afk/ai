@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NAV_VERSION = "ia-20260831a"
+NAV_VERSION = "ia-20260901a"
 ACTIVE_DYNAMIC = {
     "index.html",
     "a-share-software-deleveraging/index.html",

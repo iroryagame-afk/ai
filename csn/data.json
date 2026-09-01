@@ -4,16 +4,16 @@
   "status": "VERIFIED",
   "verifyMarker": "VERIFIED_US_INTEGRATED_RECOMMENDATIONS_DIRECT_INPUTS_SAME_CLOSE",
   "modelVersion": "US_INTEGRATED_V2_20260826",
-  "generatedAt": "2026-08-29T14:03:10+08:00",
-  "dataDate": "2026-08-28",
+  "generatedAt": "2026-09-01T09:52:25+08:00",
+  "dataDate": "2026-08-31",
   "sourceDates": {
-    "csnSignal": "2026-08-28",
-    "hot": "2026-08-28",
-    "thrust": "2026-08-28",
-    "rotation": "2026-08-28",
-    "skew": "2026-08-28",
-    "software": "2026-08-28",
-    "hardware": "2026-08-28"
+    "csnSignal": "2026-08-31",
+    "hot": "2026-08-31",
+    "thrust": "2026-08-31",
+    "rotation": "2026-08-31",
+    "skew": "2026-08-31",
+    "software": "2026-08-31",
+    "hardware": "2026-08-31"
   },
   "weights": {
     "strengthRotation": 30,
@@ -30,10 +30,10 @@
     "threshold": 63.0,
     "reasons": [
       "市场环境允许进攻",
-      "25Δ Skew QQQ 2.69 / SPY 1.82"
+      "25Δ Skew QQQ 2.69 / SPY 1.93"
     ],
     "qqqSkew": 2.688,
-    "spySkew": 1.818,
+    "spySkew": 1.929,
     "protectiveSkew": 2.688
   },
   "selectionPolicy": {
@@ -52,12 +52,12 @@
     "xConsensusPolicy": "context_only_not_scored"
   },
   "selectionStats": {
-    "universeCount": 703,
-    "scoredCount": 57,
-    "qualifiedBeforeDiversification": 15,
+    "universeCount": 710,
+    "scoredCount": 55,
+    "qualifiedBeforeDiversification": 14,
     "exclusions": {
-      "singleSource": 346,
-      "csnRiskGate": 180,
+      "singleSource": 349,
+      "csnRiskGate": 186,
       "highRiskProduct": 120,
       "sectorCap": 3
     }
@@ -65,98 +65,133 @@
   "selectedCount": 10,
   "rows": [
     {
-      "ticker": "CRWD",
-      "name": "CrowdStrike",
+      "ticker": "FTNT",
+      "name": "飞塔信息",
       "assetClass": "us_stock",
       "sector": "安全平台",
-      "score": 80.6,
+      "score": 84.9,
       "factors": {
-        "strengthRotation": 26.6,
-        "trendEntry": 20.9,
-        "heatTheme": 10.4,
-        "volumeStructure": 6.7,
-        "specialMonitor": 7.8,
+        "strengthRotation": 27.2,
+        "trendEntry": 24.4,
+        "heatTheme": 7.6,
+        "volumeStructure": 8.2,
+        "specialMonitor": 9.3,
         "riskReward": 8.2
       },
       "sources": [
-        "CSN",
         "HOT",
         "THRUST_ROTATION",
         "MONITOR"
       ],
-      "sourceCount": 4,
+      "sourceCount": 3,
       "rotationPhase": "领先加速",
-      "csnCall": "等待确认",
+      "csnCall": "无独立信号",
       "reasons": [
-        "相对强度/轮动",
         "趋势/位置",
-        "风险收益",
+        "专项监控",
+        "相对强度/轮动",
         "领先加速"
       ],
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "201.15–207.28",
-      "invalidation": "181.24",
+      "confirmZone": "157.78–162.58",
+      "invalidation": "148.25",
       "skew": null,
-      "atrPct": 5.41,
-      "distanceEma20": 6.95,
+      "atrPct": 3.85,
+      "distanceEma20": 6.71,
       "rank": 1,
       "action": "优先观察"
     },
     {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
+      "ticker": "ZS",
+      "name": "Zscaler",
       "assetClass": "us_stock",
       "sector": "安全平台",
-      "score": 75.4,
+      "score": 83.4,
       "factors": {
-        "strengthRotation": 24.6,
-        "trendEntry": 21.3,
+        "strengthRotation": 29.3,
+        "trendEntry": 23.8,
         "heatTheme": 5.2,
-        "volumeStructure": 7.4,
-        "specialMonitor": 8.7,
+        "volumeStructure": 7.6,
+        "specialMonitor": 9.3,
         "riskReward": 8.2
       },
       "sources": [
-        "CSN",
         "THRUST_ROTATION",
-        "MONITOR",
-        "SKEW"
+        "MONITOR"
       ],
-      "sourceCount": 4,
+      "sourceCount": 2,
       "rotationPhase": "领先加速",
-      "csnCall": "买入观察",
+      "csnCall": "无独立信号",
       "reasons": [
-        "专项监控",
+        "相对强度/轮动",
         "趋势/位置",
+        "专项监控",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "172.54–177.80",
+      "invalidation": "153.74",
+      "skew": null,
+      "atrPct": 4.77,
+      "distanceEma20": 7.54,
+      "rank": 2,
+      "action": "优先观察"
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe",
+      "assetClass": "us_stock",
+      "sector": "下游验证",
+      "score": 82.0,
+      "factors": {
+        "strengthRotation": 27.6,
+        "trendEntry": 23.8,
+        "heatTheme": 5.2,
+        "volumeStructure": 7.9,
+        "specialMonitor": 9.3,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 2,
+      "rotationPhase": "领先加速",
+      "csnCall": "无独立信号",
+      "reasons": [
+        "趋势/位置",
+        "专项监控",
         "相对强度/轮动",
         "领先加速"
       ],
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "354.18–364.97",
-      "invalidation": "325.96",
-      "skew": -2.178,
-      "atrPct": 4.82,
-      "distanceEma20": 3.34,
-      "rank": 2,
-      "action": "等待回踩确认"
+      "confirmZone": "266.12–274.22",
+      "invalidation": "245.46",
+      "skew": null,
+      "atrPct": 3.51,
+      "distanceEma20": 8.37,
+      "rank": 3,
+      "action": "优先观察"
     },
     {
       "ticker": "PLTR",
       "name": "Palantir",
       "assetClass": "us_stock",
       "sector": "高弹性控制层",
-      "score": 71.1,
+      "score": 78.1,
       "factors": {
-        "strengthRotation": 27.8,
-        "trendEntry": 20.3,
-        "heatTheme": 10.0,
-        "volumeStructure": 1.1,
-        "specialMonitor": 7.3,
-        "riskReward": 6.6
+        "strengthRotation": 28.4,
+        "trendEntry": 20.8,
+        "heatTheme": 10.4,
+        "volumeStructure": 2.6,
+        "specialMonitor": 7.7,
+        "riskReward": 8.2
       },
       "sources": [
         "CSN",
@@ -171,265 +206,70 @@
       "reasons": [
         "相对强度/轮动",
         "趋势/位置",
-        "专项监控",
-        "领先加速"
-      ],
-      "risks": [
-        "距EMA20 10.2%，等回踩"
-      ],
-      "confirmZone": "166.45–171.52",
-      "invalidation": "123.66",
-      "skew": 2.125,
-      "atrPct": 3.69,
-      "distanceEma20": 10.24,
-      "rank": 3,
-      "action": "等待回踩确认"
-    },
-    {
-      "ticker": "NET",
-      "name": "Cloudflare",
-      "assetClass": "us_stock",
-      "sector": "软件基础设施",
-      "score": 67.1,
-      "factors": {
-        "strengthRotation": 24.0,
-        "trendEntry": 20.2,
-        "heatTheme": 5.2,
-        "volumeStructure": 1.7,
-        "specialMonitor": 7.8,
-        "riskReward": 8.2
-      },
-      "sources": [
-        "CSN",
-        "THRUST_ROTATION",
-        "MONITOR"
-      ],
-      "sourceCount": 3,
-      "rotationPhase": "领先加速",
-      "csnCall": "买入观察",
-      "reasons": [
         "风险收益",
-        "趋势/位置",
-        "相对强度/轮动",
         "领先加速"
       ],
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "287.85–296.61",
-      "invalidation": "268.4",
-      "skew": null,
-      "atrPct": 5.33,
-      "distanceEma20": 2.6,
+      "confirmZone": "168.08–173.20",
+      "invalidation": "143.28",
+      "skew": 2.096,
+      "atrPct": 3.64,
+      "distanceEma20": 9.23,
       "rank": 4,
-      "action": "观察"
+      "action": "优先观察"
     },
     {
-      "ticker": "WDAY",
-      "name": "Workday",
+      "ticker": "TEAM",
+      "name": "Atlassian",
       "assetClass": "us_stock",
       "sector": "下游验证",
-      "score": 67.0,
+      "score": 76.8,
       "factors": {
-        "strengthRotation": 21.2,
-        "trendEntry": 19.6,
-        "heatTheme": 5.2,
-        "volumeStructure": 9.5,
-        "specialMonitor": 8.3,
-        "riskReward": 8.2
-      },
-      "sources": [
-        "CSN",
-        "THRUST_ROTATION",
-        "MONITOR"
-      ],
-      "sourceCount": 3,
-      "rotationPhase": "领先减速",
-      "csnCall": "等待确认",
-      "reasons": [
-        "量价结构",
-        "专项监控",
-        "风险收益",
-        "领先减速"
-      ],
-      "risks": [
-        "轮动领先减速"
-      ],
-      "confirmZone": "183.71–189.31",
-      "invalidation": "161.64",
-      "skew": null,
-      "atrPct": 5.69,
-      "distanceEma20": 9.77,
-      "rank": 5,
-      "action": "观察"
-    },
-    {
-      "ticker": "AFRM",
-      "name": "Affirm Holdings",
-      "assetClass": "us_stock",
-      "sector": "未分类",
-      "score": 66.9,
-      "factors": {
-        "strengthRotation": 17.5,
-        "trendEntry": 25.0,
-        "heatTheme": 6.2,
-        "volumeStructure": 10.0,
-        "specialMonitor": 5.0,
-        "riskReward": 8.2
+        "strengthRotation": 29.2,
+        "trendEntry": 22.9,
+        "heatTheme": 14.8,
+        "volumeStructure": 2.2,
+        "specialMonitor": 7.7,
+        "riskReward": 5.0
       },
       "sources": [
         "HOT",
-        "THRUST_ROTATION"
-      ],
-      "sourceCount": 2,
-      "rotationPhase": "领先减速",
-      "csnCall": "无独立信号",
-      "reasons": [
-        "趋势/位置",
-        "量价结构",
-        "风险收益",
-        "领先减速"
-      ],
-      "risks": [
-        "轮动领先减速"
-      ],
-      "confirmZone": "EMA10 76.84 / EMA20 76.44",
-      "invalidation": "EMA55 74.71",
-      "skew": null,
-      "atrPct": 5.17,
-      "distanceEma20": null,
-      "rank": 6,
-      "action": "观察"
-    },
-    {
-      "ticker": "MSFT",
-      "name": "微软",
-      "assetClass": "us_stock",
-      "sector": "6 软件·互联网",
-      "score": 66.0,
-      "factors": {
-        "strengthRotation": 28.9,
-        "trendEntry": 15.2,
-        "heatTheme": 5.2,
-        "volumeStructure": 3.5,
-        "specialMonitor": 5.0,
-        "riskReward": 8.2
-      },
-      "sources": [
-        "CSN",
-        "THRUST_ROTATION",
-        "SKEW"
-      ],
-      "sourceCount": 3,
-      "rotationPhase": "领先加速",
-      "csnCall": "持有",
-      "reasons": [
-        "相对强度/轮动",
-        "风险收益",
-        "趋势/位置",
-        "领先加速"
-      ],
-      "risks": [
-        "未见主要过热或保护需求异常"
-      ],
-      "confirmZone": "494.664 / 481.41 / 447.457",
-      "invalidation": "455.091",
-      "skew": 0.108,
-      "atrPct": 1.9,
-      "distanceEma20": 6.67,
-      "rank": 7,
-      "action": "观察"
-    },
-    {
-      "ticker": "ANET",
-      "name": "Arista Networks",
-      "assetClass": "us_stock",
-      "sector": "软硬控制层",
-      "score": 65.9,
-      "factors": {
-        "strengthRotation": 23.4,
-        "trendEntry": 20.2,
-        "heatTheme": 5.2,
-        "volumeStructure": 1.1,
-        "specialMonitor": 7.8,
-        "riskReward": 8.2
-      },
-      "sources": [
-        "CSN",
         "THRUST_ROTATION",
         "MONITOR"
       ],
       "sourceCount": 3,
       "rotationPhase": "领先加速",
-      "csnCall": "买入观察",
+      "csnCall": "无独立信号",
       "reasons": [
-        "风险收益",
+        "热度/主线",
+        "相对强度/轮动",
         "趋势/位置",
-        "专项监控",
         "领先加速"
       ],
       "risks": [
-        "未见主要过热或保护需求异常"
+        "距EMA20 21.4%，追高风险"
       ],
-      "confirmZone": "188.67–194.42",
-      "invalidation": "173.45",
+      "confirmZone": "157.47–162.27",
+      "invalidation": "103.32",
       "skew": null,
-      "atrPct": 4.01,
-      "distanceEma20": 2.0,
-      "rank": 8,
-      "action": "观察"
-    },
-    {
-      "ticker": "NVDA",
-      "name": "英伟达",
-      "assetClass": "us_stock",
-      "sector": "算力平台",
-      "score": 65.8,
-      "factors": {
-        "strengthRotation": 20.5,
-        "trendEntry": 19.8,
-        "heatTheme": 5.2,
-        "volumeStructure": 4.3,
-        "specialMonitor": 7.8,
-        "riskReward": 8.2
-      },
-      "sources": [
-        "CSN",
-        "THRUST_ROTATION",
-        "MONITOR",
-        "SKEW"
-      ],
-      "sourceCount": 4,
-      "rotationPhase": "落后加速",
-      "csnCall": "买入观察",
-      "reasons": [
-        "风险收益",
-        "趋势/位置",
-        "专项监控",
-        "落后加速"
-      ],
-      "risks": [
-        "未见主要过热或保护需求异常"
-      ],
-      "confirmZone": "212.43–218.90",
-      "invalidation": "196.85",
-      "skew": 0.6,
-      "atrPct": 3.16,
-      "distanceEma20": 0.87,
-      "rank": 9,
-      "action": "观察"
+      "atrPct": 4.65,
+      "distanceEma20": 21.45,
+      "rank": 5,
+      "action": "等待回踩确认"
     },
     {
       "ticker": "PATH",
       "name": "UiPath",
       "assetClass": "us_stock",
       "sector": "未分类",
-      "score": 64.3,
+      "score": 75.7,
       "factors": {
-        "strengthRotation": 27.7,
-        "trendEntry": 19.8,
-        "heatTheme": 4.4,
-        "volumeStructure": 2.8,
+        "strengthRotation": 29.5,
+        "trendEntry": 19.5,
+        "heatTheme": 11.8,
+        "volumeStructure": 5.3,
         "specialMonitor": 5.0,
         "riskReward": 6.6
       },
@@ -443,18 +283,175 @@
       "csnCall": "持有",
       "reasons": [
         "相对强度/轮动",
+        "热度/主线",
         "趋势/位置",
-        "风险收益",
         "领先加速"
       ],
       "risks": [
-        "距EMA20 15.0%，等回踩"
+        "距EMA20 16.3%，等回踩"
       ],
-      "confirmZone": "16.802 / 15.777 / 13.778",
-      "invalidation": "15.458",
+      "confirmZone": "17.142 / 16.052 / 13.952",
+      "invalidation": "15.77",
       "skew": null,
-      "atrPct": 4.64,
-      "distanceEma20": 15.04,
+      "atrPct": 4.55,
+      "distanceEma20": 16.31,
+      "rank": 6,
+      "action": "等待回踩确认"
+    },
+    {
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "assetClass": "us_stock",
+      "sector": "高弹性数据层",
+      "score": 72.9,
+      "factors": {
+        "strengthRotation": 27.0,
+        "trendEntry": 20.9,
+        "heatTheme": 5.2,
+        "volumeStructure": 2.9,
+        "specialMonitor": 8.7,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "买入观察",
+      "reasons": [
+        "相对强度/轮动",
+        "专项监控",
+        "趋势/位置",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "314.48–324.06",
+      "invalidation": "281.28",
+      "skew": null,
+      "atrPct": 3.66,
+      "distanceEma20": 3.81,
+      "rank": 7,
+      "action": "等待回踩确认"
+    },
+    {
+      "ticker": "NET",
+      "name": "Cloudflare",
+      "assetClass": "us_stock",
+      "sector": "软件基础设施",
+      "score": 71.8,
+      "factors": {
+        "strengthRotation": 25.7,
+        "trendEntry": 21.5,
+        "heatTheme": 5.2,
+        "volumeStructure": 2.5,
+        "specialMonitor": 8.7,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "买入观察",
+      "reasons": [
+        "专项监控",
+        "趋势/位置",
+        "相对强度/轮动",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "289.06–297.86",
+      "invalidation": "269.49",
+      "skew": null,
+      "atrPct": 5.11,
+      "distanceEma20": 3.97,
+      "rank": 8,
+      "action": "等待回踩确认"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "英伟达",
+      "assetClass": "us_stock",
+      "sector": "算力平台",
+      "score": 70.4,
+      "factors": {
+        "strengthRotation": 25.1,
+        "trendEntry": 20.5,
+        "heatTheme": 5.2,
+        "volumeStructure": 2.7,
+        "specialMonitor": 8.7,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
+        "THRUST_ROTATION",
+        "MONITOR",
+        "SKEW"
+      ],
+      "sourceCount": 4,
+      "rotationPhase": "领先加速",
+      "csnCall": "买入观察",
+      "reasons": [
+        "专项监控",
+        "相对强度/轮动",
+        "趋势/位置",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "212.91–219.39",
+      "invalidation": "207.02",
+      "skew": 2.018,
+      "atrPct": 3.08,
+      "distanceEma20": 2.14,
+      "rank": 9,
+      "action": "等待回踩确认"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "微软",
+      "assetClass": "us_stock",
+      "sector": "6 软件·互联网",
+      "score": 68.0,
+      "factors": {
+        "strengthRotation": 27.2,
+        "trendEntry": 18.9,
+        "heatTheme": 5.2,
+        "volumeStructure": 3.5,
+        "specialMonitor": 5.0,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
+        "THRUST_ROTATION",
+        "SKEW"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "买入观察",
+      "reasons": [
+        "相对强度/轮动",
+        "风险收益",
+        "趋势/位置",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "496.96 / 483.875 / 449.593",
+      "invalidation": "457.203",
+      "skew": 1.276,
+      "atrPct": 1.93,
+      "distanceEma20": 4.84,
       "rank": 10,
       "action": "观察"
     }
