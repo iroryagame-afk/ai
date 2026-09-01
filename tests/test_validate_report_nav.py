@@ -34,16 +34,20 @@ class ValidateReportNavTests(unittest.TestCase):
 
         self.assertEqual(validate_manifest(root), [])
 
-    def test_rejects_daily_page_and_duplicate_identity(self):
+    def test_rejects_non_report_pages_and_duplicate_identity(self):
         first = self.valid_entry()
         second = self.valid_entry() | {"url": "../csn/"}
-        temp, root = self.write_repo([first, second])
+        third = self.valid_entry() | {
+            "id": "futu-indicators",
+            "url": "../futu-indicators/",
+        }
+        temp, root = self.write_repo([first, second, third])
         self.addCleanup(temp.cleanup)
 
         errors = validate_manifest(root)
 
         self.assertTrue(any("duplicate id" in error for error in errors))
-        self.assertTrue(any("forbidden URL" in error for error in errors))
+        self.assertEqual(sum("forbidden URL" in error for error in errors), 2)
 
     def test_rejects_invalid_fields_category_and_missing_target(self):
         entry = self.valid_entry() | {
