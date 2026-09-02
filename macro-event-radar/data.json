@@ -2,18 +2,87 @@
   "schema_version": 1,
   "page_status": "live",
   "verification_status": "partial",
-  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-08-31_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
-  "generated_at": "2026-08-31T22:38:46+08:00",
+  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-09-01_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
+  "generated_at": "2026-09-01T22:40:00+08:00",
   "window": {"recent_hours": 240, "calendar_days": 30, "timezone": "Asia/Shanghai"},
   "brief": {
-    "title": "Strategy恢复买币，DeepSeek开放视觉权重",
-    "summary": "Strategy最新8-K确认8月24日至30日通过MSTR ATM净融资6.028亿美元，其中3.697亿美元买入4,603枚比特币、1.518亿美元回购STRC、3,000万美元补充USD Cash；截至8月30日持有845,050枚比特币，USD Cash为16.1亿美元。AI侧，DeepSeek已在官方Hugging Face开放305B参数的V4 Flash Vision实验模型权重并采用MIT许可，视觉API调用边界也已在官方文档中确认。",
+    "title": "美委油田协议披露条款，药价协议出现口径分歧",
+    "summary": "白宫与NABEP披露委内瑞拉油田协议：NABEP获17个油田百年特许，美国取得其母公司35%股权、20%产量成本价承购权及其余产量优先购买权；储量、投资与增产节奏仍待合同和实物流量验证。药价侧，白宫称新增九家药企MFN协议并覆盖89%品牌药市场，Astellas确认已达成协议，但Teva仍称处于积极磋商和拟议阶段，条款状态不能一概视为全部最终生效。",
     "discipline": "候选来自真实采集池，但采集不等于核验：一手源必须读取正文，专业媒体与社交信息必须回链官方原文。价格只验证市场响应，不能反向证明传闻。",
-    "core_count": 21,
+    "core_count": 23,
     "pending_count": 1,
-    "next_event_count": 5
+    "next_event_count": 7
   },
   "events": [
+    {
+      "id": "us-venezuela-nabep-oil-agreement-2026-08-31",
+      "headline": "美委油田协议披露核心条款：NABEP获17个油田百年特许，美国取得35%股权与成本价承购权",
+      "category": "energy",
+      "event_type": "policy",
+      "status": "partially_verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-08-31T23:55:33+00:00",
+      "observed_at": "2026-09-01T22:33:09+08:00",
+      "verified_at": "2026-09-01T22:40:00+08:00",
+      "fact": "白宫8月31日事实清单称，委内瑞拉临时当局向North American Blue Energy Partners（NABEP）授予17个油田、约650亿桶已探明储量的100年特许权；NABEP向美国战争部战略资本办公室授予其母公司35%股权，并向美国国务院授予全部现有及未来产量20%的成本价承购权和其余80%的优先购买权。NABEP随后发布公司声明确认35%股权、20%优先承购及约1,000亿美元投资计划的框架。",
+      "new_information": "美国与委内瑞拉能源安排从笼统的资源准入主张推进到具体运营商、油田数量、期限、股权、承购比例和治理权条款，首次形成可逐项跟踪的合同与产量检查表。",
+      "inference": "推断：若合同、融资和产量计划兑现，美国炼厂与战略储备可获得更多重质原油选择，油服与基础设施需求也可能上升；但闲置油田复产、管线修复和资本开支需要多年，不能把储量权益直接等同于短期新增供应。",
+      "unverified": "本轮未取得完整合同、特许权附件、储量审计、委内瑞拉法律意见、融资承诺和项目进度表；650亿桶储量、1,000亿美元投资、2,000亿美元税费及低成本供油均为政府或公司前瞻口径，尚未由独立工程、审计和实物流量数据验证。",
+      "transmission": [
+        {"level": "A", "path": "油田特许权与承购权 → NABEP融资/复产投资 → 委内瑞拉原油产量与美国重质油进口"},
+        {"level": "B", "path": "35%股权与治理权 → 美国战略能源控制与收益安排 → SPR、军用与炼厂供给选择"},
+        {"level": "C", "path": "长期增产预期与地缘重排 → 原油期限结构/风险溢价 → 能源、炼化、油服与运输资产"}
+      ],
+      "affected_assets": [
+        {"market": "原油与美国炼厂", "direction": "长期供给偏增、短期影响有限", "horizon": "6个月至5年", "reason": "成本价承购和优先购买权增加美国重质油选择，但复产速度与品质、物流仍未核验。"},
+        {"market": "油服、钻井与基础设施", "direction": "潜在订单增加", "horizon": "1–5年", "reason": "公司提出大额投资和扩产目标，实际订单取决于融资、许可、设备和施工进度。"},
+        {"market": "委内瑞拉主权与地缘风险", "direction": "控制权重排、争议上升", "horizon": "1–10年", "reason": "百年特许权、美国股权与治理安排可能带来法律、政治与履约风险。"}
+      ],
+      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-09-01T22:40:00+08:00", "detail": "9月1日美股交易尚未完成，且油价受霍尔木兹、库存与供需预期共同影响；本轮不以盘中波动证明长期协议价值。"},
+      "next_checkpoint": "获取合同、特许权和委内瑞拉法律文本，核验储量审计、融资来源、首批资本开支、复产时间表、实际产量和美国承购流量。",
+      "invalidation": "合同或特许权未能生效、融资和许可停滞、储量审计显著下调、产量恢复远低于计划，或委内瑞拉政治与法律变化削弱履约。",
+      "candidate_refs": ["whitehouse_news-d5e3d11c67b07427"],
+      "sources": [
+        {"role": "primary", "name": "White House — U.S.–Venezuela Oil Agreement Fact Sheet", "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/", "published_at": "2026-08-31T23:55:33+00:00", "note": "核验政府公布的17个油田、100年特许、650亿桶、35%股权、20%成本价承购及治理权口径。"},
+        {"role": "primary", "name": "NABEP — Company-provided Agreement Statement", "url": "https://www.prnewswire.co.uk/news-releases/united-states-government-and-north-american-blue-energy-partners-nabep-reach-historic-deal-to-develop-venezuelas-oil-sector-302865705.html", "published_at": "2026-09-01T08:09:00-04:00", "note": "核验NABEP对35%股权、20%优先承购和投资计划的公司口径；完整合同仍未公开。"}
+      ]
+    },
+    {
+      "id": "us-pharma-mfn-nine-manufacturers-2026-08-31",
+      "headline": "美国新增九家药企MFN安排：白宫称覆盖89%品牌药市场，Teva仍称协议待最终达成",
+      "category": "policy",
+      "event_type": "policy",
+      "status": "partially_verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-08-31T19:14:29+00:00",
+      "observed_at": "2026-09-01T22:33:09+08:00",
+      "verified_at": "2026-09-01T22:40:00+08:00",
+      "fact": "白宫8月31日宣布与Alcon、Astellas、BeOne、BridgeBio、CSL、Kyowa Kirin、Sun Pharma、Teva和UCB达成九项药价安排，称MFN覆盖企业增至26家、涉及89%的品牌药市场，并包含州Medicaid定价、未来创新药定价、合计至少196亿美元美国制造投入及部分原料药捐赠。Astellas公司公告确认已达成自愿协议并将捐赠25公斤他克莫司原料药；Teva公司公告则仅称双方有共同承诺、仍在积极磋商，且使用“若达成协议”的条件表述。",
+      "new_information": "美国药价政策从行政命令和头部药企谈判推进到第二批具名公司及供应链承诺，但企业公告显示法律和商业状态并不完全一致，不能把白宫的统一表述直接等同于九份最终合同均已生效。",
+      "inference": "推断：最终协议若覆盖Medicaid存量药和未来创新药，相关企业美国净价与利润率可能承压，同时制造投资和原料药储备会增加本地化资本开支；实际影响取决于产品清单、基准国、折扣口径、豁免和生效节奏。",
+      "unverified": "九家企业的完整合同、具体药品与价格、各州实施日期、196亿美元投资分项和新增性、API储备交付、联邦预算节省均未完整公开；Teva是否已签署最终协议与白宫表述存在待协调差异。",
+      "transmission": [
+        {"level": "A", "path": "Medicaid与未来药品MFN定价 → 美国净价/回扣变化 → 药企收入与利润率"},
+        {"level": "B", "path": "制造投资与API捐赠 → 美国本地供应链和战略储备 → 产能、资本开支与供应安全"},
+        {"level": "C", "path": "头部覆盖率上升 → 行业定价基准与谈判预期 → 全球药价和研发回报评估"}
+      ],
+      "affected_assets": [
+        {"market": "九家具名药企", "direction": "价格压力与供应链投资并存", "horizon": "1–24个月", "reason": "方向取决于具体产品、Medicaid敞口、国际参考价和制造承诺，不能按统一比例外推。"},
+        {"market": "美国品牌药与创新药", "direction": "定价权边际受压", "horizon": "1–36个月", "reason": "白宫称覆盖率升至89%，但合同效力、产品范围和执行机制仍不透明。"},
+        {"market": "美国制药制造与API", "direction": "本地化投入偏正面", "horizon": "1–5年", "reason": "制造承诺和战略API储备可能带来设备、产能和库存需求，需核验新增投资。"}
+      ],
+      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-09-01T22:40:00+08:00", "detail": "9月1日美股交易尚未完成，且九家公司跨美国、日本、欧洲与印度市场；本轮不以单日股价替代合同条款和利润影响。"},
+      "next_checkpoint": "逐家公司核验最终协议、产品清单、折扣基准、生效日、Medicaid实施、制造投资和API交付，并优先澄清Teva公告与白宫表述差异。",
+      "invalidation": "多数协议停留在意向、覆盖产品和折扣范围显著收窄、法律执行受阻，或投资与API承诺主要为既有计划重述。",
+      "candidate_refs": ["whitehouse_news-34ea7ed8f36c58a0"],
+      "sources": [
+        {"role": "primary", "name": "White House — Nine Additional Pharmaceutical Manufacturers MFN Fact Sheet", "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-deal-with-nine-additional-pharmaceutical-manufacturers-to-lower-drug-prices-for-americans/", "published_at": "2026-08-31T19:14:29+00:00", "note": "核验九家公司、26家总数、89%覆盖率、Medicaid、196亿美元制造投入与API储备口径。"},
+        {"role": "primary", "name": "Astellas — Voluntary Agreement with U.S. Government", "url": "https://newsroom.astellas.com/2026-09-01-astellas-enters-voluntary-agreement-with-us-government-supporting-affordable-access-to-medicines", "published_at": "2026-08-31T00:00:00+09:00", "note": "核验Astellas已达成协议、Medicaid与未来药品定价承诺及25公斤他克莫司API捐赠。"},
+        {"role": "primary", "name": "Teva — Intent to Reach Agreement", "url": "https://www.tevausa.com/news-and-media/press-releases/teva-and-trump-administration-announce-intent-to-reach-agreement-around-affordable-medicines-and-supply-c/", "published_at": "2026-08-31T00:00:00-04:00", "note": "核验Teva仍称积极磋商、若达成协议及条款保密，形成对白宫统一表述的重要边界。"}
+      ]
+    },
     {
       "id": "zai-glm-5-3-2026-08-14",
       "headline": "Z.ai开放GLM-5.3权重：753B模型进入本地部署，商业服务附安全审查条款",
@@ -476,19 +545,19 @@
     },
     {
       "id": "strategy-usd-cash-atm-2026-08-24",
-      "headline": "Strategy恢复买币：一周增发融资6.03亿美元，买入4,603枚BTC并回购STRC",
+      "headline": "Strategy恢复买币并维持STRC 12%股息：增发融资6.03亿美元，买入4,603枚BTC",
       "category": "crypto",
       "event_type": "filing",
       "status": "verified",
       "change_type": "upgraded",
       "importance": 4,
-      "event_time": "2026-08-31T08:00:15-04:00",
-      "observed_at": "2026-08-31T22:34:38+08:00",
-      "verified_at": "2026-08-31T22:38:46+08:00",
-      "fact": "Strategy最新SEC 8-K显示，8月24日至30日通过MSTR ATM出售4,531,421股，净融资6.028亿美元；其中3.697亿美元用于以均价80,318美元买入4,603枚比特币，1.518亿美元回购1,557,177股STRC，5,070万美元支付STRC股息，3,000万美元补充USD Cash。截至8月30日，公司持有845,050枚比特币，累计成本637.3亿美元、均价75,412美元；USD Reserve维持51亿美元，USD Cash由上周15.9亿美元升至16.1亿美元。",
-      "new_information": "上周只是建立灵活现金池且未买币，本周已把ATM融资中的61%实际部署到比特币，并同步回购STRC和补充现金；资本配置从“保留选择权”推进为买币、回购、股息与流动性四路并行。",
-      "inference": "推断：恢复买币形成已实现的比特币增量需求，STRC回购有助于稳定信用证券价格，现金池仍保留后续部署能力；但资金全部来自MSTR增发，普通股稀释与每股比特币增厚需要同时衡量，不能只看总持币量上升。",
-      "unverified": "8月31日美股交易尚未完成，本轮未用盘中MSTR或BTC波动证明市场确认；下一周ATM发行、买币节奏、USD Cash用途及回购持续性仍未知。",
+      "event_time": "2026-09-01T12:07:22+00:00",
+      "observed_at": "2026-09-01T22:33:09+08:00",
+      "verified_at": "2026-09-01T22:40:00+08:00",
+      "fact": "Strategy 8月31日SEC 8-K显示，8月24日至30日通过MSTR ATM出售4,531,421股，净融资6.028亿美元；其中3.697亿美元买入4,603枚比特币，1.518亿美元回购STRC，3,000万美元补充USD Cash。截至8月30日持有845,050枚比特币，USD Reserve为51亿美元、USD Cash为16.1亿美元。公司9月1日另一份8-K进一步确认，9月16日起STRC年化股息率维持12%，董事会已宣告9月30日和10月15日相关优先股现金股息，并预计这些分配在美国联邦所得税口径下、以持有人税基为限属于非应税资本返还。",
+      "new_information": "资本配置已从建立现金池推进到买币、STRC回购和流动性管理；9月1日申报没有新增比特币购买，而是把优先股12%股息维持、支付日历和预期税务属性正式写入8-K，补齐信用证券现金流边界。",
+      "inference": "推断：恢复买币形成已实现的比特币增量需求，STRC回购和12%股息有助于稳定信用证券价格，现金池则保留后续部署能力；但这些安排同时增加持续现金支出，普通股稀释、每股比特币增厚和优先股融资成本需要合并衡量。",
+      "unverified": "9月1日美股交易尚未完成，本轮未用盘中MSTR、STRC或BTC波动证明净效应；后续ATM发行、买币、回购、USD Cash用途、股息资金来源和最终税务处理仍需持续核验。",
       "transmission": [
         {"level": "A", "path": "MSTR ATM增发 → 3.697亿美元实际买币 → 比特币现货需求与MSTR总持仓"},
         {"level": "B", "path": "STRC回购与股息支付 → 信用证券供需/偿付信心 → Strategy资本结构"},
@@ -497,13 +566,14 @@
       "affected_assets": [
         {"market": "MSTR普通股", "direction": "双向、高波动", "horizon": "1–20日", "reason": "4,603枚BTC提高总敞口，但4,531,421股新增供给形成直接稀释；需观察每股BTC和净资产溢价。"},
         {"market": "比特币与IBIT", "direction": "已实现增量买盘、边际偏多", "horizon": "1–20日", "reason": "8-K确认3.697亿美元买币，不再只是潜在资金；持续性仍取决于后续ATM与现金部署。"},
-        {"market": "STRC及Strategy信用证券", "direction": "回购与流动性支持偏正面", "horizon": "1–3个月", "reason": "1.518亿美元STRC回购、51亿美元专项储备和16.1亿美元灵活现金形成缓冲，仍受BTC价格与融资条件约束。"}
+        {"market": "STRC及Strategy信用证券", "direction": "回购与12%股息支持、成本上升", "horizon": "1–3个月", "reason": "1.518亿美元回购、51亿美元专项储备、16.1亿美元灵活现金和明确股息日历形成缓冲，同时抬高持续现金成本。"}
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-31T22:38:46+08:00", "detail": "8-K发布于8月31日美股交易前，当前交易日尚未完成；本轮不以盘中价格证明买币、回购或稀释的净效应。"},
-      "next_checkpoint": "查看8月31日完整收盘及下一份8-K/Strategy Dashboard，核对ATM发行、BTC购买、STRC回购、USD Cash和每股BTC敞口变化。",
+      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-09-01T22:40:00+08:00", "detail": "9月1日申报发布后当前美股交易日尚未完成；本轮不以盘中价格证明买币、股息、回购或稀释的净效应。"},
+      "next_checkpoint": "查看9月1日完整收盘及下一份8-K/Strategy Dashboard，核对ATM发行、BTC购买、STRC回购、USD Cash、股息支付和每股BTC敞口变化。",
       "invalidation": "后续买币停止、增发稀释持续快于每股BTC增厚、净资产溢价显著收缩，或USD Cash主要转向偿债和股息而非增量配置。",
-      "candidate_refs": ["sec_8k-c1f4d642cfd39a8f"],
+      "candidate_refs": ["sec_8k-c1f4d642cfd39a8f", "sec_8k-44ca01302d3cdf56"],
       "sources": [
+        {"role": "primary", "name": "SEC EDGAR — Strategy Inc. Form 8-K (2026-09-01)", "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526377583/mstr-20260831.htm", "published_at": "2026-09-01T12:07:22+00:00", "note": "核验STRC维持12%年化股息、优先股股息支付日历和预期资本返还税务属性。"},
         {"role": "primary", "name": "SEC EDGAR — Strategy Inc. Form 8-K (2026-08-31)", "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526375463/mstr-20260831.htm", "published_at": "2026-08-31T08:00:15-04:00", "note": "核验MSTR ATM融资、BTC购买、STRC回购、股息用途、USD Reserve、USD Cash及总持仓。"},
         {"role": "primary", "name": "SEC EDGAR — Strategy Inc. Form 8-K (2026-08-24)", "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526361845/mstr-20260824.htm", "published_at": "2026-08-24T08:00:15-04:00", "note": "作为前值，核验USD Cash初设、上周零买币与资本配置变化。"}
       ]
@@ -740,35 +810,37 @@
     }
   ],
   "calendar": [
-    {"stage": "T-4", "title": "美国瘦牛肉低关税配额首批开放", "time": "9月1日至30日，首批100,000公吨", "status": "confirmed", "check": "核验CBP/USTR执行通知、使用率、来源国、进口折价及零售传导。"},
-    {"stage": "T-11", "title": "加拿大反制税正式生效", "time": "加拿大东部时间9月8日00:01", "status": "confirmed", "check": "清单与商品编码已公布，继续核验延期、豁免及企业直接敞口。"},
-    {"stage": "T-18", "title": "美联储9月FOMC", "time": "9月15–16日", "status": "confirmed", "check": "判断Warsh的通胀优先表述、7月鹰派分歧及最新PCE信号是否延续。"},
-    {"stage": "T-75", "title": "OpenAI向Cursor供模合同拟终止", "time": "提议停供日11月12日，最终日期待双方确认", "status": "confirmed", "check": "核验最终停供日、Cursor迁移方案、受影响功能、替代模型和开发者留存。"},
+    {"stage": "执行跟踪", "title": "美委油田协议进入融资与复产核验", "time": "9月起，合同、许可、融资和首批资本开支待披露", "status": "confirmed", "check": "核验特许权、储量审计、融资来源、设备订单、复产时间表与实际承购流量。"},
+    {"stage": "协议核验", "title": "九家药企MFN安排逐家公司落地", "time": "条款、生效日与产品清单尚未统一披露", "status": "confirmed", "check": "优先澄清Teva协议状态，并核验Medicaid价格、投资和API储备交付。"},
+    {"stage": "执行中", "title": "美国瘦牛肉低关税配额首批开放", "time": "9月1日至30日，首批100,000公吨", "status": "confirmed", "check": "核验CBP/USTR执行通知、使用率、来源国、进口折价及零售传导。"},
+    {"stage": "T-7", "title": "加拿大反制税正式生效", "time": "加拿大东部时间9月8日00:01", "status": "confirmed", "check": "清单与商品编码已公布，继续核验延期、豁免及企业直接敞口。"},
+    {"stage": "T-14", "title": "美联储9月FOMC", "time": "9月15–16日", "status": "confirmed", "check": "判断Warsh的通胀优先表述、7月鹰派分歧及最新PCE信号是否延续。"},
+    {"stage": "T-72", "title": "OpenAI向Cursor供模合同拟终止", "time": "提议停供日11月12日，最终日期待双方确认", "status": "confirmed", "check": "核验最终停供日、Cursor迁移方案、受影响功能、替代模型和开发者留存。"},
     {"stage": "120日内", "title": "美国大电网设备实施规则", "time": "行政令要求能源部长在120日内按需发布", "status": "confirmed", "check": "核对受限国家、主体、设备/软件、许可、预审名单、存量设备与生效安排。"}
   ],
   "source_health": [
-    {"group": "第一层 · 一手来源", "status": "verified", "last_success_at": "2026-08-31T22:34:38+08:00", "coverage": "12/12自动一手源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register、Z.ai HF合计抓取543条，保留23条一手候选。Strategy 8-K、DeepSeek官方Hugging Face模型卡与视觉API文档已读取；OFAC 8月31日刊载内容与现有卡一致"},
-    {"group": "第二层 · 专业发现", "status": "partial", "last_success_at": "2026-08-31T22:34:38+08:00", "coverage": "AI HOT自动源1/1成功，抓取66条、保留29条发现候选；DeepSeek开源线索已回到官方模型卡和API文档。ChatGPT广告收入、Anthropic版权诉讼、Agent安全评论等线索未取得足以进入核心区的新一手证据；Reuters、Bloomberg、FT、WSJ、金十、财联社、富途已登记但尚未自动轮询"},
+    {"group": "第一层 · 一手来源", "status": "verified", "last_success_at": "2026-09-01T22:33:09+08:00", "coverage": "12/12自动一手源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register、Z.ai HF合计抓取543条，保留24条一手候选。白宫与NABEP油田协议、白宫/Astellas/Teva药价口径及Strategy 9月1日8-K已读取；GLM-5.2仅仓库更新时间变化，未作为新事件"},
+    {"group": "第二层 · 专业发现", "status": "partial", "last_success_at": "2026-09-01T22:33:09+08:00", "coverage": "AI HOT自动源1/1成功，抓取62条、保留22条发现候选；与Anthropic、Runway、数据中心用电和AI评论相关的线索未取得足以进入核心区的新一手证据；Reuters、Bloomberg、FT、WSJ、金十、财联社、富途已登记但尚未自动轮询"},
     {"group": "第三层 · 社交抢先", "status": "registered", "last_success_at": null, "coverage": "官方X、Truth Social、微信公众号、Telegram和行业记者已登记；当前0个自动源，任何内容默认仅线索"},
     {"group": "市场验证", "status": "partial", "last_success_at": "2026-08-27T09:49:53+08:00", "coverage": "Futu OpenD已核验截至2026-08-26完整交易日及业绩后快照：SPY +0.02%、QQQ +0.09%，NVDA常规时段-1.59%、业绩后快照+4.71%；价格只记录响应，不证明事件因果"}
   ],
   "collection_run": {
-    "generated_at": "2026-08-31T22:34:38+08:00",
+    "generated_at": "2026-09-01T22:33:09+08:00",
     "configured_sources": 36,
     "active_sources": 13,
     "successful_sources": 13,
     "failed_sources": 0,
     "registered_manual_sources": 23,
     "tier1_fetched": 543,
-    "tier1_candidates": 23,
-    "tier2_fetched": 66,
-    "candidate_pool_after_dedupe": 46,
-    "manual_connectors_succeeded": ["Strategy 2026-08-31 SEC 8-K核验", "DeepSeek V4 Flash Vision官方权重与API文档核验", "Federal Register两份OFAC原文复核"],
+    "tier1_candidates": 24,
+    "tier2_fetched": 62,
+    "candidate_pool_after_dedupe": 45,
+    "manual_connectors_succeeded": ["白宫与NABEP委内瑞拉油田协议核验", "白宫、Astellas与Teva药价协议状态核验", "Strategy 2026-09-01 SEC 8-K核验"],
     "artifacts": ["sources.json", "candidates.json", "collection-status.json"]
   },
   "methodology": {
     "priority_formula": "影响范围30% + 传导直接度25% + 证据可靠度20% + 预期差15% + 时间紧迫度10%",
     "core_rule": "核心区只接受verified或partially_verified事件，并至少包含一个一手来源；匿名消息进入待证真。",
-    "limitations": "本页为2026-08-31北京时间快照。候选池由真实RSS/API采集生成，但核心事件仍需逐条正文核验；本轮13/13自动源成功，23个付费、登录或专用连接器来源只登记未自动化。Strategy最新8-K、DeepSeek官方模型卡和视觉API文档已回查；DeepSeek性能、API价格、实际采用，GLM性能及白宫航运与出口数字仍待第三方复现或独立数据确认。OFAC 8月31日正式刊载内容已在上一快照提前核验，不重复新增；Space Academy仅成立研究委员会且无新增拨款，不进入核心区；其他AI研究、评论与社交线索未取得足以进入核心区的新一手证据。价格只记录响应，不证明事件因果。"
+    "limitations": "本页为2026-09-01北京时间快照。候选池由真实RSS/API采集生成，但核心事件仍需逐条正文核验；本轮13/13自动源成功，23个付费、登录或专用连接器来源只登记未自动化。美委油田协议已由白宫和NABEP公司声明交叉核验，但完整合同、储量审计、融资与复产仍待证；药价安排已读取白宫、Astellas和Teva公告，其中Teva仍使用拟议与磋商表述，不能视为九家公司法律状态完全一致。Strategy 9月1日8-K补充优先股股息和预期税务属性；GLM-5.2只是旧仓库时间戳变化，CFTC延期、Fed演讲、Federal Register常规通知和其他AI线索未形成足以进入核心区的新增事实。价格只记录响应，不证明事件因果。"
   }
 }
