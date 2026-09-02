@@ -1,8 +1,8 @@
 {
   "status": "OPEN_D_VERIFIED_NORMALIZED_INDEX_CHART",
-  "generated_at": "2026-09-01T17:57:37+08:00",
+  "generated_at": "2026-09-02T17:55:39+08:00",
   "base_date": "2026-07-27",
-  "data_date": "2026-09-01",
+  "data_date": "2026-09-02",
   "method": "first close on or after 2026-07-27 = 100; custom line is daily equal weight",
   "note": "科创半导体ETF主要代表半导体；硬件篮子与下方分组一致，包含国产算力与服务器、光通信、PCB、元器件、半导体设备与材料。",
   "lines": [
@@ -117,6 +117,10 @@
         {
           "date": "2026-09-01",
           "value": 91.127
+        },
+        {
+          "date": "2026-09-02",
+          "value": 89.471
         }
       ]
     },
@@ -231,6 +235,10 @@
         {
           "date": "2026-09-01",
           "value": 91.643
+        },
+        {
+          "date": "2026-09-02",
+          "value": 89.934
         }
       ]
     },
@@ -241,137 +249,142 @@
         {
           "date": "2026-07-27",
           "value": 100.0,
-          "coverage": 91
+          "coverage": 90
         },
         {
           "date": "2026-07-28",
-          "value": 91.77,
-          "coverage": 91
+          "value": 91.824,
+          "coverage": 90
         },
         {
           "date": "2026-07-29",
-          "value": 90.763,
-          "coverage": 91
+          "value": 90.768,
+          "coverage": 90
         },
         {
           "date": "2026-07-30",
-          "value": 83.929,
-          "coverage": 91
+          "value": 83.972,
+          "coverage": 90
         },
         {
           "date": "2026-07-31",
-          "value": 87.933,
-          "coverage": 91
+          "value": 87.889,
+          "coverage": 90
         },
         {
           "date": "2026-08-03",
-          "value": 85.517,
-          "coverage": 91
+          "value": 85.437,
+          "coverage": 90
         },
         {
           "date": "2026-08-04",
-          "value": 92.374,
-          "coverage": 91
+          "value": 92.289,
+          "coverage": 90
         },
         {
           "date": "2026-08-05",
-          "value": 97.588,
-          "coverage": 91
+          "value": 97.511,
+          "coverage": 90
         },
         {
           "date": "2026-08-06",
-          "value": 100.632,
-          "coverage": 91
+          "value": 100.581,
+          "coverage": 90
         },
         {
           "date": "2026-08-07",
-          "value": 105.174,
-          "coverage": 91
+          "value": 105.059,
+          "coverage": 90
         },
         {
           "date": "2026-08-10",
-          "value": 104.731,
-          "coverage": 91
+          "value": 104.681,
+          "coverage": 90
         },
         {
           "date": "2026-08-11",
-          "value": 104.233,
-          "coverage": 91
+          "value": 104.191,
+          "coverage": 90
         },
         {
           "date": "2026-08-12",
-          "value": 106.509,
-          "coverage": 91
+          "value": 106.484,
+          "coverage": 90
         },
         {
           "date": "2026-08-13",
-          "value": 105.227,
-          "coverage": 91
+          "value": 105.209,
+          "coverage": 90
         },
         {
           "date": "2026-08-14",
-          "value": 108.386,
-          "coverage": 91
+          "value": 108.337,
+          "coverage": 90
         },
         {
           "date": "2026-08-17",
-          "value": 113.798,
-          "coverage": 91
+          "value": 113.784,
+          "coverage": 90
         },
         {
           "date": "2026-08-18",
-          "value": 114.81,
-          "coverage": 91
+          "value": 114.845,
+          "coverage": 90
         },
         {
           "date": "2026-08-19",
-          "value": 105.078,
-          "coverage": 91
+          "value": 105.129,
+          "coverage": 90
         },
         {
           "date": "2026-08-20",
-          "value": 105.547,
-          "coverage": 91
+          "value": 105.591,
+          "coverage": 90
         },
         {
           "date": "2026-08-21",
-          "value": 106.797,
-          "coverage": 91
+          "value": 106.822,
+          "coverage": 90
         },
         {
           "date": "2026-08-24",
-          "value": 103.017,
-          "coverage": 91
+          "value": 103.056,
+          "coverage": 90
         },
         {
           "date": "2026-08-25",
-          "value": 102.549,
-          "coverage": 91
+          "value": 102.576,
+          "coverage": 90
         },
         {
           "date": "2026-08-26",
-          "value": 102.431,
-          "coverage": 91
+          "value": 102.419,
+          "coverage": 90
         },
         {
           "date": "2026-08-27",
-          "value": 108.248,
-          "coverage": 91
+          "value": 108.136,
+          "coverage": 90
         },
         {
           "date": "2026-08-28",
-          "value": 106.275,
-          "coverage": 91
+          "value": 106.038,
+          "coverage": 90
         },
         {
           "date": "2026-08-31",
-          "value": 108.478,
-          "coverage": 90
+          "value": 108.289,
+          "coverage": 89
         },
         {
           "date": "2026-09-01",
-          "value": 104.147,
-          "coverage": 90
+          "value": 103.978,
+          "coverage": 89
+        },
+        {
+          "date": "2026-09-02",
+          "value": 102.25,
+          "coverage": 89
         }
       ]
     }
