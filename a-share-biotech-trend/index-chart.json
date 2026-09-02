@@ -1,8 +1,8 @@
 {
   "status": "OPEN_D_VERIFIED_NORMALIZED_INDEX_CHART",
-  "generated_at": "2026-09-01T17:57:37+08:00",
+  "generated_at": "2026-09-02T17:55:39+08:00",
   "base_date": "2026-07-27",
-  "data_date": "2026-09-01",
+  "data_date": "2026-09-02",
   "method": "first close on or after 2026-07-27 = 100; custom line is daily equal weight",
   "note": "行业ETF用于观察医药生物整体交易表现；自选等权篮子覆盖本页创新药、生物制品、CXO、医疗器械、中药与流通标的。",
   "lines": [
@@ -117,6 +117,10 @@
         {
           "date": "2026-09-01",
           "value": 98.065
+        },
+        {
+          "date": "2026-09-02",
+          "value": 96.715
         }
       ]
     },
@@ -231,6 +235,10 @@
         {
           "date": "2026-09-01",
           "value": 102.475
+        },
+        {
+          "date": "2026-09-02",
+          "value": 101.782
         }
       ]
     },
@@ -241,137 +249,142 @@
         {
           "date": "2026-07-27",
           "value": 100.0,
-          "coverage": 22
+          "coverage": 24
         },
         {
           "date": "2026-07-28",
-          "value": 97.392,
-          "coverage": 22
+          "value": 97.298,
+          "coverage": 24
         },
         {
           "date": "2026-07-29",
-          "value": 96.658,
-          "coverage": 22
+          "value": 96.762,
+          "coverage": 24
         },
         {
           "date": "2026-07-30",
-          "value": 92.798,
-          "coverage": 22
+          "value": 93.101,
+          "coverage": 24
         },
         {
           "date": "2026-07-31",
-          "value": 94.224,
-          "coverage": 22
+          "value": 94.688,
+          "coverage": 24
         },
         {
           "date": "2026-08-03",
-          "value": 92.844,
-          "coverage": 22
+          "value": 93.433,
+          "coverage": 24
         },
         {
           "date": "2026-08-04",
-          "value": 99.406,
-          "coverage": 22
+          "value": 100.376,
+          "coverage": 24
         },
         {
           "date": "2026-08-05",
-          "value": 101.614,
-          "coverage": 22
+          "value": 102.419,
+          "coverage": 24
         },
         {
           "date": "2026-08-06",
-          "value": 100.753,
-          "coverage": 22
+          "value": 101.485,
+          "coverage": 24
         },
         {
           "date": "2026-08-07",
-          "value": 111.447,
-          "coverage": 22
+          "value": 112.377,
+          "coverage": 24
         },
         {
           "date": "2026-08-10",
-          "value": 116.268,
-          "coverage": 22
+          "value": 117.95,
+          "coverage": 24
         },
         {
           "date": "2026-08-11",
-          "value": 117.138,
-          "coverage": 22
+          "value": 118.843,
+          "coverage": 24
         },
         {
           "date": "2026-08-12",
-          "value": 117.063,
-          "coverage": 22
+          "value": 118.406,
+          "coverage": 24
         },
         {
           "date": "2026-08-13",
-          "value": 120.758,
-          "coverage": 22
+          "value": 123.141,
+          "coverage": 24
         },
         {
           "date": "2026-08-14",
-          "value": 120.759,
-          "coverage": 22
+          "value": 124.026,
+          "coverage": 24
         },
         {
           "date": "2026-08-17",
-          "value": 121.843,
-          "coverage": 22
+          "value": 124.674,
+          "coverage": 24
         },
         {
           "date": "2026-08-18",
-          "value": 119.111,
-          "coverage": 22
+          "value": 121.162,
+          "coverage": 24
         },
         {
           "date": "2026-08-19",
-          "value": 112.766,
-          "coverage": 22
+          "value": 114.611,
+          "coverage": 24
         },
         {
           "date": "2026-08-20",
-          "value": 121.253,
-          "coverage": 22
+          "value": 123.802,
+          "coverage": 24
         },
         {
           "date": "2026-08-21",
-          "value": 116.819,
-          "coverage": 22
+          "value": 121.323,
+          "coverage": 24
         },
         {
           "date": "2026-08-24",
-          "value": 110.81,
-          "coverage": 22
+          "value": 115.124,
+          "coverage": 24
         },
         {
           "date": "2026-08-25",
-          "value": 112.321,
-          "coverage": 22
+          "value": 117.772,
+          "coverage": 24
         },
         {
           "date": "2026-08-26",
-          "value": 111.418,
-          "coverage": 22
+          "value": 117.019,
+          "coverage": 24
         },
         {
           "date": "2026-08-27",
-          "value": 111.568,
-          "coverage": 22
+          "value": 117.242,
+          "coverage": 24
         },
         {
           "date": "2026-08-28",
-          "value": 108.888,
-          "coverage": 22
+          "value": 114.088,
+          "coverage": 24
         },
         {
           "date": "2026-08-31",
-          "value": 106.851,
-          "coverage": 22
+          "value": 111.582,
+          "coverage": 24
         },
         {
           "date": "2026-09-01",
-          "value": 106.742,
-          "coverage": 22
+          "value": 112.229,
+          "coverage": 24
+        },
+        {
+          "date": "2026-09-02",
+          "value": 112.084,
+          "coverage": 24
         }
       ]
     }
