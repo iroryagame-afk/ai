@@ -94,6 +94,17 @@ class SiteNavigationTests(unittest.TestCase):
             with self.subTest(marker=marker):
                 self.assertIn(marker, text)
 
+    def test_latest_us_weekly_event_uses_mobile_cards_without_horizontal_scroll(self):
+        event_route = SITE_NAV.current_event_route()
+        text = (ROOT / event_route / "us/index.html").read_text(encoding="utf-8")
+        self.assertIn(".table-wrap { overflow-x:hidden; }", text)
+        self.assertIn(".table-wrap table { min-width:0; table-layout:fixed; }", text)
+        self.assertIn(".table-wrap { overflow:visible;", text)
+        self.assertIn("display:block; width:100%; min-width:0;", text)
+        self.assertIn(".table-wrap thead { display:none; }", text)
+        self.assertIn('content:"本次 Beat概率"', text)
+        self.assertIn('content:"A股 / 产业映射"', text)
+
     def test_refresh_labels_come_from_page_freshness_data(self):
         SITE_NAV.PAGE_REFRESH_DATES = {}
         SITE_NAV.nav("index.html")
