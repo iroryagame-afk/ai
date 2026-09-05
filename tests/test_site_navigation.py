@@ -62,6 +62,25 @@ class SiteNavigationTests(unittest.TestCase):
         )
         self.assertEqual(event_route, complete_event_roots[-1])
 
+    def test_latest_us_weekly_event_preserves_expectation_management_schema(self):
+        event_route = SITE_NAV.current_event_route()
+        text = (ROOT / event_route / "us/index.html").read_text(encoding="utf-8")
+        required_markers = [
+            "近4季EPS",
+            "本次Beat概率",
+            "上次财报后",
+            "T+1 / T+5",
+            "本次真正验收项",
+            "A股/产业映射",
+            "T−7",
+            "T−3",
+            "T−1",
+            "兑现规则与失效条件",
+        ]
+        for marker in required_markers:
+            with self.subTest(marker=marker):
+                self.assertIn(marker, text)
+
     def test_refresh_labels_come_from_page_freshness_data(self):
         SITE_NAV.PAGE_REFRESH_DATES = {}
         SITE_NAV.nav("index.html")
