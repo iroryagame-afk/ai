@@ -5,7 +5,9 @@ from __future__ import annotations
 
 import json
 import re
+from datetime import datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -95,6 +97,14 @@ PICKER_REFRESH_DATES = {
 }
 
 
+def target_event_route(now_bj: datetime | None = None) -> str:
+    """Use the coming ISO week from Saturday so the weekend never points at elapsed events."""
+    now_bj = now_bj or datetime.now(ZoneInfo("Asia/Shanghai"))
+    target_date = now_bj.date() + timedelta(days=7) if now_bj.weekday() >= 5 else now_bj.date()
+    iso_year, iso_week, _ = target_date.isocalendar()
+    return f"weekly-event-transmission-{iso_year}w{iso_week:02d}/"
+
+
 def current_event_route() -> str:
     event_roots = [
         path for path in ROOT.glob("weekly-event-transmission-*")
@@ -102,7 +112,11 @@ def current_event_route() -> str:
     ]
     if not event_roots:
         raise SystemExit("no complete weekly event page set")
-    return max(event_roots, key=lambda path: path.name).name + "/"
+    selected = max(event_roots, key=lambda path: path.name).name + "/"
+    target = target_event_route()
+    if selected < target:
+        raise SystemExit(f"latest complete weekly event page is stale: {selected} < {target}")
+    return selected
 
 
 def active_pages() -> list[str]:

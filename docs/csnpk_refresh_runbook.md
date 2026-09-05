@@ -80,6 +80,7 @@
 - /macro-event-radar/：候选采集和人工/规则核验分层；partial 不能伪装 complete。
 - /us-market/x-consensus/：社交线索、作者图表与 OpenD 行情分层；扫描时间、帖子时间和行情日期分别保留。
 - weekly-event-transmission-YYYYwWW：每周创建新目录；旧周保持快照，不在原目录冒充新周。只有 US 与 A 股子页都通过后才更新共享导航。
+- 周一至周五目标为当前 ISO 周；北京时间周六 00:00 起目标切换到下一 ISO 周。周末巡检必须先创建并核验下一周 US/A股两页，再切换共享导航；缺页或门禁失败记 `weekly_roll_forward_blocked`，不能继续把已结束事件称为本周最新。
 - weekly-event-transmission-YYYYwWW/us/ 必须通过预期管理结构门：本季一致预期、近4季 EPS Beat 率、本次条件式 Beat 概率、上次实际/共识、T+1/T+5、真正验收项、A股/产业映射、T−7/T−3/T−1、兑现/失效条件缺一即 `schema_gate_failed`，不得发布纯日历简版。
 
 独立事件组失败不阻塞 CN/US 收盘组。
