@@ -2,6 +2,8 @@ import importlib.util
 import json
 import re
 import unittest
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 
@@ -13,6 +15,17 @@ SPEC.loader.exec_module(SITE_NAV)
 
 
 class SiteNavigationTests(unittest.TestCase):
+    def test_weekend_event_target_rolls_to_coming_iso_week(self):
+        bj = ZoneInfo("Asia/Shanghai")
+        self.assertEqual(
+            SITE_NAV.target_event_route(datetime(2026, 9, 4, 23, 0, tzinfo=bj)),
+            "weekly-event-transmission-2026w36/",
+        )
+        self.assertEqual(
+            SITE_NAV.target_event_route(datetime(2026, 9, 5, 0, 0, tzinfo=bj)),
+            "weekly-event-transmission-2026w37/",
+        )
+
     def test_every_active_page_uses_one_shared_navigation(self):
         for relative in SITE_NAV.active_pages():
             with self.subTest(page=relative):
