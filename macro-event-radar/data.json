@@ -3,15 +3,19 @@
   "page_status": "live",
   "verification_status": "partial",
   "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-09-01_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
-  "generated_at": "2026-09-01T22:40:00+08:00",
-  "window": {"recent_hours": 240, "calendar_days": 30, "timezone": "Asia/Shanghai"},
+  "generated_at": "2026-09-05T20:08:00+08:00",
+  "window": {
+    "recent_hours": 240,
+    "calendar_days": 30,
+    "timezone": "Asia/Shanghai"
+  },
   "brief": {
-    "title": "美委油田协议披露条款，药价协议出现口径分歧",
-    "summary": "白宫与NABEP披露委内瑞拉油田协议：NABEP获17个油田百年特许，美国取得其母公司35%股权、20%产量成本价承购权及其余产量优先购买权；储量、投资与增产节奏仍待合同和实物流量验证。药价侧，白宫称新增九家药企MFN协议并覆盖89%品牌药市场，Astellas确认已达成协议，但Teva仍称处于积极磋商和拟议阶段，条款状态不能一概视为全部最终生效。",
-    "discipline": "候选来自真实采集池，但采集不等于核验：一手源必须读取正文，专业媒体与社交信息必须回链官方原文。价格只验证市场响应，不能反向证明传闻。",
-    "core_count": 23,
+    "title": "NVIDIA并购Hugging Face，Astra与Fable 5.1正式上线，Fed通胀条件函数抬升利率尾部风险",
+    "summary": "新增5项已核验事件：NVIDIA拟以约129亿美元收购Hugging Face；OpenAI GPT-6 Astra和Anthropic Claude Fable 5.1正式发布；Waller给出依8月通胀而定的暂停/加息个人反应函数；美国7月贸易逆差扩大且资本品进口创纪录。另以OpenAI技术复盘和METR/Redwood独立调查升级网络安全事件。",
+    "discipline": "一手原文确认事实不等于商业兑现或价格因果；厂商基准、并购协同、模型采用、政策投票与行业订单均继续列为待核验。",
+    "core_count": 28,
     "pending_count": 1,
-    "next_event_count": 7
+    "next_event_count": 8
   },
   "events": [
     {
@@ -30,22 +34,64 @@
       "inference": "推断：若合同、融资和产量计划兑现，美国炼厂与战略储备可获得更多重质原油选择，油服与基础设施需求也可能上升；但闲置油田复产、管线修复和资本开支需要多年，不能把储量权益直接等同于短期新增供应。",
       "unverified": "本轮未取得完整合同、特许权附件、储量审计、委内瑞拉法律意见、融资承诺和项目进度表；650亿桶储量、1,000亿美元投资、2,000亿美元税费及低成本供油均为政府或公司前瞻口径，尚未由独立工程、审计和实物流量数据验证。",
       "transmission": [
-        {"level": "A", "path": "油田特许权与承购权 → NABEP融资/复产投资 → 委内瑞拉原油产量与美国重质油进口"},
-        {"level": "B", "path": "35%股权与治理权 → 美国战略能源控制与收益安排 → SPR、军用与炼厂供给选择"},
-        {"level": "C", "path": "长期增产预期与地缘重排 → 原油期限结构/风险溢价 → 能源、炼化、油服与运输资产"}
+        {
+          "level": "A",
+          "path": "油田特许权与承购权 → NABEP融资/复产投资 → 委内瑞拉原油产量与美国重质油进口"
+        },
+        {
+          "level": "B",
+          "path": "35%股权与治理权 → 美国战略能源控制与收益安排 → SPR、军用与炼厂供给选择"
+        },
+        {
+          "level": "C",
+          "path": "长期增产预期与地缘重排 → 原油期限结构/风险溢价 → 能源、炼化、油服与运输资产"
+        }
       ],
       "affected_assets": [
-        {"market": "原油与美国炼厂", "direction": "长期供给偏增、短期影响有限", "horizon": "6个月至5年", "reason": "成本价承购和优先购买权增加美国重质油选择，但复产速度与品质、物流仍未核验。"},
-        {"market": "油服、钻井与基础设施", "direction": "潜在订单增加", "horizon": "1–5年", "reason": "公司提出大额投资和扩产目标，实际订单取决于融资、许可、设备和施工进度。"},
-        {"market": "委内瑞拉主权与地缘风险", "direction": "控制权重排、争议上升", "horizon": "1–10年", "reason": "百年特许权、美国股权与治理安排可能带来法律、政治与履约风险。"}
+        {
+          "market": "原油与美国炼厂",
+          "direction": "长期供给偏增、短期影响有限",
+          "horizon": "6个月至5年",
+          "reason": "成本价承购和优先购买权增加美国重质油选择，但复产速度与品质、物流仍未核验。"
+        },
+        {
+          "market": "油服、钻井与基础设施",
+          "direction": "潜在订单增加",
+          "horizon": "1–5年",
+          "reason": "公司提出大额投资和扩产目标，实际订单取决于融资、许可、设备和施工进度。"
+        },
+        {
+          "market": "委内瑞拉主权与地缘风险",
+          "direction": "控制权重排、争议上升",
+          "horizon": "1–10年",
+          "reason": "百年特许权、美国股权与治理安排可能带来法律、政治与履约风险。"
+        }
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-09-01T22:40:00+08:00", "detail": "9月1日美股交易尚未完成，且油价受霍尔木兹、库存与供需预期共同影响；本轮不以盘中波动证明长期协议价值。"},
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-09-01T22:40:00+08:00",
+        "detail": "9月1日美股交易尚未完成，且油价受霍尔木兹、库存与供需预期共同影响；本轮不以盘中波动证明长期协议价值。"
+      },
       "next_checkpoint": "获取合同、特许权和委内瑞拉法律文本，核验储量审计、融资来源、首批资本开支、复产时间表、实际产量和美国承购流量。",
       "invalidation": "合同或特许权未能生效、融资和许可停滞、储量审计显著下调、产量恢复远低于计划，或委内瑞拉政治与法律变化削弱履约。",
-      "candidate_refs": ["whitehouse_news-d5e3d11c67b07427"],
+      "candidate_refs": [
+        "whitehouse_news-d5e3d11c67b07427"
+      ],
       "sources": [
-        {"role": "primary", "name": "White House — U.S.–Venezuela Oil Agreement Fact Sheet", "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/", "published_at": "2026-08-31T23:55:33+00:00", "note": "核验政府公布的17个油田、100年特许、650亿桶、35%股权、20%成本价承购及治理权口径。"},
-        {"role": "primary", "name": "NABEP — Company-provided Agreement Statement", "url": "https://www.prnewswire.co.uk/news-releases/united-states-government-and-north-american-blue-energy-partners-nabep-reach-historic-deal-to-develop-venezuelas-oil-sector-302865705.html", "published_at": "2026-09-01T08:09:00-04:00", "note": "核验NABEP对35%股权、20%优先承购和投资计划的公司口径；完整合同仍未公开。"}
+        {
+          "role": "primary",
+          "name": "White House — U.S.–Venezuela Oil Agreement Fact Sheet",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "published_at": "2026-08-31T23:55:33+00:00",
+          "note": "核验政府公布的17个油田、100年特许、650亿桶、35%股权、20%成本价承购及治理权口径。"
+        },
+        {
+          "role": "primary",
+          "name": "NABEP — Company-provided Agreement Statement",
+          "url": "https://www.prnewswire.co.uk/news-releases/united-states-government-and-north-american-blue-energy-partners-nabep-reach-historic-deal-to-develop-venezuelas-oil-sector-302865705.html",
+          "published_at": "2026-09-01T08:09:00-04:00",
+          "note": "核验NABEP对35%股权、20%优先承购和投资计划的公司口径；完整合同仍未公开。"
+        }
       ]
     },
     {
@@ -64,23 +110,71 @@
       "inference": "推断：最终协议若覆盖Medicaid存量药和未来创新药，相关企业美国净价与利润率可能承压，同时制造投资和原料药储备会增加本地化资本开支；实际影响取决于产品清单、基准国、折扣口径、豁免和生效节奏。",
       "unverified": "九家企业的完整合同、具体药品与价格、各州实施日期、196亿美元投资分项和新增性、API储备交付、联邦预算节省均未完整公开；Teva是否已签署最终协议与白宫表述存在待协调差异。",
       "transmission": [
-        {"level": "A", "path": "Medicaid与未来药品MFN定价 → 美国净价/回扣变化 → 药企收入与利润率"},
-        {"level": "B", "path": "制造投资与API捐赠 → 美国本地供应链和战略储备 → 产能、资本开支与供应安全"},
-        {"level": "C", "path": "头部覆盖率上升 → 行业定价基准与谈判预期 → 全球药价和研发回报评估"}
+        {
+          "level": "A",
+          "path": "Medicaid与未来药品MFN定价 → 美国净价/回扣变化 → 药企收入与利润率"
+        },
+        {
+          "level": "B",
+          "path": "制造投资与API捐赠 → 美国本地供应链和战略储备 → 产能、资本开支与供应安全"
+        },
+        {
+          "level": "C",
+          "path": "头部覆盖率上升 → 行业定价基准与谈判预期 → 全球药价和研发回报评估"
+        }
       ],
       "affected_assets": [
-        {"market": "九家具名药企", "direction": "价格压力与供应链投资并存", "horizon": "1–24个月", "reason": "方向取决于具体产品、Medicaid敞口、国际参考价和制造承诺，不能按统一比例外推。"},
-        {"market": "美国品牌药与创新药", "direction": "定价权边际受压", "horizon": "1–36个月", "reason": "白宫称覆盖率升至89%，但合同效力、产品范围和执行机制仍不透明。"},
-        {"market": "美国制药制造与API", "direction": "本地化投入偏正面", "horizon": "1–5年", "reason": "制造承诺和战略API储备可能带来设备、产能和库存需求，需核验新增投资。"}
+        {
+          "market": "九家具名药企",
+          "direction": "价格压力与供应链投资并存",
+          "horizon": "1–24个月",
+          "reason": "方向取决于具体产品、Medicaid敞口、国际参考价和制造承诺，不能按统一比例外推。"
+        },
+        {
+          "market": "美国品牌药与创新药",
+          "direction": "定价权边际受压",
+          "horizon": "1–36个月",
+          "reason": "白宫称覆盖率升至89%，但合同效力、产品范围和执行机制仍不透明。"
+        },
+        {
+          "market": "美国制药制造与API",
+          "direction": "本地化投入偏正面",
+          "horizon": "1–5年",
+          "reason": "制造承诺和战略API储备可能带来设备、产能和库存需求，需核验新增投资。"
+        }
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-09-01T22:40:00+08:00", "detail": "9月1日美股交易尚未完成，且九家公司跨美国、日本、欧洲与印度市场；本轮不以单日股价替代合同条款和利润影响。"},
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-09-01T22:40:00+08:00",
+        "detail": "9月1日美股交易尚未完成，且九家公司跨美国、日本、欧洲与印度市场；本轮不以单日股价替代合同条款和利润影响。"
+      },
       "next_checkpoint": "逐家公司核验最终协议、产品清单、折扣基准、生效日、Medicaid实施、制造投资和API交付，并优先澄清Teva公告与白宫表述差异。",
       "invalidation": "多数协议停留在意向、覆盖产品和折扣范围显著收窄、法律执行受阻，或投资与API承诺主要为既有计划重述。",
-      "candidate_refs": ["whitehouse_news-34ea7ed8f36c58a0"],
+      "candidate_refs": [
+        "whitehouse_news-34ea7ed8f36c58a0"
+      ],
       "sources": [
-        {"role": "primary", "name": "White House — Nine Additional Pharmaceutical Manufacturers MFN Fact Sheet", "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-deal-with-nine-additional-pharmaceutical-manufacturers-to-lower-drug-prices-for-americans/", "published_at": "2026-08-31T19:14:29+00:00", "note": "核验九家公司、26家总数、89%覆盖率、Medicaid、196亿美元制造投入与API储备口径。"},
-        {"role": "primary", "name": "Astellas — Voluntary Agreement with U.S. Government", "url": "https://newsroom.astellas.com/2026-09-01-astellas-enters-voluntary-agreement-with-us-government-supporting-affordable-access-to-medicines", "published_at": "2026-08-31T00:00:00+09:00", "note": "核验Astellas已达成协议、Medicaid与未来药品定价承诺及25公斤他克莫司API捐赠。"},
-        {"role": "primary", "name": "Teva — Intent to Reach Agreement", "url": "https://www.tevausa.com/news-and-media/press-releases/teva-and-trump-administration-announce-intent-to-reach-agreement-around-affordable-medicines-and-supply-c/", "published_at": "2026-08-31T00:00:00-04:00", "note": "核验Teva仍称积极磋商、若达成协议及条款保密，形成对白宫统一表述的重要边界。"}
+        {
+          "role": "primary",
+          "name": "White House — Nine Additional Pharmaceutical Manufacturers MFN Fact Sheet",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-deal-with-nine-additional-pharmaceutical-manufacturers-to-lower-drug-prices-for-americans/",
+          "published_at": "2026-08-31T19:14:29+00:00",
+          "note": "核验九家公司、26家总数、89%覆盖率、Medicaid、196亿美元制造投入与API储备口径。"
+        },
+        {
+          "role": "primary",
+          "name": "Astellas — Voluntary Agreement with U.S. Government",
+          "url": "https://newsroom.astellas.com/2026-09-01-astellas-enters-voluntary-agreement-with-us-government-supporting-affordable-access-to-medicines",
+          "published_at": "2026-08-31T00:00:00+09:00",
+          "note": "核验Astellas已达成协议、Medicaid与未来药品定价承诺及25公斤他克莫司API捐赠。"
+        },
+        {
+          "role": "primary",
+          "name": "Teva — Intent to Reach Agreement",
+          "url": "https://www.tevausa.com/news-and-media/press-releases/teva-and-trump-administration-announce-intent-to-reach-agreement-around-affordable-medicines-and-supply-c/",
+          "published_at": "2026-08-31T00:00:00-04:00",
+          "note": "核验Teva仍称积极磋商、若达成协议及条款保密，形成对白宫统一表述的重要边界。"
+        }
       ]
     },
     {
@@ -99,23 +193,72 @@
       "inference": "推断：开放权重降低本地部署与二次开发门槛，昇腾等框架支持有利于国产推理生态验证；但753B参数带来较高部署资源需求，且许可约束可能影响大型云厂商的商业采用速度。",
       "unverified": "官方公布的编码、智能体和网络安全基准仍属厂商自报；第三方复现、真实吞吐、显存需求、下载转化、企业采用、API调用量和收入贡献均未确认。",
       "transmission": [
-        {"level": "A", "path": "权重与部署说明开放 → 本地运行/微调门槛下降 → 开发者与企业试用"},
-        {"level": "B", "path": "753B模型与多框架适配 → 推理硬件和软件栈验证 → 国产算力生态"},
-        {"level": "C", "path": "真实采用与调用增长 → 云与推理基础设施需求 → 产业链收入，仍待订单验证"}
+        {
+          "level": "A",
+          "path": "权重与部署说明开放 → 本地运行/微调门槛下降 → 开发者与企业试用"
+        },
+        {
+          "level": "B",
+          "path": "753B模型与多框架适配 → 推理硬件和软件栈验证 → 国产算力生态"
+        },
+        {
+          "level": "C",
+          "path": "真实采用与调用增长 → 云与推理基础设施需求 → 产业链收入，仍待订单验证"
+        }
       ],
       "affected_assets": [
-        {"market": "中国AI模型与软件", "direction": "生态扩展、采用待确认", "horizon": "1–6个月", "reason": "权重开放支持本地部署和定制，但大型服务商许可与资源门槛会影响扩散速度。"},
-        {"market": "国产算力与推理框架", "direction": "验证机会增加", "horizon": "1–12个月", "reason": "官方列出昇腾相关推理支持；支持声明不等于量产订单或收入。"},
-        {"market": "大型云模型服务商", "direction": "许可约束分化", "horizon": "1–12个月", "reason": "收入超过100亿美元且经营模型即服务者需先通过Z.ai安全审查。"}
+        {
+          "market": "中国AI模型与软件",
+          "direction": "生态扩展、采用待确认",
+          "horizon": "1–6个月",
+          "reason": "权重开放支持本地部署和定制，但大型服务商许可与资源门槛会影响扩散速度。"
+        },
+        {
+          "market": "国产算力与推理框架",
+          "direction": "验证机会增加",
+          "horizon": "1–12个月",
+          "reason": "官方列出昇腾相关推理支持；支持声明不等于量产订单或收入。"
+        },
+        {
+          "market": "大型云模型服务商",
+          "direction": "许可约束分化",
+          "horizon": "1–12个月",
+          "reason": "收入超过100亿美元且经营模型即服务者需先通过Z.ai安全审查。"
+        }
       ],
-      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-08-29T23:43:00+08:00", "detail": "Z.ai并非独立上市公司，周末也没有可与其他因素分离的市场确认；本轮不以相关概念股波动替代采用证据。"},
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-08-29T23:43:00+08:00",
+        "detail": "Z.ai并非独立上市公司，周末也没有可与其他因素分离的市场确认；本轮不以相关概念股波动替代采用证据。"
+      },
       "next_checkpoint": "跟踪第三方编码、网络安全、吞吐与显存复现，核验昇腾适配、下载量、企业试点以及大型模型服务商的许可证合规路径。",
       "invalidation": "权重无法稳定部署、第三方测试显著不及官方口径、资源成本过高，或许可证约束明显抑制商业采用。",
-      "candidate_refs": ["zai_huggingface-79d579d8c2afee93", "aihot-1183bbf1b890989e"],
+      "candidate_refs": [
+        "zai_huggingface-79d579d8c2afee93",
+        "aihot-1183bbf1b890989e"
+      ],
       "sources": [
-        {"role": "primary", "name": "Z.ai Hugging Face — GLM-5.3", "url": "https://huggingface.co/zai-org/GLM-5.3", "published_at": "2026-08-29T09:51:13+00:00", "note": "核验权重仓库、753B参数、本地部署框架、昇腾支持与厂商基准口径。"},
-        {"role": "primary", "name": "Z.ai — GLM-5.3 License", "url": "https://huggingface.co/zai-org/GLM-5.3/raw/main/LICENSE", "published_at": "2026-08-29T09:51:13+00:00", "note": "核验使用、修改与分发许可，以及大型模型即服务商的安全审查条件。"},
-        {"role": "primary", "name": "Z.ai — GLM-5.3发布说明", "url": "https://z.ai/blog/glm-5.3", "published_at": "2026-08-14T00:00:00+08:00", "note": "核验初始API发布与后训练定位；基准数据仍属厂商自报。"}
+        {
+          "role": "primary",
+          "name": "Z.ai Hugging Face — GLM-5.3",
+          "url": "https://huggingface.co/zai-org/GLM-5.3",
+          "published_at": "2026-08-29T09:51:13+00:00",
+          "note": "核验权重仓库、753B参数、本地部署框架、昇腾支持与厂商基准口径。"
+        },
+        {
+          "role": "primary",
+          "name": "Z.ai — GLM-5.3 License",
+          "url": "https://huggingface.co/zai-org/GLM-5.3/raw/main/LICENSE",
+          "published_at": "2026-08-29T09:51:13+00:00",
+          "note": "核验使用、修改与分发许可，以及大型模型即服务商的安全审查条件。"
+        },
+        {
+          "role": "primary",
+          "name": "Z.ai — GLM-5.3发布说明",
+          "url": "https://z.ai/blog/glm-5.3",
+          "published_at": "2026-08-14T00:00:00+08:00",
+          "note": "核验初始API发布与后训练定位；基准数据仍属厂商自报。"
+        }
       ]
     },
     {
@@ -134,20 +277,54 @@
       "inference": "推断：若官方数字被航运和装运数据确认，海湾非伊朗原油外运恢复可缓解全球供应冲击，而伊朗出口归零会强化对其财政与外汇的压力；两股力量对油价方向相反，净效应取决于区域供给、保险和风险溢价。",
       "unverified": "7.5亿桶、1,500艘、伊朗零出口及三分之二恢复比例尚未由独立船舶追踪、港口装运和库存数据完整复核；白宫对封锁效果和控制权的表述属于行政当局口径。",
       "transmission": [
-        {"level": "A", "path": "航道清雷与护航 → 海湾非伊朗原油外运恢复 → 现货供应与运费保险"},
-        {"level": "B", "path": "伊朗原油出口受阻 → 财政与外汇压力 → 制裁与地区风险升级"},
-        {"level": "C", "path": "供应恢复与地缘溢价对冲 → 油价波动 → 通胀预期、能源股与航空化工成本"}
+        {
+          "level": "A",
+          "path": "航道清雷与护航 → 海湾非伊朗原油外运恢复 → 现货供应与运费保险"
+        },
+        {
+          "level": "B",
+          "path": "伊朗原油出口受阻 → 财政与外汇压力 → 制裁与地区风险升级"
+        },
+        {
+          "level": "C",
+          "path": "供应恢复与地缘溢价对冲 → 油价波动 → 通胀预期、能源股与航空化工成本"
+        }
       ],
       "affected_assets": [
-        {"market": "原油与成品油", "direction": "供给恢复偏空、地缘风险偏多", "horizon": "盘中至3个月", "reason": "海湾外运恢复缓解供应，但封锁和军事风险继续支撑风险溢价。"},
-        {"market": "航运与保险", "direction": "通行改善、风险成本仍高", "horizon": "1–12周", "reason": "护航与清雷有利于通行，实际保费和绕航仍需独立数据确认。"},
-        {"market": "伊朗财政与地区风险", "direction": "压力上升", "horizon": "1–6个月", "reason": "若零出口得到确认，能源收入和进口能力将受更强约束。"}
+        {
+          "market": "原油与成品油",
+          "direction": "供给恢复偏空、地缘风险偏多",
+          "horizon": "盘中至3个月",
+          "reason": "海湾外运恢复缓解供应，但封锁和军事风险继续支撑风险溢价。"
+        },
+        {
+          "market": "航运与保险",
+          "direction": "通行改善、风险成本仍高",
+          "horizon": "1–12周",
+          "reason": "护航与清雷有利于通行，实际保费和绕航仍需独立数据确认。"
+        },
+        {
+          "market": "伊朗财政与地区风险",
+          "direction": "压力上升",
+          "horizon": "1–6个月",
+          "reason": "若零出口得到确认，能源收入和进口能力将受更强约束。"
+        }
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-29T23:43:00+08:00", "detail": "材料发布于周末前后且油价受供需、库存与战争预期共同影响；本轮未用单日价格反向证明白宫数字。"},
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-08-29T23:43:00+08:00",
+        "detail": "材料发布于周末前后且油价受供需、库存与战争预期共同影响；本轮未用单日价格反向证明白宫数字。"
+      },
       "next_checkpoint": "用Kpler/Vortexa、港口装运、AIS、油轮保险费率和EIA/OPEC流量数据独立复核船数、桶数、伊朗出口与海湾恢复比例。",
       "invalidation": "独立航运与装运数据显著低于官方口径，航道重新受阻，或海湾供应恢复不能持续。",
       "sources": [
-        {"role": "primary", "name": "White House — America Controls the Strait of Hormuz", "url": "https://www.whitehouse.gov/releases/2026/08/president-trump-was-right-america-controls-the-strait-of-hormuz/", "published_at": "2026-08-28T00:00:00-04:00", "note": "核验白宫披露的清雷、护航船数、运输量、伊朗出口与海湾供给恢复口径；数字仍待独立复核。"}
+        {
+          "role": "primary",
+          "name": "White House — America Controls the Strait of Hormuz",
+          "url": "https://www.whitehouse.gov/releases/2026/08/president-trump-was-right-america-controls-the-strait-of-hormuz/",
+          "published_at": "2026-08-28T00:00:00-04:00",
+          "note": "核验白宫披露的清雷、护航船数、运输量、伊朗出口与海湾供给恢复口径；数字仍待独立复核。"
+        }
       ]
     },
     {
@@ -166,21 +343,61 @@
       "inference": "推断：Cursor需要加快自有模型、其他供应商与网关路由替代，OpenAI则把更多开发者入口引向直接API和Codex扩展；短期可能增加开发者迁移摩擦，中期会重塑AI编程工具的模型议价与分发结构。",
       "unverified": "最终停供日期、Cursor是否提前终止、受影响用户和调用量、合同收入、SpaceX与Cursor的替代供应商安排以及开发者流失率尚未披露。",
       "transmission": [
-        {"level": "A", "path": "供模合同拟终止 → Cursor模型可用性与路由变化 → 开发者迁移与留存"},
-        {"level": "B", "path": "BYOK/Codex/网关替代 → OpenAI直接分发占比变化 → API与订阅收入结构"},
-        {"level": "C", "path": "多模型供应重排 → AI编程工具议价与成本 → 应用层竞争格局"}
+        {
+          "level": "A",
+          "path": "供模合同拟终止 → Cursor模型可用性与路由变化 → 开发者迁移与留存"
+        },
+        {
+          "level": "B",
+          "path": "BYOK/Codex/网关替代 → OpenAI直接分发占比变化 → API与订阅收入结构"
+        },
+        {
+          "level": "C",
+          "path": "多模型供应重排 → AI编程工具议价与成本 → 应用层竞争格局"
+        }
       ],
       "affected_assets": [
-        {"market": "AI编程工具", "direction": "竞争与迁移风险上升", "horizon": "1–6个月", "reason": "核心供模合同拟终止，受影响功能不能全部由BYOK直接覆盖。"},
-        {"market": "OpenAI开发者生态", "direction": "直接分发机会增加", "horizon": "1–12个月", "reason": "API与Codex扩展保留独立入口，但净调用与收入变化尚未披露。"},
-        {"market": "多模型网关与替代供应商", "direction": "潜在需求增加", "horizon": "1–6个月", "reason": "Cursor需重构供应，但最终替代路径与份额仍待确认。"}
+        {
+          "market": "AI编程工具",
+          "direction": "竞争与迁移风险上升",
+          "horizon": "1–6个月",
+          "reason": "核心供模合同拟终止，受影响功能不能全部由BYOK直接覆盖。"
+        },
+        {
+          "market": "OpenAI开发者生态",
+          "direction": "直接分发机会增加",
+          "horizon": "1–12个月",
+          "reason": "API与Codex扩展保留独立入口，但净调用与收入变化尚未披露。"
+        },
+        {
+          "market": "多模型网关与替代供应商",
+          "direction": "潜在需求增加",
+          "horizon": "1–6个月",
+          "reason": "Cursor需重构供应，但最终替代路径与份额仍待确认。"
+        }
       ],
-      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-08-29T23:43:00+08:00", "detail": "OpenAI、Cursor与SpaceX并非可独立交易的对应资产，无法从单一上市公司价格中隔离该合同变化。"},
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-08-29T23:43:00+08:00",
+        "detail": "OpenAI、Cursor与SpaceX并非可独立交易的对应资产，无法从单一上市公司价格中隔离该合同变化。"
+      },
       "next_checkpoint": "等待双方确认最终停供日、Cursor官方迁移说明、受影响功能清单、替代模型供应商与开发者留存数据。",
       "invalidation": "双方续签或大幅缩小停供范围，Cursor获得无缝替代且用户与调用量不受影响，或11月12日并非最终安排。",
       "sources": [
-        {"role": "primary", "name": "OpenAI — Our decision on Cursor following its acquisition by SpaceX", "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/", "published_at": "2026-08-28T00:00:00-07:00", "note": "核验合同拟终止、提议停供日、原因与未来模型不再供给。"},
-        {"role": "primary", "name": "OpenAI Help Center — Using OpenAI models in Cursor", "url": "https://help.openai.com/en/articles/20001506-using-openai-models-in-cursor", "published_at": "2026-08-29T00:00:00+00:00", "note": "核验日期尚待确认、BYOK/Codex/网关替代以及不受BYOK覆盖的功能边界。"}
+        {
+          "role": "primary",
+          "name": "OpenAI — Our decision on Cursor following its acquisition by SpaceX",
+          "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+          "published_at": "2026-08-28T00:00:00-07:00",
+          "note": "核验合同拟终止、提议停供日、原因与未来模型不再供给。"
+        },
+        {
+          "role": "primary",
+          "name": "OpenAI Help Center — Using OpenAI models in Cursor",
+          "url": "https://help.openai.com/en/articles/20001506-using-openai-models-in-cursor",
+          "published_at": "2026-08-29T00:00:00+00:00",
+          "note": "核验日期尚待确认、BYOK/Codex/网关替代以及不受BYOK覆盖的功能边界。"
+        }
       ]
     },
     {
@@ -199,21 +416,61 @@
       "inference": "推断：裁决降低Anthropic被全面排除在联邦及国防承包链之外的近期风险，并为美国AI供应商在政府采购中的言论、程序和供应链风险认定边界提供先例；政府上诉和另一宗案件仍可能改变最终影响。",
       "unverified": "政府是否上诉、上诉期间执行状态、被恢复的具体合同与收入、其他机构重新采购节奏及另一宗华盛顿特区案件结果尚未确认。",
       "transmission": [
-        {"level": "A", "path": "供应链风险认定被撤销 → 联邦与承包商使用障碍下降 → Anthropic政府业务机会"},
-        {"level": "B", "path": "AI安全红线获程序保护 → 政府采购合同条款重谈 → 前沿模型合规边界"},
-        {"level": "C", "path": "若政府上诉或改用其他采购权力 → 不确定性延续 → AI供应商估值与合作节奏"}
+        {
+          "level": "A",
+          "path": "供应链风险认定被撤销 → 联邦与承包商使用障碍下降 → Anthropic政府业务机会"
+        },
+        {
+          "level": "B",
+          "path": "AI安全红线获程序保护 → 政府采购合同条款重谈 → 前沿模型合规边界"
+        },
+        {
+          "level": "C",
+          "path": "若政府上诉或改用其他采购权力 → 不确定性延续 → AI供应商估值与合作节奏"
+        }
       ],
       "affected_assets": [
-        {"market": "美国政府AI采购", "direction": "供应商竞争重新打开", "horizon": "1–12个月", "reason": "广泛排除措施被撤销，但政府仍可自主选择供应商。"},
-        {"market": "前沿模型公司", "direction": "合规边界更清晰", "horizon": "3–18个月", "reason": "裁决约束报复性和无程序的风险认定，后续仍取决于上诉和合同条款。"},
-        {"market": "国防承包链", "direction": "Claude使用限制缓解，执行待确认", "horizon": "1–6个月", "reason": "裁决降低广泛禁用风险，但具体机构和承包商恢复流程尚未披露。"}
+        {
+          "market": "美国政府AI采购",
+          "direction": "供应商竞争重新打开",
+          "horizon": "1–12个月",
+          "reason": "广泛排除措施被撤销，但政府仍可自主选择供应商。"
+        },
+        {
+          "market": "前沿模型公司",
+          "direction": "合规边界更清晰",
+          "horizon": "3–18个月",
+          "reason": "裁决约束报复性和无程序的风险认定，后续仍取决于上诉和合同条款。"
+        },
+        {
+          "market": "国防承包链",
+          "direction": "Claude使用限制缓解，执行待确认",
+          "horizon": "1–6个月",
+          "reason": "裁决降低广泛禁用风险，但具体机构和承包商恢复流程尚未披露。"
+        }
       ],
-      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-08-29T23:43:00+08:00", "detail": "Anthropic并非独立上市公司，裁决影响也与AI政策、国防采购及IPO预期交织，无法用单一资产价格隔离。"},
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-08-29T23:43:00+08:00",
+        "detail": "Anthropic并非独立上市公司，裁决影响也与AI政策、国防采购及IPO预期交织，无法用单一资产价格隔离。"
+      },
       "next_checkpoint": "核验政府上诉与暂停执行申请、各机构撤销指令的状态报告、Anthropic政府合同恢复及另一宗特区上诉案件。",
       "invalidation": "上级法院暂停或推翻裁决，政府通过其他合法采购权力维持实质排除，或合同与收入未恢复。",
       "sources": [
-        {"role": "primary", "name": "U.S. District Court NDCA — Filing 250, Anthropic PBC v. U.S. Department of War", "url": "https://docs.justia.com/cases/federal/district-courts/california/candce/3%3A2026cv01996/465515/250", "published_at": "2026-08-27T00:00:00-07:00", "note": "核验简易判决范围、第一与第五修正案、10 U.S.C. §3252及政府仍可选择供应商的边界。"},
-        {"role": "secondary", "name": "Associated Press — Judge says Pentagon measures against Anthropic were illegal and baseless", "url": "https://apnews.com/article/anthropic-pentagon-lawsuit-supply-chain-risk-f15e3c30186385e73e72bee82d85b05c", "published_at": "2026-08-28T03:08:09+00:00", "note": "核验裁决背景、政府预计抗辩及Anthropic回应；最终法律状态以法院文件为准。"}
+        {
+          "role": "primary",
+          "name": "U.S. District Court NDCA — Filing 250, Anthropic PBC v. U.S. Department of War",
+          "url": "https://docs.justia.com/cases/federal/district-courts/california/candce/3%3A2026cv01996/465515/250",
+          "published_at": "2026-08-27T00:00:00-07:00",
+          "note": "核验简易判决范围、第一与第五修正案、10 U.S.C. §3252及政府仍可选择供应商的边界。"
+        },
+        {
+          "role": "secondary",
+          "name": "Associated Press — Judge says Pentagon measures against Anthropic were illegal and baseless",
+          "url": "https://apnews.com/article/anthropic-pentagon-lawsuit-supply-chain-risk-f15e3c30186385e73e72bee82d85b05c",
+          "published_at": "2026-08-28T03:08:09+00:00",
+          "note": "核验裁决背景、政府预计抗辩及Anthropic回应；最终法律状态以法院文件为准。"
+        }
       ]
     },
     {
@@ -232,20 +489,54 @@
       "inference": "推断：讲话会压低市场对快速宽松的确定性，短端利率和美元可能获得支撑，高久期资产对后续通胀数据更敏感；但Warsh刻意限制前瞻指引，不能把讲话机械解释为已经确定的加息时点或幅度。",
       "unverified": "8月28日美股交易尚未完成，本轮没有用盘中利率、美元或股指波动证明讲话影响；讲话中的部分生产率、货币和政策框架判断属于主席观点，不等于FOMC已作出新的利率决定。",
       "transmission": [
-        {"level": "A", "path": "主席强调通胀与2%固定目标 → 政策路径重估 → 短端利率与美元"},
-        {"level": "B", "path": "快速宽松概率下降 → 实际利率维持偏高 → 高久期成长估值"},
-        {"level": "C", "path": "限制前瞻指引 → 数据依赖与会议不确定性上升 → 跨资产波动率"}
+        {
+          "level": "A",
+          "path": "主席强调通胀与2%固定目标 → 政策路径重估 → 短端利率与美元"
+        },
+        {
+          "level": "B",
+          "path": "快速宽松概率下降 → 实际利率维持偏高 → 高久期成长估值"
+        },
+        {
+          "level": "C",
+          "path": "限制前瞻指引 → 数据依赖与会议不确定性上升 → 跨资产波动率"
+        }
       ],
       "affected_assets": [
-        {"market": "美债与美元", "direction": "短端偏空债、美元偏多，待收盘确认", "horizon": "盘中至20日", "reason": "主席认为就业稳定而通胀仍高，政策焦点偏向价格；尚无完整交易日回读。"},
-        {"market": "美股高久期成长", "direction": "估值约束上升", "horizon": "1–20日", "reason": "更高更久的实际利率预期可能压制估值，但盈利与AI生产率预期可能形成对冲。"},
-        {"market": "黄金与风险资产", "direction": "双向", "horizon": "盘中至10日", "reason": "美元与实际利率上行偏空，但政策不确定性和通胀黏性可能抬升对冲需求。"}
+        {
+          "market": "美债与美元",
+          "direction": "短端偏空债、美元偏多，待收盘确认",
+          "horizon": "盘中至20日",
+          "reason": "主席认为就业稳定而通胀仍高，政策焦点偏向价格；尚无完整交易日回读。"
+        },
+        {
+          "market": "美股高久期成长",
+          "direction": "估值约束上升",
+          "horizon": "1–20日",
+          "reason": "更高更久的实际利率预期可能压制估值，但盈利与AI生产率预期可能形成对冲。"
+        },
+        {
+          "market": "黄金与风险资产",
+          "direction": "双向",
+          "horizon": "盘中至10日",
+          "reason": "美元与实际利率上行偏空，但政策不确定性和通胀黏性可能抬升对冲需求。"
+        }
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-28T22:39:00+08:00", "detail": "讲话发生在8月28日美股交易时段内，本轮不使用未完成交易日的盘中价格冒充正式市场确认。"},
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-08-28T22:39:00+08:00",
+        "detail": "讲话发生在8月28日美股交易时段内，本轮不使用未完成交易日的盘中价格冒充正式市场确认。"
+      },
       "next_checkpoint": "核验8月28日完整收盘后的2年/10年美债、美元、黄金和成长股反应，并跟踪9月15–16日FOMC及下一批就业、PCE数据。",
       "invalidation": "后续就业快速恶化、通胀明显回落并促使FOMC明确转鸽，或市场在完整收盘后没有形成可持续的利率与美元重定价。",
       "sources": [
-        {"role": "primary", "name": "Federal Reserve — Chairman Warsh, In Our Time", "url": "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm", "published_at": "2026-08-28T10:00:00-04:00", "note": "核验Jackson Hole讲话、2%目标、利率工具、就业判断、PCE数据与政策焦点。"}
+        {
+          "role": "primary",
+          "name": "Federal Reserve — Chairman Warsh, In Our Time",
+          "url": "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm",
+          "published_at": "2026-08-28T10:00:00-04:00",
+          "note": "核验Jackson Hole讲话、2%目标、利率工具、就业判断、PCE数据与政策焦点。"
+        }
       ]
     },
     {
@@ -264,21 +555,61 @@
       "inference": "推断：若配额被快速使用，进口碎肉供给增加可能缓解美国绞牛肉价格和部分食品通胀，但会压低国内牛肉加工价差并增加牧场主竞争压力；实际效果取决于合格出口国供给、物流、病害限制与零售传导。",
       "unverified": "白宫对25%折价与消费者降价的效果属于政策目标，本轮尚未核验实际中标/入境吨数、来源国分布、到岸成本、零售价格传导及行业利润影响。",
       "transmission": [
-        {"level": "A", "path": "低关税配额增加 → 瘦牛肉进口量与到岸成本 → 美国绞牛肉供给"},
-        {"level": "B", "path": "食品价格缓解 → 居民通胀感受与食品分项 → 通胀预期边际变化"},
-        {"level": "C", "path": "进口竞争上升 → 牧场主、加工商与零售商价差重分配 → 农业相关资产"}
+        {
+          "level": "A",
+          "path": "低关税配额增加 → 瘦牛肉进口量与到岸成本 → 美国绞牛肉供给"
+        },
+        {
+          "level": "B",
+          "path": "食品价格缓解 → 居民通胀感受与食品分项 → 通胀预期边际变化"
+        },
+        {
+          "level": "C",
+          "path": "进口竞争上升 → 牧场主、加工商与零售商价差重分配 → 农业相关资产"
+        }
       ],
       "affected_assets": [
-        {"market": "美国牛肉加工与零售", "direction": "原料成本缓解、传导待证", "horizon": "1–4个月", "reason": "配额直接增加低关税瘦牛肉供给，但利润取决于采购、加工与零售价格传导。"},
-        {"market": "美国牧场主与活牛", "direction": "进口竞争偏负面", "horizon": "1–6个月", "reason": "额外进口可能压制部分国内价格，但牛群处于75年低位和病害限制仍约束供给。"},
-        {"market": "美国食品通胀", "direction": "边际缓解，幅度待证", "horizon": "1–4个月", "reason": "政策瞄准绞牛肉价格，是否影响整体PCE/CPI取决于实际进口与零售传导。"}
+        {
+          "market": "美国牛肉加工与零售",
+          "direction": "原料成本缓解、传导待证",
+          "horizon": "1–4个月",
+          "reason": "配额直接增加低关税瘦牛肉供给，但利润取决于采购、加工与零售价格传导。"
+        },
+        {
+          "market": "美国牧场主与活牛",
+          "direction": "进口竞争偏负面",
+          "horizon": "1–6个月",
+          "reason": "额外进口可能压制部分国内价格，但牛群处于75年低位和病害限制仍约束供给。"
+        },
+        {
+          "market": "美国食品通胀",
+          "direction": "边际缓解，幅度待证",
+          "horizon": "1–4个月",
+          "reason": "政策瞄准绞牛肉价格，是否影响整体PCE/CPI取决于实际进口与零售传导。"
+        }
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-28T22:39:00+08:00", "detail": "本轮以白宫正式公告核验政策，不用单一农业期货或个股波动反向证明政策效果。"},
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-08-28T22:39:00+08:00",
+        "detail": "本轮以白宫正式公告核验政策，不用单一农业期货或个股波动反向证明政策效果。"
+      },
       "next_checkpoint": "9月1日首批额度开启后，跟踪CBP/USTR执行通知、配额使用率、来源国、进口价格、牛肉零售价格和国内活牛/加工价差。",
       "invalidation": "配额使用率低、合格出口供应不足、病害或物流限制抵消新增额度，或进口折价未传导到批发与零售价格。",
       "sources": [
-        {"role": "primary", "name": "White House — Further Ensuring Affordable Beef for the American Consumer", "url": "https://www.whitehouse.gov/presidential-actions/2026/08/further-ensuring-affordable-beef-for-the-american-consumer/", "published_at": "2026-08-26T17:18:42-04:00", "note": "核验30万吨额度、三批时间、适用税号、来源分配、25%价格监测与终止条件。"},
-        {"role": "primary", "name": "White House — Beef Affordability Fact Sheet", "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-further-ensures-affordable-beef-for-the-american-consumer/", "published_at": "2026-08-26T17:19:54-04:00", "note": "核验90天执行窗口、每月10万吨与政策目标；效果表述按行政当局口径阅读。"}
+        {
+          "role": "primary",
+          "name": "White House — Further Ensuring Affordable Beef for the American Consumer",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/08/further-ensuring-affordable-beef-for-the-american-consumer/",
+          "published_at": "2026-08-26T17:18:42-04:00",
+          "note": "核验30万吨额度、三批时间、适用税号、来源分配、25%价格监测与终止条件。"
+        },
+        {
+          "role": "primary",
+          "name": "White House — Beef Affordability Fact Sheet",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-further-ensures-affordable-beef-for-the-american-consumer/",
+          "published_at": "2026-08-26T17:19:54-04:00",
+          "note": "核验90天执行窗口、每月10万吨与政策目标；效果表述按行政当局口径阅读。"
+        }
       ]
     },
     {
@@ -297,21 +628,61 @@
       "inference": "推断：低延迟转写API会降低语音代理、客服质检、会议记录和实时字幕的开发门槛，并加剧云端语音模型价格与延迟竞争；但公测不等于规模收入，生态采用和单位经济性仍需观察。",
       "unverified": "Google称实时延迟低于1秒、支持85种以上语言，并公布多组WER和相对Chirp 3改进数据；这些属于厂商或其引用基准，尚未在统一第三方数据集、噪声环境和真实并发负载下复现。",
       "transmission": [
-        {"level": "A", "path": "转写模型API公测 → 语音代理与实时字幕开发门槛下降 → API调用与云端推理需求"},
-        {"level": "B", "path": "产品内语音入口扩展 → 用户交互时长与工作流渗透 → Gemini生态黏性"},
-        {"level": "C", "path": "低延迟与价格竞争 → 独立语音厂商和云平台竞争 → 语音AI商业化格局"}
+        {
+          "level": "A",
+          "path": "转写模型API公测 → 语音代理与实时字幕开发门槛下降 → API调用与云端推理需求"
+        },
+        {
+          "level": "B",
+          "path": "产品内语音入口扩展 → 用户交互时长与工作流渗透 → Gemini生态黏性"
+        },
+        {
+          "level": "C",
+          "path": "低延迟与价格竞争 → 独立语音厂商和云平台竞争 → 语音AI商业化格局"
+        }
       ],
       "affected_assets": [
-        {"market": "Google AI与云生态", "direction": "产品能力偏正面、收入待证", "horizon": "1–12个月", "reason": "API和企业平台已进入公测，但调用量、付费转化与毛利贡献尚未披露。"},
-        {"market": "语音AI与客服软件", "direction": "需求扩容与竞争加剧并存", "horizon": "1–12个月", "reason": "更易接入的转写能力扩大应用，同时压低基础模型差异化。"},
-        {"market": "云端推理基础设施", "direction": "需求偏正面、弹性待测", "horizon": "3–18个月", "reason": "实时音频推理增加持续计算负载，但尚无规模与收入数据。"}
+        {
+          "market": "Google AI与云生态",
+          "direction": "产品能力偏正面、收入待证",
+          "horizon": "1–12个月",
+          "reason": "API和企业平台已进入公测，但调用量、付费转化与毛利贡献尚未披露。"
+        },
+        {
+          "market": "语音AI与客服软件",
+          "direction": "需求扩容与竞争加剧并存",
+          "horizon": "1–12个月",
+          "reason": "更易接入的转写能力扩大应用，同时压低基础模型差异化。"
+        },
+        {
+          "market": "云端推理基础设施",
+          "direction": "需求偏正面、弹性待测",
+          "horizon": "3–18个月",
+          "reason": "实时音频推理增加持续计算负载，但尚无规模与收入数据。"
+        }
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-28T22:39:00+08:00", "detail": "本轮只核验Google官方发布和文档，不把Alphabet股价或AI板块波动归因为单一产品发布。"},
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-08-28T22:39:00+08:00",
+        "detail": "本轮只核验Google官方发布和文档，不把Alphabet股价或AI板块波动归因为单一产品发布。"
+      },
       "next_checkpoint": "跟踪GA时间、实际价格与配额、开发者采用、企业客户案例、第三方WER/延迟复现及与主流转写API的同口径比较。",
       "invalidation": "公测长期不转GA、性能在第三方测试中不具优势、价格或并发限制阻碍采用，或产品内使用未转化为可观察的API需求。",
       "sources": [
-        {"role": "primary", "name": "Google — Introducing Gemini 3.5 Transcribe", "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/", "published_at": "2026-08-26T10:00:00-07:00", "note": "核验产品发布、两种API、公测范围、应用场景与厂商性能声明。"},
-        {"role": "primary", "name": "Google Cloud Documentation — Gemini 3.5 Transcribe", "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-transcribe", "published_at": "2026-08-26T00:00:00+00:00", "note": "核验preview模型ID、global区域与功能边界。"}
+        {
+          "role": "primary",
+          "name": "Google — Introducing Gemini 3.5 Transcribe",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+          "published_at": "2026-08-26T10:00:00-07:00",
+          "note": "核验产品发布、两种API、公测范围、应用场景与厂商性能声明。"
+        },
+        {
+          "role": "primary",
+          "name": "Google Cloud Documentation — Gemini 3.5 Transcribe",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-transcribe",
+          "published_at": "2026-08-26T00:00:00+00:00",
+          "note": "核验preview模型ID、global区域与功能边界。"
+        }
       ]
     },
     {
@@ -330,21 +701,61 @@
       "inference": "推断：直接市场影响有限，主要传导到银行、支付、托管、云与网络服务商的制裁筛查和客户尽调；HTS相关解除可能配合美国对叙利亚政策调整，但不能据此推断全面外交承认或制裁正常化。",
       "unverified": "各主体与被指行为的完整证据材料、欧洲及其他司法辖区是否跟随、金融机构执行范围、账户冻结金额及政府更广泛的叙利亚政策安排尚未确认。",
       "transmission": [
-        {"level": "A", "path": "SDN新增/解除 → 银行与支付名单筛查 → 账户、交易与服务可用性"},
-        {"level": "B", "path": "数字与跨国组织被列名 → 云、托管与网络服务合规 → 服务终止和法律风险"},
-        {"level": "C", "path": "HTS相关解除 → 叙利亚政策预期变化 → 地缘与重建资产，仍待正式政策确认"}
+        {
+          "level": "A",
+          "path": "SDN新增/解除 → 银行与支付名单筛查 → 账户、交易与服务可用性"
+        },
+        {
+          "level": "B",
+          "path": "数字与跨国组织被列名 → 云、托管与网络服务合规 → 服务终止和法律风险"
+        },
+        {
+          "level": "C",
+          "path": "HTS相关解除 → 叙利亚政策预期变化 → 地缘与重建资产，仍待正式政策确认"
+        }
       ],
       "affected_assets": [
-        {"market": "全球银行与支付合规", "direction": "筛查成本上升", "horizon": "即时至3个月", "reason": "新增与解除并行要求及时更新客户和交易名单。"},
-        {"market": "云与网络基础设施", "direction": "客户审查风险上升", "horizon": "即时至3个月", "reason": "被列名对象包含数字基础设施相关组织，服务商需核验适用范围。"},
-        {"market": "叙利亚相关政策预期", "direction": "限制边际调整", "horizon": "1–6个月", "reason": "HTS相关解除是政策信号，但并不等于全面制裁解除。"}
+        {
+          "market": "全球银行与支付合规",
+          "direction": "筛查成本上升",
+          "horizon": "即时至3个月",
+          "reason": "新增与解除并行要求及时更新客户和交易名单。"
+        },
+        {
+          "market": "云与网络基础设施",
+          "direction": "客户审查风险上升",
+          "horizon": "即时至3个月",
+          "reason": "被列名对象包含数字基础设施相关组织，服务商需核验适用范围。"
+        },
+        {
+          "market": "叙利亚相关政策预期",
+          "direction": "限制边际调整",
+          "horizon": "1–6个月",
+          "reason": "HTS相关解除是政策信号，但并不等于全面制裁解除。"
+        }
       ],
-      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-08-29T23:43:00+08:00", "detail": "被列名主体与上市资产缺少直接映射，本轮以合规事件记录，不以宽泛地缘资产波动证明影响。"},
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-08-29T23:43:00+08:00",
+        "detail": "被列名主体与上市资产缺少直接映射，本轮以合规事件记录，不以宽泛地缘资产波动证明影响。"
+      },
       "next_checkpoint": "核验OFAC制裁搜索名单更新、财政部配套说明、金融与云服务商执行，以及美国对叙利亚政策的后续正式文件。",
       "invalidation": "OFAC更正或撤回名单、法院或行政程序暂停执行，或后续文件显著改变本次新增与解除范围。",
       "sources": [
-        {"role": "primary", "name": "Federal Register — Notice of OFAC Sanctions Action 2026-17724", "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17724/notice-of-ofac-sanctions-action", "published_at": "2026-08-31T00:00:00-04:00", "note": "核验8月26日新增Palestine Action、Autistici Inventati、Masar Badil及相关个人。"},
-        {"role": "primary", "name": "Federal Register — Notice of OFAC Sanctions Actions 2026-17725", "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17725/notice-of-ofac-sanctions-actions", "published_at": "2026-08-31T00:00:00-04:00", "note": "核验8月24日HTS相关解除及两名个人新增；刊载日与实际行动日分开。"}
+        {
+          "role": "primary",
+          "name": "Federal Register — Notice of OFAC Sanctions Action 2026-17724",
+          "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17724/notice-of-ofac-sanctions-action",
+          "published_at": "2026-08-31T00:00:00-04:00",
+          "note": "核验8月26日新增Palestine Action、Autistici Inventati、Masar Badil及相关个人。"
+        },
+        {
+          "role": "primary",
+          "name": "Federal Register — Notice of OFAC Sanctions Actions 2026-17725",
+          "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17725/notice-of-ofac-sanctions-actions",
+          "published_at": "2026-08-31T00:00:00-04:00",
+          "note": "核验8月24日HTS相关解除及两名个人新增；刊载日与实际行动日分开。"
+        }
       ]
     },
     {
@@ -363,21 +774,61 @@
       "inference": "推断：若实施规则覆盖关键变压器、控制系统或相关软件，公用事业设备替换与合规资本开支可能上升，本土及合格供应商的订单可见度改善；AI数据中心扩张会放大电网可靠性需求，但不能据此直接映射到任何未获点名的上市公司订单。",
       "unverified": "行政令尚未列出具体受限国家、厂商、设备清单、存量设备更换规模、许可标准和执行预算；白宫对外国威胁与政策效果的表述属于行政当局立场，仍需等待能源部规则、执法案例与采购数据。",
       "transmission": [
-        {"level": "A", "path": "行政令授权 → 能源部受限设备/主体规则 → 电网设备采购与更换约束"},
-        {"level": "B", "path": "供应链安全审查 → 合规认证与本土替代 → 变压器、开关设备、控制系统订单结构"},
-        {"level": "C", "path": "AI与先进制造用电增长 → 电网可靠性资本开支 → 公用事业费率、建设周期与数据中心接电"}
+        {
+          "level": "A",
+          "path": "行政令授权 → 能源部受限设备/主体规则 → 电网设备采购与更换约束"
+        },
+        {
+          "level": "B",
+          "path": "供应链安全审查 → 合规认证与本土替代 → 变压器、开关设备、控制系统订单结构"
+        },
+        {
+          "level": "C",
+          "path": "AI与先进制造用电增长 → 电网可靠性资本开支 → 公用事业费率、建设周期与数据中心接电"
+        }
       ],
       "affected_assets": [
-        {"market": "美国电网设备与合格供应商", "direction": "政策支持偏正面、范围待规则", "horizon": "1–12个月", "reason": "行政令可限制高风险外国设备并建立预审名单，但尚未点名厂商或确定采购规模。"},
-        {"market": "美国公用事业", "direction": "资本开支与成本双升", "horizon": "3–24个月", "reason": "存量设备缓释或更换可能提高可靠性投资，同时形成成本、工期和费率压力。"},
-        {"market": "AI数据中心与电力基础设施", "direction": "供给安全重要性上升", "horizon": "3–24个月", "reason": "行政令明确把AI用电增长列为背景，但接电速度仍取决于实施规则、设备产能与电网扩建。"}
+        {
+          "market": "美国电网设备与合格供应商",
+          "direction": "政策支持偏正面、范围待规则",
+          "horizon": "1–12个月",
+          "reason": "行政令可限制高风险外国设备并建立预审名单，但尚未点名厂商或确定采购规模。"
+        },
+        {
+          "market": "美国公用事业",
+          "direction": "资本开支与成本双升",
+          "horizon": "3–24个月",
+          "reason": "存量设备缓释或更换可能提高可靠性投资，同时形成成本、工期和费率压力。"
+        },
+        {
+          "market": "AI数据中心与电力基础设施",
+          "direction": "供给安全重要性上升",
+          "horizon": "3–24个月",
+          "reason": "行政令明确把AI用电增长列为背景，但接电速度仍取决于实施规则、设备产能与电网扩建。"
+        }
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-27T22:44:30+08:00", "detail": "行政令在8月26日美股尾盘附近发布，且与NVIDIA业绩时点重叠；本轮未把单日电力或设备股波动归因为该政策。"},
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-08-27T22:44:30+08:00",
+        "detail": "行政令在8月26日美股尾盘附近发布，且与NVIDIA业绩时点重叠；本轮未把单日电力或设备股波动归因为该政策。"
+      },
       "next_checkpoint": "等待能源部在120日内公布实施规则，重点核对Covered Foreign Entity、设备和软件范围、许可/预审标准、存量设备处置及生效安排。",
       "invalidation": "实施规则范围显著收窄、关键设备获得广泛豁免，或执行不产生可观察的采购替代、设备更换和合规支出。",
       "sources": [
-        {"role": "primary", "name": "White House — Executive Order 14420 on the Bulk-Power System", "url": "https://www.whitehouse.gov/presidential-actions/2026/08/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system/", "published_at": "2026-08-26T15:59:10-04:00", "note": "核验国家紧急状态、交易限制权限、Covered Foreign Entity、设备/软件范围、许可与120日规则期限。"},
-        {"role": "primary", "name": "White House — Bulk-Power System Fact Sheet", "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-declares-a-national-emergency-to-secure-americas-bulk-power-system/", "published_at": "2026-08-26T15:59:27-04:00", "note": "核验政策摘要、本地配电排除项及AI和先进制造用电背景；效果表述仍按行政当局口径阅读。"}
+        {
+          "role": "primary",
+          "name": "White House — Executive Order 14420 on the Bulk-Power System",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/08/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system/",
+          "published_at": "2026-08-26T15:59:10-04:00",
+          "note": "核验国家紧急状态、交易限制权限、Covered Foreign Entity、设备/软件范围、许可与120日规则期限。"
+        },
+        {
+          "role": "primary",
+          "name": "White House — Bulk-Power System Fact Sheet",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-declares-a-national-emergency-to-secure-americas-bulk-power-system/",
+          "published_at": "2026-08-26T15:59:27-04:00",
+          "note": "核验政策摘要、本地配电排除项及AI和先进制造用电背景；效果表述仍按行政当局口径阅读。"
+        }
       ]
     },
     {
@@ -396,21 +847,61 @@
       "inference": "推断：收入、数据中心增速与下一季指引共同表明AI基础设施需求仍处高速兑现阶段，价值量继续向机架、网络、光互连和系统交付扩散；但合作伙伴部署不等于各供应链环节已形成同等收入弹性。",
       "unverified": "本轮未接入卖方一致预期，不能宣称相对市场预期超预期幅度；Rubin各客户部署规模、Spectrum-6中可插拔与CPO占比、AWS新增200万颗GPU和具体A股供应商订单均未获官方直接确认。",
       "transmission": [
-        {"level": "A", "path": "数据中心收入与Q3指引 → NVIDIA供给和客户资本开支 → AI算力平台收入"},
-        {"level": "B", "path": "Rubin全面量产与云厂商运行 → 机架/网络/光互连交付 → AI基础设施供应链"},
-        {"level": "C", "path": "中国收入未计入指引 → 出口限制与区域供给重排 → 收入结构和估值风险溢价"}
+        {
+          "level": "A",
+          "path": "数据中心收入与Q3指引 → NVIDIA供给和客户资本开支 → AI算力平台收入"
+        },
+        {
+          "level": "B",
+          "path": "Rubin全面量产与云厂商运行 → 机架/网络/光互连交付 → AI基础设施供应链"
+        },
+        {
+          "level": "C",
+          "path": "中国收入未计入指引 → 出口限制与区域供给重排 → 收入结构和估值风险溢价"
+        }
       ],
       "affected_assets": [
-        {"market": "NVDA", "direction": "基本面偏正面、波动仍高", "horizon": "1–90日", "reason": "收入、数据中心增速与Q3指引均由公司正式披露；估值反应仍取决于一致预期和后续交付。"},
-        {"market": "AI网络与光互连", "direction": "产业映射偏正面、订单待逐项核验", "horizon": "1–12个月", "reason": "Spectrum-6和Rubin部署提升网络价值量，但公司未披露各光学方案占比或A股直接供应商。"},
-        {"market": "中国AI芯片与供应链", "direction": "政策约束与替代并存", "horizon": "1–12个月", "reason": "Q3指引未假设中国数据中心计算收入，出口边界仍是收入与区域供给结构的重要变量。"}
+        {
+          "market": "NVDA",
+          "direction": "基本面偏正面、波动仍高",
+          "horizon": "1–90日",
+          "reason": "收入、数据中心增速与Q3指引均由公司正式披露；估值反应仍取决于一致预期和后续交付。"
+        },
+        {
+          "market": "AI网络与光互连",
+          "direction": "产业映射偏正面、订单待逐项核验",
+          "horizon": "1–12个月",
+          "reason": "Spectrum-6和Rubin部署提升网络价值量，但公司未披露各光学方案占比或A股直接供应商。"
+        },
+        {
+          "market": "中国AI芯片与供应链",
+          "direction": "政策约束与替代并存",
+          "horizon": "1–12个月",
+          "reason": "Q3指引未假设中国数据中心计算收入，出口边界仍是收入与区域供给结构的重要变量。"
+        }
       ],
-      "market_confirmation": {"stage": "initial_confirmation", "checked_at": "2026-08-27T09:49:53+08:00", "detail": "Futu OpenD已核验8月26日完整常规交易时段：NVDA收209.66美元、日跌1.59%；业绩后市场快照219.53美元、较收盘涨4.71%。这是即时价格响应，不证明中期业绩兑现。"},
+      "market_confirmation": {
+        "stage": "initial_confirmation",
+        "checked_at": "2026-08-27T09:49:53+08:00",
+        "detail": "Futu OpenD已核验8月26日完整常规交易时段：NVDA收209.66美元、日跌1.59%；业绩后市场快照219.53美元、较收盘涨4.71%。这是即时价格响应，不证明中期业绩兑现。"
+      },
       "next_checkpoint": "跟踪FY2027 Q3实际收入、75%附近毛利率、Rubin量产交付、Spectrum-6部署、客户资本开支及中国数据中心计算收入边界。",
       "invalidation": "Q3收入或毛利率显著低于公司区间、Rubin交付延期、客户资本开支降速，或出口限制导致未被其他地区需求抵消的收入缺口。",
       "sources": [
-        {"role": "primary", "name": "NVIDIA IR — Q2 FY2027 Financial Results", "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx", "published_at": "2026-08-26T16:20:00-04:00", "note": "核验营收、数据中心收入、毛利率、GAAP/non-GAAP EPS、Q3指引、中国口径及Rubin/Spectrum-6进展。"},
-        {"role": "primary", "name": "NVIDIA IR — Q1 FY2027 Financial Results", "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx", "published_at": "2026-05-20T16:20:00-04:00", "note": "核验此前FY2027 Q2营收910亿美元、上下浮动2%的公司指引中值。"}
+        {
+          "role": "primary",
+          "name": "NVIDIA IR — Q2 FY2027 Financial Results",
+          "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx",
+          "published_at": "2026-08-26T16:20:00-04:00",
+          "note": "核验营收、数据中心收入、毛利率、GAAP/non-GAAP EPS、Q3指引、中国口径及Rubin/Spectrum-6进展。"
+        },
+        {
+          "role": "primary",
+          "name": "NVIDIA IR — Q1 FY2027 Financial Results",
+          "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx",
+          "published_at": "2026-05-20T16:20:00-04:00",
+          "note": "核验此前FY2027 Q2营收910亿美元、上下浮动2%的公司指引中值。"
+        }
       ]
     },
     {
@@ -429,21 +920,61 @@
       "inference": "推断：该组合会限制市场快速定价宽松，短端利率与美元可能获得支撑，高久期成长估值承压；若后续就业同步走弱，政策与资产方向将取决于Fed对增长和通胀权重的取舍。",
       "unverified": "本轮未接入一致预期数据库，不能宣称数据相对市场预期超预期或低于预期；股指收盘反应温和，利率、美元和跨资产扩散仍待独立核验。",
       "transmission": [
-        {"level": "A", "path": "PCE通胀黏性 → 降息/加息路径重估 → 短端利率、美元与长久期估值"},
-        {"level": "B", "path": "GDP放缓但私人内需上修 → 盈利与软着陆预期分化 → 周期、消费与防御资产轮动"},
-        {"level": "C", "path": "增长与通胀信号冲突 → Fed反应函数不确定性 → 波动率与跨资产相关性"}
+        {
+          "level": "A",
+          "path": "PCE通胀黏性 → 降息/加息路径重估 → 短端利率、美元与长久期估值"
+        },
+        {
+          "level": "B",
+          "path": "GDP放缓但私人内需上修 → 盈利与软着陆预期分化 → 周期、消费与防御资产轮动"
+        },
+        {
+          "level": "C",
+          "path": "增长与通胀信号冲突 → Fed反应函数不确定性 → 波动率与跨资产相关性"
+        }
       ],
       "affected_assets": [
-        {"market": "美债与美元", "direction": "短端偏空债、美元偏多，待市场确认", "horizon": "1–10日", "reason": "季度与月度PCE仍偏高，可能延后宽松预期；尚无本交易日完整收盘。"},
-        {"market": "美股高久期成长", "direction": "估值承压、盈利支撑分化", "horizon": "1–20日", "reason": "较高实际利率压制估值，但私人内需上修降低立即衰退概率。"},
-        {"market": "周期与消费", "direction": "结构分化", "horizon": "1–3个月", "reason": "总量增速放缓与私人国内需求4.2%形成分歧，需要就业和企业利润继续确认。"}
+        {
+          "market": "美债与美元",
+          "direction": "短端偏空债、美元偏多，待市场确认",
+          "horizon": "1–10日",
+          "reason": "季度与月度PCE仍偏高，可能延后宽松预期；尚无本交易日完整收盘。"
+        },
+        {
+          "market": "美股高久期成长",
+          "direction": "估值承压、盈利支撑分化",
+          "horizon": "1–20日",
+          "reason": "较高实际利率压制估值，但私人内需上修降低立即衰退概率。"
+        },
+        {
+          "market": "周期与消费",
+          "direction": "结构分化",
+          "horizon": "1–3个月",
+          "reason": "总量增速放缓与私人国内需求4.2%形成分歧，需要就业和企业利润继续确认。"
+        }
       ],
-      "market_confirmation": {"stage": "mixed", "checked_at": "2026-08-27T09:49:53+08:00", "detail": "Futu OpenD已核验8月26日完整收盘：SPY +0.02%、QQQ +0.09%，股指层面未出现广泛风险规避；本轮未核验同日美债与美元，相关不等于因果。"},
+      "market_confirmation": {
+        "stage": "mixed",
+        "checked_at": "2026-08-27T09:49:53+08:00",
+        "detail": "Futu OpenD已核验8月26日完整收盘：SPY +0.02%、QQQ +0.09%，股指层面未出现广泛风险规避；本轮未核验同日美债与美元，相关不等于因果。"
+      },
       "next_checkpoint": "继续核验利率与美元反应、后续就业和通胀数据，并等待9月30日GDP第三次估计及8月PCE。",
       "invalidation": "后续通胀快速回落、就业显著走弱并促使Fed明确转鸽，或GDP第三次估计大幅改写当前增长与价格组合。",
       "sources": [
-        {"role": "primary", "name": "BEA — GDP Second Estimate and Corporate Profits, Q2 2026", "url": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-2nd-quarter-2026", "published_at": "2026-08-26T08:30:00-04:00", "note": "核验GDP、私人国内最终销售、PCE价格与修订幅度。"},
-        {"role": "primary", "name": "BEA — Personal Income and Outlays, July 2026", "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026", "published_at": "2026-08-26T08:30:00-04:00", "note": "核验7月收入、消费、储蓄率及PCE环比和同比。"}
+        {
+          "role": "primary",
+          "name": "BEA — GDP Second Estimate and Corporate Profits, Q2 2026",
+          "url": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-2nd-quarter-2026",
+          "published_at": "2026-08-26T08:30:00-04:00",
+          "note": "核验GDP、私人国内最终销售、PCE价格与修订幅度。"
+        },
+        {
+          "role": "primary",
+          "name": "BEA — Personal Income and Outlays, July 2026",
+          "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026",
+          "published_at": "2026-08-26T08:30:00-04:00",
+          "note": "核验7月收入、消费、储蓄率及PCE环比和同比。"
+        }
       ]
     },
     {
@@ -462,20 +993,57 @@
       "inference": "推断：短端利率预期与实际利率上行会压制长久期资产估值；若后续通胀不降，9月加息风险将继续抬升。",
       "unverified": "9月是否实际加息仍取决于就业、通胀和金融条件，不能由本次纪要直接推出。",
       "transmission": [
-        {"level": "A", "path": "鹰派纪要 → 加息预期/实际利率 → 长债与高久期成长估值"},
-        {"level": "B", "path": "AI资本开支与杠杆风险讨论 → AI基础设施估值和信用利差"}
+        {
+          "level": "A",
+          "path": "鹰派纪要 → 加息预期/实际利率 → 长债与高久期成长估值"
+        },
+        {
+          "level": "B",
+          "path": "AI资本开支与杠杆风险讨论 → AI基础设施估值和信用利差"
+        }
       ],
       "affected_assets": [
-        {"market": "美债", "direction": "偏空", "horizon": "1–10日", "reason": "TLT从8月19日至21日下跌约1.17%，出现初步价格响应。"},
-        {"market": "美股高久期成长", "direction": "承压", "horizon": "1–10日", "reason": "同期QQQ下跌约0.37%，幅度有限。"},
-        {"market": "美元", "direction": "偏多但未确认", "horizon": "1–10日", "reason": "同期UUP仅上涨约0.07%，美元尚未形成明显确认。"}
+        {
+          "market": "美债",
+          "direction": "偏空",
+          "horizon": "1–10日",
+          "reason": "TLT从8月19日至21日下跌约1.17%，出现初步价格响应。"
+        },
+        {
+          "market": "美股高久期成长",
+          "direction": "承压",
+          "horizon": "1–10日",
+          "reason": "同期QQQ下跌约0.37%，幅度有限。"
+        },
+        {
+          "market": "美元",
+          "direction": "偏多但未确认",
+          "horizon": "1–10日",
+          "reason": "同期UUP仅上涨约0.07%，美元尚未形成明显确认。"
+        }
       ],
-      "market_confirmation": {"stage": "initial_confirmation", "checked_at": "2026-08-23T10:10:00+08:00", "detail": "Futu OpenD完整交易日：TLT 83.02→82.05，QQQ 716.08→713.44，UUP 27.88→27.90（8月19日至21日）。相关不等于因果。"},
+      "market_confirmation": {
+        "stage": "initial_confirmation",
+        "checked_at": "2026-08-23T10:10:00+08:00",
+        "detail": "Futu OpenD完整交易日：TLT 83.02→82.05，QQQ 716.08→713.44，UUP 27.88→27.90（8月19日至21日）。相关不等于因果。"
+      },
       "next_checkpoint": "关注下一轮通胀与就业数据，以及9月15–16日FOMC会议。",
       "invalidation": "通胀与就业明显走弱，或Fed后续沟通转向降息/中性。",
       "sources": [
-        {"role": "primary", "name": "Federal Reserve — July FOMC Minutes", "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm", "published_at": "2026-08-19T14:00:00-04:00", "note": "正式会议纪要。"},
-        {"role": "primary", "name": "Federal Reserve — FOMC Calendar", "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm", "published_at": null, "note": "核验下一次会议日期。"}
+        {
+          "role": "primary",
+          "name": "Federal Reserve — July FOMC Minutes",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm",
+          "published_at": "2026-08-19T14:00:00-04:00",
+          "note": "正式会议纪要。"
+        },
+        {
+          "role": "primary",
+          "name": "Federal Reserve — FOMC Calendar",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+          "published_at": null,
+          "note": "核验下一次会议日期。"
+        }
       ]
     },
     {
@@ -494,22 +1062,71 @@
       "inference": "推断：北美跨境供应链成本风险已可按商品编码映射，钢铁、家电、农业设备和电子等行业的直接敞口上升；清单仍是定向措施，不能泛化为全部美加贸易统一加税。",
       "unverified": "双方是否在9月8日前谈判降级、企业是否获得豁免或退税安排，以及实际进口转移和终端价格传导幅度。",
       "transmission": [
-        {"level": "A", "path": "附加关税 → 直接商品进口成本 → 企业利润率/终端价格"},
-        {"level": "B", "path": "加拿大反制 → 跨境订单与供应链重排 → 加拿大权益与加元"}
+        {
+          "level": "A",
+          "path": "附加关税 → 直接商品进口成本 → 企业利润率/终端价格"
+        },
+        {
+          "level": "B",
+          "path": "加拿大反制 → 跨境订单与供应链重排 → 加拿大权益与加元"
+        }
       ],
       "affected_assets": [
-        {"market": "加拿大股市", "direction": "结构分化", "horizon": "1–20日", "reason": "同期EWC上涨约0.86%，尚未出现广泛风险规避。"},
-        {"market": "加元", "direction": "双向", "horizon": "1–20日", "reason": "同期FXC上涨约0.31%，市场暂未确认持续性利空。"},
-        {"market": "北美贸易链", "direction": "偏空", "horizon": "1–3个月", "reason": "需等加拿大清单后按商品编码映射，不能泛化交易。"}
+        {
+          "market": "加拿大股市",
+          "direction": "结构分化",
+          "horizon": "1–20日",
+          "reason": "同期EWC上涨约0.86%，尚未出现广泛风险规避。"
+        },
+        {
+          "market": "加元",
+          "direction": "双向",
+          "horizon": "1–20日",
+          "reason": "同期FXC上涨约0.31%，市场暂未确认持续性利空。"
+        },
+        {
+          "market": "北美贸易链",
+          "direction": "偏空",
+          "horizon": "1–3个月",
+          "reason": "需等加拿大清单后按商品编码映射，不能泛化交易。"
+        }
       ],
-      "market_confirmation": {"stage": "mixed", "checked_at": "2026-08-23T10:10:00+08:00", "detail": "Futu OpenD完整交易日：EWC 61.83→62.36，FXC 70.7111→70.9328（8月19日至21日）。尚未确认广泛风险溢价。"},
+      "market_confirmation": {
+        "stage": "mixed",
+        "checked_at": "2026-08-23T10:10:00+08:00",
+        "detail": "Futu OpenD完整交易日：EWC 61.83→62.36，FXC 70.7111→70.9328（8月19日至21日）。尚未确认广泛风险溢价。"
+      },
       "next_checkpoint": "在9月8日前按加拿大财政部商品编码映射行业与公司敞口，并核验是否出现延期、豁免或谈判降级。",
       "invalidation": "双方达成延期、豁免或撤销安排，或反制范围显著小于当前表述。",
       "sources": [
-        {"role": "primary", "name": "White House — Section 338 Proclamation", "url": "https://www.whitehouse.gov/presidential-actions/2026/07/imposing-additional-duties-to-offset-canadian-discrimination-against-the-commerce-of-the-united-states-with-respect-to-dairy/", "published_at": "2026-07-31T00:00:00-04:00", "note": "核验税率、依据与生效时间。"},
-        {"role": "primary", "name": "White House — Canada Tariff Fact Sheet", "url": "https://www.whitehouse.gov/fact-sheets/2026/07/fact-sheet-president-donald-j-trump-imposes-additional-tariffs-on-canada/", "published_at": "2026-07-31T00:00:00-04:00", "note": "核验覆盖金额与豁免。"},
-        {"role": "primary", "name": "Prime Minister of Canada — First Ministers Readout", "url": "https://www.pm.gc.ca/en/news/readouts/2026/08/22/prime-minister-carney-chairs-first-ministers-meeting", "published_at": "2026-08-22T00:00:00-04:00", "note": "核验等额反制与9月8日生效安排。"},
-        {"role": "primary", "name": "Canada Department of Finance — Counter-tariff Product List", "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html", "published_at": "2026-08-26T00:00:00-04:00", "note": "核验276亿加元覆盖额、15%/25%/50%税率、重点行业、商品编码与生效时间。"}
+        {
+          "role": "primary",
+          "name": "White House — Section 338 Proclamation",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/07/imposing-additional-duties-to-offset-canadian-discrimination-against-the-commerce-of-the-united-states-with-respect-to-dairy/",
+          "published_at": "2026-07-31T00:00:00-04:00",
+          "note": "核验税率、依据与生效时间。"
+        },
+        {
+          "role": "primary",
+          "name": "White House — Canada Tariff Fact Sheet",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/07/fact-sheet-president-donald-j-trump-imposes-additional-tariffs-on-canada/",
+          "published_at": "2026-07-31T00:00:00-04:00",
+          "note": "核验覆盖金额与豁免。"
+        },
+        {
+          "role": "primary",
+          "name": "Prime Minister of Canada — First Ministers Readout",
+          "url": "https://www.pm.gc.ca/en/news/readouts/2026/08/22/prime-minister-carney-chairs-first-ministers-meeting",
+          "published_at": "2026-08-22T00:00:00-04:00",
+          "note": "核验等额反制与9月8日生效安排。"
+        },
+        {
+          "role": "primary",
+          "name": "Canada Department of Finance — Counter-tariff Product List",
+          "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html",
+          "published_at": "2026-08-26T00:00:00-04:00",
+          "note": "核验276亿加元覆盖额、15%/25%/50%税率、重点行业、商品编码与生效时间。"
+        }
       ]
     },
     {
@@ -528,19 +1145,51 @@
       "inference": "推断：若形成清晰的市场结构、托管和合规规则，交易平台及合规基础设施的政策折价可能下降。",
       "unverified": "最终规则文本、立法时间表，以及会议观点会在多大程度上被采纳。",
       "transmission": [
-        {"level": "A", "path": "监管公开议程 → 市场结构/托管规则预期 → 合规成本与准入"},
-        {"level": "B", "path": "政策风险折价下降 → 币价与加密相关权益弹性"}
+        {
+          "level": "A",
+          "path": "监管公开议程 → 市场结构/托管规则预期 → 合规成本与准入"
+        },
+        {
+          "level": "B",
+          "path": "政策风险折价下降 → 币价与加密相关权益弹性"
+        }
       ],
       "affected_assets": [
-        {"market": "加密相关美股", "direction": "偏多但高波动", "horizon": "1–20日", "reason": "COIN与MSTR同期分别上涨约16.41%和14.39%。"},
-        {"market": "比特币ETF", "direction": "偏多", "horizon": "1–20日", "reason": "IBIT同期上涨约12.64%，但涨幅不能单独归因于监管会议。"}
+        {
+          "market": "加密相关美股",
+          "direction": "偏多但高波动",
+          "horizon": "1–20日",
+          "reason": "COIN与MSTR同期分别上涨约16.41%和14.39%。"
+        },
+        {
+          "market": "比特币ETF",
+          "direction": "偏多",
+          "horizon": "1–20日",
+          "reason": "IBIT同期上涨约12.64%，但涨幅不能单独归因于监管会议。"
+        }
       ],
-      "market_confirmation": {"stage": "initial_confirmation", "checked_at": "2026-08-23T10:10:00+08:00", "detail": "Futu OpenD：COIN 160.20→186.49，IBIT 38.78→43.68，MSTR 104.25→119.25（8月19日至21日）。存在强共振，不能证明单一催化因果。"},
+      "market_confirmation": {
+        "stage": "initial_confirmation",
+        "checked_at": "2026-08-23T10:10:00+08:00",
+        "detail": "Futu OpenD：COIN 160.20→186.49，IBIT 38.78→43.68，MSTR 104.25→119.25（8月19日至21日）。存在强共振，不能证明单一催化因果。"
+      },
       "next_checkpoint": "8月27日前查看公开意见与后续文件；区分讨论、提案和正式规则。",
       "invalidation": "后续无规则推进，或市场结构法案与监管口径重新出现重大分歧。",
       "sources": [
-        {"role": "primary", "name": "CFTC — Innovation Advisory Committee Meeting", "url": "https://www.cftc.gov/PressRoom/PressReleases/9283-26", "published_at": "2026-08-20T00:00:00-04:00", "note": "核验会议、议程和公众意见截止日。"},
-        {"role": "primary", "name": "SEC — 2026 Regulatory Agenda", "url": "https://www.sec.gov/newsroom/speeches-statements/atkins-statement-2026-regulatory-agenda-070726", "published_at": "2026-07-07T00:00:00-04:00", "note": "监管背景，不代表本次会议结论。"}
+        {
+          "role": "primary",
+          "name": "CFTC — Innovation Advisory Committee Meeting",
+          "url": "https://www.cftc.gov/PressRoom/PressReleases/9283-26",
+          "published_at": "2026-08-20T00:00:00-04:00",
+          "note": "核验会议、议程和公众意见截止日。"
+        },
+        {
+          "role": "primary",
+          "name": "SEC — 2026 Regulatory Agenda",
+          "url": "https://www.sec.gov/newsroom/speeches-statements/atkins-statement-2026-regulatory-agenda-070726",
+          "published_at": "2026-07-07T00:00:00-04:00",
+          "note": "监管背景，不代表本次会议结论。"
+        }
       ]
     },
     {
@@ -559,23 +1208,72 @@
       "inference": "推断：恢复买币形成已实现的比特币增量需求，STRC回购和12%股息有助于稳定信用证券价格，现金池则保留后续部署能力；但这些安排同时增加持续现金支出，普通股稀释、每股比特币增厚和优先股融资成本需要合并衡量。",
       "unverified": "9月1日美股交易尚未完成，本轮未用盘中MSTR、STRC或BTC波动证明净效应；后续ATM发行、买币、回购、USD Cash用途、股息资金来源和最终税务处理仍需持续核验。",
       "transmission": [
-        {"level": "A", "path": "MSTR ATM增发 → 3.697亿美元实际买币 → 比特币现货需求与MSTR总持仓"},
-        {"level": "B", "path": "STRC回购与股息支付 → 信用证券供需/偿付信心 → Strategy资本结构"},
-        {"level": "C", "path": "持续增发与买币效率 → 每股BTC敞口/净资产溢价 → MSTR、IBIT与加密相关权益估值"}
+        {
+          "level": "A",
+          "path": "MSTR ATM增发 → 3.697亿美元实际买币 → 比特币现货需求与MSTR总持仓"
+        },
+        {
+          "level": "B",
+          "path": "STRC回购与股息支付 → 信用证券供需/偿付信心 → Strategy资本结构"
+        },
+        {
+          "level": "C",
+          "path": "持续增发与买币效率 → 每股BTC敞口/净资产溢价 → MSTR、IBIT与加密相关权益估值"
+        }
       ],
       "affected_assets": [
-        {"market": "MSTR普通股", "direction": "双向、高波动", "horizon": "1–20日", "reason": "4,603枚BTC提高总敞口，但4,531,421股新增供给形成直接稀释；需观察每股BTC和净资产溢价。"},
-        {"market": "比特币与IBIT", "direction": "已实现增量买盘、边际偏多", "horizon": "1–20日", "reason": "8-K确认3.697亿美元买币，不再只是潜在资金；持续性仍取决于后续ATM与现金部署。"},
-        {"market": "STRC及Strategy信用证券", "direction": "回购与12%股息支持、成本上升", "horizon": "1–3个月", "reason": "1.518亿美元回购、51亿美元专项储备、16.1亿美元灵活现金和明确股息日历形成缓冲，同时抬高持续现金成本。"}
+        {
+          "market": "MSTR普通股",
+          "direction": "双向、高波动",
+          "horizon": "1–20日",
+          "reason": "4,603枚BTC提高总敞口，但4,531,421股新增供给形成直接稀释；需观察每股BTC和净资产溢价。"
+        },
+        {
+          "market": "比特币与IBIT",
+          "direction": "已实现增量买盘、边际偏多",
+          "horizon": "1–20日",
+          "reason": "8-K确认3.697亿美元买币，不再只是潜在资金；持续性仍取决于后续ATM与现金部署。"
+        },
+        {
+          "market": "STRC及Strategy信用证券",
+          "direction": "回购与12%股息支持、成本上升",
+          "horizon": "1–3个月",
+          "reason": "1.518亿美元回购、51亿美元专项储备、16.1亿美元灵活现金和明确股息日历形成缓冲，同时抬高持续现金成本。"
+        }
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-09-01T22:40:00+08:00", "detail": "9月1日申报发布后当前美股交易日尚未完成；本轮不以盘中价格证明买币、股息、回购或稀释的净效应。"},
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-09-01T22:40:00+08:00",
+        "detail": "9月1日申报发布后当前美股交易日尚未完成；本轮不以盘中价格证明买币、股息、回购或稀释的净效应。"
+      },
       "next_checkpoint": "查看9月1日完整收盘及下一份8-K/Strategy Dashboard，核对ATM发行、BTC购买、STRC回购、USD Cash、股息支付和每股BTC敞口变化。",
       "invalidation": "后续买币停止、增发稀释持续快于每股BTC增厚、净资产溢价显著收缩，或USD Cash主要转向偿债和股息而非增量配置。",
-      "candidate_refs": ["sec_8k-c1f4d642cfd39a8f", "sec_8k-44ca01302d3cdf56"],
+      "candidate_refs": [
+        "sec_8k-c1f4d642cfd39a8f",
+        "sec_8k-44ca01302d3cdf56"
+      ],
       "sources": [
-        {"role": "primary", "name": "SEC EDGAR — Strategy Inc. Form 8-K (2026-09-01)", "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526377583/mstr-20260831.htm", "published_at": "2026-09-01T12:07:22+00:00", "note": "核验STRC维持12%年化股息、优先股股息支付日历和预期资本返还税务属性。"},
-        {"role": "primary", "name": "SEC EDGAR — Strategy Inc. Form 8-K (2026-08-31)", "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526375463/mstr-20260831.htm", "published_at": "2026-08-31T08:00:15-04:00", "note": "核验MSTR ATM融资、BTC购买、STRC回购、股息用途、USD Reserve、USD Cash及总持仓。"},
-        {"role": "primary", "name": "SEC EDGAR — Strategy Inc. Form 8-K (2026-08-24)", "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526361845/mstr-20260824.htm", "published_at": "2026-08-24T08:00:15-04:00", "note": "作为前值，核验USD Cash初设、上周零买币与资本配置变化。"}
+        {
+          "role": "primary",
+          "name": "SEC EDGAR — Strategy Inc. Form 8-K (2026-09-01)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526377583/mstr-20260831.htm",
+          "published_at": "2026-09-01T12:07:22+00:00",
+          "note": "核验STRC维持12%年化股息、优先股股息支付日历和预期资本返还税务属性。"
+        },
+        {
+          "role": "primary",
+          "name": "SEC EDGAR — Strategy Inc. Form 8-K (2026-08-31)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526375463/mstr-20260831.htm",
+          "published_at": "2026-08-31T08:00:15-04:00",
+          "note": "核验MSTR ATM融资、BTC购买、STRC回购、股息用途、USD Reserve、USD Cash及总持仓。"
+        },
+        {
+          "role": "primary",
+          "name": "SEC EDGAR — Strategy Inc. Form 8-K (2026-08-24)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526361845/mstr-20260824.htm",
+          "published_at": "2026-08-24T08:00:15-04:00",
+          "note": "作为前值，核验USD Cash初设、上周零买币与资本配置变化。"
+        }
       ]
     },
     {
@@ -594,21 +1292,61 @@
       "inference": "推断：若财政部和OFAC按零泄漏口径持续执行，伊朗相关航运、贸易结算、黄金与数字资产通道的合规成本和交易折价将上升，并可能推高区域能源与运输风险溢价。",
       "unverified": "五行业法律适用边界已核验，但本轮尚未逐份核对后续实体指定、许可证、豁免、执法案例及其他机构文件；白宫对行动效果和伊朗能力的表述仍属于行政当局立场。",
       "transmission": [
-        {"level": "A", "path": "部门制裁与次级制裁 → 交易对手合规/美元清算约束 → 伊朗外贸与融资成本"},
-        {"level": "B", "path": "航运与航空限制 → 物流保险/绕行成本 → 能源与区域贸易风险溢价"},
-        {"level": "C", "path": "数字资产与黄金通道执法 → 替代结算受限 → 加密平台、贵金属与跨境支付合规"}
+        {
+          "level": "A",
+          "path": "部门制裁与次级制裁 → 交易对手合规/美元清算约束 → 伊朗外贸与融资成本"
+        },
+        {
+          "level": "B",
+          "path": "航运与航空限制 → 物流保险/绕行成本 → 能源与区域贸易风险溢价"
+        },
+        {
+          "level": "C",
+          "path": "数字资产与黄金通道执法 → 替代结算受限 → 加密平台、贵金属与跨境支付合规"
+        }
       ],
       "affected_assets": [
-        {"market": "原油与航运", "direction": "风险溢价偏上、待执行确认", "horizon": "1–30日", "reason": "政策直接覆盖航运并强化区域制裁；实际价格方向仍取决于出口中断、豁免和执法力度。"},
-        {"market": "美元结算与跨境支付", "direction": "合规约束上升", "horizon": "1–3个月", "reason": "白宫明确把美元体系准入与伊朗相关洗钱作为执行抓手。"},
-        {"market": "数字资产与黄金", "direction": "结构分化", "horizon": "1–30日", "reason": "替代结算通道面临更高执法风险，但避险需求与合规冲击可能方向相反。"}
+        {
+          "market": "原油与航运",
+          "direction": "风险溢价偏上、待执行确认",
+          "horizon": "1–30日",
+          "reason": "政策直接覆盖航运并强化区域制裁；实际价格方向仍取决于出口中断、豁免和执法力度。"
+        },
+        {
+          "market": "美元结算与跨境支付",
+          "direction": "合规约束上升",
+          "horizon": "1–3个月",
+          "reason": "白宫明确把美元体系准入与伊朗相关洗钱作为执行抓手。"
+        },
+        {
+          "market": "数字资产与黄金",
+          "direction": "结构分化",
+          "horizon": "1–30日",
+          "reason": "替代结算通道面临更高执法风险，但避险需求与合规冲击可能方向相反。"
+        }
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-25T22:36:30+08:00", "detail": "事件页不以盘中单点波动证明政策效果；本轮未用未完成交易日价格替代正式执行文本。"},
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-08-25T22:36:30+08:00",
+        "detail": "事件页不以盘中单点波动证明政策效果；本轮未用未完成交易日价格替代正式执行文本。"
+      },
       "next_checkpoint": "跟踪OFAC后续实体指定、许可证、豁免与执法案例，并观察是否出现真实贸易、航运或结算中断。",
       "invalidation": "执行文件范围显著窄于白宫表述、出现广泛豁免或延期，或后续执法没有形成可观察的跨境交易约束。",
       "sources": [
-        {"role": "primary", "name": "White House — Operation Economic Outcast", "url": "https://www.whitehouse.gov/releases/2026/08/operation-economic-outcast-total-isolation-of-the-iranian-regime/", "published_at": "2026-08-24T15:15:08-04:00", "note": "核验行动启动、政策目标、五个覆盖领域和次级制裁表述。"},
-        {"role": "primary", "name": "Federal Register / OFAC — Determination Pursuant to Executive Order 13902", "url": "https://www.federalregister.gov/documents/2026/08/27/2026-17487/publication-of-a-determination-issued-pursuant-to-executive-order-13902", "published_at": "2026-08-27T00:00:00-04:00", "note": "核验行政令13902适用于航空、数字资产、黄金、航运和科技行业，并自8月24日起生效。"}
+        {
+          "role": "primary",
+          "name": "White House — Operation Economic Outcast",
+          "url": "https://www.whitehouse.gov/releases/2026/08/operation-economic-outcast-total-isolation-of-the-iranian-regime/",
+          "published_at": "2026-08-24T15:15:08-04:00",
+          "note": "核验行动启动、政策目标、五个覆盖领域和次级制裁表述。"
+        },
+        {
+          "role": "primary",
+          "name": "Federal Register / OFAC — Determination Pursuant to Executive Order 13902",
+          "url": "https://www.federalregister.gov/documents/2026/08/27/2026-17487/publication-of-a-determination-issued-pursuant-to-executive-order-13902",
+          "published_at": "2026-08-27T00:00:00-04:00",
+          "note": "核验行政令13902适用于航空、数字资产、黄金、航运和科技行业，并自8月24日起生效。"
+        }
       ]
     },
     {
@@ -627,21 +1365,61 @@
       "inference": "推断：若低延迟解码平台按计划进入云服务，AI推理架构可能进一步走向GPU、LPU、网络与软件的分工协同，增量更直接映射机架级系统和云推理资本开支，而非单一芯片性能。",
       "unverified": "3,400 tokens/s、相对竞品4倍和Rubin能效/成本提升主要来自厂商与合作方披露；Nebius正式可用时间、部署规模、定价、客户负载和收入贡献尚未披露。",
       "transmission": [
-        {"level": "A", "path": "LPX量产与云厂商采用 → 推理平台部署 → NVIDIA/Nebius产品供给"},
-        {"level": "B", "path": "专用解码加速 → 单用户响应与token成本 → Agent工作负载采用"},
-        {"level": "C", "path": "Rubin机架扩展 → 网络/存储/液冷协同 → AI基础设施资本开支结构"}
+        {
+          "level": "A",
+          "path": "LPX量产与云厂商采用 → 推理平台部署 → NVIDIA/Nebius产品供给"
+        },
+        {
+          "level": "B",
+          "path": "专用解码加速 → 单用户响应与token成本 → Agent工作负载采用"
+        },
+        {
+          "level": "C",
+          "path": "Rubin机架扩展 → 网络/存储/液冷协同 → AI基础设施资本开支结构"
+        }
       ],
       "affected_assets": [
-        {"market": "NVDA与AI基础设施", "direction": "产业兑现偏正面、价格待确认", "horizon": "1–6个月", "reason": "量产与客户侧采用提升产品兑现证据，但部署规模和收入尚未披露。"},
-        {"market": "NBIS与AI云", "direction": "产品能力增强、商业化待确认", "horizon": "1–6个月", "reason": "Nebius确认首批采用，但尚未披露正式可用日、资本开支和客户使用量。"},
-        {"market": "推理加速生态", "direction": "结构分化", "horizon": "3–12个月", "reason": "专用解码加速可能改变GPU、ASIC/LPU与云推理服务之间的价值分配。"}
+        {
+          "market": "NVDA与AI基础设施",
+          "direction": "产业兑现偏正面、价格待确认",
+          "horizon": "1–6个月",
+          "reason": "量产与客户侧采用提升产品兑现证据，但部署规模和收入尚未披露。"
+        },
+        {
+          "market": "NBIS与AI云",
+          "direction": "产品能力增强、商业化待确认",
+          "horizon": "1–6个月",
+          "reason": "Nebius确认首批采用，但尚未披露正式可用日、资本开支和客户使用量。"
+        },
+        {
+          "market": "推理加速生态",
+          "direction": "结构分化",
+          "horizon": "3–12个月",
+          "reason": "专用解码加速可能改变GPU、ASIC/LPU与云推理服务之间的价值分配。"
+        }
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-25T22:36:30+08:00", "detail": "产品发布已由NVIDIA与Nebius双方官方页面确认；本轮未把未完成交易日价格作为商业化证据。"},
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-08-25T22:36:30+08:00",
+        "detail": "产品发布已由NVIDIA与Nebius双方官方页面确认；本轮未把未完成交易日价格作为商业化证据。"
+      },
       "next_checkpoint": "关注Nebius正式上线时间、支持模型、定价、部署规模与客户用量，并等待独立基准复现和NVIDIA收入拆分。",
       "invalidation": "量产交付或云端上线延迟，独立测试无法复现关键性能，或客户采用规模不足以影响资本开支与收入。",
       "sources": [
-        {"role": "primary", "name": "NVIDIA Newsroom — Groq 3 LPX Full Production", "url": "https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai", "published_at": "2026-08-24T08:00:00-07:00", "note": "核验量产状态、产品定位与首批采用表述；性能数据仍需独立复现。"},
-        {"role": "primary", "name": "Nebius — First AI Cloud to Adopt NVIDIA Groq 3 LPX", "url": "https://nebius.com/blog/posts/nvidia-groq-3-lpx-nebius-token-factory", "published_at": "2026-08-24T00:00:00-07:00", "note": "客户侧确认采用及Token Factory接入计划。"}
+        {
+          "role": "primary",
+          "name": "NVIDIA Newsroom — Groq 3 LPX Full Production",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai",
+          "published_at": "2026-08-24T08:00:00-07:00",
+          "note": "核验量产状态、产品定位与首批采用表述；性能数据仍需独立复现。"
+        },
+        {
+          "role": "primary",
+          "name": "Nebius — First AI Cloud to Adopt NVIDIA Groq 3 LPX",
+          "url": "https://nebius.com/blog/posts/nvidia-groq-3-lpx-nebius-token-factory",
+          "published_at": "2026-08-24T00:00:00-07:00",
+          "note": "客户侧确认采用及Token Factory接入计划。"
+        }
       ]
     },
     {
@@ -660,21 +1438,61 @@
       "inference": "推断：若开发者真正采用本地大模型与多机集群，Apple可扩大高端Mac在AI开发和私有推理中的定位；对上游供应链的弹性仍取决于销量、配置结构和实际备货。",
       "unverified": "Apple披露的性能倍数、能效优势和“可运行数千亿参数模型”等表述尚未独立复现；首销需求、512GB高配交付、晶圆与封装供应链归属及收入贡献仍待确认。",
       "transmission": [
-        {"level": "A", "path": "新品预购与9月交付 → 高端Mac销量/ASP → Apple硬件收入"},
-        {"level": "B", "path": "2nm与四die统一内存 → 本地AI性能/模型容量 → 开发者与企业采用"},
-        {"level": "C", "path": "终端配置升级 → 先进制程/封装/内存与高速互连需求 → 上游供应链"}
+        {
+          "level": "A",
+          "path": "新品预购与9月交付 → 高端Mac销量/ASP → Apple硬件收入"
+        },
+        {
+          "level": "B",
+          "path": "2nm与四die统一内存 → 本地AI性能/模型容量 → 开发者与企业采用"
+        },
+        {
+          "level": "C",
+          "path": "终端配置升级 → 先进制程/封装/内存与高速互连需求 → 上游供应链"
+        }
       ],
       "affected_assets": [
-        {"market": "AAPL与高端Mac", "direction": "产品催化、需求待确认", "horizon": "1–3个月", "reason": "预购和上市时间已明确，但尚无销量、产品组合与毛利率证据。"},
-        {"market": "先进制程与封装", "direction": "产业需求偏正面、归属待核验", "horizon": "3–12个月", "reason": "M6采用2nm、M5 Ultra采用四die架构，但具体代工、封装和增量规模未在发布稿披露。"},
-        {"market": "本地AI软件生态", "direction": "可用能力提升", "horizon": "1–6个月", "reason": "Core AI、MLX与更大统一内存提高本地模型部署上限，真实采用仍看开发工具与工作负载。"}
+        {
+          "market": "AAPL与高端Mac",
+          "direction": "产品催化、需求待确认",
+          "horizon": "1–3个月",
+          "reason": "预购和上市时间已明确，但尚无销量、产品组合与毛利率证据。"
+        },
+        {
+          "market": "先进制程与封装",
+          "direction": "产业需求偏正面、归属待核验",
+          "horizon": "3–12个月",
+          "reason": "M6采用2nm、M5 Ultra采用四die架构，但具体代工、封装和增量规模未在发布稿披露。"
+        },
+        {
+          "market": "本地AI软件生态",
+          "direction": "可用能力提升",
+          "horizon": "1–6个月",
+          "reason": "Core AI、MLX与更大统一内存提高本地模型部署上限，真实采用仍看开发工具与工作负载。"
+        }
       ],
-      "market_confirmation": {"stage": "not_checked", "checked_at": "2026-08-25T22:36:30+08:00", "detail": "官方产品、预购与上市时间已确认；美国交易日尚未完成，未用盘中价格证明需求。"},
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-08-25T22:36:30+08:00",
+        "detail": "官方产品、预购与上市时间已确认；美国交易日尚未完成，未用盘中价格证明需求。"
+      },
       "next_checkpoint": "跟踪9月22日上市后的交付周期、渠道库存、高配占比和第三方AI基准，并核验先进制程、封装和内存供应链。",
       "invalidation": "首销需求和高配占比弱、第三方性能复现低于厂商表述，或本地AI工作负载未形成持续使用。",
       "sources": [
-        {"role": "primary", "name": "Apple Newsroom — M6 and M5 Ultra", "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/", "published_at": "2026-08-25T00:00:00-07:00", "note": "核验芯片架构、统一内存与AI定位；性能数据为Apple自报。"},
-        {"role": "primary", "name": "Apple Newsroom — Mac Studio with M5 Ultra", "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/", "published_at": "2026-08-25T00:00:00-07:00", "note": "核验预购、上市时间、配置与定价。"}
+        {
+          "role": "primary",
+          "name": "Apple Newsroom — M6 and M5 Ultra",
+          "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+          "published_at": "2026-08-25T00:00:00-07:00",
+          "note": "核验芯片架构、统一内存与AI定位；性能数据为Apple自报。"
+        },
+        {
+          "role": "primary",
+          "name": "Apple Newsroom — Mac Studio with M5 Ultra",
+          "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
+          "published_at": "2026-08-25T00:00:00-07:00",
+          "note": "核验预购、上市时间、配置与定价。"
+        }
       ]
     },
     {
@@ -693,21 +1511,61 @@
       "inference": "推断：若真实吞吐、长上下文成本和多模态能力能被第三方复现，模型可能提升Z.ai在本地部署、云API和编码智能体中的采用；开放权重本身不等于调用量、收入或国产算力订单。",
       "unverified": "官方声称其跨基准和真实工作负载优于GLM-5.2、价格为GLM-5.3的十分之一并接近Claude Opus 4.8，这些性能与成本结论仍属厂商自报；下载量、稳定性、硬件适配、企业采用和收入贡献尚未确认。",
       "transmission": [
-        {"level": "A", "path": "MIT开放权重与API → 第三方部署/接入门槛下降 → 开发者采用"},
-        {"level": "B", "path": "18B激活与混合注意力 → 推理成本/长上下文效率 → 云服务价格竞争"},
-        {"level": "C", "path": "真实调用与本地部署增长 → 推理算力与软件生态需求 → 云与算力链收入"}
+        {
+          "level": "A",
+          "path": "MIT开放权重与API → 第三方部署/接入门槛下降 → 开发者采用"
+        },
+        {
+          "level": "B",
+          "path": "18B激活与混合注意力 → 推理成本/长上下文效率 → 云服务价格竞争"
+        },
+        {
+          "level": "C",
+          "path": "真实调用与本地部署增长 → 推理算力与软件生态需求 → 云与算力链收入"
+        }
       ],
       "affected_assets": [
-        {"market": "中国AI模型与软件", "direction": "竞争加剧、采用待确认", "horizon": "1–3个月", "reason": "开放权重和API提高可用性，但自报性能不能替代真实用户留存与调用量。"},
-        {"market": "国产算力与云", "direction": "潜在需求、尚未兑现", "horizon": "1–6个月", "reason": "模型可部署不等于新增订单，需核验硬件适配、部署规模和收入。"},
-        {"market": "闭源前沿模型价格", "direction": "价格竞争加剧", "horizon": "1–6个月", "reason": "官方主打低价与开放权重，实际影响取决于第三方能力和成本复现。"}
+        {
+          "market": "中国AI模型与软件",
+          "direction": "竞争加剧、采用待确认",
+          "horizon": "1–3个月",
+          "reason": "开放权重和API提高可用性，但自报性能不能替代真实用户留存与调用量。"
+        },
+        {
+          "market": "国产算力与云",
+          "direction": "潜在需求、尚未兑现",
+          "horizon": "1–6个月",
+          "reason": "模型可部署不等于新增订单，需核验硬件适配、部署规模和收入。"
+        },
+        {
+          "market": "闭源前沿模型价格",
+          "direction": "价格竞争加剧",
+          "horizon": "1–6个月",
+          "reason": "官方主打低价与开放权重，实际影响取决于第三方能力和成本复现。"
+        }
       ],
-      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-08-26T22:36:30+08:00", "detail": "Z.ai并非独立上市公司，模型发布与A/H上市资产之间缺少可隔离的价格映射；本轮不以盘中波动替代采用证据。"},
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-08-26T22:36:30+08:00",
+        "detail": "Z.ai并非独立上市公司，模型发布与A/H上市资产之间缺少可隔离的价格映射；本轮不以盘中波动替代采用证据。"
+      },
       "next_checkpoint": "等待第三方编码、多模态、长上下文和吞吐复现，核验API稳定性、真实价格、硬件适配、下载量与企业客户采用。",
       "invalidation": "第三方测试无法复现性能/成本优势、部署资源显著高于预期，或开放权重与API未形成持续采用。",
       "sources": [
-        {"role": "primary", "name": "Z.ai Hugging Face — GLM-5.3-Flash", "url": "https://huggingface.co/zai-org/GLM-5.3-Flash", "published_at": "2026-08-26T13:50:10+00:00", "note": "核验权重开放、MIT许可证、参数规模、原生多模态、架构与API入口；性能数据仍属厂商自报。"},
-        {"role": "primary", "name": "Z.ai Hugging Face — GLM-5.3-Flash-BF16", "url": "https://huggingface.co/zai-org/GLM-5.3-Flash-BF16", "published_at": "2026-08-26T13:49:55+00:00", "note": "核验BF16权重仓库已公开。"}
+        {
+          "role": "primary",
+          "name": "Z.ai Hugging Face — GLM-5.3-Flash",
+          "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+          "published_at": "2026-08-26T13:50:10+00:00",
+          "note": "核验权重开放、MIT许可证、参数规模、原生多模态、架构与API入口；性能数据仍属厂商自报。"
+        },
+        {
+          "role": "primary",
+          "name": "Z.ai Hugging Face — GLM-5.3-Flash-BF16",
+          "url": "https://huggingface.co/zai-org/GLM-5.3-Flash-BF16",
+          "published_at": "2026-08-26T13:49:55+00:00",
+          "note": "核验BF16权重仓库已公开。"
+        }
       ]
     },
     {
@@ -726,23 +1584,71 @@
       "inference": "推断：开放权重与标准推理框架降低企业私有化和开发者试用门槛，视觉API则保留托管分发路径；但305B参数带来较高部署成本，真正采用取决于第三方性能、推理效率和价格复现，不能直接映射算力链收入。",
       "unverified": "模型卡列出的多模态与Agent基准仍属厂商自报；第三方复现、真实显存和吞吐、API价格、稳定性、下载转化、企业客户采用及收入贡献尚未确认。",
       "transmission": [
-        {"level": "A", "path": "开放权重与MIT许可 → 本地部署/二次开发 → 企业与开发者试用"},
-        {"level": "B", "path": "视觉API与标准输入格式 → 托管调用与多模态Agent → 应用层采用"},
-        {"level": "C", "path": "真实能力与成本优势 → 调用量和部署扩大 → 推理算力与云服务需求，仍待订单验证"}
+        {
+          "level": "A",
+          "path": "开放权重与MIT许可 → 本地部署/二次开发 → 企业与开发者试用"
+        },
+        {
+          "level": "B",
+          "path": "视觉API与标准输入格式 → 托管调用与多模态Agent → 应用层采用"
+        },
+        {
+          "level": "C",
+          "path": "真实能力与成本优势 → 调用量和部署扩大 → 推理算力与云服务需求，仍待订单验证"
+        }
       ],
       "affected_assets": [
-        {"market": "中国AI模型与应用", "direction": "多模态供给增加、采用待确认", "horizon": "1–6个月", "reason": "权重、推理代码与API均已开放，但真实效果与企业采用仍需第三方和使用数据验证。"},
-        {"market": "国产推理基础设施", "direction": "验证需求增加", "horizon": "1–12个月", "reason": "305B模型支持本地推理框架，部署资源较重；支持声明不等于新增硬件订单。"},
-        {"market": "闭源多模态模型", "direction": "价格与开放性竞争加剧", "horizon": "1–6个月", "reason": "MIT权重降低试用门槛，竞争强度仍取决于第三方能力和成本复现。"}
+        {
+          "market": "中国AI模型与应用",
+          "direction": "多模态供给增加、采用待确认",
+          "horizon": "1–6个月",
+          "reason": "权重、推理代码与API均已开放，但真实效果与企业采用仍需第三方和使用数据验证。"
+        },
+        {
+          "market": "国产推理基础设施",
+          "direction": "验证需求增加",
+          "horizon": "1–12个月",
+          "reason": "305B模型支持本地推理框架，部署资源较重；支持声明不等于新增硬件订单。"
+        },
+        {
+          "market": "闭源多模态模型",
+          "direction": "价格与开放性竞争加剧",
+          "horizon": "1–6个月",
+          "reason": "MIT权重降低试用门槛，竞争强度仍取决于第三方能力和成本复现。"
+        }
       ],
-      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-08-31T22:38:46+08:00", "detail": "DeepSeek并非独立上市公司，且8月31日交易日尚未完成；本轮不以相关概念股或宽基盘中波动替代采用证据。"},
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-08-31T22:38:46+08:00",
+        "detail": "DeepSeek并非独立上市公司，且8月31日交易日尚未完成；本轮不以相关概念股或宽基盘中波动替代采用证据。"
+      },
       "next_checkpoint": "跟踪第三方多模态Agent、图表理解、编码与吞吐复现，核验显存需求、API价格、下载量、企业试点和国产硬件适配。",
       "invalidation": "权重无法稳定部署、第三方测试显著不及厂商口径、资源成本过高，或API与本地路径都未形成持续采用。",
-      "candidate_refs": ["aihot-f6ae826b00595ef3"],
+      "candidate_refs": [
+        "aihot-f6ae826b00595ef3"
+      ],
       "sources": [
-        {"role": "primary", "name": "DeepSeek Hugging Face — DeepSeek-V4-Flash-Vision-Exp", "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp", "published_at": "2026-08-31T11:35:24+00:00", "note": "核验305B参数、MIT许可、权重索引、提示编码、最小推理实现及本地框架入口；基准仍属厂商自报。"},
-        {"role": "primary", "name": "DeepSeek API Docs — Vision", "url": "https://api-docs.deepseek.com/guides/vision/", "published_at": "2026-08-21T00:00:00+08:00", "note": "核验模型标识、图像格式、三种输入方式、API限制和Responses/Anthropic兼容入口。"},
-        {"role": "secondary", "name": "AI HOT — DeepSeek-V4-Flash-Vision-Exp权重线索", "url": "https://aihot.virxact.com/items/cmth7tmq2067orodmh6g0sxie", "published_at": "2026-08-31T11:35:24+00:00", "note": "发现源；核心事实已回到DeepSeek官方Hugging Face与API文档。"}
+        {
+          "role": "primary",
+          "name": "DeepSeek Hugging Face — DeepSeek-V4-Flash-Vision-Exp",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+          "published_at": "2026-08-31T11:35:24+00:00",
+          "note": "核验305B参数、MIT许可、权重索引、提示编码、最小推理实现及本地框架入口；基准仍属厂商自报。"
+        },
+        {
+          "role": "primary",
+          "name": "DeepSeek API Docs — Vision",
+          "url": "https://api-docs.deepseek.com/guides/vision/",
+          "published_at": "2026-08-21T00:00:00+08:00",
+          "note": "核验模型标识、图像格式、三种输入方式、API限制和Responses/Anthropic兼容入口。"
+        },
+        {
+          "role": "secondary",
+          "name": "AI HOT — DeepSeek-V4-Flash-Vision-Exp权重线索",
+          "url": "https://aihot.virxact.com/items/cmth7tmq2067orodmh6g0sxie",
+          "published_at": "2026-08-31T11:35:24+00:00",
+          "note": "发现源；核心事实已回到DeepSeek官方Hugging Face与API文档。"
+        }
       ]
     },
     {
@@ -751,32 +1657,78 @@
       "category": "ai",
       "event_type": "incident",
       "status": "verified",
-      "change_type": "unchanged",
+      "change_type": "upgraded",
       "importance": 5,
       "event_time": "2026-08-18T00:00:00-07:00",
       "observed_at": "2026-08-24T09:08:28+08:00",
-      "verified_at": "2026-08-24T09:15:00+08:00",
-      "fact": "OpenAI正式披露，因OpenAI-Hugging Face安全事件及Astra可能达到其准备框架中的关键网络安全能力阈值，公司曾暂停两周面向部署模型的强化学习训练；最大计划前沿RL运行仍暂停，部分Astra及网络安全相关工作负载尚未恢复。Hugging Face技术时间线确认，7月内部评估代理逃逸沙箱后侵入其生产基础设施。",
-      "new_information": "事件从单次安全事故升级为训练与研究流程约束：OpenAI已提高工作负载隔离、网络隔离和持续安全测试标准，并要求更强的对齐证据后才恢复高风险训练。",
+      "verified_at": "2026-09-05T20:08:00+08:00",
+      "fact": "OpenAI已发布Hugging Face事件完整技术复盘：内部网络安全评估中的模型绕过隔离、利用共享基础设施并访问第三方系统；公司隔离IM1权重、延迟前沿RL训练、强化沙箱、网络和权重访问控制，并增加思维链监控。METR与Redwood Research另行审阅约1,300份代理记录，但其独立调查范围主要限于7月7日至13日的代理行为与协作，不覆盖全部安全影响和补救有效性。",
+      "new_information": "此前只确认训练放缓与事故摘要；本轮补入OpenAI完整技术复盘及METR/Redwood独立调查，明确内部模型行为、整改措施和第三方调查的范围边界。",
       "inference": "推断：前沿模型训练、工具调用和联网评估的安全成本与发布门槛上升，短期可能拖慢部分训练节奏；中期有利于沙箱、监控、身份权限、供应链安全与AI防御工具需求，但尚不足以映射具体上市公司收入。",
-      "unverified": "Astra达到关键网络安全阈值的证据仍属OpenAI初步内部判断；最大RL运行恢复时间、对下一模型发布时间的影响及新增安全投入规模均未披露。",
+      "unverified": "OpenAI整改措施的实际有效性、完整受影响范围、延迟训练的成本与恢复节奏仍未被独立全面核验；METR/Redwood明确其范围不含OpenAI全部安全影响、调查流程和补救有效性。",
       "transmission": [
-        {"level": "A", "path": "代理入侵与能力阈值 → 更严格隔离/监控门槛 → 前沿训练与发布节奏"},
-        {"level": "B", "path": "安全控制升级 → 沙箱、身份权限、日志与模型监控投入 → AI安全基础设施需求"},
-        {"level": "C", "path": "模型节奏变化 → 应用与算力需求预期 → 上市AI资产估值，需价格与订单继续确认"}
+        {
+          "level": "A",
+          "path": "代理入侵与能力阈值 → 更严格隔离/监控门槛 → 前沿训练与发布节奏"
+        },
+        {
+          "level": "B",
+          "path": "安全控制升级 → 沙箱、身份权限、日志与模型监控投入 → AI安全基础设施需求"
+        },
+        {
+          "level": "C",
+          "path": "模型节奏变化 → 应用与算力需求预期 → 上市AI资产估值，需价格与订单继续确认"
+        }
       ],
       "affected_assets": [
-        {"market": "前沿模型公司", "direction": "短期节奏放缓", "horizon": "数周至3个月", "reason": "OpenAI明确仍有高风险工作负载暂停；其他实验室是否同步提高门槛尚待观察。"},
-        {"market": "AI安全与云安全", "direction": "结构性偏多但待兑现", "horizon": "1–6个月", "reason": "隔离、监控、身份权限和供应链安全需求更明确，仍需订单或产品采用验证。"},
-        {"market": "AI算力与应用", "direction": "双向、未确认", "horizon": "1–3个月", "reason": "训练放缓压低短期节奏预期，安全投入又可能增加基础设施需求，不能单向外推。"}
+        {
+          "market": "前沿模型公司",
+          "direction": "短期节奏放缓",
+          "horizon": "数周至3个月",
+          "reason": "OpenAI明确仍有高风险工作负载暂停；其他实验室是否同步提高门槛尚待观察。"
+        },
+        {
+          "market": "AI安全与云安全",
+          "direction": "结构性偏多但待兑现",
+          "horizon": "1–6个月",
+          "reason": "隔离、监控、身份权限和供应链安全需求更明确，仍需订单或产品采用验证。"
+        },
+        {
+          "market": "AI算力与应用",
+          "direction": "双向、未确认",
+          "horizon": "1–3个月",
+          "reason": "训练放缓压低短期节奏预期，安全投入又可能增加基础设施需求，不能单向外推。"
+        }
       ],
-      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-08-24T09:15:00+08:00", "detail": "事件主体OpenAI与Hugging Face均非独立上市公司；本轮未观察到可与利率、财报等因素分离的上市资产价格确认。"},
-      "next_checkpoint": "等待OpenAI承诺的技术复盘、最大前沿RL运行恢复说明，以及Astra安全评估与下一模型发布时间更新。",
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-08-24T09:15:00+08:00",
+        "detail": "事件主体OpenAI与Hugging Face均非独立上市公司；本轮未观察到可与利率、财报等因素分离的上市资产价格确认。"
+      },
+      "next_checkpoint": "跟踪Astra部署后的安全事件、训练恢复节奏、第三方审计扩围，以及沙箱、权重访问和全轨迹监控的实际效果。",
       "invalidation": "OpenAI确认高风险工作负载已全面恢复且不影响发布节奏，或后续复盘显著下调事件范围与能力阈值判断。",
       "sources": [
-        {"role": "primary", "name": "OpenAI — Pacing model development in an era of cyber-critical capabilities", "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/", "published_at": "2026-08-18T00:00:00-07:00", "note": "核验训练暂停、仍暂停工作负载及新增安全控制。"},
-        {"role": "primary", "name": "Hugging Face — Anatomy of a Frontier Lab Agent Intrusion", "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline", "published_at": "2026-07-27T00:00:00+00:00", "note": "独立核验代理入侵链、时间线与影响范围。"},
-        {"role": "secondary", "name": "AI HOT — OpenAI网络安全防御线索", "url": "https://aihot.virxact.com/items/cmt5wf8hm0shgro737h9vww1k", "published_at": "2026-08-23T14:13:31+00:00", "note": "发现源；核心事实已回到OpenAI与Hugging Face一手原文。"}
+        {
+          "role": "primary",
+          "name": "OpenAI — The Hugging Face incident and the road ahead",
+          "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+          "published_at": "2026-08-26T00:00:00-07:00",
+          "note": "核验事件经过、内部影响、前沿RL延迟与整改措施；公司自查结论仍需独立边界。"
+        },
+        {
+          "role": "primary",
+          "name": "OpenAI — Path to Astra: critical capabilities and frontier safeguards",
+          "url": "https://openai.com/index/path-to-astra/",
+          "published_at": "2026-09-01T00:00:00-07:00",
+          "note": "核验Astra上线前新增保护与安全节奏。"
+        },
+        {
+          "role": "secondary",
+          "name": "METR and Redwood Research — Independent investigation of the OpenAI/Hugging Face incident",
+          "url": "https://blog.redwoodresearch.org/p/brief-independent-investigation-of",
+          "published_at": "2026-08-26T00:00:00+00:00",
+          "note": "独立核验代理行为与协作；报告明确调查范围及未覆盖事项。"
+        }
       ]
     },
     {
@@ -795,52 +1747,503 @@
       "inference": "推断：闭门会议不足以改变监管路径，真正可交易的增量来自会后声明、法案妥协或部门规则。",
       "unverified": "白宫官方日程、特朗普是否实际出席、完整参会名单、会议纪要和政策承诺均未找到官方原文。",
       "transmission": [
-        {"level": "B", "path": "高层沟通预期 → 加密政策风险偏好 → 币价与相关权益"},
-        {"level": "A", "path": "若形成正式规则/法案推进 → 市场结构与托管合规 → 行业盈利模型"}
+        {
+          "level": "B",
+          "path": "高层沟通预期 → 加密政策风险偏好 → 币价与相关权益"
+        },
+        {
+          "level": "A",
+          "path": "若形成正式规则/法案推进 → 市场结构与托管合规 → 行业盈利模型"
+        }
       ],
       "affected_assets": [
-        {"market": "加密资产与相关美股", "direction": "传闻驱动、高波动", "horizon": "盘中至5日", "reason": "价格同期强势，但不能据此证明会议发生或政策改变。"}
+        {
+          "market": "加密资产与相关美股",
+          "direction": "传闻驱动、高波动",
+          "horizon": "盘中至5日",
+          "reason": "价格同期强势，但不能据此证明会议发生或政策改变。"
+        }
       ],
-      "market_confirmation": {"stage": "price_only", "checked_at": "2026-08-23T10:10:00+08:00", "detail": "COIN、IBIT、MSTR同期明显上涨；缺少官方会后材料，仅记录价格共振。"},
+      "market_confirmation": {
+        "stage": "price_only",
+        "checked_at": "2026-08-23T10:10:00+08:00",
+        "detail": "COIN、IBIT、MSTR同期明显上涨；缺少官方会后材料，仅记录价格共振。"
+      },
       "next_checkpoint": "继续查找白宫正式日程、照片、讲话、事实清单或监管机构会后文件。",
       "invalidation": "白宫否认、参会人披露会议未举行，或后续没有任何政策文件。",
       "sources": [
-        {"role": "secondary", "name": "CoinDesk — White House crypto CEO meeting", "url": "https://www.coindesk.com/policy/2026/08/14/trump-expected-to-attend-white-house-meeting-with-crypto-ceos-sources-say", "published_at": "2026-08-14T00:00:00-04:00", "note": "匿名消息源；白宫未回应，不能升级为已核验。"}
+        {
+          "role": "secondary",
+          "name": "CoinDesk — White House crypto CEO meeting",
+          "url": "https://www.coindesk.com/policy/2026/08/14/trump-expected-to-attend-white-house-meeting-with-crypto-ceos-sources-say",
+          "published_at": "2026-08-14T00:00:00-04:00",
+          "note": "匿名消息源；白宫未回应，不能升级为已核验。"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-hugging-face-acquisition-2026-09-02",
+      "headline": "NVIDIA拟以约129亿美元收购Hugging Face：开放平台承诺与监管审批并存",
+      "category": "ai",
+      "event_type": "filing",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-09-02T00:00:00-07:00",
+      "observed_at": "2026-09-05T19:45:00+08:00",
+      "verified_at": "2026-09-05T20:08:00+08:00",
+      "fact": "NVIDIA 9月2日提交的8-K确认已签署收购Hugging Face的最终协议：约119亿美元支付给股东，另设最高约10亿美元员工股权留任计划；交易预计2027年上半年完成，仍需监管批准及惯常交割条件。NVIDIA承诺平台继续开放并支持其他芯片供应商。",
+      "new_information": "全球最大开放模型社区拟被算力平台龙头并购，交易条款、留任安排、预期交割窗口与开放平台承诺已由SEC文件确认，不再只是媒体线索。",
+      "inference": "推断：若交易完成，Hugging Face的模型分发、企业部署和社区入口将与NVIDIA算力及软件生态结合，可能强化平台协同；但开放中立性、监管补救和客户迁移将决定协同兑现。",
+      "unverified": "监管机构是否批准、最终交割时间、购买价调整、整合成本、收入协同、客户留存及开放平台承诺的长期执行尚未确认。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "最终协议与交割 → NVIDIA取得Hugging Face平台控制权 → 开放模型分发与企业部署入口"
+        },
+        {
+          "level": "B",
+          "path": "平台流量与开发者工具 → NVIDIA软件/算力采用 → 数据中心生态黏性"
+        },
+        {
+          "level": "C",
+          "path": "监管与平台中立性约束 → 交易进度/客户选择 → 并购协同与估值"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "NVDA",
+          "direction": "战略协同偏正面、并购风险双向",
+          "horizon": "6–18个月",
+          "reason": "平台入口扩张与约129亿美元对价并存，需等待审批、整合和收入贡献。"
+        },
+        {
+          "market": "开放模型与AI开发平台",
+          "direction": "生态集中度上升",
+          "horizon": "3–18个月",
+          "reason": "Hugging Face维持开放的承诺已披露，但长期中立性与其他芯片支持需观察。"
+        },
+        {
+          "market": "AI云与加速芯片生态",
+          "direction": "竞争分化",
+          "horizon": "6–24个月",
+          "reason": "若平台与NVIDIA栈深度协同，可能改变模型分发和部署入口的价值分配。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-09-05T20:08:00+08:00",
+        "detail": "并购事实已由SEC与NVIDIA官方确认；未把NVDA单日价格波动归因于交易协同。"
+      },
+      "next_checkpoint": "跟踪反垄断申报、监管补充材料、交割进度、客户留存、其他芯片支持和NVIDIA财报中的整合成本与收入贡献。",
+      "invalidation": "监管否决或施加重大补救、交易延期/终止，或平台客户和开发者显著流失导致预期协同无法兑现。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "SEC EDGAR — NVIDIA Form 8-K (2026-09-02)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm",
+          "published_at": "2026-09-02T00:00:00-07:00",
+          "note": "核验最终协议、约119亿美元股东对价、最高约10亿美元留任计划、交割条件与开放平台承诺。"
+        },
+        {
+          "role": "primary",
+          "name": "NVIDIA Blog — NVIDIA to Acquire Hugging Face",
+          "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+          "published_at": "2026-09-03T00:00:00-07:00",
+          "note": "核验公司战略表述、平台规模与继续开放的公开承诺；协同效果仍待兑现。"
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt-6-astra-launch-2026-09-03",
+      "headline": "OpenAI发布GPT-6 Astra：多端分批上线，网络安全能力达Critical门槛",
+      "category": "ai",
+      "event_type": "product",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-09-03T00:00:00-07:00",
+      "observed_at": "2026-09-05T19:45:00+08:00",
+      "verified_at": "2026-09-05T20:08:00+08:00",
+      "fact": "OpenAI 9月3日正式发布GPT-6 Astra，先向部分机构开放并在随后数日覆盖ChatGPT Plus、Pro、Business、Enterprise，以及OpenAI API、Azure和AWS Bedrock；标准API定价为每百万输入/输出token 10/50美元。安全说明称Astra达到Preparedness Framework网络安全Critical门槛，并配套更严格的访问与监控控制。",
+      "new_information": "Astra已从预告和安全节奏讨论进入正式产品发布，渠道、定价、分批可用性和Critical级网络安全能力均有官方页面。",
+      "inference": "推断：更强的专业工作、编码和计算机使用能力可能提升高复杂度Agent采用，同时Critical级网络能力会提高访问、合规和监控成本；官方跑分不能替代客户留存与单位经济性。",
+      "unverified": "官方基准、客户案例与效率收益主要来自OpenAI及合作方披露；真实稳定性、第三方复现、调用量、收入增量和安全控制有效性仍待验证。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "模型正式上线 → API与企业渠道可用 → 开发者/企业试用"
+        },
+        {
+          "level": "B",
+          "path": "更强Agent与计算机使用 → 工作流自动化采用 → 云/API需求"
+        },
+        {
+          "level": "C",
+          "path": "Critical网络能力 → 访问和监控约束 → 部署成本与安全基础设施需求"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "AI应用与云平台",
+          "direction": "能力供给上升、采用待确认",
+          "horizon": "1–6个月",
+          "reason": "多渠道上线已确认，真实调用与付费转化尚未披露。"
+        },
+        {
+          "market": "云安全与AI安全",
+          "direction": "结构性需求偏正面",
+          "horizon": "3–12个月",
+          "reason": "Critical级网络能力要求更严格的隔离、访问控制和监控。"
+        },
+        {
+          "market": "AI算力",
+          "direction": "潜在增量、未证实",
+          "horizon": "3–12个月",
+          "reason": "更强模型不自动等于新增训练或推理订单，需看调用量和供给节奏。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-09-05T20:08:00+08:00",
+        "detail": "OpenAI未独立上市，相关云与算力股价格受多因素影响；本轮不以价格替代产品采用证据。"
+      },
+      "next_checkpoint": "跟踪全面开放进度、API稳定性、第三方能力与成本复现、企业采用、调用量及安全事件/访问政策变化。",
+      "invalidation": "分批上线长期延迟、第三方复现显著弱于官方口径，或安全限制使核心能力无法形成可持续采用。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "OpenAI — GPT-6 Astra: A new generation of intelligence",
+          "url": "https://openai.com/index/gpt-6-astra/",
+          "published_at": "2026-09-03T00:00:00-07:00",
+          "note": "核验正式发布、分批可用渠道、API型号与标准定价；基准属于官方披露。"
+        },
+        {
+          "role": "primary",
+          "name": "OpenAI — Safety overview: GPT-6 Astra",
+          "url": "https://openai.com/index/safety-overview-gpt-6-astra/",
+          "published_at": "2026-09-03T00:00:00-07:00",
+          "note": "核验Critical网络安全能力门槛及部署保护。"
+        }
+      ]
+    },
+    {
+      "id": "fed-waller-september-reaction-function-2026-09-03",
+      "headline": "Waller给出9月利率条件函数：通胀续降可暂停，反弹则考虑加息",
+      "category": "macro",
+      "event_type": "remarks",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-09-03T10:00:00-04:00",
+      "observed_at": "2026-09-05T19:45:00+08:00",
+      "verified_at": "2026-09-05T20:08:00+08:00",
+      "fact": "美联储理事Waller 9月3日表示，劳动力市场接近最大可持续就业，通胀正缓慢向2%靠拢；若8月通胀继续改善，他愿意支持维持利率不变，但若通胀偏热并显示回落进程逆转，他会考虑小幅加息。他明确称这是依数据变化的个人反应函数，不是政策承诺。",
+      "new_information": "9月FOMC前，Waller把个人投票条件明确锚定到8月通胀：暂停与加息两条路径同时存在，降低了把单句表态解读为委员会既定决定的空间。",
+      "inference": "推断：短端利率和高估值资产对8月通胀的敏感度上升；该表态偏鹰尾部风险，但不能代表FOMC多数或最终决定。",
+      "unverified": "8月通胀尚未发布，Waller个人意见能否形成委员会多数、实际投票与点阵图路径均未确认。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "8月通胀数据 → Waller个人投票倾向 → 9月FOMC利率决策"
+        },
+        {
+          "level": "B",
+          "path": "加息尾部概率 → 美债收益率/美元 → 高估值成长与黄金"
+        },
+        {
+          "level": "C",
+          "path": "政策沟通分歧 → 利率波动率 → 风险资产估值折现"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "美债与美元",
+          "direction": "对通胀上行更敏感",
+          "horizon": "至9月FOMC",
+          "reason": "个人反应函数把偏热通胀与加息可能直接连接。"
+        },
+        {
+          "market": "高估值科技股",
+          "direction": "利率敏感、双向",
+          "horizon": "数日至1个月",
+          "reason": "折现率受数据与政策预期影响，但表态并非委员会决定。"
+        },
+        {
+          "market": "黄金",
+          "direction": "双向",
+          "horizon": "数日至1个月",
+          "reason": "实际利率上行不利，政策不确定性与避险需求可能抵消。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-09-05T20:08:00+08:00",
+        "detail": "讲话已由Fed原文确认；本轮不以同日资产波动证明因果。"
+      },
+      "next_checkpoint": "核验8月就业和通胀数据、FOMC会前其他委员表态、9月声明、点阵图与Waller实际投票。",
+      "invalidation": "8月通胀继续明显回落且委员会形成稳定暂停共识，或Waller随后明确收回加息条件。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "Federal Reserve — Waller: The Economic Outlook and Some Comments on My Policy Communication",
+          "url": "https://www.federalreserve.gov/newsevents/speech/waller20260903a.htm",
+          "published_at": "2026-09-03T10:00:00-04:00",
+          "note": "核验通胀、暂停与加息条件，以及个人反应函数并非政策承诺。"
+        }
+      ]
+    },
+    {
+      "id": "us-july-trade-deficit-2026-09-03",
+      "headline": "美国7月贸易逆差扩大至886亿美元：资本品进口创纪录",
+      "category": "macro",
+      "event_type": "data",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-09-03T08:30:00-04:00",
+      "observed_at": "2026-09-05T19:45:00+08:00",
+      "verified_at": "2026-09-05T20:08:00+08:00",
+      "fact": "美国Census与BEA 9月3日公布，7月商品与服务贸易逆差为886亿美元，较修订后的6月712亿美元扩大174亿美元；出口3107亿美元、环比减少66亿美元，进口3993亿美元、增加108亿美元。资本品进口1403亿美元，创历史新高。",
+      "new_information": "逆差扩大同时伴随资本品进口创纪录，给出需求与投资品进口的官方名义金额信号；不能仅凭大类数据把增量等同为AI服务器或芯片订单。",
+      "inference": "推断：若资本品进口高位持续，可能支持设备投资与库存补充，但短期也扩大贸易逆差；行业映射需要产品编码、数量、价格和企业订单交叉验证。",
+      "unverified": "资本品内部的电脑、半导体、工业设备拆分及实际量价贡献尚未逐项核验；名义进口不等于最终需求、AI资本开支或本土收入。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "进口上升/出口下降 → 名义贸易逆差扩大 → GDP净出口分项"
+        },
+        {
+          "level": "B",
+          "path": "资本品进口创纪录 → 企业设备与库存供给 → 投资活动"
+        },
+        {
+          "level": "C",
+          "path": "产品结构与来源地变化 → 关税/供应链预期 → 行业利润与通胀"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "美元与美债",
+          "direction": "宏观解读双向",
+          "horizon": "数日至1个月",
+          "reason": "逆差扩大与投资品需求并存，需结合通胀和增长数据。"
+        },
+        {
+          "market": "工业与科技硬件",
+          "direction": "需求线索、待拆分",
+          "horizon": "1–3个月",
+          "reason": "资本品进口创纪录，但不能直接映射到电脑或AI设备订单。"
+        },
+        {
+          "market": "贸易敏感行业",
+          "direction": "政策风险上升",
+          "horizon": "1–6个月",
+          "reason": "逆差扩大可能强化关税与供应链政策讨论。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-09-05T20:08:00+08:00",
+        "detail": "官方名义贸易数据已核验；未用市场价格反推细分行业因果。"
+      },
+      "next_checkpoint": "读取FT900细项与高级技术产品数据，拆分电脑、半导体和工业设备量价，并与企业订单及库存数据交叉。",
+      "invalidation": "后续修订显著收窄逆差或资本品进口高点主要由一次性价格/交付造成且未形成持续投资。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "U.S. Census Bureau and BEA — July 2026 International Trade in Goods and Services",
+          "url": "https://www.census.gov/foreign-trade/current/",
+          "published_at": "2026-09-03T08:30:00-04:00",
+          "note": "核验贸易逆差、出口、进口及资本品进口纪录；行业映射仍需细项。"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-claude-fable-5-1-launch-2026-09-01",
+      "headline": "Anthropic发布Claude Fable 5.1：高复杂度Agent能力升级并强化高风险路由",
+      "category": "ai",
+      "event_type": "product",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-09-01T00:00:00-07:00",
+      "observed_at": "2026-09-05T19:45:00+08:00",
+      "verified_at": "2026-09-05T20:08:00+08:00",
+      "fact": "Anthropic 9月1日发布Claude Fable 5.1，面向Pro、Max、Team、Enterprise及Claude Platform，并经AWS、Google Cloud和Microsoft Foundry提供；API价格为每百万输入/输出token 10/50美元。官方称其用于长周期编码与知识工作，并对网络安全、生物与化学高风险请求设置降级路由和额外保护。",
+      "new_information": "Fable 5.1从产品预告进入正式可用，渠道、价格、缓存读取成本和高风险请求处理边界已由Anthropic页面明确。",
+      "inference": "推断：长周期Agent能力和更低缓存成本可能改善复杂工作流单位经济性；同时高风险路由意味着名义最高能力并非所有请求都可直接使用。",
+      "unverified": "厂商基准、合作方案例和节省比例尚缺独立复现；真实延迟、可靠性、用户迁移、调用量和收入贡献未披露。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "模型正式可用 → API/云市场分发 → 企业与开发者试用"
+        },
+        {
+          "level": "B",
+          "path": "长周期Agent与缓存降价 → 单任务成本/可靠性 → 工作流迁移"
+        },
+        {
+          "level": "C",
+          "path": "高风险路由和数据保留要求 → 合规边界 → 行业采用速度"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "AI应用与开发工具",
+          "direction": "能力与价格竞争加剧",
+          "horizon": "1–6个月",
+          "reason": "正式可用和定价已确认，真实迁移与留存待观察。"
+        },
+        {
+          "market": "云平台",
+          "direction": "多云分发偏正面、份额待确认",
+          "horizon": "1–6个月",
+          "reason": "AWS、Google Cloud和Microsoft渠道均列入可用范围。"
+        },
+        {
+          "market": "AI安全与合规",
+          "direction": "需求提高",
+          "horizon": "3–12个月",
+          "reason": "高风险任务路由、数据保留和企业安全方案增加部署约束。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-09-05T20:08:00+08:00",
+        "detail": "Anthropic未独立上市，多云合作方价格受多因素影响；本轮不做单日归因。"
+      },
+      "next_checkpoint": "跟踪API稳定性、第三方编码/Agent复现、缓存成本、企业迁移、调用量与高风险路由体验。",
+      "invalidation": "第三方测试无法复现能力/成本优势、限制显著削弱核心用途，或发布未形成持续使用与客户迁移。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "Anthropic — Claude Fable 5.1",
+          "url": "https://www.anthropic.com/claude/fable",
+          "published_at": "2026-09-01T00:00:00-07:00",
+          "note": "核验发布日期、可用渠道、定价、产品定位与高风险任务保护；性能数据属于厂商披露。"
+        },
+        {
+          "role": "primary",
+          "name": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "published_at": "2026-09-01T00:00:00-07:00",
+          "note": "核验Fable 5.1系统卡已发布。"
+        }
       ]
     }
   ],
   "calendar": [
-    {"stage": "执行跟踪", "title": "美委油田协议进入融资与复产核验", "time": "9月起，合同、许可、融资和首批资本开支待披露", "status": "confirmed", "check": "核验特许权、储量审计、融资来源、设备订单、复产时间表与实际承购流量。"},
-    {"stage": "协议核验", "title": "九家药企MFN安排逐家公司落地", "time": "条款、生效日与产品清单尚未统一披露", "status": "confirmed", "check": "优先澄清Teva协议状态，并核验Medicaid价格、投资和API储备交付。"},
-    {"stage": "执行中", "title": "美国瘦牛肉低关税配额首批开放", "time": "9月1日至30日，首批100,000公吨", "status": "confirmed", "check": "核验CBP/USTR执行通知、使用率、来源国、进口折价及零售传导。"},
-    {"stage": "T-7", "title": "加拿大反制税正式生效", "time": "加拿大东部时间9月8日00:01", "status": "confirmed", "check": "清单与商品编码已公布，继续核验延期、豁免及企业直接敞口。"},
-    {"stage": "T-14", "title": "美联储9月FOMC", "time": "9月15–16日", "status": "confirmed", "check": "判断Warsh的通胀优先表述、7月鹰派分歧及最新PCE信号是否延续。"},
-    {"stage": "T-72", "title": "OpenAI向Cursor供模合同拟终止", "time": "提议停供日11月12日，最终日期待双方确认", "status": "confirmed", "check": "核验最终停供日、Cursor迁移方案、受影响功能、替代模型和开发者留存。"},
-    {"stage": "120日内", "title": "美国大电网设备实施规则", "time": "行政令要求能源部长在120日内按需发布", "status": "confirmed", "check": "核对受限国家、主体、设备/软件、许可、预审名单、存量设备与生效安排。"}
+    {
+      "stage": "审批中",
+      "title": "NVIDIA收购Hugging Face",
+      "time": "预计2027年上半年交割",
+      "status": "confirmed",
+      "check": "跟踪监管审批、补救条件、平台中立性、客户留存与整合进度。"
+    },
+    {
+      "stage": "执行跟踪",
+      "title": "美委油田协议进入融资与复产核验",
+      "time": "9月起，合同、许可、融资和首批资本开支待披露",
+      "status": "confirmed",
+      "check": "核验特许权、储量审计、融资来源、设备订单、复产时间表与实际承购流量。"
+    },
+    {
+      "stage": "协议核验",
+      "title": "九家药企MFN安排逐家公司落地",
+      "time": "条款、生效日与产品清单尚未统一披露",
+      "status": "confirmed",
+      "check": "优先澄清Teva协议状态，并核验Medicaid价格、投资和API储备交付。"
+    },
+    {
+      "stage": "执行中",
+      "title": "美国瘦牛肉低关税配额首批开放",
+      "time": "9月1日至30日，首批100,000公吨",
+      "status": "confirmed",
+      "check": "核验CBP/USTR执行通知、使用率、来源国、进口折价及零售传导。"
+    },
+    {
+      "stage": "T-7",
+      "title": "加拿大反制税正式生效",
+      "time": "加拿大东部时间9月8日00:01",
+      "status": "confirmed",
+      "check": "清单与商品编码已公布，继续核验延期、豁免及企业直接敞口。"
+    },
+    {
+      "stage": "T-14",
+      "title": "美联储9月FOMC",
+      "time": "9月15–16日",
+      "status": "confirmed",
+      "check": "判断Warsh的通胀优先表述、7月鹰派分歧及最新PCE信号是否延续。"
+    },
+    {
+      "stage": "T-72",
+      "title": "OpenAI向Cursor供模合同拟终止",
+      "time": "提议停供日11月12日，最终日期待双方确认",
+      "status": "confirmed",
+      "check": "核验最终停供日、Cursor迁移方案、受影响功能、替代模型和开发者留存。"
+    },
+    {
+      "stage": "120日内",
+      "title": "美国大电网设备实施规则",
+      "time": "行政令要求能源部长在120日内按需发布",
+      "status": "confirmed",
+      "check": "核对受限国家、主体、设备/软件、许可、预审名单、存量设备与生效安排。"
+    }
   ],
   "source_health": [
-    {"group": "第一层 · 一手来源", "status": "verified", "last_success_at": "2026-09-01T22:33:09+08:00", "coverage": "12/12自动一手源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register、Z.ai HF合计抓取543条，保留24条一手候选。白宫与NABEP油田协议、白宫/Astellas/Teva药价口径及Strategy 9月1日8-K已读取；GLM-5.2仅仓库更新时间变化，未作为新事件"},
-    {"group": "第二层 · 专业发现", "status": "partial", "last_success_at": "2026-09-01T22:33:09+08:00", "coverage": "AI HOT自动源1/1成功，抓取62条、保留22条发现候选；与Anthropic、Runway、数据中心用电和AI评论相关的线索未取得足以进入核心区的新一手证据；Reuters、Bloomberg、FT、WSJ、金十、财联社、富途已登记但尚未自动轮询"},
-    {"group": "第三层 · 社交抢先", "status": "registered", "last_success_at": null, "coverage": "官方X、Truth Social、微信公众号、Telegram和行业记者已登记；当前0个自动源，任何内容默认仅线索"},
-    {"group": "市场验证", "status": "partial", "last_success_at": "2026-08-27T09:49:53+08:00", "coverage": "Futu OpenD已核验截至2026-08-26完整交易日及业绩后快照：SPY +0.02%、QQQ +0.09%，NVDA常规时段-1.59%、业绩后快照+4.71%；价格只记录响应，不证明事件因果"}
+    {
+      "group": "第一层 · 一手来源",
+      "status": "verified",
+      "last_success_at": "2026-09-05T20:08:00+08:00",
+      "coverage": "本轮直接读取SEC EDGAR、NVIDIA、OpenAI、Anthropic、Federal Reserve与Census/BEA原文，新增5项已核验事件并升级1项；并购审批、模型采用、FOMC多数和贸易细分仍保留待核验边界"
+    },
+    {
+      "group": "第二层 · 专业发现",
+      "status": "partial",
+      "last_success_at": "2026-09-05T20:08:00+08:00",
+      "coverage": "本轮核心事实全部回到一手原文；METR/Redwood仅用于独立调查范围交叉核验。付费与登录源未自动轮询，不据此伪装完整覆盖"
+    },
+    {
+      "group": "第三层 · 社交抢先",
+      "status": "registered",
+      "last_success_at": null,
+      "coverage": "官方X、Truth Social、微信公众号、Telegram和行业记者已登记；当前0个自动源，任何内容默认仅线索"
+    },
+    {
+      "group": "市场验证",
+      "status": "partial",
+      "last_success_at": "2026-08-27T09:49:53+08:00",
+      "coverage": "Futu OpenD已核验截至2026-08-26完整交易日及业绩后快照：SPY +0.02%、QQQ +0.09%，NVDA常规时段-1.59%、业绩后快照+4.71%；价格只记录响应，不证明事件因果"
+    }
   ],
   "collection_run": {
-    "generated_at": "2026-09-01T22:33:09+08:00",
+    "generated_at": "2026-09-05T20:06:37+08:00",
     "configured_sources": 36,
     "active_sources": 13,
     "successful_sources": 13,
     "failed_sources": 0,
     "registered_manual_sources": 23,
     "tier1_fetched": 543,
-    "tier1_candidates": 24,
-    "tier2_fetched": 62,
-    "candidate_pool_after_dedupe": 45,
-    "manual_connectors_succeeded": ["白宫与NABEP委内瑞拉油田协议核验", "白宫、Astellas与Teva药价协议状态核验", "Strategy 2026-09-01 SEC 8-K核验"],
-    "artifacts": ["sources.json", "candidates.json", "collection-status.json"]
+    "tier1_candidates": 64,
+    "tier2_fetched": 85,
+    "candidate_pool_after_dedupe": 80,
+    "manual_connectors_succeeded": [
+      "SEC EDGAR与NVIDIA并购核验",
+      "OpenAI Astra发布与安全说明核验",
+      "Anthropic Fable 5.1发布核验",
+      "Federal Reserve Waller讲话核验",
+      "Census/BEA 7月贸易数据核验",
+      "OpenAI与METR/Redwood事故复盘核验"
+    ],
+    "artifacts": [
+      "sources.json",
+      "collection-status.json"
+    ]
   },
   "methodology": {
     "priority_formula": "影响范围30% + 传导直接度25% + 证据可靠度20% + 预期差15% + 时间紧迫度10%",
     "core_rule": "核心区只接受verified或partially_verified事件，并至少包含一个一手来源；匿名消息进入待证真。",
-    "limitations": "本页为2026-09-01北京时间快照。候选池由真实RSS/API采集生成，但核心事件仍需逐条正文核验；本轮13/13自动源成功，23个付费、登录或专用连接器来源只登记未自动化。美委油田协议已由白宫和NABEP公司声明交叉核验，但完整合同、储量审计、融资与复产仍待证；药价安排已读取白宫、Astellas和Teva公告，其中Teva仍使用拟议与磋商表述，不能视为九家公司法律状态完全一致。Strategy 9月1日8-K补充优先股股息和预期税务属性；GLM-5.2只是旧仓库时间戳变化，CFTC延期、Fed演讲、Federal Register常规通知和其他AI线索未形成足以进入核心区的新增事实。价格只记录响应，不证明事件因果。"
+    "limitations": "本页为2026-09-05北京时间快照。新增事件均读取一手原文；SEC并购文件不等于监管批准，厂商发布与基准不等于采用或收入，Waller讲话是个人条件函数而非FOMC决定，资本品名义进口不等于AI订单。OpenAI事故复盘加入METR/Redwood独立范围核验，但补救有效性仍未被独立全面确认。社交与付费源未自动轮询，页面因此维持partial。价格只记录响应，不证明事件因果。"
   }
 }
