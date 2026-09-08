@@ -1,8 +1,8 @@
 {
   "status": "OPEN_D_VERIFIED_NORMALIZED_INDEX_CHART",
-  "generated_at": "2026-09-07T18:05:24+08:00",
+  "generated_at": "2026-09-08T17:59:52+08:00",
   "base_date": "2026-07-27",
-  "data_date": "2026-09-07",
+  "data_date": "2026-09-08",
   "method": "first close on or after 2026-07-27 = 100; custom line is daily equal weight",
   "note": "软件ETF代表A股软件行业交易表现；自选等权线覆盖本页22只IT服务与软件开发标的。",
   "lines": [
@@ -133,6 +133,10 @@
         {
           "date": "2026-09-07",
           "value": 89.357
+        },
+        {
+          "date": "2026-09-08",
+          "value": 88.0
         }
       ]
     },
@@ -263,6 +267,10 @@
         {
           "date": "2026-09-07",
           "value": 103.035
+        },
+        {
+          "date": "2026-09-08",
+          "value": 101.973
         }
       ]
     },
@@ -423,6 +431,11 @@
         {
           "date": "2026-09-07",
           "value": 109.587,
+          "coverage": 27
+        },
+        {
+          "date": "2026-09-08",
+          "value": 107.496,
           "coverage": 27
         }
       ]
