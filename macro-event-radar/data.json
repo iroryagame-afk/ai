@@ -1,5 +1,26 @@
 {
   "schema_version": 1,
+  "near_term": {
+    "as_of": "2026-09-09T16:54:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "scope": "9月9日—11日宏观检查表；部分覆盖，非实时行情。未回填不等于事件未发生。",
+    "brent": {
+      "observed_at": "2026-09-09T15:21:00+08:00",
+      "value": 100.07,
+      "status": "媒体已核验",
+      "note": "Reuters报道的Brent期货盘中价格，100美元已盘中触及；不是结算价，不替代旧收盘模型，也不证明油价与10Y双阈值共同触发。",
+      "source": "https://ca.marketscreener.com/news/brent-crude-rises-above-100-a-barrel-as-middle-east-conflict-escalates-ce785bd9da8cfe22"
+    },
+    "events": [
+      {"id":"buyback-20260909","title":"长端美债回购上限公告","time":"9月9日23:00（美东9月9日11:00）","status":"专业日历支持；本次官方公告待核验","check":"财政部8月19日已确认10—20年及20—30年回购上限至少从20亿提高至40亿美元。40/60/80/100亿美元仅作研究情景：40亿兑现已公告下限；60/80/100亿为更强力度假设，不是官方目标或市场一致预期。公告上限不等于实际接受量，更不等于QE。","sources":["https://home.treasury.gov/news/press-releases/sb0607","https://www.wrightson.com/category/federal-reserve"],"result":{"status":"待回填","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"记录公告上限、期限桶、实际接受量（操作后另记），以及10Y/30Y公告前、+30分钟与收盘变动。"},
+      {"id":"auction-20260909","title":"390亿美元10年期美债续发拍卖","time":"9月10日01:00（美东9月9日13:00）","status":"专业日历支持；官方本次发行公告待核验","check":"看投标倍数、间接投标者获配占比及Tail/Stop-through；与同期限近期拍卖对比，不用单一阈值机械判断。","sources":["https://www.wrightson.com/category/federal-reserve","https://www.treasurydirect.gov/auctions/announcements-data-results/announcement-results-press-releases/"],"result":{"status":"待回填","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"Tail(bp)=(最高中标收益率−投标截止前WI收益率)×100，收益率以百分数输入；正值为tail，负值为stop-through。缺WI时明确未核验，不能只用官方中标收益率计算。"},
+      {"id":"bessent-20260910","title":"贝森特讲话线索","time":"待核验窗口：9月10日08:00—09:00","status":"待核验，不作确定时点","check":"关注财政赤字、美债回购、美元与日元。尚未取得支持该准确时段的官方议程；不把其他日期采访当成本场讲话。","sources":[],"result":{"status":"待核验议程","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"先核对主办方/财政部议程，再保存原话、时间和政策是否有执行文件；讲话本身不等于政策落地。"},
+      {"id":"trump-20260910","title":"特朗普讲话线索","time":"待核验窗口：约9月10日09:00","status":"待核验，不作确定时点","check":"关注伊朗、油价、关税与财政扩张。大会出席报道不能证明具体上台时间；准确时间和议程尚待官方确认。","sources":[],"result":{"status":"待核验议程","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"原话、正式命令和媒体解读分栏；对照Brent、长端收益率和美元，避免把同时波动全归因于讲话。"},
+      {"id":"ppi-20260910","title":"美国8月PPI","time":"9月10日20:30（美东08:30）","status":"官方日历已确认","check":"同时核验总项与核心环比、同比、前值修订；发布前共识尚未核验，不填写猜测值。","sources":["https://www.bls.gov/schedule/2026/09_sched_list.htm"],"result":{"status":"待回填","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"实际值与带时间戳共识同口径比较，再记录2Y/10Y、美元和股指反应。"},
+      {"id":"claims-20260910","title":"美国初请失业金","time":"9月10日20:30（美东08:30）","status":"DOL常规时刻＋专业日历支持","check":"初请、续请、四周均值与前值修订一起看；当周若官方改期，以DOL为准。","sources":["https://oui.doleta.gov/unemploy/archive.asp","https://www.wrightson.com/category/federal-reserve"],"result":{"status":"待回填","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"与PPI同时发布，市场反应不能隔离为初请单一因果。"},
+      {"id":"cpi-20260911","title":"美国8月CPI","time":"9月11日20:30（美东08:30）","status":"官方日历已确认","check":"总项与核心环比、同比，能源、住房和服务拆项；当前油价上行不等于已计入8月全部通胀。","sources":["https://www.bls.gov/schedule/2026/09_sched_list.htm"],"result":{"status":"待回填","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"核验实际−共识差及修订，再看利率与股市是否同向确认；单项超预期不直接推出交易结论。"}
+    ]
+  },
   "page_status": "live",
   "verification_status": "partial",
   "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-09-08_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
@@ -2518,21 +2539,21 @@
       "check": "核验CBP/USTR执行通知、使用率、来源国、进口折价及零售传导。"
     },
     {
-      "stage": "T-7",
+      "stage": "日期已过，执行待回看",
       "title": "加拿大反制税正式生效",
       "time": "加拿大东部时间9月8日00:01",
       "status": "confirmed",
       "check": "清单与商品编码已公布，继续核验延期、豁免及企业直接敞口。"
     },
     {
-      "stage": "T-14",
+      "stage": "预定会议",
       "title": "美联储9月FOMC",
       "time": "9月15–16日",
       "status": "confirmed",
       "check": "判断Warsh的通胀优先表述、7月鹰派分歧及最新PCE信号是否延续。"
     },
     {
-      "stage": "T-25",
+      "stage": "预定数据",
       "title": "美国9月就业报告",
       "time": "10月2日08:30美东时间",
       "status": "confirmed",
@@ -2546,7 +2567,7 @@
       "check": "跟踪执法计划、州际准入、原产地标签、贷款额度与具体案件。"
     },
     {
-      "stage": "T-72",
+      "stage": "提议日期，待确认",
       "title": "OpenAI向Cursor供模合同拟终止",
       "time": "提议停供日11月12日，最终日期待双方确认",
       "status": "confirmed",
