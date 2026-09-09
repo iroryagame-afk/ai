@@ -46,3 +46,5 @@ function emphasized(tag,value){
  if(tag==='p'&&/^(云端原判断：|云端结论：)/.test(content))el.className='conclusion-block';
  if(tag==='p'&&/^(主要风险：|最大风险：)/.test(content))el.className='risk-block';return el;
 }
+
+fetch('./midterm.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('读取失败');return r.json()}).then(d=>{if(d.schema_version!==1)throw Error('版本不匹配');$('#midtermDate').textContent=new Date(d.as_of).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false})+' · '+d.status;const target=$('#midtermContent');target.replaceChildren(text('p',d.selection_model+' / '+d.version,'report-meta'));renderDocument(target,d.body)}).catch(()=>{$('#midtermDate').textContent='暂未取得更新';$('#midtermContent').textContent='加载失败，请刷新重试。'});
