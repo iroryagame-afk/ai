@@ -4,16 +4,16 @@
   "status": "VERIFIED",
   "verifyMarker": "VERIFIED_US_INTEGRATED_RECOMMENDATIONS_DIRECT_INPUTS_SAME_CLOSE",
   "modelVersion": "US_INTEGRATED_V2_20260826",
-  "generatedAt": "2026-09-05T20:00:11+08:00",
-  "dataDate": "2026-09-04",
+  "generatedAt": "2026-09-09T09:53:49+08:00",
+  "dataDate": "2026-09-08",
   "sourceDates": {
-    "csnSignal": "2026-09-04",
-    "hot": "2026-09-04",
-    "thrust": "2026-09-04",
-    "rotation": "2026-09-04",
-    "skew": "2026-09-04",
-    "software": "2026-09-04",
-    "hardware": "2026-09-04"
+    "csnSignal": "2026-09-08",
+    "hot": "2026-09-08",
+    "thrust": "2026-09-08",
+    "rotation": "2026-09-08",
+    "skew": "2026-09-08",
+    "software": "2026-09-08",
+    "hardware": "2026-09-08"
   },
   "weights": {
     "strengthRotation": 30,
@@ -24,17 +24,17 @@
     "riskReward": 10
   },
   "marketGate": {
-    "mode": "attack",
-    "label": "进攻",
-    "maxCount": 10,
-    "threshold": 63.0,
+    "mode": "neutral",
+    "label": "中性观察",
+    "maxCount": 7,
+    "threshold": 66.0,
     "reasons": [
       "市场环境允许进攻",
-      "25Δ Skew QQQ 1.99 / SPY 2.00"
+      "25Δ Skew QQQ 4.29 / SPY 2.72"
     ],
-    "qqqSkew": 1.986,
-    "spySkew": 1.997,
-    "protectiveSkew": 1.997
+    "qqqSkew": 4.293,
+    "spySkew": 2.718,
+    "protectiveSkew": 4.293
   },
   "selectionPolicy": {
     "targetCount": "5-10; never pad below threshold",
@@ -52,28 +52,29 @@
     "xConsensusPolicy": "context_only_not_scored"
   },
   "selectionStats": {
-    "universeCount": 577,
-    "scoredCount": 64,
-    "qualifiedBeforeDiversification": 16,
+    "universeCount": 706,
+    "scoredCount": 74,
+    "qualifiedBeforeDiversification": 17,
     "exclusions": {
+      "singleSource": 342,
+      "csnRiskGate": 170,
       "highRiskProduct": 120,
-      "singleSource": 393,
-      "sectorCap": 7
+      "sectorCap": 3
     }
   },
-  "selectedCount": 9,
+  "selectedCount": 7,
   "rows": [
     {
-      "ticker": "SNDK",
-      "name": "闪迪",
+      "ticker": "SMTC",
+      "name": "先科电子",
       "assetClass": "us_stock",
       "sector": "未分类",
-      "score": 88.1,
+      "score": 82.6,
       "factors": {
-        "strengthRotation": 29.1,
+        "strengthRotation": 29.6,
         "trendEntry": 25.0,
-        "heatTheme": 13.4,
-        "volumeStructure": 8.4,
+        "heatTheme": 10.7,
+        "volumeStructure": 5.1,
         "specialMonitor": 5.0,
         "riskReward": 7.2
       },
@@ -87,210 +88,214 @@
       "reasons": [
         "趋势/位置",
         "相对强度/轮动",
-        "热度/主线",
+        "风险收益",
         "领先加速"
       ],
       "risks": [
-        "ATR 6.3%，控制仓位"
+        "ATR 6.6%，控制仓位"
       ],
-      "confirmZone": "EMA10 1569.81 / EMA20 1534.87",
-      "invalidation": "EMA55 1517.56",
+      "confirmZone": "EMA10 140.85 / EMA20 136.84",
+      "invalidation": "EMA55 134.45",
       "skew": null,
-      "atrPct": 6.31,
+      "atrPct": 6.62,
       "distanceEma20": null,
       "rank": 1,
       "action": "优先观察"
     },
     {
-      "ticker": "MU",
-      "name": "美光科技",
+      "ticker": "INTC",
+      "name": "英特尔",
       "assetClass": "us_stock",
-      "sector": "HBM与存储",
-      "score": 83.4,
+      "sector": "制造验证",
+      "score": 77.6,
       "factors": {
-        "strengthRotation": 28.9,
-        "trendEntry": 23.8,
-        "heatTheme": 5.2,
-        "volumeStructure": 8.0,
-        "specialMonitor": 9.3,
-        "riskReward": 8.2
+        "strengthRotation": 27.4,
+        "trendEntry": 19.4,
+        "heatTheme": 9.1,
+        "volumeStructure": 8.4,
+        "specialMonitor": 8.7,
+        "riskReward": 6.6
       },
       "sources": [
+        "CSN",
+        "HOT",
         "THRUST_ROTATION",
-        "MONITOR",
-        "SKEW"
+        "MONITOR"
       ],
-      "sourceCount": 3,
+      "sourceCount": 4,
       "rotationPhase": "领先加速",
-      "csnCall": "无独立信号",
+      "csnCall": "等待确认",
       "reasons": [
         "相对强度/轮动",
-        "趋势/位置",
         "专项监控",
+        "量价结构",
         "领先加速"
       ],
       "risks": [
-        "未见主要过热或保护需求异常"
+        "距EMA20 10.7%，等回踩"
       ],
-      "confirmZone": "930.21–958.54",
-      "invalidation": "844.62",
-      "skew": -1.294,
-      "atrPct": 4.59,
-      "distanceEma20": 7.65,
+      "confirmZone": "92.92–95.75",
+      "invalidation": "85.14",
+      "skew": null,
+      "atrPct": 4.21,
+      "distanceEma20": 10.74,
       "rank": 2,
-      "action": "优先观察"
+      "action": "等待回踩确认"
     },
     {
-      "ticker": "HOOD",
-      "name": "Robinhood",
+      "ticker": "COHU",
+      "name": "科休半导体",
       "assetClass": "us_stock",
-      "sector": "未分类",
-      "score": 82.3,
-      "factors": {
-        "strengthRotation": 28.2,
-        "trendEntry": 25.0,
-        "heatTheme": 12.4,
-        "volumeStructure": 4.5,
-        "specialMonitor": 5.0,
-        "riskReward": 7.2
-      },
-      "sources": [
-        "HOT",
-        "THRUST_ROTATION"
-      ],
-      "sourceCount": 2,
-      "rotationPhase": "领先加速",
-      "csnCall": "无独立信号",
-      "reasons": [
-        "趋势/位置",
-        "相对强度/轮动",
-        "热度/主线",
-        "领先加速"
-      ],
-      "risks": [
-        "ATR 6.0%，控制仓位"
-      ],
-      "confirmZone": "EMA10 110.66 / EMA20 105.95",
-      "invalidation": "EMA55 100.27",
-      "skew": null,
-      "atrPct": 6.04,
-      "distanceEma20": null,
-      "rank": 3,
-      "action": "优先观察"
-    },
-    {
-      "ticker": "BE",
-      "name": "Bloom Energy",
-      "assetClass": "us_stock",
-      "sector": "能源/油气",
-      "score": 82.2,
-      "factors": {
-        "strengthRotation": 29.0,
-        "trendEntry": 25.0,
-        "heatTheme": 10.8,
-        "volumeStructure": 5.2,
-        "specialMonitor": 5.0,
-        "riskReward": 7.2
-      },
-      "sources": [
-        "HOT",
-        "THRUST_ROTATION"
-      ],
-      "sourceCount": 2,
-      "rotationPhase": "领先加速",
-      "csnCall": "无独立信号",
-      "reasons": [
-        "趋势/位置",
-        "相对强度/轮动",
-        "热度/主线",
-        "领先加速"
-      ],
-      "risks": [
-        "ATR 6.3%，控制仓位"
-      ],
-      "confirmZone": "EMA10 223.95 / EMA20 220.60",
-      "invalidation": "EMA55 227.58",
-      "skew": null,
-      "atrPct": 6.27,
-      "distanceEma20": null,
-      "rank": 4,
-      "action": "优先观察"
-    },
-    {
-      "ticker": "TSM",
-      "name": "台积电",
-      "assetClass": "us_stock",
-      "sector": "先进制造",
-      "score": 79.8,
+      "sector": "半导体/设备",
+      "score": 76.7,
       "factors": {
         "strengthRotation": 25.1,
-        "trendEntry": 23.8,
-        "heatTheme": 5.2,
-        "volumeStructure": 8.2,
-        "specialMonitor": 9.3,
+        "trendEntry": 25.0,
+        "heatTheme": 7.5,
+        "volumeStructure": 5.9,
+        "specialMonitor": 5.0,
         "riskReward": 8.2
       },
       "sources": [
-        "THRUST_ROTATION",
-        "MONITOR",
-        "SKEW"
+        "HOT",
+        "THRUST_ROTATION"
       ],
-      "sourceCount": 3,
+      "sourceCount": 2,
       "rotationPhase": "领先加速",
       "csnCall": "无独立信号",
       "reasons": [
         "趋势/位置",
-        "专项监控",
         "相对强度/轮动",
+        "风险收益",
         "领先加速"
       ],
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "412.16–424.72",
-      "invalidation": "405.15",
-      "skew": 1.445,
-      "atrPct": 2.48,
-      "distanceEma20": 2.5,
-      "rank": 5,
-      "action": "优先观察"
+      "confirmZone": "EMA10 49.69 / EMA20 50.76",
+      "invalidation": "EMA55 51.95",
+      "skew": null,
+      "atrPct": 5.96,
+      "distanceEma20": null,
+      "rank": 3,
+      "action": "等待回踩确认"
     },
     {
-      "ticker": "NVDA",
-      "name": "英伟达",
+      "ticker": "AMD",
+      "name": "美国超微公司",
       "assetClass": "us_stock",
-      "sector": "算力平台",
-      "score": 74.5,
+      "sector": "算力验证",
+      "score": 74.4,
       "factors": {
-        "strengthRotation": 27.9,
-        "trendEntry": 22.0,
+        "strengthRotation": 25.7,
+        "trendEntry": 17.7,
         "heatTheme": 5.2,
-        "volumeStructure": 2.9,
-        "specialMonitor": 8.3,
+        "volumeStructure": 8.9,
+        "specialMonitor": 8.7,
         "riskReward": 8.2
       },
       "sources": [
+        "CSN",
         "THRUST_ROTATION",
         "MONITOR",
         "SKEW"
       ],
-      "sourceCount": 3,
+      "sourceCount": 4,
       "rotationPhase": "领先加速",
-      "csnCall": "无独立信号",
+      "csnCall": "买入观察",
       "reasons": [
-        "相对强度/轮动",
-        "趋势/位置",
+        "量价结构",
         "专项监控",
+        "相对强度/轮动",
         "领先加速"
       ],
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "216.01–222.59",
-      "invalidation": "207.25",
-      "skew": 2.732,
-      "atrPct": 3.31,
-      "distanceEma20": 5.04,
+      "confirmZone": "470.67–485.01",
+      "invalidation": "440.5",
+      "skew": 1.354,
+      "atrPct": 3.71,
+      "distanceEma20": 5.84,
+      "rank": 4,
+      "action": "等待回踩确认"
+    },
+    {
+      "ticker": "VRT",
+      "name": "Vertiv Holdings",
+      "assetClass": "us_stock",
+      "sector": "电力与散热",
+      "score": 74.0,
+      "factors": {
+        "strengthRotation": 28.3,
+        "trendEntry": 15.8,
+        "heatTheme": 5.2,
+        "volumeStructure": 7.8,
+        "specialMonitor": 8.7,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "买入观察",
+      "reasons": [
+        "相对强度/轮动",
+        "专项监控",
+        "风险收益",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "266.33–274.44",
+      "invalidation": "248.75",
+      "skew": null,
+      "atrPct": 4.26,
+      "distanceEma20": 7.56,
+      "rank": 5,
+      "action": "等待回踩确认"
+    },
+    {
+      "ticker": "NBIS",
+      "name": "NEBIUS",
+      "assetClass": "us_stock",
+      "sector": "未分类",
+      "score": 72.1,
+      "factors": {
+        "strengthRotation": 26.2,
+        "trendEntry": 20.6,
+        "heatTheme": 12.6,
+        "volumeStructure": 4.1,
+        "specialMonitor": 5.0,
+        "riskReward": 5.6
+      },
+      "sources": [
+        "CSN",
+        "HOT",
+        "THRUST_ROTATION"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "等待确认",
+      "reasons": [
+        "相对强度/轮动",
+        "热度/主线",
+        "趋势/位置",
+        "领先加速"
+      ],
+      "risks": [
+        "距EMA20 11.5%，等回踩",
+        "ATR 6.3%，控制仓位"
+      ],
+      "confirmZone": "220.002 / 218.681 / 214.224",
+      "invalidation": "210.108",
+      "skew": null,
+      "atrPct": 6.3,
+      "distanceEma20": 11.52,
       "rank": 6,
       "action": "等待回踩确认"
     },
@@ -299,115 +304,39 @@
       "name": "Snowflake",
       "assetClass": "us_stock",
       "sector": "高弹性数据层",
-      "score": 72.9,
+      "score": 70.0,
       "factors": {
-        "strengthRotation": 26.2,
-        "trendEntry": 21.0,
+        "strengthRotation": 25.9,
+        "trendEntry": 20.1,
         "heatTheme": 5.2,
-        "volumeStructure": 4.5,
+        "volumeStructure": 2.8,
         "specialMonitor": 7.8,
         "riskReward": 8.2
       },
       "sources": [
+        "CSN",
         "THRUST_ROTATION",
         "MONITOR"
-      ],
-      "sourceCount": 2,
-      "rotationPhase": "领先加速",
-      "csnCall": "无独立信号",
-      "reasons": [
-        "相对强度/轮动",
-        "趋势/位置",
-        "风险收益",
-        "领先加速"
-      ],
-      "risks": [
-        "未见主要过热或保护需求异常"
-      ],
-      "confirmZone": "318.32–328.02",
-      "invalidation": "287.02",
-      "skew": null,
-      "atrPct": 5.35,
-      "distanceEma20": 4.34,
-      "rank": 7,
-      "action": "等待回踩确认"
-    },
-    {
-      "ticker": "VRT",
-      "name": "Vertiv Holdings",
-      "assetClass": "us_stock",
-      "sector": "电力与散热",
-      "score": 65.1,
-      "factors": {
-        "strengthRotation": 25.9,
-        "trendEntry": 15.4,
-        "heatTheme": 5.2,
-        "volumeStructure": 2.3,
-        "specialMonitor": 8.1,
-        "riskReward": 8.2
-      },
-      "sources": [
-        "THRUST_ROTATION",
-        "MONITOR"
-      ],
-      "sourceCount": 2,
-      "rotationPhase": "领先加速",
-      "csnCall": "无独立信号",
-      "reasons": [
-        "相对强度/轮动",
-        "风险收益",
-        "专项监控",
-        "领先加速"
-      ],
-      "risks": [
-        "未见主要过热或保护需求异常"
-      ],
-      "confirmZone": "264.21–272.26",
-      "invalidation": "248.75",
-      "skew": null,
-      "atrPct": 4.6,
-      "distanceEma20": 4.58,
-      "rank": 8,
-      "action": "观察"
-    },
-    {
-      "ticker": "MRVL",
-      "name": "迈威尔科技",
-      "assetClass": "us_stock",
-      "sector": "连接与ASIC",
-      "score": 63.9,
-      "factors": {
-        "strengthRotation": 20.5,
-        "trendEntry": 20.9,
-        "heatTheme": 5.2,
-        "volumeStructure": 2.4,
-        "specialMonitor": 7.7,
-        "riskReward": 7.2
-      },
-      "sources": [
-        "THRUST_ROTATION",
-        "MONITOR",
-        "SKEW"
       ],
       "sourceCount": 3,
-      "rotationPhase": "落后加速",
-      "csnCall": "无独立信号",
+      "rotationPhase": "领先加速",
+      "csnCall": "买入观察",
       "reasons": [
-        "趋势/位置",
-        "专项监控",
+        "相对强度/轮动",
         "风险收益",
-        "落后加速"
+        "趋势/位置",
+        "领先加速"
       ],
       "risks": [
-        "ATR 7.2%，控制仓位"
+        "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "217.58–224.21",
-      "invalidation": "200.62",
-      "skew": -1.401,
-      "atrPct": 7.18,
-      "distanceEma20": 1.2,
-      "rank": 9,
-      "action": "观察"
+      "confirmZone": "319.48–329.21",
+      "invalidation": "288.52",
+      "skew": null,
+      "atrPct": 5.31,
+      "distanceEma20": 3.44,
+      "rank": 7,
+      "action": "等待回踩确认"
     }
   ]
 }
