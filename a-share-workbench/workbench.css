@@ -7,3 +7,5 @@
 
 /* Keep report openings focused; provenance lives in the footer. */
 .report-meta{font-size:13px;font-weight:400;color:var(--muted);margin:8px 0 20px}.published-report>h3:first-of-type{margin-top:20px;padding-top:0;border-top:0}.mast{margin-bottom:28px}footer p{font-size:12px;line-height:1.8;max-width:none;margin:6px 0}
+
+.intraday-results table{min-width:920px}.intraday-results td{white-space:nowrap;vertical-align:top}.intraday-results td:last-child{white-space:normal;min-width:240px}.intraday-results{margin-top:20px}.report-status:empty{display:none}

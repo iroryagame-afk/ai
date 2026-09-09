@@ -660,6 +660,50 @@
     "fresh_coverage": 0.9978813559322034,
     "active_count": 4,
     "event_count": 0,
-    "table": ""
+    "table": "",
+    "rows": [
+      {
+        "code": "SH.688300",
+        "name": "联瑞新材",
+        "current_state": "回调",
+        "phase": "第5笔回调确认到位",
+        "priority": "P1",
+        "bottom_time": "2026-09-08 14:30:00",
+        "macd": "MACD动能改善",
+        "kdj": "KDJ动能改善"
+      },
+      {
+        "code": "SZ.301127",
+        "name": "武汉天源",
+        "current_state": "回调",
+        "phase": "第5笔回调确认到位",
+        "priority": "P1",
+        "bottom_time": "2026-09-09 10:00:00",
+        "macd": "MACD动能改善",
+        "kdj": "KDJ动能改善"
+      },
+      {
+        "code": "SH.601872",
+        "name": "招商轮船",
+        "current_state": "主升",
+        "phase": "第4笔回调确认到位",
+        "priority": "P1",
+        "bottom_time": "2026-09-07 14:30:00",
+        "macd": "MACD动能改善",
+        "kdj": "KDJ动能改善"
+      },
+      {
+        "code": "SZ.300017",
+        "name": "网宿科技",
+        "current_state": "回调",
+        "phase": "第5笔回调接近到位",
+        "priority": "P2",
+        "bottom_time": "2026-09-09 14:00:00",
+        "macd": "MACD底背离观察",
+        "kdj": "KDJ低位拐头"
+      }
+    ],
+    "source": "outputs/a30_key_nodes/scan.json",
+    "scope_label": "仅个股信号"
   }
 }
