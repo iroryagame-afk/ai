@@ -19,6 +19,7 @@ ACTIVE_DYNAMIC = {
     "a-share-biotech-trend/index.html",
     "a-share-dividend-defense/index.html",
     "a-share-trend-candidates/index.html",
+    "a-share-workbench/index.html",
     "ai-infrastructure-deleveraging/index.html",
     "us-software-deleveraging/index.html",
     "a-share-t1-focus/index.html",
@@ -197,6 +198,7 @@ def nav(relative: str) -> str:
             ("us-market/x-consensus/", "全球注意力雷达", "中文X · 多语种长文 · Reddit · 作者原图"),
         ]),
         ("a-tools", "A股", [
+            ("a-share-workbench/", "交易工作台", "盘前 · 盘中 · A观察 · 盘后"),
             ("a-share-trend-candidates/", "趋势候选", "主升 · 回调 · 反转 · T+1"),
             ("a-share-domestic-compute/", "国产算力", "芯片 · 服务器 · 网络 · AIDC"),
             ("a-share-supply-tightness/", "供需紧张", "存储 · PCB · 材料 · 制造"),

@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "registry": "docs/csnpk-page-registry.md",
   "pages": [
+    {"route": "/a-share-workbench/", "state": "active", "refreshClass": "content_on_change", "files": ["index.html", "data.json", "workbench.css", "workbench.js"], "freshness": {"file": "data.json", "field": "content_date"}},
     {"route": "/", "state": "active", "refreshClass": "derived_portal", "files": ["index.html"]},
     {"route": "/a-share-software-deleveraging/", "state": "active", "refreshClass": "cn_close", "files": ["index.html", "data.json", "index-chart.json"], "freshness": {"file": "data.json", "field": "data_date"}},
     {"route": "/a-share-hardware-deleveraging/", "state": "active", "refreshClass": "cn_close", "files": ["index.html", "data.json", "index-chart.json"], "freshness": {"file": "data.json", "field": "data_date"}},
