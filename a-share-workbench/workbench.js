@@ -23,11 +23,6 @@ function renderDocument(target,body){
 fetch('./reports.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('报告读取失败');return r.json()}).then(reports=>{
  for(const kind of ['pre','post']){const r=reports[kind],target=$('#published-'+kind);target.replaceChildren();target.append(text('p',r.date+' · '+reports.format+' · 数据冻结 '+r.frozen_at,'report-meta'),text('p',reports.verification,'muted'));if(r.privacy)target.append(text('p',r.privacy,'muted'));renderDocument(target,r.body);const source=document.createElement('details');source.append(text('summary','来源与同步状态'));source.append(text('p','本版于'+reports.retrieved_on+'读取云端实际报告后整理，未接通无人值守自动同步；不是完整原文逐字转载。'));const a=text('a','查看原始云端报告');a.href=r.source;a.target='_blank';a.rel='noopener noreferrer';source.append(a);target.append(source)}
 }).catch(e=>{for(const kind of ['pre','post'])$('#published-'+kind).textContent=e.message+'，请稍后刷新。'});
-fetch('../a-share-trend-candidates/data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('候选数据读取失败');return r.json()}).then(d=>{
- $('#trendDate').textContent='数据日期 '+d.data_date+' · '+d.market_mode;const target=$('#trendContent');let count=0;
- for(const group of d.matrix){const rows=[];for(const state of ['主升','回调','反转'])for(const r of group[state]||[])rows.push([r.name+' '+r.ticker,state,r.level,r.kind,r.hour].join('|'));if(!rows.length)continue;count+=rows.length;const section=document.createElement('details');section.open=count===rows.length;section.append(text('summary',group.category+' · '+rows.length+'只'));renderDocument(section,'股票|阶段|级别|条件|30分钟确认\n'+rows.join('\n'));target.append(section)}if(!count)target.textContent='此快照没有候选，不补足名单。';
-}).catch(e=>$('#trendContent').textContent=e.message+'，请稍后刷新。');
-
 const navToggle=document.querySelector('.mobile-nav-toggle'),sideNav=document.querySelector('.workbench-sidebar');
 function closeNavigation(){sideNav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false')}
 navToggle.addEventListener('click',()=>{const open=sideNav.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',String(open));if(open)sideNav.querySelector('[aria-pressed="true"]').focus()});
