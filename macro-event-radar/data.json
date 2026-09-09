@@ -2,17 +2,17 @@
   "schema_version": 1,
   "page_status": "live",
   "verification_status": "partial",
-  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-09-07_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
-  "generated_at": "2026-09-08T09:29:45+08:00",
+  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-09-08_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
+  "generated_at": "2026-09-08T22:39:00+08:00",
   "window": {
     "recent_hours": 240,
     "calendar_days": 30,
     "timezone": "Asia/Shanghai"
   },
   "brief": {
-    "title": "最高法首次明确AI纠纷裁判规则，美就业与前沿模型仍是主要变量",
-    "summary": "相对公网新增5项已核验事件：最高法发布首部涉AI纠纷裁判规则意见；OpenAI披露自动研究实习生里程碑；Google发布Gemini 3.8 Flash及Cyber版本；美国8月非农保持韧性；白宫以两项行政令推进牧场和肉类竞争改革。",
-    "discipline": "最高法意见是裁判指导文件，不等于行政监管细则；AIGC可版权性和未经许可训练数据定性仍留白。公司内部测量与厂商基准不等于独立复现或商业收入，就业首值和行政令执行也仍待后续证据。",
+    "title": "Strategy加码STRC回购，最高法AI规则与美国就业仍是主要变量",
+    "summary": "相对9月8日09:29公网快照，本轮仅升级1项已核验事件：Strategy本周未增发、未买卖比特币，但把数字信用证券回购授权从10亿美元提高到20亿美元，并以1.763亿美元现金回购STRC。最高法AI裁判规则、OpenAI与Google前沿模型、美国8月就业及肉类竞争行政令继续保留。",
+    "discipline": "Strategy本周零买币不等于永久停止比特币配置，扩大回购授权也不等于已全部执行；最新8-K只证明已回购1.763亿美元STRC及剩余授权。最高法意见是裁判指导文件，公司内部测量与厂商基准不等于独立复现或商业收入，就业首值和行政令执行仍待后续证据。",
     "core_count": 33,
     "pending_count": 1,
     "next_event_count": 10
@@ -1194,31 +1194,31 @@
     },
     {
       "id": "strategy-usd-cash-atm-2026-08-24",
-      "headline": "Strategy恢复买币并维持STRC 12%股息：增发融资6.03亿美元，买入4,603枚BTC",
+      "headline": "Strategy暂停增发与买币、加码STRC回购：数字信用证券回购授权增至20亿美元",
       "category": "crypto",
       "event_type": "filing",
       "status": "verified",
       "change_type": "upgraded",
       "importance": 4,
-      "event_time": "2026-09-01T12:07:22+00:00",
-      "observed_at": "2026-09-01T22:33:09+08:00",
-      "verified_at": "2026-09-01T22:40:00+08:00",
-      "fact": "Strategy 8月31日SEC 8-K显示，8月24日至30日通过MSTR ATM出售4,531,421股，净融资6.028亿美元；其中3.697亿美元买入4,603枚比特币，1.518亿美元回购STRC，3,000万美元补充USD Cash。截至8月30日持有845,050枚比特币，USD Reserve为51亿美元、USD Cash为16.1亿美元。公司9月1日另一份8-K进一步确认，9月16日起STRC年化股息率维持12%，董事会已宣告9月30日和10月15日相关优先股现金股息，并预计这些分配在美国联邦所得税口径下、以持有人税基为限属于非应税资本返还。",
-      "new_information": "资本配置已从建立现金池推进到买币、STRC回购和流动性管理；9月1日申报没有新增比特币购买，而是把优先股12%股息维持、支付日历和预期税务属性正式写入8-K，补齐信用证券现金流边界。",
-      "inference": "推断：恢复买币形成已实现的比特币增量需求，STRC回购和12%股息有助于稳定信用证券价格，现金池则保留后续部署能力；但这些安排同时增加持续现金支出，普通股稀释、每股比特币增厚和优先股融资成本需要合并衡量。",
-      "unverified": "9月1日美股交易尚未完成，本轮未用盘中MSTR、STRC或BTC波动证明净效应；后续ATM发行、买币、回购、USD Cash用途、股息资金来源和最终税务处理仍需持续核验。",
+      "event_time": "2026-09-08T12:00:15+00:00",
+      "observed_at": "2026-09-08T22:33:54+08:00",
+      "verified_at": "2026-09-08T22:39:00+08:00",
+      "fact": "Strategy 9月8日SEC 8-K显示，8月31日至9月7日未通过ATM出售任何股份，也未买卖比特币；截至9月7日仍持有845,050枚比特币，累计成本637.3亿美元、平均成本约75,412美元。董事会把数字信用证券回购计划授权总额从10亿美元提高到20亿美元，本周以1.763亿美元回购1,810,885股STRC；截至9月7日该计划剩余11.9亿美元授权，MSTR普通股回购计划另剩10亿美元。公司以USD Cash支付本次回购，USD Reserve维持51亿美元，USD Cash由前值16.1亿美元降至14.4亿美元。",
+      "new_information": "资本配置由上周的ATM融资、买币和STRC回购，切换为本周零增发、零买币并继续回购STRC；新增已执行回购1.763亿美元，数字信用证券回购授权上限翻倍至20亿美元。比特币持仓与USD Reserve未变，USD Cash因回购减少约1.7亿美元。",
+      "inference": "推断：本周优先用现金支持STRC供需和信用证券价格，而不是新增比特币敞口，显示管理层阶段性更重视资本结构与融资工具稳定；但单周零买币不能推断长期战略转向，20亿美元只是授权上限，不能视为已承诺或已执行的额外买盘。",
+      "unverified": "9月8日美股交易尚未完成，本轮未用盘中MSTR、STRC或BTC波动证明净效应；后续是否继续ATM发行、买币或回购，剩余11.9亿美元授权的执行速度、USD Cash用途、股息资金来源和每股比特币变化仍需持续核验。",
       "transmission": [
         {
           "level": "A",
-          "path": "MSTR ATM增发 → 3.697亿美元实际买币 → 比特币现货需求与MSTR总持仓"
+          "path": "零ATM发行与零买币 → 本周新增稀释和比特币现货需求均为零 → MSTR每股BTC敞口短期稳定"
         },
         {
           "level": "B",
-          "path": "STRC回购与股息支付 → 信用证券供需/偿付信心 → Strategy资本结构"
+          "path": "1.763亿美元STRC回购与授权翻倍 → 信用证券供给收缩/价格支持 → Strategy资本结构与融资成本"
         },
         {
           "level": "C",
-          "path": "持续增发与买币效率 → 每股BTC敞口/净资产溢价 → MSTR、IBIT与加密相关权益估值"
+          "path": "现金在回购、股息和买币间重新配置 → 每股BTC敞口/信用工具稳定性 → MSTR、STRC与加密相关权益估值"
         }
       ],
       "affected_assets": [
@@ -1226,33 +1226,41 @@
           "market": "MSTR普通股",
           "direction": "双向、高波动",
           "horizon": "1–20日",
-          "reason": "4,603枚BTC提高总敞口，但4,531,421股新增供给形成直接稀释；需观察每股BTC和净资产溢价。"
+          "reason": "本周没有新增股份供给，也没有新增BTC；短期每股BTC分子分母均大致稳定，仍需观察净资产溢价和后续融资。"
         },
         {
           "market": "比特币与IBIT",
-          "direction": "已实现增量买盘、边际偏多",
+          "direction": "本周无新增买盘、中性",
           "horizon": "1–20日",
-          "reason": "8-K确认3.697亿美元买币，不再只是潜在资金；持续性仍取决于后续ATM与现金部署。"
+          "reason": "8-K确认本周未买卖比特币；不构成现货增量需求，也不能推断以后停止购买。"
         },
         {
           "market": "STRC及Strategy信用证券",
-          "direction": "回购与12%股息支持、成本上升",
+          "direction": "回购支持、现金成本上升",
           "horizon": "1–3个月",
-          "reason": "1.518亿美元回购、51亿美元专项储备、16.1亿美元灵活现金和明确股息日历形成缓冲，同时抬高持续现金成本。"
+          "reason": "本周新增1.763亿美元STRC回购，信用证券回购授权增至20亿美元；51亿美元专项储备与14.4亿美元灵活现金形成缓冲，但继续回购和股息都会消耗现金。"
         }
       ],
       "market_confirmation": {
         "stage": "not_checked",
-        "checked_at": "2026-09-01T22:40:00+08:00",
-        "detail": "9月1日申报发布后当前美股交易日尚未完成；本轮不以盘中价格证明买币、股息、回购或稀释的净效应。"
+        "checked_at": "2026-09-08T22:39:00+08:00",
+        "detail": "9月8日申报发布后当前美股交易日尚未完成；本轮不以盘中价格证明零增发、零买币、STRC回购或授权扩大的净效应。"
       },
-      "next_checkpoint": "查看9月1日完整收盘及下一份8-K/Strategy Dashboard，核对ATM发行、BTC购买、STRC回购、USD Cash、股息支付和每股BTC敞口变化。",
-      "invalidation": "后续买币停止、增发稀释持续快于每股BTC增厚、净资产溢价显著收缩，或USD Cash主要转向偿债和股息而非增量配置。",
+      "next_checkpoint": "查看9月8日完整收盘及下一份8-K/Strategy Dashboard，核对ATM发行、BTC购买、STRC回购、剩余授权、USD Cash、股息支付和每股BTC敞口变化。",
+      "invalidation": "后续回购停止或规模显著低于授权、STRC价格和融资成本未改善，增发稀释持续快于每股BTC增厚，或USD Cash主要转向偿债和股息且削弱后续配置能力。",
       "candidate_refs": [
+        "sec_8k-4d795495a7a40cac",
         "sec_8k-c1f4d642cfd39a8f",
         "sec_8k-44ca01302d3cdf56"
       ],
       "sources": [
+        {
+          "role": "primary",
+          "name": "SEC EDGAR — Strategy Inc. Form 8-K (2026-09-08)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526384402/mstr-20260831.htm",
+          "published_at": "2026-09-08T12:00:15+00:00",
+          "note": "核验本周零ATM发行、零比特币买卖、STRC回购、数字信用证券回购授权、剩余额度及USD Reserve/USD Cash余额。"
+        },
         {
           "role": "primary",
           "name": "SEC EDGAR — Strategy Inc. Form 8-K (2026-09-01)",
@@ -2556,14 +2564,14 @@
     {
       "group": "第一层 · 一手来源",
       "status": "verified",
-      "last_success_at": "2026-09-08T09:29:45+08:00",
-      "coverage": "13/13自动源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register和Z.ai HF共抓取543条、保留29条一手候选。另直接读取最高人民法院原文和答记者问，新增1项已核验事件；其余最新候选为仪式性公告、常规监管刊载、教程或缺乏一手证据的二手传闻"
+      "last_success_at": "2026-09-08T22:39:00+08:00",
+      "coverage": "13/13自动源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register和Z.ai HF共抓取543条、保留27条一手候选。直接读取Strategy 9月8日SEC 8-K，升级1项已核验事件；其余最新候选主要为常规监管刊载、旧事件重复或模型时间戳变化"
     },
     {
       "group": "第二层 · 专业发现",
       "status": "partial",
-      "last_success_at": "2026-09-08T09:24:48+08:00",
-      "coverage": "AI HOT自动源成功，抓取84条、保留54条发现候选；最高法线索已回到官方原文。Anthropic 5170亿美元算力协议仍只有二手报道，未升级；付费与登录源未自动轮询，不据此伪装完整覆盖"
+      "last_success_at": "2026-09-08T22:33:54+08:00",
+      "coverage": "AI HOT自动源成功，抓取95条、保留62条发现候选；新增内容未形成另一项可由一手来源升级的核心事件。Anthropic 5170亿美元算力协议仍只有二手报道，未升级；付费与登录源未自动轮询，不据此伪装完整覆盖"
     },
     {
       "group": "第三层 · 社交抢先",
@@ -2579,22 +2587,23 @@
     }
   ],
   "collection_run": {
-    "generated_at": "2026-09-08T09:24:48+08:00",
+    "generated_at": "2026-09-08T22:33:54+08:00",
     "configured_sources": 36,
     "active_sources": 13,
     "successful_sources": 13,
     "failed_sources": 0,
     "registered_manual_sources": 23,
     "tier1_fetched": 543,
-    "tier1_candidates": 29,
-    "tier2_fetched": 84,
-    "candidate_pool_after_dedupe": 80,
+    "tier1_candidates": 27,
+    "tier2_fetched": 95,
+    "candidate_pool_after_dedupe": 49,
     "manual_connectors_succeeded": [
       "BLS 8月就业报告核验",
       "OpenAI自动化研究里程碑与方法边界核验",
       "Google Gemini 3.8 Flash与Cyber发布核验",
       "白宫两项牧场与肉类竞争行政令核验",
-      "最高人民法院涉AI纠纷裁判规则意见核验"
+      "最高人民法院涉AI纠纷裁判规则意见核验",
+      "Strategy 9月8日8-K及数字信用证券回购计划核验"
     ],
     "artifacts": [
       "sources.json",
@@ -2604,6 +2613,6 @@
   "methodology": {
     "priority_formula": "影响范围30% + 传导直接度25% + 证据可靠度20% + 预期差15% + 时间紧迫度10%",
     "core_rule": "核心区只接受verified或partially_verified事件，并至少包含一个一手来源；匿名消息进入待证真。",
-    "limitations": "本页为2026-09-08北京时间快照。13个自动源全部成功；最高人民法院新事件直接读取一手原文与答记者问。该意见是裁判指导文件，AIGC可版权性与未经许可训练数据定性仍留白；OpenAI内部测量和Google基准不等于独立复现或收入，美国就业首值仍会修订，行政令执行仍待证据。社交与付费源未自动轮询，页面因此维持partial；价格只记录响应，不证明事件因果。"
+    "limitations": "本页为2026-09-08北京时间快照。13个自动源全部成功；Strategy更新已直接读取SEC 8-K，20亿美元为回购授权总额，不等于已执行金额，本周零买币也不等于长期策略转向。最高人民法院意见是裁判指导文件，AIGC可版权性与未经许可训练数据定性仍留白；OpenAI内部测量和Google基准不等于独立复现或收入，美国就业首值仍会修订，行政令执行仍待证据。社交与付费源未自动轮询，页面因此维持partial；价格只记录响应，不证明事件因果。"
   }
 }
