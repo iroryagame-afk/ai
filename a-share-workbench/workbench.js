@@ -16,8 +16,8 @@ let holding=read('holding')||{};$('#holdingDate').value=holding.date||today;$('#
 function renderDocument(target,body){
  const lines=body.trim().split('\n');let table;
  for(const line of lines){if(!line.trim())continue;
-  if(line.includes('|')){if(!table){const wrap=document.createElement('div');wrap.className='table-wrap';table=document.createElement('table');wrap.append(table);target.append(wrap);const tr=document.createElement('tr');for(const cell of line.split('|'))tr.append(text('th',cell));const head=document.createElement('thead');head.append(tr);table.append(head);continue}const tr=document.createElement('tr');for(const cell of line.split('|'))tr.append(text('td',cell));table.append(tr);continue}
-  table=null;target.append(line.startsWith('## ')?text('h3',line.slice(3)):text('p',line));
+  if(line.includes('|')){if(!table){const wrap=document.createElement('div');wrap.className='table-wrap';table=document.createElement('table');wrap.append(table);target.append(wrap);const tr=document.createElement('tr');for(const cell of line.split('|'))tr.append(text('th',cell));const head=document.createElement('thead');head.append(tr);table.append(head);continue}const tr=document.createElement('tr');for(const cell of line.split('|'))tr.append(emphasized('td',cell));table.append(tr);continue}
+  table=null;target.append(line.startsWith('## ')?text('h3',line.slice(3)):emphasized('p',line));
  }
 }
 fetch('./reports.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('报告读取失败');return r.json()}).then(reports=>{
@@ -37,4 +37,12 @@ function renderMonitor(m){
  const wrap=document.createElement('div');wrap.className='table-wrap';const table=document.createElement('table');const head=document.createElement('thead'),hr=document.createElement('tr');
  for(const title of ['股票','排序','阶段','结构状态','低点时间','MACD / KDJ'])hr.append(text('th',title));head.append(hr);table.append(head);const body=document.createElement('tbody');
  for(const r of m.rows){const tr=document.createElement('tr'),name=document.createElement('td');name.append(text('b',r.name),text('small',r.code));tr.append(name,text('td',r.priority),text('td',r.current_state),text('td',r.phase),text('td',r.bottom_time),text('td',r.macd+' / '+r.kdj));body.append(tr)}table.append(body);wrap.append(table);target.append(wrap);
+}
+
+function emphasized(tag,value){
+ const el=document.createElement(tag);const content=String(value??'');
+ const terms=/主要风险：|最大风险：|云端原判断：|云端结论：|考虑行动：|不出手：|(?:\d+(?:\.\d+)?%[—–-])?\d+(?:\.\d+)?%|2万亿元|高开低走|高开兑现|禁止追高|不追高|回避追涨|放量跌破|证伪|尚待验证|等待确认|部分兑现|强化|确认到位|接近到位|CPO|PCB|AI服务器|HBM/g;
+ let end=0;for(const match of content.matchAll(terms)){el.append(document.createTextNode(content.slice(end,match.index)));const token=match[0];let cls='em-key';if(token.endsWith('：'))cls='em-label';else if(/高开低走|高开兑现|禁止追高|不追高|回避追涨|放量跌破|证伪/.test(token))cls='em-risk';else if(/待验证|等待|部分兑现|接近/.test(token))cls='em-wait';else if(/强化|确认到位/.test(token))cls='em-confirm';else if(/%|万亿元/.test(token))cls='em-number';el.append(text('strong',token,cls));end=match.index+token.length}el.append(document.createTextNode(content.slice(end)));
+ if(tag==='p'&&/^(云端原判断：|云端结论：)/.test(content))el.className='conclusion-block';
+ if(tag==='p'&&/^(主要风险：|最大风险：)/.test(content))el.className='risk-block';return el;
 }
