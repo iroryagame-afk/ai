@@ -27,3 +27,10 @@ fetch('../a-share-trend-candidates/data.json',{cache:'no-store'}).then(r=>{if(!r
  $('#trendDate').textContent='数据日期 '+d.data_date+' · '+d.market_mode;const target=$('#trendContent');let count=0;
  for(const group of d.matrix){const rows=[];for(const state of ['主升','回调','反转'])for(const r of group[state]||[])rows.push([r.name+' '+r.ticker,state,r.level,r.kind,r.hour].join('|'));if(!rows.length)continue;count+=rows.length;const section=document.createElement('details');section.open=count===rows.length;section.append(text('summary',group.category+' · '+rows.length+'只'));renderDocument(section,'股票|阶段|级别|条件|30分钟确认\n'+rows.join('\n'));target.append(section)}if(!count)target.textContent='此快照没有候选，不补足名单。';
 }).catch(e=>$('#trendContent').textContent=e.message+'，请稍后刷新。');
+
+const navToggle=document.querySelector('.mobile-nav-toggle'),sideNav=document.querySelector('.workbench-sidebar');
+function closeNavigation(){sideNav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false')}
+navToggle.addEventListener('click',()=>{const open=sideNav.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',String(open));if(open)sideNav.querySelector('[aria-pressed="true"]').focus()});
+sideNav.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{closeNavigation();if(matchMedia('(max-width:760px)').matches)navToggle.focus();window.scrollTo({top:0,behavior:'instant'})}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&sideNav.classList.contains('is-open')){closeNavigation();navToggle.focus()}});
+document.addEventListener('click',e=>{if(!sideNav.contains(e.target)&&!navToggle.contains(e.target))closeNavigation()});
