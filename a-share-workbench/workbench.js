@@ -21,7 +21,8 @@ function renderDocument(target,body){
  }
 }
 fetch('./reports.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('报告读取失败');return r.json()}).then(reports=>{
- for(const kind of ['pre','post']){const r=reports[kind],target=$('#published-'+kind);target.replaceChildren();target.append(text('p',r.date+' · '+reports.format+' · 数据冻结 '+r.frozen_at,'report-meta'),text('p',reports.verification,'muted'));if(r.privacy)target.append(text('p',r.privacy,'muted'));renderDocument(target,r.body);const source=document.createElement('details');source.append(text('summary','来源与同步状态'));source.append(text('p','本版于'+reports.retrieved_on+'读取云端实际报告后整理，未接通无人值守自动同步；不是完整原文逐字转载。'));const a=text('a','查看原始云端报告');a.href=r.source;a.target='_blank';a.rel='noopener noreferrer';source.append(a);target.append(source)}
+ $('#reportNotes').textContent=reports.verification+' 早报数据冻结：'+reports.pre.frozen_at+'；复盘数据冻结：'+reports.post.frozen_at+'。'+(reports.post.privacy||'');
+ for(const kind of ['pre','post']){const r=reports[kind],target=$('#published-'+kind);target.replaceChildren();target.append(text('p',r.date+' · '+reports.format,'report-meta'));renderDocument(target,r.body);const source=document.createElement('details');source.append(text('summary','来源与同步状态'));source.append(text('p','本版于'+reports.retrieved_on+'读取云端实际报告后整理，未接通无人值守自动同步；不是完整原文逐字转载。'));const a=text('a','查看原始云端报告');a.href=r.source;a.target='_blank';a.rel='noopener noreferrer';source.append(a);target.append(source)}
 }).catch(e=>{for(const kind of ['pre','post'])$('#published-'+kind).textContent=e.message+'，请稍后刷新。'});
 const navToggle=document.querySelector('.mobile-nav-toggle'),sideNav=document.querySelector('.workbench-sidebar');
 function closeNavigation(){sideNav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false')}
