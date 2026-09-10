@@ -4,16 +4,16 @@
   "status": "VERIFIED",
   "verifyMarker": "VERIFIED_US_INTEGRATED_RECOMMENDATIONS_DIRECT_INPUTS_SAME_CLOSE",
   "modelVersion": "US_INTEGRATED_V2_20260826",
-  "generatedAt": "2026-09-09T09:53:49+08:00",
-  "dataDate": "2026-09-08",
+  "generatedAt": "2026-09-10T09:55:39+08:00",
+  "dataDate": "2026-09-09",
   "sourceDates": {
-    "csnSignal": "2026-09-08",
-    "hot": "2026-09-08",
-    "thrust": "2026-09-08",
-    "rotation": "2026-09-08",
-    "skew": "2026-09-08",
-    "software": "2026-09-08",
-    "hardware": "2026-09-08"
+    "csnSignal": "2026-09-09",
+    "hot": "2026-09-09",
+    "thrust": "2026-09-09",
+    "rotation": "2026-09-09",
+    "skew": "2026-09-09",
+    "software": "2026-09-09",
+    "hardware": "2026-09-09"
   },
   "weights": {
     "strengthRotation": 30,
@@ -30,11 +30,11 @@
     "threshold": 66.0,
     "reasons": [
       "市场环境允许进攻",
-      "25Δ Skew QQQ 4.29 / SPY 2.72"
+      "25Δ Skew QQQ 4.09 / SPY 2.49"
     ],
-    "qqqSkew": 4.293,
-    "spySkew": 2.718,
-    "protectiveSkew": 4.293
+    "qqqSkew": 4.093,
+    "spySkew": 2.487,
+    "protectiveSkew": 4.093
   },
   "selectionPolicy": {
     "targetCount": "5-10; never pad below threshold",
@@ -52,29 +52,67 @@
     "xConsensusPolicy": "context_only_not_scored"
   },
   "selectionStats": {
-    "universeCount": 706,
-    "scoredCount": 74,
-    "qualifiedBeforeDiversification": 17,
+    "universeCount": 704,
+    "scoredCount": 80,
+    "qualifiedBeforeDiversification": 22,
     "exclusions": {
-      "singleSource": 342,
-      "csnRiskGate": 170,
+      "singleSource": 330,
+      "csnRiskGate": 174,
       "highRiskProduct": 120,
-      "sectorCap": 3
+      "sectorCap": 5
     }
   },
   "selectedCount": 7,
   "rows": [
     {
+      "ticker": "COHU",
+      "name": "科休半导体",
+      "assetClass": "us_stock",
+      "sector": "半导体/设备",
+      "score": 86.1,
+      "factors": {
+        "strengthRotation": 27.8,
+        "trendEntry": 25.0,
+        "heatTheme": 11.7,
+        "volumeStructure": 8.4,
+        "specialMonitor": 5.0,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "HOT",
+        "THRUST_ROTATION"
+      ],
+      "sourceCount": 2,
+      "rotationPhase": "领先加速",
+      "csnCall": "无独立信号",
+      "reasons": [
+        "趋势/位置",
+        "相对强度/轮动",
+        "量价结构",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "EMA10 50.96 / EMA20 51.32",
+      "invalidation": "EMA55 52.12",
+      "skew": null,
+      "atrPct": 5.42,
+      "distanceEma20": null,
+      "rank": 1,
+      "action": "优先观察"
+    },
+    {
       "ticker": "SMTC",
       "name": "先科电子",
       "assetClass": "us_stock",
       "sector": "未分类",
-      "score": 82.6,
+      "score": 81.1,
       "factors": {
-        "strengthRotation": 29.6,
+        "strengthRotation": 29.8,
         "trendEntry": 25.0,
-        "heatTheme": 10.7,
-        "volumeStructure": 5.1,
+        "heatTheme": 10.8,
+        "volumeStructure": 3.3,
         "specialMonitor": 5.0,
         "riskReward": 7.2
       },
@@ -88,39 +126,78 @@
       "reasons": [
         "趋势/位置",
         "相对强度/轮动",
-        "风险收益",
+        "热度/主线",
         "领先加速"
       ],
       "risks": [
-        "ATR 6.6%，控制仓位"
+        "ATR 6.2%，控制仓位"
       ],
-      "confirmZone": "EMA10 140.85 / EMA20 136.84",
-      "invalidation": "EMA55 134.45",
+      "confirmZone": "EMA10 145.05 / EMA20 139.42",
+      "invalidation": "EMA55 135.50",
       "skew": null,
-      "atrPct": 6.62,
+      "atrPct": 6.2,
       "distanceEma20": null,
-      "rank": 1,
+      "rank": 2,
       "action": "优先观察"
     },
     {
-      "ticker": "INTC",
-      "name": "英特尔",
+      "ticker": "MXL",
+      "name": "MaxLinear",
       "assetClass": "us_stock",
-      "sector": "制造验证",
-      "score": 77.6,
+      "sector": "未分类",
+      "score": 80.7,
       "factors": {
-        "strengthRotation": 27.4,
-        "trendEntry": 19.4,
-        "heatTheme": 9.1,
-        "volumeStructure": 8.4,
-        "specialMonitor": 8.7,
-        "riskReward": 6.6
+        "strengthRotation": 26.4,
+        "trendEntry": 21.9,
+        "heatTheme": 11.1,
+        "volumeStructure": 8.1,
+        "specialMonitor": 5.0,
+        "riskReward": 8.2
       },
       "sources": [
         "CSN",
         "HOT",
+        "THRUST_ROTATION"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "买入观察",
+      "reasons": [
+        "相对强度/轮动",
+        "趋势/位置",
+        "风险收益",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "64.701 / 66.302 / 71.22",
+      "invalidation": "69.928",
+      "skew": null,
+      "atrPct": 5.7,
+      "distanceEma20": 7.85,
+      "rank": 3,
+      "action": "优先观察"
+    },
+    {
+      "ticker": "AMD",
+      "name": "美国超微公司",
+      "assetClass": "us_stock",
+      "sector": "算力验证",
+      "score": 79.8,
+      "factors": {
+        "strengthRotation": 28.3,
+        "trendEntry": 20.9,
+        "heatTheme": 5.2,
+        "volumeStructure": 7.9,
+        "specialMonitor": 9.3,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
         "THRUST_ROTATION",
-        "MONITOR"
+        "MONITOR",
+        "SKEW"
       ],
       "sourceCount": 4,
       "rotationPhase": "领先加速",
@@ -128,69 +205,109 @@
       "reasons": [
         "相对强度/轮动",
         "专项监控",
-        "量价结构",
-        "领先加速"
-      ],
-      "risks": [
-        "距EMA20 10.7%，等回踩"
-      ],
-      "confirmZone": "92.92–95.75",
-      "invalidation": "85.14",
-      "skew": null,
-      "atrPct": 4.21,
-      "distanceEma20": 10.74,
-      "rank": 2,
-      "action": "等待回踩确认"
-    },
-    {
-      "ticker": "COHU",
-      "name": "科休半导体",
-      "assetClass": "us_stock",
-      "sector": "半导体/设备",
-      "score": 76.7,
-      "factors": {
-        "strengthRotation": 25.1,
-        "trendEntry": 25.0,
-        "heatTheme": 7.5,
-        "volumeStructure": 5.9,
-        "specialMonitor": 5.0,
-        "riskReward": 8.2
-      },
-      "sources": [
-        "HOT",
-        "THRUST_ROTATION"
-      ],
-      "sourceCount": 2,
-      "rotationPhase": "领先加速",
-      "csnCall": "无独立信号",
-      "reasons": [
         "趋势/位置",
-        "相对强度/轮动",
-        "风险收益",
         "领先加速"
       ],
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "EMA10 49.69 / EMA20 50.76",
-      "invalidation": "EMA55 51.95",
+      "confirmZone": "474.73–489.19",
+      "invalidation": "440.5",
+      "skew": 0.181,
+      "atrPct": 3.55,
+      "distanceEma20": 8.12,
+      "rank": 4,
+      "action": "优先观察"
+    },
+    {
+      "ticker": "NET",
+      "name": "Cloudflare",
+      "assetClass": "us_stock",
+      "sector": "软件基础设施",
+      "score": 74.5,
+      "factors": {
+        "strengthRotation": 23.1,
+        "trendEntry": 20.0,
+        "heatTheme": 5.2,
+        "volumeStructure": 8.7,
+        "specialMonitor": 9.3,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "CSN",
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "落后加速",
+      "csnCall": "观察",
+      "reasons": [
+        "专项监控",
+        "量价结构",
+        "风险收益",
+        "落后加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "286.73–295.46",
+      "invalidation": "269.3",
       "skew": null,
-      "atrPct": 5.96,
-      "distanceEma20": null,
-      "rank": 3,
+      "atrPct": 5.39,
+      "distanceEma20": 7.93,
+      "rank": 5,
       "action": "等待回踩确认"
     },
     {
-      "ticker": "AMD",
-      "name": "美国超微公司",
+      "ticker": "BE",
+      "name": "Bloom Energy",
       "assetClass": "us_stock",
-      "sector": "算力验证",
-      "score": 74.4,
+      "sector": "能源/油气",
+      "score": 71.7,
       "factors": {
-        "strengthRotation": 25.7,
-        "trendEntry": 17.7,
+        "strengthRotation": 27.6,
+        "trendEntry": 20.0,
+        "heatTheme": 11.5,
+        "volumeStructure": 3.0,
+        "specialMonitor": 5.0,
+        "riskReward": 6.6
+      },
+      "sources": [
+        "CSN",
+        "HOT",
+        "THRUST_ROTATION"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "持有",
+      "reasons": [
+        "相对强度/轮动",
+        "趋势/位置",
+        "热度/主线",
+        "领先加速"
+      ],
+      "risks": [
+        "距EMA20 17.0%，等回踩"
+      ],
+      "confirmZone": "240.119 / 230.112 / 230.771",
+      "invalidation": "220.91",
+      "skew": null,
+      "atrPct": 5.99,
+      "distanceEma20": 17.02,
+      "rank": 6,
+      "action": "等待回踩确认"
+    },
+    {
+      "ticker": "MU",
+      "name": "美光科技",
+      "assetClass": "us_stock",
+      "sector": "HBM与存储",
+      "score": 71.1,
+      "factors": {
+        "strengthRotation": 27.7,
+        "trendEntry": 18.9,
         "heatTheme": 5.2,
-        "volumeStructure": 8.9,
+        "volumeStructure": 2.4,
         "specialMonitor": 8.7,
         "riskReward": 8.2
       },
@@ -202,46 +319,7 @@
       ],
       "sourceCount": 4,
       "rotationPhase": "领先加速",
-      "csnCall": "买入观察",
-      "reasons": [
-        "量价结构",
-        "专项监控",
-        "相对强度/轮动",
-        "领先加速"
-      ],
-      "risks": [
-        "未见主要过热或保护需求异常"
-      ],
-      "confirmZone": "470.67–485.01",
-      "invalidation": "440.5",
-      "skew": 1.354,
-      "atrPct": 3.71,
-      "distanceEma20": 5.84,
-      "rank": 4,
-      "action": "等待回踩确认"
-    },
-    {
-      "ticker": "VRT",
-      "name": "Vertiv Holdings",
-      "assetClass": "us_stock",
-      "sector": "电力与散热",
-      "score": 74.0,
-      "factors": {
-        "strengthRotation": 28.3,
-        "trendEntry": 15.8,
-        "heatTheme": 5.2,
-        "volumeStructure": 7.8,
-        "specialMonitor": 8.7,
-        "riskReward": 8.2
-      },
-      "sources": [
-        "CSN",
-        "THRUST_ROTATION",
-        "MONITOR"
-      ],
-      "sourceCount": 3,
-      "rotationPhase": "领先加速",
-      "csnCall": "买入观察",
+      "csnCall": "持有",
       "reasons": [
         "相对强度/轮动",
         "专项监控",
@@ -251,90 +329,11 @@
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "266.33–274.44",
-      "invalidation": "248.75",
-      "skew": null,
-      "atrPct": 4.26,
-      "distanceEma20": 7.56,
-      "rank": 5,
-      "action": "等待回踩确认"
-    },
-    {
-      "ticker": "NBIS",
-      "name": "NEBIUS",
-      "assetClass": "us_stock",
-      "sector": "未分类",
-      "score": 72.1,
-      "factors": {
-        "strengthRotation": 26.2,
-        "trendEntry": 20.6,
-        "heatTheme": 12.6,
-        "volumeStructure": 4.1,
-        "specialMonitor": 5.0,
-        "riskReward": 5.6
-      },
-      "sources": [
-        "CSN",
-        "HOT",
-        "THRUST_ROTATION"
-      ],
-      "sourceCount": 3,
-      "rotationPhase": "领先加速",
-      "csnCall": "等待确认",
-      "reasons": [
-        "相对强度/轮动",
-        "热度/主线",
-        "趋势/位置",
-        "领先加速"
-      ],
-      "risks": [
-        "距EMA20 11.5%，等回踩",
-        "ATR 6.3%，控制仓位"
-      ],
-      "confirmZone": "220.002 / 218.681 / 214.224",
-      "invalidation": "210.108",
-      "skew": null,
-      "atrPct": 6.3,
-      "distanceEma20": 11.52,
-      "rank": 6,
-      "action": "等待回踩确认"
-    },
-    {
-      "ticker": "SNOW",
-      "name": "Snowflake",
-      "assetClass": "us_stock",
-      "sector": "高弹性数据层",
-      "score": 70.0,
-      "factors": {
-        "strengthRotation": 25.9,
-        "trendEntry": 20.1,
-        "heatTheme": 5.2,
-        "volumeStructure": 2.8,
-        "specialMonitor": 7.8,
-        "riskReward": 8.2
-      },
-      "sources": [
-        "CSN",
-        "THRUST_ROTATION",
-        "MONITOR"
-      ],
-      "sourceCount": 3,
-      "rotationPhase": "领先加速",
-      "csnCall": "买入观察",
-      "reasons": [
-        "相对强度/轮动",
-        "风险收益",
-        "趋势/位置",
-        "领先加速"
-      ],
-      "risks": [
-        "未见主要过热或保护需求异常"
-      ],
-      "confirmZone": "319.48–329.21",
-      "invalidation": "288.52",
-      "skew": null,
-      "atrPct": 5.31,
-      "distanceEma20": 3.44,
+      "confirmZone": "942.78–971.49",
+      "invalidation": "887.61",
+      "skew": -0.621,
+      "atrPct": 4.29,
+      "distanceEma20": 7.38,
       "rank": 7,
       "action": "等待回踩确认"
     }
