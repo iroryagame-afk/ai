@@ -1,8 +1,8 @@
 {
   "status": "OPEN_D_VERIFIED_NORMALIZED_INDEX_CHART",
-  "generated_at": "2026-09-10T09:52:53+08:00",
+  "generated_at": "2026-09-11T12:51:38+08:00",
   "base_date": "2026-07-27",
-  "data_date": "2026-09-09",
+  "data_date": "2026-09-10",
   "method": "first close on or after 2026-07-27 = 100; custom line is daily equal weight",
   "note": "SOXX是美股半导体硬件代理，不覆盖电力、服务器、光模块与矿算力全部环节。",
   "lines": [
@@ -137,6 +137,10 @@
         {
           "date": "2026-09-09",
           "value": 105.012
+        },
+        {
+          "date": "2026-09-10",
+          "value": 103.895
         }
       ]
     },
@@ -271,6 +275,10 @@
         {
           "date": "2026-09-09",
           "value": 103.055
+        },
+        {
+          "date": "2026-09-10",
+          "value": 100.232
         }
       ]
     }
