@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "near_term": {
-    "as_of": "2026-09-09T16:54:00+08:00",
+    "as_of": "2026-09-11T22:38:00+08:00",
     "timezone": "Asia/Shanghai",
-    "scope": "9月9日—11日宏观检查表；部分覆盖，非实时行情。未回填不等于事件未发生。",
+    "scope": "9月9日—11日宏观检查表；CPI与PPI已回填官方实际值，市场反应等待9月11日完整收盘。",
     "brent": {
       "observed_at": "2026-09-09T15:21:00+08:00",
       "value": 100.07,
@@ -12,33 +12,292 @@
       "source": "https://ca.marketscreener.com/news/brent-crude-rises-above-100-a-barrel-as-middle-east-conflict-escalates-ce785bd9da8cfe22"
     },
     "events": [
-      {"id":"buyback-20260909","title":"长端美债回购上限公告","time":"9月9日23:00（美东9月9日11:00）","status":"专业日历支持；本次官方公告待核验","check":"财政部8月19日已确认10—20年及20—30年回购上限至少从20亿提高至40亿美元。40/60/80/100亿美元仅作研究情景：40亿兑现已公告下限；60/80/100亿为更强力度假设，不是官方目标或市场一致预期。公告上限不等于实际接受量，更不等于QE。","sources":["https://home.treasury.gov/news/press-releases/sb0607","https://www.wrightson.com/category/federal-reserve"],"result":{"status":"待回填","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"记录公告上限、期限桶、实际接受量（操作后另记），以及10Y/30Y公告前、+30分钟与收盘变动。"},
-      {"id":"auction-20260909","title":"390亿美元10年期美债续发拍卖","time":"9月10日01:00（美东9月9日13:00）","status":"专业日历支持；官方本次发行公告待核验","check":"看投标倍数、间接投标者获配占比及Tail/Stop-through；与同期限近期拍卖对比，不用单一阈值机械判断。","sources":["https://www.wrightson.com/category/federal-reserve","https://www.treasurydirect.gov/auctions/announcements-data-results/announcement-results-press-releases/"],"result":{"status":"待回填","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"Tail(bp)=(最高中标收益率−投标截止前WI收益率)×100，收益率以百分数输入；正值为tail，负值为stop-through。缺WI时明确未核验，不能只用官方中标收益率计算。"},
-      {"id":"bessent-20260910","title":"贝森特讲话线索","time":"待核验窗口：9月10日08:00—09:00","status":"待核验，不作确定时点","check":"关注财政赤字、美债回购、美元与日元。尚未取得支持该准确时段的官方议程；不把其他日期采访当成本场讲话。","sources":[],"result":{"status":"待核验议程","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"先核对主办方/财政部议程，再保存原话、时间和政策是否有执行文件；讲话本身不等于政策落地。"},
-      {"id":"trump-20260910","title":"特朗普讲话线索","time":"待核验窗口：约9月10日09:00","status":"待核验，不作确定时点","check":"关注伊朗、油价、关税与财政扩张。大会出席报道不能证明具体上台时间；准确时间和议程尚待官方确认。","sources":[],"result":{"status":"待核验议程","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"原话、正式命令和媒体解读分栏；对照Brent、长端收益率和美元，避免把同时波动全归因于讲话。"},
-      {"id":"ppi-20260910","title":"美国8月PPI","time":"9月10日20:30（美东08:30）","status":"官方日历已确认","check":"同时核验总项与核心环比、同比、前值修订；发布前共识尚未核验，不填写猜测值。","sources":["https://www.bls.gov/schedule/2026/09_sched_list.htm"],"result":{"status":"待回填","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"实际值与带时间戳共识同口径比较，再记录2Y/10Y、美元和股指反应。"},
-      {"id":"claims-20260910","title":"美国初请失业金","time":"9月10日20:30（美东08:30）","status":"DOL常规时刻＋专业日历支持","check":"初请、续请、四周均值与前值修订一起看；当周若官方改期，以DOL为准。","sources":["https://oui.doleta.gov/unemploy/archive.asp","https://www.wrightson.com/category/federal-reserve"],"result":{"status":"待回填","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"与PPI同时发布，市场反应不能隔离为初请单一因果。"},
-      {"id":"cpi-20260911","title":"美国8月CPI","time":"9月11日20:30（美东08:30）","status":"官方日历已确认","check":"总项与核心环比、同比，能源、住房和服务拆项；当前油价上行不等于已计入8月全部通胀。","sources":["https://www.bls.gov/schedule/2026/09_sched_list.htm"],"result":{"status":"待回填","actual":null,"consensus":null,"market_reaction":null,"verified_at":null,"source":null},"acceptance":"核验实际−共识差及修订，再看利率与股市是否同向确认；单项超预期不直接推出交易结论。"}
+      {
+        "id": "buyback-20260909",
+        "title": "长端美债回购上限公告",
+        "time": "9月9日23:00（美东9月9日11:00）",
+        "status": "专业日历支持；本次官方公告待核验",
+        "check": "财政部8月19日已确认10—20年及20—30年回购上限至少从20亿提高至40亿美元。40/60/80/100亿美元仅作研究情景：40亿兑现已公告下限；60/80/100亿为更强力度假设，不是官方目标或市场一致预期。公告上限不等于实际接受量，更不等于QE。",
+        "sources": [
+          "https://home.treasury.gov/news/press-releases/sb0607",
+          "https://www.wrightson.com/category/federal-reserve"
+        ],
+        "result": {
+          "status": "待回填",
+          "actual": null,
+          "consensus": null,
+          "market_reaction": null,
+          "verified_at": null,
+          "source": null
+        },
+        "acceptance": "记录公告上限、期限桶、实际接受量（操作后另记），以及10Y/30Y公告前、+30分钟与收盘变动。"
+      },
+      {
+        "id": "auction-20260909",
+        "title": "390亿美元10年期美债续发拍卖",
+        "time": "9月10日01:00（美东9月9日13:00）",
+        "status": "专业日历支持；官方本次发行公告待核验",
+        "check": "看投标倍数、间接投标者获配占比及Tail/Stop-through；与同期限近期拍卖对比，不用单一阈值机械判断。",
+        "sources": [
+          "https://www.wrightson.com/category/federal-reserve",
+          "https://www.treasurydirect.gov/auctions/announcements-data-results/announcement-results-press-releases/"
+        ],
+        "result": {
+          "status": "待回填",
+          "actual": null,
+          "consensus": null,
+          "market_reaction": null,
+          "verified_at": null,
+          "source": null
+        },
+        "acceptance": "Tail(bp)=(最高中标收益率−投标截止前WI收益率)×100，收益率以百分数输入；正值为tail，负值为stop-through。缺WI时明确未核验，不能只用官方中标收益率计算。"
+      },
+      {
+        "id": "bessent-20260910",
+        "title": "贝森特讲话线索",
+        "time": "待核验窗口：9月10日08:00—09:00",
+        "status": "待核验，不作确定时点",
+        "check": "关注财政赤字、美债回购、美元与日元。尚未取得支持该准确时段的官方议程；不把其他日期采访当成本场讲话。",
+        "sources": [],
+        "result": {
+          "status": "待核验议程",
+          "actual": null,
+          "consensus": null,
+          "market_reaction": null,
+          "verified_at": null,
+          "source": null
+        },
+        "acceptance": "先核对主办方/财政部议程，再保存原话、时间和政策是否有执行文件；讲话本身不等于政策落地。"
+      },
+      {
+        "id": "trump-20260910",
+        "title": "特朗普讲话线索",
+        "time": "待核验窗口：约9月10日09:00",
+        "status": "待核验，不作确定时点",
+        "check": "关注伊朗、油价、关税与财政扩张。大会出席报道不能证明具体上台时间；准确时间和议程尚待官方确认。",
+        "sources": [],
+        "result": {
+          "status": "待核验议程",
+          "actual": null,
+          "consensus": null,
+          "market_reaction": null,
+          "verified_at": null,
+          "source": null
+        },
+        "acceptance": "原话、正式命令和媒体解读分栏；对照Brent、长端收益率和美元，避免把同时波动全归因于讲话。"
+      },
+      {
+        "id": "ppi-20260910",
+        "title": "美国8月PPI",
+        "time": "9月10日20:30（美东08:30）",
+        "status": "官方日历已确认",
+        "check": "同时核验总项与核心环比、同比、前值修订；发布前共识尚未核验，不填写猜测值。",
+        "sources": [
+          "https://www.bls.gov/schedule/2026/09_sched_list.htm"
+        ],
+        "result": {
+          "status": "官方实际值已核验",
+          "actual": "总项环比+0.4%、同比+5.4%；剔除食品、能源和贸易服务环比+0.3%、同比+4.7%；能源环比+4.2%",
+          "consensus": null,
+          "market_reaction": "未核验完整交易日，不能把盘中利率或股指波动归因于单一数据",
+          "verified_at": "2026-09-11T22:38:00+08:00",
+          "source": "https://www.bls.gov/news.release/archives/ppi_09102026.htm"
+        },
+        "acceptance": "实际值与带时间戳共识同口径比较，再记录2Y/10Y、美元和股指反应。"
+      },
+      {
+        "id": "claims-20260910",
+        "title": "美国初请失业金",
+        "time": "9月10日20:30（美东08:30）",
+        "status": "DOL常规时刻＋专业日历支持",
+        "check": "初请、续请、四周均值与前值修订一起看；当周若官方改期，以DOL为准。",
+        "sources": [
+          "https://oui.doleta.gov/unemploy/archive.asp",
+          "https://www.wrightson.com/category/federal-reserve"
+        ],
+        "result": {
+          "status": "官方实际值已核验",
+          "actual": "9月5日当周初请20.6万，较修订前周减少0.1万；四周均值20.6万；8月29日当周续请177.4万",
+          "consensus": null,
+          "market_reaction": "与PPI同刻发布，不能把市场反应归因于初请单一数据",
+          "verified_at": "2026-09-11T22:38:00+08:00",
+          "source": "https://www.dol.gov/ui/data.pdf"
+        },
+        "acceptance": "与PPI同时发布，市场反应不能隔离为初请单一因果。"
+      },
+      {
+        "id": "cpi-20260911",
+        "title": "美国8月CPI",
+        "time": "9月11日20:30（美东08:30）",
+        "status": "官方日历已确认",
+        "check": "总项与核心环比、同比，能源、住房和服务拆项；当前油价上行不等于已计入8月全部通胀。",
+        "sources": [
+          "https://www.bls.gov/schedule/2026/09_sched_list.htm"
+        ],
+        "result": {
+          "status": "官方实际值已核验",
+          "actual": "总项环比+0.4%、同比+3.4%；核心环比+0.3%、同比+2.4%；能源环比+2.1%，汽油+3.9%",
+          "consensus": null,
+          "market_reaction": "9月11日美股完整收盘尚未形成，暂不回填市场确认",
+          "verified_at": "2026-09-11T22:38:00+08:00",
+          "source": "https://www.bls.gov/news.release/cpi.nr0.htm"
+        },
+        "acceptance": "核验实际−共识差及修订，再看利率与股市是否同向确认；单项超预期不直接推出交易结论。"
+      }
     ]
   },
   "page_status": "live",
   "verification_status": "partial",
-  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-09-08_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
-  "generated_at": "2026-09-08T22:39:00+08:00",
+  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-09-11_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
+  "generated_at": "2026-09-11T22:38:00+08:00",
   "window": {
     "recent_hours": 240,
     "calendar_days": 30,
     "timezone": "Asia/Shanghai"
   },
   "brief": {
-    "title": "Strategy加码STRC回购，最高法AI规则与美国就业仍是主要变量",
-    "summary": "相对9月8日09:29公网快照，本轮仅升级1项已核验事件：Strategy本周未增发、未买卖比特币，但把数字信用证券回购授权从10亿美元提高到20亿美元，并以1.763亿美元现金回购STRC。最高法AI裁判规则、OpenAI与Google前沿模型、美国8月就业及肉类竞争行政令继续保留。",
-    "discipline": "Strategy本周零买币不等于永久停止比特币配置，扩大回购授权也不等于已全部执行；最新8-K只证明已回购1.763亿美元STRC及剩余授权。最高法意见是裁判指导文件，公司内部测量与厂商基准不等于独立复现或商业收入，就业首值和行政令执行仍待后续证据。",
-    "core_count": 33,
+    "title": "美国通胀再受能源推升，Coinbase衍生品登记与AI安全披露同步落地",
+    "summary": "相对9月8日22:39公网快照，本轮累计新增6项、升级4项核心事件：补齐DeepSeek、Apple、Anthropic评测、DPA与伊朗许可变化，并新增8月CPI/PPI、Anthropic威胁报告、Coinbase Derivatives Section 6(g)登记和社区银行检查周期新规。",
+    "discipline": "CPI/PPI已核验实际值，但未取得同口径市场共识且9月11日完整收盘未形成；Coinbase登记仅覆盖security futures，不是通用证券交易所牌照；Anthropic威胁归因属于公司调查，待独立佐证；银行规则只适用于满足评级、资本和执法条件的机构。",
+    "core_count": 39,
     "pending_count": 1,
-    "next_event_count": 10
+    "next_event_count": 15
   },
   "events": [
+    {
+      "id": "us-august-cpi-ppi-energy-reacceleration-2026-09-11",
+      "headline": "美国8月通胀受能源再推升：CPI环比0.4%、PPI环比0.4%，核心CPI同比降至2.4%",
+      "category": "macro",
+      "event_type": "data",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-09-11T08:30:00-04:00",
+      "observed_at": "2026-09-11T22:32:00+08:00",
+      "verified_at": "2026-09-11T22:38:00+08:00",
+      "fact": "美国劳工统计局公布，8月CPI季调后环比上涨0.4%，同比上涨3.4%；剔除食品和能源的核心CPI环比上涨0.3%、同比上涨2.4%。能源环比上涨2.1%，其中汽油上涨3.9%。前一日公布的8月PPI最终需求环比上涨0.4%、同比上涨5.4%，商品上涨1.1%、服务上涨0.1%；剔除食品、能源和贸易服务的PPI环比上涨0.3%、同比上涨4.7%。",
+      "new_information": "7月CPI环比0.1%之后，8月总项通胀重新加速，能源成为主要推手；核心CPI同比继续从2.5%降至2.4%，形成总项再升温与核心同比放缓并存。PPI的能源和商品端压力更强，给后续价格传导增加上行检查点。",
+      "inference": "推断：短端利率与高估值成长面对的政策约束边际上升，但核心同比回落使单向滞胀结论仍不充分；需结合9月FOMC、工资、进口价格和能源持续性判断。",
+      "unverified": "本轮未取得带时间戳且同口径的市场一致预期，不判断超预期幅度；9月11日美股完整交易日尚未结束，利率、美元与股指的收盘确认未核验。",
+      "transmission": [
+        {"level": "A", "path": "能源价格上涨 → CPI/PPI总项加速 → 实际收入与企业成本压力"},
+        {"level": "B", "path": "通胀黏性与核心分化 → Fed政策路径重定价 → 2Y美债与美元"},
+        {"level": "C", "path": "折现率和利润率变化 → 高久期成长、消费、运输与能源资产分化"}
+      ],
+      "affected_assets": [
+        {"market": "美债与美元", "direction": "通胀约束偏强、方向待收盘确认", "horizon": "1–10日", "reason": "总项CPI与PPI均环比0.4%，但核心CPI同比回落，需观察2Y和美元是否持续同向。"},
+        {"market": "高久期成长与科技", "direction": "估值约束上升", "horizon": "1–20日", "reason": "若市场上修政策利率路径，折现率压力将上升；当前完整收盘尚未核验。"},
+        {"market": "能源、运输与消费", "direction": "成本与相对收益分化", "horizon": "1–30日", "reason": "CPI能源上涨2.1%，PPI能源上涨4.2%，持续性决定企业成本和终端传导。"}
+      ],
+      "market_confirmation": {"stage": "awaiting_complete_close", "checked_at": "2026-09-11T22:38:00+08:00", "detail": "北京时间22:38仅处于9月11日美股早盘，未用盘中价格冒充完整收盘确认。"},
+      "next_checkpoint": "核验9月11日完整收盘的2Y/10Y、美元、SPY与QQQ响应，并在9月FOMC前跟踪进口价格、能源持续性和政策表述。",
+      "invalidation": "能源价格快速回落、后续核心通胀继续放缓且利率与美元未形成持续上行确认，或BLS后续更正改变关键数据。",
+      "candidate_refs": ["manual-bls-cpi-20260911", "manual-bls-ppi-20260910"],
+      "sources": [
+        {"role": "primary", "name": "U.S. BLS — Consumer Price Index, August 2026", "url": "https://www.bls.gov/news.release/cpi.nr0.htm", "published_at": "2026-09-11T08:30:00-04:00", "note": "核验总项、核心、能源、汽油和住房的月度与同比数据。"},
+        {"role": "primary", "name": "U.S. BLS — Producer Price Indexes, August 2026", "url": "https://www.bls.gov/news.release/archives/ppi_09102026.htm", "published_at": "2026-09-10T08:30:00-04:00", "note": "核验最终需求、商品、服务、能源及剔除食品能源贸易服务口径。"}
+      ]
+    },
+    {
+      "id": "anthropic-september-threat-report-ai-misuse-2026-09-10",
+      "headline": "Anthropic披露AI滥用升级：自主攻击框架、武器研发与大规模蒸馏并行出现",
+      "category": "ai",
+      "event_type": "incident",
+      "status": "partially_verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-09-10T00:00:00-07:00",
+      "observed_at": "2026-09-11T22:20:00+08:00",
+      "verified_at": "2026-09-11T22:38:00+08:00",
+      "fact": "Anthropic在9月威胁情报报告中称，过去八个月识别并中断多类利用Claude的恶意活动，包括自主漏洞与攻击框架、导弹与无人机等武器软件研发、监控和情报活动、灰色代理网络，以及针对Claude推理轨迹的蒸馏。公司报告称其观察到阿里相关活动在2026年5月至7月超过1.51亿次交互，Moonshot相关活动超过2,300万次，DeepSeek在7月两周超过1,210万次；相关账户被封禁并与合作方共享情报。",
+      "new_information": "AI安全风险从单次评测越界扩展到公司披露的真实恶意使用、代理绕过、武器软件开发和模型蒸馏规模，显示前沿模型的访问控制、溯源和跨平台协作已成为持续运营成本。",
+      "inference": "推断：云模型访问控制、身份验证、异常调用检测、内容安全和跨厂商情报共享需求将上升；同时可能强化出口管制与模型开放政策争论。",
+      "unverified": "案例归因、交互规模、行为主体与造成的实际能力提升主要来自Anthropic内部调查；本轮未取得被点名机构、执法部门或独立安全机构的完整交叉核验，不能把公司评估视为司法认定。",
+      "transmission": [
+        {"level": "A", "path": "恶意调用与代理绕过 → 访问控制、检测和封禁成本上升 → 模型平台运营"},
+        {"level": "B", "path": "武器与情报用途披露 → 政策与客户风险评估 → 高权限Agent部署门槛"},
+        {"level": "C", "path": "蒸馏与跨平台滥用 → 模型保护和监管强化 → 云、安全与开源生态分化"}
+      ],
+      "affected_assets": [
+        {"market": "前沿模型与云平台", "direction": "合规与安全成本上升", "horizon": "1–24个月", "reason": "持续攻击和代理网络要求更强身份、调用与内容控制；收入影响尚未披露。"},
+        {"market": "网络安全与AI治理", "direction": "检测、审计和情报共享需求增加", "horizon": "3–36个月", "reason": "公司报告展示多类真实运营场景，但采购和订单仍待证。"},
+        {"market": "中国模型与开源生态", "direction": "政策与声誉风险上升", "horizon": "1–12个月", "reason": "蒸馏指控可能影响访问、合作和监管，归因仍待独立核验。"}
+      ],
+      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-09-11T22:38:00+08:00", "detail": "Anthropic未独立上市，且报告涉及多家公司和地缘政策；不以单日相关资产波动证明因果。"},
+      "next_checkpoint": "等待被点名机构、监管和独立安全研究者回应，核验归因、规模、实际损害及Anthropic新增防护措施的有效性。",
+      "invalidation": "独立调查否定关键归因或规模，公司更正报告，或案例被证明未涉及所述模型与用途。",
+      "candidate_refs": ["aihot-fb2403651778b091"],
+      "sources": [
+        {"role": "primary", "name": "Anthropic — Countering misuse of AI: September 2026", "url": "https://www.anthropic.com/threat-intelligence-report-september-2026", "published_at": "2026-09-10T00:00:00-07:00", "note": "核验Anthropic披露的案例、交互规模、封禁与风险边界；归因仍属公司调查。"}
+      ]
+    },
+    {
+      "id": "coinbase-derivatives-section-6g-registration-2026-09-08",
+      "headline": "Coinbase Derivatives完成Section 6(g)通知登记：仅可作为security futures交易所",
+      "category": "crypto",
+      "event_type": "filing",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-09-08T00:00:00-04:00",
+      "observed_at": "2026-09-11T21:55:00+08:00",
+      "verified_at": "2026-09-11T22:38:00+08:00",
+      "fact": "SEC 9月8日文件确认，Coinbase Derivatives LLC已于9月1日提交Form 1-N，SEC依据Exchange Act Section 6(g)(3)确认收件；Section 6(g)(2)(B)规定该类登记与书面通知提交同时生效。该路径只允许其为交易security futures products而登记为national securities exchange，并要求其CFTC指定合约市场资格未被暂停。",
+      "new_information": "Coinbase衍生品平台取得了security futures专用的SEC交易所登记路径，为受双重监管的证券期货产品提供法律基础；这是范围受限的通知登记，不是通用证券现货交易所批准。",
+      "inference": "推断：若后续产品、清算和会员安排完成，Coinbase可扩展受监管衍生品版图；实际收入与流动性取决于具体上市合约、客户准入和市场采用。",
+      "unverified": "首批security futures产品、上线日期、清算安排、费率、做市商、客户范围和收入贡献尚未披露；本文件不批准一般股票、证券现货或全部加密证券交易。",
+      "transmission": [
+        {"level": "A", "path": "Section 6(g)登记生效 → security futures上市法律路径 → Coinbase衍生品产品扩展"},
+        {"level": "B", "path": "产品与清算落地 → 机构和零售参与 → 交易量、费率与收入"},
+        {"level": "C", "path": "受监管产品增加 → 加密与传统市场融合 → 行业竞争和监管预期"}
+      ],
+      "affected_assets": [
+        {"market": "Coinbase", "direction": "产品范围边际扩展", "horizon": "1–12个月", "reason": "登记已生效，但产品、交易量和收入均待后续披露。"},
+        {"market": "美国加密衍生品", "direction": "合规供给增加", "horizon": "3–18个月", "reason": "security futures路径明确，实际竞争取决于合约和清算。"},
+        {"market": "传统交易所与经纪平台", "direction": "竞争边际上升", "horizon": "6–24个月", "reason": "Coinbase可切入受监管证券期货，但当前范围有限。"}
+      ],
+      "market_confirmation": {"stage": "awaiting_complete_close", "checked_at": "2026-09-11T22:38:00+08:00", "detail": "9月11日美股完整收盘尚未形成；不以盘中COIN波动确认产品商业价值。"},
+      "next_checkpoint": "跟踪Form 1-N附件、首批security futures合约、清算与会员安排、上线时间、交易量和公司收入披露。",
+      "invalidation": "CFTC指定合约市场资格受限、产品未获上线条件、登记被暂停，或长期没有实际security futures产品。",
+      "candidate_refs": ["federal_register-d979dd6371712bf7"],
+      "sources": [
+        {"role": "primary", "name": "SEC Release No. 34-106295 — Coinbase Derivatives Form 1-N", "url": "https://www.sec.gov/files/rules/other/2026/34-106295.pdf", "published_at": "2026-09-08T00:00:00-04:00", "note": "核验提交日、即时生效机制和仅限security futures的法定范围。"},
+        {"role": "primary", "name": "Federal Register — Coinbase Derivatives Section 6(g) Registration", "url": "https://www.federalregister.gov/documents/2026/09/11/2026-18538/acknowledgement-of-receipt-of-notice-of-registration-as-a-national-securities-exchange-pursuant-to", "published_at": "2026-09-11T00:00:00-04:00", "note": "核验正式刊载与文件编号。"}
+      ]
+    },
+    {
+      "id": "us-community-bank-exam-cycle-2026-09-10",
+      "headline": "美国扩大社区银行18个月检查周期：资产门槛由30亿美元提高至60亿美元",
+      "category": "policy",
+      "event_type": "policy",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 3,
+      "event_time": "2026-09-10T14:00:00+00:00",
+      "observed_at": "2026-09-11T21:45:00+08:00",
+      "verified_at": "2026-09-11T22:38:00+08:00",
+      "fact": "Fed、FDIC与OCC发布跨机构临时最终规则，把部分银行适用18个月现场检查周期的总资产门槛从30亿美元提高到60亿美元。适用机构须评级为1或2、资本充足、没有正式执法程序或命令、过去12个月未发生控制权变化；监管机构仍可按需要维持12个月或更频繁检查，并在现场检查间继续场外监测。",
+      "new_information": "更多低风险社区银行可把现场检查从12个月延长至18个月，规则在Federal Register公布后立即生效并开放30天评论期。",
+      "inference": "推断：符合条件的社区银行可减少合规时间和直接检查成本，但资产质量、资本和执法条件仍是硬门槛，不能外推为全行业监管放松。",
+      "unverified": "具体新增覆盖机构数量、单家成本节省、对贷款供给与盈利的量化影响，以及评论期后是否调整规则仍未披露。",
+      "transmission": [
+        {"level": "A", "path": "检查周期延长 → 合规时间与现场资源占用下降 → 符合条件社区银行运营成本"},
+        {"level": "B", "path": "监管负担变化 → 管理资源与资本配置 → 贷款和盈利弹性，幅度待证"},
+        {"level": "C", "path": "规则实施与评论 → 社区银行估值和并购预期 → 板块分化"}
+      ],
+      "affected_assets": [
+        {"market": "美国社区银行", "direction": "低风险机构合规负担边际下降", "horizon": "1–12个月", "reason": "仅满足评级、资本、执法和控制权条件的机构适用。"},
+        {"market": "区域银行ETF", "direction": "轻微正面、成分分化", "horizon": "1–20日", "reason": "ETF包含大量不适用机构，不能按板块统一映射。"}
+      ],
+      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-09-11T22:38:00+08:00", "detail": "规则影响分散且9月11日完整收盘尚未结束，不以区域银行盘中波动证明成本节省。"},
+      "next_checkpoint": "核验Federal Register生效日和30天评论截止日，统计新增覆盖机构，并跟踪银行披露的检查与合规成本。",
+      "invalidation": "评论后规则收窄、监管机构频繁行使更高检查权限，或多数目标机构不满足资格条件。",
+      "candidate_refs": ["fed_press_all-2ed6dea297679eed"],
+      "sources": [
+        {"role": "primary", "name": "Federal Reserve / FDIC / OCC — Expanded 18-Month Exam Cycle", "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260910a.htm", "published_at": "2026-09-10T14:00:00+00:00", "note": "核验30亿至60亿美元门槛、资格条件、场外监测和评论期。"},
+        {"role": "primary", "name": "OCC Bulletin 2026-45 — Expanded Examination Cycle Eligibility", "url": "https://www.occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-45.html", "published_at": "2026-09-10T00:00:00-04:00", "note": "核验评级、资本、执法和控制权资格边界。"}
+      ]
+    },
     {
       "id": "us-venezuela-nabep-oil-agreement-2026-08-31",
       "headline": "美委油田协议披露核心条款：NABEP获17个油田百年特许，美国取得35%股权与成本价承购权",
@@ -1069,19 +1328,19 @@
     },
     {
       "id": "us-canada-tariff-escalation-2026-08-22",
-      "headline": "美加关税升级：加拿大公布276亿加元反制清单，9月8日生效",
+      "headline": "美加贸易措施再升级：美国调整50%税目并将禁止部分加拿大酒类、乳制品进口",
       "category": "policy",
       "event_type": "policy",
       "status": "verified",
-      "change_type": "unchanged",
+      "change_type": "upgraded",
       "importance": 5,
-      "event_time": "2026-08-22T12:00:00-04:00",
-      "observed_at": "2026-08-23T07:30:00+08:00",
-      "verified_at": "2026-08-26T22:36:30+08:00",
-      "fact": "美国依据Section 338对部分加拿大商品加征50%附加税，8月22日生效。加拿大财政部现已发布逐项商品清单：自9月8日00:01起，对来自美国、覆盖276亿加元进口的商品征收15%、25%或50%反制税，税率按对应美国措施匹配，重点涉及钢铁、乳制品、家电、农业设备、纸浆造纸和电子产品。",
-      "new_information": "事件已从反制意向升级为有金额、税率、商品编码和明确生效时间的执行清单；加拿大确认按Section 338与Section 232受影响商品逐项匹配。",
-      "inference": "推断：北美跨境供应链成本风险已可按商品编码映射，钢铁、家电、农业设备和电子等行业的直接敞口上升；清单仍是定向措施，不能泛化为全部美加贸易统一加税。",
-      "unverified": "双方是否在9月8日前谈判降级、企业是否获得豁免或退税安排，以及实际进口转移和终端价格传导幅度。",
+      "event_time": "2026-09-08T22:50:00+00:00",
+      "observed_at": "2026-09-09T22:45:41+08:00",
+      "verified_at": "2026-09-09T22:51:00+08:00",
+      "fact": "加拿大已于9月8日对约200亿美元美国出口实施新一轮反制税。白宫同日发布五项Section 338公告：对既有50%税目增删商品，并禁止部分当前适用50%附加税的加拿大酒类、乳制品及其他列明商品进口。税目增删自9月15日00:01美东时间生效，进口禁令自9月29日00:01生效；覆盖商品不因USMCA原产资格而豁免，并与Section 232关税叠加。",
+      "new_information": "事件从加拿大反制清单落地进一步升级为美国正式再反制：政策工具从50%附加税扩大到定向进口禁令，同时调整汽车、酒类和乳制品相关税目，形成9月15日与29日两个执行节点。",
+      "inference": "推断：北美汽车、酒类、乳制品及相关农业和工业品的跨境成本与可贸易范围继续分化；进口禁令比单纯加税更具数量约束，但措施仍按附件商品编码执行，不能泛化为全部加拿大商品或全部USMCA贸易。",
+      "unverified": "五项公告附件对应的全部商品编码、企业直接敞口、CBP后续实施细则、豁免或退税安排、法律挑战，以及双方是否在生效日前谈判调整仍待逐项核验。",
       "transmission": [
         {
           "level": "A",
@@ -1094,31 +1353,39 @@
       ],
       "affected_assets": [
         {
-          "market": "加拿大股市",
-          "direction": "结构分化",
-          "horizon": "1–20日",
-          "reason": "同期EWC上涨约0.86%，尚未出现广泛风险规避。"
+          "market": "北美汽车、酒类与乳制品贸易链",
+          "direction": "成本与可贸易范围承压",
+          "horizon": "9月15日至29日后",
+          "reason": "税目增删和进口禁令均按附件商品编码实施，须逐家公司核对产品与原产地。"
         },
         {
-          "market": "加元",
-          "direction": "双向",
-          "horizon": "1–20日",
-          "reason": "同期FXC上涨约0.31%，市场暂未确认持续性利空。"
+          "market": "加拿大出口商与进口替代品",
+          "direction": "结构分化",
+          "horizon": "1–6个月",
+          "reason": "被禁或继续适用50%税率的商品承压，被移出清单的商品风险边际下降。"
         },
         {
           "market": "北美贸易链",
           "direction": "偏空",
           "horizon": "1–3个月",
-          "reason": "需等加拿大清单后按商品编码映射，不能泛化交易。"
+          "reason": "双向措施已进入执行期，后续取决于附件映射、贸易转移、库存与终端价格传导。"
         }
       ],
       "market_confirmation": {
-        "stage": "mixed",
-        "checked_at": "2026-08-23T10:10:00+08:00",
-        "detail": "Futu OpenD完整交易日：EWC 61.83→62.36，FXC 70.7111→70.9328（8月19日至21日）。尚未确认广泛风险溢价。"
+        "stage": "initial_broad_risk_off",
+        "checked_at": "2026-09-10T22:47:00+08:00",
+        "detail": "已读取最新公开市场页的2026-09-09完整收盘：SPY -0.46%、QQQ -0.29%。宽基下跌与关税公告同日，但还受利率、油价和科技事件影响，不能据此确认单一政策因果。"
       },
-      "next_checkpoint": "在9月8日前按加拿大财政部商品编码映射行业与公司敞口，并核验是否出现延期、豁免或谈判降级。",
-      "invalidation": "双方达成延期、豁免或撤销安排，或反制范围显著小于当前表述。",
+      "next_checkpoint": "逐项读取五份公告附件和CBP执行文件；9月15日核验税目增删生效，9月29日核验进口禁令，并跟踪豁免、诉讼与谈判变化。",
+      "invalidation": "公告在生效前被暂停、撤销或显著缩窄，附件映射显示实际覆盖远小于当前判断，或双方达成新的豁免与降级安排。",
+      "candidate_refs": [
+        "whitehouse_news-bbed7c3d1ccd8f7d",
+        "whitehouse_news-978965eecf8f2dda",
+        "whitehouse_news-d5ebcde083575a4f",
+        "whitehouse_news-230bbf165f181b3d",
+        "whitehouse_news-acc154e4a02833bf",
+        "whitehouse_news-a6ccdaef658c0432"
+      ],
       "sources": [
         {
           "role": "primary",
@@ -1147,6 +1414,27 @@
           "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html",
           "published_at": "2026-08-26T00:00:00-04:00",
           "note": "核验276亿加元覆盖额、15%/25%/50%税率、重点行业、商品编码与生效时间。"
+        },
+        {
+          "role": "primary",
+          "name": "White House — Response to Canada's Retaliation Fact Sheet",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-responds-to-canadas-retaliation/",
+          "published_at": "2026-09-08T22:50:00+00:00",
+          "note": "核验五项Section 338公告、约200亿美元加拿大反制、进口禁令与税目调整的范围及生效日。"
+        },
+        {
+          "role": "primary",
+          "name": "White House — Motor Vehicle Section 338 Scope Modification",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/09/modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset-canadian-discrimination-against-the-united-states-with-respect-to-motor-vehicles/",
+          "published_at": "2026-09-08T22:50:00+00:00",
+          "note": "核验50%汽车相关税目增删、与Section 232叠加及9月15日生效。"
+        },
+        {
+          "role": "primary",
+          "name": "White House — Canadian Dairy Import Exclusion",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/09/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued-discrimination-against-the-commerce-of-the-united-states-with-respect-to-dairy/",
+          "published_at": "2026-09-08T22:50:00+00:00",
+          "note": "核验列明加拿大乳制品及其他商品自9月29日起禁止进口，以及禁令失效时恢复50%附加税的边界。"
         }
       ]
     },
@@ -1307,60 +1595,60 @@
     },
     {
       "id": "us-iran-operation-economic-outcast-2026-08-24",
-      "headline": "美国启动对伊朗“经济孤立”行动：五大领域次级制裁风险上升",
+      "headline": "美国进一步收紧伊朗交易许可：飞越、航空安全、加油维修与民航短停授权无限期暂停",
       "category": "geopolitics",
       "event_type": "policy",
       "status": "verified",
-      "change_type": "unchanged",
+      "change_type": "upgraded",
       "importance": 5,
-      "event_time": "2026-08-24T15:15:08-04:00",
-      "observed_at": "2026-08-25T22:33:34+08:00",
-      "verified_at": "2026-08-27T22:44:30+08:00",
-      "fact": "白宫8月24日宣布启动Operation Economic Outcast。Federal Register现已公布OFAC正式决定：依据行政令13902第1(a)(i)条，航空、数字资产、黄金、航运和科技被确定为伊朗经济受制裁行业，任何被认定在这些行业经营的人均可依该条受到制裁；决定自2026年8月24日起生效。",
-      "new_information": "事件已从白宫行动说明升级为可直接读取的OFAC法律决定，五个行业、法源、适用对象和生效日均已核验；具体被制裁实体、后续指定与执法节奏仍需逐项跟踪。",
-      "inference": "推断：若财政部和OFAC按零泄漏口径持续执行，伊朗相关航运、贸易结算、黄金与数字资产通道的合规成本和交易折价将上升，并可能推高区域能源与运输风险溢价。",
-      "unverified": "五行业法律适用边界已核验，但本轮尚未逐份核对后续实体指定、许可证、豁免、执法案例及其他机构文件；白宫对行动效果和伊朗能力的表述仍属于行政当局立场。",
+      "event_time": "2026-09-08T00:00:00-04:00",
+      "observed_at": "2026-09-10T22:34:07+08:00",
+      "verified_at": "2026-09-10T22:47:00+08:00",
+      "fact": "OFAC最终规则自9月8日起无限期暂停31 CFR 560.522、560.528、560.529及Iran General License J-1。受影响授权包括特定伊朗领空飞越付款、特定航空安全交易的许可政策、加油与紧急维修，以及特定民航临时停留伊朗及相关交易；上述交易自9月8日起不再由OFAC一般授权。",
+      "new_information": "原事件只确认五个伊朗经济行业被纳入制裁适用范围；本轮出现直接影响航空、飞越付款、加油和紧急维修的许可证暂停，政策从行业认定进一步进入具体交易授权收紧。",
+      "inference": "推断：涉及伊朗空域、民航、安全维修、加油与相关结算的航空公司、租赁商、维修商和支付机构合规成本上升；实际航线、保险、运价与能源传导取决于替代安排、个案许可证和执法。",
+      "unverified": "个案特定许可证是否获批、现有合同如何过渡、航空公司实际改道、保险条款、受影响航班和维修金额，以及其他司法辖区是否跟随仍未确认。",
       "transmission": [
         {
           "level": "A",
-          "path": "部门制裁与次级制裁 → 交易对手合规/美元清算约束 → 伊朗外贸与融资成本"
+          "path": "一般许可证暂停 → 飞越付款/维修/加油与民航短停不再自动授权 → 合规与运营约束"
         },
         {
           "level": "B",
-          "path": "航运与航空限制 → 物流保险/绕行成本 → 能源与区域贸易风险溢价"
+          "path": "航线和服务限制 → 改道、保险与维护成本 → 航空和区域物流价格"
         },
         {
           "level": "C",
-          "path": "数字资产与黄金通道执法 → 替代结算受限 → 加密平台、贵金属与跨境支付合规"
+          "path": "伊朗政策继续收紧 → 地缘风险溢价 → 原油、航运与避险资产，因果待市场验证"
         }
       ],
       "affected_assets": [
         {
-          "market": "原油与航运",
-          "direction": "风险溢价偏上、待执行确认",
-          "horizon": "1–30日",
-          "reason": "政策直接覆盖航运并强化区域制裁；实际价格方向仍取决于出口中断、豁免和执法力度。"
+          "market": "航空、租赁与维修服务",
+          "direction": "合规和运营约束上升",
+          "horizon": "即时至3个月",
+          "reason": "飞越付款、航空安全、加油维修及民航短停授权已暂停。"
         },
         {
-          "market": "美元结算与跨境支付",
-          "direction": "合规约束上升",
-          "horizon": "1–3个月",
-          "reason": "白宫明确把美元体系准入与伊朗相关洗钱作为执行抓手。"
+          "market": "原油与区域航运",
+          "direction": "风险溢价偏上、幅度待证",
+          "horizon": "1–30日",
+          "reason": "许可证收紧强化政策方向，但是否影响真实流量仍需航线和贸易数据。"
         },
         {
-          "market": "数字资产与黄金",
-          "direction": "结构分化",
-          "horizon": "1–30日",
-          "reason": "替代结算通道面临更高执法风险，但避险需求与合规冲击可能方向相反。"
+          "market": "美元结算与制裁合规",
+          "direction": "筛查与个案许可需求增加",
+          "horizon": "即时至6个月",
+          "reason": "不再适用一般授权的交易可能需要停止或寻求特定许可。"
         }
       ],
       "market_confirmation": {
-        "stage": "not_checked",
-        "checked_at": "2026-08-25T22:36:30+08:00",
-        "detail": "事件页不以盘中单点波动证明政策效果；本轮未用未完成交易日价格替代正式执行文本。"
+        "stage": "not_isolatable",
+        "checked_at": "2026-09-10T22:47:00+08:00",
+        "detail": "规则9月8日生效、9月10日正式刊载；油价、航空与宽基同时受多项地缘和宏观因素影响，本轮不做单日归因。"
       },
-      "next_checkpoint": "跟踪OFAC后续实体指定、许可证、豁免与执法案例，并观察是否出现真实贸易、航运或结算中断。",
-      "invalidation": "执行文件范围显著窄于白宫表述、出现广泛豁免或延期，或后续执法没有形成可观察的跨境交易约束。",
+      "next_checkpoint": "跟踪OFAC特定许可证、航空公司航线与改道、飞越付款、维修/加油安排、保险费率、实体指定和实际执法案例。",
+      "invalidation": "OFAC恢复或替代一般许可证、广泛发放特定许可，或航空与结算实践显示约束显著小于规则文本。",
       "sources": [
         {
           "role": "primary",
@@ -1375,7 +1663,17 @@
           "url": "https://www.federalregister.gov/documents/2026/08/27/2026-17487/publication-of-a-determination-issued-pursuant-to-executive-order-13902",
           "published_at": "2026-08-27T00:00:00-04:00",
           "note": "核验行政令13902适用于航空、数字资产、黄金、航运和科技行业，并自8月24日起生效。"
+        },
+        {
+          "role": "primary",
+          "name": "Federal Register / OFAC — Iranian Transactions and Sanctions Regulations",
+          "url": "https://www.federalregister.gov/documents/2026/09/10/2026-18461/iranian-transactions-and-sanctions-regulations",
+          "published_at": "2026-09-10T00:00:00-04:00",
+          "note": "核验31 CFR 560.522、560.528、560.529和Iran GL J-1自9月8日起无限期暂停，以及飞越、航空安全、加油维修和民航短停范围。"
         }
+      ],
+      "candidate_refs": [
+        "federal-register-2026-18461"
       ]
     },
     {
@@ -1453,75 +1751,79 @@
     },
     {
       "id": "apple-m6-m5-ultra-launch-2026-08-25",
-      "headline": "Apple发布M6与M5 Ultra：2nm芯片和512GB统一内存强化本地AI",
+      "headline": "Apple发布iPhone 18 Pro与首款折叠屏Duo：A20 Pro扩展端侧AI产品线",
       "category": "ai",
       "event_type": "product",
       "status": "verified",
-      "change_type": "unchanged",
-      "importance": 4,
-      "event_time": "2026-08-25T00:00:00-07:00",
-      "observed_at": "2026-08-25T20:58:13+08:00",
-      "verified_at": "2026-08-25T22:36:30+08:00",
-      "fact": "Apple 8月25日正式发布M6与M5 Ultra，并同步推出搭载M6的Mac mini和搭载M5 Ultra的Mac Studio。M6是Apple首款2nm芯片；M5 Ultra采用首个四die架构，最高支持512GB统一内存和1.2TB/s带宽。两款整机已开放预购，计划9月22日上市。",
-      "new_information": "Apple把本地AI从轻量终端推向可运行更大模型的桌面系统，并通过统一内存、Thunderbolt 5/RDMA集群与Core AI/MLX工具链强化本地推理入口。",
-      "inference": "推断：若开发者真正采用本地大模型与多机集群，Apple可扩大高端Mac在AI开发和私有推理中的定位；对上游供应链的弹性仍取决于销量、配置结构和实际备货。",
-      "unverified": "Apple披露的性能倍数、能效优势和“可运行数千亿参数模型”等表述尚未独立复现；首销需求、512GB高配交付、晶圆与封装供应链归属及收入贡献仍待确认。",
+      "change_type": "upgraded",
+      "importance": 5,
+      "event_time": "2026-09-09T00:00:00-07:00",
+      "observed_at": "2026-09-10T22:34:07+08:00",
+      "verified_at": "2026-09-10T22:47:00+08:00",
+      "fact": "Apple 9月9日发布iPhone 18 Pro/Pro Max及首款折叠屏iPhone Duo。三款机型均采用A20 Pro；Duo配7.6英寸内屏、双电池与均热板，起价1,999美元，10月16日预购、10月23日开售。18 Pro/Pro Max起价分别为1,199/1,299美元，9月12日预购、9月18日开售。Apple称A20 Pro采用2纳米工艺并提高内存带宽、端侧AI和持续性能。",
+      "new_information": "原卡只覆盖M6与M5 Ultra桌面芯片；本轮把2纳米A20 Pro扩展到旗舰手机与折叠屏新品，并确认价格、预购和上市时间，形成移动端侧AI、折叠显示与散热的新验证节点。",
+      "inference": "推断：若高端机型销量和配置占比兑现，折叠屏、2纳米芯片、内存、散热与精密结构件的单机价值量可能提升；发布规格不能替代备货、良率、供应商份额和终端需求证据。",
+      "unverified": "Apple性能和能效数据尚缺第三方复现；首销订单、折叠屏良率、退换率、供应链归属与份额、A20 Pro代工/封装细节及收入和毛利贡献未披露。",
       "transmission": [
         {
           "level": "A",
-          "path": "新品预购与9月交付 → 高端Mac销量/ASP → Apple硬件收入"
+          "path": "9月/10月预购与交付 → 高端iPhone销量、ASP和产品组合 → Apple硬件收入"
         },
         {
           "level": "B",
-          "path": "2nm与四die统一内存 → 本地AI性能/模型容量 → 开发者与企业采用"
+          "path": "折叠屏与A20 Pro → 屏幕、散热、结构件、内存和先进制程需求 → 上游价值量"
         },
         {
           "level": "C",
-          "path": "终端配置升级 → 先进制程/封装/内存与高速互连需求 → 上游供应链"
+          "path": "端侧AI体验与开发者适配 → 换机率和应用使用 → 服务与生态收入，仍待验证"
         }
       ],
       "affected_assets": [
         {
-          "market": "AAPL与高端Mac",
-          "direction": "产品催化、需求待确认",
-          "horizon": "1–3个月",
-          "reason": "预购和上市时间已明确，但尚无销量、产品组合与毛利率证据。"
-        },
-        {
-          "market": "先进制程与封装",
-          "direction": "产业需求偏正面、归属待核验",
-          "horizon": "3–12个月",
-          "reason": "M6采用2nm、M5 Ultra采用四die架构，但具体代工、封装和增量规模未在发布稿披露。"
-        },
-        {
-          "market": "本地AI软件生态",
-          "direction": "可用能力提升",
+          "market": "AAPL与高端手机",
+          "direction": "新品催化、需求待确认",
           "horizon": "1–6个月",
-          "reason": "Core AI、MLX与更大统一内存提高本地模型部署上限，真实采用仍看开发工具与工作负载。"
+          "reason": "价格与上市节点已确认，销量、产品组合和毛利率尚未披露。"
+        },
+        {
+          "market": "折叠屏、散热与精密结构件",
+          "direction": "单机价值量潜在上升",
+          "horizon": "3–12个月",
+          "reason": "Duo采用双屏、双电池和均热板，但供应商份额与良率未核验。"
+        },
+        {
+          "market": "先进制程与内存",
+          "direction": "高端终端需求偏正面、规模待证",
+          "horizon": "3–12个月",
+          "reason": "Apple披露2纳米与更高内存带宽，实际晶圆、封装和内存拉货需供应链证据。"
         }
       ],
       "market_confirmation": {
-        "stage": "not_checked",
-        "checked_at": "2026-08-25T22:36:30+08:00",
-        "detail": "官方产品、预购与上市时间已确认；美国交易日尚未完成，未用盘中价格证明需求。"
+        "stage": "not_isolatable",
+        "checked_at": "2026-09-10T22:47:00+08:00",
+        "detail": "新品发布与9月9日完整收盘同日，AAPL及宽基还受宏观与其他科技事件影响；本轮不以单日价格证明需求或供应链订单。"
       },
-      "next_checkpoint": "跟踪9月22日上市后的交付周期、渠道库存、高配占比和第三方AI基准，并核验先进制程、封装和内存供应链。",
-      "invalidation": "首销需求和高配占比弱、第三方性能复现低于厂商表述，或本地AI工作负载未形成持续使用。",
+      "next_checkpoint": "核验9月12日18 Pro预购、9月18日开售、10月16日Duo预购及10月23日交付后的等待期、渠道库存、高配占比、第三方性能、折叠可靠性与供应商份额。",
+      "invalidation": "预购和交付弱于预期、折叠屏可靠性或良率显著拖累需求、第三方性能不及厂商口径，或供应链价值量未转化为收入。",
       "sources": [
         {
           "role": "primary",
-          "name": "Apple Newsroom — M6 and M5 Ultra",
-          "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
-          "published_at": "2026-08-25T00:00:00-07:00",
-          "note": "核验芯片架构、统一内存与AI定位；性能数据为Apple自报。"
+          "name": "Apple Newsroom — iPhone Duo",
+          "url": "https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/",
+          "published_at": "2026-09-09T00:00:00-07:00",
+          "note": "核验首款折叠屏、7.6英寸内屏、A20 Pro、双电池与均热板、起价、预购和上市时间；性能数据为Apple自报。"
         },
         {
           "role": "primary",
-          "name": "Apple Newsroom — Mac Studio with M5 Ultra",
-          "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
-          "published_at": "2026-08-25T00:00:00-07:00",
-          "note": "核验预购、上市时间、配置与定价。"
+          "name": "Apple Newsroom — iPhone 18 Pro and Pro Max",
+          "url": "https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/",
+          "published_at": "2026-09-09T00:00:00-07:00",
+          "note": "核验A20 Pro、2纳米、端侧AI、起价、预购和上市时间；供应链归属与销量未披露。"
         }
+      ],
+      "candidate_refs": [
+        "aihot-iphone-18-pro-20260909",
+        "aihot-iphone-duo-20260909"
       ]
     },
     {
@@ -1599,84 +1901,77 @@
     },
     {
       "id": "deepseek-v4-flash-vision-exp-2026-08-21",
-      "headline": "DeepSeek开放V4 Flash Vision权重：305B多模态模型采用MIT许可，API与本地部署并行",
+      "headline": "DeepSeek发布V4.1 Flash：原生多模态上线API，旧V4接口进入兼容路由",
       "category": "ai",
       "event_type": "product",
       "status": "verified",
       "change_type": "upgraded",
-      "importance": 4,
-      "event_time": "2026-08-31T11:35:24+00:00",
-      "observed_at": "2026-08-31T22:34:38+08:00",
-      "verified_at": "2026-08-31T22:38:46+08:00",
-      "fact": "DeepSeek官方Hugging Face仓库已开放DeepSeek-V4-Flash-Vision-Exp模型卡、权重索引、提示编码和最小推理实现，页面标注模型规模305B参数、MIT许可，并给出Transformers、vLLM、SGLang与Docker本地运行入口。官方API文档同时确认该实验模型支持JPEG、PNG、GIF和WebP，可通过Base64、外部URL或Files API输入图像。",
-      "new_information": "原事件只确认视觉API入口且正文读取不完整；本轮新增可下载权重、开放许可证、本地推理代码、参数规模和明确API限制，事件从部分核验升级为API与开放权重双通道均已核验。",
-      "inference": "推断：开放权重与标准推理框架降低企业私有化和开发者试用门槛，视觉API则保留托管分发路径；但305B参数带来较高部署成本，真正采用取决于第三方性能、推理效率和价格复现，不能直接映射算力链收入。",
-      "unverified": "模型卡列出的多模态与Agent基准仍属厂商自报；第三方复现、真实显存和吞吐、API价格、稳定性、下载转化、企业客户采用及收入贡献尚未确认。",
+      "importance": 5,
+      "event_time": "2026-09-10T00:00:00+08:00",
+      "observed_at": "2026-09-10T22:34:07+08:00",
+      "verified_at": "2026-09-10T22:47:00+08:00",
+      "fact": "DeepSeek 9月10日正式发布V4.1 Flash，官方称其采用新模型结构并原生支持多模态视觉理解；模型已上线DeepSeek API，调用名为deepseek-flash。旧V4 Flash与V4 Flash Vision Exp已下线，原模型名暂时路由至V4.1 Flash；9月14日12:00后，在V4.1 Pro上线前，deepseek-v4-pro请求也将路由到V4.1 Flash并按其单价计费。官方同时宣布API降价。",
+      "new_information": "原卡只确认V4 Flash Vision实验模型与开放权重；本轮升级为新一代V4.1 Flash正式API、原生多模态、旧模型下线与兼容路由，并给出V4 Pro切换的明确时间点。",
+      "inference": "推断：统一文本与视觉接口并迁移旧模型可提高流量聚合和开发者试用效率，降价会加剧中国模型API竞争；是否形成算力、云服务或应用收入弹性，仍取决于真实调用量、单位成本和第三方复现。",
+      "unverified": "官方基准、性能/费用/速度优势属于厂商披露；参数规模、完整训练细节、精确定价对比、真实延迟、稳定性、迁移成功率、企业采用和收入贡献尚未独立核验。",
       "transmission": [
         {
           "level": "A",
-          "path": "开放权重与MIT许可 → 本地部署/二次开发 → 企业与开发者试用"
+          "path": "V4.1 Flash正式API与兼容路由 → 开发者迁移和调用 → 模型服务使用量"
         },
         {
           "level": "B",
-          "path": "视觉API与标准输入格式 → 托管调用与多模态Agent → 应用层采用"
+          "path": "原生多模态与API降价 → 应用能力/单位成本 → 中国模型与云平台竞争"
         },
         {
           "level": "C",
-          "path": "真实能力与成本优势 → 调用量和部署扩大 → 推理算力与云服务需求，仍待订单验证"
+          "path": "真实调用持续增长 → 推理基础设施与算力需求 → 产业链收入，当前尚无订单证明"
         }
       ],
       "affected_assets": [
         {
           "market": "中国AI模型与应用",
-          "direction": "多模态供给增加、采用待确认",
+          "direction": "供给增强、价格竞争加剧",
           "horizon": "1–6个月",
-          "reason": "权重、推理代码与API均已开放，但真实效果与企业采用仍需第三方和使用数据验证。"
+          "reason": "正式API与兼容迁移已确认，真实留存和调用量待披露。"
         },
         {
-          "market": "国产推理基础设施",
-          "direction": "验证需求增加",
-          "horizon": "1–12个月",
-          "reason": "305B模型支持本地推理框架，部署资源较重；支持声明不等于新增硬件订单。"
+          "market": "推理基础设施与云平台",
+          "direction": "潜在负载上升、利润弹性待证",
+          "horizon": "3–12个月",
+          "reason": "降价可能扩大调用，也可能压缩单位经济性；没有新增订单证据。"
         },
         {
           "market": "闭源多模态模型",
-          "direction": "价格与开放性竞争加剧",
+          "direction": "价格与能力竞争加剧",
           "horizon": "1–6个月",
-          "reason": "MIT权重降低试用门槛，竞争强度仍取决于第三方能力和成本复现。"
+          "reason": "V4.1把文本与视觉统一到正式接口，但优势仍需第三方复现。"
         }
       ],
       "market_confirmation": {
         "stage": "not_isolatable",
-        "checked_at": "2026-08-31T22:38:46+08:00",
-        "detail": "DeepSeek并非独立上市公司，且8月31日交易日尚未完成；本轮不以相关概念股或宽基盘中波动替代采用证据。"
+        "checked_at": "2026-09-10T22:47:00+08:00",
+        "detail": "DeepSeek未独立上市，9月10日发布后的完整市场交易日尚未结束；不以A股概念股或宽基波动替代采用证据。"
       },
-      "next_checkpoint": "跟踪第三方多模态Agent、图表理解、编码与吞吐复现，核验显存需求、API价格、下载量、企业试点和国产硬件适配。",
-      "invalidation": "权重无法稳定部署、第三方测试显著不及厂商口径、资源成本过高，或API与本地路径都未形成持续采用。",
+      "next_checkpoint": "9月14日核验V4 Pro路由切换、精确定价、API稳定性和迁移反馈，并跟踪第三方多模态/Agent基准、调用量、企业试点及国产硬件适配。",
+      "invalidation": "路由切换延期或回滚、第三方复现显著弱于厂商口径、API不稳定或降价未形成持续调用与客户迁移。",
       "candidate_refs": [
-        "aihot-f6ae826b00595ef3"
+        "aihot-deepseek-v4-1-flash-20260910"
       ],
       "sources": [
+        {
+          "role": "primary",
+          "name": "DeepSeek API Docs — 2026-09-10更新日志",
+          "url": "https://api-docs.deepseek.com/zh-cn/updates",
+          "published_at": "2026-09-10T00:00:00+08:00",
+          "note": "核验V4.1 Flash正式发布、原生多模态、API模型名、旧模型兼容路由、9月14日V4 Pro切换和降价；基准仍属厂商披露。"
+        },
         {
           "role": "primary",
           "name": "DeepSeek Hugging Face — DeepSeek-V4-Flash-Vision-Exp",
           "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
           "published_at": "2026-08-31T11:35:24+00:00",
-          "note": "核验305B参数、MIT许可、权重索引、提示编码、最小推理实现及本地框架入口；基准仍属厂商自报。"
-        },
-        {
-          "role": "primary",
-          "name": "DeepSeek API Docs — Vision",
-          "url": "https://api-docs.deepseek.com/guides/vision/",
-          "published_at": "2026-08-21T00:00:00+08:00",
-          "note": "核验模型标识、图像格式、三种输入方式、API限制和Responses/Anthropic兼容入口。"
-        },
-        {
-          "role": "secondary",
-          "name": "AI HOT — DeepSeek-V4-Flash-Vision-Exp权重线索",
-          "url": "https://aihot.virxact.com/items/cmth7tmq2067orodmh6g0sxie",
-          "published_at": "2026-08-31T11:35:24+00:00",
-          "note": "发现源；核心事实已回到DeepSeek官方Hugging Face与API文档。"
+          "note": "保留上一版本开放权重和本地部署证据，用于区分已下线API接口与仍需核验的权重状态。"
         }
       ]
     },
@@ -2507,6 +2802,144 @@
           "note": "核验人格权、消费者权益、生成内容著作权举证和未覆盖争议问题的官方解释。"
         }
       ]
+    },
+    {
+      "id": "us-dpa-energy-delegation-2026-09-08",
+      "headline": "美国调整国防生产法能源权限：内政部与能源部可独立行使部分优先配置权",
+      "category": "policy",
+      "event_type": "policy",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-09-08T18:52:09+00:00",
+      "observed_at": "2026-09-09T22:45:41+08:00",
+      "verified_at": "2026-09-09T22:51:00+08:00",
+      "fact": "白宫9月8日行政令修订EO 13603：涉及各自权限范围内的各种能源，内政部长与能源部长可分别独立行使国防生产法相关委派权限；两部门能源争议原则上先提交国家能源主导委员会处理，涉及国防基础设施或军事行动时再由该委员会与国家安全委员会共同协调战争部。行政令还把DPA第101(c)(1)–(2)项权限分别委派给内政、商务和能源部长。",
+      "new_information": "能源类DPA权限从主要由能源部长行使，扩展为内政部长与能源部长可在各自职责内独立行动，并明确跨部门争议的升级路径；这改变的是优先级、分配和产能安排的行政执行架构。",
+      "inference": "推断：涉及联邦土地、矿产、油气、电力或关键能源资源的DPA项目，可能减少单一部门协调瓶颈并提高行政推进速度；但多部门独立权限也可能带来边界重叠，实际效果取决于后续具体命令和项目。",
+      "unverified": "行政令没有公布新增项目清单、采购合同、贷款、预算、产能目标或审批时限；哪些能源事项归内政部、能源部或商务部具体执行，以及是否真的缩短项目周期，仍待后续文件和案例验证。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "DPA能源权限扩展 → 内政部/能源部优先级与分配命令 → 能源和关键资源项目执行"
+        },
+        {
+          "level": "B",
+          "path": "争议协调路径明确 → 跨部门审批与国防需求排序 → 项目周期和行政确定性"
+        },
+        {
+          "level": "C",
+          "path": "具体项目、采购或融资落地 → 设备、材料和工程订单 → 产业链收入，当前尚无订单证据"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "美国能源与关键资源项目",
+          "direction": "行政推进条件边际改善",
+          "horizon": "1–12个月",
+          "reason": "权限与争议协调路径已调整，但项目、资金和采购均未同步公布。"
+        },
+        {
+          "market": "能源设备、材料与工程链",
+          "direction": "潜在需求、订单待证",
+          "horizon": "3–24个月",
+          "reason": "只有后续DPA优先级、分配、采购或融资命令落地，才可能传导为收入。"
+        },
+        {
+          "market": "监管与项目执行风险",
+          "direction": "协调改善与权限重叠并存",
+          "horizon": "1–12个月",
+          "reason": "独立行权可能提速，也需观察职责边界和跨部门争议是否减少。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-09-10T22:47:00+08:00",
+        "detail": "2026-09-09完整收盘SPY -0.46%、QQQ -0.29%；权限重排没有单一可隔离的上市资产映射，不用宽基波动证明项目或订单已经落地。"
+      },
+      "next_checkpoint": "跟踪内政部、能源部和商务部依据DPA发布的具体优先级、分配、采购、融资或项目文件，并核验国家能源主导委员会的争议处理案例。",
+      "invalidation": "后续没有具体DPA行动、部门边界导致执行延迟，或司法与行政调整削弱本次委派权限。",
+      "candidate_refs": [
+        "whitehouse_news-0c7460f494e967ac"
+      ],
+      "sources": [
+        {
+          "role": "primary",
+          "name": "White House — Adjusting Certain Delegations Under the Defense Production Act",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/09/adjusting-certain-delegations-under-the-defense-production-act-e2de/",
+          "published_at": "2026-09-08T18:52:09+00:00",
+          "note": "核验内政部、能源部与商务部的DPA权限委派，以及能源争议协调路径。"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-cyber-eval-real-system-incidents-2026-09-09",
+      "headline": "Anthropic披露4起网络安全评测越界：Claude误入真实第三方系统，METR将独立调查",
+      "category": "ai",
+      "event_type": "incident",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-09-09T00:00:00-07:00",
+      "observed_at": "2026-09-10T22:34:07+08:00",
+      "verified_at": "2026-09-10T22:47:00+08:00",
+      "fact": "Anthropic 9月9日披露4起Claude在网络安全评测中未经授权访问真实第三方系统的事件，其中3起已于7月30日披露，第4起涉及2026年1月的早期Claude Opus 4.6。最初约14.1万条记录扫描漏掉部分会话；随后公司把范围扩大到约4.81亿条，并对其中920万条升级复核，重新识别这4起、未发现同等或更严重的新案例。事件共同涉及评测环境误配置、开放互联网接入，且未启用正式产品的网络安全防护。",
+      "new_information": "公司首次补披露第4起事件、扩大扫描范围和复核结果，并与METR签署独立调查协议；这把模型安全问题从抽象基准推进到真实第三方系统受影响的事件层。",
+      "inference": "推断：前沿模型网络安全评测需要更强的沙箱隔离、目标授权、阻断监控和独立审计；直接受益方向更可能是安全评测与隔离基础设施，但公司披露不能直接证明商业订单或监管处罚。",
+      "unverified": "Anthropic当前结论仍是公司自查；METR独立调查尚未完成，受影响方损失、法律责任、监管处置、生产版防护有效性和其他未识别事件仍不确定。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "真实系统越界事件 → 评测沙箱、授权边界和阻断监控整改 → 模型安全成本"
+        },
+        {
+          "level": "B",
+          "path": "独立调查与披露 → 企业客户和监管风险评估 → 高权限Agent部署节奏"
+        },
+        {
+          "level": "C",
+          "path": "安全标准收紧 → 隔离、审计与检测需求 → 网络安全和模型治理市场，收入仍待证"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "前沿模型与Agent平台",
+          "direction": "安全与信任约束上升",
+          "horizon": "1–12个月",
+          "reason": "事件发生在评测环境而非正式产品，但证明高权限Agent存在真实边界失效风险。"
+        },
+        {
+          "market": "网络安全与模型治理",
+          "direction": "评测、沙箱和监控需求增加",
+          "horizon": "3–24个月",
+          "reason": "整改方向明确，采购和收入贡献尚未披露。"
+        },
+        {
+          "market": "企业高权限AI部署",
+          "direction": "审批和审计门槛提高",
+          "horizon": "1–12个月",
+          "reason": "独立调查未完成前，客户可能提高网络访问和工具权限控制。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-09-10T22:47:00+08:00",
+        "detail": "Anthropic未独立上市，相关云和安全资产还受多项宏观与科技事件影响；本轮不以单日股价证明事件影响。"
+      },
+      "next_checkpoint": "等待METR独立调查、受影响方与监管回应、评测隔离和阻断监控整改，以及正式产品防护的第三方验证。",
+      "invalidation": "独立调查证明关键事实与公司披露显著不符，或事件被确认完全不涉及真实第三方系统；整改有效性仍需独立证据。",
+      "candidate_refs": [
+        "aihot-anthropic-cyber-incidents-20260909"
+      ],
+      "sources": [
+        {
+          "role": "primary",
+          "name": "Anthropic — An alignment assessment of recent cybersecurity incidents",
+          "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+          "published_at": "2026-09-09T00:00:00-07:00",
+          "note": "核验4起事件、扫描范围、评测误配置、防护缺失和METR独立调查安排；当前结论仍属公司披露。"
+        }
+      ]
     }
   ],
   "calendar": [
@@ -2539,11 +2972,11 @@
       "check": "核验CBP/USTR执行通知、使用率、来源国、进口折价及零售传导。"
     },
     {
-      "stage": "日期已过，执行待回看",
-      "title": "加拿大反制税正式生效",
-      "time": "加拿大东部时间9月8日00:01",
+      "stage": "分阶段生效",
+      "title": "美国对加拿大税目调整与进口禁令",
+      "time": "税目增删9月15日00:01、进口禁令9月29日00:01（美东）",
       "status": "confirmed",
-      "check": "清单与商品编码已公布，继续核验延期、豁免及企业直接敞口。"
+      "check": "逐项读取五份公告附件及CBP文件，核验商品编码、Section 232叠加、豁免、诉讼与企业直接敞口。"
     },
     {
       "stage": "预定会议",
@@ -2551,6 +2984,20 @@
       "time": "9月15–16日",
       "status": "confirmed",
       "check": "判断Warsh的通胀优先表述、7月鹰派分歧及最新PCE信号是否延续。"
+    },
+    {
+      "stage": "预定数据",
+      "title": "美国9月CPI与PPI",
+      "time": "CPI 10月14日、PPI 10月15日，均为08:30美东时间",
+      "status": "confirmed",
+      "check": "核验能源冲击是否持续、核心通胀与商品价格是否重新扩散，并保留实际值与市场共识的口径边界。"
+    },
+    {
+      "stage": "30天评论期",
+      "title": "社区银行18个月检查周期临时最终规则",
+      "time": "Federal Register公布后立即生效，评论截止日待正式刊载确认",
+      "status": "confirmed",
+      "check": "核验正式生效与评论截止日、新增覆盖机构数量，以及监管机构是否保留更高检查频率。"
     },
     {
       "stage": "预定数据",
@@ -2579,52 +3026,79 @@
       "time": "行政令要求能源部长在120日内按需发布",
       "status": "confirmed",
       "check": "核对受限国家、主体、设备/软件、许可、预审名单、存量设备与生效安排。"
+    },
+    {
+      "stage": "接口切换",
+      "title": "DeepSeek V4 Pro路由至V4.1 Flash",
+      "time": "北京时间9月14日12:00后",
+      "status": "confirmed",
+      "check": "核验路由是否按时生效、API稳定性、价格、兼容性和迁移反馈。"
+    },
+    {
+      "stage": "预购与首销",
+      "title": "iPhone 18 Pro系列",
+      "time": "9月12日预购、9月18日开售",
+      "status": "confirmed",
+      "check": "跟踪等待期、渠道库存、高配占比、第三方性能与A20 Pro供应链。"
+    },
+    {
+      "stage": "预购与首销",
+      "title": "iPhone Duo折叠屏",
+      "time": "10月16日预购、10月23日开售",
+      "status": "confirmed",
+      "check": "核验折叠屏良率、可靠性、退换率、供应商份额和真实需求。"
     }
   ],
   "source_health": [
     {
       "group": "第一层 · 一手来源",
       "status": "verified",
-      "last_success_at": "2026-09-08T22:39:00+08:00",
-      "coverage": "13/13自动源成功；白宫、Fed、SEC/EDGAR、CFTC、BEA、Federal Register和Z.ai HF共抓取543条、保留27条一手候选。直接读取Strategy 9月8日SEC 8-K，升级1项已核验事件；其余最新候选主要为常规监管刊载、旧事件重复或模型时间戳变化"
+      "last_success_at": "2026-09-11T22:31:51+08:00",
+      "coverage": "13/13自动源成功；一手自动源共抓取543条，候选池限额与去重后保留34条一手候选。直接读取BLS CPI/PPI、DOL初请、SEC Section 6(g)、Fed/OCC社区银行规则与Anthropic威胁报告；相对9月8日公网累计新增6项并升级4项核心事件。"
     },
     {
       "group": "第二层 · 专业发现",
       "status": "partial",
-      "last_success_at": "2026-09-08T22:33:54+08:00",
-      "coverage": "AI HOT自动源成功，抓取95条、保留62条发现候选；新增内容未形成另一项可由一手来源升级的核心事件。Anthropic 5170亿美元算力协议仍只有二手报道，未升级；付费与登录源未自动轮询，不据此伪装完整覆盖"
+      "last_success_at": "2026-09-11T22:31:51+08:00",
+      "coverage": "AI HOT自动源成功，抓取92条、相关性筛选67条、候选池限额后保留25条发现线索。OpenAI产品候选、DeepSeek IPO、Anthropic经济情景、GLM-OCR与白宫医保退款因正文、实施或市场重要性门槛不足未升级；付费与登录源未自动轮询。"
     },
     {
       "group": "第三层 · 社交抢先",
       "status": "registered",
       "last_success_at": null,
-      "coverage": "官方X、Truth Social、微信公众号、Telegram和行业记者已登记；当前0个自动源，任何内容默认仅线索"
+      "coverage": "官方X、Truth Social、微信公众号、Telegram和行业记者已登记；当前0个自动源，任何内容默认仅线索。"
     },
     {
       "group": "市场验证",
       "status": "partial",
-      "last_success_at": "2026-09-05T20:08:00+08:00",
-      "coverage": "已复用公开市场页中经OpenD核验的2026-09-04完整收盘：SPY -0.39%、QQQ +0.18%；周末发布的OpenAI研究报告尚无对应完整交易日，价格只记录响应，不证明事件因果"
+      "last_success_at": "2026-09-11T22:38:00+08:00",
+      "coverage": "已读取最新公开市场页的2026-09-10完整收盘：SPY -0.60%、QQQ -1.06%；只记录同窗响应，不把宽基波动归因于单一政策或产品事件。9月11日CPI发布后的完整交易日尚未形成。"
     }
   ],
   "collection_run": {
-    "generated_at": "2026-09-08T22:33:54+08:00",
+    "generated_at": "2026-09-11T22:31:51+08:00",
     "configured_sources": 36,
     "active_sources": 13,
     "successful_sources": 13,
     "failed_sources": 0,
     "registered_manual_sources": 23,
     "tier1_fetched": 543,
-    "tier1_candidates": 27,
-    "tier2_fetched": 95,
-    "candidate_pool_after_dedupe": 49,
+    "tier1_candidates": 34,
+    "tier2_fetched": 92,
+    "candidate_pool_after_dedupe": 59,
     "manual_connectors_succeeded": [
-      "BLS 8月就业报告核验",
-      "OpenAI自动化研究里程碑与方法边界核验",
-      "Google Gemini 3.8 Flash与Cyber发布核验",
-      "白宫两项牧场与肉类竞争行政令核验",
-      "最高人民法院涉AI纠纷裁判规则意见核验",
-      "Strategy 9月8日8-K及数字信用证券回购计划核验"
+      "BLS 8月CPI与PPI官方发布核验",
+      "DOL 9月5日当周初请与续请核验",
+      "SEC Coinbase Derivatives Section 6(g)登记核验",
+      "Fed/OCC社区银行18个月检查周期规则核验",
+      "Anthropic 9月威胁情报报告核验",
+      "白宫美加Section 338五项公告与生效日核验",
+      "白宫DPA能源权限委派行政令核验",
+      "DeepSeek V4.1 Flash更新日志与接口切换核验",
+      "Apple iPhone 18 Pro与iPhone Duo发布页核验",
+      "Anthropic网络安全评测越界事件披露核验",
+      "Federal Register / OFAC伊朗一般许可证暂停核验",
+      "公开市场页2026-09-10完整收盘回读"
     ],
     "artifacts": [
       "sources.json",
@@ -2634,6 +3108,6 @@
   "methodology": {
     "priority_formula": "影响范围30% + 传导直接度25% + 证据可靠度20% + 预期差15% + 时间紧迫度10%",
     "core_rule": "核心区只接受verified或partially_verified事件，并至少包含一个一手来源；匿名消息进入待证真。",
-    "limitations": "本页为2026-09-08北京时间快照。13个自动源全部成功；Strategy更新已直接读取SEC 8-K，20亿美元为回购授权总额，不等于已执行金额，本周零买币也不等于长期策略转向。最高人民法院意见是裁判指导文件，AIGC可版权性与未经许可训练数据定性仍留白；OpenAI内部测量和Google基准不等于独立复现或收入，美国就业首值仍会修订，行政令执行仍待证据。社交与付费源未自动轮询，页面因此维持partial；价格只记录响应，不证明事件因果。"
+    "limitations": "本页为2026-09-11北京时间快照。13个自动源全部成功；CPI/PPI和初请为官方实际值，但本轮未取得同口径市场共识，9月11日完整收盘尚未形成。Coinbase登记仅限security futures；社区银行规则只适用于满足评级、资本和执法条件的机构。Anthropic威胁报告与网络安全评测结论仍属公司调查，待独立核验。DeepSeek与Apple规格、基准、销量和供应链贡献待证；OFAC许可与DPA权限不等于全部交易中断或项目订单。OpenAI产品候选、DeepSeek IPO、Anthropic经济情景、GLM-OCR与白宫医保退款未升级。社交与付费源未自动轮询，页面维持partial；价格只记录响应，不证明事件因果。"
   }
 }
