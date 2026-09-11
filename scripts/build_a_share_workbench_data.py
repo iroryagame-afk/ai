@@ -1,27 +1,22 @@
 #!/usr/bin/env python3
-"""Export allowlisted research snapshots only; never scan or mutate accounts."""
+"""Export source-verified observation lists; never scan or write accounts."""
 import argparse,json
 from pathlib import Path
 from datetime import datetime,timezone
-p=argparse.ArgumentParser();p.add_argument('--workspace',type=Path,required=True);p.add_argument('--out',type=Path,default=Path(__file__).resolve().parents[1]/'a-share-workbench/data.json');a=p.parse_args()
-review=json.loads((a.workspace/'outputs/a_observe_model_review_20260909/review.json').read_text())
-rows=[]
-for r in review['rows']:
- k=r.get('key',{});post=k.get('post_key_k_pullback') or {}
- rows.append(dict(code=r['code'],name=r['name'],decision=r['decision'],reason=r['reason'],priority=r.get('P','—'),key_date=k.get('key_k_date'),days=post.get('day_number'),date=r.get('date','')[:10]))
-run=json.loads((a.workspace/'outputs/a30_key_nodes/latest_run.json').read_text())
-# Status fields only: no account IDs, raw holdings, cookies, receipts or credentials.
-monitor={k:run.get(k) for k in ['status','bar','scope','verified_total','universe','fresh_coverage','active_count','event_count','table']}
-scan=json.loads((a.workspace/'outputs/a30_key_nodes/scan.json').read_text())
-state=json.loads((a.workspace/'outputs/a30_key_nodes/state.json').read_text())
-monitor['rows']=[]
-if scan.get('opend_status')=='OpenD已连接' and state.get('last_bar')==run.get('bar'):
- for r in scan.get('chanlun_push_candidates',[]):
-  if r.get('code') not in state.get('active',{}) or r.get('thirty_bar_close')!=run.get('bar'): continue
-  k=r.get('chanlun_rebound',{})
-  monitor['rows'].append({key:r.get(key) for key in ['code','name','current_state']}|{key:k.get(key) for key in ['phase','priority','bottom_time']}|{'macd':k.get('macd',{}).get('label'),'kdj':k.get('kdj',{}).get('label')})
-monitor['scope_label']='仅个股信号'
-monitor['source']='outputs/a30_key_nodes/scan.json'
-data=dict(schema_version=1,published_snapshot_at=datetime.now(timezone.utc).isoformat(),content_date='2026-09-09',mode='published_snapshot',observe=dict(model=review['model'],captured_at=review.get('validated_at',review.get('finished')),data_date=rows[0]['date'],scope='该次复核的A观察成员；不是全A扫描或当前账户回读',rows=rows),monitor=monitor)
-a.out.parent.mkdir(parents=True,exist_ok=True);a.out.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
-print('Exported allowlisted snapshot:',len(rows),'rows')
+p=argparse.ArgumentParser();p.add_argument('--workspace',type=Path,required=True);p.add_argument('--observe',default='outputs/a_observe_ab_20260910');p.add_argument('--monitor',default='outputs/a30_key_nodes/corrected_20260910_1430.json');p.add_argument('--out',type=Path,required=True);a=p.parse_args()
+root=a.workspace/a.observe
+scan=json.loads((root/'scan.json').read_text());board=json.loads((root/'board_review/result.json').read_text());audit=json.loads((root/'board_review/write_audit.json').read_text())
+if not audit['final_readback_ok'] or {r['code'] for r in audit['independent_after']}!=set(board['target']):raise SystemExit('Observation readback mismatch')
+bycode={r['code']:r for r in scan['rows']};ar={r['code']:r for r in board['A_results']};rows=[]
+for code,name in board['target'].items():
+ r=bycode.get(code,{});k=r.get('A',{});b=r.get('B',{});pending=code in board['pending_retained'];reason=('未核验暂留' if pending else 'B·'+b.get('state','未核验'))
+ if code in ar:reason+='；A板块'+ar[code]['A_board_status']
+ rows.append(dict(code=code,name=name,decision='KEEP_UNVERIFIED' if pending else 'KEEP_B',reason=reason,priority=b.get('state','—'),key_date=k.get('key_date'),days=k.get('day'),date=scan['asof']))
+raw=json.loads((a.workspace/a.monitor).read_text());mr=[]
+if raw['opend_status']!='OpenD已连接':raise SystemExit('Monitor source not verified')
+for r in raw['chanlun_push_candidates']:
+ k=r['chanlun_rebound'];mr.append(dict(code=r['code'],name=r['name'],current_state=r['current_state'],priority=k.get('priority','P1' if k.get('confirmation_status')=='confirmed_pullback' else 'P2'),phase='第'+str(k['pullback_pen_number'])+'笔 · '+k['phase'],bottom_time=k['bottom_time'],macd=k.get('macd',{}).get('label','—'),kdj=k.get('kdj',{}).get('label','—')))
+bars={r['thirty_bar_close'] for r in raw['chanlun_push_candidates']}
+if len(bars)!=1:raise SystemExit('Monitor dates differ')
+d=dict(schema_version=1,published_snapshot_at=datetime.now(timezone.utc).isoformat(),content_date=scan['asof'],mode='published_snapshot',observe=dict(model=board['model'],captured_at=audit['time'],data_date=scan['asof'],scope='源任务已核验A观察名单',rows=rows),monitor=dict(bar=bars.pop(),rows=mr,scope_label='更正名单 · 仅个股信号',source=a.monitor,verified_total=raw['verified_total'],universe=raw['watchlist_stock_total'],event_count=0,status='CORRECTED_SOURCE_NOT_SENT'))
+a.out.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n');print('Observe',len(rows),'monitor',len(mr))

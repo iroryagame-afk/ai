@@ -6,7 +6,7 @@ document.querySelectorAll('[data-view],[data-jump]').forEach(b=>b.addEventListen
 function read(k){try{return JSON.parse(localStorage.getItem(prefix+k)||'null')}catch{return null}}
 function write(k,v){localStorage.setItem(prefix+k,JSON.stringify(v))}
 function text(tag,value,cls){const e=document.createElement(tag);e.textContent=value??'—';if(cls)e.className=cls;return e}
-const labels={KEEP_RIGHT:'右侧回调',KEEP_LEFT:'左侧观察',REMOVE:'已移出',KEEP_UNVERIFIED:'未核验保留'};
+const labels={KEEP_B:'B类观察',KEEP_RIGHT:'右侧回调',KEEP_LEFT:'左侧观察',REMOVE:'已移出',KEEP_UNVERIFIED:'未核验保留'};
 function renderRows(){if(!data)return;const f=$('#filter').value,q=$('#search').value.trim().toLowerCase();const rows=data.observe.rows.filter(r=>(f==='all'||f==='keep'&&r.decision.startsWith('KEEP')||r.decision===f)&&(!q||(r.code+r.name).toLowerCase().includes(q)));$('#rows').replaceChildren();for(const r of rows){let tr=document.createElement('tr'),td=document.createElement('td');td.append(text('b',r.name),text('small',r.code));tr.append(td);tr.append(text('td',labels[r.decision],r.decision==='REMOVE'?'remove':r.decision==='KEEP_LEFT'?'left':'right'),text('td',r.key_date||'—'),text('td',r.days??'—'),text('td',r.priority),text('td',r.reason));$('#rows').append(tr)}if(!rows.length){const tr=document.createElement('tr'),td=text('td','没有匹配结果，请调整搜索或分类。');td.colSpan=6;tr.append(td);$('#rows').append(tr)}$('#count').textContent=rows.length+'只 / 已复核'+data.observe.rows.length+'只'}
 $('#search').addEventListener('input',renderRows);$('#filter').addEventListener('change',renderRows);
 fetch('./data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('数据请求失败');return r.json()}).then(d=>{if(d.schema_version!==1||!Array.isArray(d.observe?.rows))throw Error('数据格式不匹配');data=d;$('#snapshot').textContent='公开快照发布：'+d.published_snapshot_at.slice(0,10);$('#freshness').textContent='历史快照 · A观察日线截至 '+d.observe.data_date+'；盘中基线截至 '+(d.monitor.bar||'未核验')+'。页面刷新不会触发行情扫描，早报与复盘可在栏目内直接阅读，日期以各报告为准。';const keep=d.observe.rows.filter(r=>r.decision.startsWith('KEEP'));$('#observeTag').textContent=keep.length+'只保留 · '+d.observe.data_date;$('#monitorTag').textContent=d.monitor.status==='BASELINE_INITIALIZED'?'30分钟 · '+(d.monitor.rows?.length||0)+'只':'30分钟结果';$('#observeDate').textContent='模型 '+d.observe.model+' ｜日线 '+d.observe.data_date+' ｜'+d.observe.scope;const m=d.monitor;renderMonitor(m);renderRows()}).catch(e=>{$('#freshness').textContent='公开数据加载失败：'+e.message+'。可继续使用原任务入口及本机内容，请稍后重新加载。';$('#snapshot').textContent='快照未加载';$('#monitorContent').textContent='未取得数据，不能判断当前状态。'});
@@ -22,7 +22,7 @@ function renderDocument(target,body){
 }
 fetch('./reports.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('报告读取失败');return r.json()}).then(reports=>{
  $('#reportNotes').textContent=reports.verification+' 早报数据冻结：'+reports.pre.frozen_at+'；复盘数据冻结：'+reports.post.frozen_at+'。'+(reports.post.privacy||'');
- for(const kind of ['pre','post']){const r=reports[kind],target=$('#published-'+kind);target.replaceChildren();target.append(text('p',r.date+' · '+reports.format,'report-meta'));renderDocument(target,r.body);}
+ for(const kind of ['pre','post']){const r=reports[kind],target=$('#published-'+kind);target.replaceChildren();target.append(text('p',r.date+' · '+(r.format||reports.format),'report-meta'));renderDocument(target,r.body);}
 }).catch(e=>{for(const kind of ['pre','post'])$('#published-'+kind).textContent=e.message+'，请稍后刷新。'});
 const navToggle=document.querySelector('.mobile-nav-toggle'),sideNav=document.querySelector('.workbench-sidebar');
 function closeNavigation(){sideNav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false')}
@@ -48,3 +48,5 @@ function emphasized(tag,value){
 }
 
 fetch('./midterm.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('读取失败');return r.json()}).then(d=>{if(d.schema_version!==1)throw Error('版本不匹配');$('#midtermDate').textContent=new Date(d.as_of).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false})+' · '+d.status;const target=$('#midtermContent');target.replaceChildren(text('p',d.source_title,'report-meta'));renderDocument(target,d.body)}).catch(()=>{$('#midtermDate').textContent='暂未取得更新';$('#midtermContent').textContent='加载失败，请刷新重试。'});
+
+fetch('./daily-selection.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('读取失败');return r.json()}).then(d=>{if(d.schema_version!==1)throw Error('版本不匹配');$('#dailySelectionDate').textContent=new Date(d.as_of).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false})+' · '+d.status;const target=$('#dailySelectionContent');target.replaceChildren(text('p',d.source_title,'report-meta'));renderDocument(target,d.body)}).catch(()=>{$('#dailySelectionDate').textContent='暂未取得更新';$('#dailySelectionContent').textContent='加载失败，请刷新重试。'});
