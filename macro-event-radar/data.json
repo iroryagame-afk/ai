@@ -148,18 +148,18 @@
   },
   "page_status": "live",
   "verification_status": "partial",
-  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-09-11_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
-  "generated_at": "2026-09-11T22:38:00+08:00",
+  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-09-14_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
+  "generated_at": "2026-09-14T09:28:00+08:00",
   "window": {
     "recent_hours": 240,
     "calendar_days": 30,
     "timezone": "Asia/Shanghai"
   },
   "brief": {
-    "title": "美国通胀再受能源推升，Coinbase衍生品登记与AI安全披露同步落地",
-    "summary": "相对9月8日22:39公网快照，本轮累计新增6项、升级4项核心事件：补齐DeepSeek、Apple、Anthropic评测、DPA与伊朗许可变化，并新增8月CPI/PPI、Anthropic威胁报告、Coinbase Derivatives Section 6(g)登记和社区银行检查周期新规。",
-    "discipline": "CPI/PPI已核验实际值，但未取得同口径市场共识且9月11日完整收盘未形成；Coinbase登记仅覆盖security futures，不是通用证券交易所牌照；Anthropic威胁归因属于公司调查，待独立佐证；银行规则只适用于满足评级、资本和执法条件的机构。",
-    "core_count": 39,
+    "title": "美国银行第三方风险监管转向按关系分级，社区银行与核心服务商路径更清晰",
+    "summary": "相对9月11日22:38快照，本轮新增1项核心事件：Fed、FDIC、NCUA与OCC联合提出按单项第三方关系风险分级的指引，并发布社区银行与核心服务商合作声明。",
+    "discipline": "统一指引仍处于征求意见阶段且不具约束力，最终文本、旧指引撤销时间和实际检查口径待定；核心服务商声明已发布，但不能直接外推为银行IT支出或金融科技收入增长。",
+    "core_count": 40,
     "pending_count": 1,
     "next_event_count": 15
   },
@@ -180,22 +180,65 @@
       "inference": "推断：短端利率与高估值成长面对的政策约束边际上升，但核心同比回落使单向滞胀结论仍不充分；需结合9月FOMC、工资、进口价格和能源持续性判断。",
       "unverified": "本轮未取得带时间戳且同口径的市场一致预期，不判断超预期幅度；9月11日美股完整交易日尚未结束，利率、美元与股指的收盘确认未核验。",
       "transmission": [
-        {"level": "A", "path": "能源价格上涨 → CPI/PPI总项加速 → 实际收入与企业成本压力"},
-        {"level": "B", "path": "通胀黏性与核心分化 → Fed政策路径重定价 → 2Y美债与美元"},
-        {"level": "C", "path": "折现率和利润率变化 → 高久期成长、消费、运输与能源资产分化"}
+        {
+          "level": "A",
+          "path": "能源价格上涨 → CPI/PPI总项加速 → 实际收入与企业成本压力"
+        },
+        {
+          "level": "B",
+          "path": "通胀黏性与核心分化 → Fed政策路径重定价 → 2Y美债与美元"
+        },
+        {
+          "level": "C",
+          "path": "折现率和利润率变化 → 高久期成长、消费、运输与能源资产分化"
+        }
       ],
       "affected_assets": [
-        {"market": "美债与美元", "direction": "通胀约束偏强、方向待收盘确认", "horizon": "1–10日", "reason": "总项CPI与PPI均环比0.4%，但核心CPI同比回落，需观察2Y和美元是否持续同向。"},
-        {"market": "高久期成长与科技", "direction": "估值约束上升", "horizon": "1–20日", "reason": "若市场上修政策利率路径，折现率压力将上升；当前完整收盘尚未核验。"},
-        {"market": "能源、运输与消费", "direction": "成本与相对收益分化", "horizon": "1–30日", "reason": "CPI能源上涨2.1%，PPI能源上涨4.2%，持续性决定企业成本和终端传导。"}
+        {
+          "market": "美债与美元",
+          "direction": "通胀约束偏强、方向待收盘确认",
+          "horizon": "1–10日",
+          "reason": "总项CPI与PPI均环比0.4%，但核心CPI同比回落，需观察2Y和美元是否持续同向。"
+        },
+        {
+          "market": "高久期成长与科技",
+          "direction": "估值约束上升",
+          "horizon": "1–20日",
+          "reason": "若市场上修政策利率路径，折现率压力将上升；当前完整收盘尚未核验。"
+        },
+        {
+          "market": "能源、运输与消费",
+          "direction": "成本与相对收益分化",
+          "horizon": "1–30日",
+          "reason": "CPI能源上涨2.1%，PPI能源上涨4.2%，持续性决定企业成本和终端传导。"
+        }
       ],
-      "market_confirmation": {"stage": "awaiting_complete_close", "checked_at": "2026-09-11T22:38:00+08:00", "detail": "北京时间22:38仅处于9月11日美股早盘，未用盘中价格冒充完整收盘确认。"},
+      "market_confirmation": {
+        "stage": "awaiting_complete_close",
+        "checked_at": "2026-09-11T22:38:00+08:00",
+        "detail": "北京时间22:38仅处于9月11日美股早盘，未用盘中价格冒充完整收盘确认。"
+      },
       "next_checkpoint": "核验9月11日完整收盘的2Y/10Y、美元、SPY与QQQ响应，并在9月FOMC前跟踪进口价格、能源持续性和政策表述。",
       "invalidation": "能源价格快速回落、后续核心通胀继续放缓且利率与美元未形成持续上行确认，或BLS后续更正改变关键数据。",
-      "candidate_refs": ["manual-bls-cpi-20260911", "manual-bls-ppi-20260910"],
+      "candidate_refs": [
+        "manual-bls-cpi-20260911",
+        "manual-bls-ppi-20260910"
+      ],
       "sources": [
-        {"role": "primary", "name": "U.S. BLS — Consumer Price Index, August 2026", "url": "https://www.bls.gov/news.release/cpi.nr0.htm", "published_at": "2026-09-11T08:30:00-04:00", "note": "核验总项、核心、能源、汽油和住房的月度与同比数据。"},
-        {"role": "primary", "name": "U.S. BLS — Producer Price Indexes, August 2026", "url": "https://www.bls.gov/news.release/archives/ppi_09102026.htm", "published_at": "2026-09-10T08:30:00-04:00", "note": "核验最终需求、商品、服务、能源及剔除食品能源贸易服务口径。"}
+        {
+          "role": "primary",
+          "name": "U.S. BLS — Consumer Price Index, August 2026",
+          "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+          "published_at": "2026-09-11T08:30:00-04:00",
+          "note": "核验总项、核心、能源、汽油和住房的月度与同比数据。"
+        },
+        {
+          "role": "primary",
+          "name": "U.S. BLS — Producer Price Indexes, August 2026",
+          "url": "https://www.bls.gov/news.release/archives/ppi_09102026.htm",
+          "published_at": "2026-09-10T08:30:00-04:00",
+          "note": "核验最终需求、商品、服务、能源及剔除食品能源贸易服务口径。"
+        }
       ]
     },
     {
@@ -214,21 +257,57 @@
       "inference": "推断：云模型访问控制、身份验证、异常调用检测、内容安全和跨厂商情报共享需求将上升；同时可能强化出口管制与模型开放政策争论。",
       "unverified": "案例归因、交互规模、行为主体与造成的实际能力提升主要来自Anthropic内部调查；本轮未取得被点名机构、执法部门或独立安全机构的完整交叉核验，不能把公司评估视为司法认定。",
       "transmission": [
-        {"level": "A", "path": "恶意调用与代理绕过 → 访问控制、检测和封禁成本上升 → 模型平台运营"},
-        {"level": "B", "path": "武器与情报用途披露 → 政策与客户风险评估 → 高权限Agent部署门槛"},
-        {"level": "C", "path": "蒸馏与跨平台滥用 → 模型保护和监管强化 → 云、安全与开源生态分化"}
+        {
+          "level": "A",
+          "path": "恶意调用与代理绕过 → 访问控制、检测和封禁成本上升 → 模型平台运营"
+        },
+        {
+          "level": "B",
+          "path": "武器与情报用途披露 → 政策与客户风险评估 → 高权限Agent部署门槛"
+        },
+        {
+          "level": "C",
+          "path": "蒸馏与跨平台滥用 → 模型保护和监管强化 → 云、安全与开源生态分化"
+        }
       ],
       "affected_assets": [
-        {"market": "前沿模型与云平台", "direction": "合规与安全成本上升", "horizon": "1–24个月", "reason": "持续攻击和代理网络要求更强身份、调用与内容控制；收入影响尚未披露。"},
-        {"market": "网络安全与AI治理", "direction": "检测、审计和情报共享需求增加", "horizon": "3–36个月", "reason": "公司报告展示多类真实运营场景，但采购和订单仍待证。"},
-        {"market": "中国模型与开源生态", "direction": "政策与声誉风险上升", "horizon": "1–12个月", "reason": "蒸馏指控可能影响访问、合作和监管，归因仍待独立核验。"}
+        {
+          "market": "前沿模型与云平台",
+          "direction": "合规与安全成本上升",
+          "horizon": "1–24个月",
+          "reason": "持续攻击和代理网络要求更强身份、调用与内容控制；收入影响尚未披露。"
+        },
+        {
+          "market": "网络安全与AI治理",
+          "direction": "检测、审计和情报共享需求增加",
+          "horizon": "3–36个月",
+          "reason": "公司报告展示多类真实运营场景，但采购和订单仍待证。"
+        },
+        {
+          "market": "中国模型与开源生态",
+          "direction": "政策与声誉风险上升",
+          "horizon": "1–12个月",
+          "reason": "蒸馏指控可能影响访问、合作和监管，归因仍待独立核验。"
+        }
       ],
-      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-09-11T22:38:00+08:00", "detail": "Anthropic未独立上市，且报告涉及多家公司和地缘政策；不以单日相关资产波动证明因果。"},
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-09-11T22:38:00+08:00",
+        "detail": "Anthropic未独立上市，且报告涉及多家公司和地缘政策；不以单日相关资产波动证明因果。"
+      },
       "next_checkpoint": "等待被点名机构、监管和独立安全研究者回应，核验归因、规模、实际损害及Anthropic新增防护措施的有效性。",
       "invalidation": "独立调查否定关键归因或规模，公司更正报告，或案例被证明未涉及所述模型与用途。",
-      "candidate_refs": ["aihot-fb2403651778b091"],
+      "candidate_refs": [
+        "aihot-fb2403651778b091"
+      ],
       "sources": [
-        {"role": "primary", "name": "Anthropic — Countering misuse of AI: September 2026", "url": "https://www.anthropic.com/threat-intelligence-report-september-2026", "published_at": "2026-09-10T00:00:00-07:00", "note": "核验Anthropic披露的案例、交互规模、封禁与风险边界；归因仍属公司调查。"}
+        {
+          "role": "primary",
+          "name": "Anthropic — Countering misuse of AI: September 2026",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+          "published_at": "2026-09-10T00:00:00-07:00",
+          "note": "核验Anthropic披露的案例、交互规模、封禁与风险边界；归因仍属公司调查。"
+        }
       ]
     },
     {
@@ -247,22 +326,64 @@
       "inference": "推断：若后续产品、清算和会员安排完成，Coinbase可扩展受监管衍生品版图；实际收入与流动性取决于具体上市合约、客户准入和市场采用。",
       "unverified": "首批security futures产品、上线日期、清算安排、费率、做市商、客户范围和收入贡献尚未披露；本文件不批准一般股票、证券现货或全部加密证券交易。",
       "transmission": [
-        {"level": "A", "path": "Section 6(g)登记生效 → security futures上市法律路径 → Coinbase衍生品产品扩展"},
-        {"level": "B", "path": "产品与清算落地 → 机构和零售参与 → 交易量、费率与收入"},
-        {"level": "C", "path": "受监管产品增加 → 加密与传统市场融合 → 行业竞争和监管预期"}
+        {
+          "level": "A",
+          "path": "Section 6(g)登记生效 → security futures上市法律路径 → Coinbase衍生品产品扩展"
+        },
+        {
+          "level": "B",
+          "path": "产品与清算落地 → 机构和零售参与 → 交易量、费率与收入"
+        },
+        {
+          "level": "C",
+          "path": "受监管产品增加 → 加密与传统市场融合 → 行业竞争和监管预期"
+        }
       ],
       "affected_assets": [
-        {"market": "Coinbase", "direction": "产品范围边际扩展", "horizon": "1–12个月", "reason": "登记已生效，但产品、交易量和收入均待后续披露。"},
-        {"market": "美国加密衍生品", "direction": "合规供给增加", "horizon": "3–18个月", "reason": "security futures路径明确，实际竞争取决于合约和清算。"},
-        {"market": "传统交易所与经纪平台", "direction": "竞争边际上升", "horizon": "6–24个月", "reason": "Coinbase可切入受监管证券期货，但当前范围有限。"}
+        {
+          "market": "Coinbase",
+          "direction": "产品范围边际扩展",
+          "horizon": "1–12个月",
+          "reason": "登记已生效，但产品、交易量和收入均待后续披露。"
+        },
+        {
+          "market": "美国加密衍生品",
+          "direction": "合规供给增加",
+          "horizon": "3–18个月",
+          "reason": "security futures路径明确，实际竞争取决于合约和清算。"
+        },
+        {
+          "market": "传统交易所与经纪平台",
+          "direction": "竞争边际上升",
+          "horizon": "6–24个月",
+          "reason": "Coinbase可切入受监管证券期货，但当前范围有限。"
+        }
       ],
-      "market_confirmation": {"stage": "awaiting_complete_close", "checked_at": "2026-09-11T22:38:00+08:00", "detail": "9月11日美股完整收盘尚未形成；不以盘中COIN波动确认产品商业价值。"},
+      "market_confirmation": {
+        "stage": "awaiting_complete_close",
+        "checked_at": "2026-09-11T22:38:00+08:00",
+        "detail": "9月11日美股完整收盘尚未形成；不以盘中COIN波动确认产品商业价值。"
+      },
       "next_checkpoint": "跟踪Form 1-N附件、首批security futures合约、清算与会员安排、上线时间、交易量和公司收入披露。",
       "invalidation": "CFTC指定合约市场资格受限、产品未获上线条件、登记被暂停，或长期没有实际security futures产品。",
-      "candidate_refs": ["federal_register-d979dd6371712bf7"],
+      "candidate_refs": [
+        "federal_register-d979dd6371712bf7"
+      ],
       "sources": [
-        {"role": "primary", "name": "SEC Release No. 34-106295 — Coinbase Derivatives Form 1-N", "url": "https://www.sec.gov/files/rules/other/2026/34-106295.pdf", "published_at": "2026-09-08T00:00:00-04:00", "note": "核验提交日、即时生效机制和仅限security futures的法定范围。"},
-        {"role": "primary", "name": "Federal Register — Coinbase Derivatives Section 6(g) Registration", "url": "https://www.federalregister.gov/documents/2026/09/11/2026-18538/acknowledgement-of-receipt-of-notice-of-registration-as-a-national-securities-exchange-pursuant-to", "published_at": "2026-09-11T00:00:00-04:00", "note": "核验正式刊载与文件编号。"}
+        {
+          "role": "primary",
+          "name": "SEC Release No. 34-106295 — Coinbase Derivatives Form 1-N",
+          "url": "https://www.sec.gov/files/rules/other/2026/34-106295.pdf",
+          "published_at": "2026-09-08T00:00:00-04:00",
+          "note": "核验提交日、即时生效机制和仅限security futures的法定范围。"
+        },
+        {
+          "role": "primary",
+          "name": "Federal Register — Coinbase Derivatives Section 6(g) Registration",
+          "url": "https://www.federalregister.gov/documents/2026/09/11/2026-18538/acknowledgement-of-receipt-of-notice-of-registration-as-a-national-securities-exchange-pursuant-to",
+          "published_at": "2026-09-11T00:00:00-04:00",
+          "note": "核验正式刊载与文件编号。"
+        }
       ]
     },
     {
@@ -281,21 +402,128 @@
       "inference": "推断：符合条件的社区银行可减少合规时间和直接检查成本，但资产质量、资本和执法条件仍是硬门槛，不能外推为全行业监管放松。",
       "unverified": "具体新增覆盖机构数量、单家成本节省、对贷款供给与盈利的量化影响，以及评论期后是否调整规则仍未披露。",
       "transmission": [
-        {"level": "A", "path": "检查周期延长 → 合规时间与现场资源占用下降 → 符合条件社区银行运营成本"},
-        {"level": "B", "path": "监管负担变化 → 管理资源与资本配置 → 贷款和盈利弹性，幅度待证"},
-        {"level": "C", "path": "规则实施与评论 → 社区银行估值和并购预期 → 板块分化"}
+        {
+          "level": "A",
+          "path": "检查周期延长 → 合规时间与现场资源占用下降 → 符合条件社区银行运营成本"
+        },
+        {
+          "level": "B",
+          "path": "监管负担变化 → 管理资源与资本配置 → 贷款和盈利弹性，幅度待证"
+        },
+        {
+          "level": "C",
+          "path": "规则实施与评论 → 社区银行估值和并购预期 → 板块分化"
+        }
       ],
       "affected_assets": [
-        {"market": "美国社区银行", "direction": "低风险机构合规负担边际下降", "horizon": "1–12个月", "reason": "仅满足评级、资本、执法和控制权条件的机构适用。"},
-        {"market": "区域银行ETF", "direction": "轻微正面、成分分化", "horizon": "1–20日", "reason": "ETF包含大量不适用机构，不能按板块统一映射。"}
+        {
+          "market": "美国社区银行",
+          "direction": "低风险机构合规负担边际下降",
+          "horizon": "1–12个月",
+          "reason": "仅满足评级、资本、执法和控制权条件的机构适用。"
+        },
+        {
+          "market": "区域银行ETF",
+          "direction": "轻微正面、成分分化",
+          "horizon": "1–20日",
+          "reason": "ETF包含大量不适用机构，不能按板块统一映射。"
+        }
       ],
-      "market_confirmation": {"stage": "not_isolatable", "checked_at": "2026-09-11T22:38:00+08:00", "detail": "规则影响分散且9月11日完整收盘尚未结束，不以区域银行盘中波动证明成本节省。"},
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-09-11T22:38:00+08:00",
+        "detail": "规则影响分散且9月11日完整收盘尚未结束，不以区域银行盘中波动证明成本节省。"
+      },
       "next_checkpoint": "核验Federal Register生效日和30天评论截止日，统计新增覆盖机构，并跟踪银行披露的检查与合规成本。",
       "invalidation": "评论后规则收窄、监管机构频繁行使更高检查权限，或多数目标机构不满足资格条件。",
-      "candidate_refs": ["fed_press_all-2ed6dea297679eed"],
+      "candidate_refs": [
+        "fed_press_all-2ed6dea297679eed"
+      ],
       "sources": [
-        {"role": "primary", "name": "Federal Reserve / FDIC / OCC — Expanded 18-Month Exam Cycle", "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260910a.htm", "published_at": "2026-09-10T14:00:00+00:00", "note": "核验30亿至60亿美元门槛、资格条件、场外监测和评论期。"},
-        {"role": "primary", "name": "OCC Bulletin 2026-45 — Expanded Examination Cycle Eligibility", "url": "https://www.occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-45.html", "published_at": "2026-09-10T00:00:00-04:00", "note": "核验评级、资本、执法和控制权资格边界。"}
+        {
+          "role": "primary",
+          "name": "Federal Reserve / FDIC / OCC — Expanded 18-Month Exam Cycle",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260910a.htm",
+          "published_at": "2026-09-10T14:00:00+00:00",
+          "note": "核验30亿至60亿美元门槛、资格条件、场外监测和评论期。"
+        },
+        {
+          "role": "primary",
+          "name": "OCC Bulletin 2026-45 — Expanded Examination Cycle Eligibility",
+          "url": "https://www.occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-45.html",
+          "published_at": "2026-09-10T00:00:00-04:00",
+          "note": "核验评级、资本、执法和控制权资格边界。"
+        }
+      ]
+    },
+    {
+      "id": "us-bank-third-party-risk-guidance-2026-09-11",
+      "headline": "美国四监管机构拟重写银行第三方风险指引：转向按单项关系风险分级",
+      "category": "policy",
+      "event_type": "policy",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 3,
+      "event_time": "2026-09-11T14:00:00+00:00",
+      "observed_at": "2026-09-14T09:16:59+08:00",
+      "verified_at": "2026-09-14T09:28:00+08:00",
+      "fact": "Fed、FDIC、NCUA与OCC联合发布拟议指引，要求银行和信用合作社按每项第三方关系可能造成损害的规模与概率分配风险管理资源，并结合机构规模、复杂度和风险画像进行调整。该指引属于非约束性监管指导；最终定稿后，四机构计划撤销并替换现有第三方风险管理指引。四机构同时发布社区银行与核心服务商合作声明，说明监管与执法决策会考虑的因素；Fed另行征求针对其监管社区银行的配套指南意见。",
+      "new_information": "监管方向从覆盖所有第三方关系的流程要求，进一步明确为按具体关系风险分级；核心服务商声明已发布，但统一第三方风险指引仍处于征求意见阶段，评论期为Federal Register刊登后60天。",
+      "inference": "推断：社区银行与金融科技、云和核心系统供应商合作的合规摩擦可能下降，银行可把资源集中到高影响关系；实际成本、合同议价和产品上线速度取决于最终文本及检查实践。",
+      "unverified": "Federal Register正式刊登日、评论截止日、最终文本、旧指引撤销时间，以及对具体银行、金融科技和核心服务商收入或成本的量化影响尚未确定。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "第三方关系按风险分级 → 低风险供应商尽调与持续监控资源重新配置 → 社区银行合规负担"
+        },
+        {
+          "level": "B",
+          "path": "核心服务商监管与执法考量更清晰 → 银行合同、系统迁移与金融科技合作决策 → 产品上线速度"
+        },
+        {
+          "level": "C",
+          "path": "最终指引与检查实践 → 银行技术支出和供应商议价 → 金融科技及银行IT收入弹性"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "美国社区银行",
+          "direction": "合规摩擦边际下降、个体分化",
+          "horizon": "1–12个月",
+          "reason": "拟议指引允许按关系风险、机构规模和复杂度调整流程，但仍未定稿。"
+        },
+        {
+          "market": "银行核心系统与金融科技供应商",
+          "direction": "合作路径可能改善、合同影响待证",
+          "horizon": "3–18个月",
+          "reason": "声明增加监管和执法考量透明度，商业影响仍取决于最终文本与银行执行。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_isolatable",
+        "checked_at": "2026-09-14T09:28:00+08:00",
+        "detail": "该监管变化影响分散，且周末没有新增完整交易日；不以银行或金融科技个股既有波动证明政策效果。"
+      },
+      "next_checkpoint": "核验Federal Register刊登与评论截止日，跟踪最终文本、旧指引撤销时间及银行对尽调、合同和核心系统迁移的实际调整。",
+      "invalidation": "最终指引恢复统一流程要求、监管检查继续把非约束性指引作为事实标准，或核心服务商声明未改变银行合同与迁移障碍。",
+      "candidate_refs": [
+        "fed_press_all-d0607014d9e864e2"
+      ],
+      "sources": [
+        {
+          "role": "primary",
+          "name": "Federal Reserve — Proposed Third-Party Risk Management Guidance",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260911a.htm",
+          "published_at": "2026-09-11T14:00:00+00:00",
+          "note": "核验四机构联合提案、非约束性、拟替换旧指引、评论期和核心服务商声明。"
+        },
+        {
+          "role": "primary",
+          "name": "OCC Bulletin 2026-46 — Third-Party Risk Management",
+          "url": "https://occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-46.html",
+          "published_at": "2026-09-11T00:00:00-04:00",
+          "note": "核验按关系损害规模与概率分级、机构规模与复杂度调整及不构成可执行标准。"
+        }
       ]
     },
     {
@@ -3053,14 +3281,14 @@
     {
       "group": "第一层 · 一手来源",
       "status": "verified",
-      "last_success_at": "2026-09-11T22:31:51+08:00",
-      "coverage": "13/13自动源成功；一手自动源共抓取543条，候选池限额与去重后保留34条一手候选。直接读取BLS CPI/PPI、DOL初请、SEC Section 6(g)、Fed/OCC社区银行规则与Anthropic威胁报告；相对9月8日公网累计新增6项并升级4项核心事件。"
+      "last_success_at": "2026-09-14T09:16:59+08:00",
+      "coverage": "13/13自动源成功；一手候选池去重与限额后保留26条。直接读取Fed与OCC原文，新增银行第三方风险管理拟议指引事件；其余新增官方候选未达到页面市场重要性门槛。"
     },
     {
       "group": "第二层 · 专业发现",
       "status": "partial",
-      "last_success_at": "2026-09-11T22:31:51+08:00",
-      "coverage": "AI HOT自动源成功，抓取92条、相关性筛选67条、候选池限额后保留25条发现线索。OpenAI产品候选、DeepSeek IPO、Anthropic经济情景、GLM-OCR与白宫医保退款因正文、实施或市场重要性门槛不足未升级；付费与登录源未自动轮询。"
+      "last_success_at": "2026-09-14T09:16:59+08:00",
+      "coverage": "AI HOT自动源成功，抓取92条、候选池限额后保留25条发现线索。DeepSeek V4.1 Flash和Anthropic威胁报告已在既有事件覆盖；GLM-OCR、OpenAI与Suno产品线索未达到本页市场重要性或一手证据门槛。"
     },
     {
       "group": "第三层 · 社交抢先",
@@ -3108,6 +3336,6 @@
   "methodology": {
     "priority_formula": "影响范围30% + 传导直接度25% + 证据可靠度20% + 预期差15% + 时间紧迫度10%",
     "core_rule": "核心区只接受verified或partially_verified事件，并至少包含一个一手来源；匿名消息进入待证真。",
-    "limitations": "本页为2026-09-11北京时间快照。13个自动源全部成功；CPI/PPI和初请为官方实际值，但本轮未取得同口径市场共识，9月11日完整收盘尚未形成。Coinbase登记仅限security futures；社区银行规则只适用于满足评级、资本和执法条件的机构。Anthropic威胁报告与网络安全评测结论仍属公司调查，待独立核验。DeepSeek与Apple规格、基准、销量和供应链贡献待证；OFAC许可与DPA权限不等于全部交易中断或项目订单。OpenAI产品候选、DeepSeek IPO、Anthropic经济情景、GLM-OCR与白宫医保退款未升级。社交与付费源未自动轮询，页面维持partial；价格只记录响应，不证明事件因果。"
+    "limitations": "本页为2026-09-14北京时间快照。13个自动源全部成功；本轮新增的银行第三方风险管理指引仍处于征求意见阶段且不具约束力，最终文本、旧指引撤销时间和实际检查口径待定。CFTC举报奖励规则与白宫常规签署法案未达到本页市场重要性门槛。既有CPI/PPI与初请为官方实际值，但事前共识与9月11日完整收盘仍未在本页核验；Anthropic威胁归因仍属公司调查，DeepSeek与Apple产品数据仍需第三方与商业化验证。社交与付费源未自动轮询，页面维持partial；价格只记录响应，不证明事件因果。"
   }
 }
