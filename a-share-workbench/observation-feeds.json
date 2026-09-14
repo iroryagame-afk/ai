@@ -1015,12 +1015,25 @@
     ]
   },
   "cl20": {
-    "updated_at": "2026-09-14T16:00:50.860984+08:00",
+    "updated_at": "2026-09-14T16:15:56.532429+08:00",
     "status": "NO_CHANGE",
     "verified": 0,
     "attempted": 0,
     "failed": 0,
     "rows": [
+      {
+        "code": "HK.00981",
+        "name": "中芯国际",
+        "label": "1B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-14 15:00:00",
+        "bar_end": "2026-09-14 16:00:00",
+        "price": 60.95,
+        "detected_at": "2026-09-14T16:05:12.997280+08:00",
+        "market": "HK",
+        "replacement": null,
+        "delivery": "Server酱已接收"
+      },
       {
         "code": "HK.02097",
         "name": "蜜雪集团",
@@ -4904,19 +4917,6 @@
         "bar_end": "2026-09-11 11:00:00",
         "price": 510.33,
         "detected_at": "2026-09-11T22:31:16.132528+08:00",
-        "market": "US",
-        "replacement": null,
-        "delivery": "Server酱已接收"
-      },
-      {
-        "code": "US.AVGO",
-        "name": "博通",
-        "label": "S?",
-        "kind": "盘中预警｜未收盘",
-        "pivot_time": "2026-09-11 10:00:00",
-        "bar_end": "2026-09-11 11:00:00",
-        "price": 366.78,
-        "detected_at": "2026-09-11T22:31:13.079528+08:00",
         "market": "US",
         "replacement": null,
         "delivery": "Server酱已接收"
