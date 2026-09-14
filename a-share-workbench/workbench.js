@@ -1,7 +1,7 @@
 'use strict';
 const $=s=>document.querySelector(s);let data;const prefix='csnpk-workbench-v1:';
 const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());$('#today').textContent=today+' · 北京时间';
-function show(v){if(!document.getElementById(v)?.classList.contains('view'))v='overview';document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!==v);document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.view===v)));history.replaceState(null,'','#'+v)}
+function show(v){if(!document.getElementById(v)?.classList.contains('view'))v='pre';document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!==v);document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.view===v)));history.replaceState(null,'','#'+v)}
 document.querySelectorAll('[data-view],[data-jump]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.view||b.dataset.jump)));show(location.hash.slice(1));
 function read(k){try{return JSON.parse(localStorage.getItem(prefix+k)||'null')}catch{return null}}
 function write(k,v){localStorage.setItem(prefix+k,JSON.stringify(v))}
