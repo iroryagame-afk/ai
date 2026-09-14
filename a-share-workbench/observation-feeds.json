@@ -1015,12 +1015,25 @@
     ]
   },
   "cl20": {
-    "updated_at": "2026-09-14T15:16:12.134279+08:00",
-    "status": "PARTIAL",
+    "updated_at": "2026-09-14T15:30:46.917360+08:00",
+    "status": "CHANGES",
     "verified": 49,
-    "attempted": 52,
-    "failed": 3,
+    "attempted": 49,
+    "failed": 0,
     "rows": [
+      {
+        "code": "HK.00981",
+        "name": "中芯国际",
+        "label": "1B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-14 15:00:00",
+        "bar_end": "2026-09-14 16:00:00",
+        "price": 60.95,
+        "detected_at": "2026-09-14T15:30:44.128566+08:00",
+        "market": "HK",
+        "replacement": null,
+        "delivery": "Server酱已接收"
+      },
       {
         "code": "HK.06166",
         "name": "剑桥科技",
@@ -4904,19 +4917,6 @@
         "bar_end": "2026-09-11 11:00:00",
         "price": 463.09,
         "detected_at": "2026-09-11T22:30:55.237016+08:00",
-        "market": "US",
-        "replacement": null,
-        "delivery": "Server酱已接收"
-      },
-      {
-        "code": "US.ONTO",
-        "name": "Onto Innovation",
-        "label": "S?",
-        "kind": "盘中预警｜未收盘",
-        "pivot_time": "2026-09-11 10:00:00",
-        "bar_end": "2026-09-11 11:00:00",
-        "price": 282.08,
-        "detected_at": "2026-09-11T22:30:53.794512+08:00",
         "market": "US",
         "replacement": null,
         "delivery": "Server酱已接收"
