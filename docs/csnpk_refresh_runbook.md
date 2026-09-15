@@ -63,7 +63,7 @@
 1. rs-thrust-web/scripts/refresh_rs_thrust.py，生成 /rs-thrust/ 与 /rotation/。
 2. scripts/generate_csn_hotlist_html.py，生成 /csn/hot/。
 3. scripts/build_ai_software_monitor.py 分别运行 software 与 hardware，生成两个铲子监控台。
-4. scripts/scan_us_long_reversal_candidates.py 与 scripts/generate_us_trend_candidates_page.py。
+4. 核验 `outputs/us_daily_abc/latest.json` 的完整RTH日K日期、三路覆盖、优选计划及M观察双回读；运行 `scripts/generate_us_abc_candidates_page.py` 生成 `/us-trend-candidates/`。不得用旧四行业扫描器或旧页面生成器覆盖该路由。页面模型更换当轮可用已验收同日数据发布。
 5. scripts/build_us_watchlist_skew_snapshot.py，生成 /us-skew/。
 6. scripts/build_futu_software_deleveraging_page.py，生成 /us-software-deleveraging/。
 7. scripts/add_deleveraging_index_charts.py，更新去杠杆页面指数图；/ai-infrastructure-deleveraging/ 的日期以 index-chart.json 为准。

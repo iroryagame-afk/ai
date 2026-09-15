@@ -209,7 +209,7 @@ def nav(relative: str) -> str:
             ("a-share-dividend-defense/", "红利防守", "银行 · 公用事业 · 稳定现金流"),
         ]),
         ("us-tools", "美股", [
-            ("us-trend-candidates/", "趋势候选", "硬件 · 软件 · AI4S · 加密"),
+            ("us-trend-candidates/", "每日ABC候选", "A关K · B转稳 · C主升"),
             ("rotation/", "轮动加速度", "看顶部衰竭与底部修复"),
             ("rs-thrust/", "相对强度", "找正在加速的强势股"),
             ("us-skew/", "期权风险", "保护需求与风险温度"),
