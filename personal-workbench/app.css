@@ -7,3 +7,5 @@
 .replay-chart{display:block;width:100%;height:auto;min-height:170px;margin-bottom:12px}.replay-chart text{font-family:inherit}
 
 @media(max-width:1000px){.replay-metrics td:first-child{grid-column:auto;font-size:13px;padding:12px 0}.replay-metrics td:first-child::before{display:block}}
+
+.buy-summary .table-wrap table{min-width:0;table-layout:fixed}.buy-summary th:first-child,.buy-summary td:first-child{width:26%;min-width:0}.buy-summary td{min-width:0;overflow-wrap:anywhere}.buy-summary .detail-row td{width:auto}@media(max-width:800px){.buy-summary th:first-child,.buy-summary td:first-child{width:32%}.buy-summary td{padding:14px 10px}}
