@@ -200,7 +200,7 @@ class SiteNavigationTests(unittest.TestCase):
         sample = SITE_NAV.nav("index.html")
         self.assertIn('轮动加速度 <time class="csn-nav-refresh"', sample)
         self.assertIn('08-28 更新</time>', sample)
-        self.assertIn('ABC观察前10 <time class="csn-nav-refresh" datetime="2026-09-15"', sample)
+        self.assertIn('ABC候选全表 <time class="csn-nav-refresh" datetime="2026-09-15"', sample)
         self.assertIn('每日ABC候选 <time class="csn-nav-refresh" datetime="2026-09-14"', sample)
         self.assertNotIn('class="csn-nav-refresh"', re.search(r'<div class="csn-menu">(.*?)data-group="macro"', sample, re.S).group(1))
 
