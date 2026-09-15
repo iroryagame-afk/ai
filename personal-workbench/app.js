@@ -51,7 +51,11 @@ function replayPage(){
 }
 
 function recommendations(){
- heading('推荐名单','美股 · A股');
+ const selected=location.hash.split('/')[1]==='a'?'a':'us';
+ heading('推荐名单','');
+ const tabs=n('div',null,'tabs toolbar');tabs.setAttribute('aria-label','推荐市场');
+ for(const [key,label] of [['us','美股'],['a','A 股']]){const b=n('button',label);b.type='button';b.setAttribute('aria-pressed',String(selected===key));b.onclick=()=>{location.hash='recommendations/'+key};tabs.append(b)}add(tabs);
+ if(selected==='us'){
  const u=data.u;
  if(u?.trading_system?.plans){
   const t=u.tonight,live=new Map(t.candidates.map(r=>[r.code,r]));
@@ -63,6 +67,7 @@ function recommendations(){
   })));
   const link=n('a','查看美股完整交易计划','link-button');link.href='#us/tonight';add(link);
  }else add(n('p','美股推荐数据未读取','empty'));
+ }else{
  const a=data.a?.a;
  if(a){
   const rows=a.rows.filter(r=>r.in_futu);
@@ -70,6 +75,7 @@ function recommendations(){
   add(table(['股票','收盘价','当前阶段','结构 / 形态'],rows.map(r=>{const tr=n('tr');tr.append(stock(r),cells(money(r.close)),cells(r.stage),cells(r.shape));return tr})));
   const link=n('a','查看 A股候选与条件','link-button');link.href='#a/observe';add(link);
  }else add(n('p','A股推荐数据未读取','empty'));
+ }
 }
 
 function refreshPage(){heading('刷新记录',data.sync.checked_at);const rows=data.sync.modules.map(r=>{const tr=n('tr');[r.name,r.source_date,r.checked_at,r.status].forEach(v=>tr.append(cells(v)));return tr});add(table(['模块','源内容时间','检查时间','结果'],rows));add(n('h2','定时任务'));add(table(['任务','频率','状态','归属'],data.schedule.jobs.map(r=>{const tr=n('tr');[r.name,r.cadence,r.status,r.owner].forEach(v=>tr.append(cells(v)));return tr})));}
