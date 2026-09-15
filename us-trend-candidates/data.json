@@ -1,5 +1,5 @@
 {
-  "schema_version": "US_DAILY_ABC_PUBLIC_1.0",
+  "schema_version": "US_DAILY_ABC_PUBLIC_1.1",
   "data_date": "2026-09-14",
   "collected_at_ny": "2026-09-14T21:06:26.421995-04:00",
   "data_boundary": "美股完整常规时段日K，前复权；点位按当日完整日K重算",
@@ -275,18 +275,6 @@
   ],
   "pool": [
     {
-      "ticker": "ABCL",
-      "name": "AbCellera Biologics",
-      "sources": [
-        "B"
-      ],
-      "stage": "B KDJ单金叉确认",
-      "rank": null,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
-    },
-    {
       "ticker": "CRCL",
       "name": "Circle",
       "sources": [
@@ -294,22 +282,23 @@
         "C"
       ],
       "stage": "B 金叉前改善观察；C 趋势回踩/强势平台 · 价格技术确认·待风险复核",
-      "rank": null,
+      "rank": 1,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
-    },
-    {
-      "ticker": "DDOG",
-      "name": "Datadog",
-      "sources": [
-        "B"
+      "a_latest_volume_ratio": null,
+      "latest_close": 97.42,
+      "action": "只观察",
+      "pullback_zone": [
+        94.88,
+        96.65
       ],
-      "stage": "B 双金叉确认",
-      "rank": null,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "confirmation_price": 95.8,
+      "maximum_acceptable_price": 99.35,
+      "invalidation_price": 89.5,
+      "reduce_price": 105.25,
+      "final_target_price": 111.55,
+      "review_trading_day": 10,
+      "max_trading_days": 30
     },
     {
       "ticker": "FTNT",
@@ -318,10 +307,23 @@
         "C"
       ],
       "stage": "C 强势平台 · 价格技术确认·待风险复核",
-      "rank": null,
+      "rank": 2,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "latest_close": 170.18,
+      "action": "只观察",
+      "pullback_zone": [
+        160.37,
+        162.33
+      ],
+      "confirmation_price": 160.37,
+      "maximum_acceptable_price": 164.3,
+      "invalidation_price": 154.0,
+      "reduce_price": 173.89,
+      "final_target_price": 177.07,
+      "review_trading_day": 10,
+      "max_trading_days": 30
     },
     {
       "ticker": "HIMS",
@@ -330,35 +332,48 @@
         "B"
       ],
       "stage": "B KDJ单金叉确认",
-      "rank": null,
+      "rank": 3,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "latest_close": 28.81,
+      "action": "只观察",
+      "pullback_zone": [
+        28.41,
+        28.79
+      ],
+      "confirmation_price": 29.76,
+      "maximum_acceptable_price": 30.52,
+      "invalidation_price": 27.38,
+      "reduce_price": 34.46,
+      "final_target_price": 35.71,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
-      "ticker": "MSM",
-      "name": "MSC Industrial Direct",
+      "ticker": "ABCL",
+      "name": "AbCellera Biologics",
       "sources": [
         "B"
       ],
-      "stage": "B 双金叉确认",
-      "rank": null,
+      "stage": "B KDJ单金叉确认",
+      "rank": 4,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
-    },
-    {
-      "ticker": "MSTR",
-      "name": "Strategy",
-      "sources": [
-        "B",
-        "C"
+      "a_latest_volume_ratio": null,
+      "latest_close": 11.17,
+      "action": "只观察",
+      "pullback_zone": [
+        11.14,
+        11.31
       ],
-      "stage": "B 金叉前改善观察；C 趋势回踩/强势平台 · 回调/整理观察·待价格确认",
-      "rank": null,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "confirmation_price": 11.14,
+      "maximum_acceptable_price": 11.49,
+      "invalidation_price": 10.8,
+      "reduce_price": 12.58,
+      "final_target_price": 12.84,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
       "ticker": "PLTR",
@@ -367,10 +382,23 @@
         "B"
       ],
       "stage": "B 金叉前改善观察",
-      "rank": null,
+      "rank": 5,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "latest_close": 173.31,
+      "action": "只观察",
+      "pullback_zone": [
+        172.47,
+        174.37
+      ],
+      "confirmation_price": 172.47,
+      "maximum_acceptable_price": 176.26,
+      "invalidation_price": 164.55,
+      "reduce_price": 188.37,
+      "final_target_price": 192.33,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
       "ticker": "WDAY",
@@ -379,10 +407,23 @@
         "B"
       ],
       "stage": "B 金叉前改善观察",
-      "rank": null,
+      "rank": 6,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "latest_close": 194.21,
+      "action": "只观察",
+      "pullback_zone": [
+        191.81,
+        194.0
+      ],
+      "confirmation_price": 191.81,
+      "maximum_acceptable_price": 196.19,
+      "invalidation_price": 183.53,
+      "reduce_price": 211.83,
+      "final_target_price": 215.97,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
       "ticker": "ZETA",
@@ -392,10 +433,99 @@
         "C"
       ],
       "stage": "B 金叉前改善观察；C 趋势回踩 · 回调/整理观察·待价格确认",
-      "rank": null,
+      "rank": 7,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "latest_close": 31.01,
+      "action": "只观察",
+      "pullback_zone": [
+        30.57,
+        30.93
+      ],
+      "confirmation_price": 31.12,
+      "maximum_acceptable_price": 31.85,
+      "invalidation_price": 29.68,
+      "reduce_price": 33.29,
+      "final_target_price": 34.74,
+      "review_trading_day": 10,
+      "max_trading_days": 30
+    },
+    {
+      "ticker": "MSTR",
+      "name": "Strategy",
+      "sources": [
+        "B",
+        "C"
+      ],
+      "stage": "B 金叉前改善观察；C 趋势回踩/强势平台 · 回调/整理观察·待价格确认",
+      "rank": 8,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "latest_close": 136.94,
+      "action": "只观察",
+      "pullback_zone": [
+        131.83,
+        134.2
+      ],
+      "confirmation_price": 137.89,
+      "maximum_acceptable_price": 142.62,
+      "invalidation_price": 126.91,
+      "reduce_price": 154.36,
+      "final_target_price": 165.34,
+      "review_trading_day": 10,
+      "max_trading_days": 30
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "sources": [
+        "B"
+      ],
+      "stage": "B 双金叉确认",
+      "rank": 9,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "latest_close": 230.05,
+      "action": "只观察",
+      "pullback_zone": [
+        228.61,
+        231.62
+      ],
+      "confirmation_price": 233.23,
+      "maximum_acceptable_price": 239.23,
+      "invalidation_price": 218.27,
+      "reduce_price": 257.96,
+      "final_target_price": 270.61,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "MSM",
+      "name": "MSC Industrial Direct",
+      "sources": [
+        "B"
+      ],
+      "stage": "B 双金叉确认",
+      "rank": 10,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "latest_close": 119.28,
+      "action": "只观察",
+      "pullback_zone": [
+        119.21,
+        119.95
+      ],
+      "confirmation_price": 123.05,
+      "maximum_acceptable_price": 124.52,
+      "invalidation_price": 117.25,
+      "reduce_price": 131.74,
+      "final_target_price": 137.53,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
       "ticker": "AMBA",
@@ -407,7 +537,8 @@
       "rank": null,
       "a_key_date": "2026-09-09",
       "a_key_volume_ratio": 1.4865305139525797,
-      "a_latest_volume_ratio": 0.30065466001187074
+      "a_latest_volume_ratio": 0.30065466001187074,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "BE",
@@ -419,7 +550,8 @@
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "CVX",
@@ -431,7 +563,8 @@
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "ECHO",
@@ -443,7 +576,8 @@
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "HOOD",
@@ -455,7 +589,8 @@
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "ILMN",
@@ -467,7 +602,8 @@
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "LMND",
@@ -479,7 +615,8 @@
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "MRNA",
@@ -491,7 +628,8 @@
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "OKTA",
@@ -503,7 +641,8 @@
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "PEP",
@@ -515,7 +654,8 @@
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "POWI",
@@ -527,7 +667,8 @@
       "rank": null,
       "a_key_date": "2026-09-11",
       "a_key_volume_ratio": 2.8540417088296315,
-      "a_latest_volume_ratio": 0.5495186784455096
+      "a_latest_volume_ratio": 0.5495186784455096,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "TECH",
@@ -539,7 +680,8 @@
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "TWLO",
@@ -551,7 +693,8 @@
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
     },
     {
       "ticker": "UMC",
@@ -563,7 +706,8 @@
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
     }
   ]
 }
