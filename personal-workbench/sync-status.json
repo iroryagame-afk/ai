@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-09-15T15:32:24+08:00",
+  "failed": true,
+  "changed": [
+    "a-share-workbench/observation-feeds.json"
+  ],
+  "modules": [
+    {
+      "name": "A观察",
+      "source_date": "2026-09-14",
+      "checked_at": "2026-09-15T15:32:24+08:00",
+      "status": "内容无变化"
+    },
+    {
+      "name": "A股 CL20",
+      "source_date": "2026-09-15T15:30:44.604831+08:00",
+      "checked_at": "2026-09-15T15:32:24+08:00",
+      "status": "内容已更新"
+    },
+    {
+      "name": "美股研究与名单",
+      "source_date": "保留上次成功版本",
+      "checked_at": "2026-09-15T15:32:24+08:00",
+      "status": "更新失败 · AssertionError"
+    },
+    {
+      "name": "A股中线名单",
+      "source_date": "2026-09-09T15:00:00+08:00",
+      "checked_at": "2026-09-15T15:32:24+08:00",
+      "status": "内容无变化"
+    },
+    {
+      "name": "A股日线主升延续",
+      "source_date": "2026-09-14T15:00:00+08:00",
+      "checked_at": "2026-09-15T15:32:24+08:00",
+      "status": "内容无变化"
+    },
+    {
+      "name": "A股盘前报告",
+      "source_date": "2026-09-15",
+      "checked_at": "2026-09-15T15:32:24+08:00",
+      "status": "已检查，无新报告；保留完整原文"
+    },
+    {
+      "name": "A股盘后报告",
+      "source_date": "2026-09-14",
+      "checked_at": "2026-09-15T15:32:24+08:00",
+      "status": "已检查，无新报告；保留完整原文"
+    },
+    {
+      "name": "美股盘前报告",
+      "source_date": "2026-09-14",
+      "checked_at": "2026-09-15T15:32:24+08:00",
+      "status": "已检查，无新报告；保留完整原文"
+    }
+  ]
+}

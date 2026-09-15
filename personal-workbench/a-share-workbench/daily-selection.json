@@ -1,0 +1,769 @@
+{
+  "schema_version": 1,
+  "source_title": "整合逻辑推送每日A股选股",
+  "as_of": "2026-09-14T15:00:00+08:00",
+  "status": "日线主升延续 · 观察名单",
+  "body": "## 观察名单 · 17只\n股票|形态|动能|收盘|状态\n麦捷科技 SZ.300319|强势平台|KDJ单金叉确认|21.36|价格技术确认·待风险复核\n高能环境 SH.603588|趋势回踩|MACD多头延续|14.88|回调/整理观察·待价格确认\n星网锐捷 SZ.002396|趋势回踩|金叉前/动能改善观察|34.82|回调/整理观察·待价格确认\n合锻智能 SH.603011|趋势回踩|MACD多头延续|25.84|回调/整理观察·待价格确认\n行云科技 SZ.300209|强势平台|双金叉确认|36.25|回调/整理观察·待价格确认\n赛分科技 SH.688758|强势平台|KDJ单金叉确认|28.56|回调/整理观察·待价格确认\n国科军工 SH.688543|趋势回踩|MACD多头延续|43.71|回调/整理观察·待价格确认\n铂科新材 SZ.300811|趋势回踩|MACD多头延续|83.50|回调/整理观察·待价格确认\n九州一轨 SH.688485|趋势回踩 / 强势平台|金叉前/动能改善观察|98.39|回调/整理观察·待价格确认\n奥浦迈 SH.688293|趋势回踩|MACD多头延续|67.08|回调/整理观察·待价格确认\n兴森科技 SZ.002436|趋势回踩|MACD多头延续|40.06|回调/整理观察·待价格确认\n剑桥科技 SH.603083|趋势回踩|MACD多头延续|218.88|回调/整理观察·待价格确认\n景旺电子 SH.603228|强势平台|MACD多头延续|108.21|回调/整理观察·待价格确认\n德福科技 SZ.301511|趋势回踩|MACD多头延续|109.03|回调/整理观察·待价格确认\n金禄电子 SZ.301282|趋势回踩 / 强势平台|MACD多头延续|41.56|回调/整理观察·待价格确认\n长飞光纤 SH.601869|趋势回踩|MACD多头延续|459.66|回调/整理观察·待价格确认\n德科立 SH.688205|趋势回踩|MACD多头延续|216.10|回调/整理观察·待价格确认\n## 位置偏远 · 暂不追 · 9只\n股票|形态|动能|收盘|状态\n道明光学 SZ.002632|趋势回踩|KDJ单金叉确认|9.56|趋势候选·位置偏远不追\n龙磁科技 SZ.300835|趋势回踩|KDJ单金叉确认|177.81|趋势候选·位置偏远不追\n艾华集团 SH.603989|趋势回踩|MACD多头延续|34.62|趋势候选·位置偏远不追\n天通股份 SH.600330|趋势回踩 / 强势平台|双金叉确认|30.23|趋势候选·位置偏远不追\n杭电股份 SH.603618|趋势回踩|MACD多头延续|41.47|趋势候选·位置偏远不追\n征和工业 SZ.003033|趋势回踩|KDJ单金叉确认|78.20|趋势候选·位置偏远不追\n杭州银行 SH.600926|趋势回踩 / 强势平台|MACD多头延续|17.69|趋势候选·位置偏远不追\n博硕科技 SZ.300951|趋势回踩 / 强势平台|MACD多头延续|91.95|趋势候选·位置偏远不追\n富乐德 SZ.301297|趋势回踩|MACD多头延续|47.27|趋势候选·位置偏远不追\n## 核验范围\n自选474只 · 有效461只 · 未核验13项\n仅日线主升延续；板块、公告未核验。\n",
+  "rows": [
+    {
+      "code": "SZ.300319",
+      "name": "麦捷科技",
+      "as_of": "2026-09-14",
+      "close": 21.36,
+      "setups": [
+        "强势平台"
+      ],
+      "stage": "价格技术确认·待风险复核",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": "2026-09-10",
+          "golden_valid": true
+        },
+        "stage": "KDJ单金叉确认",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 18.41,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.603588",
+      "name": "高能环境",
+      "as_of": "2026-09-14",
+      "close": 14.88,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": false,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": false,
+        "kdj_improving": false,
+        "eligible": true
+      },
+      "research_invalid_below": 14.61,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SZ.002396",
+      "name": "星网锐捷",
+      "as_of": "2026-09-14",
+      "close": 34.82,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": false,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": false,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "金叉前/动能改善观察",
+        "macd_improving": false,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 33.01,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.603011",
+      "name": "合锻智能",
+      "as_of": "2026-09-14",
+      "close": 25.84,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": false,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": false,
+        "kdj_improving": false,
+        "eligible": true
+      },
+      "research_invalid_below": 24.42,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SZ.300209",
+      "name": "行云科技",
+      "as_of": "2026-09-14",
+      "close": 36.25,
+      "setups": [
+        "强势平台"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": "2026-09-10",
+          "golden_valid": true
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": "2026-08-27",
+          "golden_valid": true
+        },
+        "stage": "双金叉确认",
+        "macd_improving": false,
+        "kdj_improving": false,
+        "eligible": true
+      },
+      "research_invalid_below": 33.99,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.688758",
+      "name": "赛分科技",
+      "as_of": "2026-09-14",
+      "close": 28.56,
+      "setups": [
+        "强势平台"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": false,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": "2026-09-14",
+          "golden_valid": true
+        },
+        "stage": "KDJ单金叉确认",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 25.6,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.688543",
+      "name": "国科军工",
+      "as_of": "2026-09-14",
+      "close": 43.71,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": false,
+        "kdj_improving": false,
+        "eligible": true
+      },
+      "research_invalid_below": 43.5,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SZ.300811",
+      "name": "铂科新材",
+      "as_of": "2026-09-14",
+      "close": 83.5,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 78.3,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.688485",
+      "name": "九州一轨",
+      "as_of": "2026-09-14",
+      "close": 98.39,
+      "setups": [
+        "趋势回踩",
+        "强势平台"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": false,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": false,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "金叉前/动能改善观察",
+        "macd_improving": false,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 90.51,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.688293",
+      "name": "奥浦迈",
+      "as_of": "2026-09-14",
+      "close": 67.08,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 63.3,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SZ.002436",
+      "name": "兴森科技",
+      "as_of": "2026-09-14",
+      "close": 40.06,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 37.38,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.603083",
+      "name": "剑桥科技",
+      "as_of": "2026-09-14",
+      "close": 218.88,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": false,
+        "eligible": true
+      },
+      "research_invalid_below": 207.18,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.603228",
+      "name": "景旺电子",
+      "as_of": "2026-09-14",
+      "close": 108.21,
+      "setups": [
+        "强势平台"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": false,
+        "eligible": true
+      },
+      "research_invalid_below": 98.55,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SZ.301511",
+      "name": "德福科技",
+      "as_of": "2026-09-14",
+      "close": 109.03,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 101.34,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SZ.301282",
+      "name": "金禄电子",
+      "as_of": "2026-09-14",
+      "close": 41.56,
+      "setups": [
+        "趋势回踩",
+        "强势平台"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": false,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": false,
+        "kdj_improving": false,
+        "eligible": true
+      },
+      "research_invalid_below": 40.48,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.601869",
+      "name": "长飞光纤",
+      "as_of": "2026-09-14",
+      "close": 459.66,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 436.66,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.688205",
+      "name": "德科立",
+      "as_of": "2026-09-14",
+      "close": 216.1,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "回调/整理观察·待价格确认",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": false,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": false,
+        "eligible": true
+      },
+      "research_invalid_below": 204.0,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SZ.002632",
+      "name": "道明光学",
+      "as_of": "2026-09-14",
+      "close": 9.56,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "趋势候选·位置偏远不追",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": "2026-09-11",
+          "golden_valid": true
+        },
+        "stage": "KDJ单金叉确认",
+        "macd_improving": true,
+        "kdj_improving": false,
+        "eligible": true
+      },
+      "research_invalid_below": 8.85,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SZ.300835",
+      "name": "龙磁科技",
+      "as_of": "2026-09-14",
+      "close": 177.81,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "趋势候选·位置偏远不追",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": "2026-09-14",
+          "golden_valid": true
+        },
+        "stage": "KDJ单金叉确认",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 159.6,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.603989",
+      "name": "艾华集团",
+      "as_of": "2026-09-14",
+      "close": 34.62,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "趋势候选·位置偏远不追",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 30.09,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.600330",
+      "name": "天通股份",
+      "as_of": "2026-09-14",
+      "close": 30.23,
+      "setups": [
+        "趋势回踩",
+        "强势平台"
+      ],
+      "stage": "趋势候选·位置偏远不追",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": "2026-09-14",
+          "golden_valid": true
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": "2026-09-14",
+          "golden_valid": true
+        },
+        "stage": "双金叉确认",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 26.3,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.603618",
+      "name": "杭电股份",
+      "as_of": "2026-09-14",
+      "close": 41.47,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "趋势候选·位置偏远不追",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": false,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 36.64,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SZ.003033",
+      "name": "征和工业",
+      "as_of": "2026-09-14",
+      "close": 78.2,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "趋势候选·位置偏远不追",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": "2026-09-14",
+          "golden_valid": true
+        },
+        "stage": "KDJ单金叉确认",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 71.05,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SH.600926",
+      "name": "杭州银行",
+      "as_of": "2026-09-14",
+      "close": 17.69,
+      "setups": [
+        "趋势回踩",
+        "强势平台"
+      ],
+      "stage": "趋势候选·位置偏远不追",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 17.37,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SZ.300951",
+      "name": "博硕科技",
+      "as_of": "2026-09-14",
+      "close": 91.95,
+      "setups": [
+        "趋势回踩",
+        "强势平台"
+      ],
+      "stage": "趋势候选·位置偏远不追",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 81.2,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    },
+    {
+      "code": "SZ.301297",
+      "name": "富乐德",
+      "as_of": "2026-09-14",
+      "close": 47.27,
+      "setups": [
+        "趋势回踩"
+      ],
+      "stage": "趋势候选·位置偏远不追",
+      "momentum": {
+        "macd": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "kdj": {
+          "bullish": true,
+          "golden_date": null,
+          "golden_valid": false
+        },
+        "stage": "MACD多头延续",
+        "macd_improving": true,
+        "kdj_improving": true,
+        "eligible": true
+      },
+      "research_invalid_below": 41.43,
+      "execution": "未完成板块/公告及次日可交易性核验；不构成买入指令",
+      "buy_eligible": false
+    }
+  ],
+  "source_digest": "280fd5d3ae0b2e729c410ab4e0cc65b3c4f66c760e943b2a45ddcf29a68aafb1"
+}

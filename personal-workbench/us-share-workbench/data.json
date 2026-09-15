@@ -1,0 +1,4198 @@
+{
+  "schema_version": 1,
+  "trading_system": {
+    "version": "US-M-WATCH-TRADING-1.0.0",
+    "as_of": "2026-09-11",
+    "data_boundary": "美股完整常规时段日K，QFQ",
+    "market_gate": {
+      "verified": true,
+      "defensive": false,
+      "benchmarks": {
+        "US.QQQ": {
+          "close": 714.88,
+          "ema20": 714.28,
+          "ema55": 709.96,
+          "ret20": -0.023481361072028695,
+          "ret60": -0.019447454055157576
+        },
+        "US.SPY": {
+          "close": 764.29,
+          "ema20": 765.01,
+          "ema55": 756.83,
+          "ret20": -0.0174705610119813,
+          "ret60": 0.021228675366681715
+        }
+      }
+    },
+    "portfolio_rules": {
+      "max_open_positions": 5,
+      "max_new_positions_per_day": 2,
+      "max_total_risk_pct": 2.0,
+      "single_trade_risk_pct": 0.5,
+      "execution": "提醒→收盘确认→下一交易日执行；到价不等于买入",
+      "priority": "先满足市场门、相对强度和非过热，再按ABC优选顺序"
+    },
+    "plans": {
+      "US.SMCI": {
+        "name": "超微电脑",
+        "as_of": "2026-09-11",
+        "status": "确认后观察仓",
+        "sources": [
+          "B",
+          "C"
+        ],
+        "latest_close": 40.1,
+        "atr14_sma": 2.22,
+        "entry": {
+          "pullback_zone": [
+            38.43,
+            38.99
+          ],
+          "confirmation_price": 39.26,
+          "rule": "回踩区缩量不破后收回，或完整RTH日K收于确认价上且量不低于前5日均量",
+          "initial_position_pct": 3
+        },
+        "exit": {
+          "invalidation_price": 35.63,
+          "reduce_price": 44.7,
+          "final_target_price": 48.33,
+          "rules": [
+            "完整日K收破失效价退出",
+            "到第一目标减半",
+            "到第二目标退出剩余，或用EMA10跟踪"
+          ]
+        },
+        "holding": {
+          "review_trading_day": 10,
+          "max_trading_days": 30,
+          "time_stop": "第10日复核；第30日仍未到第一目标则退出或重新立项"
+        },
+        "position": {
+          "risk_budget_pct_of_equity": 0.5,
+          "max_position_pct": 8,
+          "shares_formula": "floor(账户净值×0.5%/(实际买价-失效价))，再受最大仓位限制"
+        },
+        "gates": {
+          "market_defensive": false,
+          "relative_strength_ok": true,
+          "overheated": false,
+          "volume_vs_prev5": 1.234
+        }
+      },
+      "US.TSM": {
+        "name": "台积电",
+        "as_of": "2026-09-11",
+        "status": "确认后观察仓",
+        "sources": [
+          "B",
+          "C"
+        ],
+        "latest_close": 433.24,
+        "atr14_sma": 9.88,
+        "entry": {
+          "pullback_zone": [
+            427.02,
+            429.49
+          ],
+          "confirmation_price": 432.53,
+          "rule": "回踩区缩量不破后收回，或完整RTH日K收于确认价上且量不低于前5日均量",
+          "initial_position_pct": 3
+        },
+        "exit": {
+          "invalidation_price": 417.13,
+          "reduce_price": 455.63,
+          "final_target_price": 471.03,
+          "rules": [
+            "完整日K收破失效价退出",
+            "到第一目标减半",
+            "到第二目标退出剩余，或用EMA10跟踪"
+          ]
+        },
+        "holding": {
+          "review_trading_day": 10,
+          "max_trading_days": 30,
+          "time_stop": "第10日复核；第30日仍未到第一目标则退出或重新立项"
+        },
+        "position": {
+          "risk_budget_pct_of_equity": 0.5,
+          "max_position_pct": 8,
+          "shares_formula": "floor(账户净值×0.5%/(实际买价-失效价))，再受最大仓位限制"
+        },
+        "gates": {
+          "market_defensive": false,
+          "relative_strength_ok": true,
+          "overheated": false,
+          "volume_vs_prev5": 1.084
+        }
+      },
+      "US.NOK": {
+        "name": "诺基亚",
+        "as_of": "2026-09-11",
+        "status": "只观察",
+        "sources": [
+          "A",
+          "B"
+        ],
+        "latest_close": 11.13,
+        "atr14_sma": 0.403,
+        "entry": {
+          "pullback_zone": [
+            10.69,
+            10.79
+          ],
+          "confirmation_price": 10.75,
+          "rule": "回踩区缩量不破后收回，或完整RTH日K收于确认价上且量不低于前5日均量",
+          "initial_position_pct": 0
+        },
+        "exit": {
+          "invalidation_price": 9.54,
+          "reduce_price": 12.57,
+          "final_target_price": 13.78,
+          "rules": [
+            "完整日K收破失效价退出",
+            "到第一目标减半",
+            "到第二目标退出剩余，或用EMA10跟踪"
+          ]
+        },
+        "holding": {
+          "review_trading_day": 3,
+          "max_trading_days": 10,
+          "time_stop": "第3日复核；第10日仍未脱离成本区则退出"
+        },
+        "position": {
+          "risk_budget_pct_of_equity": 0.5,
+          "max_position_pct": 8,
+          "shares_formula": "floor(账户净值×0.5%/(实际买价-失效价))，再受最大仓位限制"
+        },
+        "gates": {
+          "market_defensive": false,
+          "relative_strength_ok": false,
+          "overheated": false,
+          "volume_vs_prev5": 1.095
+        }
+      },
+      "US.ARM": {
+        "name": "Arm Holdings",
+        "as_of": "2026-09-11",
+        "status": "只观察",
+        "sources": [
+          "B"
+        ],
+        "latest_close": 264.79,
+        "atr14_sma": 13.02,
+        "entry": {
+          "pullback_zone": [
+            254.77,
+            258.03
+          ],
+          "confirmation_price": 265.83,
+          "rule": "回踩区缩量不破后收回，或完整RTH日K收于确认价上且量不低于前5日均量",
+          "initial_position_pct": 0
+        },
+        "exit": {
+          "invalidation_price": 229.3,
+          "reduce_price": 320.63,
+          "final_target_price": 357.16,
+          "rules": [
+            "完整日K收破失效价退出",
+            "到第一目标减半",
+            "到第二目标退出剩余，或用EMA10跟踪"
+          ]
+        },
+        "holding": {
+          "review_trading_day": 5,
+          "max_trading_days": 15,
+          "time_stop": "第5日复核；第15日仍未形成上攻则退出"
+        },
+        "position": {
+          "risk_budget_pct_of_equity": 0.5,
+          "max_position_pct": 8,
+          "shares_formula": "floor(账户净值×0.5%/(实际买价-失效价))，再受最大仓位限制"
+        },
+        "gates": {
+          "market_defensive": false,
+          "relative_strength_ok": false,
+          "overheated": false,
+          "volume_vs_prev5": 1.053
+        }
+      },
+      "US.MXL": {
+        "name": "MaxLinear",
+        "as_of": "2026-09-11",
+        "status": "只观察",
+        "sources": [
+          "B"
+        ],
+        "latest_close": 74.57,
+        "atr14_sma": 4.35,
+        "entry": {
+          "pullback_zone": [
+            71.27,
+            72.36
+          ],
+          "confirmation_price": 70.8,
+          "rule": "回踩区缩量不破后收回，或完整RTH日K收于确认价上且量不低于前5日均量",
+          "initial_position_pct": 0
+        },
+        "exit": {
+          "invalidation_price": 66.92,
+          "reduce_price": 89.0,
+          "final_target_price": 90.94,
+          "rules": [
+            "完整日K收破失效价退出",
+            "到第一目标减半",
+            "到第二目标退出剩余，或用EMA10跟踪"
+          ]
+        },
+        "holding": {
+          "review_trading_day": 5,
+          "max_trading_days": 15,
+          "time_stop": "第5日复核；第15日仍未形成上攻则退出"
+        },
+        "position": {
+          "risk_budget_pct_of_equity": 0.5,
+          "max_position_pct": 8,
+          "shares_formula": "floor(账户净值×0.5%/(实际买价-失效价))，再受最大仓位限制"
+        },
+        "gates": {
+          "market_defensive": false,
+          "relative_strength_ok": false,
+          "overheated": false,
+          "volume_vs_prev5": 1.112
+        }
+      },
+      "US.ANET": {
+        "name": "Arista Networks",
+        "as_of": "2026-09-11",
+        "status": "只观察",
+        "sources": [
+          "B"
+        ],
+        "latest_close": 199.59,
+        "atr14_sma": 7.04,
+        "entry": {
+          "pullback_zone": [
+            193.56,
+            195.32
+          ],
+          "confirmation_price": 193.56,
+          "rule": "回踩区缩量不破后收回，或完整RTH日K收于确认价上且量不低于前5日均量",
+          "initial_position_pct": 0
+        },
+        "exit": {
+          "invalidation_price": 186.53,
+          "reduce_price": 210.11,
+          "final_target_price": 213.63,
+          "rules": [
+            "完整日K收破失效价退出",
+            "到第一目标减半",
+            "到第二目标退出剩余，或用EMA10跟踪"
+          ]
+        },
+        "holding": {
+          "review_trading_day": 5,
+          "max_trading_days": 15,
+          "time_stop": "第5日复核；第15日仍未形成上攻则退出"
+        },
+        "position": {
+          "risk_budget_pct_of_equity": 0.5,
+          "max_position_pct": 8,
+          "shares_formula": "floor(账户净值×0.5%/(实际买价-失效价))，再受最大仓位限制"
+        },
+        "gates": {
+          "market_defensive": false,
+          "relative_strength_ok": false,
+          "overheated": false,
+          "volume_vs_prev5": 1.187
+        }
+      },
+      "US.CLSK": {
+        "name": "CleanSpark",
+        "as_of": "2026-09-11",
+        "status": "只观察",
+        "sources": [
+          "B"
+        ],
+        "latest_close": 13.67,
+        "atr14_sma": 0.893,
+        "entry": {
+          "pullback_zone": [
+            13.06,
+            13.28
+          ],
+          "confirmation_price": 13.49,
+          "rule": "回踩区缩量不破后收回，或完整RTH日K收于确认价上且量不低于前5日均量",
+          "initial_position_pct": 0
+        },
+        "exit": {
+          "invalidation_price": 10.77,
+          "reduce_price": 17.57,
+          "final_target_price": 20.29,
+          "rules": [
+            "完整日K收破失效价退出",
+            "到第一目标减半",
+            "到第二目标退出剩余，或用EMA10跟踪"
+          ]
+        },
+        "holding": {
+          "review_trading_day": 5,
+          "max_trading_days": 15,
+          "time_stop": "第5日复核；第15日仍未形成上攻则退出"
+        },
+        "position": {
+          "risk_budget_pct_of_equity": 0.5,
+          "max_position_pct": 3,
+          "shares_formula": "floor(账户净值×0.5%/(实际买价-失效价))，再受最大仓位限制"
+        },
+        "gates": {
+          "market_defensive": false,
+          "relative_strength_ok": false,
+          "overheated": true,
+          "volume_vs_prev5": 1.262
+        }
+      },
+      "US.MRNA": {
+        "name": "Moderna",
+        "as_of": "2026-09-11",
+        "status": "只观察",
+        "sources": [
+          "B"
+        ],
+        "latest_close": 143.97,
+        "atr14_sma": 12.0,
+        "entry": {
+          "pullback_zone": [
+            140.15,
+            143.15
+          ],
+          "confirmation_price": 140.15,
+          "rule": "回踩区缩量不破后收回，或完整RTH日K收于确认价上且量不低于前5日均量",
+          "initial_position_pct": 0
+        },
+        "exit": {
+          "invalidation_price": 130.38,
+          "reduce_price": 176.66,
+          "final_target_price": 181.55,
+          "rules": [
+            "完整日K收破失效价退出",
+            "到第一目标减半",
+            "到第二目标退出剩余，或用EMA10跟踪"
+          ]
+        },
+        "holding": {
+          "review_trading_day": 5,
+          "max_trading_days": 15,
+          "time_stop": "第5日复核；第15日仍未形成上攻则退出"
+        },
+        "position": {
+          "risk_budget_pct_of_equity": 0.5,
+          "max_position_pct": 3,
+          "shares_formula": "floor(账户净值×0.5%/(实际买价-失效价))，再受最大仓位限制"
+        },
+        "gates": {
+          "market_defensive": false,
+          "relative_strength_ok": true,
+          "overheated": true,
+          "volume_vs_prev5": 1.399
+        }
+      },
+      "US.VIAV": {
+        "name": "Viavi Solutions",
+        "as_of": "2026-09-11",
+        "status": "只观察",
+        "sources": [
+          "A",
+          "B"
+        ],
+        "latest_close": 38.75,
+        "atr14_sma": 1.99,
+        "entry": {
+          "pullback_zone": [
+            37.83,
+            38.33
+          ],
+          "confirmation_price": 39.88,
+          "rule": "回踩区缩量不破后收回，或完整RTH日K收于确认价上且量不低于前5日均量",
+          "initial_position_pct": 0
+        },
+        "exit": {
+          "invalidation_price": 32.8,
+          "reduce_price": 50.5,
+          "final_target_price": 57.58,
+          "rules": [
+            "完整日K收破失效价退出",
+            "到第一目标减半",
+            "到第二目标退出剩余，或用EMA10跟踪"
+          ]
+        },
+        "holding": {
+          "review_trading_day": 3,
+          "max_trading_days": 10,
+          "time_stop": "第3日复核；第10日仍未脱离成本区则退出"
+        },
+        "position": {
+          "risk_budget_pct_of_equity": 0.5,
+          "max_position_pct": 8,
+          "shares_formula": "floor(账户净值×0.5%/(实际买价-失效价))，再受最大仓位限制"
+        },
+        "gates": {
+          "market_defensive": false,
+          "relative_strength_ok": false,
+          "overheated": false,
+          "volume_vs_prev5": 0.92
+        }
+      },
+      "US.COHR": {
+        "name": "Coherent",
+        "as_of": "2026-09-11",
+        "status": "只观察",
+        "sources": [
+          "A",
+          "B"
+        ],
+        "latest_close": 305.37,
+        "atr14_sma": 16.88,
+        "entry": {
+          "pullback_zone": [
+            294.03,
+            298.25
+          ],
+          "confirmation_price": 309.99,
+          "rule": "回踩区缩量不破后收回，或完整RTH日K收于确认价上且量不低于前5日均量",
+          "initial_position_pct": 0
+        },
+        "exit": {
+          "invalidation_price": 255.25,
+          "reduce_price": 392.1,
+          "final_target_price": 446.84,
+          "rules": [
+            "完整日K收破失效价退出",
+            "到第一目标减半",
+            "到第二目标退出剩余，或用EMA10跟踪"
+          ]
+        },
+        "holding": {
+          "review_trading_day": 3,
+          "max_trading_days": 10,
+          "time_stop": "第3日复核；第10日仍未脱离成本区则退出"
+        },
+        "position": {
+          "risk_budget_pct_of_equity": 0.5,
+          "max_position_pct": 8,
+          "shares_formula": "floor(账户净值×0.5%/(实际买价-失效价))，再受最大仓位限制"
+        },
+        "gates": {
+          "market_defensive": false,
+          "relative_strength_ok": false,
+          "overheated": false,
+          "volume_vs_prev5": 1.276
+        }
+      }
+    }
+  },
+  "m": {
+    "date": "2026-09-11",
+    "rows": [
+      {
+        "code": "US.SMCI",
+        "name": "超微电脑",
+        "in_futu": true,
+        "category": "B / C",
+        "stage": "KDJ单金叉确认 · 回调/整理观察·待价格确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.TSM",
+        "name": "台积电",
+        "in_futu": true,
+        "category": "B / C",
+        "stage": "金叉前改善观察 · 价格技术确认·待风险复核",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.NOK",
+        "name": "诺基亚",
+        "in_futu": true,
+        "category": "A / B",
+        "stage": "合格回调 · 金叉前改善观察",
+        "key_date": "2026-09-08",
+        "volume_ratio": 2.4776722271246676
+      },
+      {
+        "code": "US.ARM",
+        "name": "Arm Holdings",
+        "in_futu": true,
+        "category": "B",
+        "stage": "双金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.MXL",
+        "name": "MaxLinear",
+        "in_futu": true,
+        "category": "B",
+        "stage": "双金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.ANET",
+        "name": "Arista Networks",
+        "in_futu": true,
+        "category": "B",
+        "stage": "KDJ单金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.CLSK",
+        "name": "CleanSpark",
+        "in_futu": true,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.MRNA",
+        "name": "Moderna",
+        "in_futu": true,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.VIAV",
+        "name": "Viavi Solutions",
+        "in_futu": true,
+        "category": "A / B",
+        "stage": "合格回调 · 双金叉确认",
+        "key_date": "2026-09-08",
+        "volume_ratio": 2.1360814394259284
+      },
+      {
+        "code": "US.COHR",
+        "name": "Coherent",
+        "in_futu": true,
+        "category": "A / B",
+        "stage": "合格回调 · 双金叉确认",
+        "key_date": "2026-09-08",
+        "volume_ratio": 1.725226833698378
+      },
+      {
+        "code": "US.FCEL",
+        "name": "燃料电池能源",
+        "in_futu": false,
+        "category": "A",
+        "stage": "合格回调",
+        "key_date": "2026-09-08",
+        "volume_ratio": 2.374639579776022
+      },
+      {
+        "code": "US.MSTR",
+        "name": "Strategy",
+        "in_futu": false,
+        "category": "C",
+        "stage": "回调/整理观察·待价格确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.CVX",
+        "name": "雪佛龙",
+        "in_futu": false,
+        "category": "C",
+        "stage": "回调/整理观察·待价格确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.WDAY",
+        "name": "Workday",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.MU",
+        "name": "美光科技",
+        "in_futu": false,
+        "category": "C",
+        "stage": "回调/整理观察·待价格确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.FSLY",
+        "name": "Fastly",
+        "in_futu": false,
+        "category": "B",
+        "stage": "KDJ单金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.HOOD",
+        "name": "Robinhood",
+        "in_futu": false,
+        "category": "C",
+        "stage": "回调/整理观察·待价格确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.AEM",
+        "name": "伊格尔矿业",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.BMNR",
+        "name": "Bitmine Immersion Technologies",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.SMTC",
+        "name": "先科电子",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.PLTR",
+        "name": "Palantir",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.LMND",
+        "name": "Lemonade",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.APH",
+        "name": "安费诺",
+        "in_futu": false,
+        "category": "C",
+        "stage": "回调/整理观察·待价格确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.V",
+        "name": "Visa",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.AXTI",
+        "name": "AXT Inc",
+        "in_futu": false,
+        "category": "B",
+        "stage": "KDJ单金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.WDC",
+        "name": "西部数据",
+        "in_futu": false,
+        "category": "B",
+        "stage": "MACD单金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.AAOI",
+        "name": "Applied Optoelectronics",
+        "in_futu": false,
+        "category": "A",
+        "stage": "合格回调",
+        "key_date": "2026-09-08",
+        "volume_ratio": 1.766195628496786
+      },
+      {
+        "code": "US.VSH",
+        "name": "威世科技",
+        "in_futu": false,
+        "category": "B",
+        "stage": "KDJ单金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.KO",
+        "name": "可口可乐",
+        "in_futu": false,
+        "category": "B",
+        "stage": "KDJ单金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.UCTT",
+        "name": "超科林半导体",
+        "in_futu": false,
+        "category": "B",
+        "stage": "双金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.CAMT",
+        "name": "康特科技",
+        "in_futu": false,
+        "category": "B",
+        "stage": "双金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.ACMR",
+        "name": "ACM Research",
+        "in_futu": false,
+        "category": "A",
+        "stage": "合格回调",
+        "key_date": "2026-09-08",
+        "volume_ratio": 1.4825608950701217
+      },
+      {
+        "code": "US.CRWV",
+        "name": "CoreWeave",
+        "in_futu": false,
+        "category": "A",
+        "stage": "合格回调",
+        "key_date": "2026-09-08",
+        "volume_ratio": 2.4614760558959263
+      },
+      {
+        "code": "US.AMKR",
+        "name": "艾马克技术",
+        "in_futu": false,
+        "category": "B",
+        "stage": "双金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.INTC",
+        "name": "英特尔",
+        "in_futu": false,
+        "category": "B",
+        "stage": "双金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.TECH",
+        "name": "Bio-Techne",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.INDI",
+        "name": "indie Semiconductor",
+        "in_futu": false,
+        "category": "B",
+        "stage": "KDJ单金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.TEM",
+        "name": "Tempus AI",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.TWST",
+        "name": "Twist Bioscience",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.ZS",
+        "name": "Zscaler",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.SIMO",
+        "name": "慧荣科技",
+        "in_futu": false,
+        "category": "A / B",
+        "stage": "合格回调 · 金叉前改善观察",
+        "key_date": "2026-09-08",
+        "volume_ratio": 1.6237688701561224
+      },
+      {
+        "code": "US.CF",
+        "name": "CF工业控股",
+        "in_futu": false,
+        "category": "C",
+        "stage": "回调/整理观察·待价格确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.MSM",
+        "name": "MSC Industrial Direct",
+        "in_futu": false,
+        "category": "B",
+        "stage": "双金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.ONTO",
+        "name": "Onto Innovation",
+        "in_futu": false,
+        "category": "A / B",
+        "stage": "合格回调 · KDJ单金叉确认",
+        "key_date": "2026-09-08",
+        "volume_ratio": 1.8326270775958704
+      },
+      {
+        "code": "US.ECHO",
+        "name": "回声星通信",
+        "in_futu": false,
+        "category": "B",
+        "stage": "KDJ单金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.ENTG",
+        "name": "英特格",
+        "in_futu": false,
+        "category": "B",
+        "stage": "双金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.INFQ",
+        "name": "Infleqtion",
+        "in_futu": false,
+        "category": "A",
+        "stage": "合格回调",
+        "key_date": "2026-09-08",
+        "volume_ratio": 2.8442579747538974
+      },
+      {
+        "code": "US.AMBA",
+        "name": "安霸",
+        "in_futu": false,
+        "category": "A",
+        "stage": "合格回调",
+        "key_date": "2026-09-09",
+        "volume_ratio": 1.4865305139525797
+      },
+      {
+        "code": "US.VIVO",
+        "name": "VivoPower",
+        "in_futu": false,
+        "category": "A / B",
+        "stage": "合格回调 · KDJ单金叉确认",
+        "key_date": "2026-09-08",
+        "volume_ratio": 1.5801485328279437
+      },
+      {
+        "code": "US.NVTS",
+        "name": "纳微半导体",
+        "in_futu": false,
+        "category": "B",
+        "stage": "双金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.RIOT",
+        "name": "Riot Platforms",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.NTRA",
+        "name": "Natera",
+        "in_futu": false,
+        "category": "B",
+        "stage": "KDJ单金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.ALAB",
+        "name": "Astera Labs",
+        "in_futu": false,
+        "category": "B",
+        "stage": "双金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.RDW",
+        "name": "Redwire",
+        "in_futu": false,
+        "category": "A",
+        "stage": "合格回调",
+        "key_date": "2026-09-08",
+        "volume_ratio": 1.7090054023208598
+      },
+      {
+        "code": "US.ASX",
+        "name": "日月光半导体",
+        "in_futu": false,
+        "category": "C",
+        "stage": "回调/整理观察·待价格确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.FLY",
+        "name": "Firefly Aerospace",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.OXY",
+        "name": "西方石油",
+        "in_futu": false,
+        "category": "C",
+        "stage": "回调/整理观察·待价格确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.GLW",
+        "name": "康宁",
+        "in_futu": false,
+        "category": "A / B",
+        "stage": "合格回调 · 双金叉确认",
+        "key_date": "2026-09-08",
+        "volume_ratio": 1.6200002688553832
+      },
+      {
+        "code": "US.TER",
+        "name": "泰瑞达",
+        "in_futu": false,
+        "category": "B",
+        "stage": "双金叉确认",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.COIN",
+        "name": "Coinbase",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.LITE",
+        "name": "Lumentum",
+        "in_futu": false,
+        "category": "A / C",
+        "stage": "合格回调 · 回调/整理观察·待价格确认",
+        "key_date": "2026-09-08",
+        "volume_ratio": 2.0740689603691296
+      },
+      {
+        "code": "US.MSFT",
+        "name": "微软",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      },
+      {
+        "code": "US.TSLA",
+        "name": "特斯拉",
+        "in_futu": false,
+        "category": "B",
+        "stage": "金叉前改善观察",
+        "key_date": null,
+        "volume_ratio": null
+      }
+    ]
+  },
+  "tonight": {
+    "generated_at_bj": "2026-09-14T16:39:46+08:00",
+    "daily_as_of": "2026-09-11",
+    "market_gate_closed": true,
+    "candidates": [
+      {
+        "code": "US.SMCI",
+        "name": "超微电脑",
+        "quote": 38.1,
+        "quote_session": "盘前",
+        "action": "市场门关闭，只观察",
+        "first_observation": 38.43,
+        "buy_confirmation": 39.26,
+        "maximum_acceptable": 40.37,
+        "invalidation": 35.63,
+        "first_reduce": 44.7,
+        "final_target": 48.33,
+        "initial_position_pct": 3,
+        "intraday_confirmation": "开盘15分钟后，同时高于VWAP和首15分钟高点，并强于QQQ/SPY"
+      },
+      {
+        "code": "US.TSM",
+        "name": "台积电",
+        "quote": 419.05,
+        "quote_session": "盘前",
+        "action": "市场门关闭，只观察",
+        "first_observation": 427.02,
+        "buy_confirmation": 432.53,
+        "maximum_acceptable": 437.47,
+        "invalidation": 417.13,
+        "first_reduce": 455.63,
+        "final_target": 471.03,
+        "initial_position_pct": 3,
+        "intraday_confirmation": "开盘15分钟后，同时高于VWAP和首15分钟高点，并强于QQQ/SPY"
+      }
+    ]
+  },
+  "cl20": {
+    "latest_event_at": "2026-09-12T07:10:59.644197+08:00",
+    "rows": [
+      {
+        "code": "US.VECO",
+        "name": "维易科精密仪器",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 12:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 45.73,
+        "detected_at": "2026-09-12T07:10:59.644197+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AOSL",
+        "name": "阿尔法和欧米伽半导体",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 11:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 26.07,
+        "detected_at": "2026-09-12T07:10:51.240083+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SOFI",
+        "name": "SoFi Technologies",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 11:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 17.505,
+        "detected_at": "2026-09-12T04:51:18.680165+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ENTG",
+        "name": "英特格",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 12:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 141.71,
+        "detected_at": "2026-09-12T04:51:14.890487+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ENTG",
+        "name": "英特格",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 136.0801,
+        "detected_at": "2026-09-12T04:51:14.890461+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AMAT",
+        "name": "应用材料",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 12:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 464.57,
+        "detected_at": "2026-09-12T04:51:14.336542+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.WYFI",
+        "name": "WhiteFiber",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 19.66,
+        "detected_at": "2026-09-12T04:51:10.710512+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.PYPL",
+        "name": "PayPal",
+        "label": "3S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 11:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 54.3999,
+        "detected_at": "2026-09-12T04:17:50.040180+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TEAM",
+        "name": "Atlassian",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 11:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 176.76,
+        "detected_at": "2026-09-12T03:27:34.003611+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.Q",
+        "name": "Qnity Electronics",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 127.16,
+        "detected_at": "2026-09-12T02:53:04.907592+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.INDI",
+        "name": "indie Semiconductor",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 11:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 3.45,
+        "detected_at": "2026-09-12T02:20:00.221490+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.INTC",
+        "name": "英特尔",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 104.9,
+        "detected_at": "2026-09-12T02:19:59.580331+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AMKR",
+        "name": "艾马克技术",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 12:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 51.75,
+        "detected_at": "2026-09-12T02:19:58.731397+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.UCTT",
+        "name": "超科林半导体",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 12:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 75.0,
+        "detected_at": "2026-09-12T02:19:53.891602+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CLSK",
+        "name": "CleanSpark",
+        "label": "1S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 14.03,
+        "detected_at": "2026-09-12T02:19:50.250385+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RBRK",
+        "name": "Rubrik",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 12:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 85.78,
+        "detected_at": "2026-09-12T02:19:34.899368+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AVAV",
+        "name": "AeroVironment",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 11:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 138.31,
+        "detected_at": "2026-09-12T00:50:53.866882+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ARM",
+        "name": "Arm Holdings",
+        "label": "S?",
+        "kind": "已通知信号修订",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 261.3296,
+        "detected_at": "2026-09-12T00:06:16.915020+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RIOT",
+        "name": "Riot Platforms",
+        "label": "S?",
+        "kind": "已通知信号修订",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 21.99,
+        "detected_at": "2026-09-12T00:06:13.126996+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.LLY",
+        "name": "礼来",
+        "label": "1B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 1116.42,
+        "detected_at": "2026-09-12T00:06:03.309413+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.PENG",
+        "name": "Penguin Solutions",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 51.3964,
+        "detected_at": "2026-09-12T00:05:59.732748+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FN",
+        "name": "Fabrinet",
+        "label": "S?",
+        "kind": "已通知信号修订",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 418.0,
+        "detected_at": "2026-09-12T00:05:57.557805+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ANET",
+        "name": "Arista Networks",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 200.2192,
+        "detected_at": "2026-09-12T00:05:49.612044+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NBIS",
+        "name": "NEBIUS",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 232.9,
+        "detected_at": "2026-09-12T00:05:42.158019+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.COHU",
+        "name": "科休半导体",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 58.705,
+        "detected_at": "2026-09-12T00:05:35.523492+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NOC",
+        "name": "诺斯罗普格鲁曼",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 11:00:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 515.245,
+        "detected_at": "2026-09-12T00:05:28.937814+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NET",
+        "name": "Cloudflare",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 11:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 304.4,
+        "detected_at": "2026-09-12T00:01:51.483188+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AOSL",
+        "name": "阿尔法和欧米伽半导体",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 11:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 26.07,
+        "detected_at": "2026-09-12T00:01:40.541761+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SOFI",
+        "name": "SoFi Technologies",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 11:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 17.505,
+        "detected_at": "2026-09-12T00:01:36.057569+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.PEP",
+        "name": "百事可乐",
+        "label": "1B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 11:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 136.32,
+        "detected_at": "2026-09-12T00:01:32.841182+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CF",
+        "name": "CF工业控股",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 11:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 133.515,
+        "detected_at": "2026-09-12T00:01:25.778514+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FTNT",
+        "name": "飞塔信息",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 11:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 155.48,
+        "detected_at": "2026-09-12T00:01:24.930483+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TEAM",
+        "name": "Atlassian",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 11:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 176.76,
+        "detected_at": "2026-09-12T00:01:22.360532+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.INDI",
+        "name": "indie Semiconductor",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 11:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 3.45,
+        "detected_at": "2026-09-12T00:01:14.773035+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CLSK",
+        "name": "CleanSpark",
+        "label": "1S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 14.03,
+        "detected_at": "2026-09-12T00:01:06.261402+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.V",
+        "name": "Visa",
+        "label": "3S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 371.74,
+        "detected_at": "2026-09-12T00:00:48.750886+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AVAV",
+        "name": "AeroVironment",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 11:00:00",
+        "bar_end": "2026-09-11 12:30:00",
+        "price": 138.31,
+        "detected_at": "2026-09-12T00:00:38.206349+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AMAT",
+        "name": "应用材料",
+        "label": "S?",
+        "kind": "已通知信号修订",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:30:00",
+        "price": 463.09,
+        "detected_at": "2026-09-11T23:36:26.550097+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.LLY",
+        "name": "礼来",
+        "label": "1B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 1116.42,
+        "detected_at": "2026-09-11T23:31:07.361777+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.PENG",
+        "name": "Penguin Solutions",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 51.3964,
+        "detected_at": "2026-09-11T23:31:04.484877+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ANET",
+        "name": "Arista Networks",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 200.2192,
+        "detected_at": "2026-09-11T23:30:54.942573+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NBIS",
+        "name": "NEBIUS",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 232.9,
+        "detected_at": "2026-09-11T23:30:47.711257+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.COHU",
+        "name": "科休半导体",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 58.705,
+        "detected_at": "2026-09-11T23:30:41.589540+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NOC",
+        "name": "诺斯罗普格鲁曼",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 11:00:00",
+        "bar_end": "2026-09-11 12:00:00",
+        "price": 515.245,
+        "detected_at": "2026-09-11T23:30:36.065161+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.MSFT",
+        "name": "微软",
+        "label": "3S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 498.97,
+        "detected_at": "2026-09-11T23:16:03.542622+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.BABA",
+        "name": "阿里巴巴",
+        "label": "3S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 110.69,
+        "detected_at": "2026-09-11T23:16:02.987928+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FUTU",
+        "name": "富途控股",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 115.2395,
+        "detected_at": "2026-09-11T23:16:02.720691+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NVDA",
+        "name": "英伟达",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 222.0,
+        "detected_at": "2026-09-11T23:16:01.321098+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.BRK.B",
+        "name": "伯克希尔-B",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 510.33,
+        "detected_at": "2026-09-11T23:15:59.890337+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.GEV",
+        "name": "GE Vernova",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 962.21,
+        "detected_at": "2026-09-11T23:15:58.291991+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AVGO",
+        "name": "博通",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 366.78,
+        "detected_at": "2026-09-11T23:15:57.102221+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.HIMS",
+        "name": "Hims & Hers Health",
+        "label": "1B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 26.73,
+        "detected_at": "2026-09-11T23:15:56.151820+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ALAB",
+        "name": "Astera Labs",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 297.6099,
+        "detected_at": "2026-09-11T23:15:53.062251+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ARM",
+        "name": "Arm Holdings",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 261.3296,
+        "detected_at": "2026-09-11T23:15:52.810034+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.EOSE",
+        "name": "Eos Energy",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 4.13,
+        "detected_at": "2026-09-11T23:15:51.291761+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ILMN",
+        "name": "Illumina",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 200.01,
+        "detected_at": "2026-09-11T23:15:51.006564+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CORZ",
+        "name": "Core Scientific",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 18.3795,
+        "detected_at": "2026-09-11T23:15:49.776471+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RIOT",
+        "name": "Riot Platforms",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 21.99,
+        "detected_at": "2026-09-11T23:15:49.540387+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NVTS",
+        "name": "纳微半导体",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 11.85,
+        "detected_at": "2026-09-11T23:15:49.256624+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.VIVO",
+        "name": "VivoPower",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 4.16,
+        "detected_at": "2026-09-11T23:15:47.785233+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.IBM",
+        "name": "IBM Corp",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 242.1,
+        "detected_at": "2026-09-11T23:15:47.225328+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SNOW",
+        "name": "Snowflake",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 323.42,
+        "detected_at": "2026-09-11T23:15:45.342675+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.PEP",
+        "name": "百事可乐",
+        "label": "B?",
+        "kind": "盘中预警已撤销",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 136.36,
+        "detected_at": "2026-09-11T23:15:41.050472+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AMAT",
+        "name": "应用材料",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 463.09,
+        "detected_at": "2026-09-11T23:15:39.922841+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ONTO",
+        "name": "Onto Innovation",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 282.08,
+        "detected_at": "2026-09-11T23:15:38.343824+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ASML",
+        "name": "阿斯麦",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 1727.3099,
+        "detected_at": "2026-09-11T23:15:38.050653+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AEVA",
+        "name": "Aeva Technologies",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 15.78,
+        "detected_at": "2026-09-11T23:15:36.975721+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.MSM",
+        "name": "MSC Industrial Direct",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 123.045,
+        "detected_at": "2026-09-11T23:15:36.643194+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FN",
+        "name": "Fabrinet",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 418.0,
+        "detected_at": "2026-09-11T23:15:36.290618+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.JPM",
+        "name": "摩根大通",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 360.04,
+        "detected_at": "2026-09-11T23:15:35.215883+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.PHM",
+        "name": "普得集团",
+        "label": "3S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 118.65,
+        "detected_at": "2026-09-11T23:15:34.288090+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CSX",
+        "name": "CSX运输",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 49.65,
+        "detected_at": "2026-09-11T23:15:33.354283+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FTNT",
+        "name": "飞塔信息",
+        "label": "B?",
+        "kind": "盘中预警已撤销",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 156.13,
+        "detected_at": "2026-09-11T23:15:32.890500+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CMI",
+        "name": "康明斯",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 562.14,
+        "detected_at": "2026-09-11T23:15:29.523107+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CAT",
+        "name": "卡特彼勒",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 825.735,
+        "detected_at": "2026-09-11T23:15:29.223681+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AMD",
+        "name": "美国超微公司",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 501.35,
+        "detected_at": "2026-09-11T23:15:27.698136+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NTLA",
+        "name": "Intellia Therapeutics",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 12.19,
+        "detected_at": "2026-09-11T23:15:26.494182+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NOW",
+        "name": "ServiceNow",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 130.39,
+        "detected_at": "2026-09-11T23:15:25.169344+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RMBS",
+        "name": "Rambus",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 88.1001,
+        "detected_at": "2026-09-11T23:15:22.695074+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CAMT",
+        "name": "康特科技",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 148.11,
+        "detected_at": "2026-09-11T23:15:21.008577+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AEHR",
+        "name": "Aehr Test Systems",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 102.7899,
+        "detected_at": "2026-09-11T23:15:20.717494+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ELMT",
+        "name": "Elmet Group",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 15.8,
+        "detected_at": "2026-09-11T23:15:20.412546+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CRCL",
+        "name": "Circle",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 95.7996,
+        "detected_at": "2026-09-11T23:15:19.853752+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.COHR",
+        "name": "Coherent",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 312.68,
+        "detected_at": "2026-09-11T23:15:19.617450+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.IREN",
+        "name": "IREN Ltd",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 43.28,
+        "detected_at": "2026-09-11T23:15:19.394162+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ICHR",
+        "name": "Ichor Holdings",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 58.135,
+        "detected_at": "2026-09-11T23:15:18.785231+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.F",
+        "name": "福特汽车",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 14.12,
+        "detected_at": "2026-09-11T23:15:16.545154+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.DDOG",
+        "name": "Datadog",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 218.28,
+        "detected_at": "2026-09-11T23:15:15.709632+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.EAT",
+        "name": "布林克国际",
+        "label": "3S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 216.53,
+        "detected_at": "2026-09-11T23:15:11.006859+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.LMND",
+        "name": "Lemonade",
+        "label": "3S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 50.99,
+        "detected_at": "2026-09-11T23:15:08.417071+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FCX",
+        "name": "麦克莫兰铜金",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 72.7,
+        "detected_at": "2026-09-11T23:15:06.936197+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FORM",
+        "name": "FormFactor",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 117.12,
+        "detected_at": "2026-09-11T23:15:05.407368+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.BE",
+        "name": "Bloom Energy",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-11 10:30:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 277.26,
+        "detected_at": "2026-09-11T23:15:00.271310+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.GLW",
+        "name": "康宁",
+        "label": "3B?",
+        "kind": "已通知信号修订",
+        "pivot_time": "2026-09-10 16:00:00",
+        "bar_end": "2026-09-11 10:30:00",
+        "price": 162.88,
+        "detected_at": "2026-09-11T22:37:04.228397+08:00",
+        "replacement": "B?"
+      },
+      {
+        "code": "US.BRK.B",
+        "name": "伯克希尔-B",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 510.33,
+        "detected_at": "2026-09-11T22:31:16.132528+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AVGO",
+        "name": "博通",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 366.78,
+        "detected_at": "2026-09-11T22:31:13.079528+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ALAB",
+        "name": "Astera Labs",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 297.6099,
+        "detected_at": "2026-09-11T22:31:09.331032+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ILMN",
+        "name": "Illumina",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 200.01,
+        "detected_at": "2026-09-11T22:31:06.733061+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SNOW",
+        "name": "Snowflake",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 323.42,
+        "detected_at": "2026-09-11T22:31:01.410886+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.PEP",
+        "name": "百事可乐",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 136.36,
+        "detected_at": "2026-09-11T22:30:56.355051+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AMAT",
+        "name": "应用材料",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 463.09,
+        "detected_at": "2026-09-11T22:30:55.237016+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ONTO",
+        "name": "Onto Innovation",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 282.08,
+        "detected_at": "2026-09-11T22:30:53.794512+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.MSM",
+        "name": "MSC Industrial Direct",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 123.045,
+        "detected_at": "2026-09-11T22:30:52.496828+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FN",
+        "name": "Fabrinet",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 418.0,
+        "detected_at": "2026-09-11T22:30:52.151365+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.JPM",
+        "name": "摩根大通",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 360.04,
+        "detected_at": "2026-09-11T22:30:51.087427+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.PHM",
+        "name": "普得集团",
+        "label": "3S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 118.65,
+        "detected_at": "2026-09-11T22:30:50.164779+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CSX",
+        "name": "CSX运输",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 49.65,
+        "detected_at": "2026-09-11T22:30:49.397491+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FTNT",
+        "name": "飞塔信息",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 156.13,
+        "detected_at": "2026-09-11T22:30:48.892685+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AMD",
+        "name": "美国超微公司",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 501.35,
+        "detected_at": "2026-09-11T22:30:43.579036+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NTLA",
+        "name": "Intellia Therapeutics",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 12.19,
+        "detected_at": "2026-09-11T22:30:42.371420+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NOW",
+        "name": "ServiceNow",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 130.39,
+        "detected_at": "2026-09-11T22:30:41.134687+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RMBS",
+        "name": "Rambus",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 88.1001,
+        "detected_at": "2026-09-11T22:30:38.962900+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ELMT",
+        "name": "Elmet Group",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 15.8,
+        "detected_at": "2026-09-11T22:30:37.028923+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.COHR",
+        "name": "Coherent",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 312.68,
+        "detected_at": "2026-09-11T22:30:36.167966+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.IREN",
+        "name": "IREN Ltd",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 43.28,
+        "detected_at": "2026-09-11T22:30:35.916201+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ICHR",
+        "name": "Ichor Holdings",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 58.135,
+        "detected_at": "2026-09-11T22:30:35.371714+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.F",
+        "name": "福特汽车",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 14.12,
+        "detected_at": "2026-09-11T22:30:33.421534+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.DDOG",
+        "name": "Datadog",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 218.28,
+        "detected_at": "2026-09-11T22:30:32.594225+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.EAT",
+        "name": "布林克国际",
+        "label": "3S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 216.53,
+        "detected_at": "2026-09-11T22:30:25.818714+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.LMND",
+        "name": "Lemonade",
+        "label": "3S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 50.99,
+        "detected_at": "2026-09-11T22:30:23.839687+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FORM",
+        "name": "FormFactor",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-11 10:00:00",
+        "bar_end": "2026-09-11 11:00:00",
+        "price": 117.12,
+        "detected_at": "2026-09-11T22:30:20.909308+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AMZN",
+        "name": "亚马逊",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 16:00:00",
+        "bar_end": "2026-09-11 10:00:00",
+        "price": 250.89,
+        "detected_at": "2026-09-11T22:06:22.738432+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CEG",
+        "name": "Constellation Energy",
+        "label": "3B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 16:00:00",
+        "bar_end": "2026-09-11 10:00:00",
+        "price": 285.82,
+        "detected_at": "2026-09-11T22:06:20.491117+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.GLW",
+        "name": "康宁",
+        "label": "3B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 16:00:00",
+        "bar_end": "2026-09-11 10:00:00",
+        "price": 162.88,
+        "detected_at": "2026-09-11T22:06:18.466840+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AVGO",
+        "name": "博通",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-11 10:00:00",
+        "price": 357.75,
+        "detected_at": "2026-09-11T22:06:16.445289+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.EROC",
+        "name": "ERock",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 16:00:00",
+        "bar_end": "2026-09-11 10:00:00",
+        "price": 11.82,
+        "detected_at": "2026-09-11T22:05:59.682816+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.KLAC",
+        "name": "科磊",
+        "label": "3B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 16:00:00",
+        "bar_end": "2026-09-11 10:00:00",
+        "price": 176.72,
+        "detected_at": "2026-09-11T22:05:58.477163+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.WMT",
+        "name": "沃尔玛",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 16:00:00",
+        "bar_end": "2026-09-11 10:00:00",
+        "price": 105.59,
+        "detected_at": "2026-09-11T22:05:51.196235+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SONO",
+        "name": "搜诺思公司",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 16:00:00",
+        "bar_end": "2026-09-11 10:00:00",
+        "price": 14.5,
+        "detected_at": "2026-09-11T22:05:23.100299+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FCEL",
+        "name": "燃料电池能源",
+        "label": "3B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 15:30:00",
+        "bar_end": "2026-09-11 10:00:00",
+        "price": 15.49,
+        "detected_at": "2026-09-11T22:05:21.755254+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.MRVL",
+        "name": "迈威尔科技",
+        "label": "3B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 16:00:00",
+        "bar_end": "2026-09-11 10:00:00",
+        "price": 226.15,
+        "detected_at": "2026-09-11T22:05:21.516988+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AVGO",
+        "name": "博通",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-11 10:00:00",
+        "price": 357.75,
+        "detected_at": "2026-09-11T21:41:53.171621+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.OKTA",
+        "name": "Okta",
+        "label": "1S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:30:00",
+        "bar_end": "2026-09-10 12:00:00",
+        "price": 179.44,
+        "detected_at": "2026-09-11T01:22:01.765448+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CRWD",
+        "name": "CrowdStrike",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 12:00:00",
+        "bar_end": "2026-09-10 13:00:00",
+        "price": 214.68,
+        "detected_at": "2026-09-11T01:22:01.287321+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.KLAC",
+        "name": "科磊",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 12:00:00",
+        "bar_end": "2026-09-10 13:00:00",
+        "price": 180.64,
+        "detected_at": "2026-09-11T01:21:59.518597+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SIMO",
+        "name": "慧荣科技",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 12:00:00",
+        "bar_end": "2026-09-10 13:00:00",
+        "price": 274.0093,
+        "detected_at": "2026-09-11T01:21:54.252482+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TEAM",
+        "name": "Atlassian",
+        "label": "3S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 11:00:00",
+        "bar_end": "2026-09-10 12:00:00",
+        "price": 183.05,
+        "detected_at": "2026-09-11T01:21:53.728414+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NOW",
+        "name": "ServiceNow",
+        "label": "3S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 12:00:00",
+        "bar_end": "2026-09-10 13:00:00",
+        "price": 134.44,
+        "detected_at": "2026-09-11T01:21:49.743701+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.V",
+        "name": "Visa",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 11:00:00",
+        "bar_end": "2026-09-10 12:00:00",
+        "price": 365.52,
+        "detected_at": "2026-09-11T00:32:06.602186+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.MA",
+        "name": "万事达",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 11:00:00",
+        "bar_end": "2026-09-10 12:00:00",
+        "price": 563.25,
+        "detected_at": "2026-09-11T00:32:05.867464+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.LMND",
+        "name": "Lemonade",
+        "label": "3S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:30:00",
+        "bar_end": "2026-09-10 12:00:00",
+        "price": 50.435,
+        "detected_at": "2026-09-11T00:32:05.108454+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.DHT",
+        "name": "DHT控股",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 11:30:00",
+        "bar_end": "2026-09-10 12:00:00",
+        "price": 21.38,
+        "detected_at": "2026-09-11T00:32:01.975756+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.LIN",
+        "name": "林德气体",
+        "label": "S?",
+        "kind": "已通知信号修订",
+        "pivot_time": "2026-09-09 16:00:00",
+        "bar_end": "2026-09-10 11:30:00",
+        "price": 467.59,
+        "detected_at": "2026-09-10T23:37:54.310165+08:00",
+        "replacement": "3S?"
+      },
+      {
+        "code": "US.ECHO",
+        "name": "回声星通信",
+        "label": "3B?",
+        "kind": "已通知信号修订",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:30:00",
+        "price": 89.13,
+        "detected_at": "2026-09-10T23:37:44.469248+08:00",
+        "replacement": "B?"
+      },
+      {
+        "code": "US.MU",
+        "name": "美光科技",
+        "label": "3B?",
+        "kind": "已通知信号修订",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:30:00",
+        "price": 982.14,
+        "detected_at": "2026-09-10T23:37:16.032801+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.OKTA",
+        "name": "Okta",
+        "label": "1S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:30:00",
+        "bar_end": "2026-09-10 12:00:00",
+        "price": 179.44,
+        "detected_at": "2026-09-10T23:31:29.568152+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TEAM",
+        "name": "Atlassian",
+        "label": "3S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 11:00:00",
+        "bar_end": "2026-09-10 12:00:00",
+        "price": 183.05,
+        "detected_at": "2026-09-10T23:31:23.091984+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.V",
+        "name": "Visa",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 11:00:00",
+        "bar_end": "2026-09-10 12:00:00",
+        "price": 365.52,
+        "detected_at": "2026-09-10T23:31:11.064350+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.MA",
+        "name": "万事达",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 11:00:00",
+        "bar_end": "2026-09-10 12:00:00",
+        "price": 563.25,
+        "detected_at": "2026-09-10T23:31:10.100355+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.LMND",
+        "name": "Lemonade",
+        "label": "3S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:30:00",
+        "bar_end": "2026-09-10 12:00:00",
+        "price": 50.435,
+        "detected_at": "2026-09-10T23:31:09.376161+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TSLA",
+        "name": "特斯拉",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 357.68,
+        "detected_at": "2026-09-10T23:02:49.095875+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TSM",
+        "name": "台积电",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:30:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 424.05,
+        "detected_at": "2026-09-10T23:02:49.031354+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.MSFT",
+        "name": "微软",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 486.0,
+        "detected_at": "2026-09-10T23:02:48.964328+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.MP",
+        "name": "MP Materials",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:30:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 52.21,
+        "detected_at": "2026-09-10T23:02:48.462763+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NFLX",
+        "name": "奈飞",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 75.03,
+        "detected_at": "2026-09-10T23:02:48.268591+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.BRK.B",
+        "name": "伯克希尔-B",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 510.55,
+        "detected_at": "2026-09-10T23:02:48.071275+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.GLW",
+        "name": "康宁",
+        "label": "3B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 163.5,
+        "detected_at": "2026-09-10T23:02:47.867996+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.HIMS",
+        "name": "Hims & Hers Health",
+        "label": "1B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 27.1205,
+        "detected_at": "2026-09-10T23:02:47.061989+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SMR",
+        "name": "NuScale Power",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:30:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 10.22,
+        "detected_at": "2026-09-10T23:02:46.678800+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.VECO",
+        "name": "维易科精密仪器",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 43.29,
+        "detected_at": "2026-09-10T23:02:46.611572+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NOK",
+        "name": "诺基亚",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 10.45,
+        "detected_at": "2026-09-10T23:02:46.544656+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RDW",
+        "name": "Redwire",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 10.43,
+        "detected_at": "2026-09-10T23:02:46.488507+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ALAB",
+        "name": "Astera Labs",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 280.53,
+        "detected_at": "2026-09-10T23:02:46.421360+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.GFS",
+        "name": "GlobalFoundries",
+        "label": "3B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 44.66,
+        "detected_at": "2026-09-10T23:02:46.288562+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.QCOM",
+        "name": "高通",
+        "label": "3B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 171.0,
+        "detected_at": "2026-09-10T23:02:45.979031+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RIOT",
+        "name": "Riot Platforms",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 20.78,
+        "detected_at": "2026-09-10T23:02:45.462242+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.VIVO",
+        "name": "VivoPower",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 3.93,
+        "detected_at": "2026-09-10T23:02:45.037257+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CIEN",
+        "name": "Ciena",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 328.3584,
+        "detected_at": "2026-09-10T23:02:44.962516+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.OUST",
+        "name": "Ouster",
+        "label": "3B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 35.0,
+        "detected_at": "2026-09-10T23:02:44.824577+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.UMAC",
+        "name": "Unusual Machines",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 23.72,
+        "detected_at": "2026-09-10T23:02:44.564902+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SOFI",
+        "name": "SoFi Technologies",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-04 15:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 18.34,
+        "detected_at": "2026-09-10T23:02:44.163965+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SOFI",
+        "name": "SoFi Technologies",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-04 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 17.96,
+        "detected_at": "2026-09-10T23:02:44.163961+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.VIAV",
+        "name": "Viavi Solutions",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:30:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 37.23,
+        "detected_at": "2026-09-10T23:02:43.853236+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.EROC",
+        "name": "ERock",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 12.33,
+        "detected_at": "2026-09-10T23:02:43.313018+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.LRCX",
+        "name": "泛林集团",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 299.26,
+        "detected_at": "2026-09-10T23:02:43.184112+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ECHO",
+        "name": "回声星通信",
+        "label": "3B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 89.13,
+        "detected_at": "2026-09-10T23:02:42.990803+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.PENG",
+        "name": "Penguin Solutions",
+        "label": "3B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:30:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 48.5305,
+        "detected_at": "2026-09-10T23:02:42.827040+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ONTO",
+        "name": "Onto Innovation",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 266.6,
+        "detected_at": "2026-09-10T23:02:42.751779+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AEVA",
+        "name": "Aeva Technologies",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 14.87,
+        "detected_at": "2026-09-10T23:02:42.491617+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FN",
+        "name": "Fabrinet",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 402.4001,
+        "detected_at": "2026-09-10T23:02:42.350080+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.WYFI",
+        "name": "WhiteFiber",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 18.2,
+        "detected_at": "2026-09-10T23:02:42.279997+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.DAVE",
+        "name": "Dave Inc",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-08 15:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 379.09,
+        "detected_at": "2026-09-10T23:02:41.857831+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.DAVE",
+        "name": "Dave Inc",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-08 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 365.01,
+        "detected_at": "2026-09-10T23:02:41.857825+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.WELL",
+        "name": "Welltower",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:30:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 239.91,
+        "detected_at": "2026-09-10T23:02:41.499760+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FTNT",
+        "name": "飞塔信息",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 154.0001,
+        "detected_at": "2026-09-10T23:02:41.427172+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.WMT",
+        "name": "沃尔玛",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 107.155,
+        "detected_at": "2026-09-10T23:02:41.288882+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SIMO",
+        "name": "慧荣科技",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 261.57,
+        "detected_at": "2026-09-10T23:02:40.987064+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ZS",
+        "name": "Zscaler",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 162.21,
+        "detected_at": "2026-09-10T23:02:40.783225+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CMI",
+        "name": "康明斯",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 557.67,
+        "detected_at": "2026-09-10T23:02:40.492673+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.Q",
+        "name": "Qnity Electronics",
+        "label": "3B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 121.51,
+        "detected_at": "2026-09-10T23:02:39.927455+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AMD",
+        "name": "美国超微公司",
+        "label": "3B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 504.03,
+        "detected_at": "2026-09-10T23:02:39.854004+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TWST",
+        "name": "Twist Bioscience",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 120.19,
+        "detected_at": "2026-09-10T23:02:39.784077+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ABCL",
+        "name": "AbCellera Biologics",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 10.58,
+        "detected_at": "2026-09-10T23:02:39.622452+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CRDO",
+        "name": "Credo Technology",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 159.2,
+        "detected_at": "2026-09-10T23:02:39.256587+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TECH",
+        "name": "Bio-Techne",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 72.325,
+        "detected_at": "2026-09-10T23:02:38.940907+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ONC",
+        "name": "百济神州",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 336.95,
+        "detected_at": "2026-09-10T23:02:38.806958+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AMKR",
+        "name": "艾马克技术",
+        "label": "3B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 48.9109,
+        "detected_at": "2026-09-10T23:02:38.740615+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RMBS",
+        "name": "Rambus",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 84.147,
+        "detected_at": "2026-09-10T23:02:38.670997+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CRWV",
+        "name": "CoreWeave",
+        "label": "2B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 88.7301,
+        "detected_at": "2026-09-10T23:02:38.526915+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NBIS",
+        "name": "NEBIUS",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 228.27,
+        "detected_at": "2026-09-10T23:02:38.462811+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ACMR",
+        "name": "ACM Research",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 71.0,
+        "detected_at": "2026-09-10T23:02:38.394753+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AEHR",
+        "name": "Aehr Test Systems",
+        "label": "3B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 92.0,
+        "detected_at": "2026-09-10T23:02:38.264197+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ELMT",
+        "name": "Elmet Group",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 16.1,
+        "detected_at": "2026-09-10T23:02:38.195759+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.IREN",
+        "name": "IREN Ltd",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 43.45,
+        "detected_at": "2026-09-10T23:02:37.823398+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ICHR",
+        "name": "Ichor Holdings",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 55.2,
+        "detected_at": "2026-09-10T23:02:37.541901+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CGNX",
+        "name": "康耐视",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:30:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 60.715,
+        "detected_at": "2026-09-10T23:02:37.203049+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CLSK",
+        "name": "CleanSpark",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 12.58,
+        "detected_at": "2026-09-10T23:02:36.990311+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.VSH",
+        "name": "威世科技",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 30.5,
+        "detected_at": "2026-09-10T23:02:36.145274+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.WDC",
+        "name": "西部数据",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 457.11,
+        "detected_at": "2026-09-10T23:02:35.880858+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RBRK",
+        "name": "Rubrik",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-08 14:30:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 92.3,
+        "detected_at": "2026-09-10T23:02:35.418695+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RBRK",
+        "name": "Rubrik",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-08 10:30:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 89.82,
+        "detected_at": "2026-09-10T23:02:35.418689+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TWLO",
+        "name": "Twilio",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 222.63,
+        "detected_at": "2026-09-10T23:02:35.023747+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.PLTR",
+        "name": "Palantir",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 164.55,
+        "detected_at": "2026-09-10T23:02:34.356270+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SMTC",
+        "name": "先科电子",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 154.4,
+        "detected_at": "2026-09-10T23:02:34.090165+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AEM",
+        "name": "伊格尔矿业",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 195.105,
+        "detected_at": "2026-09-10T23:02:33.860745+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.HOOD",
+        "name": "Robinhood",
+        "label": "S?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-01 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 106.96,
+        "detected_at": "2026-09-10T23:02:33.719615+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.HOOD",
+        "name": "Robinhood",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-01 15:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 102.45,
+        "detected_at": "2026-09-10T23:02:33.719609+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FSLY",
+        "name": "Fastly",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 21.82,
+        "detected_at": "2026-09-10T23:02:33.515349+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.MU",
+        "name": "美光科技",
+        "label": "3B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 982.14,
+        "detected_at": "2026-09-10T23:02:33.449985+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RKLB",
+        "name": "Rocket Lab",
+        "label": "B?",
+        "kind": "收盘复核仍存在",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 61.6,
+        "detected_at": "2026-09-10T23:02:32.982273+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FCEL",
+        "name": "燃料电池能源",
+        "label": "3B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 15.75,
+        "detected_at": "2026-09-10T23:02:32.438023+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.MRVL",
+        "name": "迈威尔科技",
+        "label": "3B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 228.05,
+        "detected_at": "2026-09-10T23:02:32.179335+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TSLA",
+        "name": "特斯拉",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 357.68,
+        "detected_at": "2026-09-10T22:32:20.566062+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NFLX",
+        "name": "奈飞",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 75.03,
+        "detected_at": "2026-09-10T22:32:19.599783+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.BRK.B",
+        "name": "伯克希尔-B",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 510.55,
+        "detected_at": "2026-09-10T22:32:19.404496+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.GLW",
+        "name": "康宁",
+        "label": "3B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 163.5,
+        "detected_at": "2026-09-10T22:32:19.057105+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.HIMS",
+        "name": "Hims & Hers Health",
+        "label": "1B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 27.1205,
+        "detected_at": "2026-09-10T22:32:18.320005+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.VECO",
+        "name": "维易科精密仪器",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 43.29,
+        "detected_at": "2026-09-10T22:32:17.757632+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RDW",
+        "name": "Redwire",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 10.43,
+        "detected_at": "2026-09-10T22:32:17.443980+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.GFS",
+        "name": "GlobalFoundries",
+        "label": "3B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 44.66,
+        "detected_at": "2026-09-10T22:32:17.166542+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RIOT",
+        "name": "Riot Platforms",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 20.78,
+        "detected_at": "2026-09-10T22:32:16.231266+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CIEN",
+        "name": "Ciena",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 328.3584,
+        "detected_at": "2026-09-10T22:32:15.265159+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.OUST",
+        "name": "Ouster",
+        "label": "3B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 35.0,
+        "detected_at": "2026-09-10T22:32:15.133923+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.UMAC",
+        "name": "Unusual Machines",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 23.72,
+        "detected_at": "2026-09-10T22:32:14.848787+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SOFI",
+        "name": "SoFi Technologies",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-04 15:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 18.34,
+        "detected_at": "2026-09-10T22:32:13.840185+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SOFI",
+        "name": "SoFi Technologies",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-04 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 17.96,
+        "detected_at": "2026-09-10T22:32:13.840175+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.EROC",
+        "name": "ERock",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 12.33,
+        "detected_at": "2026-09-10T22:32:12.133176+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ECHO",
+        "name": "回声星通信",
+        "label": "3B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 89.13,
+        "detected_at": "2026-09-10T22:32:11.799266+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ONTO",
+        "name": "Onto Innovation",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 266.6,
+        "detected_at": "2026-09-10T22:32:11.325048+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.WYFI",
+        "name": "WhiteFiber",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 18.2,
+        "detected_at": "2026-09-10T22:32:10.562831+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.FTNT",
+        "name": "飞塔信息",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 154.0001,
+        "detected_at": "2026-09-10T22:32:09.296076+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SIMO",
+        "name": "慧荣科技",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 261.57,
+        "detected_at": "2026-09-10T22:32:08.699701+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ZS",
+        "name": "Zscaler",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 162.21,
+        "detected_at": "2026-09-10T22:32:07.997162+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CMI",
+        "name": "康明斯",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 557.67,
+        "detected_at": "2026-09-10T22:32:07.634875+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.Q",
+        "name": "Qnity Electronics",
+        "label": "3B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 121.51,
+        "detected_at": "2026-09-10T22:32:07.154639+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TWST",
+        "name": "Twist Bioscience",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 120.19,
+        "detected_at": "2026-09-10T22:32:06.919091+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ABCL",
+        "name": "AbCellera Biologics",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 10.58,
+        "detected_at": "2026-09-10T22:32:06.683833+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TECH",
+        "name": "Bio-Techne",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 72.325,
+        "detected_at": "2026-09-10T22:32:05.351129+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ONC",
+        "name": "百济神州",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 336.95,
+        "detected_at": "2026-09-10T22:32:05.060951+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CRWV",
+        "name": "CoreWeave",
+        "label": "2B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 88.7301,
+        "detected_at": "2026-09-10T22:32:04.367111+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ACMR",
+        "name": "ACM Research",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 71.0,
+        "detected_at": "2026-09-10T22:32:04.081518+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AEHR",
+        "name": "Aehr Test Systems",
+        "label": "3B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 92.0,
+        "detected_at": "2026-09-10T22:32:03.945853+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ELMT",
+        "name": "Elmet Group",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 16.1,
+        "detected_at": "2026-09-10T22:32:03.882726+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.IREN",
+        "name": "IREN Ltd",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 43.45,
+        "detected_at": "2026-09-10T22:32:03.470643+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.CLSK",
+        "name": "CleanSpark",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 12.58,
+        "detected_at": "2026-09-10T22:32:02.601782+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RBRK",
+        "name": "Rubrik",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-08 14:30:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 92.3,
+        "detected_at": "2026-09-10T22:32:00.718402+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RBRK",
+        "name": "Rubrik",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-08 10:30:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 89.82,
+        "detected_at": "2026-09-10T22:32:00.718397+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.TWLO",
+        "name": "Twilio",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 222.63,
+        "detected_at": "2026-09-10T22:32:00.281292+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AEM",
+        "name": "伊格尔矿业",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 195.105,
+        "detected_at": "2026-09-10T22:31:58.608095+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.HOOD",
+        "name": "Robinhood",
+        "label": "S?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-01 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 106.96,
+        "detected_at": "2026-09-10T22:31:58.463101+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.HOOD",
+        "name": "Robinhood",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-01 15:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 102.45,
+        "detected_at": "2026-09-10T22:31:58.463094+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.RKLB",
+        "name": "Rocket Lab",
+        "label": "B?",
+        "kind": "盘中预警｜未收盘",
+        "pivot_time": "2026-09-10 10:00:00",
+        "bar_end": "2026-09-10 11:00:00",
+        "price": 61.6,
+        "detected_at": "2026-09-10T22:31:57.406991+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.LIN",
+        "name": "林德气体",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-09 16:00:00",
+        "bar_end": "2026-09-10 10:00:00",
+        "price": 467.59,
+        "detected_at": "2026-09-10T22:06:59.948707+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.AMBA",
+        "name": "安霸",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-09 16:00:00",
+        "bar_end": "2026-09-10 10:00:00",
+        "price": 69.59,
+        "detected_at": "2026-09-10T22:06:55.203760+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.ENTG",
+        "name": "英特格",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-09 16:00:00",
+        "bar_end": "2026-09-10 10:00:00",
+        "price": 143.11,
+        "detected_at": "2026-09-10T22:06:51.930737+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.MSM",
+        "name": "MSC Industrial Direct",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-09 16:00:00",
+        "bar_end": "2026-09-10 10:00:00",
+        "price": 120.16,
+        "detected_at": "2026-09-10T22:06:49.240938+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.SKHY",
+        "name": "SK海力士",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-09 16:00:00",
+        "bar_end": "2026-09-10 10:00:00",
+        "price": 199.865,
+        "detected_at": "2026-09-10T22:06:39.238691+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.KO",
+        "name": "可口可乐",
+        "label": "1B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-09 16:00:00",
+        "bar_end": "2026-09-10 10:00:00",
+        "price": 87.41,
+        "detected_at": "2026-09-10T22:06:34.325163+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.NOC",
+        "name": "诺斯罗普格鲁曼",
+        "label": "B?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-09 16:00:00",
+        "bar_end": "2026-09-10 10:00:00",
+        "price": 515.51,
+        "detected_at": "2026-09-10T22:06:30.776890+08:00",
+        "replacement": null
+      },
+      {
+        "code": "US.UMC",
+        "name": "联电",
+        "label": "S?",
+        "kind": "收盘新增观察",
+        "pivot_time": "2026-09-09 16:00:00",
+        "bar_end": "2026-09-10 10:00:00",
+        "price": 22.7,
+        "detected_at": "2026-09-10T22:06:29.205865+08:00",
+        "replacement": null
+      }
+    ]
+  },
+  "structure": {
+    "asof": "2026-09-11T12:00:00-04:00",
+    "ready": false,
+    "status": "个股通道冻结：财报日历未核验",
+    "rows": []
+  },
+  "post": {
+    "date": "2026-09-11",
+    "rows": [
+      {
+        "code": "US.SMCI",
+        "name": "超微电脑",
+        "status": "确认后观察仓",
+        "close": 40.1,
+        "confirmation": 39.26,
+        "invalidation": 35.63,
+        "reduce": 44.7,
+        "target": 48.33,
+        "review": 10
+      },
+      {
+        "code": "US.TSM",
+        "name": "台积电",
+        "status": "确认后观察仓",
+        "close": 433.24,
+        "confirmation": 432.53,
+        "invalidation": 417.13,
+        "reduce": 455.63,
+        "target": 471.03,
+        "review": 10
+      },
+      {
+        "code": "US.NOK",
+        "name": "诺基亚",
+        "status": "只观察",
+        "close": 11.13,
+        "confirmation": 10.75,
+        "invalidation": 9.54,
+        "reduce": 12.57,
+        "target": 13.78,
+        "review": 3
+      },
+      {
+        "code": "US.ARM",
+        "name": "Arm Holdings",
+        "status": "只观察",
+        "close": 264.79,
+        "confirmation": 265.83,
+        "invalidation": 229.3,
+        "reduce": 320.63,
+        "target": 357.16,
+        "review": 5
+      },
+      {
+        "code": "US.MXL",
+        "name": "MaxLinear",
+        "status": "只观察",
+        "close": 74.57,
+        "confirmation": 70.8,
+        "invalidation": 66.92,
+        "reduce": 89.0,
+        "target": 90.94,
+        "review": 5
+      },
+      {
+        "code": "US.ANET",
+        "name": "Arista Networks",
+        "status": "只观察",
+        "close": 199.59,
+        "confirmation": 193.56,
+        "invalidation": 186.53,
+        "reduce": 210.11,
+        "target": 213.63,
+        "review": 5
+      },
+      {
+        "code": "US.CLSK",
+        "name": "CleanSpark",
+        "status": "只观察",
+        "close": 13.67,
+        "confirmation": 13.49,
+        "invalidation": 10.77,
+        "reduce": 17.57,
+        "target": 20.29,
+        "review": 5
+      },
+      {
+        "code": "US.MRNA",
+        "name": "Moderna",
+        "status": "只观察",
+        "close": 143.97,
+        "confirmation": 140.15,
+        "invalidation": 130.38,
+        "reduce": 176.66,
+        "target": 181.55,
+        "review": 5
+      },
+      {
+        "code": "US.VIAV",
+        "name": "Viavi Solutions",
+        "status": "只观察",
+        "close": 38.75,
+        "confirmation": 39.88,
+        "invalidation": 32.8,
+        "reduce": 50.5,
+        "target": 57.58,
+        "review": 3
+      },
+      {
+        "code": "US.COHR",
+        "name": "Coherent",
+        "status": "只观察",
+        "close": 305.37,
+        "confirmation": 309.99,
+        "invalidation": 255.25,
+        "reduce": 392.1,
+        "target": 446.84,
+        "review": 3
+      }
+    ]
+  }
+}

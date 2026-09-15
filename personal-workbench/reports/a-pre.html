@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2026-09-15 A股盘前情报</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f8fb;
+      --paper: #ffffff;
+      --text: #172033;
+      --muted: #64748b;
+      --line: #dbe3ef;
+      --accent: #155eef;
+      --head: #eef4ff;
+      --quote: #f0f6ff;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      padding: 28px 18px 64px;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+    main, body > * { max-width: 1120px; margin-left: auto; margin-right: auto; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: -.01em; }
+    h1 { margin: 0 0 20px; font-size: 30px; }
+    h2 { margin-top: 40px; padding-bottom: 9px; border-bottom: 2px solid var(--accent); font-size: 23px; }
+    h3 { margin-top: 28px; font-size: 19px; }
+    p { margin: 12px auto; }
+    body > p:first-of-type { margin-top: 0; margin-bottom: 20px; font-size: 30px; line-height: 1.3; font-weight: 750; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; overflow-wrap: anywhere; }
+    strong { font-weight: 700; }
+    table {
+      display: block;
+      width: 100%;
+      margin: 18px auto 24px;
+      overflow-x: auto;
+      border-collapse: collapse;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      -webkit-overflow-scrolling: touch;
+    }
+    th, td { min-width: 120px; padding: 11px 12px; border: 1px solid var(--line); vertical-align: top; text-align: left; }
+    th { background: var(--head); font-weight: 700; white-space: nowrap; }
+    tr:nth-child(even) td { background: color-mix(in srgb, var(--paper) 94%, var(--head)); }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 7px 0; }
+    code { padding: .12em .35em; border-radius: 5px; background: var(--head); }
+    blockquote { margin: 18px 0; padding: 10px 16px; border-left: 4px solid var(--accent); background: var(--quote); color: var(--muted); }
+    hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+    @media (max-width: 640px) {
+      body { padding: 20px 12px 48px; font-size: 15px; }
+      h1 { font-size: 24px; }
+      body > p:first-of-type { font-size: 24px; }
+      h2 { font-size: 20px; margin-top: 34px; }
+      th, td { min-width: 108px; padding: 9px 10px; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1020;
+        --paper: #111827;
+        --text: #e5edf8;
+        --muted: #a7b4c8;
+        --line: #2a3850;
+        --accent: #78a7ff;
+        --head: #17243b;
+        --quote: #111d33;
+      }
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">2026-09-15 A股盘前情报</h1>
+</header>
+<p>【盘前验收快照｜2026-09-15 07:30】</p>
+<p>数据冻结时间：北京时间2026-09-15
+07:30。A股行情统一使用最近已完成交易日2026-09-14收盘数据；隔夜市场使用截至北京时间2026-09-15
+07:20可核验的9月14日美股完整交易时段及随后报价。上交所休市安排显示9月15日不在休市区间，今日为A股正常交易日。<a
+href="https://www.sse.com.cn/disclosure/dealinstruc/closed/">上交所休市安排</a></p>
+<h2 id="1-今日一句话结论">1. 今日一句话结论</h2>
+<p>今日定性为<strong>下行环境中的防守型结构观察</strong>，建议总仓位由20%—30%下调至<strong>15%—25%</strong>：网络安全获得《人工智能安全治理框架3.0》、国家网络安全宣传周和隔夜美股安全软件上涨的三重催化，可列第一条件方向；但费城半导体指数隔夜重挫约5.9%、美国10年期国债收益率一度突破5%，而9月14日中际旭创、沪电股份已先行走弱，AI硬件、光通信与PCB必须降级，未经网络安全中军换手承接和指数止跌不提高仓位。</p>
+<p>主要风险：网络安全前排已连续涨停，正式政策可能被用于高开兑现；10:00将公布中国8月经济数据，晚间进入FOMC会议窗口；油价仍处高位、长债收益率突破5%会继续压制高估值成长。</p>
+<h2 id="2-隔夜映射">2. 隔夜映射</h2>
+<table>
+<thead>
+<tr class="header">
+<th>市场/方向</th>
+<th style="text-align: right;">9月14日完整时段表现</th>
+<th>映射性质</th>
+<th>对A股的含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>标普500</td>
+<td style="text-align: right;">-0.48%</td>
+<td>市场情绪</td>
+<td>利率与AI风险压制估值，A股弱市背景未解除</td>
+</tr>
+<tr class="even">
+<td>纳斯达克综合</td>
+<td style="text-align: right;">-0.56%</td>
+<td>市场情绪</td>
+<td>成长风格承压，但指数跌幅小于AI硬件，显示内部轮动而非全面崩跌</td>
+</tr>
+<tr class="odd">
+<td>费城半导体SOX</td>
+<td style="text-align: right;"><strong>-5.9%</strong></td>
+<td>行业直接情绪</td>
+<td>对A股半导体、光通信、服务器PCB构成明显负映射</td>
+</tr>
+<tr class="even">
+<td>AI芯片/存储</td>
+<td style="text-align: right;">NVDA -3.33%、AVGO -4.85%、AMD -4.37%、MU
+-5.27%</td>
+<td>行业情绪</td>
+<td>海外核心同步下跌，不能再以单一产业消息恢复A股算力主线</td>
+</tr>
+<tr class="odd">
+<td>光通信/服务器/网络/电力</td>
+<td style="text-align: right;">GLW -13.73%、COHR -12.73%、LITE
+-9.92%、DELL -5.82%、HPE -10.77%、ANET -5.88%、VRT -7.64%</td>
+<td>行业情绪</td>
+<td>A股中际、沪电9月14日已经失败，今日列为风险指标而非进攻池</td>
+</tr>
+<tr class="even">
+<td>网络安全/软件</td>
+<td style="text-align: right;">CRWD +13.91%、ZS +16.49%、NOW +7.42%</td>
+<td>行业情绪与估值轮动</td>
+<td>与国内正式安全治理框架共振，但不代表A股公司直接取得订单</td>
+</tr>
+<tr class="odd">
+<td>利率/原油</td>
+<td
+style="text-align: right;">10年期美债收益率一度突破5%；布伦特结算约105.68美元</td>
+<td>跨资产直接约束</td>
+<td>折现率与能源通胀风险继续压制高估值成长；油气A股仍须防高开兑现</td>
+</tr>
+</tbody>
+</table>
+<p>隔夜收盘及跨资产来源：<a
+href="https://www.reuters.com/business/ai-warnings-knock-nasdaq-futures-pressure-tech-stocks-2026-09-14/">Reuters美股收盘</a>；个股9月14日收盘价由对应证券行情页交叉核验。AI硬件的同步下跌是板块级风险确认，安全软件上涨则是相对轮动，不能互相抵消。</p>
+<h2 id="3-情报社线索交叉验证">3. 情报社线索交叉验证</h2>
+<p>已按要求先读取<a
+href="https://github.com/iroryagame-afk/codex/blob/main/%E6%83%85%E6%8A%A5%E7%A4%BE/00%20%E7%B4%A2%E5%BC%95.md">情报社索引</a>，再选择性读取<a
+href="https://github.com/iroryagame-afk/codex/blob/main/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14.md">9月14日日报</a>、元器件与创新药综述、沪电股份和中际旭创笔记。索引及多份个股笔记最后更新于8月11日，未附一手出处的订单、产能和份额判断均按C级线索处理。</p>
+<table>
+<thead>
+<tr class="header">
+<th>GitHub笔记路径</th>
+<th>原始观点/线索</th>
+<th>最新外部证据</th>
+<th>状态</th>
+<th>对今日观察池影响</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2026-09-14.md（CIOE/CPO/NPO线索）</td>
+<td>1.6T、CPO及高速光模块景气，部分供应链可能受益</td>
+<td>9月14日A股中际-5.72%、沪电-1.99%；隔夜GLW、COHR、LITE跌约10%—14%</td>
+<td><strong>证伪短线映射</strong></td>
+<td>光通信/PCB退出正式候选，仅保留风险观察</td>
+</tr>
+<tr class="even">
+<td>2026-09-14.md（MLCC线索）</td>
+<td>现货趋稳，Q4可能调价</td>
+<td>9月14日MLCC概念约+3.14%，风华高科+5.20%、三环集团+1.18%；仍无村田或A股公司正式涨价/订单披露</td>
+<td><strong>部分兑现</strong></td>
+<td>保留风华、三环的分歧承接观察，不追涨</td>
+</tr>
+<tr class="odd">
+<td>2026-09-14.md（CRO线索）</td>
+<td>创新药外包景气修复</td>
+<td>9月14日CRO概念约+3.40%，药石+8.34%、美迪西+8.56%；未发现当天新增正式行业订单/政策</td>
+<td><strong>价格强化、催化待验证</strong></td>
+<td>仅列低置信度持续性观察</td>
+</tr>
+<tr class="even">
+<td>生命科学与创新药/00 行业综述.md</td>
+<td>AI4S、BD及产业趋势可能带来长期机会</td>
+<td>笔记日期为8月11日，无法解释9月14日CRO普涨</td>
+<td><strong>待验证</strong></td>
+<td>不将旧产业逻辑重新包装为当天新催化</td>
+</tr>
+<tr class="odd">
+<td>2026-09-14.md（阳光电源调价线索）</td>
+<td>9月20日起逆变器、PCS、储能系统拟提价5%—15%</td>
+<td>可见媒体转述客户通知，但冻结前未找到交易所正式公告</td>
+<td><strong>待验证</strong></td>
+<td>列催化观察，不纳入正式候选</td>
+</tr>
+<tr class="even">
+<td>2026-09-14.md及安全主题线索</td>
+<td>AI应用扩大安全投入需求</td>
+<td>网信办9月14日晚正式发布AI安全治理框架3.0，网络安全周已开幕；隔夜CRWD、ZS大涨</td>
+<td><strong>强化</strong></td>
+<td>网络安全升级为第一条件方向</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-催化事件表">4. 催化事件表</h2>
+<table>
+<thead>
+<tr class="header">
+<th>日期/时间</th>
+<th>准确信息</th>
+<th>来源级别</th>
+<th>受益/受损环节及A股映射</th>
+<th>持续性/是否已交易</th>
+<th>待验证项</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9月14日19:40</td>
+<td>国家网信办发布《人工智能安全治理框架3.0》，覆盖风险分类、技术与应用安全及治理措施</td>
+<td>A</td>
+<td>AI安全、数据安全、网络安全；深信服300454、奇安信688561为中军观察</td>
+<td>中期政策；发布在A股收盘后，尚未完整交易</td>
+<td>预算、订单和商业转化；前排能否换手承接。<a
+href="https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm">网信办原文</a></td>
+</tr>
+<tr class="even">
+<td>9月14日</td>
+<td>2026国家网络安全宣传周开幕，十部门参与并发布安全测试成果</td>
+<td>A</td>
+<td>安全服务、终端/云安全；板块9月14日已有多股涨停</td>
+<td>活动持续至9月20日，部分已提前交易</td>
+<td>中军与前排是否同步，不能只看连板股。<a
+href="https://www.cac.gov.cn/2026-09/14/c_1791137133265127.htm">网信办开幕信息</a></td>
+</tr>
+<tr class="odd">
+<td>9月14日美股</td>
+<td>CRWD、ZS、NOW显著上涨，而AI硬件与SOX大跌</td>
+<td>B（市场反应）</td>
+<td>A股安全软件获情绪映射；光通信、半导体、AI服务器受损</td>
+<td>短期；A股尚未交易隔夜结果</td>
+<td>A股安全板块是否能在指数承压时保持相对强度</td>
+</tr>
+<tr class="even">
+<td>9月15日10:00</td>
+<td>国家统计局将举行国民经济运行情况新闻发布会</td>
+<td>A</td>
+<td>宽基、周期、消费与利率预期</td>
+<td>硬日期；盘前尚未公布</td>
+<td>工业、消费、投资数据及修订值。<a
+href="https://www.stats.gov.cn/szst/">国家统计局发布入口</a></td>
+</tr>
+<tr class="odd">
+<td>9月15—16日</td>
+<td>美联储召开FOMC会议并发布经济预测</td>
+<td>A</td>
+<td>全球利率敏感成长、美元及商品</td>
+<td>硬日期；市场已部分计价25bp加息</td>
+<td>实际决议、点阵图与鲍威尔表态。<a
+href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">美联储日历</a></td>
+</tr>
+<tr class="even">
+<td>9月中旬媒体通知</td>
+<td>阳光电源部分逆变器、PCS及储能系统拟自9月20日起调价5%—15%</td>
+<td>B/C</td>
+<td>光储设备价格与利润率；阳光电源300274</td>
+<td>尚未获得公司公告；不能视为利润上修</td>
+<td>客户接受度、执行范围、原材料成本与正式披露</td>
+</tr>
+<tr class="odd">
+<td>9月11日起</td>
+<td>龙佰集团钛白粉国内上调700元/吨、海外上调100美元/吨的价格函被媒体报道</td>
+<td>B</td>
+<td>钛白粉价格改善；龙佰集团002601</td>
+<td>股票9月14日未获正向价格确认</td>
+<td>落地成交价、同行跟涨、库存及需求；不进观察池</td>
+</tr>
+</tbody>
+</table>
+<p>未发现可进入正式观察池的D级传闻；未经核验的客户、份额和订单说法全部排除。</p>
+<h2 id="5-盘后复盘今日板块建议">5. 盘后复盘→今日板块建议</h2>
+<table>
+<thead>
+<tr class="header">
+<th>板块</th>
+<th>9月14日盘后验证</th>
+<th>隔夜/盘前新增证据</th>
+<th>今日评级</th>
+<th>开盘验证条件</th>
+<th>证伪条件</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>网络安全</td>
+<td>板块已有中新赛克3连板及天融信等多股涨停，但指数级涨幅未满足S级标准</td>
+<td>AI安全治理框架3.0盘后发布；CRWD、ZS、NOW上涨</td>
+<td><strong>升级关注</strong></td>
+<td>奇安信、深信服30分钟后仍强于软件板块，至少一只前排完成换手且不炸板扩散</td>
+<td>中军高开低走并跌破9月14日低点；只剩连板小票</td>
+</tr>
+<tr class="even">
+<td>MLCC/元器件</td>
+<td>概念约+3.14%、两股涨停，风华放量上涨；无官方涨价/订单</td>
+<td>隔夜AI硬件大跌，但MLCC与GPU链并非同一盈利驱动</td>
+<td><strong>维持观察</strong></td>
+<td>风华守55.69、三环守120并至少一只放量突破前高</td>
+<td>风华跌破55.69且板块转弱；只剩补涨小票</td>
+</tr>
+<tr class="odd">
+<td>CRO</td>
+<td>概念约+3.40%，药石、美迪西及多只20cm核心扩散</td>
+<td>无新增正式催化，隔夜成长风险偏弱</td>
+<td><strong>维持低序观察</strong></td>
+<td>药石守40.93、美迪西守91.38，至少一只核心继续强于创业板</td>
+<td>高开后跌破前日实体中位且板块无承接</td>
+</tr>
+<tr class="even">
+<td>PCB/光通信/AI服务器</td>
+<td>PCB仅后排强，中际-5.72%、沪电-1.99%，核心条件证伪</td>
+<td>SOX -5.9%，海外光通信/服务器跌幅更大</td>
+<td><strong>降级/回避追涨</strong></td>
+<td>至少中际重回901、沪电重回128且成交放大后才重评</td>
+<td>继续弱于创业板/电子；只因消息高开</td>
+</tr>
+<tr class="odd">
+<td>油气/能源</td>
+<td>中国海油平收但高开回落并跌破33.80，A股多头条件未成立</td>
+<td>布伦特约105.68美元，仍高但未带来A股承接</td>
+<td><strong>维持对冲观察</strong></td>
+<td>中国海油重回34.27并持续强于沪深300</td>
+<td>再次高开低走或跌破33.66</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-etf申赎资金流上一交易日近3日近5日">6.
+ETF申赎资金流：上一交易日／近3日／近5日</h2>
+<p>截至07:30，9月14日清算后的全市场逐只股票ETF完整份额与单位净值尚未公开齐全；本节使用最近可完整核验的9月11日公开统计，明确滞后一交易日。公开媒体以份额变化结合成交均价等估算，不能与基金公司单位净值重算额无标识混用。<a
+href="https://www.mrjjxw.com/articles/2026-09-14/4580385.html">每日经济新闻ETF规模速报</a>
+· <a href="https://stock.10jqka.com.cn/">公开ETF资金统计</a> · <a
+href="https://www.sse.com.cn/market/funddata/volumn/etfvolumn/">上交所ETF规模入口</a></p>
+<h3 id="61-单只etf已核验样本">6.1 单只ETF已核验样本</h3>
+<table>
+<thead>
+<tr class="header">
+<th>代码</th>
+<th>名称</th>
+<th>跟踪指数/分类</th>
+<th style="text-align: right;">9月11日估算净流入</th>
+<th style="text-align: right;">近3日</th>
+<th style="text-align: right;">近5日</th>
+<th style="text-align: right;">最新规模</th>
+<th style="text-align: right;">9月11日涨幅</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>588000</td>
+<td>科创50ETF华夏</td>
+<td>科创50/宽基</td>
+<td style="text-align: right;">+21.34亿元</td>
+<td style="text-align: right;">无法完整统计</td>
+<td style="text-align: right;">无法完整统计</td>
+<td style="text-align: right;">无法统一核验</td>
+<td style="text-align: right;">约-1.2%</td>
+</tr>
+<tr class="even">
+<td>510300</td>
+<td>沪深300ETF华泰柏瑞</td>
+<td>沪深300/宽基</td>
+<td style="text-align: right;">+9.48亿元</td>
+<td style="text-align: right;">无法完整统计</td>
+<td style="text-align: right;">无法完整统计</td>
+<td style="text-align: right;">无法统一核验</td>
+<td style="text-align: right;">无法统一核验</td>
+</tr>
+<tr class="odd">
+<td>510500</td>
+<td>中证500ETF南方</td>
+<td>中证500/宽基</td>
+<td style="text-align: right;">-15.92亿元</td>
+<td style="text-align: right;">无法完整统计</td>
+<td style="text-align: right;">无法完整统计</td>
+<td style="text-align: right;">无法统一核验</td>
+<td style="text-align: right;">无法统一核验</td>
+</tr>
+</tbody>
+</table>
+<p>更正说明：上一期公开样本曾将“+9.48亿元”误配给通信ETF；最新交叉核验表明该数值对应<strong>沪深300ETF华泰柏瑞</strong>。通信设备类在9月11日是份额增加靠前的主题，但冻结前未取得统一口径的精确人民币金额，不再写入单只表。</p>
+<h3 id="62-指数维度已核验样本">6.2 指数维度已核验样本</h3>
+<table>
+<thead>
+<tr class="header">
+<th>指数</th>
+<th style="text-align: right;">已覆盖ETF的9月11日净流入/流出</th>
+<th>近3/5日</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>科创50</td>
+<td style="text-align: right;">至少+21.34亿元</td>
+<td>无法完整统计</td>
+<td>下跌净申购，说明逆向承接，不代表趋势反转</td>
+</tr>
+<tr class="even">
+<td>沪深300</td>
+<td style="text-align: right;">至少+9.48亿元</td>
+<td>无法完整统计</td>
+<td>宽基有承接，但不足以抵消指数弱势</td>
+</tr>
+<tr class="odd">
+<td>中证500</td>
+<td style="text-align: right;">至少-15.92亿元</td>
+<td>无法完整统计</td>
+<td>中盘股资金承压</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-板块类别维度">6.3 板块/类别维度</h3>
+<table>
+<thead>
+<tr class="header">
+<th>类别</th>
+<th style="text-align: right;">9月11日公开估算</th>
+<th>近3/5日</th>
+<th>与重点方向关系</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>股票ETF合计</td>
+<td style="text-align: right;">约+96.65亿元</td>
+<td>无法完整统计</td>
+<td>下跌日有承接，但分类与逐只口径不完全一致</td>
+</tr>
+<tr class="even">
+<td>通信设备主题</td>
+<td
+style="text-align: right;">当日份额增加居行业主题前列；金额无法统一核验</td>
+<td>无法完整统计</td>
+<td>只作辅助；隔夜AI硬件大跌已削弱该正面线索</td>
+</tr>
+<tr class="odd">
+<td>跨境股票ETF</td>
+<td style="text-align: right;">与境内A股分开</td>
+<td>无法完整统计</td>
+<td>不并入A股行业净申赎</td>
+</tr>
+</tbody>
+</table>
+<p>ETF优势是清算后份额变化更接近真实申赎；风险是当前数据滞后一日、公开估算方法不同且连续净值不完整。<strong>置信度：低。</strong></p>
+<h2 id="7-大盘与主线">7. 大盘与主线</h2>
+<h3 id="最近收盘环境">最近收盘环境</h3>
+<table>
+<thead>
+<tr class="header">
+<th>指数</th>
+<th style="text-align: right;">9月14日收盘</th>
+<th style="text-align: right;">当日涨跌</th>
+<th style="text-align: right;">近3日累计</th>
+<th style="text-align: right;">近5日累计</th>
+<th>结构判断</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>上证指数</td>
+<td style="text-align: right;">3885.33</td>
+<td style="text-align: right;">-0.07%</td>
+<td style="text-align: right;">-1.67%</td>
+<td style="text-align: right;">-1.20%</td>
+<td>弱势震荡，反弹未脱离下行区间</td>
+</tr>
+<tr class="even">
+<td>深证成指</td>
+<td style="text-align: right;">13384.57</td>
+<td style="text-align: right;">-0.64%</td>
+<td style="text-align: right;">-2.47%</td>
+<td style="text-align: right;">-2.83%</td>
+<td>明显弱于上证</td>
+</tr>
+<tr class="odd">
+<td>创业板指</td>
+<td style="text-align: right;">3285.58</td>
+<td style="text-align: right;">-1.10%</td>
+<td style="text-align: right;">-2.07%</td>
+<td style="text-align: right;">-3.33%</td>
+<td>成长承压</td>
+</tr>
+<tr class="even">
+<td>科创50</td>
+<td style="text-align: right;">1528.27</td>
+<td style="text-align: right;">-1.62%</td>
+<td style="text-align: right;">-3.28%</td>
+<td style="text-align: right;">-5.40%</td>
+<td>四大指数中最弱</td>
+</tr>
+<tr class="odd">
+<td>沪深300</td>
+<td style="text-align: right;">4480.08</td>
+<td style="text-align: right;">-0.67%</td>
+<td style="text-align: right;">-2.02%</td>
+<td style="text-align: right;">-2.08%</td>
+<td>权重继续调整</td>
+</tr>
+</tbody>
+</table>
+<p>9月14日沪深北成交约1.643万亿元，较9月11日减少3440.63亿元、约-17.31%；3126家上涨、2224家下跌，57家涨停、18家跌停。属于<strong>指数弱、成交缩、个股修复</strong>的轮动市。近3日与近5日平均成交额分别约1.764万亿元和1.829万亿元，9月14日均低于区间均值。<a
+href="https://www.stcn.com/article/detail/4184621.html">证券时报收盘数据</a>
+· <a
+href="https://www.mrjjxw.com/articles/2026-09-14/4580807.html">每日经济新闻收盘综述</a></p>
+<p>最近30分钟连续复权K线及包含关系未取得，不能正式确认30分钟缠论笔；日线层面仅能确认四大指数近3—5日累计均为负，不能把9月14日宽度改善当成趋势反转。</p>
+<h3 id="板块分级">板块分级</h3>
+<table>
+<thead>
+<tr class="header">
+<th>分级</th>
+<th>板块</th>
+<th>依据</th>
+<th>今日要求</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>重点观察</td>
+<td>网络安全/AI安全</td>
+<td>国内A类政策在收盘后发布、网络安全周持续、美股安全软件相对强；A股9月14日已有涨停扩散</td>
+<td>必须中军换手承接、前排不集体炸板、板块相对指数继续为正</td>
+</tr>
+<tr class="even">
+<td>仅跟踪</td>
+<td>MLCC/元器件、CRO</td>
+<td>9月14日价格与扩散较强，但前者缺正式涨价/订单，后者缺新增硬催化</td>
+<td>不接受纯高开；至少一只中军守住前日低点并强于所属指数</td>
+</tr>
+<tr class="odd">
+<td>回避追涨</td>
+<td>光通信、PCB、AI服务器、半导体设备、液冷、油气</td>
+<td>A股核心先行失败，隔夜海外AI硬件进一步下跌；油气A股未承接高油价</td>
+<td>只有核心股与量能重新确认后才恢复观察，不因标题或小票涨停重评</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-观察池">8. 观察池</h2>
+<p><strong>观察池，不等于买入名单。</strong>
+今日只列6只；网络安全是优先验证方向，MLCC和CRO为次级持续性观察。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">排名</th>
+<th>股票</th>
+<th>逻辑与9月14日位置</th>
+<th>开盘后验证条件</th>
+<th>追高风险/证伪条件</th>
+<th>优势</th>
+<th>最大风险</th>
+<th>置信度</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>奇安信-U 688561</td>
+<td>收29.51、+6.92%，高30.98、低28.99，成交1842万股约为常用均量2.1倍；AI与网络安全中军</td>
+<td>30分钟后守29.00并重新挑战30.98，且板块至少另一中军同步强于科创50</td>
+<td>高开超过6%不追；放量跌破28.99删除</td>
+<td>新政策映射直接、量能较好、非连板</td>
+<td>仍亏损、政策到订单传导慢、板块拥挤</td>
+<td>中</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>深信服 300454</td>
+<td>收134.26、+4.96%，高137.53、低130.96，成交1982万股略高于常用均量；安全软件中军</td>
+<td>守130.96并放量站上137.53，同时奇安信不转弱</td>
+<td>高开超过5%不追；跌破130.96删除</td>
+<td>流动性较好、行业辨识度高</td>
+<td>估值约72倍、隔夜映射可能被抢跑</td>
+<td>中</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>风华高科 000636</td>
+<td>收58.90、+5.20%，高60.50、低55.69，成交约2.20亿股、约常用均量1.51倍；MLCC价格线索部分兑现</td>
+<td>不大幅高开，守55.69并重新挑战60.50，三环同步强于创业板</td>
+<td>高开回落或跌破55.69删除；无官方涨价/订单不追</td>
+<td>量能与短线辨识度最高</td>
+<td>连续异动、催化级别低、兑现风险高</td>
+<td>中</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>三环集团 300408</td>
+<td>收125.83、+1.18%，高131.23、低120.00，成交7435万股约为常用均量1.28倍；MLCC中军承接</td>
+<td>守120并放量重回131.23，风华不出现放量破位</td>
+<td>跌破120删除；未过131.23前不视为突破</td>
+<td>业绩质量与流动性优于多数补涨股</td>
+<td>单日长上影，估值不低</td>
+<td>中</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>药石科技 300725</td>
+<td>收44.55、+8.34%，高44.79、低40.93，成交2255万股低于常用均量；CRO第二日持续性观察</td>
+<td>守40.93，30分钟后仍强于创业板并接近44.79，CRO至少一只科创核心同步</td>
+<td>高开超过5%不追；跌破40.93删除</td>
+<td>收盘接近日高、相对强度高</td>
+<td>无新硬催化、量能未放大</td>
+<td>低</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>美迪西 688202</td>
+<td>收96.99、+8.56%，高98.65、低91.38；9月14日CRO核心之一</td>
+<td>守91.38并放量站上98.65，药石或其他CRO中军同步</td>
+<td>高开超过5%不追；跌破91.38删除</td>
+<td>新签订单历史数据改善、弹性高</td>
+<td>亏损股、高Beta、板块事件催化不足</td>
+<td>低</td>
+</tr>
+</tbody>
+</table>
+<p>个股最新5/10/20日均线与连续30分钟缠论笔未取得统一复权历史序列，无法验证者不猜测；以上使用已核验的9月14日收盘、日内高低、成交量与相对强弱。软件资金流仅作辅助，不作为触发条件。</p>
+<h2 id="9-开盘验证清单">9. 开盘验证清单</h2>
+<p>考虑行动必须同时看到：</p>
+<ol type="1">
+<li>10:00宏观数据公布前，大盘不出现放量下破；公布后上证和创业板至少一项收回开盘价，市场宽度不再快速恶化。</li>
+<li>网络安全方向由奇安信、深信服等中军承接，而非只有中新赛克、天融信等前排连板；至少两只核心30分钟后仍强于软件板块。</li>
+<li>奇安信守29.00或深信服守130.96，并出现换手放量，而不是一字高开或冲高回落。</li>
+<li>MLCC只在风华守55.69且三环同步承接时继续观察；CRO只在药石、美迪西至少一只守住前日低点时保留。</li>
+</ol>
+<p>以下情形不出手：SOX大跌后A股半导体/光通信仍高开追涨；网络安全前排集体高开、但中军跌破开盘价；上证与创业板同步放量下破；10年期美债收益率继续上行且油价反弹；10:00数据公布前凭预期抢跑。</p>
+<p>在网络安全中军与指数共同确认前，<strong>今天以管理已有仓位为主，总仓位15%—25%。</strong></p>
+<h2 id="10-盘后验收基准">10. 盘后验收基准</h2>
+<table>
+<thead>
+<tr class="header">
+<th>编号</th>
+<th>原始判断</th>
+<th>方向/板块</th>
+<th>候选股票与代码</th>
+<th>催化</th>
+<th>触发条件</th>
+<th>回避/证伪条件</th>
+<th>建议仓位影响</th>
+<th>置信度</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P01</td>
+<td>今日为下行环境中的防守型结构观察，建议总仓位15%—25%</td>
+<td>大盘</td>
+<td>上证、创业板、科创50</td>
+<td>10:00中国数据、FOMC窗口、海外利率与AI风险</td>
+<td>指数不放量下破，宽度稳定，至少一个方向形成中军与扩散</td>
+<td>指数放量下跌、宽度快速恶化</td>
+<td>总仓位降至15%—25%，未触发不加</td>
+<td>中</td>
+</tr>
+<tr class="even">
+<td>P02</td>
+<td>网络安全是第一条件方向，但必须由中军换手确认</td>
+<td>网络安全/AI安全</td>
+<td>奇安信-U 688561、深信服300454</td>
+<td>AI安全治理框架3.0、网络安全周、美股安全软件上涨</td>
+<td>奇安信守29.00并挑战30.98；深信服守130.96并挑战137.53；至少两只核心强于板块</td>
+<td>中军高开低走并跌破前日低点；只剩连板小票</td>
+<td>满足后才允许在总仓位内增加该方向</td>
+<td>中</td>
+</tr>
+<tr class="odd">
+<td>P03</td>
+<td>MLCC保留分歧承接观察，不能把涨价线索当正式订单</td>
+<td>MLCC/元器件</td>
+<td>风华高科000636、三环集团300408</td>
+<td>9月14日板块上涨与C级调价线索</td>
+<td>风华守55.69并挑战60.50；三环守120并挑战131.23；两者同步</td>
+<td>任一中军放量破低且板块转弱；无官方证据时高开不追</td>
+<td>不独立提高总仓位</td>
+<td>中</td>
+</tr>
+<tr class="even">
+<td>P04</td>
+<td>CRO只作低序持续性观察，无硬催化不追高</td>
+<td>CRO</td>
+<td>药石科技300725、美迪西688202</td>
+<td>9月14日板块扩散，无新增正式行业催化</td>
+<td>药石守40.93或美迪西守91.38，至少一只核心继续强于所属指数</td>
+<td>高开回落并跌破前日低点，板块扩散消失</td>
+<td>仅小比例观察，不提高总仓位</td>
+<td>低</td>
+</tr>
+<tr class="odd">
+<td>P05</td>
+<td>光通信、PCB、AI服务器与半导体设备降级，今日回避追涨</td>
+<td>AI硬件</td>
+<td>中际旭创300308、沪电股份002463（不进观察池）</td>
+<td>A股核心失败、SOX及海外供应链大跌</td>
+<td>中际重回901、沪电重回128且至少另一核心放量，才重评</td>
+<td>继续弱于创业板/电子，或仅消息高开</td>
+<td>不新增该方向仓位</td>
+<td>高</td>
+</tr>
+<tr class="even">
+<td>P06</td>
+<td>油气只保留宏观对冲观察，不因高油价追涨</td>
+<td>油气</td>
+<td>中国海油600938（不进正式观察池）</td>
+<td>布伦特约105.68美元</td>
+<td>重回34.27且30分钟后强于沪深300</td>
+<td>再次高开低走或跌破33.66</td>
+<td>不提高总仓位</td>
+<td>中</td>
+</tr>
+<tr class="odd">
+<td>P07</td>
+<td>10:00宏观数据与FOMC是仓位约束，数据前不抢跑</td>
+<td>宏观</td>
+<td>宽基及高Beta成长</td>
+<td>中国8月数据、FOMC 9月15—16日</td>
+<td>数据后指数与利率方向得到交叉确认</td>
+<td>数据弱、利率继续上行且成长放量下跌</td>
+<td>未确认时保持低仓位</td>
+<td>高</td>
+</tr>
+<tr class="even">
+<td>P08</td>
+<td>ETF下跌净申购只说明承接，且数据滞后一日</td>
+<td>ETF/宽基</td>
+<td>588000、510300、510500</td>
+<td>9月11日公开估算</td>
+<td>与现货指数、核心股和成交量同步才加权</td>
+<td>现货继续下跌或核心股不跟</td>
+<td>只作排序辅助</td>
+<td>低</td>
+</tr>
+</tbody>
+</table>
+<h3 id="优势与风险">优势与风险</h3>
+<p><strong>优势：</strong>
+网络安全同时具备国内正式政策、活动窗口、A股扩散和美股相对强势，属于本日少数有交叉证据的方向；MLCC与CRO仍有9月14日价格强度可供验证。<br />
+<strong>最大风险：</strong>
+费城半导体及海外AI硬件同步大跌，美债10年期一度突破5%，A股四大指数近3—5日均为负；网络安全前排拥挤、政策尚未转化为订单。<br />
+<strong>总体置信度：中。</strong></p>
+</body>
+</html>

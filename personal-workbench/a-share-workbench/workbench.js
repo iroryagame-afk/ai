@@ -1,0 +1,51 @@
+'use strict';
+const $=s=>document.querySelector(s);let data;const prefix='personal-workbench-v1:';
+const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());$('#today').textContent=today+' · 北京时间';
+function show(v){if(!document.getElementById(v)?.classList.contains('view'))v='pre';document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!==v);document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.view===v)));history.replaceState(null,'','#'+v)}
+document.querySelectorAll('[data-view],[data-jump]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.view||b.dataset.jump)));show(location.hash.slice(1));
+function read(k){try{return JSON.parse(localStorage.getItem(prefix+k)||'null')}catch{return null}}
+function write(k,v){localStorage.setItem(prefix+k,JSON.stringify(v))}
+function text(tag,value,cls){const e=document.createElement(tag);e.textContent=value??'—';if(cls)e.className=cls;return e}
+fetch('./data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('数据请求失败');return r.json()}).then(d=>{if(d.schema_version!==1||!Array.isArray(d.observe?.rows))throw Error('数据格式不匹配');data=d;$('#snapshot').textContent='公开快照发布：'+d.published_snapshot_at.slice(0,10);$('#freshness').textContent='历史快照 · A观察日线截至 '+d.observe.data_date+'；盘中基线截至 '+(d.monitor.bar||'未核验')+'。页面刷新不会触发行情扫描，早报与复盘可在栏目内直接阅读，日期以各报告为准。';const keep=d.observe.rows.filter(r=>r.decision.startsWith('KEEP'));$('#monitorTag').textContent=d.monitor.status==='BASELINE_INITIALIZED'?'30分钟 · '+(d.monitor.rows?.length||0)+'只':'30分钟结果';const m=d.monitor;renderMonitor(m)}).catch(e=>{$('#freshness').textContent='公开数据加载失败：'+e.message+'。可继续使用原任务入口及本机内容，请稍后重新加载。';$('#snapshot').textContent='快照未加载';$('#monitorContent').textContent='未取得数据，不能判断当前状态。'});
+for(const slot of document.querySelectorAll('.report-slot')){const kind=slot.dataset.report;slot.innerHTML='<details><summary>导入或编辑本机报告</summary><div class="report-editor"><label>报告面向交易日<input type="date" class="report-date"></label><label>粘贴报告正文<textarea rows="10" class="report-body" placeholder="粘贴云端原文，保留日期、P编号与来源。"></textarea></label><label>或选择Markdown / TXT文件（最大1MB）<input type="file" class="report-file" accept=".md,.txt,text/plain,text/markdown"></label><div><button class="primary save-report">保存到本机</button> <button class="clear-report">清除本机报告</button></div></div></details><p class="report-status" role="status"></p><article class="report-reader"></article>';const date=slot.querySelector('.report-date'),body=slot.querySelector('.report-body'),status=slot.querySelector('.report-status'),reader=slot.querySelector('.report-reader');function render(){const r=read(kind);date.value=r?.date||today;body.value=r?.body||'';status.textContent=r?'本机导入 · 面向交易日 '+r.date+' · 非自动同步':'';reader.hidden=!r;reader.textContent=r?.body||''}render();slot.querySelector('.save-report').onclick=()=>{if(!date.value||!body.value.trim()){status.textContent='请填写日期与报告正文。';return}try{write(kind,{date:date.value,body:body.value});render()}catch{status.textContent='保存失败：浏览器存储空间不足或已禁用。请复制正文自行留存。'}};slot.querySelector('.clear-report').onclick=()=>{try{localStorage.removeItem(prefix+kind);render()}catch{status.textContent='无法清除，请在浏览器设置中清除此站点数据。'}};slot.querySelector('.report-file').onchange=async e=>{const f=e.target.files[0];if(!f)return;if(f.size>1024*1024){status.textContent='文件超过1MB，请缩短后导入。';return}body.value=await f.text();status.textContent='已读入文件，选择日期后保存到本机。'}}
+let holding=read('holding')||{};$('#holdingDate').value=holding.date||today;$('#holdingNote').value=holding.note||'';function preview(){const img=$('#holdingPreview');img.hidden=!holding.image;if(holding.image)img.src=holding.image;else img.removeAttribute('src')}preview();$('#holdingFile').onchange=e=>{const f=e.target.files[0];if(!f)return;if(!['image/png','image/jpeg','image/webp'].includes(f.type)||f.size>5*1024*1024){$('#holdingStatus').textContent='请选择5MB以内的PNG、JPEG或WebP图片。';return}const r=new FileReader();r.onload=()=>{holding.image=r.result;preview();$('#holdingStatus').textContent='截图已预览，尚未保存。'};r.onerror=()=>$('#holdingStatus').textContent='图片读取失败，请重新选择。';r.readAsDataURL(f)};$('#saveHolding').onclick=()=>{if(!$('#holdingDate').value){$('#holdingStatus').textContent='请填写截图日期。';return}holding={...holding,date:$('#holdingDate').value,note:$('#holdingNote').value};try{write('holding',holding);$('#holdingStatus').textContent='已保存到当前浏览器，日期：'+holding.date+'。未上传。'}catch{$('#holdingStatus').textContent='保存失败：图片可能超过浏览器存储容量，请压缩后重试。'}};$('#clearHolding').onclick=()=>{try{localStorage.removeItem(prefix+'holding');holding={};$('#holdingNote').value='';$('#holdingFile').value='';preview();$('#holdingStatus').textContent='已清除本机持仓。'}catch{$('#holdingStatus').textContent='清除失败，请在浏览器设置中清除此站点数据。'}};
+
+function renderDocument(target,body){
+ const lines=body.trim().split('\n');let table;
+ for(const line of lines){if(!line.trim())continue;
+  if(line.includes('|')){if(!table){const wrap=document.createElement('div');wrap.className='table-wrap';table=document.createElement('table');wrap.append(table);target.append(wrap);const tr=document.createElement('tr');for(const cell of line.split('|'))tr.append(text('th',cell));const head=document.createElement('thead');head.append(tr);table.append(head);continue}const tr=document.createElement('tr');for(const cell of line.split('|'))tr.append(emphasized('td',cell));table.append(tr);continue}
+  table=null;target.append(line.startsWith('## ')?text('h3',line.slice(3)):emphasized('p',line));
+ }
+}
+fetch('./reports.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('报告读取失败');return r.json()}).then(reports=>{
+ $('#reportNotes').textContent=reports.verification+' 早报数据冻结：'+reports.pre.frozen_at+'；复盘数据冻结：'+reports.post.frozen_at+'。'+(reports.post.privacy||'');
+ for(const kind of ['pre','post']){const r=reports[kind],target=$('#published-'+kind);target.replaceChildren();target.append(text('p',r.date+' · '+(r.format||reports.format),'report-meta'));renderDocument(target,r.body);}
+}).catch(e=>{for(const kind of ['pre','post'])$('#published-'+kind).textContent=e.message+'，请稍后刷新。'});
+const navToggle=document.querySelector('.mobile-nav-toggle'),sideNav=document.querySelector('.workbench-sidebar');
+function closeNavigation(){sideNav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false')}
+navToggle.addEventListener('click',()=>{const open=sideNav.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',String(open));if(open)sideNav.querySelector('[aria-pressed="true"]').focus()});
+sideNav.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{closeNavigation();if(matchMedia('(max-width:760px)').matches)navToggle.focus();window.scrollTo({top:0,behavior:'instant'})}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&sideNav.classList.contains('is-open')){closeNavigation();navToggle.focus()}});
+document.addEventListener('click',e=>{if(!sideNav.contains(e.target)&&!navToggle.contains(e.target))closeNavigation()});
+
+function renderMonitor(m){
+ const target=$('#monitorContent');target.replaceChildren(text('p',(m.bar||'未取得日期')+' · 30分钟 · '+(m.rows?.length||0)+'只 · '+(m.scope_label||'仅个股信号'),'report-meta'));
+ if(!m.rows?.length){target.append(text('p','暂无名单'));return}
+ const wrap=document.createElement('div');wrap.className='table-wrap';const table=document.createElement('table');const head=document.createElement('thead'),hr=document.createElement('tr');
+ for(const title of ['股票','排序','阶段','结构状态','低点时间','MACD / KDJ'])hr.append(text('th',title));head.append(hr);table.append(head);const body=document.createElement('tbody');
+ for(const r of m.rows){const tr=document.createElement('tr'),name=document.createElement('td');name.append(text('b',r.name),text('small',r.code));tr.append(name,text('td',r.priority),text('td',r.current_state),text('td',r.phase),text('td',r.bottom_time),text('td',r.macd+' / '+r.kdj));body.append(tr)}table.append(body);wrap.append(table);target.append(wrap);
+}
+
+function emphasized(tag,value){
+ const el=document.createElement(tag);const content=String(value??'');
+ const terms=/主要风险：|最大风险：|云端原判断：|云端结论：|考虑行动：|不出手：|(?:\d+(?:\.\d+)?%[—–-])?\d+(?:\.\d+)?%|2万亿元|高开低走|高开兑现|禁止追高|不追高|回避追涨|放量跌破|证伪|尚待验证|等待确认|部分兑现|强化|确认到位|接近到位|CPO|PCB|AI服务器|HBM/g;
+ let end=0;for(const match of content.matchAll(terms)){el.append(document.createTextNode(content.slice(end,match.index)));const token=match[0];let cls='em-key';if(token.endsWith('：'))cls='em-label';else if(/高开低走|高开兑现|禁止追高|不追高|回避追涨|放量跌破|证伪/.test(token))cls='em-risk';else if(/待验证|等待|部分兑现|接近/.test(token))cls='em-wait';else if(/强化|确认到位/.test(token))cls='em-confirm';else if(/%|万亿元/.test(token))cls='em-number';el.append(text('strong',token,cls));end=match.index+token.length}el.append(document.createTextNode(content.slice(end)));
+ if(tag==='p'&&/^(云端原判断：|云端结论：)/.test(content))el.className='conclusion-block';
+ if(tag==='p'&&/^(主要风险：|最大风险：)/.test(content))el.className='risk-block';return el;
+}
+
+fetch('./midterm.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('读取失败');return r.json()}).then(d=>{if(d.schema_version!==1)throw Error('版本不匹配');$('#midtermDate').textContent=new Date(d.as_of).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false})+' · '+d.status;const target=$('#midtermContent');target.replaceChildren(text('p',d.source_title,'report-meta'));renderDocument(target,d.body)}).catch(()=>{$('#midtermDate').textContent='暂未取得更新';$('#midtermContent').textContent='加载失败，请刷新重试。'});
+
+fetch('./daily-selection.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('读取失败');return r.json()}).then(d=>{if(d.schema_version!==1)throw Error('版本不匹配');$('#dailySelectionDate').textContent=new Date(d.as_of).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false})+' · '+d.status;const target=$('#dailySelectionContent');target.replaceChildren(text('p',d.source_title,'report-meta'));renderDocument(target,d.body)}).catch(()=>{$('#dailySelectionDate').textContent='暂未取得更新';$('#dailySelectionContent').textContent='加载失败，请刷新重试。'});
+
+window.addEventListener('hashchange',()=>show(location.hash.slice(1)));
