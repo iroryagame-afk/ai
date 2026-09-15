@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NAV_VERSION = "ia-20260915a"
+NAV_VERSION = "ia-20260915b"
 ACTIVE_DYNAMIC = {
     "index.html",
     "a-share-software-deleveraging/index.html",
@@ -197,7 +197,7 @@ def nav(relative: str) -> str:
             ("us-market/x-consensus/", "全球注意力雷达", "中文X · 多语种长文 · Reddit · 作者原图"),
         ]),
         ("a-tools", "A股", [
-            ("a-share-trend-candidates/", "ABC观察前10", "关K · 回落转稳 · 主升延续 · T+1"),
+            ("a-share-trend-candidates/", "ABC候选全表", "关K · 回落转稳 · 主升延续 · T+1"),
             ("a-share-domestic-compute/", "国产算力", "芯片 · 服务器 · 网络 · AIDC"),
             ("a-share-supply-tightness/", "供需紧张", "存储 · PCB · 材料 · 制造"),
             ("a-share-next-generation/", "下一代技术", "光互连 · CPO · 液冷 · 连接"),

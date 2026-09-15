@@ -38,7 +38,7 @@
 
 顺序：
 
-1. `/a-share-trend-candidates/` 只读取本交易日16:00已完成、A观察独立回读通过的 `outputs/a_observe_daily/latest.json` 所指本轮 `result.json`、`sync.json`、`trade_plan.json`；C来源必须是当日已验收的独立`三类 A`页卡。运行 `scripts/generate_a_trend_candidates_page.py --run <本轮目录>`；不执行旧的主升/回调/反转大池扫描器，也不沿用旧日A观察结果。缺页卡回读、C来源、行情覆盖或点位逐股一致性时保留线上上一版。
+1. `/a-share-trend-candidates/` 只读取本交易日16:00已完成、A观察独立回读通过的 `outputs/a_observe_daily/latest.json` 所指本轮 `result.json`、`sync.json`、`trade_plan.json`；C来源必须是当日已验收的独立`三类 A`页卡。运行 `scripts/generate_a_trend_candidates_page.py --run <本轮目录>`；完整展示 `ranked` 中全部独立达标、已核验行业身份的备选，不设10只展示上限，并标识富途A观察前10及其条件点位。不能给其余备选补造点位。不执行旧的主升/回调/反转大池扫描器，也不沿用旧日A观察结果。缺页卡回读、C来源、行情覆盖、完整备选包含关系或前10点位逐股一致性时保留线上上一版。
 2. 其他四个板块走势页各自按原有已核验数据源生成；本页不再借用它们的30分钟执行标签。
 3. scripts/build_futu_a_share_software_hardware_pages.py
 4. scripts/build_futu_a_share_biotech_defensive_pages.py
