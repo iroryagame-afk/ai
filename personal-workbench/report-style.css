@@ -1,0 +1,15 @@
+/* Presentation only; original report files remain unchanged. */
+:root{color-scheme:light;--bg:#f7f5f0;--paper:#fffefa;--text:#252a33;--muted:#606b7b;--line:#dcd6ca;--accent:#214d70;--head:#eeeae2;--quote:#eeeae2}
+html{background:#f7f5f0;color:#252a33;overflow-y:hidden}
+body{box-sizing:border-box;margin:0 auto!important;padding:8px 0 24px!important;width:100%!important;max-width:1120px!important;background:#f7f5f0!important;color:#252a33!important;font:15px/1.8 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif!important}
+body>*{max-width:100%;}header,#title-block-header{text-align:left;margin:0 0 20px!important;padding:0}
+h1,h2,h3,h4{color:#214d70;line-height:1.45;letter-spacing:normal}
+h1,.title{font-size:23px!important;margin:0 0 18px!important;font-weight:650!important}
+h2{font-size:19px!important;margin:28px 0 12px!important;padding-bottom:8px!important;border-bottom:1px solid #dcd6ca!important}
+h3{font-size:16px!important;margin:20px 0 10px!important}
+p,body>p:first-of-type{font-size:15px!important;line-height:1.8!important;margin:10px 0!important;font-weight:400!important}
+a,a:visited{color:#214d70!important}strong{font-weight:650}
+table{display:block;max-width:100%;overflow-x:auto;margin:16px 0 22px!important;border:1px solid #dcd6ca!important;border-radius:4px!important;font-size:13px;line-height:1.65;background:#fffefa}
+th,td{padding:11px 12px!important;border-color:#dcd6ca!important;min-width:100px}th{font-size:12px;background:#eeeae2!important}tbody{border-color:#dcd6ca}tr:nth-child(even) td{background:#f7f5f0!important}
+blockquote{background:#eeeae2!important;border-left:3px solid #214d70!important;margin:16px 0!important}img{max-width:100%;height:auto}
+@media(max-width:640px){body{padding:4px 0 20px!important;font-size:14px!important}p,body>p:first-of-type{font-size:14px!important}h1,.title{font-size:20px!important}h2{font-size:17px!important}th,td{padding:9px 10px!important}}
