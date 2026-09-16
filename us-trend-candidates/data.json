@@ -1,9 +1,9 @@
 {
   "schema_version": "US_DAILY_ABC_PUBLIC_1.2",
   "data_date": "2026-09-15",
-  "collected_at_ny": "2026-09-16T05:36:11.423865-04:00",
+  "collected_at_ny": "2026-09-16T06:32:42.883939-04:00",
   "data_boundary": "美股完整常规时段日K，前复权；点位按当日完整日K重算",
-  "source_sha256": "0115a8ee2089e800aaab5bb9ad9159b6f4ebef826c8bce76f854761410bc0a35",
+  "source_sha256": "0aba2a9395c4e4d25d2adfe58fe05021d7d412d89902918ef44af4742c8d3248",
   "coverage": {
     "A": 0.9861751152073732,
     "B": 0.9539170506912442,
@@ -11,10 +11,10 @@
   },
   "counts": {
     "A": 8,
-    "B": 58,
+    "B": 53,
     "C": 6
   },
-  "candidate_count": 69,
+  "candidate_count": 64,
   "selected_count": 10,
   "market_defensive": true,
   "m_watch_readback_verified": true,
@@ -31,7 +31,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-10",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 B?·2026-08-10",
       "price_state": "价格技术确认",
       "latest_close": 15.0,
       "action": "只观察",
@@ -59,7 +59,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-05",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 B?·2026-08-05",
       "price_state": "价格技术确认",
       "latest_close": 63.52,
       "action": "只观察",
@@ -76,8 +76,8 @@
       "max_trading_days": 15
     },
     {
-      "ticker": "RMBS",
-      "name": "Rambus",
+      "ticker": "NTRA",
+      "name": "Natera",
       "sources": [
         "B"
       ],
@@ -85,37 +85,9 @@
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "B底分型·2026-09-14",
-      "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
-      "price_state": "价格技术确认",
-      "latest_close": 83.11,
-      "action": "只观察",
-      "pullback_zone": [
-        83.11,
-        83.98
-      ],
-      "confirmation_price": 97.61,
-      "maximum_acceptable_price": 99.35,
-      "invalidation_price": 81.48,
-      "reduce_price": 121.81,
-      "final_target_price": 137.94,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "NTRA",
-      "name": "Natera",
-      "sources": [
-        "B"
-      ],
-      "rank": 4,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-07-29",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 3B?·2026-07-29",
       "price_state": "价格技术确认",
       "latest_close": 350.78,
       "action": "只观察",
@@ -137,13 +109,13 @@
       "sources": [
         "B"
       ],
-      "rank": 5,
+      "rank": 4,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-04",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "价格技术确认",
       "latest_close": 175.65,
       "action": "只观察",
@@ -165,13 +137,13 @@
       "sources": [
         "B"
       ],
-      "rank": 6,
+      "rank": 5,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-07-29",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "价格技术确认",
       "latest_close": 172.37,
       "action": "只观察",
@@ -193,13 +165,13 @@
       "sources": [
         "B"
       ],
-      "rank": 7,
+      "rank": 6,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-11",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "价格技术确认",
       "latest_close": 103.55,
       "action": "只观察",
@@ -221,13 +193,13 @@
       "sources": [
         "B"
       ],
-      "rank": 8,
+      "rank": 7,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-26",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "价格技术确认",
       "latest_close": 242.49,
       "action": "只观察",
@@ -249,13 +221,13 @@
       "sources": [
         "B"
       ],
-      "rank": 9,
+      "rank": 8,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-27",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "价格技术确认",
       "latest_close": 217.77,
       "action": "只观察",
@@ -277,13 +249,13 @@
       "sources": [
         "B"
       ],
-      "rank": 10,
+      "rank": 9,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-11",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "价格技术确认",
       "latest_close": 23.25,
       "action": "只观察",
@@ -296,6 +268,34 @@
       "invalidation_price": 18.63,
       "reduce_price": 25.55,
       "final_target_price": 28.32,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "TWLO",
+      "name": "Twilio",
+      "sources": [
+        "B"
+      ],
+      "rank": 10,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-08",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 —",
+      "price_state": "价格技术确认",
+      "latest_close": 242.16,
+      "action": "只观察",
+      "pullback_zone": [
+        232.45,
+        235.02
+      ],
+      "confirmation_price": 233.88,
+      "maximum_acceptable_price": 239.01,
+      "invalidation_price": 221.86,
+      "reduce_price": 251.91,
+      "final_target_price": 263.93,
       "review_trading_day": 5,
       "max_trading_days": 15
     }
@@ -313,7 +313,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-10",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 B?·2026-08-10",
       "price_state": "价格技术确认",
       "latest_close": 15.0,
       "action": "只观察",
@@ -341,7 +341,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-05",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 B?·2026-08-05",
       "price_state": "价格技术确认",
       "latest_close": 63.52,
       "action": "只观察",
@@ -358,8 +358,8 @@
       "max_trading_days": 15
     },
     {
-      "ticker": "RMBS",
-      "name": "Rambus",
+      "ticker": "NTRA",
+      "name": "Natera",
       "sources": [
         "B"
       ],
@@ -367,37 +367,9 @@
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "B底分型·2026-09-14",
-      "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
-      "price_state": "价格技术确认",
-      "latest_close": 83.11,
-      "action": "只观察",
-      "pullback_zone": [
-        83.11,
-        83.98
-      ],
-      "confirmation_price": 97.61,
-      "maximum_acceptable_price": 99.35,
-      "invalidation_price": 81.48,
-      "reduce_price": 121.81,
-      "final_target_price": 137.94,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "NTRA",
-      "name": "Natera",
-      "sources": [
-        "B"
-      ],
-      "rank": 4,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-07-29",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 3B?·2026-07-29",
       "price_state": "价格技术确认",
       "latest_close": 350.78,
       "action": "只观察",
@@ -419,13 +391,13 @@
       "sources": [
         "B"
       ],
-      "rank": 5,
+      "rank": 4,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-04",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "价格技术确认",
       "latest_close": 175.65,
       "action": "只观察",
@@ -447,13 +419,13 @@
       "sources": [
         "B"
       ],
-      "rank": 6,
+      "rank": 5,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-07-29",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "价格技术确认",
       "latest_close": 172.37,
       "action": "只观察",
@@ -475,13 +447,13 @@
       "sources": [
         "B"
       ],
-      "rank": 7,
+      "rank": 6,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-11",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "价格技术确认",
       "latest_close": 103.55,
       "action": "只观察",
@@ -503,13 +475,13 @@
       "sources": [
         "B"
       ],
-      "rank": 8,
+      "rank": 7,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-26",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "价格技术确认",
       "latest_close": 242.49,
       "action": "只观察",
@@ -531,13 +503,13 @@
       "sources": [
         "B"
       ],
-      "rank": 9,
+      "rank": 8,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-27",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "价格技术确认",
       "latest_close": 217.77,
       "action": "只观察",
@@ -559,13 +531,13 @@
       "sources": [
         "B"
       ],
-      "rank": 10,
+      "rank": 9,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-11",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "价格技术确认",
       "latest_close": 23.25,
       "action": "只观察",
@@ -582,6 +554,34 @@
       "max_trading_days": 15
     },
     {
+      "ticker": "TWLO",
+      "name": "Twilio",
+      "sources": [
+        "B"
+      ],
+      "rank": 10,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-08",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 —",
+      "price_state": "价格技术确认",
+      "latest_close": 242.16,
+      "action": "只观察",
+      "pullback_zone": [
+        232.45,
+        235.02
+      ],
+      "confirmation_price": 233.88,
+      "maximum_acceptable_price": 239.01,
+      "invalidation_price": 221.86,
+      "reduce_price": 251.91,
+      "final_target_price": 263.93,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
       "ticker": "AAPL",
       "name": "苹果",
       "sources": [
@@ -594,7 +594,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-09；C趋势回踩",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速；回调/整理观察·待价格确认",
-      "momentum_volume": "MACD金叉保持但减速；MACD多头延续",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 —；MACD多头延续",
       "price_state": "待价格确认；待价格确认",
       "action": "待生成交易计划"
     },
@@ -610,7 +610,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-10",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -626,7 +626,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-03",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 B?·2026-09-03",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -642,7 +642,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-03",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -658,7 +658,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-11",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 1B?·2026-09-11",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -674,23 +674,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-10",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
-      "price_state": "待价格确认",
-      "action": "待生成交易计划"
-    },
-    {
-      "ticker": "BB",
-      "name": "黑莓",
-      "sources": [
-        "B"
-      ],
-      "rank": null,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B底分型·2026-09-14",
-      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -722,7 +706,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-21",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -738,7 +722,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-02",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -759,22 +743,6 @@
       "action": "待生成交易计划"
     },
     {
-      "ticker": "CMI",
-      "name": "康明斯",
-      "sources": [
-        "B"
-      ],
-      "rank": null,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B底分型·2026-09-14",
-      "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
-      "price_state": "待价格确认",
-      "action": "待生成交易计划"
-    },
-    {
       "ticker": "COHR",
       "name": "Coherent",
       "sources": [
@@ -786,7 +754,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-03",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 B?·2026-09-03",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -802,7 +770,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-10",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -834,7 +802,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-08",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -850,7 +818,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-01",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -866,7 +834,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-11",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -898,7 +866,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-01",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 1B?·2026-09-01",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -914,7 +882,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-03",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -930,7 +898,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-03",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 B?·2026-09-03",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -946,7 +914,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-09",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 B?·2026-09-09",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -963,7 +931,7 @@
       "a_latest_volume_ratio": 0.6813960003690913,
       "structure_node": "A关K·2026-09-14；B底分型·2026-09-11",
       "current_stage": "A回调1天；B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "A量能·关K/前日 1.69×；当前/关K 0.68×；MACD金叉前修复",
+      "momentum_volume": "A量能·关K/前日 1.69×；当前/关K 0.68×；MACD金叉前修复；公式标记 B?·2026-09-11",
       "price_state": "A原底未破；待价格确认",
       "action": "待生成交易计划"
     },
@@ -979,7 +947,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-07-23",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -995,7 +963,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-03",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1011,7 +979,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-11",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 —",
       "price_state": "价格技术确认",
       "action": "待生成交易计划"
     },
@@ -1043,7 +1011,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-10",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 B?·2026-09-10",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1059,7 +1027,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-09",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 3B?·2026-09-09",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1075,7 +1043,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-11",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 —",
       "price_state": "价格技术确认",
       "action": "待生成交易计划"
     },
@@ -1091,7 +1059,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-11",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1107,7 +1075,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-19",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1139,7 +1107,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-02",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1155,7 +1123,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-04",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1172,7 +1140,7 @@
       "a_latest_volume_ratio": 0.8407199517489189,
       "structure_node": "A关K·2026-09-14；B底分型·2026-09-11",
       "current_stage": "A回调1天；B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "A量能·关K/前日 1.63×；当前/关K 0.84×；MACD金叉前修复",
+      "momentum_volume": "A量能·关K/前日 1.63×；当前/关K 0.84×；MACD金叉前修复；公式标记 3B?·2026-09-11",
       "price_state": "A原底未破；待价格确认",
       "action": "待生成交易计划"
     },
@@ -1186,9 +1154,9 @@
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "B底分型·2026-09-14",
+      "structure_node": "B底分型·2026-09-10",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1204,7 +1172,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-26",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1220,7 +1188,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-02",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1236,7 +1204,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-03",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 B?·2026-09-03",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1252,7 +1220,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-10",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1268,7 +1236,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-08-03",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1284,23 +1252,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-02",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
-      "price_state": "待价格确认",
-      "action": "待生成交易计划"
-    },
-    {
-      "ticker": "RDW",
-      "name": "Redwire",
-      "sources": [
-        "B"
-      ],
-      "rank": null,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B底分型·2026-09-14",
-      "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 B?·2026-09-02",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1316,23 +1268,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-02",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
-      "price_state": "待价格确认",
-      "action": "待生成交易计划"
-    },
-    {
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "sources": [
-        "B"
-      ],
-      "rank": null,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B底分型·2026-09-14",
-      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 B?·2026-09-02",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1380,7 +1316,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-09",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1401,38 +1337,6 @@
       "action": "待生成交易计划"
     },
     {
-      "ticker": "TEM",
-      "name": "Tempus AI",
-      "sources": [
-        "B"
-      ],
-      "rank": null,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B底分型·2026-09-14",
-      "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
-      "price_state": "价格技术确认",
-      "action": "待生成交易计划"
-    },
-    {
-      "ticker": "TWLO",
-      "name": "Twilio",
-      "sources": [
-        "B"
-      ],
-      "rank": null,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B底分型·2026-09-08",
-      "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
-      "price_state": "价格技术确认",
-      "action": "待生成交易计划"
-    },
-    {
       "ticker": "TWST",
       "name": "Twist Bioscience",
       "sources": [
@@ -1444,7 +1348,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-10",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1460,7 +1364,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-03",
       "current_stage": "B·底分型观察｜MACD金叉保持但减速",
-      "momentum_volume": "MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1476,7 +1380,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-10",
       "current_stage": "B·底分型观察｜MACD金叉前修复",
-      "momentum_volume": "MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
@@ -1494,6 +1398,22 @@
       "current_stage": "A回调1天",
       "momentum_volume": "A量能·关K/前日 1.55×；当前/关K 0.69×",
       "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "WMT",
+      "name": "沃尔玛",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-08-21",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 1B?·2026-08-21",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
@@ -1524,7 +1444,7 @@
       "a_latest_volume_ratio": null,
       "structure_node": "B底分型·2026-09-08",
       "current_stage": "B·底分型观察｜MACD本轮金叉转强",
-      "momentum_volume": "MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强；公式标记 —",
       "price_state": "待价格确认",
       "action": "待生成交易计划"
     }
