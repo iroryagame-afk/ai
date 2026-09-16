@@ -1,9 +1,9 @@
 {
   "schema_version": "US_DAILY_ABC_PUBLIC_1.2",
   "data_date": "2026-09-15",
-  "collected_at_ny": "2026-09-16T09:12:54.541443-04:00",
+  "collected_at_ny": "2026-09-16T09:20:25.436610-04:00",
   "data_boundary": "美股完整常规时段日K，前复权；点位按当日完整日K重算",
-  "source_sha256": "b388b10816bba08f1ea516a4c68effc49463af511973d71407e2dc010142a457",
+  "source_sha256": "20490c4052f2c6fc071ed9d9c6851e7123090a867dd74e66f0c9b13d5b3ded9a",
   "coverage": {
     "A": 0.9861751152073732,
     "B": 0.9539170506912442,
@@ -69,9 +69,9 @@
       ],
       "confirmation_price": 336.49,
       "maximum_acceptable_price": 345.45,
-      "invalidation_price": 300.16,
-      "reduce_price": 390.98,
-      "final_target_price": 427.31,
+      "invalidation_price": 303.89,
+      "reduce_price": 385.38,
+      "final_target_price": 417.97,
       "review_trading_day": 5,
       "max_trading_days": 15
     },
@@ -351,9 +351,9 @@
       ],
       "confirmation_price": 336.49,
       "maximum_acceptable_price": 345.45,
-      "invalidation_price": 300.16,
-      "reduce_price": 390.98,
-      "final_target_price": 427.31,
+      "invalidation_price": 303.89,
+      "reduce_price": 385.38,
+      "final_target_price": 417.97,
       "review_trading_day": 5,
       "max_trading_days": 15
     },
