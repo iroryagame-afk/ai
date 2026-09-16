@@ -1,8 +1,8 @@
 {
-  "schema_version": "a_observe_abc_full_v2",
+  "schema_version": "a_observe_abc_full_v3",
   "data_date": "2026-09-15",
   "next_session": "2026-09-16",
-  "generated_at_bj": "2026-09-15T17:44:36+08:00",
+  "generated_at_bj": "2026-09-16T15:51:16+08:00",
   "source_count": 492,
   "covered_count": 489,
   "coverage_ratio": 0.9939,
@@ -44,7 +44,12 @@
         "MACD金叉 2026-09-07",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [
+        "光"
+      ],
+      "futu_tab_label": "光",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 2,
@@ -69,7 +74,10 @@
         "MACD金叉 2026-09-07",
         "KDJ金叉 2026-09-04"
       ],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 3,
@@ -91,7 +99,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 33.01,
       "crosses": [],
-      "momentum": "金叉前/动能改善观察"
+      "momentum": "金叉前/动能改善观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 4,
@@ -113,7 +124,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 35.25,
       "crosses": [],
-      "momentum": "金叉前/动能改善观察"
+      "momentum": "金叉前/动能改善观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 5,
@@ -135,7 +149,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 22.2,
       "crosses": [],
-      "momentum": "金叉前/动能改善观察"
+      "momentum": "金叉前/动能改善观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 6,
@@ -159,7 +176,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉确认"
+      "momentum": "KDJ单金叉确认",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 7,
@@ -183,7 +203,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉确认"
+      "momentum": "KDJ单金叉确认",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 8,
@@ -207,7 +230,10 @@
         "MACD金叉 2026-09-08",
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 9,
@@ -230,7 +256,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 10,
@@ -254,7 +283,10 @@
         "MACD金叉 2026-09-14",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 11,
@@ -277,7 +309,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 12,
@@ -301,7 +336,10 @@
         "MACD金叉 2026-09-08",
         "KDJ金叉 2026-08-28"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 13,
@@ -325,7 +363,10 @@
         "MACD金叉 2026-09-09",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 14,
@@ -349,7 +390,10 @@
         "MACD金叉 2026-09-11",
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 15,
@@ -372,7 +416,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 16,
@@ -395,7 +442,10 @@
       "crosses": [
         "MACD金叉 2026-09-07"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 17,
@@ -418,7 +468,10 @@
       "crosses": [
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 18,
@@ -439,7 +492,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 92.0,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 19,
@@ -463,7 +519,10 @@
         "MACD金叉 2026-09-11",
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 20,
@@ -486,7 +545,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 21,
@@ -510,7 +572,10 @@
         "MACD金叉 2026-08-28",
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 22,
@@ -533,7 +598,12 @@
       "crosses": [
         "MACD金叉 2026-09-07"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [
+        "光"
+      ],
+      "futu_tab_label": "光",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 23,
@@ -556,7 +626,12 @@
       "crosses": [
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [
+        "光"
+      ],
+      "futu_tab_label": "光",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 24,
@@ -579,7 +654,10 @@
       "crosses": [
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 25,
@@ -602,7 +680,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 26,
@@ -626,7 +707,10 @@
         "MACD金叉 2026-09-09",
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 27,
@@ -650,7 +734,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 28,
@@ -671,7 +758,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 271.69,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 29,
@@ -694,7 +784,10 @@
       "crosses": [
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 30,
@@ -718,7 +811,10 @@
         "MACD金叉 2026-09-14",
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 31,
@@ -742,7 +838,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 32,
@@ -765,7 +864,10 @@
       "crosses": [
         "MACD金叉 2026-09-09"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 33,
@@ -788,7 +890,10 @@
       "crosses": [
         "MACD金叉 2026-08-27"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 34,
@@ -809,7 +914,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 57.18,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 35,
@@ -832,7 +940,10 @@
       "crosses": [
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 36,
@@ -853,7 +964,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 41.8,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 37,
@@ -876,7 +990,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 38,
@@ -899,7 +1016,12 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [
+        "半导体"
+      ],
+      "futu_tab_label": "半导体",
+      "conversation_note": "硅外延片一体化制造；关注12英寸产线爬坡及客户订单。"
     },
     {
       "rank": 39,
@@ -922,7 +1044,10 @@
       "crosses": [
         "MACD金叉 2026-08-28"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 40,
@@ -946,7 +1071,10 @@
         "MACD金叉 2026-09-14",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 41,
@@ -967,7 +1095,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 85.68,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 42,
@@ -990,7 +1121,10 @@
       "crosses": [
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 43,
@@ -1014,7 +1148,10 @@
         "MACD金叉 2026-09-08",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 44,
@@ -1035,7 +1172,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 124.6,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 45,
@@ -1058,7 +1198,10 @@
       "crosses": [
         "MACD金叉 2026-09-01"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 46,
@@ -1081,7 +1224,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 47,
@@ -1104,7 +1250,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 48,
@@ -1125,7 +1274,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 57.52,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 49,
@@ -1149,7 +1301,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 50,
@@ -1170,7 +1325,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 106.37,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 51,
@@ -1191,7 +1349,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 103.5,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 52,
@@ -1215,7 +1376,12 @@
         "MACD金叉 2026-09-10",
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "高频高速覆铜板；关注高端产品放量与海外客户进展。"
     },
     {
       "rank": 53,
@@ -1238,7 +1404,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 54,
@@ -1262,7 +1431,10 @@
         "MACD金叉 2026-09-14",
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 55,
@@ -1285,7 +1457,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 56,
@@ -1306,7 +1481,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 125.8,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 57,
@@ -1329,7 +1507,10 @@
       "crosses": [
         "MACD金叉 2026-09-09"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 58,
@@ -1350,7 +1531,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 355.55,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 59,
@@ -1371,7 +1555,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 59.304147,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 60,
@@ -1394,7 +1581,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 61,
@@ -1417,7 +1607,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 62,
@@ -1438,7 +1631,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 69.9,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 63,
@@ -1461,7 +1657,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 64,
@@ -1482,7 +1681,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 28.89,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 65,
@@ -1505,7 +1707,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 66,
@@ -1528,7 +1733,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 67,
@@ -1552,7 +1760,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 68,
@@ -1576,7 +1787,10 @@
         "MACD金叉 2026-09-07",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 69,
@@ -1599,7 +1813,10 @@
       "crosses": [
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 70,
@@ -1620,7 +1837,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 103.55,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 71,
@@ -1641,7 +1861,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 86.02,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 72,
@@ -1665,7 +1888,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 73,
@@ -1688,7 +1914,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 74,
@@ -1711,7 +1940,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 75,
@@ -1732,7 +1964,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 356.66,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 76,
@@ -1755,7 +1990,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 77,
@@ -1778,7 +2016,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 78,
@@ -1801,7 +2042,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 79,
@@ -1824,7 +2068,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 80,
@@ -1848,7 +2095,10 @@
         "MACD金叉 2026-08-28",
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 81,
@@ -1871,7 +2121,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 82,
@@ -1892,7 +2145,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 103.1,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 83,
@@ -1915,7 +2171,12 @@
       "crosses": [
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 84,
@@ -1939,7 +2200,12 @@
         "MACD金叉 2026-09-07",
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [
+        "半导体"
+      ],
+      "futu_tab_label": "半导体",
+      "conversation_note": "重掺硅片、外延片及功率器件；关注实际售价、长协订单和硅片分部盈利。"
     },
     {
       "rank": 85,
@@ -1960,7 +2226,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 22.87,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 86,
@@ -1984,7 +2253,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 87,
@@ -2007,7 +2279,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 88,
@@ -2031,7 +2306,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 89,
@@ -2054,7 +2332,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 90,
@@ -2078,7 +2359,12 @@
         "MACD金叉 2026-09-07",
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [
+        "光"
+      ],
+      "futu_tab_label": "光",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 91,
@@ -2101,7 +2387,10 @@
       "crosses": [
         "MACD金叉 2026-09-15"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 92,
@@ -2124,7 +2413,12 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "高频高速覆铜板升级，是PCB材料环节的核心跟踪对象。"
     },
     {
       "rank": 93,
@@ -2148,7 +2442,10 @@
         "MACD金叉 2026-09-14",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 94,
@@ -2171,7 +2468,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 95,
@@ -2194,7 +2494,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 96,
@@ -2215,7 +2518,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 81.83,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 97,
@@ -2238,7 +2544,10 @@
       "crosses": [
         "MACD金叉 2026-09-15"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 98,
@@ -2261,7 +2570,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 99,
@@ -2284,7 +2596,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 100,
@@ -2307,7 +2622,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 101,
@@ -2330,7 +2648,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 102,
@@ -2353,7 +2674,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 103,
@@ -2376,7 +2700,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 104,
@@ -2399,7 +2726,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 105,
@@ -2423,7 +2753,10 @@
         "MACD金叉 2026-09-11",
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 106,
@@ -2447,7 +2780,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 107,
@@ -2470,7 +2806,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 108,
@@ -2493,7 +2832,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 109,
@@ -2516,7 +2858,12 @@
       "crosses": [
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [
+        "半导体"
+      ],
+      "futu_tab_label": "半导体",
+      "conversation_note": "CMP平坦化与减薄设备；关注先进封装减薄放量和设备收入贡献。"
     },
     {
       "rank": 110,
@@ -2540,7 +2887,12 @@
         "MACD金叉 2026-09-10",
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 111,
@@ -2561,7 +2913,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 49.65,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 112,
@@ -2585,7 +2940,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 113,
@@ -2608,7 +2966,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 114,
@@ -2632,7 +2993,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 115,
@@ -2656,7 +3020,10 @@
         "MACD金叉 2026-09-14",
         "KDJ金叉 2026-09-03"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 116,
@@ -2680,7 +3047,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 117,
@@ -2703,7 +3073,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 118,
@@ -2726,7 +3099,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 119,
@@ -2749,7 +3125,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 120,
@@ -2772,7 +3151,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 121,
@@ -2795,7 +3177,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 122,
@@ -2819,7 +3204,10 @@
         "MACD金叉 2026-09-11",
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 123,
@@ -2842,7 +3230,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 124,
@@ -2865,7 +3256,10 @@
       "crosses": [
         "MACD金叉 2026-09-02"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 125,
@@ -2888,7 +3282,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 126,
@@ -2911,7 +3308,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 127,
@@ -2934,7 +3334,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 128,
@@ -2957,7 +3360,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 129,
@@ -2981,7 +3387,10 @@
         "MACD金叉 2026-09-14",
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 130,
@@ -3002,7 +3411,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 11.96,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 131,
@@ -3025,7 +3437,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 132,
@@ -3049,7 +3464,10 @@
         "MACD金叉 2026-09-14",
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 133,
@@ -3072,7 +3490,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 134,
@@ -3095,7 +3516,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 135,
@@ -3118,7 +3542,12 @@
       "crosses": [
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [
+        "光"
+      ],
+      "futu_tab_label": "光",
+      "conversation_note": "显示及半导体检测设备商；控股普赛斯新增1.6T光通信与光芯片测试。"
     },
     {
       "rank": 136,
@@ -3141,7 +3570,10 @@
       "crosses": [
         "MACD金叉 2026-09-09"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 137,
@@ -3165,7 +3597,10 @@
         "MACD金叉 2026-09-14",
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 138,
@@ -3189,7 +3624,10 @@
         "MACD金叉 2026-09-09",
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 139,
@@ -3212,7 +3650,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 140,
@@ -3236,7 +3677,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 141,
@@ -3260,7 +3704,10 @@
         "MACD金叉 2026-09-14",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 142,
@@ -3283,7 +3730,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 143,
@@ -3306,7 +3756,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 144,
@@ -3327,7 +3780,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 58.7,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 145,
@@ -3350,7 +3806,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 146,
@@ -3373,7 +3832,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 147,
@@ -3397,7 +3859,10 @@
         "MACD金叉 2026-08-27",
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 148,
@@ -3421,7 +3886,10 @@
         "MACD金叉 2026-09-10",
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 149,
@@ -3442,7 +3910,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 17.153,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 150,
@@ -3465,7 +3936,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 151,
@@ -3488,7 +3962,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 152,
@@ -3511,7 +3988,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 153,
@@ -3534,7 +4014,10 @@
       "crosses": [
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 154,
@@ -3557,7 +4040,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 155,
@@ -3580,7 +4066,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 156,
@@ -3604,7 +4093,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 157,
@@ -3628,7 +4120,10 @@
         "MACD金叉 2026-09-09",
         "KDJ金叉 2026-09-04"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 158,
@@ -3651,7 +4146,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 159,
@@ -3675,7 +4173,10 @@
         "MACD金叉 2026-09-07",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 160,
@@ -3698,7 +4199,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 161,
@@ -3719,7 +4223,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 80.68,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 162,
@@ -3740,7 +4247,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 64.0,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 163,
@@ -3761,7 +4271,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 30.03,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 164,
@@ -3784,7 +4297,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 165,
@@ -3808,7 +4324,10 @@
         "MACD金叉 2026-09-09",
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 166,
@@ -3832,7 +4351,10 @@
         "MACD金叉 2026-09-10",
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 167,
@@ -3853,7 +4375,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 41.6,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 168,
@@ -3877,7 +4402,12 @@
         "MACD金叉 2026-09-08",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 169,
@@ -3900,7 +4430,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 170,
@@ -3923,7 +4456,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 171,
@@ -3946,7 +4482,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 172,
@@ -3969,7 +4508,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 173,
@@ -3992,7 +4534,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 174,
@@ -4016,7 +4561,10 @@
         "MACD金叉 2026-09-09",
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 175,
@@ -4039,7 +4587,10 @@
       "crosses": [
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 176,
@@ -4062,7 +4613,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 177,
@@ -4083,7 +4637,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 10.75,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 178,
@@ -4107,7 +4664,10 @@
         "MACD金叉 2026-09-10",
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 179,
@@ -4130,7 +4690,10 @@
       "crosses": [
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 180,
@@ -4153,7 +4716,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 181,
@@ -4176,7 +4742,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 182,
@@ -4200,7 +4769,10 @@
         "MACD金叉 2026-09-07",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 183,
@@ -4221,7 +4793,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 78.5,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 184,
@@ -4245,7 +4820,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 185,
@@ -4269,7 +4847,10 @@
         "MACD金叉 2026-09-08",
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 186,
@@ -4292,7 +4873,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 187,
@@ -4313,7 +4897,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 37.9,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 188,
@@ -4336,7 +4923,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 189,
@@ -4360,7 +4950,10 @@
         "MACD金叉 2026-09-10",
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 190,
@@ -4381,7 +4974,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 34.82,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 191,
@@ -4405,7 +5001,12 @@
         "MACD金叉 2026-09-11",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 192,
@@ -4429,7 +5030,12 @@
         "MACD金叉 2026-09-09",
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 193,
@@ -4453,7 +5059,12 @@
         "MACD金叉 2026-09-09",
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [
+        "半导体"
+      ],
+      "futu_tab_label": "半导体",
+      "conversation_note": "国产半导体光刻胶已有实际供货；关注高端胶销售占比、毛利和客户扩张。"
     },
     {
       "rank": 194,
@@ -4477,7 +5088,12 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [
+        "半导体"
+      ],
+      "futu_tab_label": "半导体",
+      "conversation_note": "半导体工艺材料与高端光刻胶；关注各型号认证转量产和稳定供货。"
     },
     {
       "rank": 195,
@@ -4500,7 +5116,10 @@
       "crosses": [
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 196,
@@ -4523,7 +5142,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 197,
@@ -4544,7 +5166,12 @@
       "bottom_date": "2026-09-14",
       "invalid": 106.6,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 198,
@@ -4565,7 +5192,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 32.23,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 199,
@@ -4588,7 +5218,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 200,
@@ -4611,7 +5244,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 201,
@@ -4634,7 +5270,10 @@
       "crosses": [
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 202,
@@ -4658,7 +5297,10 @@
         "MACD金叉 2026-09-14",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 203,
@@ -4682,7 +5324,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 204,
@@ -4703,7 +5348,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 31.9,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 205,
@@ -4727,7 +5375,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 206,
@@ -4748,7 +5399,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 19.85,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 207,
@@ -4771,7 +5425,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 208,
@@ -4794,7 +5451,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 209,
@@ -4817,7 +5477,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 210,
@@ -4838,7 +5501,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 433.51,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 211,
@@ -4861,7 +5527,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 212,
@@ -4884,7 +5553,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 213,
@@ -4907,7 +5579,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 214,
@@ -4930,7 +5605,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 215,
@@ -4951,7 +5629,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 11.9,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 216,
@@ -4975,7 +5656,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 217,
@@ -4998,7 +5682,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 218,
@@ -5019,7 +5706,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 43.45,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 219,
@@ -5042,7 +5732,10 @@
       "crosses": [
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 220,
@@ -5065,7 +5758,10 @@
       "crosses": [
         "MACD金叉 2026-09-04"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 221,
@@ -5089,7 +5785,12 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "高端电子电路铜箔；关注第四代产品产能与良率爬坡。"
     },
     {
       "rank": 222,
@@ -5112,7 +5813,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 223,
@@ -5136,7 +5840,12 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [
+        "半导体"
+      ],
+      "futu_tab_label": "半导体",
+      "conversation_note": "电子特气、前驱体与ArF光刻胶；关注光刻胶收入规模和利润贡献。"
     },
     {
       "rank": 224,
@@ -5159,7 +5868,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 225,
@@ -5182,7 +5894,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 226,
@@ -5203,7 +5918,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 23.85,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 227,
@@ -5224,7 +5942,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 24.42,
       "crosses": [],
-      "momentum": "KDJ单金叉确认"
+      "momentum": "KDJ单金叉确认",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 228,
@@ -5248,7 +5969,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 229,
@@ -5269,7 +5993,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 41.0,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 230,
@@ -5292,7 +6019,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 231,
@@ -5316,7 +6046,10 @@
         "MACD金叉 2026-08-28",
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 232,
@@ -5340,7 +6073,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 233,
@@ -5364,7 +6100,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 234,
@@ -5387,7 +6126,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 235,
@@ -5411,7 +6153,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 236,
@@ -5434,7 +6179,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 237,
@@ -5457,7 +6205,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 238,
@@ -5480,7 +6231,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 239,
@@ -5504,7 +6258,10 @@
       "crosses": [
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 240,
@@ -5528,7 +6285,10 @@
       "crosses": [
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 241,
@@ -5552,7 +6312,10 @@
       "crosses": [
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "KDJ单金叉确认"
+      "momentum": "KDJ单金叉确认",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 242,
@@ -5576,7 +6339,10 @@
       "crosses": [
         "MACD金叉 2026-09-14"
       ],
-      "momentum": "MACD单金叉确认"
+      "momentum": "MACD单金叉确认",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 243,
@@ -5600,7 +6366,12 @@
       "crosses": [
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "高端HVLP铜箔；关注出货增长、产品结构改善及产能释放。"
     },
     {
       "rank": 244,
@@ -5624,7 +6395,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉确认"
+      "momentum": "KDJ单金叉确认",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 245,
@@ -5647,7 +6421,12 @@
       "crosses": [
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "高端覆铜板与积层绝缘膜；关注国产替代进展。"
     },
     {
       "rank": 246,
@@ -5668,7 +6447,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 78.3,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 247,
@@ -5691,7 +6473,13 @@
       "crosses": [
         "MACD金叉 2026-09-08"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [
+        "光",
+        "PCB"
+      ],
+      "futu_tab_label": "光 / PCB",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 248,
@@ -5712,7 +6500,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 32.55,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 249,
@@ -5733,7 +6524,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 204.0,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 250,
@@ -5754,7 +6548,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 207.18,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 251,
@@ -5775,7 +6572,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 22.91,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 252,
@@ -5796,7 +6596,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 25.27,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 253,
@@ -5817,7 +6620,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 135.0,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 254,
@@ -5838,7 +6644,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 23.53,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 255,
@@ -5861,7 +6670,10 @@
       "crosses": [
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 256,
@@ -5882,7 +6694,12 @@
       "bottom_date": "2026-09-15",
       "invalid": 598.01,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [
+        "光"
+      ],
+      "futu_tab_label": "光",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 257,
@@ -5903,7 +6720,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 21.54,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 258,
@@ -5924,7 +6744,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 58.5,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 259,
@@ -5945,7 +6768,10 @@
       "bottom_date": "2026-09-02",
       "invalid": 300.0,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 260,
@@ -5966,7 +6792,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 38.32,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 261,
@@ -5989,7 +6818,12 @@
       "crosses": [
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 262,
@@ -6010,7 +6844,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 33.53,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 263,
@@ -6033,7 +6870,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 264,
@@ -6054,7 +6894,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 55.7,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 265,
@@ -6075,7 +6918,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 107.6,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 266,
@@ -6098,7 +6944,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 267,
@@ -6121,7 +6970,12 @@
       "crosses": [
         "MACD金叉 2026-08-28"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [
+        "光"
+      ],
+      "futu_tab_label": "光",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 268,
@@ -6142,7 +6996,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 175.6,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 269,
@@ -6165,7 +7022,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 270,
@@ -6188,7 +7048,12 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [
+        "半导体"
+      ],
+      "futu_tab_label": "半导体",
+      "conversation_note": "大尺寸半导体硅片周期修复；关注毛利率、利用率与新增折旧压力。"
     },
     {
       "rank": 271,
@@ -6211,7 +7076,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 272,
@@ -6234,7 +7102,10 @@
       "crosses": [
         "KDJ金叉 2026-09-03"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 273,
@@ -6257,7 +7128,10 @@
       "crosses": [
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 274,
@@ -6280,7 +7154,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 275,
@@ -6303,7 +7180,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 276,
@@ -6326,7 +7206,12 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "高频高速树脂升级；关注BCB碳氢树脂机会。"
     },
     {
       "rank": 277,
@@ -6350,7 +7235,10 @@
         "MACD金叉 2026-09-07",
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 278,
@@ -6371,7 +7259,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 40.48,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 279,
@@ -6394,7 +7285,10 @@
       "crosses": [
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 280,
@@ -6417,7 +7311,10 @@
       "crosses": [
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 281,
@@ -6440,7 +7337,10 @@
       "crosses": [
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 282,
@@ -6461,7 +7361,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 86.15,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 283,
@@ -6482,7 +7385,10 @@
       "bottom_date": "2026-09-15",
       "invalid": 42.35,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 284,
@@ -6503,7 +7409,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 33.69,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 285,
@@ -6524,7 +7433,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 56.98,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 286,
@@ -6545,7 +7457,10 @@
       "bottom_date": "2026-09-15",
       "invalid": 75.65,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 287,
@@ -6566,7 +7481,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 15.08,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 288,
@@ -6587,7 +7505,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 59.4,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 289,
@@ -6608,7 +7529,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 67.6,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 290,
@@ -6629,7 +7553,10 @@
       "bottom_date": "2026-09-15",
       "invalid": 41.01,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 291,
@@ -6650,7 +7577,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 90.02,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 292,
@@ -6671,7 +7601,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 58.0,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 293,
@@ -6692,7 +7625,10 @@
       "bottom_date": "2026-09-15",
       "invalid": 18.9,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 294,
@@ -6713,7 +7649,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 13.61,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 295,
@@ -6734,7 +7673,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 14.51,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 296,
@@ -6757,7 +7699,10 @@
       "crosses": [
         "MACD金叉 2026-08-26"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 297,
@@ -6778,7 +7723,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 11.72,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 298,
@@ -6799,7 +7747,10 @@
       "bottom_date": "2026-09-15",
       "invalid": 17.33,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 299,
@@ -6820,7 +7771,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 18.18,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 300,
@@ -6841,7 +7795,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 27.31,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 301,
@@ -6862,7 +7819,10 @@
       "bottom_date": "2026-09-15",
       "invalid": 63.03,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 302,
@@ -6883,7 +7843,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 36.64,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 303,
@@ -6906,7 +7869,10 @@
       "crosses": [
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 304,
@@ -6927,7 +7893,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 18.63,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 305,
@@ -6948,7 +7917,10 @@
       "bottom_date": "2026-09-14",
       "invalid": 18.13,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 306,
@@ -6971,7 +7943,10 @@
       "crosses": [
         "KDJ金叉 2026-09-09"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 307,
@@ -6992,7 +7967,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 23.2,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 308,
@@ -7013,7 +7991,12 @@
       "bottom_date": "2026-09-15",
       "invalid": 117.5,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [
+        "光"
+      ],
+      "futu_tab_label": "光",
+      "conversation_note": "传统仪表为基本盘，收购伽蓝特切入800G/1.6T光模块及硅光晶圆测试；AI眼镜收入未单列。"
     },
     {
       "rank": 309,
@@ -7036,7 +8019,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 310,
@@ -7057,7 +8043,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 20.11,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 311,
@@ -7078,7 +8067,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 45.73,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 312,
@@ -7099,7 +8091,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 14.53,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 313,
@@ -7122,7 +8117,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 314,
@@ -7143,7 +8141,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 85.8,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 315,
@@ -7166,7 +8167,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 316,
@@ -7187,7 +8191,10 @@
       "bottom_date": "2026-09-10",
       "invalid": 8.85,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 317,
@@ -7210,7 +8217,10 @@
       "crosses": [
         "KDJ金叉 2026-09-11"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 318,
@@ -7234,7 +8244,10 @@
         "MACD金叉 2026-09-15",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 319,
@@ -7257,7 +8270,10 @@
       "crosses": [
         "KDJ金叉 2026-09-08"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 320,
@@ -7278,7 +8294,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 47.75,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 321,
@@ -7299,7 +8318,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 14.3,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 322,
@@ -7322,7 +8344,10 @@
       "crosses": [
         "MACD金叉 2026-09-07"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 323,
@@ -7345,7 +8370,10 @@
       "crosses": [
         "KDJ金叉 2026-08-26"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 324,
@@ -7369,7 +8397,10 @@
         "MACD金叉 2026-09-14",
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "双金叉"
+      "momentum": "双金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 325,
@@ -7392,7 +8423,12 @@
       "crosses": [
         "KDJ金叉 2026-09-10"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [
+        "PCB"
+      ],
+      "futu_tab_label": "PCB",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 326,
@@ -7415,7 +8451,10 @@
       "crosses": [
         "KDJ金叉 2026-09-07"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 327,
@@ -7438,7 +8477,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 328,
@@ -7461,7 +8503,10 @@
       "crosses": [
         "KDJ金叉 2026-09-15"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 329,
@@ -7484,7 +8529,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 330,
@@ -7507,7 +8555,10 @@
       "crosses": [
         "KDJ金叉 2026-09-14"
       ],
-      "momentum": "KDJ单金叉"
+      "momentum": "KDJ单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 331,
@@ -7530,7 +8581,10 @@
       "crosses": [
         "MACD金叉 2026-09-01"
       ],
-      "momentum": "MACD单金叉"
+      "momentum": "MACD单金叉",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 332,
@@ -7551,7 +8605,10 @@
       "bottom_date": "2026-09-11",
       "invalid": 0.766,
       "crosses": [],
-      "momentum": "金叉前观察"
+      "momentum": "金叉前观察",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 333,
@@ -7572,7 +8629,10 @@
       "bottom_date": "2026-09-15",
       "invalid": 77.79,
       "crosses": [],
-      "momentum": "MACD多头延续"
+      "momentum": "MACD多头延续",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 334,
@@ -7593,9 +8653,28 @@
       "bottom_date": "2026-09-14",
       "invalid": 90.51,
       "crosses": [],
-      "momentum": "KDJ单金叉确认"
+      "momentum": "KDJ单金叉确认",
+      "futu_tabs": [
+        "光"
+      ],
+      "futu_tab_label": "光",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     }
   ],
+  "futu_tab_snapshot": {
+    "asof": "2026-09-16",
+    "source": "本机 Codex 历史对话及其已验收富途页卡回读；不是本轮实时 OpenD 清单",
+    "group_counts": {
+      "半导体": 10,
+      "光": 19,
+      "PCB": 17
+    },
+    "matched_candidate_counts": {
+      "半导体": 7,
+      "光": 10,
+      "PCB": 15
+    }
+  },
   "watchlist_readback_ok": true,
   "C_source_verified": true,
   "execution_ready": false,
@@ -7655,7 +8734,12 @@
         "final_target": 1919.0
       },
       "point_status": "等待确认；不执行",
-      "market_gate": "防守/等待"
+      "market_gate": "防守/等待",
+      "futu_tabs": [
+        "光"
+      ],
+      "futu_tab_label": "光",
+      "conversation_note": "历史对话仅确认页卡归属，未找到独立个股备注。"
     },
     {
       "rank": 2,
@@ -7704,7 +8788,10 @@
         "final_target": null
       },
       "point_status": "等待确认；不执行",
-      "market_gate": "防守/等待"
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 3,
@@ -7753,7 +8840,10 @@
         "final_target": 41.95
       },
       "point_status": "等待确认；不执行",
-      "market_gate": "防守/等待"
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 4,
@@ -7802,7 +8892,10 @@
         "final_target": 43.625723
       },
       "point_status": "等待确认；不执行",
-      "market_gate": "防守/等待"
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 5,
@@ -7852,7 +8945,10 @@
         "final_target": 27.49
       },
       "point_status": "等待确认；不执行",
-      "market_gate": "防守/等待"
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 6,
@@ -7897,7 +8993,10 @@
         "final_target": 180.58
       },
       "point_status": "等待确认；不执行",
-      "market_gate": "防守/等待"
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 7,
@@ -7932,7 +9031,10 @@
         "final_target": 42.89
       },
       "point_status": "等待确认；不执行",
-      "market_gate": "防守/等待"
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 8,
@@ -7967,7 +9069,10 @@
         "final_target": 162.89
       },
       "point_status": "等待确认；不执行",
-      "market_gate": "防守/等待"
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 9,
@@ -8002,7 +9107,10 @@
         "final_target": 29.2
       },
       "point_status": "等待确认；不执行",
-      "market_gate": "防守/等待"
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     },
     {
       "rank": 10,
@@ -8037,12 +9145,16 @@
         "final_target": 14.31
       },
       "point_status": "等待确认；不执行",
-      "market_gate": "防守/等待"
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—"
     }
   ],
   "evidence": {
     "result_sha256": "e2b23514fb7ff1e98e861dadce6908f0a9479597e0a12eca8ca36f17d1ab2252",
     "sync_sha256": "47e0e5f73b4098dcad442a9946eda2b86cf249a71ff3d798aa3f99c85d3538c1",
-    "trade_plan_sha256": "32eaf214a1b7b42fcaad493759648cb354aacc29aff777e00748dfdab882698c"
+    "trade_plan_sha256": "32eaf214a1b7b42fcaad493759648cb354aacc29aff777e00748dfdab882698c",
+    "futu_tabs_sha256": "d5356fed08451b0eb94d31100f1ad330fd484495967d1d6b604a29fda4d17a2e"
   }
 }
