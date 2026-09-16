@@ -1,72 +1,71 @@
 {
   "schema_version": "US_DAILY_ABC_PUBLIC_1.1",
-  "data_date": "2026-09-14",
-  "collected_at_ny": "2026-09-14T21:06:26.421995-04:00",
+  "data_date": "2026-09-15",
+  "collected_at_ny": "2026-09-15T21:23:39.576964-04:00",
   "data_boundary": "美股完整常规时段日K，前复权；点位按当日完整日K重算",
-  "source_sha256": "a9218722589a0ef90d847341946d67f8b1a3339c4a67641042e2abac2a3a986c",
+  "source_sha256": "d44f2f75d15d84bdb88b2e3bdb761c0972f4723c296656550fefb80557445126",
   "coverage": {
-    "A": 0.9723502304147466,
-    "B": 0.9400921658986175,
-    "C": 0.9400921658986175
+    "A": 0.9815668202764977,
+    "B": 0.9493087557603687,
+    "C": 0.9493087557603687
   },
   "counts": {
-    "A": 2,
-    "B": 16,
-    "C": 9
+    "A": 8,
+    "B": 23,
+    "C": 6
   },
-  "candidate_count": 24,
+  "candidate_count": 31,
   "selected_count": 10,
   "market_defensive": true,
   "m_watch_readback_verified": true,
   "top": [
     {
-      "ticker": "CRCL",
-      "name": "Circle",
+      "ticker": "TECH",
+      "name": "Bio-Techne",
       "sources": [
-        "B",
-        "C"
+        "B"
       ],
-      "stage": "B 金叉前改善观察；C 趋势回踩/强势平台 · 价格技术确认·待风险复核",
+      "stage": "B KDJ单金叉确认",
       "rank": 1,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 97.42,
+      "latest_close": 72.34,
       "action": "只观察",
       "pullback_zone": [
-        94.88,
-        96.65
+        72.27,
+        72.31
       ],
-      "confirmation_price": 95.8,
-      "maximum_acceptable_price": 99.35,
-      "invalidation_price": 89.5,
-      "reduce_price": 105.25,
-      "final_target_price": 111.55,
-      "review_trading_day": 10,
-      "max_trading_days": 30
+      "confirmation_price": 72.3,
+      "maximum_acceptable_price": 72.39,
+      "invalidation_price": 72.08,
+      "reduce_price": 72.63,
+      "final_target_price": 72.85,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
-      "ticker": "FTNT",
-      "name": "飞塔信息",
+      "ticker": "CF",
+      "name": "CF工业控股",
       "sources": [
         "C"
       ],
-      "stage": "C 强势平台 · 价格技术确认·待风险复核",
+      "stage": "C 趋势回踩 · 价格技术确认·待风险复核",
       "rank": 2,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 170.18,
+      "latest_close": 135.54,
       "action": "只观察",
       "pullback_zone": [
-        160.37,
-        162.33
+        133.48,
+        134.94
       ],
-      "confirmation_price": 160.37,
-      "maximum_acceptable_price": 164.3,
-      "invalidation_price": 154.0,
-      "reduce_price": 173.89,
-      "final_target_price": 177.07,
+      "confirmation_price": 137.54,
+      "maximum_acceptable_price": 140.46,
+      "invalidation_price": 130.09,
+      "reduce_price": 148.72,
+      "final_target_price": 156.18,
       "review_trading_day": 10,
       "max_trading_days": 30
     },
@@ -74,131 +73,135 @@
       "ticker": "HIMS",
       "name": "Hims & Hers Health",
       "sources": [
+        "A",
         "B"
       ],
-      "stage": "B KDJ单金叉确认",
+      "stage": "A 关K 2026-09-14 · 回调第1日；B KDJ单金叉确认",
       "rank": 3,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 28.81,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 1.6886956774338566,
+      "a_latest_volume_ratio": 0.6813960003690913,
+      "latest_close": 27.85,
       "action": "只观察",
       "pullback_zone": [
-        28.41,
-        28.79
+        27.85,
+        28.22
       ],
-      "confirmation_price": 29.76,
-      "maximum_acceptable_price": 30.52,
-      "invalidation_price": 27.38,
+      "confirmation_price": 29.69,
+      "maximum_acceptable_price": 30.43,
+      "invalidation_price": 26.73,
       "reduce_price": 34.46,
-      "final_target_price": 35.71,
-      "review_trading_day": 5,
-      "max_trading_days": 15
+      "final_target_price": 37.1,
+      "review_trading_day": 3,
+      "max_trading_days": 10
     },
     {
-      "ticker": "ABCL",
-      "name": "AbCellera Biologics",
+      "ticker": "MRNA",
+      "name": "Moderna",
       "sources": [
+        "A",
         "B"
       ],
-      "stage": "B KDJ单金叉确认",
+      "stage": "A 关K 2026-09-11 · 回调第2日；B KDJ单金叉确认",
       "rank": 4,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 11.17,
+      "a_key_date": "2026-09-11",
+      "a_key_volume_ratio": 1.9571061753771601,
+      "a_latest_volume_ratio": 0.5460781890309467,
+      "latest_close": 143.77,
       "action": "只观察",
       "pullback_zone": [
-        11.14,
-        11.31
+        141.78,
+        144.39
       ],
-      "confirmation_price": 11.14,
-      "maximum_acceptable_price": 11.49,
-      "invalidation_price": 10.8,
-      "reduce_price": 12.58,
-      "final_target_price": 12.84,
-      "review_trading_day": 5,
-      "max_trading_days": 15
+      "confirmation_price": 147.34,
+      "maximum_acceptable_price": 152.55,
+      "invalidation_price": 130.38,
+      "reduce_price": 176.66,
+      "final_target_price": 189.74,
+      "review_trading_day": 3,
+      "max_trading_days": 10
     },
     {
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "sources": [
-        "B"
-      ],
-      "stage": "B 金叉前改善观察",
-      "rank": 5,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 173.31,
-      "action": "只观察",
-      "pullback_zone": [
-        172.47,
-        174.37
-      ],
-      "confirmation_price": 172.47,
-      "maximum_acceptable_price": 176.26,
-      "invalidation_price": 164.55,
-      "reduce_price": 188.37,
-      "final_target_price": 192.33,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "WDAY",
-      "name": "Workday",
-      "sources": [
-        "B"
-      ],
-      "stage": "B 金叉前改善观察",
-      "rank": 6,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 194.21,
-      "action": "只观察",
-      "pullback_zone": [
-        191.81,
-        194.0
-      ],
-      "confirmation_price": 191.81,
-      "maximum_acceptable_price": 196.19,
-      "invalidation_price": 183.53,
-      "reduce_price": 211.83,
-      "final_target_price": 215.97,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "ZETA",
-      "name": "Zeta Global",
+      "ticker": "BE",
+      "name": "Bloom Energy",
       "sources": [
         "B",
         "C"
       ],
       "stage": "B 金叉前改善观察；C 趋势回踩 · 回调/整理观察·待价格确认",
-      "rank": 7,
+      "rank": 5,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 31.01,
+      "latest_close": 259.35,
       "action": "只观察",
       "pullback_zone": [
-        30.57,
-        30.93
+        252.3,
+        256.56
       ],
-      "confirmation_price": 31.12,
-      "maximum_acceptable_price": 31.85,
-      "invalidation_price": 29.68,
-      "reduce_price": 33.29,
-      "final_target_price": 34.74,
+      "confirmation_price": 261.7,
+      "maximum_acceptable_price": 270.21,
+      "invalidation_price": 249.05,
+      "reduce_price": 283.83,
+      "final_target_price": 293.61,
       "review_trading_day": 10,
       "max_trading_days": 30
     },
     {
-      "ticker": "MSTR",
-      "name": "Strategy",
+      "ticker": "WDAY",
+      "name": "Workday",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "stage": "A 关K 2026-09-14 · 回调第1日；B 金叉前改善观察",
+      "rank": 6,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 1.5549165787991353,
+      "a_latest_volume_ratio": 0.6864229359002376,
+      "latest_close": 190.67,
+      "action": "只观察",
+      "pullback_zone": [
+        190.27,
+        192.44
+      ],
+      "confirmation_price": 195.92,
+      "maximum_acceptable_price": 200.27,
+      "invalidation_price": 183.53,
+      "reduce_price": 214.5,
+      "final_target_price": 226.88,
+      "review_trading_day": 3,
+      "max_trading_days": 10
+    },
+    {
+      "ticker": "DAR",
+      "name": "美国达尔令国际",
+      "sources": [
+        "B",
+        "C"
+      ],
+      "stage": "B 金叉前改善观察；C 强势平台 · 回调/整理观察·待价格确认",
+      "rank": 7,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "latest_close": 66.54,
+      "action": "只观察",
+      "pullback_zone": [
+        65.88,
+        66.53
+      ],
+      "confirmation_price": 66.77,
+      "maximum_acceptable_price": 68.06,
+      "invalidation_price": 64.82,
+      "reduce_price": 69.98,
+      "final_target_price": 71.64,
+      "review_trading_day": 10,
+      "max_trading_days": 30
+    },
+    {
+      "ticker": "ZETA",
+      "name": "Zeta Global",
       "sources": [
         "B",
         "C"
@@ -208,44 +211,19 @@
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 136.94,
+      "latest_close": 31.04,
       "action": "只观察",
       "pullback_zone": [
-        131.83,
-        134.2
+        30.66,
+        31.03
       ],
-      "confirmation_price": 137.89,
-      "maximum_acceptable_price": 142.62,
-      "invalidation_price": 126.91,
-      "reduce_price": 154.36,
-      "final_target_price": 165.34,
+      "confirmation_price": 31.23,
+      "maximum_acceptable_price": 31.98,
+      "invalidation_price": 29.84,
+      "reduce_price": 33.33,
+      "final_target_price": 34.72,
       "review_trading_day": 10,
       "max_trading_days": 30
-    },
-    {
-      "ticker": "DDOG",
-      "name": "Datadog",
-      "sources": [
-        "B"
-      ],
-      "stage": "B 双金叉确认",
-      "rank": 9,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 230.05,
-      "action": "只观察",
-      "pullback_zone": [
-        228.61,
-        231.62
-      ],
-      "confirmation_price": 233.23,
-      "maximum_acceptable_price": 239.23,
-      "invalidation_price": 218.27,
-      "reduce_price": 257.96,
-      "final_target_price": 270.61,
-      "review_trading_day": 5,
-      "max_trading_days": 15
     },
     {
       "ticker": "MSM",
@@ -254,74 +232,98 @@
         "B"
       ],
       "stage": "B 双金叉确认",
+      "rank": 9,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "latest_close": 119.88,
+      "action": "只观察",
+      "pullback_zone": [
+        119.72,
+        120.46
+      ],
+      "confirmation_price": 120.5,
+      "maximum_acceptable_price": 121.98,
+      "invalidation_price": 117.25,
+      "reduce_price": 125.72,
+      "final_target_price": 128.64,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "sources": [
+        "B"
+      ],
+      "stage": "B 双金叉确认",
       "rank": 10,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 119.28,
+      "latest_close": 230.27,
       "action": "只观察",
       "pullback_zone": [
-        119.21,
-        119.95
+        228.77,
+        231.79
       ],
-      "confirmation_price": 123.05,
-      "maximum_acceptable_price": 124.52,
-      "invalidation_price": 117.25,
-      "reduce_price": 131.74,
-      "final_target_price": 137.53,
+      "confirmation_price": 233.69,
+      "maximum_acceptable_price": 239.72,
+      "invalidation_price": 218.27,
+      "reduce_price": 256.81,
+      "final_target_price": 272.22,
       "review_trading_day": 5,
       "max_trading_days": 15
     }
   ],
   "pool": [
     {
-      "ticker": "CRCL",
-      "name": "Circle",
+      "ticker": "TECH",
+      "name": "Bio-Techne",
       "sources": [
-        "B",
-        "C"
+        "B"
       ],
-      "stage": "B 金叉前改善观察；C 趋势回踩/强势平台 · 价格技术确认·待风险复核",
+      "stage": "B KDJ单金叉确认",
       "rank": 1,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 97.42,
+      "latest_close": 72.34,
       "action": "只观察",
       "pullback_zone": [
-        94.88,
-        96.65
+        72.27,
+        72.31
       ],
-      "confirmation_price": 95.8,
-      "maximum_acceptable_price": 99.35,
-      "invalidation_price": 89.5,
-      "reduce_price": 105.25,
-      "final_target_price": 111.55,
-      "review_trading_day": 10,
-      "max_trading_days": 30
+      "confirmation_price": 72.3,
+      "maximum_acceptable_price": 72.39,
+      "invalidation_price": 72.08,
+      "reduce_price": 72.63,
+      "final_target_price": 72.85,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
-      "ticker": "FTNT",
-      "name": "飞塔信息",
+      "ticker": "CF",
+      "name": "CF工业控股",
       "sources": [
         "C"
       ],
-      "stage": "C 强势平台 · 价格技术确认·待风险复核",
+      "stage": "C 趋势回踩 · 价格技术确认·待风险复核",
       "rank": 2,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 170.18,
+      "latest_close": 135.54,
       "action": "只观察",
       "pullback_zone": [
-        160.37,
-        162.33
+        133.48,
+        134.94
       ],
-      "confirmation_price": 160.37,
-      "maximum_acceptable_price": 164.3,
-      "invalidation_price": 154.0,
-      "reduce_price": 173.89,
-      "final_target_price": 177.07,
+      "confirmation_price": 137.54,
+      "maximum_acceptable_price": 140.46,
+      "invalidation_price": 130.09,
+      "reduce_price": 148.72,
+      "final_target_price": 156.18,
       "review_trading_day": 10,
       "max_trading_days": 30
     },
@@ -329,131 +331,135 @@
       "ticker": "HIMS",
       "name": "Hims & Hers Health",
       "sources": [
+        "A",
         "B"
       ],
-      "stage": "B KDJ单金叉确认",
+      "stage": "A 关K 2026-09-14 · 回调第1日；B KDJ单金叉确认",
       "rank": 3,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 28.81,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 1.6886956774338566,
+      "a_latest_volume_ratio": 0.6813960003690913,
+      "latest_close": 27.85,
       "action": "只观察",
       "pullback_zone": [
-        28.41,
-        28.79
+        27.85,
+        28.22
       ],
-      "confirmation_price": 29.76,
-      "maximum_acceptable_price": 30.52,
-      "invalidation_price": 27.38,
+      "confirmation_price": 29.69,
+      "maximum_acceptable_price": 30.43,
+      "invalidation_price": 26.73,
       "reduce_price": 34.46,
-      "final_target_price": 35.71,
-      "review_trading_day": 5,
-      "max_trading_days": 15
+      "final_target_price": 37.1,
+      "review_trading_day": 3,
+      "max_trading_days": 10
     },
     {
-      "ticker": "ABCL",
-      "name": "AbCellera Biologics",
+      "ticker": "MRNA",
+      "name": "Moderna",
       "sources": [
+        "A",
         "B"
       ],
-      "stage": "B KDJ单金叉确认",
+      "stage": "A 关K 2026-09-11 · 回调第2日；B KDJ单金叉确认",
       "rank": 4,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 11.17,
+      "a_key_date": "2026-09-11",
+      "a_key_volume_ratio": 1.9571061753771601,
+      "a_latest_volume_ratio": 0.5460781890309467,
+      "latest_close": 143.77,
       "action": "只观察",
       "pullback_zone": [
-        11.14,
-        11.31
+        141.78,
+        144.39
       ],
-      "confirmation_price": 11.14,
-      "maximum_acceptable_price": 11.49,
-      "invalidation_price": 10.8,
-      "reduce_price": 12.58,
-      "final_target_price": 12.84,
-      "review_trading_day": 5,
-      "max_trading_days": 15
+      "confirmation_price": 147.34,
+      "maximum_acceptable_price": 152.55,
+      "invalidation_price": 130.38,
+      "reduce_price": 176.66,
+      "final_target_price": 189.74,
+      "review_trading_day": 3,
+      "max_trading_days": 10
     },
     {
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "sources": [
-        "B"
-      ],
-      "stage": "B 金叉前改善观察",
-      "rank": 5,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 173.31,
-      "action": "只观察",
-      "pullback_zone": [
-        172.47,
-        174.37
-      ],
-      "confirmation_price": 172.47,
-      "maximum_acceptable_price": 176.26,
-      "invalidation_price": 164.55,
-      "reduce_price": 188.37,
-      "final_target_price": 192.33,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "WDAY",
-      "name": "Workday",
-      "sources": [
-        "B"
-      ],
-      "stage": "B 金叉前改善观察",
-      "rank": 6,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 194.21,
-      "action": "只观察",
-      "pullback_zone": [
-        191.81,
-        194.0
-      ],
-      "confirmation_price": 191.81,
-      "maximum_acceptable_price": 196.19,
-      "invalidation_price": 183.53,
-      "reduce_price": 211.83,
-      "final_target_price": 215.97,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "ZETA",
-      "name": "Zeta Global",
+      "ticker": "BE",
+      "name": "Bloom Energy",
       "sources": [
         "B",
         "C"
       ],
       "stage": "B 金叉前改善观察；C 趋势回踩 · 回调/整理观察·待价格确认",
-      "rank": 7,
+      "rank": 5,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 31.01,
+      "latest_close": 259.35,
       "action": "只观察",
       "pullback_zone": [
-        30.57,
-        30.93
+        252.3,
+        256.56
       ],
-      "confirmation_price": 31.12,
-      "maximum_acceptable_price": 31.85,
-      "invalidation_price": 29.68,
-      "reduce_price": 33.29,
-      "final_target_price": 34.74,
+      "confirmation_price": 261.7,
+      "maximum_acceptable_price": 270.21,
+      "invalidation_price": 249.05,
+      "reduce_price": 283.83,
+      "final_target_price": 293.61,
       "review_trading_day": 10,
       "max_trading_days": 30
     },
     {
-      "ticker": "MSTR",
-      "name": "Strategy",
+      "ticker": "WDAY",
+      "name": "Workday",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "stage": "A 关K 2026-09-14 · 回调第1日；B 金叉前改善观察",
+      "rank": 6,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 1.5549165787991353,
+      "a_latest_volume_ratio": 0.6864229359002376,
+      "latest_close": 190.67,
+      "action": "只观察",
+      "pullback_zone": [
+        190.27,
+        192.44
+      ],
+      "confirmation_price": 195.92,
+      "maximum_acceptable_price": 200.27,
+      "invalidation_price": 183.53,
+      "reduce_price": 214.5,
+      "final_target_price": 226.88,
+      "review_trading_day": 3,
+      "max_trading_days": 10
+    },
+    {
+      "ticker": "DAR",
+      "name": "美国达尔令国际",
+      "sources": [
+        "B",
+        "C"
+      ],
+      "stage": "B 金叉前改善观察；C 强势平台 · 回调/整理观察·待价格确认",
+      "rank": 7,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "latest_close": 66.54,
+      "action": "只观察",
+      "pullback_zone": [
+        65.88,
+        66.53
+      ],
+      "confirmation_price": 66.77,
+      "maximum_acceptable_price": 68.06,
+      "invalidation_price": 64.82,
+      "reduce_price": 69.98,
+      "final_target_price": 71.64,
+      "review_trading_day": 10,
+      "max_trading_days": 30
+    },
+    {
+      "ticker": "ZETA",
+      "name": "Zeta Global",
       "sources": [
         "B",
         "C"
@@ -463,44 +469,19 @@
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 136.94,
+      "latest_close": 31.04,
       "action": "只观察",
       "pullback_zone": [
-        131.83,
-        134.2
+        30.66,
+        31.03
       ],
-      "confirmation_price": 137.89,
-      "maximum_acceptable_price": 142.62,
-      "invalidation_price": 126.91,
-      "reduce_price": 154.36,
-      "final_target_price": 165.34,
+      "confirmation_price": 31.23,
+      "maximum_acceptable_price": 31.98,
+      "invalidation_price": 29.84,
+      "reduce_price": 33.33,
+      "final_target_price": 34.72,
       "review_trading_day": 10,
       "max_trading_days": 30
-    },
-    {
-      "ticker": "DDOG",
-      "name": "Datadog",
-      "sources": [
-        "B"
-      ],
-      "stage": "B 双金叉确认",
-      "rank": 9,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 230.05,
-      "action": "只观察",
-      "pullback_zone": [
-        228.61,
-        231.62
-      ],
-      "confirmation_price": 233.23,
-      "maximum_acceptable_price": 239.23,
-      "invalidation_price": 218.27,
-      "reduce_price": 257.96,
-      "final_target_price": 270.61,
-      "review_trading_day": 5,
-      "max_trading_days": 15
     },
     {
       "ticker": "MSM",
@@ -509,40 +490,52 @@
         "B"
       ],
       "stage": "B 双金叉确认",
-      "rank": 10,
+      "rank": 9,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 119.28,
+      "latest_close": 119.88,
       "action": "只观察",
       "pullback_zone": [
-        119.21,
-        119.95
+        119.72,
+        120.46
       ],
-      "confirmation_price": 123.05,
-      "maximum_acceptable_price": 124.52,
+      "confirmation_price": 120.5,
+      "maximum_acceptable_price": 121.98,
       "invalidation_price": 117.25,
-      "reduce_price": 131.74,
-      "final_target_price": 137.53,
+      "reduce_price": 125.72,
+      "final_target_price": 128.64,
       "review_trading_day": 5,
       "max_trading_days": 15
     },
     {
-      "ticker": "AMBA",
-      "name": "安霸",
+      "ticker": "DDOG",
+      "name": "Datadog",
       "sources": [
-        "A"
+        "B"
       ],
-      "stage": "A 关K 2026-09-09 · 回调第3日",
-      "rank": null,
-      "a_key_date": "2026-09-09",
-      "a_key_volume_ratio": 1.4865305139525797,
-      "a_latest_volume_ratio": 0.30065466001187074,
-      "action": "待生成交易计划"
+      "stage": "B 双金叉确认",
+      "rank": 10,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "latest_close": 230.27,
+      "action": "只观察",
+      "pullback_zone": [
+        228.77,
+        231.79
+      ],
+      "confirmation_price": 233.69,
+      "maximum_acceptable_price": 239.72,
+      "invalidation_price": 218.27,
+      "reduce_price": 256.81,
+      "final_target_price": 272.22,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
-      "ticker": "BE",
-      "name": "Bloom Energy",
+      "ticker": "AAPL",
+      "name": "苹果",
       "sources": [
         "C"
       ],
@@ -554,12 +547,12 @@
       "action": "待生成交易计划"
     },
     {
-      "ticker": "CVX",
-      "name": "雪佛龙",
+      "ticker": "AMD",
+      "name": "美国超微公司",
       "sources": [
-        "C"
+        "B"
       ],
-      "stage": "C 趋势回踩 · 回调/整理观察·待价格确认",
+      "stage": "B 金叉前改善观察",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
@@ -567,8 +560,8 @@
       "action": "待生成交易计划"
     },
     {
-      "ticker": "ECHO",
-      "name": "回声星通信",
+      "ticker": "ANET",
+      "name": "Arista Networks",
       "sources": [
         "B"
       ],
@@ -580,12 +573,12 @@
       "action": "待生成交易计划"
     },
     {
-      "ticker": "HOOD",
-      "name": "Robinhood",
+      "ticker": "DAVE",
+      "name": "Dave Inc",
       "sources": [
-        "C"
+        "B"
       ],
-      "stage": "C 趋势回踩 · 回调/整理观察·待价格确认",
+      "stage": "B 金叉前改善观察",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
@@ -593,12 +586,77 @@
       "action": "待生成交易计划"
     },
     {
-      "ticker": "ILMN",
-      "name": "Illumina",
+      "ticker": "ELMT",
+      "name": "Elmet Group",
+      "sources": [
+        "A"
+      ],
+      "stage": "A 关K 2026-09-14 · 回调第1日",
+      "rank": null,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 97.96734748066213,
+      "a_latest_volume_ratio": 0.15964350805658126,
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "EOSE",
+      "name": "Eos Energy",
+      "sources": [
+        "B"
+      ],
+      "stage": "B KDJ单金叉确认",
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "FCX",
+      "name": "麦克莫兰铜金",
       "sources": [
         "B"
       ],
       "stage": "B 金叉前改善观察",
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "FSLY",
+      "name": "Fastly",
+      "sources": [
+        "B"
+      ],
+      "stage": "B 双金叉确认",
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "INTU",
+      "name": "财捷",
+      "sources": [
+        "A"
+      ],
+      "stage": "A 关K 2026-09-14 · 回调第1日",
+      "rank": null,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 1.5756083683663193,
+      "a_latest_volume_ratio": 0.8002325754218698,
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "KO",
+      "name": "可口可乐",
+      "sources": [
+        "B"
+      ],
+      "stage": "B KDJ单金叉确认",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
@@ -619,8 +677,8 @@
       "action": "待生成交易计划"
     },
     {
-      "ticker": "MRNA",
-      "name": "Moderna",
+      "ticker": "MRVL",
+      "name": "迈威尔科技",
       "sources": [
         "B"
       ],
@@ -632,25 +690,12 @@
       "action": "待生成交易计划"
     },
     {
-      "ticker": "OKTA",
-      "name": "Okta",
-      "sources": [
-        "C"
-      ],
-      "stage": "C 强势平台 · 趋势候选·位置偏远不追",
-      "rank": null,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "action": "待生成交易计划"
-    },
-    {
-      "ticker": "PEP",
-      "name": "百事可乐",
+      "ticker": "MSFT",
+      "name": "微软",
       "sources": [
         "B"
       ],
-      "stage": "B 金叉前改善观察",
+      "stage": "B KDJ单金叉确认",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
@@ -658,21 +703,34 @@
       "action": "待生成交易计划"
     },
     {
-      "ticker": "POWI",
-      "name": "帕沃英蒂格盛",
+      "ticker": "MXL",
+      "name": "MaxLinear",
+      "sources": [
+        "B"
+      ],
+      "stage": "B MACD单金叉确认",
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
       "sources": [
         "A"
       ],
-      "stage": "A 关K 2026-09-11 · 回调第1日",
+      "stage": "A 关K 2026-09-14 · 回调第1日",
       "rank": null,
-      "a_key_date": "2026-09-11",
-      "a_key_volume_ratio": 2.8540417088296315,
-      "a_latest_volume_ratio": 0.5495186784455096,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 1.6311105892089268,
+      "a_latest_volume_ratio": 0.8407199517489189,
       "action": "待生成交易计划"
     },
     {
-      "ticker": "TECH",
-      "name": "Bio-Techne",
+      "ticker": "PLTR",
+      "name": "Palantir",
       "sources": [
         "B"
       ],
@@ -684,25 +742,64 @@
       "action": "待生成交易计划"
     },
     {
-      "ticker": "TWLO",
-      "name": "Twilio",
+      "ticker": "RXRX",
+      "name": "Recursion Pharmaceuticals",
       "sources": [
-        "B"
+        "A"
       ],
-      "stage": "B 金叉前改善观察",
+      "stage": "A 关K 2026-09-14 · 回调第1日",
       "rank": null,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 2.1287370331065754,
+      "a_latest_volume_ratio": 0.694711935951412,
       "action": "待生成交易计划"
     },
     {
-      "ticker": "UMC",
-      "name": "联电",
+      "ticker": "SMTC",
+      "name": "先科电子",
       "sources": [
         "C"
       ],
-      "stage": "C 强势平台 · 回调/整理观察·待价格确认",
+      "stage": "C 趋势回踩 · 回调/整理观察·待价格确认",
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "TEAM",
+      "name": "Atlassian",
+      "sources": [
+        "A"
+      ],
+      "stage": "A 关K 2026-09-14 · 回调第1日",
+      "rank": null,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 2.0859592408988568,
+      "a_latest_volume_ratio": 0.5850850147789551,
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "UMAC",
+      "name": "Unusual Machines",
+      "sources": [
+        "B"
+      ],
+      "stage": "B 金叉前改善观察",
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "VSH",
+      "name": "威世科技",
+      "sources": [
+        "B"
+      ],
+      "stage": "B 金叉前改善观察",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
