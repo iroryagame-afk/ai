@@ -1,535 +1,583 @@
 {
-  "schema_version": "US_DAILY_ABC_PUBLIC_1.1",
+  "schema_version": "US_DAILY_ABC_PUBLIC_1.2",
   "data_date": "2026-09-15",
-  "collected_at_ny": "2026-09-15T21:23:39.576964-04:00",
+  "collected_at_ny": "2026-09-16T05:36:11.423865-04:00",
   "data_boundary": "美股完整常规时段日K，前复权；点位按当日完整日K重算",
-  "source_sha256": "d44f2f75d15d84bdb88b2e3bdb761c0972f4723c296656550fefb80557445126",
+  "source_sha256": "0115a8ee2089e800aaab5bb9ad9159b6f4ebef826c8bce76f854761410bc0a35",
   "coverage": {
-    "A": 0.9815668202764977,
-    "B": 0.9493087557603687,
-    "C": 0.9493087557603687
+    "A": 0.9861751152073732,
+    "B": 0.9539170506912442,
+    "C": 0.9539170506912442
   },
   "counts": {
     "A": 8,
-    "B": 23,
+    "B": 58,
     "C": 6
   },
-  "candidate_count": 31,
+  "candidate_count": 69,
   "selected_count": 10,
   "market_defensive": true,
   "m_watch_readback_verified": true,
   "top": [
     {
-      "ticker": "TECH",
-      "name": "Bio-Techne",
+      "ticker": "TTD",
+      "name": "The Trade Desk",
       "sources": [
         "B"
       ],
-      "stage": "B KDJ单金叉确认",
       "rank": 1,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 72.34,
+      "structure_node": "B底分型·2026-08-10",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强｜1B?优先",
+      "momentum_volume": "MACD本轮金叉转强 · 1B?",
+      "price_state": "价格技术确认",
+      "latest_close": 15.0,
       "action": "只观察",
       "pullback_zone": [
-        72.27,
-        72.31
+        14.43,
+        14.59
       ],
-      "confirmation_price": 72.3,
-      "maximum_acceptable_price": 72.39,
-      "invalidation_price": 72.08,
-      "reduce_price": 72.63,
-      "final_target_price": 72.85,
+      "confirmation_price": 16.05,
+      "maximum_acceptable_price": 16.38,
+      "invalidation_price": 13.71,
+      "reduce_price": 19.57,
+      "final_target_price": 21.92,
       "review_trading_day": 5,
       "max_trading_days": 15
     },
     {
-      "ticker": "CF",
-      "name": "CF工业控股",
+      "ticker": "OXY",
+      "name": "西方石油",
       "sources": [
-        "C"
+        "B"
       ],
-      "stage": "C 趋势回踩 · 价格技术确认·待风险复核",
       "rank": 2,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 135.54,
+      "structure_node": "B底分型·2026-08-05",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强｜B?优先",
+      "momentum_volume": "MACD本轮金叉转强 · B?",
+      "price_state": "价格技术确认",
+      "latest_close": 63.52,
       "action": "只观察",
       "pullback_zone": [
-        133.48,
-        134.94
+        61.23,
+        61.58
       ],
-      "confirmation_price": 137.54,
-      "maximum_acceptable_price": 140.46,
-      "invalidation_price": 130.09,
-      "reduce_price": 148.72,
-      "final_target_price": 156.18,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "HIMS",
-      "name": "Hims & Hers Health",
-      "sources": [
-        "A",
-        "B"
-      ],
-      "stage": "A 关K 2026-09-14 · 回调第1日；B KDJ单金叉确认",
-      "rank": 3,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 1.6886956774338566,
-      "a_latest_volume_ratio": 0.6813960003690913,
-      "latest_close": 27.85,
-      "action": "只观察",
-      "pullback_zone": [
-        27.85,
-        28.22
-      ],
-      "confirmation_price": 29.69,
-      "maximum_acceptable_price": 30.43,
-      "invalidation_price": 26.73,
-      "reduce_price": 34.46,
-      "final_target_price": 37.1,
-      "review_trading_day": 3,
-      "max_trading_days": 10
-    },
-    {
-      "ticker": "MRNA",
-      "name": "Moderna",
-      "sources": [
-        "A",
-        "B"
-      ],
-      "stage": "A 关K 2026-09-11 · 回调第2日；B KDJ单金叉确认",
-      "rank": 4,
-      "a_key_date": "2026-09-11",
-      "a_key_volume_ratio": 1.9571061753771601,
-      "a_latest_volume_ratio": 0.5460781890309467,
-      "latest_close": 143.77,
-      "action": "只观察",
-      "pullback_zone": [
-        141.78,
-        144.39
-      ],
-      "confirmation_price": 147.34,
-      "maximum_acceptable_price": 152.55,
-      "invalidation_price": 130.38,
-      "reduce_price": 176.66,
-      "final_target_price": 189.74,
-      "review_trading_day": 3,
-      "max_trading_days": 10
-    },
-    {
-      "ticker": "BE",
-      "name": "Bloom Energy",
-      "sources": [
-        "B",
-        "C"
-      ],
-      "stage": "B 金叉前改善观察；C 趋势回踩 · 回调/整理观察·待价格确认",
-      "rank": 5,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 259.35,
-      "action": "只观察",
-      "pullback_zone": [
-        252.3,
-        256.56
-      ],
-      "confirmation_price": 261.7,
-      "maximum_acceptable_price": 270.21,
-      "invalidation_price": 249.05,
-      "reduce_price": 283.83,
-      "final_target_price": 293.61,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "WDAY",
-      "name": "Workday",
-      "sources": [
-        "A",
-        "B"
-      ],
-      "stage": "A 关K 2026-09-14 · 回调第1日；B 金叉前改善观察",
-      "rank": 6,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 1.5549165787991353,
-      "a_latest_volume_ratio": 0.6864229359002376,
-      "latest_close": 190.67,
-      "action": "只观察",
-      "pullback_zone": [
-        190.27,
-        192.44
-      ],
-      "confirmation_price": 195.92,
-      "maximum_acceptable_price": 200.27,
-      "invalidation_price": 183.53,
-      "reduce_price": 214.5,
-      "final_target_price": 226.88,
-      "review_trading_day": 3,
-      "max_trading_days": 10
-    },
-    {
-      "ticker": "DAR",
-      "name": "美国达尔令国际",
-      "sources": [
-        "B",
-        "C"
-      ],
-      "stage": "B 金叉前改善观察；C 强势平台 · 回调/整理观察·待价格确认",
-      "rank": 7,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 66.54,
-      "action": "只观察",
-      "pullback_zone": [
-        65.88,
-        66.53
-      ],
-      "confirmation_price": 66.77,
-      "maximum_acceptable_price": 68.06,
-      "invalidation_price": 64.82,
-      "reduce_price": 69.98,
-      "final_target_price": 71.64,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "ZETA",
-      "name": "Zeta Global",
-      "sources": [
-        "B",
-        "C"
-      ],
-      "stage": "B 金叉前改善观察；C 趋势回踩/强势平台 · 回调/整理观察·待价格确认",
-      "rank": 8,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 31.04,
-      "action": "只观察",
-      "pullback_zone": [
-        30.66,
-        31.03
-      ],
-      "confirmation_price": 31.23,
-      "maximum_acceptable_price": 31.98,
-      "invalidation_price": 29.84,
-      "reduce_price": 33.33,
-      "final_target_price": 34.72,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "MSM",
-      "name": "MSC Industrial Direct",
-      "sources": [
-        "B"
-      ],
-      "stage": "B 双金叉确认",
-      "rank": 9,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 119.88,
-      "action": "只观察",
-      "pullback_zone": [
-        119.72,
-        120.46
-      ],
-      "confirmation_price": 120.5,
-      "maximum_acceptable_price": 121.98,
-      "invalidation_price": 117.25,
-      "reduce_price": 125.72,
-      "final_target_price": 128.64,
+      "confirmation_price": 62.98,
+      "maximum_acceptable_price": 63.69,
+      "invalidation_price": 60.07,
+      "reduce_price": 67.33,
+      "final_target_price": 70.23,
       "review_trading_day": 5,
       "max_trading_days": 15
     },
     {
-      "ticker": "DDOG",
-      "name": "Datadog",
+      "ticker": "RMBS",
+      "name": "Rambus",
       "sources": [
         "B"
       ],
-      "stage": "B 双金叉确认",
+      "rank": 3,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-14",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速｜B?优先",
+      "momentum_volume": "MACD金叉保持但减速 · B?",
+      "price_state": "价格技术确认",
+      "latest_close": 83.11,
+      "action": "只观察",
+      "pullback_zone": [
+        83.11,
+        83.98
+      ],
+      "confirmation_price": 97.61,
+      "maximum_acceptable_price": 99.35,
+      "invalidation_price": 81.48,
+      "reduce_price": 121.81,
+      "final_target_price": 137.94,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "NTRA",
+      "name": "Natera",
+      "sources": [
+        "B"
+      ],
+      "rank": 4,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-07-29",
+      "current_stage": "B·底分型观察｜MACD金叉前修复｜3B?优先",
+      "momentum_volume": "MACD金叉前修复 · 3B?",
+      "price_state": "价格技术确认",
+      "latest_close": 350.78,
+      "action": "只观察",
+      "pullback_zone": [
+        333.42,
+        335.98
+      ],
+      "confirmation_price": 343.0,
+      "maximum_acceptable_price": 348.12,
+      "invalidation_price": 320.65,
+      "reduce_price": 376.53,
+      "final_target_price": 398.88,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "GH",
+      "name": "Guardant Health",
+      "sources": [
+        "B"
+      ],
+      "rank": 5,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-04",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "价格技术确认",
+      "latest_close": 175.65,
+      "action": "只观察",
+      "pullback_zone": [
+        164.79,
+        166.94
+      ],
+      "confirmation_price": 168.15,
+      "maximum_acceptable_price": 172.45,
+      "invalidation_price": 155.78,
+      "reduce_price": 186.71,
+      "final_target_price": 199.09,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "FTNT",
+      "name": "飞塔信息",
+      "sources": [
+        "B"
+      ],
+      "rank": 6,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-07-29",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "价格技术确认",
+      "latest_close": 172.37,
+      "action": "只观察",
+      "pullback_zone": [
+        162.55,
+        164.59
+      ],
+      "confirmation_price": 170.95,
+      "maximum_acceptable_price": 175.02,
+      "invalidation_price": 152.0,
+      "reduce_price": 199.37,
+      "final_target_price": 218.32,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "RBRK",
+      "name": "Rubrik",
+      "sources": [
+        "B"
+      ],
+      "rank": 7,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-11",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "价格技术确认",
+      "latest_close": 103.55,
+      "action": "只观察",
+      "pullback_zone": [
+        94.51,
+        96.2
+      ],
+      "confirmation_price": 100.5,
+      "maximum_acceptable_price": 103.88,
+      "invalidation_price": 85.78,
+      "reduce_price": 122.59,
+      "final_target_price": 137.32,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "sources": [
+        "B"
+      ],
+      "rank": 8,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-08-26",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "价格技术确认",
+      "latest_close": 242.49,
+      "action": "只观察",
+      "pullback_zone": [
+        219.35,
+        223.14
+      ],
+      "confirmation_price": 239.37,
+      "maximum_acceptable_price": 246.96,
+      "invalidation_price": 204.27,
+      "reduce_price": 292.02,
+      "final_target_price": 327.12,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "CVX",
+      "name": "雪佛龙",
+      "sources": [
+        "B"
+      ],
+      "rank": 9,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-08-27",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "价格技术确认",
+      "latest_close": 217.77,
+      "action": "只观察",
+      "pullback_zone": [
+        211.77,
+        212.89
+      ],
+      "confirmation_price": 217.65,
+      "maximum_acceptable_price": 219.89,
+      "invalidation_price": 209.18,
+      "reduce_price": 230.36,
+      "final_target_price": 238.82,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "SDGR",
+      "name": "Schrodinger",
+      "sources": [
+        "B"
+      ],
       "rank": 10,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 230.27,
+      "structure_node": "B底分型·2026-09-11",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "价格技术确认",
+      "latest_close": 23.25,
       "action": "只观察",
       "pullback_zone": [
-        228.77,
-        231.79
+        20.41,
+        20.71
       ],
-      "confirmation_price": 233.69,
-      "maximum_acceptable_price": 239.72,
-      "invalidation_price": 218.27,
-      "reduce_price": 256.81,
-      "final_target_price": 272.22,
+      "confirmation_price": 21.4,
+      "maximum_acceptable_price": 22.01,
+      "invalidation_price": 18.63,
+      "reduce_price": 25.55,
+      "final_target_price": 28.32,
       "review_trading_day": 5,
       "max_trading_days": 15
     }
   ],
   "pool": [
     {
-      "ticker": "TECH",
-      "name": "Bio-Techne",
+      "ticker": "TTD",
+      "name": "The Trade Desk",
       "sources": [
         "B"
       ],
-      "stage": "B KDJ单金叉确认",
       "rank": 1,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 72.34,
+      "structure_node": "B底分型·2026-08-10",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强｜1B?优先",
+      "momentum_volume": "MACD本轮金叉转强 · 1B?",
+      "price_state": "价格技术确认",
+      "latest_close": 15.0,
       "action": "只观察",
       "pullback_zone": [
-        72.27,
-        72.31
+        14.43,
+        14.59
       ],
-      "confirmation_price": 72.3,
-      "maximum_acceptable_price": 72.39,
-      "invalidation_price": 72.08,
-      "reduce_price": 72.63,
-      "final_target_price": 72.85,
+      "confirmation_price": 16.05,
+      "maximum_acceptable_price": 16.38,
+      "invalidation_price": 13.71,
+      "reduce_price": 19.57,
+      "final_target_price": 21.92,
       "review_trading_day": 5,
       "max_trading_days": 15
     },
     {
-      "ticker": "CF",
-      "name": "CF工业控股",
+      "ticker": "OXY",
+      "name": "西方石油",
       "sources": [
-        "C"
+        "B"
       ],
-      "stage": "C 趋势回踩 · 价格技术确认·待风险复核",
       "rank": 2,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 135.54,
+      "structure_node": "B底分型·2026-08-05",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强｜B?优先",
+      "momentum_volume": "MACD本轮金叉转强 · B?",
+      "price_state": "价格技术确认",
+      "latest_close": 63.52,
       "action": "只观察",
       "pullback_zone": [
-        133.48,
-        134.94
+        61.23,
+        61.58
       ],
-      "confirmation_price": 137.54,
-      "maximum_acceptable_price": 140.46,
-      "invalidation_price": 130.09,
-      "reduce_price": 148.72,
-      "final_target_price": 156.18,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "HIMS",
-      "name": "Hims & Hers Health",
-      "sources": [
-        "A",
-        "B"
-      ],
-      "stage": "A 关K 2026-09-14 · 回调第1日；B KDJ单金叉确认",
-      "rank": 3,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 1.6886956774338566,
-      "a_latest_volume_ratio": 0.6813960003690913,
-      "latest_close": 27.85,
-      "action": "只观察",
-      "pullback_zone": [
-        27.85,
-        28.22
-      ],
-      "confirmation_price": 29.69,
-      "maximum_acceptable_price": 30.43,
-      "invalidation_price": 26.73,
-      "reduce_price": 34.46,
-      "final_target_price": 37.1,
-      "review_trading_day": 3,
-      "max_trading_days": 10
-    },
-    {
-      "ticker": "MRNA",
-      "name": "Moderna",
-      "sources": [
-        "A",
-        "B"
-      ],
-      "stage": "A 关K 2026-09-11 · 回调第2日；B KDJ单金叉确认",
-      "rank": 4,
-      "a_key_date": "2026-09-11",
-      "a_key_volume_ratio": 1.9571061753771601,
-      "a_latest_volume_ratio": 0.5460781890309467,
-      "latest_close": 143.77,
-      "action": "只观察",
-      "pullback_zone": [
-        141.78,
-        144.39
-      ],
-      "confirmation_price": 147.34,
-      "maximum_acceptable_price": 152.55,
-      "invalidation_price": 130.38,
-      "reduce_price": 176.66,
-      "final_target_price": 189.74,
-      "review_trading_day": 3,
-      "max_trading_days": 10
-    },
-    {
-      "ticker": "BE",
-      "name": "Bloom Energy",
-      "sources": [
-        "B",
-        "C"
-      ],
-      "stage": "B 金叉前改善观察；C 趋势回踩 · 回调/整理观察·待价格确认",
-      "rank": 5,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 259.35,
-      "action": "只观察",
-      "pullback_zone": [
-        252.3,
-        256.56
-      ],
-      "confirmation_price": 261.7,
-      "maximum_acceptable_price": 270.21,
-      "invalidation_price": 249.05,
-      "reduce_price": 283.83,
-      "final_target_price": 293.61,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "WDAY",
-      "name": "Workday",
-      "sources": [
-        "A",
-        "B"
-      ],
-      "stage": "A 关K 2026-09-14 · 回调第1日；B 金叉前改善观察",
-      "rank": 6,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 1.5549165787991353,
-      "a_latest_volume_ratio": 0.6864229359002376,
-      "latest_close": 190.67,
-      "action": "只观察",
-      "pullback_zone": [
-        190.27,
-        192.44
-      ],
-      "confirmation_price": 195.92,
-      "maximum_acceptable_price": 200.27,
-      "invalidation_price": 183.53,
-      "reduce_price": 214.5,
-      "final_target_price": 226.88,
-      "review_trading_day": 3,
-      "max_trading_days": 10
-    },
-    {
-      "ticker": "DAR",
-      "name": "美国达尔令国际",
-      "sources": [
-        "B",
-        "C"
-      ],
-      "stage": "B 金叉前改善观察；C 强势平台 · 回调/整理观察·待价格确认",
-      "rank": 7,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 66.54,
-      "action": "只观察",
-      "pullback_zone": [
-        65.88,
-        66.53
-      ],
-      "confirmation_price": 66.77,
-      "maximum_acceptable_price": 68.06,
-      "invalidation_price": 64.82,
-      "reduce_price": 69.98,
-      "final_target_price": 71.64,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "ZETA",
-      "name": "Zeta Global",
-      "sources": [
-        "B",
-        "C"
-      ],
-      "stage": "B 金叉前改善观察；C 趋势回踩/强势平台 · 回调/整理观察·待价格确认",
-      "rank": 8,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 31.04,
-      "action": "只观察",
-      "pullback_zone": [
-        30.66,
-        31.03
-      ],
-      "confirmation_price": 31.23,
-      "maximum_acceptable_price": 31.98,
-      "invalidation_price": 29.84,
-      "reduce_price": 33.33,
-      "final_target_price": 34.72,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "MSM",
-      "name": "MSC Industrial Direct",
-      "sources": [
-        "B"
-      ],
-      "stage": "B 双金叉确认",
-      "rank": 9,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "latest_close": 119.88,
-      "action": "只观察",
-      "pullback_zone": [
-        119.72,
-        120.46
-      ],
-      "confirmation_price": 120.5,
-      "maximum_acceptable_price": 121.98,
-      "invalidation_price": 117.25,
-      "reduce_price": 125.72,
-      "final_target_price": 128.64,
+      "confirmation_price": 62.98,
+      "maximum_acceptable_price": 63.69,
+      "invalidation_price": 60.07,
+      "reduce_price": 67.33,
+      "final_target_price": 70.23,
       "review_trading_day": 5,
       "max_trading_days": 15
     },
     {
-      "ticker": "DDOG",
-      "name": "Datadog",
+      "ticker": "RMBS",
+      "name": "Rambus",
       "sources": [
         "B"
       ],
-      "stage": "B 双金叉确认",
+      "rank": 3,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-14",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速｜B?优先",
+      "momentum_volume": "MACD金叉保持但减速 · B?",
+      "price_state": "价格技术确认",
+      "latest_close": 83.11,
+      "action": "只观察",
+      "pullback_zone": [
+        83.11,
+        83.98
+      ],
+      "confirmation_price": 97.61,
+      "maximum_acceptable_price": 99.35,
+      "invalidation_price": 81.48,
+      "reduce_price": 121.81,
+      "final_target_price": 137.94,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "NTRA",
+      "name": "Natera",
+      "sources": [
+        "B"
+      ],
+      "rank": 4,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-07-29",
+      "current_stage": "B·底分型观察｜MACD金叉前修复｜3B?优先",
+      "momentum_volume": "MACD金叉前修复 · 3B?",
+      "price_state": "价格技术确认",
+      "latest_close": 350.78,
+      "action": "只观察",
+      "pullback_zone": [
+        333.42,
+        335.98
+      ],
+      "confirmation_price": 343.0,
+      "maximum_acceptable_price": 348.12,
+      "invalidation_price": 320.65,
+      "reduce_price": 376.53,
+      "final_target_price": 398.88,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "GH",
+      "name": "Guardant Health",
+      "sources": [
+        "B"
+      ],
+      "rank": 5,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-04",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "价格技术确认",
+      "latest_close": 175.65,
+      "action": "只观察",
+      "pullback_zone": [
+        164.79,
+        166.94
+      ],
+      "confirmation_price": 168.15,
+      "maximum_acceptable_price": 172.45,
+      "invalidation_price": 155.78,
+      "reduce_price": 186.71,
+      "final_target_price": 199.09,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "FTNT",
+      "name": "飞塔信息",
+      "sources": [
+        "B"
+      ],
+      "rank": 6,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-07-29",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "价格技术确认",
+      "latest_close": 172.37,
+      "action": "只观察",
+      "pullback_zone": [
+        162.55,
+        164.59
+      ],
+      "confirmation_price": 170.95,
+      "maximum_acceptable_price": 175.02,
+      "invalidation_price": 152.0,
+      "reduce_price": 199.37,
+      "final_target_price": 218.32,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "RBRK",
+      "name": "Rubrik",
+      "sources": [
+        "B"
+      ],
+      "rank": 7,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-11",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "价格技术确认",
+      "latest_close": 103.55,
+      "action": "只观察",
+      "pullback_zone": [
+        94.51,
+        96.2
+      ],
+      "confirmation_price": 100.5,
+      "maximum_acceptable_price": 103.88,
+      "invalidation_price": 85.78,
+      "reduce_price": 122.59,
+      "final_target_price": 137.32,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "sources": [
+        "B"
+      ],
+      "rank": 8,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-08-26",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "价格技术确认",
+      "latest_close": 242.49,
+      "action": "只观察",
+      "pullback_zone": [
+        219.35,
+        223.14
+      ],
+      "confirmation_price": 239.37,
+      "maximum_acceptable_price": 246.96,
+      "invalidation_price": 204.27,
+      "reduce_price": 292.02,
+      "final_target_price": 327.12,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "CVX",
+      "name": "雪佛龙",
+      "sources": [
+        "B"
+      ],
+      "rank": 9,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-08-27",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "价格技术确认",
+      "latest_close": 217.77,
+      "action": "只观察",
+      "pullback_zone": [
+        211.77,
+        212.89
+      ],
+      "confirmation_price": 217.65,
+      "maximum_acceptable_price": 219.89,
+      "invalidation_price": 209.18,
+      "reduce_price": 230.36,
+      "final_target_price": 238.82,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "SDGR",
+      "name": "Schrodinger",
+      "sources": [
+        "B"
+      ],
       "rank": 10,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "latest_close": 230.27,
+      "structure_node": "B底分型·2026-09-11",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "价格技术确认",
+      "latest_close": 23.25,
       "action": "只观察",
       "pullback_zone": [
-        228.77,
-        231.79
+        20.41,
+        20.71
       ],
-      "confirmation_price": 233.69,
-      "maximum_acceptable_price": 239.72,
-      "invalidation_price": 218.27,
-      "reduce_price": 256.81,
-      "final_target_price": 272.22,
+      "confirmation_price": 21.4,
+      "maximum_acceptable_price": 22.01,
+      "invalidation_price": 18.63,
+      "reduce_price": 25.55,
+      "final_target_price": 28.32,
       "review_trading_day": 5,
       "max_trading_days": 15
     },
@@ -537,13 +585,33 @@
       "ticker": "AAPL",
       "name": "苹果",
       "sources": [
+        "B",
         "C"
       ],
-      "stage": "C 趋势回踩 · 回调/整理观察·待价格确认",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-09；C趋势回踩",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速；回调/整理观察·待价格确认",
+      "momentum_volume": "MACD金叉保持但减速；MACD多头延续",
+      "price_state": "待价格确认；待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "AFRM",
+      "name": "Affirm Holdings",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-10",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
@@ -552,37 +620,254 @@
       "sources": [
         "B"
       ],
-      "stage": "B 金叉前改善观察",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-03",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速｜B?优先",
+      "momentum_volume": "MACD金叉保持但减速 · B?",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
-      "ticker": "ANET",
-      "name": "Arista Networks",
+      "ticker": "ARM",
+      "name": "Arm Holdings",
       "sources": [
         "B"
       ],
-      "stage": "B KDJ单金叉确认",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-08-03",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
-      "ticker": "DAVE",
-      "name": "Dave Inc",
+      "ticker": "AVAV",
+      "name": "AeroVironment",
       "sources": [
         "B"
       ],
-      "stage": "B 金叉前改善观察",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-11",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强｜1B?优先",
+      "momentum_volume": "MACD本轮金叉转强 · 1B?",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "BA",
+      "name": "波音",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-10",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "BB",
+      "name": "黑莓",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-14",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强｜B?优先",
+      "momentum_volume": "MACD本轮金叉转强 · B?",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "BE",
+      "name": "Bloom Energy",
+      "sources": [
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "MACD多头延续",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "BRK.B",
+      "name": "伯克希尔-B",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-08-21",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CAT",
+      "name": "卡特彼勒",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-02",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CF",
+      "name": "CF工业控股",
+      "sources": [
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "价格技术确认·待风险复核",
+      "momentum_volume": "金叉前/动能改善观察",
+      "price_state": "价格技术确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CMI",
+      "name": "康明斯",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-14",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "COHR",
+      "name": "Coherent",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-03",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速｜B?优先",
+      "momentum_volume": "MACD金叉保持但减速 · B?",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CSCO",
+      "name": "思科",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-10",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "DAR",
+      "name": "美国达尔令国际",
+      "sources": [
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C强势平台",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "金叉前/动能改善观察",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-08",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "DELL",
+      "name": "戴尔科技",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-01",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "DHT",
+      "name": "DHT控股",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-08-11",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
@@ -591,11 +876,14 @@
       "sources": [
         "A"
       ],
-      "stage": "A 关K 2026-09-14 · 回调第1日",
       "rank": null,
       "a_key_date": "2026-09-14",
       "a_key_volume_ratio": 97.96734748066213,
       "a_latest_volume_ratio": 0.15964350805658126,
+      "structure_node": "A关K·2026-09-14",
+      "current_stage": "A回调1天",
+      "momentum_volume": "A量能·关K/前日 97.97×；当前/关K 0.16×",
+      "price_state": "A原底未破",
       "action": "待生成交易计划"
     },
     {
@@ -604,24 +892,14 @@
       "sources": [
         "B"
       ],
-      "stage": "B KDJ单金叉确认",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "action": "待生成交易计划"
-    },
-    {
-      "ticker": "FCX",
-      "name": "麦克莫兰铜金",
-      "sources": [
-        "B"
-      ],
-      "stage": "B 金叉前改善观察",
-      "rank": null,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-01",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强｜1B?优先",
+      "momentum_volume": "MACD本轮金叉转强 · 1B?",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
@@ -630,11 +908,111 @@
       "sources": [
         "B"
       ],
-      "stage": "B 双金叉确认",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-03",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "GLW",
+      "name": "康宁",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-03",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速｜B?优先",
+      "momentum_volume": "MACD金叉保持但减速 · B?",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "GOOG",
+      "name": "谷歌-C",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-09",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强｜B?优先",
+      "momentum_volume": "MACD本轮金叉转强 · B?",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "HIMS",
+      "name": "Hims & Hers Health",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 1.6886956774338566,
+      "a_latest_volume_ratio": 0.6813960003690913,
+      "structure_node": "A关K·2026-09-14；B底分型·2026-09-11",
+      "current_stage": "A回调1天；B·底分型观察｜MACD金叉前修复｜B?优先",
+      "momentum_volume": "A量能·关K/前日 1.69×；当前/关K 0.68×；MACD金叉前修复 · B?",
+      "price_state": "A原底未破；待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "IBM",
+      "name": "IBM Corp",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-07-23",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ICHR",
+      "name": "Ichor Holdings",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-03",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ILMN",
+      "name": "Illumina",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-11",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复",
+      "price_state": "价格技术确认",
       "action": "待生成交易计划"
     },
     {
@@ -643,11 +1021,30 @@
       "sources": [
         "A"
       ],
-      "stage": "A 关K 2026-09-14 · 回调第1日",
       "rank": null,
       "a_key_date": "2026-09-14",
       "a_key_volume_ratio": 1.5756083683663193,
       "a_latest_volume_ratio": 0.8002325754218698,
+      "structure_node": "A关K·2026-09-14",
+      "current_stage": "A回调1天",
+      "momentum_volume": "A量能·关K/前日 1.58×；当前/关K 0.80×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "JD",
+      "name": "京东",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-10",
+      "current_stage": "B·底分型观察｜MACD金叉前修复｜B?优先",
+      "momentum_volume": "MACD金叉前修复 · B?",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
@@ -656,89 +1053,287 @@
       "sources": [
         "B"
       ],
-      "stage": "B KDJ单金叉确认",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-09",
+      "current_stage": "B·底分型观察｜MACD金叉前修复｜3B?优先",
+      "momentum_volume": "MACD金叉前修复 · 3B?",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
-      "ticker": "LMND",
-      "name": "Lemonade",
+      "ticker": "KRMN",
+      "name": "Karman Holdings",
       "sources": [
         "B"
       ],
-      "stage": "B 金叉前改善观察",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-11",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复",
+      "price_state": "价格技术确认",
       "action": "待生成交易计划"
     },
     {
-      "ticker": "MRVL",
-      "name": "迈威尔科技",
+      "ticker": "LLY",
+      "name": "礼来",
       "sources": [
         "B"
       ],
-      "stage": "B KDJ单金叉确认",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-11",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
-      "ticker": "MSFT",
-      "name": "微软",
+      "ticker": "META",
+      "name": "Meta Platforms",
       "sources": [
         "B"
       ],
-      "stage": "B KDJ单金叉确认",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-08-19",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
-      "ticker": "MXL",
-      "name": "MaxLinear",
+      "ticker": "MRNA",
+      "name": "Moderna",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-11",
+      "a_key_volume_ratio": 1.9571061753771601,
+      "a_latest_volume_ratio": 0.5460781890309467,
+      "structure_node": "A关K·2026-09-11",
+      "current_stage": "A回调2天",
+      "momentum_volume": "A量能·关K/前日 1.96×；当前/关K 0.55×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "NET",
+      "name": "Cloudflare",
       "sources": [
         "B"
       ],
-      "stage": "B MACD单金叉确认",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-02",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "NOC",
+      "name": "诺斯罗普格鲁曼",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-04",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
       "ticker": "NOW",
       "name": "ServiceNow",
       "sources": [
-        "A"
+        "A",
+        "B"
       ],
-      "stage": "A 关K 2026-09-14 · 回调第1日",
       "rank": null,
       "a_key_date": "2026-09-14",
       "a_key_volume_ratio": 1.6311105892089268,
       "a_latest_volume_ratio": 0.8407199517489189,
+      "structure_node": "A关K·2026-09-14；B底分型·2026-09-11",
+      "current_stage": "A回调1天；B·底分型观察｜MACD金叉前修复｜3B?优先",
+      "momentum_volume": "A量能·关K/前日 1.63×；当前/关K 0.84×；MACD金叉前修复 · 3B?",
+      "price_state": "A原底未破；待价格确认",
       "action": "待生成交易计划"
     },
     {
-      "ticker": "PLTR",
-      "name": "Palantir",
+      "ticker": "NXT",
+      "name": "Nextpower",
       "sources": [
         "B"
       ],
-      "stage": "B 金叉前改善观察",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-14",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "OKTA",
+      "name": "Okta",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-08-26",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-02",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "PENG",
+      "name": "Penguin Solutions",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-03",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速｜B?优先",
+      "momentum_volume": "MACD金叉保持但减速 · B?",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "PHM",
+      "name": "普得集团",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-10",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "QCOM",
+      "name": "高通",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-08-03",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "RDDT",
+      "name": "Reddit",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-02",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强｜B?优先",
+      "momentum_volume": "MACD本轮金叉转强 · B?",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "RDW",
+      "name": "Redwire",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-14",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "RIOT",
+      "name": "Riot Platforms",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-02",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速｜B?优先",
+      "momentum_volume": "MACD金叉保持但减速 · B?",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "RKLB",
+      "name": "Rocket Lab",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-14",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强｜B?优先",
+      "momentum_volume": "MACD本轮金叉转强 · B?",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
@@ -747,11 +1342,14 @@
       "sources": [
         "A"
       ],
-      "stage": "A 关K 2026-09-14 · 回调第1日",
       "rank": null,
       "a_key_date": "2026-09-14",
       "a_key_volume_ratio": 2.1287370331065754,
       "a_latest_volume_ratio": 0.694711935951412,
+      "structure_node": "A关K·2026-09-14",
+      "current_stage": "A回调1天",
+      "momentum_volume": "A量能·关K/前日 2.13×；当前/关K 0.69×",
+      "price_state": "A原底未破",
       "action": "待生成交易计划"
     },
     {
@@ -760,11 +1358,30 @@
       "sources": [
         "C"
       ],
-      "stage": "C 趋势回踩 · 回调/整理观察·待价格确认",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "MACD多头延续",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "SONO",
+      "name": "搜诺思公司",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-09",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     },
     {
@@ -773,37 +1390,142 @@
       "sources": [
         "A"
       ],
-      "stage": "A 关K 2026-09-14 · 回调第1日",
       "rank": null,
       "a_key_date": "2026-09-14",
       "a_key_volume_ratio": 2.0859592408988568,
       "a_latest_volume_ratio": 0.5850850147789551,
+      "structure_node": "A关K·2026-09-14",
+      "current_stage": "A回调1天",
+      "momentum_volume": "A量能·关K/前日 2.09×；当前/关K 0.59×",
+      "price_state": "A原底未破",
       "action": "待生成交易计划"
     },
     {
-      "ticker": "UMAC",
-      "name": "Unusual Machines",
+      "ticker": "TEM",
+      "name": "Tempus AI",
       "sources": [
         "B"
       ],
-      "stage": "B 金叉前改善观察",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-14",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复",
+      "price_state": "价格技术确认",
       "action": "待生成交易计划"
     },
     {
-      "ticker": "VSH",
-      "name": "威世科技",
+      "ticker": "TWLO",
+      "name": "Twilio",
       "sources": [
         "B"
       ],
-      "stage": "B 金叉前改善观察",
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-08",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复",
+      "price_state": "价格技术确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "TWST",
+      "name": "Twist Bioscience",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-10",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "UCTT",
+      "name": "超科林半导体",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-03",
+      "current_stage": "B·底分型观察｜MACD金叉保持但减速",
+      "momentum_volume": "MACD金叉保持但减速",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-10",
+      "current_stage": "B·底分型观察｜MACD金叉前修复",
+      "momentum_volume": "MACD金叉前修复",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "WDAY",
+      "name": "Workday",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 1.5549165787991353,
+      "a_latest_volume_ratio": 0.6864229359002376,
+      "structure_node": "A关K·2026-09-14",
+      "current_stage": "A回调1天",
+      "momentum_volume": "A量能·关K/前日 1.55×；当前/关K 0.69×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ZETA",
+      "name": "Zeta Global",
+      "sources": [
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩/强势平台",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "金叉前/动能改善观察",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ZS",
+      "name": "Zscaler",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B底分型·2026-09-08",
+      "current_stage": "B·底分型观察｜MACD本轮金叉转强",
+      "momentum_volume": "MACD本轮金叉转强",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     }
   ]
