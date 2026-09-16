@@ -1,0 +1,710 @@
+{
+  "schema_version": "a_share_shortage_watch_v1",
+  "asof": "2026-09-16",
+  "generated_at_bj": "2026-09-16T16:11:47+08:00",
+  "theme_count": 23,
+  "company_count": 55,
+  "records": [
+    {
+      "rank": 1,
+      "theme": "ABF胶膜",
+      "names": [
+        "华正新材",
+        "莲花控股",
+        "生益科技"
+      ],
+      "summary": "减供传闻／材料替代；不能写成正式禁运",
+      "path": "文字直播/2026-09-08.md",
+      "line": 74,
+      "source_date": "2026-09-08",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-08.md#L74",
+      "status": "供给约束线索",
+      "company_count": 3
+    },
+    {
+      "rank": 2,
+      "theme": "ABF载板",
+      "names": [
+        "深南电路",
+        "兴森科技"
+      ],
+      "summary": "载板供需紧张；同时承担上游胶膜供应风险",
+      "path": "文字直播/2026-09-08.md",
+      "line": 82,
+      "source_date": "2026-09-08",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-08.md#L82",
+      "status": "双向风险",
+      "company_count": 2
+    },
+    {
+      "rank": 3,
+      "theme": "高阶AI PCB",
+      "names": [
+        "胜宏科技",
+        "方正科技"
+      ],
+      "summary": "资料称认证壁垒限制高端有效产能",
+      "path": "情报社/2026-09-10.md",
+      "line": 222,
+      "source_date": "2026-09-10",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-10.md#L222",
+      "status": "供给约束线索",
+      "company_count": 2
+    },
+    {
+      "rank": 4,
+      "theme": "特种电子布",
+      "names": [
+        "宏和科技"
+      ],
+      "summary": "二代布/T布需求缺口；不等同普通布涨价",
+      "path": "文字直播/2026-09-10.md",
+      "line": 58,
+      "source_date": "2026-09-10",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-10.md#L58",
+      "status": "紧张/缺货线索",
+      "company_count": 1
+    },
+    {
+      "rank": 5,
+      "theme": "MFC",
+      "names": [
+        "高凯技术"
+      ],
+      "summary": "海外部分产品断供的卖方线索，订单及身份另核",
+      "path": "情报社/2026-09-13.md",
+      "line": 412,
+      "source_date": "2026-09-13",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-13.md#L412",
+      "status": "紧张/缺货线索",
+      "company_count": 1
+    },
+    {
+      "rank": 6,
+      "theme": "压电陶瓷",
+      "names": [
+        "星源材质"
+      ],
+      "summary": "日本供给不足；邦瓷验证及权益归属待核",
+      "path": "情报社/2026-09-15.md",
+      "line": 80,
+      "source_date": "2026-09-15",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L80",
+      "status": "供给约束线索",
+      "company_count": 1
+    },
+    {
+      "rank": 7,
+      "theme": "MFC／分子泵交付",
+      "names": [
+        "恒运昌",
+        "英杰电气"
+      ],
+      "summary": "供给瓶颈与国产布局；恒运昌贸易业务也可能受损",
+      "path": "情报社/2026-09-13.md",
+      "line": 406,
+      "source_date": "2026-09-13",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-13.md#L406",
+      "status": "双向风险",
+      "company_count": 2
+    },
+    {
+      "rank": 8,
+      "theme": "半导体零部件",
+      "names": [
+        "富创精密",
+        "江丰电子",
+        "超纯应材",
+        "珂玛科技",
+        "新莱应材",
+        "正帆科技",
+        "臻宝科技",
+        "恒运昌"
+      ],
+      "summary": "行业供应紧张映射；不代表每家公司具体产品均已缺货",
+      "path": "情报社/2026-09-16-午间.md",
+      "line": 648,
+      "source_date": "2026-09-16",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-16-%E5%8D%88%E9%97%B4.md#L648",
+      "status": "供给约束线索",
+      "company_count": 8
+    },
+    {
+      "rank": 9,
+      "theme": "含氟特气WF6/C4F6",
+      "names": [
+        "中船特气",
+        "昊华科技"
+      ],
+      "summary": "原文明示供需偏紧；订单产能价格均待核",
+      "path": "情报社/2026-09-14-午间.md",
+      "line": 1268,
+      "source_date": "2026-09-14",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1268",
+      "status": "紧张/缺货线索",
+      "company_count": 2
+    },
+    {
+      "rank": 10,
+      "theme": "氟化液PFPE/HFE",
+      "names": [
+        "新宙邦"
+      ],
+      "summary": "3M退出后的替代线索；企业退出不等同政府禁令",
+      "path": "情报社/2026-09-14-午间.md",
+      "line": 1266,
+      "source_date": "2026-09-14",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1266",
+      "status": "供给约束线索",
+      "company_count": 1
+    },
+    {
+      "rank": 11,
+      "theme": "高端PFA/FFKM",
+      "names": [
+        "巨化股份",
+        "新宙邦"
+      ],
+      "summary": "海外供给集中与认证瓶颈；国产突破未等于规模收入",
+      "path": "情报社/2026-09-14-午间.md",
+      "line": 1270,
+      "source_date": "2026-09-14",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1270",
+      "status": "供给约束线索",
+      "company_count": 2
+    },
+    {
+      "rank": 12,
+      "theme": "含氟材料扩展映射",
+      "names": [
+        "天赐材料",
+        "三祥新材",
+        "中巨芯",
+        "雅克科技",
+        "安集科技",
+        "多氟多"
+      ],
+      "summary": "同专题关注名单，缺乏逐股缺货证据，暂不自动挂缺货标签",
+      "path": "情报社/2026-09-14-午间.md",
+      "line": 1272,
+      "source_date": "2026-09-14",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1272",
+      "status": "延伸映射",
+      "company_count": 6
+    },
+    {
+      "rank": 13,
+      "theme": "CPO测试设备",
+      "names": [
+        "罗博特科"
+      ],
+      "summary": "供不应求线索；独供及客户说法待核",
+      "path": "情报社/2026-09-14.md",
+      "line": 273,
+      "source_date": "2026-09-14",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14.md#L273",
+      "status": "紧张/缺货线索",
+      "company_count": 1
+    },
+    {
+      "rank": 14,
+      "theme": "隔离器／滤光片",
+      "names": [
+        "东田微"
+      ],
+      "summary": "自身产品短缺与上游旋光片制约并存",
+      "path": "情报社/2026-09-16-午间.md",
+      "line": 109,
+      "source_date": "2026-09-16",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-16-%E5%8D%88%E9%97%B4.md#L109",
+      "status": "紧张/缺货线索",
+      "company_count": 1
+    },
+    {
+      "rank": 15,
+      "theme": "DSP/TIA/Driver",
+      "names": [
+        "优迅股份",
+        "金字火腿"
+      ],
+      "summary": "交期延长映射；尤其金字火腿实际股权和业务归属待核，不视为直接量产",
+      "path": "文字直播/2026-09-14.md",
+      "line": 29,
+      "source_date": "2026-09-14",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-14.md#L29",
+      "status": "供给约束线索",
+      "company_count": 2
+    },
+    {
+      "rank": 16,
+      "theme": "成熟制程芯片",
+      "names": [
+        "富满微",
+        "明微电子"
+      ],
+      "summary": "结构性缺货／涨价线索",
+      "path": "情报社/2026-09-08.md",
+      "line": 24,
+      "source_date": "2026-09-08",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-08.md#L24",
+      "status": "紧张/缺货线索",
+      "company_count": 2
+    },
+    {
+      "rank": 17,
+      "theme": "功率半导体",
+      "names": [
+        "扬杰科技",
+        "华润微",
+        "士兰微",
+        "斯达半导",
+        "杰华特",
+        "新洁能"
+      ],
+      "summary": "8月旧资料称海外交期30—50周，需刷新",
+      "path": "文字直播/大盘与科技_20260819.md",
+      "line": 333,
+      "source_date": "2026-08-19",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/%E5%A4%A7%E7%9B%98%E4%B8%8E%E7%A7%91%E6%8A%80_20260819.md#L333",
+      "status": "旧线索待刷新",
+      "company_count": 6
+    },
+    {
+      "rank": 18,
+      "theme": "燃机叶片",
+      "names": [
+        "应流股份"
+      ],
+      "summary": "海外产能瓶颈、排期延长，承接订单待核",
+      "path": "情报社/2026-09-15.md",
+      "line": 125,
+      "source_date": "2026-09-15",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L125",
+      "status": "供给约束线索",
+      "company_count": 1
+    },
+    {
+      "rank": 19,
+      "theme": "钽资源／材料",
+      "names": [
+        "东方钽业",
+        "中矿资源",
+        "新金路"
+      ],
+      "summary": "海外矿山停产／进口收缩的资料线索；逐股资源权益待核",
+      "path": "情报社/2026-09-15-午间.md",
+      "line": 1007,
+      "source_date": "2026-09-15",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15-%E5%8D%88%E9%97%B4.md#L1007",
+      "status": "供给约束线索",
+      "company_count": 3
+    },
+    {
+      "rank": 20,
+      "theme": "钨",
+      "names": [
+        "中钨高新",
+        "厦门钨业"
+      ],
+      "summary": "8月出口约束线索；区分中国限制和海外废料限制",
+      "path": "情报社/稀土与钨/00 行业综述.md",
+      "line": 15,
+      "source_date": "2026-08-11",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/%E7%A8%80%E5%9C%9F%E4%B8%8E%E9%92%A8/00%20%E8%A1%8C%E4%B8%9A%E7%BB%BC%E8%BF%B0.md#L15",
+      "status": "供给约束线索",
+      "company_count": 2
+    },
+    {
+      "rank": 21,
+      "theme": "磷化铟／锗",
+      "names": [
+        "云南锗业"
+      ],
+      "summary": "8月中国出口许可及反制映射，不是国外对华禁供",
+      "path": "情报社/光通信/云南锗业.md",
+      "line": 15,
+      "source_date": "2026-08-11",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/%E5%85%89%E9%80%9A%E4%BF%A1/%E4%BA%91%E5%8D%97%E9%94%97%E4%B8%9A.md#L15",
+      "status": "供给约束线索",
+      "company_count": 1
+    },
+    {
+      "rank": 22,
+      "theme": "天然橡胶",
+      "names": [
+        "中化国际",
+        "阳谷华泰",
+        "齐翔腾达"
+      ],
+      "summary": "原文天气减产映射；并非均为天然胶生产商，成本受损风险待核",
+      "path": "情报社/2026-09-15.md",
+      "line": 544,
+      "source_date": "2026-09-15",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L544",
+      "status": "双向风险",
+      "company_count": 3
+    },
+    {
+      "rank": 23,
+      "theme": "代糖",
+      "names": [
+        "金禾实业",
+        "百龙创园",
+        "保龄宝",
+        "华康生物"
+      ],
+      "summary": "原文糖减产后的替代需求映射，不是这些产品已缺货",
+      "path": "情报社/2026-09-15.md",
+      "line": 552,
+      "source_date": "2026-09-15",
+      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L552",
+      "status": "延伸映射",
+      "company_count": 4
+    }
+  ],
+  "companies": [
+    {
+      "name": "三祥新材",
+      "themes": [
+        "含氟材料扩展映射"
+      ]
+    },
+    {
+      "name": "东方钽业",
+      "themes": [
+        "钽资源／材料"
+      ]
+    },
+    {
+      "name": "东田微",
+      "themes": [
+        "隔离器／滤光片"
+      ]
+    },
+    {
+      "name": "中化国际",
+      "themes": [
+        "天然橡胶"
+      ]
+    },
+    {
+      "name": "中巨芯",
+      "themes": [
+        "含氟材料扩展映射"
+      ]
+    },
+    {
+      "name": "中矿资源",
+      "themes": [
+        "钽资源／材料"
+      ]
+    },
+    {
+      "name": "中船特气",
+      "themes": [
+        "含氟特气WF6/C4F6"
+      ]
+    },
+    {
+      "name": "中钨高新",
+      "themes": [
+        "钨"
+      ]
+    },
+    {
+      "name": "云南锗业",
+      "themes": [
+        "磷化铟／锗"
+      ]
+    },
+    {
+      "name": "优迅股份",
+      "themes": [
+        "DSP/TIA/Driver"
+      ]
+    },
+    {
+      "name": "保龄宝",
+      "themes": [
+        "代糖"
+      ]
+    },
+    {
+      "name": "兴森科技",
+      "themes": [
+        "ABF载板"
+      ]
+    },
+    {
+      "name": "华康生物",
+      "themes": [
+        "代糖"
+      ]
+    },
+    {
+      "name": "华正新材",
+      "themes": [
+        "ABF胶膜"
+      ]
+    },
+    {
+      "name": "华润微",
+      "themes": [
+        "功率半导体"
+      ]
+    },
+    {
+      "name": "厦门钨业",
+      "themes": [
+        "钨"
+      ]
+    },
+    {
+      "name": "士兰微",
+      "themes": [
+        "功率半导体"
+      ]
+    },
+    {
+      "name": "多氟多",
+      "themes": [
+        "含氟材料扩展映射"
+      ]
+    },
+    {
+      "name": "天赐材料",
+      "themes": [
+        "含氟材料扩展映射"
+      ]
+    },
+    {
+      "name": "安集科技",
+      "themes": [
+        "含氟材料扩展映射"
+      ]
+    },
+    {
+      "name": "宏和科技",
+      "themes": [
+        "特种电子布"
+      ]
+    },
+    {
+      "name": "富创精密",
+      "themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "name": "富满微",
+      "themes": [
+        "成熟制程芯片"
+      ]
+    },
+    {
+      "name": "巨化股份",
+      "themes": [
+        "高端PFA/FFKM"
+      ]
+    },
+    {
+      "name": "应流股份",
+      "themes": [
+        "燃机叶片"
+      ]
+    },
+    {
+      "name": "恒运昌",
+      "themes": [
+        "MFC／分子泵交付",
+        "半导体零部件"
+      ]
+    },
+    {
+      "name": "扬杰科技",
+      "themes": [
+        "功率半导体"
+      ]
+    },
+    {
+      "name": "斯达半导",
+      "themes": [
+        "功率半导体"
+      ]
+    },
+    {
+      "name": "新宙邦",
+      "themes": [
+        "氟化液PFPE/HFE",
+        "高端PFA/FFKM"
+      ]
+    },
+    {
+      "name": "新洁能",
+      "themes": [
+        "功率半导体"
+      ]
+    },
+    {
+      "name": "新莱应材",
+      "themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "name": "新金路",
+      "themes": [
+        "钽资源／材料"
+      ]
+    },
+    {
+      "name": "方正科技",
+      "themes": [
+        "高阶AI PCB"
+      ]
+    },
+    {
+      "name": "昊华科技",
+      "themes": [
+        "含氟特气WF6/C4F6"
+      ]
+    },
+    {
+      "name": "明微电子",
+      "themes": [
+        "成熟制程芯片"
+      ]
+    },
+    {
+      "name": "星源材质",
+      "themes": [
+        "压电陶瓷"
+      ]
+    },
+    {
+      "name": "杰华特",
+      "themes": [
+        "功率半导体"
+      ]
+    },
+    {
+      "name": "正帆科技",
+      "themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "name": "江丰电子",
+      "themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "name": "深南电路",
+      "themes": [
+        "ABF载板"
+      ]
+    },
+    {
+      "name": "珂玛科技",
+      "themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "name": "生益科技",
+      "themes": [
+        "ABF胶膜"
+      ]
+    },
+    {
+      "name": "百龙创园",
+      "themes": [
+        "代糖"
+      ]
+    },
+    {
+      "name": "罗博特科",
+      "themes": [
+        "CPO测试设备"
+      ]
+    },
+    {
+      "name": "胜宏科技",
+      "themes": [
+        "高阶AI PCB"
+      ]
+    },
+    {
+      "name": "臻宝科技",
+      "themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "name": "英杰电气",
+      "themes": [
+        "MFC／分子泵交付"
+      ]
+    },
+    {
+      "name": "莲花控股",
+      "themes": [
+        "ABF胶膜"
+      ]
+    },
+    {
+      "name": "超纯应材",
+      "themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "name": "金字火腿",
+      "themes": [
+        "DSP/TIA/Driver"
+      ]
+    },
+    {
+      "name": "金禾实业",
+      "themes": [
+        "代糖"
+      ]
+    },
+    {
+      "name": "阳谷华泰",
+      "themes": [
+        "天然橡胶"
+      ]
+    },
+    {
+      "name": "雅克科技",
+      "themes": [
+        "含氟材料扩展映射"
+      ]
+    },
+    {
+      "name": "高凯技术",
+      "themes": [
+        "MFC"
+      ]
+    },
+    {
+      "name": "齐翔腾达",
+      "themes": [
+        "天然橡胶"
+      ]
+    }
+  ],
+  "status_counts": {
+    "供给约束线索": 11,
+    "双向风险": 3,
+    "紧张/缺货线索": 6,
+    "延伸映射": 2,
+    "旧线索待刷新": 1
+  },
+  "evidence": {
+    "source_sha256": "77213f230dcf15c48d7c1710f1f2498864af2cccdfa752853ebc407a37d2f517"
+  },
+  "boundary": "资料原文线索汇总；不是逐股公告核验后的缺货受益名单，也不参与A/B/C评分或排序。"
+}
