@@ -1,0 +1,66 @@
+{
+  "code": "US.TEST",
+  "name": "Bearish top fixture",
+  "as_of": "2026-07-15 close",
+  "currency": "USD",
+  "current": 91.0,
+  "status": "头肩顶候选，正在测试颈线",
+  "assessment": {
+    "quality": "medium",
+    "score": 61,
+    "score_is_probability": false,
+    "components": {
+      "geometry": 20,
+      "touches_duration": 10,
+      "volume": 8,
+      "breakout": 7,
+      "retest": 0,
+      "momentum": 8,
+      "regime_relative_strength": 8
+    },
+    "alternatives": ["高位箱体"],
+    "contradictions": ["尚未完成颈线收盘跌破"],
+    "missing_evidence": ["跌破后反抽"]
+  },
+  "pattern": {
+    "type": "head_shoulders_top_candidate",
+    "label": "头肩顶候选",
+    "family": "reversal",
+    "decision_zone": {"low": 88.0, "high": 90.0, "label": "颈线 88–90"},
+    "key_points": [
+      {"date": "2026-05-08", "label": "左肩", "value": 103.0},
+      {"date": "2026-05-29", "label": "头部", "value": 112.0},
+      {"date": "2026-06-26", "label": "右肩", "value": 102.0}
+    ],
+    "structure_lines": [
+      {
+        "label": "颈线斜率",
+        "style": "support",
+        "points": [
+          {"date": "2026-05-16", "value": 90.0},
+          {"date": "2026-06-12", "value": 88.0}
+        ]
+      }
+    ]
+  },
+  "history": [
+    {"date": "2026-05-01", "close": 96.0},
+    {"date": "2026-05-08", "close": 102.0},
+    {"date": "2026-05-16", "close": 91.0},
+    {"date": "2026-05-22", "close": 105.0},
+    {"date": "2026-05-29", "close": 111.0},
+    {"date": "2026-06-05", "close": 101.0},
+    {"date": "2026-06-12", "close": 89.0},
+    {"date": "2026-06-19", "close": 97.0},
+    {"date": "2026-06-26", "close": 101.0},
+    {"date": "2026-07-03", "close": 96.0},
+    {"date": "2026-07-10", "close": 93.0},
+    {"date": "2026-07-15", "close": 91.0}
+  ],
+  "scenarios": [
+    {"id": "A", "kind": "bearish", "label": "有效跌破", "trigger": "收盘 <88，反抽 88–90 受阻", "targets_label": "82 → 76", "path": [91, 87, 83, 79, 76]},
+    {"id": "B", "kind": "range", "label": "高位整理", "trigger": "88–102 震荡，等待方向", "targets_label": "不预设方向", "path": [91, 96, 89, 98, 94]},
+    {"id": "C", "kind": "bullish", "label": "顶部失效", "trigger": "收复 102，站回右肩上方", "targets_label": "106 → 112", "path": [91, 97, 103, 107, 112]}
+  ],
+  "reminders": []
+}
