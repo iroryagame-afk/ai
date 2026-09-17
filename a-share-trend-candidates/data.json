@@ -23,7 +23,11 @@
           "volume_vs_key": 0.5850886359952076
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "关K"
+      ]
     },
     {
       "code": "SZ.300327",
@@ -42,7 +46,10 @@
           "volume_vs_key": 0.5904152279948404
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SH.688981",
@@ -61,7 +68,11 @@
           "volume_vs_key": 0.6214703992791242
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "X"
+      ]
     },
     {
       "code": "SZ.300576",
@@ -80,7 +91,10 @@
           "volume_vs_key": 0.8313915363093933
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "关K"
+      ]
     },
     {
       "code": "SH.688548",
@@ -93,7 +107,11 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "转强确认"
+      "m30_status": "转强确认",
+      "other_groups": [
+        "收线",
+        "关K"
+      ]
     },
     {
       "code": "SZ.002335",
@@ -106,7 +124,10 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "转强酝酿"
+      "m30_status": "转强酝酿",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SZ.300236",
@@ -119,7 +140,11 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "半导体",
+        "关K"
+      ]
     },
     {
       "code": "SZ.300243",
@@ -132,7 +157,8 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": []
     },
     {
       "code": "SZ.300567",
@@ -145,7 +171,8 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": []
     },
     {
       "code": "SZ.300274",
@@ -158,7 +185,11 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "收线"
+      ]
     }
   ],
   "candidates": [
@@ -179,7 +210,11 @@
           "volume_vs_key": 0.5850886359952076
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "关K"
+      ]
     },
     {
       "code": "SZ.300327",
@@ -198,7 +233,10 @@
           "volume_vs_key": 0.5904152279948404
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SH.688981",
@@ -217,7 +255,11 @@
           "volume_vs_key": 0.6214703992791242
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "X"
+      ]
     },
     {
       "code": "SZ.300576",
@@ -236,7 +278,10 @@
           "volume_vs_key": 0.8313915363093933
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "关K"
+      ]
     },
     {
       "code": "SH.688548",
@@ -249,7 +294,11 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "转强确认"
+      "m30_status": "转强确认",
+      "other_groups": [
+        "收线",
+        "关K"
+      ]
     },
     {
       "code": "SZ.002335",
@@ -262,7 +311,10 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "转强酝酿"
+      "m30_status": "转强酝酿",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SZ.300236",
@@ -275,7 +327,11 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "半导体",
+        "关K"
+      ]
     },
     {
       "code": "SZ.300243",
@@ -288,7 +344,8 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": []
     },
     {
       "code": "SZ.300567",
@@ -301,7 +358,8 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": []
     },
     {
       "code": "SZ.300274",
@@ -314,7 +372,11 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "收线"
+      ]
     },
     {
       "code": "SH.688372",
@@ -333,7 +395,10 @@
           "volume_vs_key": 0.6255376618087722
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SH.688362",
@@ -352,7 +417,11 @@
           "volume_vs_key": 0.6599181691359985
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线",
+        "关K"
+      ]
     },
     {
       "code": "SZ.300456",
@@ -371,7 +440,10 @@
           "volume_vs_key": 0.6609708669616312
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SH.688783",
@@ -390,7 +462,11 @@
           "volume_vs_key": 0.707320973645541
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线",
+        "关K"
+      ]
     },
     {
       "code": "SH.688591",
@@ -409,7 +485,10 @@
           "volume_vs_key": 0.7267178848211931
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SH.688126",
@@ -428,7 +507,11 @@
           "volume_vs_key": 0.7467415391459212
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "半导体",
+        "关K"
+      ]
     },
     {
       "code": "SH.688153",
@@ -447,7 +530,8 @@
           "volume_vs_key": 0.750169557911806
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": []
     },
     {
       "code": "SH.688584",
@@ -466,7 +550,11 @@
           "volume_vs_key": 0.7590768180689692
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线",
+        "半导体"
+      ]
     },
     {
       "code": "SH.688233",
@@ -485,7 +573,11 @@
           "volume_vs_key": 0.7685757473153623
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线",
+        "关K"
+      ]
     },
     {
       "code": "SZ.002156",
@@ -504,7 +596,12 @@
           "volume_vs_key": 0.7772424734342064
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "收线",
+        "关K"
+      ]
     },
     {
       "code": "SH.688234",
@@ -523,7 +620,8 @@
           "volume_vs_key": 0.8066113833067253
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": []
     },
     {
       "code": "SH.688515",
@@ -542,7 +640,10 @@
           "volume_vs_key": 0.8286638411777827
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "关K"
+      ]
     },
     {
       "code": "SH.600584",
@@ -561,7 +662,10 @@
           "volume_vs_key": 0.8705501050152598
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核"
+      ]
     },
     {
       "code": "SZ.300053",
@@ -580,7 +684,10 @@
           "volume_vs_key": 0.8765299103945479
         }
       ],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "关K"
+      ]
     },
     {
       "code": "SH.688802",
@@ -593,7 +700,10 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-17",
       "pullback_days": [],
-      "m30_status": "转强酝酿"
+      "m30_status": "转强酝酿",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SH.688352",
@@ -606,7 +716,11 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线",
+        "关K"
+      ]
     },
     {
       "code": "SH.688484",
@@ -619,7 +733,11 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线",
+        "关K"
+      ]
     },
     {
       "code": "SZ.002371",
@@ -632,7 +750,12 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "收线",
+        "关K"
+      ]
     },
     {
       "code": "SZ.300054",
@@ -645,7 +768,12 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "高弹",
+        "关K"
+      ]
     },
     {
       "code": "SH.688396",
@@ -658,7 +786,10 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "关K"
+      ]
     },
     {
       "code": "SZ.300373",
@@ -671,7 +802,12 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "收线",
+        "关K"
+      ]
     },
     {
       "code": "SH.605358",
@@ -684,7 +820,12 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线",
+        "半导体",
+        "关K"
+      ]
     },
     {
       "code": "SH.600641",
@@ -697,7 +838,12 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "高弹",
+        "关K",
+        "X"
+      ]
     },
     {
       "code": "SH.688261",
@@ -710,7 +856,10 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SH.688785",
@@ -723,7 +872,10 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-17",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "缺货"
+      ]
     },
     {
       "code": "SZ.300346",
@@ -736,7 +888,11 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "半导体",
+        "关K"
+      ]
     },
     {
       "code": "SH.605111",
@@ -749,7 +905,11 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线",
+        "关K"
+      ]
     },
     {
       "code": "SH.688795",
@@ -762,7 +922,8 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-17",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": []
     },
     {
       "code": "SZ.301678",
@@ -775,7 +936,10 @@
       "volume_basis": "关K日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SZ.300666",
@@ -788,7 +952,11 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "缺货"
+      ]
     },
     {
       "code": "SZ.300458",
@@ -801,7 +969,10 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-14",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SZ.300408",
@@ -814,7 +985,12 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-08-25",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "元器件",
+        "材料"
+      ]
     },
     {
       "code": "SH.688249",
@@ -827,7 +1003,10 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SH.600276",
@@ -840,7 +1019,10 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核"
+      ]
     },
     {
       "code": "SH.688110",
@@ -853,7 +1035,10 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-07-20",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SZ.002138",
@@ -866,7 +1051,12 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-04",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "元器件",
+        "收线"
+      ]
     },
     {
       "code": "SH.603893",
@@ -879,7 +1069,11 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "收线"
+      ]
     },
     {
       "code": "SH.603259",
@@ -892,7 +1086,11 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "A核",
+        "收线"
+      ]
     },
     {
       "code": "SH.688322",
@@ -905,7 +1103,8 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": []
     },
     {
       "code": "SH.600707",
@@ -918,7 +1117,8 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": []
     },
     {
       "code": "SZ.300857",
@@ -931,7 +1131,11 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-16",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "国算",
+        "三类 A"
+      ]
     },
     {
       "code": "SZ.300115",
@@ -944,7 +1148,10 @@
       "volume_basis": "前一交易日",
       "structure_date": "2026-09-11",
       "pullback_days": [],
-      "m30_status": "信号分歧"
+      "m30_status": "信号分歧",
+      "other_groups": [
+        "收线"
+      ]
     },
     {
       "code": "SH.688543",
@@ -968,9 +1175,13 @@
           "volume_vs_key": 0.4196544066860593
         }
       ],
-      "m30_status": "尚未配合"
+      "m30_status": "尚未配合",
+      "other_groups": [
+        "三类 A"
+      ]
     }
   ],
+  "group_notes_verified_at": "2026-09-17T17:52:16.153002",
   "watchlist_readback_ok": true,
   "C_source_verified": false,
   "price_plan_complete": false,
