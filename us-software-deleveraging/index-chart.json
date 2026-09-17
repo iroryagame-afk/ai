@@ -1,8 +1,8 @@
 {
   "status": "OPEN_D_VERIFIED_NORMALIZED_INDEX_CHART",
-  "generated_at": "2026-09-16T09:44:08+08:00",
+  "generated_at": "2026-09-17T09:47:51+08:00",
   "base_date": "2026-07-27",
-  "data_date": "2026-09-15",
+  "data_date": "2026-09-16",
   "method": "first close on or after 2026-07-27 = 100; custom line is daily equal weight",
   "note": "QQQ保留市场背景，IGV与SOXX分别代表软件和硬件；自选等权线剔除页面中单列的8只非纯软件边界标的。",
   "lines": [
@@ -153,6 +153,10 @@
         {
           "date": "2026-09-15",
           "value": 103.287
+        },
+        {
+          "date": "2026-09-16",
+          "value": 103.313
         }
       ]
     },
@@ -303,6 +307,10 @@
         {
           "date": "2026-09-15",
           "value": 116.104
+        },
+        {
+          "date": "2026-09-16",
+          "value": 115.455
         }
       ]
     },
@@ -453,6 +461,10 @@
         {
           "date": "2026-09-15",
           "value": 96.696
+        },
+        {
+          "date": "2026-09-16",
+          "value": 97.319
         }
       ]
     },
@@ -487,157 +499,162 @@
         },
         {
           "date": "2026-08-03",
-          "value": 107.826,
+          "value": 107.827,
           "coverage": 25
         },
         {
           "date": "2026-08-04",
-          "value": 113.608,
+          "value": 113.609,
           "coverage": 25
         },
         {
           "date": "2026-08-05",
-          "value": 114.051,
+          "value": 114.052,
           "coverage": 25
         },
         {
           "date": "2026-08-06",
-          "value": 110.884,
+          "value": 110.885,
           "coverage": 25
         },
         {
           "date": "2026-08-07",
-          "value": 116.813,
+          "value": 116.815,
           "coverage": 25
         },
         {
           "date": "2026-08-10",
-          "value": 121.488,
+          "value": 121.489,
           "coverage": 25
         },
         {
           "date": "2026-08-11",
-          "value": 121.319,
+          "value": 121.321,
           "coverage": 25
         },
         {
           "date": "2026-08-12",
-          "value": 119.891,
+          "value": 119.893,
           "coverage": 25
         },
         {
           "date": "2026-08-13",
-          "value": 125.796,
+          "value": 125.797,
           "coverage": 25
         },
         {
           "date": "2026-08-14",
-          "value": 122.496,
+          "value": 122.497,
           "coverage": 25
         },
         {
           "date": "2026-08-17",
-          "value": 119.854,
+          "value": 119.855,
           "coverage": 25
         },
         {
           "date": "2026-08-18",
-          "value": 119.64,
+          "value": 119.641,
           "coverage": 25
         },
         {
           "date": "2026-08-19",
-          "value": 119.652,
+          "value": 119.654,
           "coverage": 25
         },
         {
           "date": "2026-08-20",
-          "value": 117.93,
+          "value": 117.932,
           "coverage": 25
         },
         {
           "date": "2026-08-21",
-          "value": 120.311,
+          "value": 120.313,
           "coverage": 25
         },
         {
           "date": "2026-08-24",
-          "value": 118.377,
+          "value": 118.38,
           "coverage": 25
         },
         {
           "date": "2026-08-25",
-          "value": 117.047,
+          "value": 117.049,
           "coverage": 25
         },
         {
           "date": "2026-08-26",
-          "value": 118.084,
+          "value": 118.086,
           "coverage": 25
         },
         {
           "date": "2026-08-27",
-          "value": 128.578,
+          "value": 128.583,
           "coverage": 25
         },
         {
           "date": "2026-08-28",
-          "value": 126.826,
+          "value": 126.831,
           "coverage": 25
         },
         {
           "date": "2026-08-31",
-          "value": 127.759,
+          "value": 127.764,
           "coverage": 25
         },
         {
           "date": "2026-09-01",
-          "value": 123.129,
+          "value": 123.134,
           "coverage": 25
         },
         {
           "date": "2026-09-02",
-          "value": 119.937,
+          "value": 119.942,
           "coverage": 25
         },
         {
           "date": "2026-09-03",
-          "value": 124.716,
+          "value": 124.722,
           "coverage": 25
         },
         {
           "date": "2026-09-04",
-          "value": 120.795,
+          "value": 120.8,
           "coverage": 25
         },
         {
           "date": "2026-09-08",
-          "value": 117.967,
+          "value": 117.971,
           "coverage": 25
         },
         {
           "date": "2026-09-09",
-          "value": 118.131,
+          "value": 118.135,
           "coverage": 25
         },
         {
           "date": "2026-09-10",
-          "value": 117.653,
+          "value": 117.657,
           "coverage": 25
         },
         {
           "date": "2026-09-11",
-          "value": 117.656,
+          "value": 117.661,
           "coverage": 25
         },
         {
           "date": "2026-09-14",
-          "value": 124.723,
+          "value": 124.728,
           "coverage": 25
         },
         {
           "date": "2026-09-15",
-          "value": 124.2,
+          "value": 124.205,
+          "coverage": 25
+        },
+        {
+          "date": "2026-09-16",
+          "value": 123.146,
           "coverage": 25
         }
       ]

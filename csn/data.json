@@ -4,16 +4,16 @@
   "status": "VERIFIED",
   "verifyMarker": "VERIFIED_US_INTEGRATED_RECOMMENDATIONS_DIRECT_INPUTS_SAME_CLOSE",
   "modelVersion": "US_INTEGRATED_V2_20260826",
-  "generatedAt": "2026-09-16T09:46:27+08:00",
-  "dataDate": "2026-09-15",
+  "generatedAt": "2026-09-17T09:50:21+08:00",
+  "dataDate": "2026-09-16",
   "sourceDates": {
-    "csnSignal": "2026-09-15",
-    "hot": "2026-09-15",
-    "thrust": "2026-09-15",
-    "rotation": "2026-09-15",
-    "skew": "2026-09-15",
-    "software": "2026-09-15",
-    "hardware": "2026-09-15"
+    "csnSignal": "2026-09-16",
+    "hot": "2026-09-16",
+    "thrust": "2026-09-16",
+    "rotation": "2026-09-16",
+    "skew": "2026-09-16",
+    "software": "2026-09-16",
+    "hardware": "2026-09-16"
   },
   "weights": {
     "strengthRotation": 30,
@@ -30,11 +30,11 @@
     "threshold": 73.0,
     "reasons": [
       "科技股偏谨慎：QQQ低于MA50",
-      "25Δ Skew QQQ 6.50 / SPY 4.02"
+      "25Δ Skew QQQ 4.35 / SPY 6.35"
     ],
-    "qqqSkew": 6.503,
-    "spySkew": 4.02,
-    "protectiveSkew": 6.503
+    "qqqSkew": 4.351,
+    "spySkew": 6.353,
+    "protectiveSkew": 6.353
   },
   "selectionPolicy": {
     "targetCount": "5-10; never pad below threshold",
@@ -52,28 +52,29 @@
     "xConsensusPolicy": "context_only_not_scored"
   },
   "selectionStats": {
-    "universeCount": 705,
-    "scoredCount": 54,
-    "qualifiedBeforeDiversification": 13,
+    "universeCount": 715,
+    "scoredCount": 53,
+    "qualifiedBeforeDiversification": 8,
     "exclusions": {
-      "csnRiskGate": 211,
+      "csnRiskGate": 213,
       "highRiskProduct": 120,
-      "singleSource": 320
+      "singleSource": 329,
+      "sectorCap": 1
     }
   },
   "selectedCount": 5,
   "rows": [
     {
-      "ticker": "SWKS",
-      "name": "思佳讯",
+      "ticker": "FRO",
+      "name": "Frontline",
       "assetClass": "us_stock",
       "sector": "未分类",
-      "score": 90.1,
+      "score": 82.7,
       "factors": {
         "strengthRotation": 29.4,
         "trendEntry": 25.0,
-        "heatTheme": 13.3,
-        "volumeStructure": 9.2,
+        "heatTheme": 9.8,
+        "volumeStructure": 5.3,
         "specialMonitor": 5.0,
         "riskReward": 8.2
       },
@@ -87,57 +88,18 @@
       "reasons": [
         "趋势/位置",
         "相对强度/轮动",
-        "量价结构",
+        "风险收益",
         "领先加速"
       ],
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "EMA10 79.39 / EMA20 74.89",
-      "invalidation": "EMA55 69.94",
+      "confirmZone": "EMA10 49.01 / EMA20 46.62",
+      "invalidation": "EMA55 42.49",
       "skew": null,
-      "atrPct": 5.63,
+      "atrPct": 3.29,
       "distanceEma20": null,
       "rank": 1,
-      "action": "等待回踩确认"
-    },
-    {
-      "ticker": "ZS",
-      "name": "Zscaler",
-      "assetClass": "us_stock",
-      "sector": "安全平台",
-      "score": 80.5,
-      "factors": {
-        "strengthRotation": 28.8,
-        "trendEntry": 20.6,
-        "heatTheme": 11.1,
-        "volumeStructure": 6.1,
-        "specialMonitor": 9.3,
-        "riskReward": 6.6
-      },
-      "sources": [
-        "HOT",
-        "THRUST_ROTATION",
-        "MONITOR"
-      ],
-      "sourceCount": 3,
-      "rotationPhase": "领先加速",
-      "csnCall": "无独立信号",
-      "reasons": [
-        "相对强度/轮动",
-        "专项监控",
-        "趋势/位置",
-        "领先加速"
-      ],
-      "risks": [
-        "距EMA20 10.6%，等回踩"
-      ],
-      "confirmZone": "172.62–177.88",
-      "invalidation": "159.2",
-      "skew": null,
-      "atrPct": 5.58,
-      "distanceEma20": 10.64,
-      "rank": 2,
       "action": "等待回踩确认"
     },
     {
@@ -145,13 +107,13 @@
       "name": "Atlassian",
       "assetClass": "us_stock",
       "sector": "下游验证",
-      "score": 79.0,
+      "score": 82.1,
       "factors": {
-        "strengthRotation": 26.8,
-        "trendEntry": 23.0,
+        "strengthRotation": 27.6,
+        "trendEntry": 23.8,
         "heatTheme": 10.6,
-        "volumeStructure": 2.6,
-        "specialMonitor": 7.8,
+        "volumeStructure": 3.2,
+        "specialMonitor": 8.7,
         "riskReward": 8.2
       },
       "sources": [
@@ -165,33 +127,33 @@
       "reasons": [
         "趋势/位置",
         "相对强度/轮动",
-        "风险收益",
+        "专项监控",
         "领先加速"
       ],
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "173.33–178.61",
-      "invalidation": "142.64",
+      "confirmZone": "174.68–180.00",
+      "invalidation": "144.2",
       "skew": null,
-      "atrPct": 5.28,
-      "distanceEma20": 7.86,
-      "rank": 3,
+      "atrPct": 5.16,
+      "distanceEma20": 7.3,
+      "rank": 2,
       "action": "等待回踩确认"
     },
     {
-      "ticker": "FRO",
-      "name": "Frontline",
+      "ticker": "RBRK",
+      "name": "Rubrik",
       "assetClass": "us_stock",
       "sector": "未分类",
-      "score": 78.2,
+      "score": 79.2,
       "factors": {
-        "strengthRotation": 29.4,
+        "strengthRotation": 28.9,
         "trendEntry": 25.0,
-        "heatTheme": 4.6,
-        "volumeStructure": 6.0,
+        "heatTheme": 11.5,
+        "volumeStructure": 1.6,
         "specialMonitor": 5.0,
-        "riskReward": 8.2
+        "riskReward": 7.2
       },
       "sources": [
         "HOT",
@@ -203,57 +165,97 @@
       "reasons": [
         "趋势/位置",
         "相对强度/轮动",
-        "风险收益",
+        "热度/主线",
         "领先加速"
       ],
       "risks": [
-        "未见主要过热或保护需求异常"
+        "ATR 6.3%，控制仓位"
       ],
-      "confirmZone": "EMA10 47.97 / EMA20 45.87",
-      "invalidation": "EMA55 42.07",
+      "confirmZone": "EMA10 96.41 / EMA20 94.57",
+      "invalidation": "EMA55 88.03",
       "skew": null,
-      "atrPct": 3.31,
+      "atrPct": 6.29,
       "distanceEma20": null,
-      "rank": 4,
+      "rank": 3,
       "action": "等待回踩确认"
     },
     {
-      "ticker": "NET",
-      "name": "Cloudflare",
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
       "assetClass": "us_stock",
-      "sector": "软件基础设施",
-      "score": 77.1,
+      "sector": "安全平台",
+      "score": 77.2,
       "factors": {
-        "strengthRotation": 27.0,
-        "trendEntry": 20.7,
-        "heatTheme": 10.5,
-        "volumeStructure": 2.9,
-        "specialMonitor": 7.8,
+        "strengthRotation": 26.7,
+        "trendEntry": 21.5,
+        "heatTheme": 8.5,
+        "volumeStructure": 3.6,
+        "specialMonitor": 8.7,
         "riskReward": 8.2
       },
       "sources": [
         "CSN",
         "HOT",
         "THRUST_ROTATION",
-        "MONITOR"
+        "MONITOR",
+        "SKEW"
       ],
-      "sourceCount": 4,
+      "sourceCount": 5,
       "rotationPhase": "领先加速",
       "csnCall": "持有",
       "reasons": [
         "相对强度/轮动",
+        "专项监控",
         "趋势/位置",
-        "风险收益",
         "领先加速"
       ],
       "risks": [
         "未见主要过热或保护需求异常"
       ],
-      "confirmZone": "296.03–305.05",
-      "invalidation": "269.3",
+      "confirmZone": "349.44–360.08",
+      "invalidation": "321.39",
+      "skew": 0.333,
+      "atrPct": 5.78,
+      "distanceEma20": 5.89,
+      "rank": 4,
+      "action": "等待回踩确认"
+    },
+    {
+      "ticker": "ZS",
+      "name": "Zscaler",
+      "assetClass": "us_stock",
+      "sector": "安全平台",
+      "score": 75.7,
+      "factors": {
+        "strengthRotation": 27.3,
+        "trendEntry": 19.2,
+        "heatTheme": 10.4,
+        "volumeStructure": 2.8,
+        "specialMonitor": 7.8,
+        "riskReward": 8.2
+      },
+      "sources": [
+        "HOT",
+        "THRUST_ROTATION",
+        "MONITOR"
+      ],
+      "sourceCount": 3,
+      "rotationPhase": "领先加速",
+      "csnCall": "无独立信号",
+      "reasons": [
+        "相对强度/轮动",
+        "风险收益",
+        "专项监控",
+        "领先加速"
+      ],
+      "risks": [
+        "未见主要过热或保护需求异常"
+      ],
+      "confirmZone": "174.15–179.46",
+      "invalidation": "159.2",
       "skew": null,
-      "atrPct": 5.31,
-      "distanceEma20": 8.88,
+      "atrPct": 5.57,
+      "distanceEma20": 8.36,
       "rank": 5,
       "action": "等待回踩确认"
     }
