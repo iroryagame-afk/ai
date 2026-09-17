@@ -170,11 +170,16 @@ def public_data(run, futu_tabs_path=DEFAULT_FUTU_TABS, taxonomy_path=DEFAULT_TAX
             **theme_fields(row["code"], theme_index),
         })
     from a_observe_daily.group_notes import load_notes
-    group_notes, group_notes_at = load_notes(run)
+    group_notes, group_notes_at = {}, None
     for item in candidates + stocks:
         item['other_groups'] = group_notes.get(item['code'], [])
         if item['other_groups']:
             item['conversation_note'] = '页卡备注：同时在 ' + '、'.join(item['other_groups'])
+    from a_observe_daily.b_age import b_age
+    original_rows = {x['code']: x for x in result['rows']}
+    for item in candidates:
+        age = b_age(original_rows[item['code']], run, result['asof'])
+        if age:item['stage'] += '；' + age
     candidate_counts = {key: sum(key in row["classes"] for row in candidates) for key in "ABC"}
     matched_tab_counts = {key: sum(key in row["futu_tabs"] for row in candidates) for key in FUTU_TAB_ORDER}
     broad_counts = {key: sum(row["broad_category"] == key for row in candidates) for key in taxonomy_source["broad_order"]}
