@@ -170,11 +170,11 @@ def public_data(run, futu_tabs_path=DEFAULT_FUTU_TABS, taxonomy_path=DEFAULT_TAX
             **theme_fields(row["code"], theme_index),
         })
     from a_observe_daily.group_notes import load_notes
-    group_notes, group_notes_at = {}, None
+    group_notes, group_notes_at = load_notes(run)
     for item in candidates + stocks:
         item['other_groups'] = group_notes.get(item['code'], [])
         if item['other_groups']:
-            item['conversation_note'] = '页卡备注：同时在 ' + '、'.join(item['other_groups'])
+            item['conversation_note'] = '主题备注：' + '、'.join(item['other_groups'])
     from a_observe_daily.b_age import b_age
     original_rows = {x['code']: x for x in result['rows']}
     for item in candidates:
@@ -213,7 +213,7 @@ def render_stock(row):
     b, c, a, p = row["B"], row["C"], row["A"], row["points"]
     stage = (b["shape"] + "／" + b["state"]) if b else c["stage"] if c else "关K回调第%d日" % a["day"]
     evidence = []
-    if row.get('other_groups'):evidence.append('页卡备注：同时在 '+'、'.join(row['other_groups']))
+    if row.get('other_groups'):evidence.append('主题备注：'+'、'.join(row['other_groups']))
     if a:
         if a.get("pending_conditions"):evidence.append("A·板块2/3待补观察：" + "；".join(a["pending_conditions"]))
         evidence.append("A｜关K回调第%d日；关K %s；结构失效参考 %s。" % (a["day"], a["key_date"], price(a["invalid"])))

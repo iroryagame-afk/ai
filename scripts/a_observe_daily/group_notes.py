@@ -3,6 +3,8 @@ import json,time
 from pathlib import Path
 from datetime import datetime
 
+THEME_GROUPS = ('缺货','X','高弹','PCB','光','元器件','材料','半导体','国算','金融','PFTE')
+
 def load_notes(run):
  p=Path(run)/'group_notes.json'
  if not p.exists():return {},None
@@ -10,7 +12,7 @@ def load_notes(run):
  if not d.get('complete'):return {},None
  r=json.loads((Path(run)/'result.json').read_text())
  if d.get('asof')!=r.get('asof'):return {},None
- return d['notes'],d['verified_at']
+ return {c:[g for g in THEME_GROUPS if g in groups] for c,groups in d['notes'].items() if any(g in THEME_GROUPS for g in groups)},d['verified_at']
 
 def collect(run):
  from futu import OpenQuoteContext,RET_OK
@@ -19,7 +21,7 @@ def collect(run):
  try:
   rc,groups=q.get_user_security_group();assert rc==RET_OK,groups
   time.sleep(30)  # Leave the preceding watchlist-sync rate-limit window.
-  names=[x['group_name'] for x in groups.to_dict('records') if x['group_type']=='CUSTOM' and x['group_name'].strip()!='A观察']
+  names=[x['group_name'] for x in groups.to_dict('records') if x['group_type']=='CUSTOM' and x['group_name'].strip() in THEME_GROUPS]
   audit['groups']=names
   for name in names:
    time.sleep(4)
