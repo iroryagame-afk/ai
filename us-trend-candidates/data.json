@@ -1,18 +1,18 @@
 {
   "schema_version": "US_DAILY_ABC_PUBLIC_1.2",
   "data_date": "2026-09-16",
-  "collected_at_ny": "2026-09-16T21:12:31.490874-04:00",
+  "collected_at_ny": "2026-09-17T05:13:16.505133-04:00",
   "data_boundary": "美股完整常规时段日K，前复权；点位按当日完整日K重算",
-  "source_sha256": "81c1604feae956650c91439c3c72e77baa4ec012519b76991617721c9f3bfb0d",
+  "source_sha256": "be71dadf5c98aa8000cf80d0d6028f8007ddb2a0a8ce222ff0396ea5e3cae40d",
   "coverage": {
-    "A": 0.986046511627907,
-    "B": 0.9534883720930233,
-    "C": 0.9534883720930233
+    "A": 0.9955357142857143,
+    "B": 0.9642857142857143,
+    "C": 0.9642857142857143
   },
   "counts": {
     "A": 9,
-    "B": 2,
-    "C": 7
+    "B": 1,
+    "C": 8
   },
   "candidate_count": 18,
   "selected_count": 10,
@@ -48,8 +48,8 @@
       "max_trading_days": 30
     },
     {
-      "ticker": "EOSE",
-      "name": "Eos Energy",
+      "ticker": "ASML",
+      "name": "阿斯麦",
       "sources": [
         "B"
       ],
@@ -57,35 +57,7 @@
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·1B?",
-      "current_stage": "B·1B?｜30分转强酝酿",
-      "momentum_volume": "30分·转强酝酿：已有上升笔结构、回踩未破结构低点／负柱连续收敛、DIF上拐／低位金叉",
-      "price_state": "日线结构失效价 $3.01",
-      "latest_close": 3.94,
-      "action": "只观察",
-      "pullback_zone": [
-        3.88,
-        3.96
-      ],
-      "confirmation_price": 4.31,
-      "maximum_acceptable_price": 4.47,
-      "invalidation_price": 3.01,
-      "reduce_price": 6.27,
-      "final_target_price": 7.57,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "ASML",
-      "name": "阿斯麦",
-      "sources": [
-        "B"
-      ],
-      "rank": 3,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?",
+      "structure_node": "B日线标记·B?（首次显示2026-09-16）",
       "current_stage": "B·B?｜30分上升延续",
       "momentum_volume": "30分·上升延续：已有上升笔结构、回踩未破结构低点／金叉保持、交叉差扩大／K在D上方、继续向上",
       "price_state": "日线结构失效价 $1,572.84",
@@ -109,7 +81,7 @@
       "sources": [
         "C"
       ],
-      "rank": 4,
+      "rank": 3,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
@@ -137,7 +109,7 @@
       "sources": [
         "C"
       ],
-      "rank": 5,
+      "rank": 4,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
@@ -165,7 +137,7 @@
       "sources": [
         "C"
       ],
-      "rank": 6,
+      "rank": 5,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
@@ -193,7 +165,7 @@
       "sources": [
         "C"
       ],
-      "rank": 7,
+      "rank": 6,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
@@ -221,7 +193,7 @@
       "sources": [
         "C"
       ],
-      "rank": 8,
+      "rank": 7,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
@@ -240,6 +212,34 @@
       "invalidation_price": 177.98,
       "reduce_price": 208.18,
       "final_target_price": 220.25,
+      "review_trading_day": 10,
+      "max_trading_days": 30
+    },
+    {
+      "ticker": "VSTM",
+      "name": "Verastem",
+      "sources": [
+        "C"
+      ],
+      "rank": 8,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "金叉前/动能改善观察",
+      "price_state": "待价格确认",
+      "latest_close": 7.32,
+      "action": "只观察",
+      "pullback_zone": [
+        6.62,
+        6.72
+      ],
+      "confirmation_price": 7.52,
+      "maximum_acceptable_price": 7.72,
+      "invalidation_price": 6.62,
+      "reduce_price": 8.88,
+      "final_target_price": 9.78,
       "review_trading_day": 10,
       "max_trading_days": 30
     },
@@ -330,8 +330,8 @@
       "max_trading_days": 30
     },
     {
-      "ticker": "EOSE",
-      "name": "Eos Energy",
+      "ticker": "ASML",
+      "name": "阿斯麦",
       "sources": [
         "B"
       ],
@@ -339,35 +339,7 @@
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·1B?",
-      "current_stage": "B·1B?｜30分转强酝酿",
-      "momentum_volume": "30分·转强酝酿：已有上升笔结构、回踩未破结构低点／负柱连续收敛、DIF上拐／低位金叉",
-      "price_state": "日线结构失效价 $3.01",
-      "latest_close": 3.94,
-      "action": "只观察",
-      "pullback_zone": [
-        3.88,
-        3.96
-      ],
-      "confirmation_price": 4.31,
-      "maximum_acceptable_price": 4.47,
-      "invalidation_price": 3.01,
-      "reduce_price": 6.27,
-      "final_target_price": 7.57,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "ASML",
-      "name": "阿斯麦",
-      "sources": [
-        "B"
-      ],
-      "rank": 3,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?",
+      "structure_node": "B日线标记·B?（首次显示2026-09-16）",
       "current_stage": "B·B?｜30分上升延续",
       "momentum_volume": "30分·上升延续：已有上升笔结构、回踩未破结构低点／金叉保持、交叉差扩大／K在D上方、继续向上",
       "price_state": "日线结构失效价 $1,572.84",
@@ -391,7 +363,7 @@
       "sources": [
         "C"
       ],
-      "rank": 4,
+      "rank": 3,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
@@ -419,7 +391,7 @@
       "sources": [
         "C"
       ],
-      "rank": 5,
+      "rank": 4,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
@@ -447,7 +419,7 @@
       "sources": [
         "C"
       ],
-      "rank": 6,
+      "rank": 5,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
@@ -475,7 +447,7 @@
       "sources": [
         "C"
       ],
-      "rank": 7,
+      "rank": 6,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
@@ -503,7 +475,7 @@
       "sources": [
         "C"
       ],
-      "rank": 8,
+      "rank": 7,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
@@ -522,6 +494,34 @@
       "invalidation_price": 177.98,
       "reduce_price": 208.18,
       "final_target_price": 220.25,
+      "review_trading_day": 10,
+      "max_trading_days": 30
+    },
+    {
+      "ticker": "VSTM",
+      "name": "Verastem",
+      "sources": [
+        "C"
+      ],
+      "rank": 8,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "金叉前/动能改善观察",
+      "price_state": "待价格确认",
+      "latest_close": 7.32,
+      "action": "只观察",
+      "pullback_zone": [
+        6.62,
+        6.72
+      ],
+      "confirmation_price": 7.52,
+      "maximum_acceptable_price": 7.72,
+      "invalidation_price": 6.62,
+      "reduce_price": 8.88,
+      "final_target_price": 9.78,
       "review_trading_day": 10,
       "max_trading_days": 30
     },
