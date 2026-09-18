@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T01:16:59.928154+00:00",
+  "generated_at": "2026-09-17T14:38:00+00:00",
   "sources": [
     {
       "source_id": "aihot",
       "name": "AI HOT Selected",
       "tier": 2,
       "state": "success",
-      "fetched": 92,
-      "accepted": 35,
-      "skipped_old": 57,
+      "fetched": 59,
+      "accepted": 34,
+      "skipped_old": 25,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 165,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
+      "elapsed_ms": 5808,
+      "checked_at": "2026-09-17T14:33:43.948348+00:00",
       "error": null
     },
     {
@@ -24,8 +24,8 @@
       "accepted": 0,
       "skipped_old": 47,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 594,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
+      "elapsed_ms": 4680,
+      "checked_at": "2026-09-17T14:33:43.948348+00:00",
       "error": null
     },
     {
@@ -34,12 +34,13 @@
       "tier": 1,
       "state": "success",
       "fetched": 10,
-      "accepted": 3,
-      "skipped_old": 7,
+      "accepted": 1,
+      "checked_at": "2026-09-17T14:38:00+00:00",
+      "error": null,
+      "skipped_old": 9,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 238,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
-      "error": null
+      "elapsed_ms": null,
+      "recovery": "独立HTTP/1.1直读补核，首轮并发采集超时不计为来源失败"
     },
     {
       "source_id": "fed_monetary",
@@ -47,12 +48,13 @@
       "tier": 1,
       "state": "success",
       "fetched": 15,
-      "accepted": 0,
-      "skipped_old": 15,
+      "accepted": 2,
+      "checked_at": "2026-09-17T14:38:00+00:00",
+      "error": null,
+      "skipped_old": 13,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 293,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
-      "error": null
+      "elapsed_ms": null,
+      "recovery": "独立HTTP/1.1直读补核，首轮并发采集超时不计为来源失败"
     },
     {
       "source_id": "fed_press_all",
@@ -63,8 +65,8 @@
       "accepted": 2,
       "skipped_old": 18,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 270,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
+      "elapsed_ms": 9091,
+      "checked_at": "2026-09-17T14:33:43.948348+00:00",
       "error": null
     },
     {
@@ -74,11 +76,12 @@
       "state": "success",
       "fetched": 15,
       "accepted": 0,
+      "checked_at": "2026-09-17T14:38:00+00:00",
+      "error": null,
       "skipped_old": 15,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 277,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
-      "error": null
+      "elapsed_ms": null,
+      "recovery": "独立HTTP/1.1直读补核，首轮并发采集超时不计为来源失败"
     },
     {
       "source_id": "federal_register",
@@ -86,11 +89,11 @@
       "tier": 1,
       "state": "success",
       "fetched": 100,
-      "accepted": 14,
+      "accepted": 16,
       "skipped_old": 0,
-      "skipped_low_relevance": 86,
-      "elapsed_ms": 1052,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
+      "skipped_low_relevance": 84,
+      "elapsed_ms": 4287,
+      "checked_at": "2026-09-17T14:33:43.948348+00:00",
       "error": null
     },
     {
@@ -102,8 +105,8 @@
       "accepted": 0,
       "skipped_old": 0,
       "skipped_low_relevance": 100,
-      "elapsed_ms": 1739,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
+      "elapsed_ms": 3637,
+      "checked_at": "2026-09-17T14:33:43.948348+00:00",
       "error": null
     },
     {
@@ -115,8 +118,8 @@
       "accepted": 0,
       "skipped_old": 0,
       "skipped_low_relevance": 100,
-      "elapsed_ms": 1586,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
+      "elapsed_ms": 2312,
+      "checked_at": "2026-09-17T14:33:43.948348+00:00",
       "error": null
     },
     {
@@ -126,10 +129,10 @@
       "state": "success",
       "fetched": 25,
       "accepted": 0,
-      "skipped_old": 23,
-      "skipped_low_relevance": 2,
-      "elapsed_ms": 830,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
+      "skipped_old": 22,
+      "skipped_low_relevance": 3,
+      "elapsed_ms": 1008,
+      "checked_at": "2026-09-17T14:33:43.948348+00:00",
       "error": null
     },
     {
@@ -138,11 +141,11 @@
       "tier": 1,
       "state": "success",
       "fetched": 30,
-      "accepted": 0,
-      "skipped_old": 30,
+      "accepted": 5,
+      "skipped_old": 25,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 513,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
+      "elapsed_ms": 2128,
+      "checked_at": "2026-09-17T14:33:43.948348+00:00",
       "error": null
     },
     {
@@ -151,11 +154,11 @@
       "tier": 1,
       "state": "success",
       "fetched": 30,
-      "accepted": 6,
-      "skipped_old": 24,
+      "accepted": 14,
+      "skipped_old": 16,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 413,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
+      "elapsed_ms": 1759,
+      "checked_at": "2026-09-17T14:33:43.948348+00:00",
       "error": null
     },
     {
@@ -164,11 +167,11 @@
       "tier": 1,
       "state": "success",
       "fetched": 50,
-      "accepted": 1,
-      "skipped_old": 49,
+      "accepted": 0,
+      "skipped_old": 50,
       "skipped_low_relevance": 0,
-      "elapsed_ms": 553,
-      "checked_at": "2026-09-14T01:16:59.928154+00:00",
+      "elapsed_ms": 20649,
+      "checked_at": "2026-09-17T14:33:43.948348+00:00",
       "error": null
     },
     {

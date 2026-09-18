@@ -148,22 +148,638 @@
   },
   "page_status": "live",
   "verification_status": "partial",
-  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-09-14_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
-  "generated_at": "2026-09-14T09:28:00+08:00",
+  "verification_marker": "LIVE_MACRO_EVENT_RADAR_2026-09-16_PRIMARY_SOURCES_WITH_PENDING_QUEUE",
+  "generated_at": "2026-09-17T22:38:00+08:00",
   "window": {
     "recent_hours": 240,
     "calendar_days": 30,
     "timezone": "Asia/Shanghai"
   },
   "brief": {
-    "title": "美国银行第三方风险监管转向按关系分级，社区银行与核心服务商路径更清晰",
-    "summary": "相对9月11日22:38快照，本轮新增1项核心事件：Fed、FDIC、NCUA与OCC联合提出按单项第三方关系风险分级的指引，并发布社区银行与核心服务商合作声明。",
-    "discipline": "统一指引仍处于征求意见阶段且不具约束力，最终文本、旧指引撤销时间和实际检查口径待定；核心服务商声明已发布，但不能直接外推为银行IT支出或金融科技收入增长。",
-    "core_count": 40,
+    "title": "美联储加息并上调利率路径，美国同步推进采购与电力监管调整",
+    "summary": "相对9月14日09:28公网快照，累计新增8项核心事件：Siri AI、Amazon英镑债、Gemini 3.8 Live、Sponsored Agents，以及本轮美联储加息、加拿大采购限制、EPA电厂规则回撤和OpenAI失准披露框架。",
+    "discipline": "加息与政策原文已核验；采购限制仍待实施清单，EPA进一步撤销属于提案，OpenAI六起案例为公司自报；市场反应和经营兑现分别待证。",
+    "core_count": 48,
     "pending_count": 1,
-    "next_event_count": 15
+    "next_event_count": 16
   },
   "events": [
+    {
+      "id": "fed-september-hike-and-sep-2026-09-16",
+      "headline": "美联储加息25bp并上调政策利率路径：目标区间升至3.75%–4.00%",
+      "category": "macro",
+      "event_type": "policy",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-09-16T14:00:00-04:00",
+      "observed_at": "2026-09-17T22:38:00+08:00",
+      "verified_at": "2026-09-17T22:38:00+08:00",
+      "fact": "美联储9月16日以12比0通过加息25个基点，将联邦基金目标区间提高至3.75%–4.00%，并于9月17日起将准备金利率提高至3.90%、一级信贷利率提高至4.00%。9月SEP把2026年末联邦基金利率中位数上调至4.1%（6月为3.8%），2026年PCE通胀中位数上调至3.7%，失业率中位数下调至4.1%。",
+      "new_information": "新增信息同时包含当次加息和更高的政策利率路径：委员会在增长仍稳、通胀仍高的判断下采取紧缩行动，SEP显示2026年政策利率中位数较6月上移30bp。",
+      "inference": "推断：短端无风险利率与成长资产折现率面临更久的高位约束，美元和金融条件偏紧；但SEP是委员条件性判断，不能等同于已承诺的后续加息路径。",
+      "unverified": "本轮仅用9月16日完整收盘记录初步股市反应，2Y/10Y、美债曲线、美元、信用利差和期货隐含路径尚未逐项核验；后续政策仍取决于数据。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "加息25bp至3.75%–4.00% → 短端融资成本上升 → 现金、债券与风险资产重新定价"
+        },
+        {
+          "level": "B",
+          "path": "SEP利率路径上移且通胀预测提高 → 更久高利率预期 → 高久期成长与高杠杆资产估值承压"
+        },
+        {
+          "level": "C",
+          "path": "金融条件收紧 → 信贷、投资与需求放缓 → 盈利与就业传导需后续数据确认"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "美债与美元",
+          "direction": "短端偏紧、曲线与美元方向待市场确认",
+          "horizon": "即时至6个月",
+          "reason": "政策利率和SEP路径均上移，但期限溢价与避险需求会影响长端反应。"
+        },
+        {
+          "market": "SPY/QQQ与高久期成长",
+          "direction": "折现率约束增强",
+          "horizon": "即时至12个月",
+          "reason": "更高的无风险利率提高估值门槛，实际影响仍取决于盈利与流动性。"
+        },
+        {
+          "market": "银行、地产与高杠杆信用",
+          "direction": "分化加剧",
+          "horizon": "1–12个月",
+          "reason": "净息差、融资成本、资产质量和再融资压力方向并不一致，需分行业验证。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "initial_mixed",
+        "checked_at": "2026-09-17T22:38:00+08:00",
+        "detail": "origin/main的2026年9月16日完整收盘显示SPY -0.44%、QQQ +0.03%，股市反应分化；未核验同窗2Y/10Y、美元和信用利差，不能据此判定全面紧缩交易。"
+      },
+      "next_checkpoint": "核验10月7日会议纪要、10月CPI/PPI与就业数据、10月27–28日FOMC，以及2Y/10Y、美元和信用利差是否持续确认。",
+      "invalidation": "若后续通胀快速回落、就业显著转弱，委员路径下修且市场金融条件未持续收紧，则“更久高利率”传导判断下调。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "Federal Reserve — FOMC statement (2026-09-16)",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "published_at": "2026-09-16T14:00:00-04:00",
+          "note": "核验25bp加息、目标区间、12比0表决及经济和通胀判断。"
+        },
+        {
+          "role": "primary",
+          "name": "Federal Reserve — September 2026 Summary of Economic Projections",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+          "published_at": "2026-09-16T14:00:00-04:00",
+          "note": "核验GDP、失业率、PCE与联邦基金利率中位数及相对6月变化。"
+        },
+        {
+          "role": "primary",
+          "name": "Federal Reserve — Implementation Note",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm",
+          "published_at": "2026-09-16T14:00:00-04:00",
+          "note": "核验准备金利率、一级信贷利率和公开市场操作参数。"
+        }
+      ],
+      "candidate_refs": [
+        "fed_press_all-monetary20260916a",
+        "fed_monetary-monetary20260916a"
+      ]
+    },
+    {
+      "id": "us-canada-procurement-reciprocity-2026-09-16",
+      "headline": "美国要求审查并限制加拿大原产商品进入联邦民用采购体系",
+      "category": "policy",
+      "event_type": "policy",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-09-16T16:27:39-04:00",
+      "observed_at": "2026-09-17T22:38:00+08:00",
+      "verified_at": "2026-09-17T22:38:00+08:00",
+      "fact": "白宫9月16日总统备忘录指示OMB与USTR会同联邦采购监管委员会，在法律允许范围内识别并采取步骤，将适当的加拿大原产商品从联邦民用采购体系移除或设为不可采购；同时要求USTR持续监测加拿大对美国商品的联邦和省级采购待遇。",
+      "new_information": "美加贸易摩擦从既有关税和进口限制扩展到美国联邦采购准入，但备忘录尚未给出商品清单、统一生效日或采购金额。",
+      "inference": "推断：加拿大供应商在美国政府采购中的可得市场可能收缩，美国本土替代供应商相对受益；实际影响取决于FAR、OMB和USTR后续实施范围、豁免与法律挑战。",
+      "unverified": "受限商品清单、机构范围、合同存量处理、豁免、实施日期、金额敞口和加拿大反制均未公布；不能把备忘录表述成已经实施的全面采购禁令。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "总统备忘录 → OMB/USTR/FAR实施识别 → 加拿大原产商品联邦民用采购准入收紧"
+        },
+        {
+          "level": "B",
+          "path": "采购替代 → 美国本土供应商订单份额变化 → 工业、交通、原材料与服务链分化"
+        },
+        {
+          "level": "C",
+          "path": "加拿大可能反制或调整Buy Canadian政策 → 跨境贸易与企业资本配置变化 → 影响待执行文件确认"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "加拿大对美政府采购供应链",
+          "direction": "潜在负面、范围待定",
+          "horizon": "1–12个月",
+          "reason": "备忘录授权识别和限制，但商品与合同范围尚未公布。"
+        },
+        {
+          "market": "美国本土替代供应商",
+          "direction": "潜在相对受益",
+          "horizon": "3–18个月",
+          "reason": "只有采购规则和订单落地后才能确认份额转移。"
+        },
+        {
+          "market": "加元与美加贸易敏感资产",
+          "direction": "摩擦溢价上升",
+          "horizon": "即时至12个月",
+          "reason": "采购限制增加政策不确定性，汇率和风险资产反应尚未独立核验。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-09-17T22:38:00+08:00",
+        "detail": "未核验加元、加拿大股指或具体供应商的独立市场反应，不以同窗宽基波动证明采购政策影响。"
+      },
+      "next_checkpoint": "跟踪OMB、USTR、FAR Council与GSA的实施文件、商品/合同清单、豁免和生效日，以及加拿大政府是否调整采购政策或采取反制。",
+      "invalidation": "若实施文件仅覆盖极窄品类、广泛豁免既有合同，或加拿大政策调整后美方恢复准入，则跨境采购冲击判断下调。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "White House — Restoring Reciprocity in Government Procurement",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/09/restoring-reciprocity-in-government-procurement/",
+          "published_at": "2026-09-16T16:27:39-04:00",
+          "note": "核验指令主体、加拿大原产商品审查与实施边界。"
+        },
+        {
+          "role": "primary",
+          "name": "White House — Procurement reciprocity fact sheet",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-restores-reciprocity-in-government-procurement/",
+          "published_at": "2026-09-16T16:29:14-04:00",
+          "note": "核验政策目的和联邦民用采购口径；影响表述属于白宫立场。"
+        }
+      ],
+      "candidate_refs": [
+        "whitehouse_news-restoring-reciprocity-2026-09-16"
+      ]
+    },
+    {
+      "id": "epa-power-plant-ghg-partial-repeal-2026-09-14",
+      "headline": "EPA最终部分撤销2024年电厂碳排标准，并提议撤销剩余温室气体规则",
+      "category": "energy",
+      "event_type": "policy",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-09-14T00:00:00-04:00",
+      "observed_at": "2026-09-17T22:38:00+08:00",
+      "verified_at": "2026-09-17T22:38:00+08:00",
+      "fact": "EPA署长9月14日签署最终部分撤销2024年化石燃料电厂碳污染标准的规则；同时发布补充提案，拟撤销对化石燃料电厂的温室气体认定并废除清洁空气法第111条下剩余电厂温室气体标准。9月17日Federal Register已刊载相关文件。",
+      "new_information": "政策分为两层：部分撤销已经形成最终行动，进一步撤销剩余标准仍处于提案阶段；不能把两者合并表述为全部规则已经失效。",
+      "inference": "推断：合规压力下降有利于既有化石燃料发电资产的可用性和寿命，并可能缓解数据中心新增负荷下的供电约束；电价、装机和资本开支影响仍受燃料成本、州级政策、许可和诉讼制约。",
+      "unverified": "最终规则具体生效日、州级执行、诉讼与禁令、提案能否最终通过、实际新增发电量、电价和数据中心供电贡献均待后续验证；EPA的成本节约为机构估算。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "部分撤销电厂碳排要求 → 部分合规资本开支和退役压力下降 → 化石燃料电厂现金流与可用性变化"
+        },
+        {
+          "level": "B",
+          "path": "电源可用性提高 → 电网容量与电价边际变化 → 数据中心、工业负荷与公用事业投资"
+        },
+        {
+          "level": "C",
+          "path": "进一步撤销剩余规则的提案 → 州、法院与资本市场重新定价 → 最终影响取决于法定程序和诉讼"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "美国独立发电商与公用事业",
+          "direction": "化石燃料资产约束边际放松",
+          "horizon": "3–24个月",
+          "reason": "最终部分撤销已签署，但实施和诉讼仍决定实际价值。"
+        },
+        {
+          "market": "天然气、煤炭与发电设备链",
+          "direction": "潜在需求支撑",
+          "horizon": "6–36个月",
+          "reason": "设备利用率和新投资必须由订单、许可和负荷数据确认。"
+        },
+        {
+          "market": "数据中心与高耗能产业",
+          "direction": "供电约束可能缓解",
+          "horizon": "6–36个月",
+          "reason": "政策变化不等于即时新增电力，电网接入和项目建设仍是瓶颈。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-09-17T22:38:00+08:00",
+        "detail": "未核验公用事业、发电商、天然气或煤炭资产对9月14日政策的独立完整市场反应。"
+      },
+      "next_checkpoint": "核验Federal Register生效日、州级合规计划、法院诉讼/禁令、补充提案评论期与最终规则，并跟踪机组退役、容量市场、电价和数据中心电力合同。",
+      "invalidation": "若法院暂停最终规则、州级标准抵消联邦放松，或项目与容量数据没有改善，则对电源供给和AI负荷的正向传导判断下调。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "U.S. EPA — Greenhouse gas standards for fossil fuel-fired power plants",
+          "url": "https://www.epa.gov/stationary-sources-air-pollution/greenhouse-gas-standards-and-guidelines-fossil-fuel-fired-power",
+          "published_at": "2026-09-14T00:00:00-04:00",
+          "note": "核验最终部分撤销与补充提案是两个不同法律阶段。"
+        },
+        {
+          "role": "primary",
+          "name": "U.S. EPA — Final repeal and supplemental proposal announcement",
+          "url": "https://www.epa.gov/newsreleases/epa-finalizes-repeal-2024-power-plant-regulations-delivering-300-billion-savings",
+          "published_at": "2026-09-14T00:00:00-04:00",
+          "note": "核验签署时间与行动范围；成本节约为EPA估算，未当作独立验证事实。"
+        },
+        {
+          "role": "primary",
+          "name": "Federal Register — Power plant GHG findings and Section 111 rules",
+          "url": "https://www.federalregister.gov/documents/2026/09/17/2026-19072/rescission-of-the-greenhouse-gas-findings-for-fossil-fuel-fired-power-plants-and-repeal-of",
+          "published_at": "2026-09-17T00:00:00-04:00",
+          "note": "核验9月17日正式刊载与文件标题。"
+        }
+      ],
+      "candidate_refs": [
+        "federal_register-2026-19072"
+      ]
+    },
+    {
+      "id": "openai-misalignment-reporting-framework-2026-09-16",
+      "headline": "OpenAI建立模型失准披露框架并公布首批六份案例报告",
+      "category": "ai",
+      "event_type": "incident",
+      "status": "partially_verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-09-16T00:00:00-07:00",
+      "observed_at": "2026-09-17T22:38:00+08:00",
+      "verified_at": "2026-09-17T22:38:00+08:00",
+      "fact": "OpenAI 9月16日公布模型失准跟踪、调查和披露框架，并同时发布六份近六个月在训练或评估中观察到的异常/失准行为报告。官方明确这些是个别实例，不能代表发生频率；部分报告可能在根因调查或修复完成前先行披露。",
+      "new_information": "新增的是从零散披露转向带分流、时限、升级和持续更新机制的制度化报告框架，并首次集中公开六类案例。",
+      "inference": "推断：前沿模型公司开始把失准事件当作需要标准化披露和监管沟通的运营风险，这会提高安全评测、监控、审计和企业治理要求；是否形成行业标准仍待外部采用。",
+      "unverified": "六起案例均来自OpenAI自报，样本代表性、总体发生率、严重性分布、外部影响、根因与修复效果尚未获得独立验证；框架也不是监管强制标准。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "失准披露框架+六份案例 → 安全与治理风险可见度提高 → 企业和监管审查加强"
+        },
+        {
+          "level": "B",
+          "path": "报告与升级机制标准化 → 监控、评测、审计和权限控制需求 → AI安全工具与合规投入"
+        },
+        {
+          "level": "C",
+          "path": "若同业或监管采纳 → 行业披露标准与责任边界变化 → 模型发布节奏和成本结构受影响"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "OpenAI及前沿模型开发商",
+          "direction": "透明度提升与风险暴露并存",
+          "horizon": "即时至24个月",
+          "reason": "制度化披露有助于治理，但个案也突出未解决的监控与控制问题。"
+        },
+        {
+          "market": "AI安全、监控与合规工具链",
+          "direction": "潜在需求增加",
+          "horizon": "3–24个月",
+          "reason": "外部需求取决于企业采购和监管是否把披露机制转化为控制要求。"
+        },
+        {
+          "market": "企业AI采用",
+          "direction": "短期审慎、长期取决于治理效果",
+          "horizon": "3–24个月",
+          "reason": "透明披露可增强信任，也可能提高高风险场景部署门槛。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_available",
+        "checked_at": "2026-09-17T22:38:00+08:00",
+        "detail": "OpenAI为私营公司，未发现可把公开市场波动直接归因于本次研究披露的独立证据。"
+      },
+      "next_checkpoint": "跟踪六份个案的后续根因与修复、是否发生客户/第三方影响、同业披露采用、美国政府报告机制及监管或标准组织是否采纳。",
+      "invalidation": "若后续证明案例不具代表性、框架缺乏持续更新和外部采用，或未形成可审计的控制改进，则行业治理传导判断下调。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "OpenAI — Model misalignment reporting framework",
+          "url": "https://openai.com/index/model-misalignment-reporting-framework/",
+          "published_at": "2026-09-16T00:00:00-07:00",
+          "note": "核验框架、首批六份报告、披露流程与公司明确的样本/不确定性边界。"
+        }
+      ],
+      "candidate_refs": [
+        "aihot-openai-model-misalignment-2026-09-16"
+      ]
+    },
+    {
+      "id": "google-gemini-3-8-live-2026-09-15",
+      "headline": "Google推出Gemini 3.8 Live与Extended Thinking：实时语音模型向API、Search和Workspace分层上线",
+      "category": "ai",
+      "event_type": "product",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-09-15T00:00:00-07:00",
+      "observed_at": "2026-09-16T22:33:51+08:00",
+      "verified_at": "2026-09-16T22:37:00+08:00",
+      "fact": "Google 9月15日发布Gemini 3.8 Live与Gemini 3.8 Live Extended Thinking。官方博客称两款模型从当日起向Gemini API、Google AI Studio、Search Live、Gemini Live及部分Workspace场景分层推出；模型卡确认输入包括音频、图像、视频和文本，上下文最高128K，输出为音频和文本。",
+      "new_information": "新增不是模型预告，而是两档实时多模态模型开始进入API、消费者产品与企业预览渠道；Extended Thinking将多步推理、后台工具调用与语音对话同时推进。",
+      "inference": "推断：这会把前沿模型竞争从文本/编程扩展到低延迟语音Agent和工作流执行，并增加对实时推理、媒体传输与企业集成的需求；真正竞争力仍取决于第三方质量、延迟、成本和任务完成率。",
+      "unverified": "官方跑分尚未独立复现；实际延迟、稳定性、单位推理成本、企业采用、用户留存、Workspace与Search渗透率、对收入和资本开支的影响均未披露或未核验。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "Gemini 3.8 Live分层上线 → 实时语音/视觉Agent可用性提升 → Google AI产品使用量"
+        },
+        {
+          "level": "B",
+          "path": "连续对话+后台工具调用 → 客服、销售、搜索与协作工作流变化 → 企业采用和API消耗"
+        },
+        {
+          "level": "C",
+          "path": "低延迟多模态负载扩张 → 实时推理、网络与存储资源需求 → 云基础设施弹性待实际流量验证"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "GOOGL/GOOG",
+          "direction": "产品渠道扩张偏正面、商业贡献待证",
+          "horizon": "1–12个月",
+          "reason": "API、Search、Gemini和Workspace已有分发路径，但缺少采用、定价与利润率数据。"
+        },
+        {
+          "market": "语音Agent与客服软件链",
+          "direction": "平台能力提升、竞争加剧",
+          "horizon": "即时至12个月",
+          "reason": "Google已把实时多模态与工具调用推向开发者和企业场景。"
+        },
+        {
+          "market": "云推理与AI基础设施",
+          "direction": "潜在需求增量、规模未知",
+          "horizon": "3–18个月",
+          "reason": "只有实际使用量和资本开支披露才能确认硬件传导。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_checked",
+        "checked_at": "2026-09-16T22:37:00+08:00",
+        "detail": "本轮未用GOOGL或云产业链股价反向证明产品竞争力，也未将同窗口市场波动归因于单一发布。"
+      },
+      "next_checkpoint": "核验API定价与配额、独立语音质量/任务完成率、企业预览转GA节奏、Workspace与Search可用范围，以及后续财报中的采用与成本信号。",
+      "invalidation": "若实际质量、延迟或成本明显不及官方定位，企业预览延期，或使用量无法转化为持续收入，则产品与基础设施传导判断下调。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "Google Blog — Gemini 3.8 Live and Extended Thinking",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+          "published_at": "2026-09-15T00:00:00-07:00",
+          "note": "核验两款模型的产品定位、分发渠道与从发布当日开始的分层推出；跑分属厂商披露。"
+        },
+        {
+          "role": "primary",
+          "name": "Google DeepMind — Gemini 3.8 Audio model card",
+          "url": "https://deepmind.google/models/model-cards/gemini-3-8-audio/",
+          "published_at": "2026-09-15T00:00:00-07:00",
+          "note": "核验输入输出模态、128K上下文、渠道范围与已知局限。"
+        }
+      ],
+      "candidate_refs": [
+        "aihot-gemini-3-8-live-2026-09-15"
+      ]
+    },
+    {
+      "id": "openai-sponsored-agents-hubspot-beta-2026-09-16",
+      "headline": "OpenAI开放HubSpot Sponsored Agents测试登记：对话式广告Agent进入受限beta招募",
+      "category": "ai",
+      "event_type": "product",
+      "status": "partially_verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-09-16T00:00:00-04:00",
+      "observed_at": "2026-09-16T22:33:51+08:00",
+      "verified_at": "2026-09-16T22:37:00+08:00",
+      "fact": "OpenAI官网已开放「Sponsored Agents with HubSpot」兴趣登记，面向希望测试的商业客户。页面明确访问受限且需审核，参与beta可能需要开启自动创意、自动竞价并连续28天达到最低日广告消费；最终资格、金额和币种尚未公布。",
+      "new_information": "8月已有的广告工具条款只定义Sponsored Agent；本次增量是OpenAI与HubSpot特定合作的测试招募入口，并出现可审核的投放资格框架。",
+      "inference": "推断：OpenAI正尝试把ChatGPT广告从静态展示延伸到可与品牌代理交互的对话体验，HubSpot可提供CRM与线索闭环；只有测试规模、效果和正式商业条款披露后，才能评估收入弹性。",
+      "unverified": "官网未公布正式上线日期、测试客户数、可用地区、最低日消费金额、定价/分成、转化效果、用户隐私实际执行或与Shopify的同时整合范围；不能将兴趣登记视为全面上线。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "HubSpot Sponsored Agents受限招募 → 广告客户进入对话式beta → ChatGPT广告工具采用"
+        },
+        {
+          "level": "B",
+          "path": "对话代理+CRM数据 → 线索获取、客户服务与转化追踪 → OpenAI与HubSpot商业化效率待验证"
+        },
+        {
+          "level": "C",
+          "path": "若beta扩容且提升转化 → 广告主预算迁移 → 数字广告与MarTech竞争格局变化"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "OpenAI私营估值与商业化叙事",
+          "direction": "新广告产品路径可观察、收入未证",
+          "horizon": "3–18个月",
+          "reason": "官方只开放beta兴趣登记，未披露任何收入或活跃广告主数据。"
+        },
+        {
+          "market": "HUBS与MarTech软件",
+          "direction": "合作入口偏正面、产品经济性待证",
+          "horizon": "1–12个月",
+          "reason": "HubSpot作为明确合作入口，但没有客户采用和ARPU贡献数据。"
+        },
+        {
+          "market": "数字广告平台",
+          "direction": "中长期竞争变量",
+          "horizon": "6–24个月",
+          "reason": "对话式代理可能改变广告样式，当前仍是受限测试。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_available",
+        "checked_at": "2026-09-16T22:37:00+08:00",
+        "detail": "OpenAI为私营公司，HUBS对单一beta招募的独立市场反应未核验；不用宽基或个股波动反向证明产品成功。"
+      },
+      "next_checkpoint": "核验OpenAI或HubSpot正式发布、beta入选条件与地区、定价/分成、可量化的互动与转化效果、广告主采用，以及隐私与广告标识规则的实际执行。",
+      "invalidation": "若招募长期未转化为实际测试，产品上线延期，转化率或广告主需求不足，或隐私/监管限制收紧，则广告商业化传导判断下调。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "OpenAI — Sponsored Agents with HubSpot interest form",
+          "url": "https://openai.com/form/sponsored-agents-hubspot/",
+          "published_at": null,
+          "note": "核验受限beta招募、审核机制、可能的自动创意/竞价与连续28天最低日消费条件；页面未标正式上线日。"
+        },
+        {
+          "role": "primary",
+          "name": "OpenAI — Ad Tools Terms",
+          "url": "https://openai.com/policies/ad-tools-terms/",
+          "published_at": "2026-08-24T00:00:00-07:00",
+          "note": "核验Sponsored Agent定义、广告主责任与广告工具数据边界；该条款本身不证明今日全面上线。"
+        },
+        {
+          "role": "primary",
+          "name": "HubSpot IR — UNBOUND 2026 event dates",
+          "url": "https://ir.hubspot.com/news-releases/news-release-details/tom-brady-cynthia-erivo-mel-robbins-sunita-suni-williams-and",
+          "published_at": "2026-05-14T00:00:00-04:00",
+          "note": "只用于核验UNBOUND 2026为9月16–18日；不用于证明Sponsored Agents的产品规模。"
+        }
+      ],
+      "candidate_refs": [
+        "aihot-openai-sponsored-agents-hubspot-2026-09-16"
+      ]
+    },
+    {
+      "id": "amazon-sterling-notes-financing-2026-09-14",
+      "headline": "Amazon完成42.35亿英镑长期债融资：期限延伸至2045年，具体资金用途未披露",
+      "category": "ai",
+      "event_type": "filing",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 4,
+      "event_time": "2026-09-14T16:45:41-04:00",
+      "observed_at": "2026-09-15T09:07:51+08:00",
+      "verified_at": "2026-09-15T09:10:00+08:00",
+      "fact": "Amazon 9月14日向SEC提交8-K，披露已完成四档英镑债发行：2029年到期12.5亿英镑、2032年到期10亿英镑、2038年到期10亿英镑、2045年到期10亿英镑，票息分别为5.200%、5.550%、6.250%和6.650%。发行总价42.42亿英镑，扣除承销折扣后的预计净融资约42.35亿英镑。",
+      "new_information": "新增的是融资已交割及其规模、期限和票息结构。8-K只确认融资事实，没有把募集资金指定给AWS、AI基础设施、并购或回购。",
+      "inference": "推断：跨多个期限的英镑融资提高Amazon中长期资金可用性，并形成可观察的边际融资成本；只有后续资本开支、项目或并购披露才能把这笔资金与AI基础设施需求相连。",
+      "unverified": "募集资金最终用途、是否对冲汇率、对应资本开支或并购项目、债务加权成本、评级影响和对自由现金流的实际影响均未披露或未核验。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "42.35亿英镑净融资交割 → 现金与债务结构变化 → Amazon资产负债表和利息成本"
+        },
+        {
+          "level": "B",
+          "path": "中长期资金可用性提高 → AWS/物流/并购等资本配置空间可能扩大 → 具体用途待公司披露"
+        },
+        {
+          "level": "C",
+          "path": "若后续明确用于AI基础设施 → 数据中心、芯片、网络与电力供应链需求；当前不能确认"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "AMZN与投资级公司债",
+          "direction": "融资能力已确认、成本与用途待评估",
+          "horizon": "1–12个月",
+          "reason": "规模、期限和票息已由SEC文件确认，资金用途尚未指定。"
+        },
+        {
+          "market": "英镑公司债市场",
+          "direction": "新增大额长期供给",
+          "horizon": "即时至数月",
+          "reason": "四档英镑债已交割，最长到2045年。"
+        },
+        {
+          "market": "AI基础设施供应链",
+          "direction": "仅为潜在资金来源",
+          "horizon": "3–18个月",
+          "reason": "没有一手证据证明募集资金用于AWS或AI资本开支。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_available",
+        "checked_at": "2026-09-15T09:10:00+08:00",
+        "detail": "文件在美东周一开盘前后的9月14日提交；截至本页核验时，9月14日美股完整常规交易日尚未结束，未用盘中价格判断融资影响。"
+      },
+      "next_checkpoint": "读取下一份10-Q/10-K、债券募集说明书及资本开支披露，核验募集资金用途、利息费用、汇率安排和AWS/AI基础设施投入是否发生可追踪变化。",
+      "invalidation": "若后续文件显示资金仅用于再融资或一般周转，且资本开支与项目承诺没有新增，则不得把本事件升级为AI需求催化。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "SEC — Amazon Form 8-K (2026-09-14)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+          "published_at": "2026-09-14T16:45:41-04:00",
+          "note": "核验四档英镑债的本金、票息、到期日、发行总价、预计净融资及交割事实；文件未指定资金用途。"
+        }
+      ],
+      "candidate_refs": [
+        "sec_8k-b61a3a3ec17525a0"
+      ]
+    },
+    {
+      "id": "apple-siri-ai-beta-rollout-2026-09-14",
+      "headline": "Apple开始向用户推出Siri AI测试版：从开发者验证进入真实用户部署",
+      "category": "ai",
+      "event_type": "product",
+      "status": "verified",
+      "change_type": "new",
+      "importance": 5,
+      "event_time": "2026-09-14T00:00:00-07:00",
+      "observed_at": "2026-09-15T09:07:51+08:00",
+      "verified_at": "2026-09-15T09:10:00+08:00",
+      "fact": "Apple 9月14日宣布，Siri AI随iOS 27、iPadOS 27、macOS 27等系统开始向用户推出英文测试版；法语、日语、韩语、葡萄牙语和西班牙语计划10月支持。Siri AI覆盖个人语境、屏幕感知、跨应用操作和跨设备对话；部分依赖服务器模型的功能设有每日使用限额，未来将提供付费扩展访问。",
+      "new_information": "6月的开发者测试和9月9日的硬件发布已升级为面向真实用户的分阶段测试版上线，并新增语言扩展、地区限制、服务器侧日限额和未来付费访问边界。",
+      "inference": "推断：真实用户上线把Apple端侧与云侧AI从产品预告推进到可观测的采用、留存、服务器负载和付费转化阶段；短期仍是测试版，不能把厂商功能描述等同于体验领先或商业化成功。",
+      "unverified": "活跃用户、调用量、留存、推理成本、服务器扩容、付费价格与转化、第三方体验和故障率未披露；中国大陆尚不可用，EU的iOS/iPadOS/watchOS初期不可用，地区监管进度待跟踪。",
+      "transmission": [
+        {
+          "level": "A",
+          "path": "Siri AI英文测试版上线 → 真实用户使用与反馈 → Apple Intelligence采用率"
+        },
+        {
+          "level": "B",
+          "path": "服务器侧模型日限额与未来付费扩展 → 云端推理成本和服务收入模型 → 毛利与资本开支待验证"
+        },
+        {
+          "level": "C",
+          "path": "多语言与地区扩展 → 可服务市场扩大 → 设备换机与生态黏性，仍需行为数据确认"
+        }
+      ],
+      "affected_assets": [
+        {
+          "market": "AAPL",
+          "direction": "产品兑现节点偏正面、商业化待证",
+          "horizon": "1–12个月",
+          "reason": "测试版已面向用户推出，但采用、留存、成本和付费转化尚无经营数据。"
+        },
+        {
+          "market": "端侧AI与高端终端供应链",
+          "direction": "功能覆盖扩展、需求弹性待确认",
+          "horizon": "3–12个月",
+          "reason": "支持设备范围已明确，是否驱动换机和更高配置仍需销量与渠道数据。"
+        },
+        {
+          "market": "云端推理与数据中心供应链",
+          "direction": "潜在增量、规模未知",
+          "horizon": "3–18个月",
+          "reason": "Apple明确部分功能依赖服务器模型并设日限额，但未披露调用量或扩容计划。"
+        }
+      ],
+      "market_confirmation": {
+        "stage": "not_available",
+        "checked_at": "2026-09-15T09:10:00+08:00",
+        "detail": "公告发布于美东9月14日；截至核验时该完整常规交易日尚未结束，未把盘中AAPL或供应链波动归因于本次上线。"
+      },
+      "next_checkpoint": "核验10月多语言上线、测试版稳定性、真实用户采用、调用限额、付费方案、EU与中国大陆可用性，以及是否出现可量化的换机、服务收入或服务器资本开支证据。",
+      "invalidation": "若上线延期、体验或稳定性明显不及预期、地区限制扩大、用户采用低迷，或服务器成本无法支持可持续商业化，则产品兑现和传导假设下调。",
+      "sources": [
+        {
+          "role": "primary",
+          "name": "Apple Newsroom — Siri AI is here",
+          "url": "https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/",
+          "published_at": "2026-09-14T00:00:00-07:00",
+          "note": "核验Siri AI英文测试版开始上线、核心能力和多语言计划；功能与体验表述属于Apple自报。"
+        },
+        {
+          "role": "primary",
+          "name": "Apple Newsroom — Major software updates now available",
+          "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/",
+          "published_at": "2026-09-14T00:00:00-07:00",
+          "note": "核验系统推出范围、地区限制、服务器侧日限额及未来付费扩展访问。"
+        }
+      ],
+      "candidate_refs": [
+        "aihot-d2896547d5b34998"
+      ]
+    },
     {
       "id": "us-august-cpi-ppi-energy-reacceleration-2026-09-11",
       "headline": "美国8月通胀受能源再推升：CPI环比0.4%、PPI环比0.4%，核心CPI同比降至2.4%",
@@ -3172,6 +3788,13 @@
   ],
   "calendar": [
     {
+      "stage": "分阶段上线",
+      "title": "Siri AI测试版与多语言扩展",
+      "time": "英文版已于9月14日开始推出；五种新增语言计划10月支持",
+      "status": "confirmed",
+      "check": "核验多语言实际到达、稳定性、用户采用、服务器日限额、付费扩展访问、EU与中国大陆可用性。"
+    },
+    {
       "stage": "审批中",
       "title": "NVIDIA收购Hugging Face",
       "time": "预计2027年上半年交割",
@@ -3208,10 +3831,10 @@
     },
     {
       "stage": "预定会议",
-      "title": "美联储9月FOMC",
-      "time": "9月15–16日",
+      "title": "美联储10月FOMC",
+      "time": "10月27–28日；9月会议纪要于10月7日发布",
       "status": "confirmed",
-      "check": "判断Warsh的通胀优先表述、7月鹰派分歧及最新PCE信号是否延续。"
+      "check": "先核验9月会议纪要的通胀与利率分歧，再判断10月会议是否延续3.75%–4.00%区间及SEP所示更高路径。"
     },
     {
       "stage": "预定数据",
@@ -3281,14 +3904,14 @@
     {
       "group": "第一层 · 一手来源",
       "status": "verified",
-      "last_success_at": "2026-09-14T09:16:59+08:00",
-      "coverage": "13/13自动源成功；一手候选池去重与限额后保留26条。直接读取Fed与OCC原文，新增银行第三方风险管理拟议指引事件；其余新增官方候选未达到页面市场重要性门槛。"
+      "last_success_at": "2026-09-17T22:38:00+08:00",
+      "coverage": "13/13自动源成功；一手来源抓取543条、相关性候选38条。直接读取Fed声明/SEP、白宫总统备忘录、EPA/Federal Register与OpenAI原文，并复核前两轮未发布的Apple、Amazon、Google和OpenAI产品事件。"
     },
     {
       "group": "第二层 · 专业发现",
       "status": "partial",
-      "last_success_at": "2026-09-14T09:16:59+08:00",
-      "coverage": "AI HOT自动源成功，抓取92条、候选池限额后保留25条发现线索。DeepSeek V4.1 Flash和Anthropic威胁报告已在既有事件覆盖；GLM-OCR、OpenAI与Suno产品线索未达到本页市场重要性或一手证据门槛。"
+      "last_success_at": "2026-09-17T22:38:00+08:00",
+      "coverage": "AI HOT抓取59条、接取34条发现线索；OpenAI失准框架已回到官方原文升级。Anthropic估值、第三方跑分和其他产品线索未达到新增核心门槛。"
     },
     {
       "group": "第三层 · 社交抢先",
@@ -3299,34 +3922,27 @@
     {
       "group": "市场验证",
       "status": "partial",
-      "last_success_at": "2026-09-11T22:38:00+08:00",
-      "coverage": "已读取最新公开市场页的2026-09-10完整收盘：SPY -0.60%、QQQ -1.06%；只记录同窗响应，不把宽基波动归因于单一政策或产品事件。9月11日CPI发布后的完整交易日尚未形成。"
+      "last_success_at": "2026-09-17T22:38:00+08:00",
+      "coverage": "读取origin/main的2026-09-16完整收盘：SPY -0.44%、QQQ +0.03%。仅记录FOMC同窗股市分化，未把宽基波动归因于单一事件；2Y/10Y、美元、信用与具体资产反应仍待核验。"
     }
   ],
   "collection_run": {
-    "generated_at": "2026-09-11T22:31:51+08:00",
+    "generated_at": "2026-09-17T22:38:00+08:00",
     "configured_sources": 36,
     "active_sources": 13,
     "successful_sources": 13,
     "failed_sources": 0,
     "registered_manual_sources": 23,
     "tier1_fetched": 543,
-    "tier1_candidates": 34,
-    "tier2_fetched": 92,
-    "candidate_pool_after_dedupe": 59,
+    "tier1_candidates": 38,
+    "tier2_fetched": 59,
+    "candidate_pool_after_dedupe": 58,
     "manual_connectors_succeeded": [
-      "BLS 8月CPI与PPI官方发布核验",
-      "DOL 9月5日当周初请与续请核验",
-      "SEC Coinbase Derivatives Section 6(g)登记核验",
-      "Fed/OCC社区银行18个月检查周期规则核验",
-      "Anthropic 9月威胁情报报告核验",
-      "白宫美加Section 338五项公告与生效日核验",
-      "白宫DPA能源权限委派行政令核验",
-      "DeepSeek V4.1 Flash更新日志与接口切换核验",
-      "Apple iPhone 18 Pro与iPhone Duo发布页核验",
-      "Anthropic网络安全评测越界事件披露核验",
-      "Federal Register / OFAC伊朗一般许可证暂停核验",
-      "公开市场页2026-09-10完整收盘回读"
+      "Fed FOMC声明、实施说明与SEP核验",
+      "白宫美加政府采购备忘录核验",
+      "EPA与Federal Register电厂温室气体规则核验",
+      "OpenAI模型失准披露框架与前两轮未发布事件复核",
+      "origin/main与X页面基线回读"
     ],
     "artifacts": [
       "sources.json",
@@ -3336,6 +3952,6 @@
   "methodology": {
     "priority_formula": "影响范围30% + 传导直接度25% + 证据可靠度20% + 预期差15% + 时间紧迫度10%",
     "core_rule": "核心区只接受verified或partially_verified事件，并至少包含一个一手来源；匿名消息进入待证真。",
-    "limitations": "本页为2026-09-14北京时间快照。13个自动源全部成功；本轮新增的银行第三方风险管理指引仍处于征求意见阶段且不具约束力，最终文本、旧指引撤销时间和实际检查口径待定。CFTC举报奖励规则与白宫常规签署法案未达到本页市场重要性门槛。既有CPI/PPI与初请为官方实际值，但事前共识与9月11日完整收盘仍未在本页核验；Anthropic威胁归因仍属公司调查，DeepSeek与Apple产品数据仍需第三方与商业化验证。社交与付费源未自动轮询，页面维持partial；价格只记录响应，不证明事件因果。"
+    "limitations": "本页为2026-09-17北京时间快照。13个自动源全部成功；美联储加息、SEP、美国对加拿大采购限制、EPA电厂规则回撤与OpenAI失准披露框架均已回到官方原文。采购限制仍待实施清单，EPA进一步撤销属于提案，OpenAI六起案例为公司自报；前两轮未发布的Siri AI、Amazon英镑债、Gemini 3.8 Live与Sponsored Agents已复核纳入。既有宏观结果保留各自核验时间；社交与付费源未自动轮询，页面维持partial；价格只记录响应，不证明事件因果。"
   }
 }
