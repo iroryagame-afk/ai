@@ -158,13 +158,16 @@ class SiteNavigationTests(unittest.TestCase):
 
     def test_homepage_promotes_macro_and_has_a_verified_update_note(self):
         text = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertNotIn('id="stock-trends"', text)
+        self.assertIn("投研工作台<em>总览</em>", text)
+        self.assertIn('id="stock-trends"', text)
         self.assertIn('<section aria-label="宏观" id="market-overview">', text)
         self.assertLess(text.index('id="market-overview"'), text.index('id="a-share-tools"'))
         self.assertIn('class="verified">已核验</span>', text)
         self.assertRegex(text, r"本次刷新：[^<]+；同步首页与全站导航的逐页内容刷新日期。")
         self.assertIn('href="./macro-event-radar/"', text)
         self.assertIn('href="./ai-infrastructure-deleveraging/"', text)
+        self.assertNotIn("我的持仓", text)
+        self.assertIn("不读取、展示或推断个人持仓", text)
 
     def test_new_pages_are_grouped_under_macro_and_us(self):
         sample = SITE_NAV.nav("index.html")
@@ -177,12 +180,17 @@ class SiteNavigationTests(unittest.TestCase):
         text = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertNotIn("股票走势总结</span>", text)
         self.assertNotIn("独立决策入口</span>", text)
-        self.assertIn('id="topNavCount">–</b><span>顶层导航栏目</span>', text)
-        self.assertIn('id="internalPageCount">–</b><span>站内页面入口</span>', text)
+        self.assertIn('<span>顶层栏目</span><b id="topNavCount">–</b>', text)
+        self.assertIn('<span>站内入口</span><b id="internalPageCount">–</b>', text)
         self.assertIn('data-metric-source="nav/reports.json"', text)
         self.assertIn("querySelectorAll(':scope > .csn-item')", text)
         self.assertIn("internalRoutes.size", text)
         self.assertIn("entries.length", text)
+        self.assertIn('fetch("./a-share-trend-candidates/data.json"', text)
+        self.assertIn('fetch("./us-trend-candidates/data.json"', text)
+        self.assertIn('fetch("./us-market/data.json"', text)
+        self.assertIn('fetch("./macro-event-radar/data.json"', text)
+        self.assertIn("Promise.allSettled(moduleReads)", text)
 
     def test_shared_css_preserves_baseline_type_size(self):
         css = (ROOT / "assets/csnpk-nav.css").read_text(encoding="utf-8")

@@ -8,7 +8,7 @@
 <style>
 :root {
   --paper: #f6f4ee; --panel: #fffefa; --panel-2: #faf8f2;
-  --ink: #1f2430; --ink-2: #494f5e; --muted: #6f7587;
+  --ink: #1f2430; --ink-2: #494f5e; --muted: #626979;
   --hairline: #e3ded1; --hairline-strong: #cfc8b6;
   --accent: #173a5e; --accent-soft: #eaf0f6;
   --cinnabar: #b5452e; --cinnabar-soft: #f9ece7;
@@ -142,7 +142,7 @@ h1.hero-title em { font-style: normal; color: var(--cinnabar); }
 /* ===== 多工具共振强烈推荐 ===== */
 .confluence {
   margin: 24px 0 8px; padding: 14px;
-  border: 1px solid #dbc9a2; border-top: 3px solid var(--gold);
+  border: 1px solid #dbc9a2; border-top: 2px solid var(--gold);
   border-radius: var(--radius-lg);
   background: linear-gradient(135deg, #fffdf7 0%, #fbf4e3 100%);
   box-shadow: var(--shadow-card);
@@ -252,11 +252,11 @@ h1.hero-title em { font-style: normal; color: var(--cinnabar); }
   font: 600 11px/1 var(--sans); padding: 4px 8px; border-radius: 999px;
   background: var(--panel-2); color: var(--muted); border: 1px solid var(--hairline);
 }
-.card.accent-blue { border-top: 3px solid var(--accent); }
-.card.accent-red { border-top: 3px solid var(--cinnabar); }
-.card.accent-gold { border-top: 3px solid var(--gold); }
-.card.accent-jade { border-top: 3px solid var(--jade); }
-.card.accent-violet { border-top: 3px solid var(--violet); }
+.card.accent-blue { border-top: 2px solid var(--accent); }
+.card.accent-red { border-top: 2px solid var(--cinnabar); }
+.card.accent-gold { border-top: 2px solid var(--gold); }
+.card.accent-jade { border-top: 2px solid var(--jade); }
+.card.accent-violet { border-top: 2px solid var(--violet); }
 
 /* 调研大卡 */
 .research-card { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; padding: 0; overflow: hidden; }
@@ -296,6 +296,123 @@ footer.site-footer {
   .hero { padding-top: 36px; }
   .hero-update { padding: 11px 12px; }
 }
+
+/* ===== 投研工作台总览 ===== */
+.csn-page { width: min(1280px, 100%); padding-top: 0; }
+.desk-head {
+  display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(300px, .55fr);
+  gap: 38px; align-items: end; padding: 54px 0 30px;
+}
+.desk-head h1 {
+  max-width: 760px; margin: 0;
+  font: 700 clamp(38px, 5.6vw, 68px)/1.08 var(--serif);
+  letter-spacing: -.025em; text-wrap: balance;
+}
+.desk-head h1 em { color: var(--cinnabar); font-style: normal; }
+.desk-head .lede { max-width: 68ch; margin: 18px 0 0; color: var(--ink-2); font-size: 16px; }
+.desk-index { border-top: 1px solid var(--hairline-strong); border-bottom: 1px solid var(--hairline-strong); }
+.desk-index-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--hairline); }
+.desk-index-row:last-child { border-bottom: 0; }
+.desk-index-row span { color: var(--muted); font-size: 12px; }
+.desk-index-row b { color: var(--accent); font: 700 14px/1.4 var(--serif); font-variant-numeric: tabular-nums; }
+.desk-note { grid-column: 1/-1; margin: 0; padding: 11px 13px; border: 1px solid #bad3c3; border-radius: 12px; background: #f1f7f3; color: var(--ink-2); font-size: 12px; }
+.desk-note .verified { display: inline-block; margin-right: 7px; padding: 4px 7px; border-radius: 999px; background: var(--jade); color: #fff; font-size: 11px; font-weight: 700; }
+
+.overview-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(320px, .55fr); gap: 16px; }
+.market-board { min-width: 0; padding: 28px; border-radius: 16px; background: var(--accent); color: #fff; box-shadow: var(--shadow-card); }
+.market-board-head { display: flex; align-items: start; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.18); }
+.market-board h2, .candidate-panel h2, .workspace h2, .utility-panel h2, .research-stream h2 { margin: 0; font-family: var(--serif); }
+.market-board h2 { font-size: 28px; }
+.market-board-head p { max-width: 55ch; margin: 7px 0 0; color: #d8e2ec; font-size: 13px; }
+.market-state { flex: none; max-width: 200px; text-align: right; }
+.market-state strong { display: block; font: 700 20px/1.2 var(--serif); }
+.market-state span { display: block; margin-top: 5px; color: #b9c9d9; font-size: 11px; }
+.pulse-lines { margin-top: 8px; }
+.pulse-line { display: grid; grid-template-columns: 105px 1fr auto; gap: 16px; align-items: center; min-height: 62px; border-bottom: 1px solid rgba(255,255,255,.12); }
+.pulse-line:last-child { border-bottom: 0; }
+.pulse-line > span { color: #b9c9d9; font-size: 11px; }
+.pulse-line strong { font-size: 14px; }
+.pulse-line small { color: #d8e2ec; font-variant-numeric: tabular-nums; }
+.market-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.market-actions a { min-height: 38px; padding: 9px 12px; border: 1px solid rgba(255,255,255,.28); border-radius: 10px; color: #fff; text-decoration: none; font-size: 12px; font-weight: 700; }
+.market-actions a:hover { background: rgba(255,255,255,.1); }
+
+.candidate-stack { display: grid; gap: 12px; }
+.candidate-panel { display: grid; align-content: space-between; min-width: 0; padding: 22px; border: 1px solid var(--hairline); border-radius: 16px; background: var(--panel); }
+.candidate-panel header { display: flex; align-items: start; justify-content: space-between; gap: 14px; }
+.candidate-panel h2 { font-size: 21px; }
+.candidate-panel header span { color: var(--muted); font: 600 11px/1.4 var(--mono); }
+.candidate-summary { margin: 16px 0 0; color: var(--ink-2); font-size: 13px; }
+.candidate-summary strong { display: block; margin-bottom: 3px; color: var(--accent); font: 700 24px/1.1 var(--serif); font-variant-numeric: tabular-nums; }
+.candidate-meta { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--hairline); color: var(--muted); font-size: 11px; }
+.candidate-panel a { color: var(--cinnabar); font-weight: 700; text-decoration: none; }
+
+.csn-section-head { margin-top: 46px; }
+.workspace-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.workspace { min-width: 0; padding: 25px; border-top: 2px solid var(--accent); background: var(--panel); box-shadow: var(--shadow-card); }
+.workspace.us { border-top-color: var(--gold); }
+.workspace-head { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; padding-bottom: 16px; border-bottom: 1px solid var(--hairline); }
+.workspace h2 { font-size: 25px; }
+.workspace-head span { color: var(--muted); font-size: 11px; }
+.workspace-feature { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: center; padding: 20px 0; }
+.workspace-feature h3 { margin: 0 0 6px; font: 700 19px var(--serif); }
+.workspace-feature p { max-width: 52ch; margin: 0; color: var(--ink-2); font-size: 12px; }
+.workspace-feature a, .workspace-link { color: var(--accent); text-decoration: none; }
+.workspace-open { min-height: 40px; padding: 10px 13px; border: 1px solid var(--hairline-strong); border-radius: 10px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.workspace-links { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--hairline); }
+.workspace-link { min-width: 0; padding: 12px 8px 12px 0; border-bottom: 1px solid var(--hairline); }
+.workspace-link:nth-child(odd) { margin-right: 12px; }
+.workspace-link b { display: block; font-size: 13px; }
+.workspace-link small { display: block; overflow: hidden; margin-top: 2px; color: var(--muted); font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+
+.utility-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 16px; }
+.utility-panel { min-width: 0; padding: 24px; border: 1px solid var(--hairline); border-radius: 16px; background: var(--panel); }
+.utility-panel h2 { font-size: 23px; }
+.utility-panel > p { margin: 7px 0 18px; color: var(--muted); font-size: 12px; }
+.launcher { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+.launcher a { min-width: 0; padding: 13px; border-radius: 11px; background: var(--panel-2); color: var(--ink); text-decoration: none; }
+.launcher a:hover { background: var(--accent-soft); }
+.launcher b { display: block; font-size: 13px; }
+.launcher small { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
+.event-brief { display: grid; min-height: 100%; align-content: space-between; }
+.event-brief h3 { margin: 0; font: 700 21px/1.35 var(--serif); text-wrap: balance; }
+.event-brief p { display: -webkit-box; overflow: hidden; margin: 11px 0 0; color: var(--ink-2); font-size: 12px; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
+.event-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--hairline); }
+.event-foot span { color: var(--muted); font-size: 11px; }
+.event-foot a { color: var(--cinnabar); font-size: 12px; font-weight: 700; text-decoration: none; }
+
+.research-stream { padding: 24px; border: 1px solid var(--hairline); border-radius: 16px; background: var(--panel); }
+.research-stream-head { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; margin-bottom: 13px; }
+.research-stream h2 { font-size: 24px; }
+.research-stream-head a { color: var(--accent); font-size: 12px; font-weight: 700; text-decoration: none; }
+.latest-list { gap: 0; }
+.latest-item { grid-template-columns: 92px 1fr auto; min-height: 44px; padding: 10px 6px; border-top: 1px solid var(--hairline); }
+.latest-item:first-child { border-top: 0; }
+.latest-item::after { content: "打开"; color: var(--muted); font-size: 11px; }
+
+@media (max-width: 980px) {
+  .desk-head, .overview-grid, .workspace-columns, .utility-grid { grid-template-columns: 1fr; }
+  .desk-head { gap: 24px; }
+  .candidate-stack { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+  .csn-page { padding: 0 12px 44px; }
+  .desk-head { padding: 34px 0 22px; }
+  .desk-head h1 { font-size: 38px; }
+  .overview-grid, .candidate-stack { grid-template-columns: 1fr; }
+  .market-board { padding: 21px; }
+  .market-board-head { display: block; }
+  .market-state { max-width: none; margin-top: 15px; text-align: left; }
+  .pulse-line { grid-template-columns: 84px 1fr; gap: 10px; padding: 9px 0; }
+  .pulse-line small { grid-column: 2; }
+  .workspace, .utility-panel, .research-stream { padding: 19px; }
+  .workspace-feature { grid-template-columns: 1fr; }
+  .workspace-open { justify-self: start; }
+  .workspace-links, .launcher { grid-template-columns: 1fr; }
+  .workspace-link:nth-child(odd) { margin-right: 0; }
+  .latest-item { grid-template-columns: 78px 1fr; }
+  .latest-item::after { display: none; }
+}
 </style>
 <link rel="stylesheet" href="./assets/csnpk-nav.css" data-csnpk-nav-style>
 <script src="./assets/csnpk-nav.js" defer data-csnpk-nav-script></script>
@@ -325,89 +442,107 @@ footer.site-footer {
 <nav class="csn-topnav" aria-label="全站导航" data-nav-version="ia-20260915b"><div class="csn-topnav-inner"><a class="csn-brand" href="./" aria-label="CSN 投研首页"><span class="csn-brand-seal">研</span><span><span class="csn-brand-name">CSN 投研</span><span class="csn-brand-sub">Research Desk</span></span></a><div class="csn-menu"><div class="csn-item csn-home"><a href="./" aria-current="page">首页</a></div><div class="csn-item" data-group="macro"><button type="button" aria-haspopup="true" aria-expanded="false">宏观 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="./us-market/"><b>大盘观察 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>指数状态 · 风险温度 · 风格轮动</small></a><a href="./macro-fiscal-risk/"><b>财政风险溢价监控 <time class="csn-nav-refresh" datetime="2026-09-17" title="内容刷新日期：2026-09-17">09-17 更新</time></b><small>长端 · 美元 · 股债 · 信用扩散</small></a><a href="./macro-event-radar/"><b>全球核心事件雷达 <time class="csn-nav-refresh" datetime="2026-09-17" title="内容刷新日期：2026-09-17">09-17 更新</time></b><small>政策 · 加密 · AI · 事件传导</small></a><a href="./us-market/x-consensus/"><b>全球注意力雷达 <time class="csn-nav-refresh" datetime="2026-08-02" title="内容刷新日期：2026-08-02">08-02 更新</time></b><small>中文X · 多语种长文 · Reddit · 作者原图</small></a></div></div><div class="csn-item" data-group="event"><button type="button" aria-haspopup="true" aria-expanded="false">事件 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="./weekly-event-transmission-2026w39/us/"><b>美股事件 <time class="csn-nav-refresh" datetime="2026-09-19" title="内容刷新日期：2026-09-19">09-19 更新</time></b><small>重大事件 · 财报 · 宏观传导</small></a><a href="./weekly-event-transmission-2026w39/a-share/"><b>A股财报 <time class="csn-nav-refresh" datetime="2026-09-19" title="内容刷新日期：2026-09-19">09-19 更新</time></b><small>预约披露 · 预期管理 · 行业映射</small></a></div></div><div class="csn-item" data-group="a-tools"><button type="button" aria-haspopup="true" aria-expanded="false">A股 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="./a-share-trend-candidates/"><b>ABC候选全表 <time class="csn-nav-refresh" datetime="2026-09-17" title="内容刷新日期：2026-09-17">09-17 更新</time></b><small>关K · 回落转稳 · 主升延续 · T+1</small></a><a href="./a-share-domestic-compute/"><b>国产算力 <time class="csn-nav-refresh" datetime="2026-08-18" title="内容刷新日期：2026-08-18">08-18 更新</time></b><small>芯片 · 服务器 · 网络 · AIDC</small></a><a href="./a-share-supply-tightness/"><b>供需紧张 <time class="csn-nav-refresh" datetime="2026-08-18" title="内容刷新日期：2026-08-18">08-18 更新</time></b><small>存储 · PCB · 材料 · 制造</small></a><a href="./a-share-next-generation/"><b>下一代技术 <time class="csn-nav-refresh" datetime="2026-08-18" title="内容刷新日期：2026-08-18">08-18 更新</time></b><small>光互连 · CPO · 液冷 · 连接</small></a><a href="./bingshen/"><b>冰神盘鉴 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>大盘 · 情绪 · 板块 · 涨跌停</small></a><div class="csn-drop-separator" role="separator" aria-label="栏目分隔线"></div><a href="./a-share-software-deleveraging/"><b>软件股 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>相对强弱 · 趋势结构 · 风险边界</small></a><a href="./a-share-hardware-deleveraging/"><b>硬件股 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>算力硬件 · 趋势结构 · 细分轮动</small></a><a href="./a-share-biotech-trend/"><b>生物科技 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>医药生物 · 相对强弱 · 趋势结构</small></a><a href="./a-share-dividend-defense/"><b>红利防守 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>银行 · 公用事业 · 稳定现金流</small></a></div></div><div class="csn-item" data-group="us-tools"><button type="button" aria-haspopup="true" aria-expanded="false">美股 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="./us-trend-candidates/"><b>每日ABC候选 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>A关K · B转稳 · C主升</small></a><a href="./rotation/"><b>轮动加速度 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>看顶部衰竭与底部修复</small></a><a href="./rs-thrust/"><b>相对强度 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>找正在加速的强势股</small></a><a href="./us-skew/"><b>期权风险 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>保护需求与风险温度</small></a><div class="csn-drop-separator" role="separator" aria-label="栏目分隔线"></div><a href="./ai-software-security-shovels/"><b>软件股 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>固定股票池 · 轮动 · 量价</small></a><a href="./ai-hardware-shovels/"><b>硬件股 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>SPY基准 · 轮动 · 盘后动作</small></a><a href="./ai-infrastructure-deleveraging/"><b>AI基础设施 <time class="csn-nav-refresh" datetime="2026-09-18" title="内容刷新日期：2026-09-18">09-18 更新</time></b><small>SOXX · 光通信 · 设备 · 算力</small></a></div></div><div class="csn-item" data-group="picker"><button type="button" aria-haspopup="true" aria-expanded="false">选股器 <span class="csn-caret" aria-hidden="true">▼</span></button><div class="csn-drop"><a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener noreferrer"><b>A股猎龙者信号表 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>板块ETF · 自选股 · 机会与风险</small></a><a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener noreferrer"><b>美股猎龙者信号表 <time class="csn-nav-refresh" datetime="2026-08-23" title="内容刷新日期：2026-08-23">08-23 更新</time></b><small>机会 · 风险警报 · 历史信号</small></a></div></div><div class="csn-item" data-group="code"><a href="./code/">代码库</a></div><div class="csn-item" data-group="research"><a href="./nav/">行业调研</a></div></div></div></nav>
 
 <main class="csn-page">
-
-  <section class="hero">
-    <span class="csn-kicker csn-rise">CSNPK Research Desk</span>
-    <h1 class="hero-title csn-rise d1">研究驱动的<br />一站式<em>投研工作台</em></h1>
-    <p class="hero-lede csn-rise d2">A股、美股、宏观、事件、选股器、代码库与行业调研，统一入口、持续更新。</p>
-    <div class="hero-stats csn-rise d3">
-      <div class="hero-stat" data-metric-source="shared-navigation"><b id="topNavCount">–</b><span>顶层导航栏目</span></div>
-      <div class="hero-stat" data-metric-source="shared-navigation"><b id="internalPageCount">–</b><span>站内页面入口</span></div>
-      <div class="hero-stat" data-metric-source="nav/reports.json"><b id="reportCount">–</b><span>公开调研报告</span></div>
+  <header class="desk-head">
+    <div>
+      <h1>投研工作台<em>总览</em></h1>
+      <p class="lede">先判断市场与事件，再进入 A股、美股候选和专题工具。首页只呈现公开研究状态，不读取、展示或推断个人持仓。</p>
     </div>
-    <div class="hero-update csn-rise d4" aria-label="最近更新说明">
-      <span class="verified">已核验</span>
-      <div><strong>最近更新 · <time datetime="2026-09-17T09:51+08:00">2026-09-17 09:51（北京时间）</time></strong><p>本次刷新：美股收盘组 11 个快频动态页更新至 2026-09-16；财政风险页按官方慢频来源保留数据日期 2026-09-15，市场数据已核验至 2026-09-16；独立全球注意力雷达保留上一版；同步首页与全站导航的逐页内容刷新日期。</p></div>
+    <div class="desk-index" aria-label="站点索引">
+      <div class="desk-index-row" data-metric-source="shared-navigation"><span>顶层栏目</span><b id="topNavCount">–</b></div>
+      <div class="desk-index-row" data-metric-source="shared-navigation"><span>站内入口</span><b id="internalPageCount">–</b></div>
+      <div class="desk-index-row" data-metric-source="nav/reports.json"><span>公开报告</span><b id="reportCount">–</b></div>
+      <div class="desk-index-row"><span>模块回读</span><b id="dashboardStatus">加载中</b></div>
     </div>
-    <div class="hero-rule csn-rise d4"><span>STOCKS · MARKET · SIGNALS · CODE · RESEARCH</span></div>
-  </section>
+    <p class="desk-note"><span class="verified">已核验</span>本次刷新：各模块按自身 data.json 独立回读；同步首页与全站导航的逐页内容刷新日期。</p>
+  </header>
 
   <section aria-label="宏观" id="market-overview">
-    <div class="csn-section-head"><h2>宏观</h2><span class="en">Macro</span><span class="more">指数、市场宽度与宏观风险</span></div>
-    <div class="grid cols-3">
-      <a class="card accent-gold" href="./us-market/"><span class="go">↗</span><span class="en">US Market Overview</span><h3>美股大盘观察</h3><p>先看指数、市场宽度与保护需求，再用代表 ETF 确认风格轮动。</p></a>
-      <a class="card accent-red" href="./macro-fiscal-risk/"><span class="go">↗</span><span class="en">Fiscal Risk Premium</span><h3>财政风险溢价监控</h3><p>跟踪长端利率、美元、股债相关性、信用扩散与高久期成长压力。</p></a>
-      <a class="card accent-jade" href="./macro-event-radar/"><span class="go">↗</span><span class="en">Global Event Radar</span><h3>全球核心事件雷达</h3><p>把政策、加密、AI与地缘事件压缩为证据层级、资产传导和下一检查点。</p></a>
+    <div class="overview-grid">
+      <article class="market-board">
+        <div class="market-board-head">
+          <div><h2>市场与事件</h2><p>用最新已核验收盘判断风险温度；慢频情绪和宏观数据保留各自真实日期。</p></div>
+          <div class="market-state"><strong id="marketLabel">正在回读</strong><span id="marketDate">市场日期待载入</span></div>
+        </div>
+        <div class="pulse-lines">
+          <div class="pulse-line"><span>美股环境</span><strong id="marketScore">读取市场评分</strong><small id="marketBreadth">宽度待载入</small></div>
+          <div class="pulse-line"><span>事件雷达</span><strong id="eventPulse">读取核心事件</strong><small id="eventCount">数量待载入</small></div>
+          <div class="pulse-line"><span>证据纪律</span><strong>各页独立标注已核验、条件式与待证真</strong><small>不由首页统一改写</small></div>
+        </div>
+        <div class="market-actions">
+          <a href="./us-market/">查看大盘观察</a><a href="./macro-event-radar/">查看事件雷达</a><a href="./macro-fiscal-risk/">查看财政风险</a><a href="./us-market/x-consensus/">查看注意力雷达</a>
+        </div>
+      </article>
+      <div class="candidate-stack" id="stock-trends">
+        <article class="candidate-panel">
+          <header><h2>A股 ABC</h2><span id="aDate">日期待载入</span></header>
+          <p class="candidate-summary"><strong id="aCandidateCount">–</strong><span id="aCandidateText">完整候选正在回读</span></p>
+          <div class="candidate-meta"><span id="aPlanState">执行状态待载入</span><a href="./a-share-trend-candidates/">打开候选全表</a></div>
+        </article>
+        <article class="candidate-panel">
+          <header><h2>美股 ABC</h2><span id="usDate">日期待载入</span></header>
+          <p class="candidate-summary"><strong id="usCandidateCount">–</strong><span id="usCandidateText">完整候选正在回读</span></p>
+          <div class="candidate-meta"><span id="usClassCounts">分类计数待载入</span><a href="./us-trend-candidates/">打开候选全表</a></div>
+        </article>
+      </div>
     </div>
   </section>
 
   <section aria-label="A股" id="a-share-tools">
-    <div class="csn-section-head"><h2>A股</h2><span class="en">A-Share</span><span class="more">ABC候选全表、三条产业主线、观察池与走势页</span></div>
-    <div class="grid cols-3">
-      <a class="card accent-blue" href="./a-share-trend-candidates/"><span class="go">↗</span><span class="en">A-Share ABC Candidates</span><h3>A股 ABC候选全表</h3><p>完整展示关K回调、日线回落转稳与主升延续的达标备选；富途重点前10附条件点位和T+1边界。</p></a>
-      <a class="card accent-blue" href="./a-share-domestic-compute/"><span class="go">↗</span><span class="en">Domestic Compute</span><h3>国产算力</h3><p>覆盖国产AI芯片、服务器、交换网络、内存互连、EDA、AIDC与算力服务。</p></a>
-      <a class="card accent-red" href="./a-share-supply-tightness/"><span class="go">↗</span><span class="en">Supply Tightness</span><h3>供需紧张</h3><p>覆盖AI服务器、存储、先进封装、PCB、半导体材料、制造与数据中心电力。</p></a>
-      <a class="card accent-jade" href="./a-share-next-generation/"><span class="go">↗</span><span class="en">Next Generation</span><h3>下一代技术</h3><p>覆盖800G/1.6T、NPO/CPO、硅光测试、高速连接、薄膜铌酸锂与液冷。</p></a>
-      <a class="card accent-jade" href="./bingshen/"><span class="go">↗</span><span class="en">A-Share Close Radar</span><h3>冰神盘鉴</h3><p>每日收盘复盘指数、市场宽度、板块强弱、涨跌停和冰神观察池，无需登录。</p></a>
-      <a class="card accent-blue" href="./a-share-software-deleveraging/"><span class="go">↗</span><span class="en">A-Share Software</span><h3>软件股</h3><p>比较软件ETF、细分方向与自选篮子的相对强弱、趋势结构和风险边界。</p></a>
-      <a class="card accent-gold" href="./a-share-hardware-deleveraging/"><span class="go">↗</span><span class="en">A-Share AI Hardware</span><h3>硬件股</h3><p>覆盖国产算力、光通信、PCB、元器件与半导体硬件的细分轮动。</p></a>
-      <a class="card accent-jade" href="./a-share-biotech-trend/"><span class="go">↗</span><span class="en">A-Share Biotech</span><h3>生物科技</h3><p>跟踪创新药、生物制品、CXO、医疗器械与医药流通的趋势扩散。</p></a>
-      <a class="card accent-red" href="./a-share-dividend-defense/"><span class="go">↗</span><span class="en">Dividend Defense</span><h3>红利防守</h3><p>观察银行、电力公用事业、交通运输与稳定现金流资产的防守能力。</p></a>
+    <div class="csn-section-head"><h2>市场工作区</h2><span class="en">Market Workspaces</span><span class="more">候选、主线、轮动与风险工具</span></div>
+    <div class="workspace-columns">
+      <article class="workspace">
+        <div class="workspace-head"><h2>A股</h2><span>收盘候选 · T+1</span></div>
+        <div class="workspace-feature"><div><h3>A股 ABC候选全表</h3><p>关K回调、回落转稳与主升延续独立筛选；完整候选与重点前10分开呈现。</p></div><a class="workspace-open" href="./a-share-trend-candidates/">进入工作区</a></div>
+        <div class="workspace-links">
+          <a class="workspace-link" href="./bingshen/"><b>冰神盘鉴</b><small>大盘 · 情绪 · 板块 · 涨跌停</small></a>
+          <a class="workspace-link" href="./a-share-software-deleveraging/"><b>软件股</b><small>相对强弱 · 趋势结构</small></a>
+          <a class="workspace-link" href="./a-share-hardware-deleveraging/"><b>硬件股</b><small>算力硬件 · 细分轮动</small></a>
+          <a class="workspace-link" href="./a-share-biotech-trend/"><b>生物科技</b><small>创新药 · 器械 · CXO</small></a>
+          <a class="workspace-link" href="./a-share-dividend-defense/"><b>红利防守</b><small>银行 · 公用事业 · 现金流</small></a>
+          <a class="workspace-link" href="./a-share-shortage-watch/"><b>缺货与供给约束</b><small>23类 · 55家公司 · 原文</small></a>
+        </div>
+      </article>
+      <article class="workspace us" id="us-tools">
+        <div class="workspace-head"><h2>美股</h2><span>RTH收盘 · 独立ABC</span></div>
+        <div class="workspace-feature"><div><h3>美股每日ABC候选</h3><p>A关K、B转稳、C主升独立筛选；M观察重点名单与完整合格池分开呈现。</p></div><a class="workspace-open" href="./us-trend-candidates/">进入工作区</a></div>
+        <div class="workspace-links">
+          <a class="workspace-link" href="./rs-thrust/"><b>相对强度</b><small>加速中的股票与ETF</small></a>
+          <a class="workspace-link" href="./rotation/"><b>轮动加速度</b><small>领先衰竭 · 落后修复</small></a>
+          <a class="workspace-link" href="./us-skew/"><b>期权风险</b><small>保护需求 · 风险温度</small></a>
+          <a class="workspace-link" href="./ai-software-security-shovels/"><b>软件与安全</b><small>固定池 · 轮动 · 量价</small></a>
+          <a class="workspace-link" href="./ai-hardware-shovels/"><b>硬件铲子</b><small>算力 · HBM · 光互连</small></a>
+          <a class="workspace-link" href="./ai-infrastructure-deleveraging/"><b>AI基础设施</b><small>SOXX基准 · 交付链</small></a>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section aria-label="美股" id="us-tools">
-    <div class="csn-section-head"><h2>美股</h2><span class="en">US Equity</span><span class="more">强度、轮动、主题监控与期权风险</span></div>
-    <div class="grid cols-3">
-      <a class="card accent-blue" href="./us-trend-candidates/"><span class="go">↗</span><span class="en">US Daily A/B/C Candidates</span><h3>美股每日ABC候选</h3><p>关K回调、日线转稳与主升延续独立筛选；查看M观察前10的买卖条件与持有纪律。</p></a>
-      <a class="card accent-jade" href="./rs-thrust/"><span class="go">↗</span><span class="en">US RS Thrust</span><h3>美股相对强度加速图</h3><p>相对强度正在加速的美股与 ETF 一览，按推力排序捕捉动量拐点。</p></a>
-      <a class="card accent-jade" href="./rotation/"><span class="go">↗</span><span class="en">US Rotation Acceleration</span><h3>美股轮动加速度雷达</h3><p>以相对速度与标准化加速度识别领先衰竭、落后修复与板块轮动。</p></a>
-      <a class="card accent-blue" href="./ai-software-security-shovels/"><span class="go">↗</span><span class="en">AI Software Monitor</span><h3>AI 软件与安全监控台</h3><p>固定监控软件、安全与控制层股票，整合轮动、量价与盘后动作。</p></a>
-      <a class="card accent-blue" href="./ai-hardware-shovels/"><span class="go">↗</span><span class="en">AI Hardware Shovels</span><h3>AI 硬件铲子监控台</h3><p>监控算力、ASIC、制造设备、HBM、光互连与电力散热铲子股。</p></a>
-      <a class="card accent-gold" href="./ai-infrastructure-deleveraging/"><span class="go">↗</span><span class="en">AI Infrastructure Trend</span><h3>AI基础设施走势</h3><p>以 SOXX 为基准，追踪计算、内存、网络、光通信、设备与算力交付的去杠杆状态。</p></a>
-      <a class="card accent-blue" href="./us-skew/"><span class="go">↗</span><span class="en">US IV Skew Radar</span><h3>美股期权风险分布图</h3><p>核心美股 IV Skew 分布，读取保护需求与风险温度的位置。</p></a>
+  <section aria-label="快捷入口" id="dragon-signals">
+    <div class="csn-section-head"><h2>常用入口</h2><span class="en">Quick Launch</span><span class="more">主题图谱、选股器、代码与资料</span></div>
+    <div class="utility-grid">
+      <article class="utility-panel">
+        <h2>工具与专题</h2><p>从高频动作直接进入，不在首页重复堆叠完整页面说明。</p>
+        <div class="launcher">
+          <a href="./a-share-domestic-compute/"><b>国产算力</b><small>芯片 · 服务器 · 网络 · AIDC</small></a>
+          <a href="./a-share-supply-tightness/"><b>供需紧张</b><small>存储 · PCB · 材料 · 制造</small></a>
+          <a href="./a-share-next-generation/"><b>下一代技术</b><small>光互连 · CPO · 液冷</small></a>
+          <a href="./code/"><b>代码中心</b><small>指标 · 公式包 · 导入脚本</small></a>
+          <a href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener noreferrer"><b>A股猎龙者</b><small>外部信号表</small></a>
+          <a href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener noreferrer"><b>美股猎龙者</b><small>外部信号表</small></a>
+        </div>
+      </article>
+      <article class="utility-panel event-brief">
+        <div><h2>事件速览</h2><h3 id="eventTitle">正在读取最新核心事件</h3><p id="eventSummary">事件事实、市场传导和经营兑现将继续分层呈现。</p></div>
+        <div class="event-foot"><span id="eventMeta">数据状态待载入</span><a href="./macro-event-radar/">进入事件雷达</a></div>
+      </article>
     </div>
   </section>
-
-  <section aria-label="选股器" id="dragon-signals">
-    <div class="csn-section-head"><h2>选股器</h2><span class="en">Stock Screeners</span><span class="more">A股与美股猎龙者信号入口</span></div>
-    <div class="grid cols-3">
-      <a class="card accent-red" href="https://docs.google.com/spreadsheets/d/1XEVPTz6SOFWj_Krcp0evHJJU8e28LJ_oCdP6Y0_6-vw/edit" target="_blank" rel="noopener noreferrer"><span class="go">↗</span><span class="en">A-Share Signals</span><h3>A股猎龙者信号表</h3><p>板块 ETF、自选股、机会、风险与历史信号。</p></a>
-      <a class="card accent-red" href="https://docs.google.com/spreadsheets/d/1q4SiVx25txwXNZhLwmuU9BQFJ_WVUGau4FjBzvIzXjw/edit" target="_blank" rel="noopener noreferrer"><span class="go">↗</span><span class="en">US Signals</span><h3>美股猎龙者信号表</h3><p>美股机会、风险警报与历史信号。</p></a>
-    </div>
-  </section>
-
-  <section aria-label="代码库"><div class="csn-section-head"><h2>代码库</h2><span class="en">Code Library</span><span class="more">主图、副图、指标、公式包与脚本</span></div><div class="grid cols-3"><a class="card accent-gold" href="./code/"><span class="go">进入 ↗</span><span class="en">Indicators & Scripts</span><h3>代码中心</h3><p>统一收纳富途主副图、冰神 TN6 公式包与观察池导入脚本。</p></a></div></section>
 
   <section aria-label="行业调研">
-    <div class="csn-section-head">
-      <h2>行业调研</h2><span class="en">Industry Research</span>
-      <span class="more">已公开的行业与主题策略研究</span>
-    </div>
-    <article class="card research-card">
-      <div class="intro">
-        <span class="en">Report Index</span>
-        <h3>报告目录</h3>
-        <p>全部已公开的非每日更新投研报告：行业研究与主题策略，支持搜索与分类筛选。行情、价格和结论仍需按报告数据截止日理解。</p>
-        <span class="chips"><span class="chip">行业研究</span><span class="chip">主题策略</span><span class="chip">全文搜索</span></span>
-        <a class="intro-link" href="./nav/">进入报告目录 →</a>
-      </div>
-      <div class="latest">
-        <h4>最新收录</h4>
-        <div class="latest-list" id="latestList">
-          <span style="font-size:12px;color:var(--muted)">加载中……</span>
-        </div>
-      </div>
+    <div class="csn-section-head"><h2>研究流</h2><span class="en">Research Stream</span><span class="more">最近公开的行业、主题与公司研究</span></div>
+    <article class="research-stream">
+      <div class="research-stream-head"><h2>最新收录</h2><a href="./nav/">浏览全部报告</a></div>
+      <div class="latest-list" id="latestList"><span style="font-size:12px;color:var(--muted)">加载中……</span></div>
     </article>
   </section>
 
@@ -431,13 +566,48 @@ footer.site-footer {
   document.getElementById('topNavCount').textContent = topLevelItems.length || '–';
   document.getElementById('internalPageCount').textContent = internalRoutes.size || '–';
 
+  var moduleReads = [
+    fetch("./a-share-trend-candidates/data.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("A股候选 HTTP " + r.status); return r.json(); }).then(function (d) {
+      document.getElementById("aDate").textContent = d.data_date || "日期未标注";
+      document.getElementById("aCandidateCount").textContent = d.candidate_count == null ? "–" : d.candidate_count;
+      document.getElementById("aCandidateText").textContent = "完整候选 · 重点 " + (d.selected_count == null ? "–" : d.selected_count) + " 只";
+      document.getElementById("aPlanState").textContent = d.execution_ready ? "条件计划已就绪" : "条件计划未就绪";
+    }),
+    fetch("./us-trend-candidates/data.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("美股候选 HTTP " + r.status); return r.json(); }).then(function (d) {
+      var c = d.counts || {};
+      document.getElementById("usDate").textContent = d.data_date || "日期未标注";
+      document.getElementById("usCandidateCount").textContent = d.candidate_count == null ? "–" : d.candidate_count;
+      document.getElementById("usCandidateText").textContent = "完整候选 · 重点 " + (d.selected_count == null ? "–" : d.selected_count) + " 只";
+      document.getElementById("usClassCounts").textContent = "A " + (c.A || 0) + " · B " + (c.B || 0) + " · C " + (c.C || 0);
+    }),
+    fetch("./us-market/data.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("大盘观察 HTTP " + r.status); return r.json(); }).then(function (d) {
+      var m = d.market || {};
+      document.getElementById("marketLabel").textContent = m.label || "状态未标注";
+      document.getElementById("marketDate").textContent = m.asOf ? "最新收盘 " + m.asOf : "市场日期未标注";
+      document.getElementById("marketScore").textContent = m.score == null ? "市场评分未提供" : "市场评分 " + m.score;
+      document.getElementById("marketBreadth").textContent = m.aboveMa20Pct == null ? "宽度未提供" : "MA20上方 " + m.aboveMa20Pct + "%";
+    }),
+    fetch("./macro-event-radar/data.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("事件雷达 HTTP " + r.status); return r.json(); }).then(function (d) {
+      var b = d.brief || {};
+      document.getElementById("eventPulse").textContent = b.title || "暂无核心事件标题";
+      document.getElementById("eventCount").textContent = "核心 " + (b.core_count || 0) + " · 待核 " + (b.pending_count || 0);
+      document.getElementById("eventTitle").textContent = b.title || "暂无核心事件标题";
+      document.getElementById("eventSummary").textContent = b.summary || "事件摘要暂不可用。";
+      document.getElementById("eventMeta").textContent = "核心 " + (b.core_count || 0) + " · 待核 " + (b.pending_count || 0) + " · " + (d.verification_status || "状态未标注");
+    })
+  ];
+  Promise.allSettled(moduleReads).then(function (results) {
+    var ok = results.filter(function (item) { return item.status === "fulfilled"; }).length;
+    document.getElementById("dashboardStatus").textContent = ok + "/" + results.length + " 已回读";
+  });
+
   fetch("./nav/reports.json", { cache: "no-store" })
     .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
     .then(function (entries) {
       entries.sort(function (a, b) { return b.date.localeCompare(a.date); });
       document.getElementById("reportCount").textContent = entries.length;
       var list = document.getElementById("latestList");
-      list.innerHTML = entries.slice(0, 3).map(function (e) {
+      list.innerHTML = entries.slice(0, 5).map(function (e) {
         var href = /^(https?:)?\/\//.test(e.url) ? e.url : "./nav/" + e.url.replace(/^\.\.\//, "");
         return '<a class="latest-item" href="' + href + '"><time>' + e.date + '</time><span>' + e.title + '</span></a>';
       }).join("");
