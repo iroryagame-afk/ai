@@ -1,55 +1,55 @@
 {
   "schema_version": "US_DAILY_ABC_PUBLIC_1.2",
-  "data_date": "2026-09-16",
-  "collected_at_ny": "2026-09-17T05:13:16.505133-04:00",
+  "data_date": "2026-09-18",
+  "collected_at_ny": "2026-09-18T20:36:22.537290-04:00",
   "data_boundary": "美股完整常规时段日K，前复权；点位按当日完整日K重算",
-  "source_sha256": "be71dadf5c98aa8000cf80d0d6028f8007ddb2a0a8ce222ff0396ea5e3cae40d",
+  "source_sha256": "28648d6e2e1bf1507fe6761f5d755b36672649ea20d38e19910cb8ddd748c1ba",
   "coverage": {
-    "A": 0.9955357142857143,
-    "B": 0.9642857142857143,
-    "C": 0.9642857142857143
+    "A": 0.995575221238938,
+    "B": 0.9646017699115044,
+    "C": 0.9646017699115044
   },
   "counts": {
-    "A": 9,
-    "B": 1,
-    "C": 8
+    "A": 4,
+    "B": 7,
+    "C": 12
   },
-  "candidate_count": 18,
+  "candidate_count": 23,
   "selected_count": 10,
-  "market_defensive": true,
+  "market_defensive": false,
   "m_watch_readback_verified": true,
   "top": [
     {
-      "ticker": "BE",
-      "name": "Bloom Energy",
+      "ticker": "AAOI",
+      "name": "Applied Optoelectronics",
       "sources": [
-        "C"
+        "B"
       ],
       "rank": 1,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩/强势平台",
-      "current_stage": "价格技术确认·待风险复核",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "价格技术确认",
-      "latest_close": 270.02,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分转强确认",
+      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
+      "price_state": "日线结构失效价 $94.00",
+      "latest_close": 105.17,
       "action": "只观察",
       "pullback_zone": [
-        255.52,
-        259.79
+        102.22,
+        103.83
       ],
-      "confirmation_price": 269.83,
-      "maximum_acceptable_price": 278.36,
-      "invalidation_price": 249.05,
-      "reduce_price": 300.99,
-      "final_target_price": 321.77,
-      "review_trading_day": 10,
-      "max_trading_days": 30
+      "confirmation_price": 117.19,
+      "maximum_acceptable_price": 120.42,
+      "invalidation_price": 94.0,
+      "reduce_price": 151.98,
+      "final_target_price": 175.17,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
-      "ticker": "ASML",
-      "name": "阿斯麦",
+      "ticker": "LRCX",
+      "name": "泛林集团",
       "sources": [
         "B"
       ],
@@ -57,629 +57,533 @@
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-16）",
-      "current_stage": "B·B?｜30分上升延续",
-      "momentum_volume": "30分·上升延续：已有上升笔结构、回踩未破结构低点／金叉保持、交叉差扩大／K在D上方、继续向上",
-      "price_state": "日线结构失效价 $1,572.84",
-      "latest_close": 1602.22,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分转强确认",
+      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
+      "price_state": "日线结构失效价 $265.37",
+      "latest_close": 288.11,
       "action": "只观察",
       "pullback_zone": [
-        1507.29,
-        1520.8
+        286.18,
+        289.66
       ],
-      "confirmation_price": 1706.49,
-      "maximum_acceptable_price": 1733.5,
-      "invalidation_price": 1572.84,
-      "reduce_price": 1906.97,
-      "final_target_price": 2040.63,
+      "confirmation_price": 306.49,
+      "maximum_acceptable_price": 313.45,
+      "invalidation_price": 265.37,
+      "reduce_price": 368.16,
+      "final_target_price": 409.27,
       "review_trading_day": 5,
       "max_trading_days": 15
     },
     {
-      "ticker": "AMD",
-      "name": "美国超微公司",
-      "sources": [
-        "C"
-      ],
-      "rank": 3,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
-      "latest_close": 512.5,
-      "action": "只观察",
-      "pullback_zone": [
-        498.06,
-        503.1
-      ],
-      "confirmation_price": 513.66,
-      "maximum_acceptable_price": 523.74,
-      "invalidation_price": 480.33,
-      "reduce_price": 563.67,
-      "final_target_price": 597.0,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "NET",
-      "name": "Cloudflare",
-      "sources": [
-        "C"
-      ],
-      "rank": 4,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
-      "latest_close": 324.65,
-      "action": "只观察",
-      "pullback_zone": [
-        310.81,
-        315.06
-      ],
-      "confirmation_price": 334.6,
-      "maximum_acceptable_price": 343.11,
-      "invalidation_price": 310.81,
-      "reduce_price": 370.29,
-      "final_target_price": 394.08,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "AAPL",
-      "name": "苹果",
-      "sources": [
-        "C"
-      ],
-      "rank": 5,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
-      "latest_close": 332.41,
-      "action": "只观察",
-      "pullback_zone": [
-        326.65,
-        328.57
-      ],
-      "confirmation_price": 331.78,
-      "maximum_acceptable_price": 335.62,
-      "invalidation_price": 326.65,
-      "reduce_price": 340.42,
-      "final_target_price": 346.17,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "FTNT",
-      "name": "飞塔信息",
-      "sources": [
-        "C"
-      ],
-      "rank": 6,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "C强势平台",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
-      "latest_close": 171.77,
-      "action": "只观察",
-      "pullback_zone": [
-        164.23,
-        166.21
-      ],
-      "confirmation_price": 174.05,
-      "maximum_acceptable_price": 178.02,
-      "invalidation_price": 154.0,
-      "reduce_price": 204.12,
-      "final_target_price": 224.17,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "QCOM",
-      "name": "高通",
-      "sources": [
-        "C"
-      ],
-      "rank": 7,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
-      "latest_close": 184.84,
-      "action": "只观察",
-      "pullback_zone": [
-        177.98,
-        179.96
-      ],
-      "confirmation_price": 190.06,
-      "maximum_acceptable_price": 194.02,
-      "invalidation_price": 177.98,
-      "reduce_price": 208.18,
-      "final_target_price": 220.25,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "VSTM",
-      "name": "Verastem",
-      "sources": [
-        "C"
-      ],
-      "rank": 8,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "金叉前/动能改善观察",
-      "price_state": "待价格确认",
-      "latest_close": 7.32,
-      "action": "只观察",
-      "pullback_zone": [
-        6.62,
-        6.72
-      ],
-      "confirmation_price": 7.52,
-      "maximum_acceptable_price": 7.72,
-      "invalidation_price": 6.62,
-      "reduce_price": 8.88,
-      "final_target_price": 9.78,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "WDAY",
-      "name": "Workday",
-      "sources": [
-        "A"
-      ],
-      "rank": 9,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 1.5549165787991353,
-      "a_latest_volume_ratio": 0.6673581718772565,
-      "structure_node": "A关K·2026-09-14",
-      "current_stage": "A回调2天",
-      "momentum_volume": "A量能·关K/前日 1.55×；当前/关K 0.67×",
-      "price_state": "A原底未破",
-      "latest_close": 187.76,
-      "action": "只观察",
-      "pullback_zone": [
-        174.73,
-        176.87
-      ],
-      "confirmation_price": 194.76,
-      "maximum_acceptable_price": 199.04,
-      "invalidation_price": 174.73,
-      "reduce_price": 224.81,
-      "final_target_price": 244.84,
-      "review_trading_day": 3,
-      "max_trading_days": 10
-    },
-    {
-      "ticker": "HIMS",
-      "name": "Hims & Hers Health",
-      "sources": [
-        "A"
-      ],
-      "rank": 10,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 1.6886956774338566,
-      "a_latest_volume_ratio": 0.61393620481397,
-      "structure_node": "A关K·2026-09-14",
-      "current_stage": "A回调2天",
-      "momentum_volume": "A量能·关K/前日 1.69×；当前/关K 0.61×",
-      "price_state": "A原底未破",
-      "latest_close": 28.0,
-      "action": "只观察",
-      "pullback_zone": [
-        28.0,
-        28.35
-      ],
-      "confirmation_price": 29.63,
-      "maximum_acceptable_price": 30.33,
-      "invalidation_price": 26.73,
-      "reduce_price": 34.46,
-      "final_target_price": 36.89,
-      "review_trading_day": 3,
-      "max_trading_days": 10
-    }
-  ],
-  "pool": [
-    {
-      "ticker": "BE",
-      "name": "Bloom Energy",
-      "sources": [
-        "C"
-      ],
-      "rank": 1,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩/强势平台",
-      "current_stage": "价格技术确认·待风险复核",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "价格技术确认",
-      "latest_close": 270.02,
-      "action": "只观察",
-      "pullback_zone": [
-        255.52,
-        259.79
-      ],
-      "confirmation_price": 269.83,
-      "maximum_acceptable_price": 278.36,
-      "invalidation_price": 249.05,
-      "reduce_price": 300.99,
-      "final_target_price": 321.77,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "ASML",
-      "name": "阿斯麦",
+      "ticker": "POWI",
+      "name": "帕沃英蒂格盛",
       "sources": [
         "B"
       ],
-      "rank": 2,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-16）",
-      "current_stage": "B·B?｜30分上升延续",
-      "momentum_volume": "30分·上升延续：已有上升笔结构、回踩未破结构低点／金叉保持、交叉差扩大／K在D上方、继续向上",
-      "price_state": "日线结构失效价 $1,572.84",
-      "latest_close": 1602.22,
-      "action": "只观察",
-      "pullback_zone": [
-        1507.29,
-        1520.8
-      ],
-      "confirmation_price": 1706.49,
-      "maximum_acceptable_price": 1733.5,
-      "invalidation_price": 1572.84,
-      "reduce_price": 1906.97,
-      "final_target_price": 2040.63,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "AMD",
-      "name": "美国超微公司",
-      "sources": [
-        "C"
-      ],
       "rank": 3,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
-      "latest_close": 512.5,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分转强确认",
+      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／本根金叉、动能转正／K在D上方、继续向上",
+      "price_state": "日线结构失效价 $46.71",
+      "latest_close": 50.39,
       "action": "只观察",
       "pullback_zone": [
-        498.06,
-        503.1
+        49.88,
+        50.45
       ],
-      "confirmation_price": 513.66,
-      "maximum_acceptable_price": 523.74,
-      "invalidation_price": 480.33,
-      "reduce_price": 563.67,
-      "final_target_price": 597.0,
-      "review_trading_day": 10,
-      "max_trading_days": 30
+      "confirmation_price": 58.25,
+      "maximum_acceptable_price": 59.4,
+      "invalidation_price": 46.71,
+      "reduce_price": 75.57,
+      "final_target_price": 87.11,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
-      "ticker": "NET",
-      "name": "Cloudflare",
+      "ticker": "GFS",
+      "name": "GlobalFoundries",
       "sources": [
-        "C"
+        "B"
       ],
       "rank": 4,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
-      "latest_close": 324.65,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分转强确认",
+      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
+      "price_state": "日线结构失效价 $42.70",
+      "latest_close": 47.82,
       "action": "只观察",
       "pullback_zone": [
-        310.81,
-        315.06
+        46.24,
+        46.72
       ],
-      "confirmation_price": 334.6,
-      "maximum_acceptable_price": 343.11,
-      "invalidation_price": 310.81,
-      "reduce_price": 370.29,
-      "final_target_price": 394.08,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "AAPL",
-      "name": "苹果",
-      "sources": [
-        "C"
-      ],
-      "rank": 5,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
-      "latest_close": 332.41,
-      "action": "只观察",
-      "pullback_zone": [
-        326.65,
-        328.57
-      ],
-      "confirmation_price": 331.78,
-      "maximum_acceptable_price": 335.62,
-      "invalidation_price": 326.65,
-      "reduce_price": 340.42,
-      "final_target_price": 346.17,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "FTNT",
-      "name": "飞塔信息",
-      "sources": [
-        "C"
-      ],
-      "rank": 6,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "C强势平台",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
-      "latest_close": 171.77,
-      "action": "只观察",
-      "pullback_zone": [
-        164.23,
-        166.21
-      ],
-      "confirmation_price": 174.05,
-      "maximum_acceptable_price": 178.02,
-      "invalidation_price": 154.0,
-      "reduce_price": 204.12,
-      "final_target_price": 224.17,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "QCOM",
-      "name": "高通",
-      "sources": [
-        "C"
-      ],
-      "rank": 7,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
-      "latest_close": 184.84,
-      "action": "只观察",
-      "pullback_zone": [
-        177.98,
-        179.96
-      ],
-      "confirmation_price": 190.06,
-      "maximum_acceptable_price": 194.02,
-      "invalidation_price": 177.98,
-      "reduce_price": 208.18,
-      "final_target_price": 220.25,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "VSTM",
-      "name": "Verastem",
-      "sources": [
-        "C"
-      ],
-      "rank": 8,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "金叉前/动能改善观察",
-      "price_state": "待价格确认",
-      "latest_close": 7.32,
-      "action": "只观察",
-      "pullback_zone": [
-        6.62,
-        6.72
-      ],
-      "confirmation_price": 7.52,
-      "maximum_acceptable_price": 7.72,
-      "invalidation_price": 6.62,
-      "reduce_price": 8.88,
-      "final_target_price": 9.78,
-      "review_trading_day": 10,
-      "max_trading_days": 30
-    },
-    {
-      "ticker": "WDAY",
-      "name": "Workday",
-      "sources": [
-        "A"
-      ],
-      "rank": 9,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 1.5549165787991353,
-      "a_latest_volume_ratio": 0.6673581718772565,
-      "structure_node": "A关K·2026-09-14",
-      "current_stage": "A回调2天",
-      "momentum_volume": "A量能·关K/前日 1.55×；当前/关K 0.67×",
-      "price_state": "A原底未破",
-      "latest_close": 187.76,
-      "action": "只观察",
-      "pullback_zone": [
-        174.73,
-        176.87
-      ],
-      "confirmation_price": 194.76,
-      "maximum_acceptable_price": 199.04,
-      "invalidation_price": 174.73,
-      "reduce_price": 224.81,
-      "final_target_price": 244.84,
-      "review_trading_day": 3,
-      "max_trading_days": 10
-    },
-    {
-      "ticker": "HIMS",
-      "name": "Hims & Hers Health",
-      "sources": [
-        "A"
-      ],
-      "rank": 10,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 1.6886956774338566,
-      "a_latest_volume_ratio": 0.61393620481397,
-      "structure_node": "A关K·2026-09-14",
-      "current_stage": "A回调2天",
-      "momentum_volume": "A量能·关K/前日 1.69×；当前/关K 0.61×",
-      "price_state": "A原底未破",
-      "latest_close": 28.0,
-      "action": "只观察",
-      "pullback_zone": [
-        28.0,
-        28.35
-      ],
-      "confirmation_price": 29.63,
-      "maximum_acceptable_price": 30.33,
-      "invalidation_price": 26.73,
-      "reduce_price": 34.46,
-      "final_target_price": 36.89,
-      "review_trading_day": 3,
-      "max_trading_days": 10
-    },
-    {
-      "ticker": "ELMT",
-      "name": "Elmet Group",
-      "sources": [
-        "A"
-      ],
-      "rank": null,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 97.96734748066213,
-      "a_latest_volume_ratio": 0.05255876775564408,
-      "structure_node": "A关K·2026-09-14",
-      "current_stage": "A回调2天",
-      "momentum_volume": "A量能·关K/前日 97.97×；当前/关K 0.05×",
-      "price_state": "A原底未破",
-      "action": "待生成交易计划"
-    },
-    {
-      "ticker": "GH",
-      "name": "Guardant Health",
-      "sources": [
-        "A"
-      ],
-      "rank": null,
-      "a_key_date": "2026-09-15",
-      "a_key_volume_ratio": 1.9104680123788915,
-      "a_latest_volume_ratio": 0.5341141646854929,
-      "structure_node": "A关K·2026-09-15",
-      "current_stage": "A回调1天",
-      "momentum_volume": "A量能·关K/前日 1.91×；当前/关K 0.53×",
-      "price_state": "A原底未破",
-      "action": "待生成交易计划"
-    },
-    {
-      "ticker": "INTU",
-      "name": "财捷",
-      "sources": [
-        "A"
-      ],
-      "rank": null,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 1.5756083683663193,
-      "a_latest_volume_ratio": 0.6871219273208687,
-      "structure_node": "A关K·2026-09-14",
-      "current_stage": "A回调2天",
-      "momentum_volume": "A量能·关K/前日 1.58×；当前/关K 0.69×",
-      "price_state": "A原底未破",
-      "action": "待生成交易计划"
-    },
-    {
-      "ticker": "MRNA",
-      "name": "Moderna",
-      "sources": [
-        "A"
-      ],
-      "rank": null,
-      "a_key_date": "2026-09-11",
-      "a_key_volume_ratio": 1.9571061753771601,
-      "a_latest_volume_ratio": 0.5731643046402441,
-      "structure_node": "A关K·2026-09-11",
-      "current_stage": "A回调3天",
-      "momentum_volume": "A量能·关K/前日 1.96×；当前/关K 0.57×",
-      "price_state": "A原底未破",
-      "action": "待生成交易计划"
-    },
-    {
-      "ticker": "NOW",
-      "name": "ServiceNow",
-      "sources": [
-        "A"
-      ],
-      "rank": null,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 1.6311105892089268,
-      "a_latest_volume_ratio": 0.5631180227112847,
-      "structure_node": "A关K·2026-09-14",
-      "current_stage": "A回调2天",
-      "momentum_volume": "A量能·关K/前日 1.63×；当前/关K 0.56×",
-      "price_state": "A原底未破",
-      "action": "待生成交易计划"
+      "confirmation_price": 52.14,
+      "maximum_acceptable_price": 53.1,
+      "invalidation_price": 42.7,
+      "reduce_price": 66.3,
+      "final_target_price": 75.75,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
       "ticker": "RXRX",
       "name": "Recursion Pharmaceuticals",
       "sources": [
-        "A"
+        "B"
       ],
-      "rank": null,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 2.1287370331065754,
-      "a_latest_volume_ratio": 0.8661823792475914,
-      "structure_node": "A关K·2026-09-14",
-      "current_stage": "A回调2天",
-      "momentum_volume": "A量能·关K/前日 2.13×；当前/关K 0.87×",
-      "price_state": "A原底未破",
-      "action": "待生成交易计划"
+      "rank": 5,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分上升延续",
+      "momentum_volume": "30分·上升延续：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
+      "price_state": "日线结构失效价 $2.92",
+      "latest_close": 3.83,
+      "action": "只观察",
+      "pullback_zone": [
+        3.67,
+        3.73
+      ],
+      "confirmation_price": 3.59,
+      "maximum_acceptable_price": 3.7,
+      "invalidation_price": 2.92,
+      "reduce_price": 4.59,
+      "final_target_price": 5.26,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
-      "ticker": "SMTC",
-      "name": "先科电子",
+      "ticker": "SNDK",
+      "name": "闪迪",
+      "sources": [
+        "C"
+      ],
+      "rank": 6,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩/强势平台",
+      "current_stage": "价格技术确认·待风险复核",
+      "momentum_volume": "双金叉确认",
+      "price_state": "价格技术确认",
+      "latest_close": 1791.82,
+      "action": "只观察",
+      "pullback_zone": [
+        1631.16,
+        1656.87
+      ],
+      "confirmation_price": 1631.16,
+      "maximum_acceptable_price": 1682.58,
+      "invalidation_price": 1504.2,
+      "reduce_price": 1821.6,
+      "final_target_price": 1948.56,
+      "review_trading_day": 10,
+      "max_trading_days": 30
+    },
+    {
+      "ticker": "AMPX",
+      "name": "Amprius Technologies",
+      "sources": [
+        "B"
+      ],
+      "rank": 7,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分上升延续",
+      "momentum_volume": "30分·上升延续：已有上升笔结构、回踩未破结构低点／本根金叉、动能转正／高位钝化、维持多头关系",
+      "price_state": "日线结构失效价 $8.76",
+      "latest_close": 9.5,
+      "action": "只观察",
+      "pullback_zone": [
+        9.5,
+        9.62
+      ],
+      "confirmation_price": 11.06,
+      "maximum_acceptable_price": 11.3,
+      "invalidation_price": 8.76,
+      "reduce_price": 14.53,
+      "final_target_price": 16.84,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "ONDS",
+      "name": "Ondas",
+      "sources": [
+        "B"
+      ],
+      "rank": 8,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分上升延续",
+      "momentum_volume": "30分·上升延续：已有上升笔结构、回踩未破结构低点／本根金叉、动能转正／高位钝化、维持多头关系",
+      "price_state": "日线结构失效价 $6.98",
+      "latest_close": 7.39,
+      "action": "只观察",
+      "pullback_zone": [
+        7.39,
+        7.48
+      ],
+      "confirmation_price": 8.12,
+      "maximum_acceptable_price": 8.3,
+      "invalidation_price": 6.98,
+      "reduce_price": 9.83,
+      "final_target_price": 10.97,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "SPCE",
+      "name": "维珍银河",
+      "sources": [
+        "C"
+      ],
+      "rank": 9,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C强势平台",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "双金叉确认",
+      "price_state": "待价格确认",
+      "latest_close": 3.07,
+      "action": "只观察",
+      "pullback_zone": [
+        3.02,
+        3.06
+      ],
+      "confirmation_price": 3.18,
+      "maximum_acceptable_price": 3.26,
+      "invalidation_price": 2.9,
+      "reduce_price": 3.61,
+      "final_target_price": 3.89,
+      "review_trading_day": 10,
+      "max_trading_days": 30
+    },
+    {
+      "ticker": "QCOM",
+      "name": "高通",
+      "sources": [
+        "C"
+      ],
+      "rank": 10,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "MACD多头延续",
+      "price_state": "待价格确认",
+      "latest_close": 177.72,
+      "action": "只观察",
+      "pullback_zone": [
+        174.85,
+        177.09
+      ],
+      "confirmation_price": 191.91,
+      "maximum_acceptable_price": 196.39,
+      "invalidation_price": 171.0,
+      "reduce_price": 223.28,
+      "final_target_price": 244.2,
+      "review_trading_day": 10,
+      "max_trading_days": 30
+    }
+  ],
+  "pool": [
+    {
+      "ticker": "AAOI",
+      "name": "Applied Optoelectronics",
+      "sources": [
+        "B"
+      ],
+      "rank": 1,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分转强确认",
+      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
+      "price_state": "日线结构失效价 $94.00",
+      "latest_close": 105.17,
+      "action": "只观察",
+      "pullback_zone": [
+        102.22,
+        103.83
+      ],
+      "confirmation_price": 117.19,
+      "maximum_acceptable_price": 120.42,
+      "invalidation_price": 94.0,
+      "reduce_price": 151.98,
+      "final_target_price": 175.17,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "LRCX",
+      "name": "泛林集团",
+      "sources": [
+        "B"
+      ],
+      "rank": 2,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分转强确认",
+      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
+      "price_state": "日线结构失效价 $265.37",
+      "latest_close": 288.11,
+      "action": "只观察",
+      "pullback_zone": [
+        286.18,
+        289.66
+      ],
+      "confirmation_price": 306.49,
+      "maximum_acceptable_price": 313.45,
+      "invalidation_price": 265.37,
+      "reduce_price": 368.16,
+      "final_target_price": 409.27,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "POWI",
+      "name": "帕沃英蒂格盛",
+      "sources": [
+        "B"
+      ],
+      "rank": 3,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分转强确认",
+      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／本根金叉、动能转正／K在D上方、继续向上",
+      "price_state": "日线结构失效价 $46.71",
+      "latest_close": 50.39,
+      "action": "只观察",
+      "pullback_zone": [
+        49.88,
+        50.45
+      ],
+      "confirmation_price": 58.25,
+      "maximum_acceptable_price": 59.4,
+      "invalidation_price": 46.71,
+      "reduce_price": 75.57,
+      "final_target_price": 87.11,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "GFS",
+      "name": "GlobalFoundries",
+      "sources": [
+        "B"
+      ],
+      "rank": 4,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分转强确认",
+      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
+      "price_state": "日线结构失效价 $42.70",
+      "latest_close": 47.82,
+      "action": "只观察",
+      "pullback_zone": [
+        46.24,
+        46.72
+      ],
+      "confirmation_price": 52.14,
+      "maximum_acceptable_price": 53.1,
+      "invalidation_price": 42.7,
+      "reduce_price": 66.3,
+      "final_target_price": 75.75,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "RXRX",
+      "name": "Recursion Pharmaceuticals",
+      "sources": [
+        "B"
+      ],
+      "rank": 5,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分上升延续",
+      "momentum_volume": "30分·上升延续：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
+      "price_state": "日线结构失效价 $2.92",
+      "latest_close": 3.83,
+      "action": "只观察",
+      "pullback_zone": [
+        3.67,
+        3.73
+      ],
+      "confirmation_price": 3.59,
+      "maximum_acceptable_price": 3.7,
+      "invalidation_price": 2.92,
+      "reduce_price": 4.59,
+      "final_target_price": 5.26,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "SNDK",
+      "name": "闪迪",
+      "sources": [
+        "C"
+      ],
+      "rank": 6,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩/强势平台",
+      "current_stage": "价格技术确认·待风险复核",
+      "momentum_volume": "双金叉确认",
+      "price_state": "价格技术确认",
+      "latest_close": 1791.82,
+      "action": "只观察",
+      "pullback_zone": [
+        1631.16,
+        1656.87
+      ],
+      "confirmation_price": 1631.16,
+      "maximum_acceptable_price": 1682.58,
+      "invalidation_price": 1504.2,
+      "reduce_price": 1821.6,
+      "final_target_price": 1948.56,
+      "review_trading_day": 10,
+      "max_trading_days": 30
+    },
+    {
+      "ticker": "AMPX",
+      "name": "Amprius Technologies",
+      "sources": [
+        "B"
+      ],
+      "rank": 7,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分上升延续",
+      "momentum_volume": "30分·上升延续：已有上升笔结构、回踩未破结构低点／本根金叉、动能转正／高位钝化、维持多头关系",
+      "price_state": "日线结构失效价 $8.76",
+      "latest_close": 9.5,
+      "action": "只观察",
+      "pullback_zone": [
+        9.5,
+        9.62
+      ],
+      "confirmation_price": 11.06,
+      "maximum_acceptable_price": 11.3,
+      "invalidation_price": 8.76,
+      "reduce_price": 14.53,
+      "final_target_price": 16.84,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "ONDS",
+      "name": "Ondas",
+      "sources": [
+        "B"
+      ],
+      "rank": 8,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·B?｜30分上升延续",
+      "momentum_volume": "30分·上升延续：已有上升笔结构、回踩未破结构低点／本根金叉、动能转正／高位钝化、维持多头关系",
+      "price_state": "日线结构失效价 $6.98",
+      "latest_close": 7.39,
+      "action": "只观察",
+      "pullback_zone": [
+        7.39,
+        7.48
+      ],
+      "confirmation_price": 8.12,
+      "maximum_acceptable_price": 8.3,
+      "invalidation_price": 6.98,
+      "reduce_price": 9.83,
+      "final_target_price": 10.97,
+      "review_trading_day": 5,
+      "max_trading_days": 15
+    },
+    {
+      "ticker": "SPCE",
+      "name": "维珍银河",
+      "sources": [
+        "C"
+      ],
+      "rank": 9,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C强势平台",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "双金叉确认",
+      "price_state": "待价格确认",
+      "latest_close": 3.07,
+      "action": "只观察",
+      "pullback_zone": [
+        3.02,
+        3.06
+      ],
+      "confirmation_price": 3.18,
+      "maximum_acceptable_price": 3.26,
+      "invalidation_price": 2.9,
+      "reduce_price": 3.61,
+      "final_target_price": 3.89,
+      "review_trading_day": 10,
+      "max_trading_days": 30
+    },
+    {
+      "ticker": "QCOM",
+      "name": "高通",
+      "sources": [
+        "C"
+      ],
+      "rank": 10,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "MACD多头延续",
+      "price_state": "待价格确认",
+      "latest_close": 177.72,
+      "action": "只观察",
+      "pullback_zone": [
+        174.85,
+        177.09
+      ],
+      "confirmation_price": 191.91,
+      "maximum_acceptable_price": 196.39,
+      "invalidation_price": 171.0,
+      "reduce_price": 223.28,
+      "final_target_price": 244.2,
+      "review_trading_day": 10,
+      "max_trading_days": 30
+    },
+    {
+      "ticker": "AAPL",
+      "name": "苹果",
       "sources": [
         "C"
       ],
@@ -688,25 +592,201 @@
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
       "structure_node": "C趋势回踩/强势平台",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "MACD多头延续",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "AMBA",
+      "name": "安霸",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 1.4526831029080063,
+      "a_latest_volume_ratio": 0.8625604392438553,
+      "structure_node": "A关K·2026-09-17",
+      "current_stage": "A回调1天",
+      "momentum_volume": "A量能·关K/前日 1.45×；当前/关K 0.86×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ASX",
+      "name": "日月光半导体",
+      "sources": [
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "趋势候选·位置偏远不追",
+      "momentum_volume": "双金叉确认",
+      "price_state": "位置偏远不追",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "FTNT",
+      "name": "飞塔信息",
+      "sources": [
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "MACD多头延续",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sources": [
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
       "current_stage": "趋势候选·位置偏远不追",
       "momentum_volume": "KDJ单金叉确认",
       "price_state": "位置偏远不追",
       "action": "待生成交易计划"
     },
     {
-      "ticker": "TEAM",
-      "name": "Atlassian",
+      "ticker": "MSM",
+      "name": "MSC Industrial Direct",
+      "sources": [
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "金叉前/动能改善观察",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "NET",
+      "name": "Cloudflare",
+      "sources": [
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩/强势平台",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "MACD多头延续",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "OKLO",
+      "name": "Oklo Inc",
       "sources": [
         "A"
       ],
       "rank": null,
-      "a_key_date": "2026-09-14",
-      "a_key_volume_ratio": 2.0859592408988568,
-      "a_latest_volume_ratio": 0.6935751479166449,
-      "structure_node": "A关K·2026-09-14",
-      "current_stage": "A回调2天",
-      "momentum_volume": "A量能·关K/前日 2.09×；当前/关K 0.69×",
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 2.215866822016059,
+      "a_latest_volume_ratio": 0.7944165999005882,
+      "structure_node": "A关K·2026-09-17",
+      "current_stage": "A回调1天",
+      "momentum_volume": "A量能·关K/前日 2.22×；当前/关K 0.79×",
       "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "OKTA",
+      "name": "Okta",
+      "sources": [
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "MACD多头延续",
+      "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "SMCI",
+      "name": "超微电脑",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 1.991592084213402,
+      "a_latest_volume_ratio": 0.7690571516323353,
+      "structure_node": "A关K·2026-09-17",
+      "current_stage": "A回调1天",
+      "momentum_volume": "A量能·关K/前日 1.99×；当前/关K 0.77×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "TEM",
+      "name": "Tempus AI",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 2.2252515509490776,
+      "a_latest_volume_ratio": 0.552188040567759,
+      "structure_node": "A关K·2026-09-17",
+      "current_stage": "A回调1天",
+      "momentum_volume": "A量能·关K/前日 2.23×；当前/关K 0.55×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "TSM",
+      "name": "台积电",
+      "sources": [
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "趋势候选·位置偏远不追",
+      "momentum_volume": "双金叉确认",
+      "price_state": "位置偏远不追",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "VSTM",
+      "name": "Verastem",
+      "sources": [
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "structure_node": "C趋势回踩",
+      "current_stage": "回调/整理观察·待价格确认",
+      "momentum_volume": "金叉前/动能改善观察",
+      "price_state": "待价格确认",
       "action": "待生成交易计划"
     }
   ]

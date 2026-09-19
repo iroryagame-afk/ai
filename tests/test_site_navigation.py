@@ -200,8 +200,9 @@ class SiteNavigationTests(unittest.TestCase):
         sample = SITE_NAV.nav("index.html")
         a_date = json.loads((ROOT / "a-share-trend-candidates/data.json").read_text(encoding="utf-8"))["data_date"]
         us_date = json.loads((ROOT / "us-trend-candidates/data.json").read_text(encoding="utf-8"))["data_date"]
+        bingshen_date = json.loads((ROOT / "bingshen/data.json").read_text(encoding="utf-8"))["data_date"]
         self.assertIn('轮动加速度 <time class="csn-nav-refresh"', sample)
-        self.assertIn('08-28 更新</time>', sample)
+        self.assertIn(f'冰神盘鉴 <time class="csn-nav-refresh" datetime="{bingshen_date}"', sample)
         self.assertIn(f'ABC候选全表 <time class="csn-nav-refresh" datetime="{a_date}"', sample)
         self.assertIn(f'每日ABC候选 <time class="csn-nav-refresh" datetime="{us_date}"', sample)
         self.assertNotIn('class="csn-nav-refresh"', re.search(r'<div class="csn-menu">(.*?)data-group="macro"', sample, re.S).group(1))
