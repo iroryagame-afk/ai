@@ -374,14 +374,29 @@ def main():
     ab = read(ab_pointer) if ab_pointer.exists() else {}
     if not args.run and ab.get("final_readback_ok") and ab.get("asof", "") > primary.get("asof", ""):
         from render_a_observe_ab_page import build
+        supplement_file = args.output_dir / "data.json"
+        supplement = read(supplement_file).get("research_review") if supplement_file.exists() else None
         build(Path(ab["run"]), args.output_dir)
+        if supplement and ab["asof"] <= supplement["market_asof"]:
+            generated = read(supplement_file)
+            generated["research_review"] = supplement
+            supplement_file.write_text(json.dumps(generated, ensure_ascii=False, indent=2) + "\n")
+            from a_observe_research_overlay import apply
+            apply(args.output_dir)
         print(json.dumps({"data_date": ab["asof"], "scope": ab["scope"], "output_dir": str(args.output_dir)}, ensure_ascii=False))
         return
     run = args.run or Path(primary["run"])
     data = public_data(run, args.futu_tabs, args.taxonomy, args.shortage_inventory)
     args.output_dir.mkdir(parents=True, exist_ok=True)
+    old_file = args.output_dir / "data.json"
+    if old_file.exists():
+        prior = read(old_file).get("research_review")
+        if prior and data.get("data_date", "") <= prior["market_asof"]:
+            data["research_review"] = prior
     (args.output_dir / "data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (args.output_dir / "index.html").write_text(render(data), encoding="utf-8")
+    from a_observe_research_overlay import apply
+    apply(args.output_dir)
     print(json.dumps({"output_dir": str(args.output_dir), "data_date": data["data_date"], "rows": data["candidate_count"], "focus": data["selected_count"]}, ensure_ascii=False))
 
 if __name__ == "__main__":
