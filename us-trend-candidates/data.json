@@ -1,150 +1,58 @@
 {
-  "schema_version": "US_DAILY_ABC_PUBLIC_1.2",
+  "schema_version": "US_DAILY_ABC_PUBLIC_1.3",
   "data_date": "2026-09-18",
-  "collected_at_ny": "2026-09-18T20:36:22.537290-04:00",
+  "collected_at_ny": "2026-09-19T22:42:11.292133-04:00",
   "data_boundary": "美股完整常规时段日K，前复权；点位按当日完整日K重算",
-  "source_sha256": "28648d6e2e1bf1507fe6761f5d755b36672649ea20d38e19910cb8ddd748c1ba",
+  "source_sha256": "b4d9a3c07c7d9519bc70ace1153f2600de7eef483d0f472d156ba6e0bacbdaef",
   "coverage": {
     "A": 0.995575221238938,
     "B": 0.9646017699115044,
     "C": 0.9646017699115044
   },
   "counts": {
-    "A": 4,
-    "B": 7,
+    "A": 90,
+    "B": 94,
     "C": 12
   },
-  "candidate_count": 23,
+  "candidate_count": 141,
   "selected_count": 10,
   "market_defensive": false,
   "m_watch_readback_verified": true,
+  "jev_reviewed_count": 7,
+  "jev_scope": "JEV只复核已传入的公开证据片段，不改变ABC资格、技术名次或交易动作",
   "top": [
-    {
-      "ticker": "AAOI",
-      "name": "Applied Optoelectronics",
-      "sources": [
-        "B"
-      ],
-      "rank": 1,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分转强确认",
-      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
-      "price_state": "日线结构失效价 $94.00",
-      "latest_close": 105.17,
-      "action": "只观察",
-      "pullback_zone": [
-        102.22,
-        103.83
-      ],
-      "confirmation_price": 117.19,
-      "maximum_acceptable_price": 120.42,
-      "invalidation_price": 94.0,
-      "reduce_price": 151.98,
-      "final_target_price": 175.17,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "LRCX",
-      "name": "泛林集团",
-      "sources": [
-        "B"
-      ],
-      "rank": 2,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分转强确认",
-      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
-      "price_state": "日线结构失效价 $265.37",
-      "latest_close": 288.11,
-      "action": "只观察",
-      "pullback_zone": [
-        286.18,
-        289.66
-      ],
-      "confirmation_price": 306.49,
-      "maximum_acceptable_price": 313.45,
-      "invalidation_price": 265.37,
-      "reduce_price": 368.16,
-      "final_target_price": 409.27,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "POWI",
-      "name": "帕沃英蒂格盛",
-      "sources": [
-        "B"
-      ],
-      "rank": 3,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分转强确认",
-      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／本根金叉、动能转正／K在D上方、继续向上",
-      "price_state": "日线结构失效价 $46.71",
-      "latest_close": 50.39,
-      "action": "只观察",
-      "pullback_zone": [
-        49.88,
-        50.45
-      ],
-      "confirmation_price": 58.25,
-      "maximum_acceptable_price": 59.4,
-      "invalidation_price": 46.71,
-      "reduce_price": 75.57,
-      "final_target_price": 87.11,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "GFS",
-      "name": "GlobalFoundries",
-      "sources": [
-        "B"
-      ],
-      "rank": 4,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分转强确认",
-      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
-      "price_state": "日线结构失效价 $42.70",
-      "latest_close": 47.82,
-      "action": "只观察",
-      "pullback_zone": [
-        46.24,
-        46.72
-      ],
-      "confirmation_price": 52.14,
-      "maximum_acceptable_price": 53.1,
-      "invalidation_price": 42.7,
-      "reduce_price": 66.3,
-      "final_target_price": 75.75,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
     {
       "ticker": "RXRX",
       "name": "Recursion Pharmaceuticals",
       "sources": [
+        "A",
         "B"
       ],
-      "rank": 5,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分上升延续",
-      "momentum_volume": "30分·上升延续：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
-      "price_state": "日线结构失效价 $2.92",
+      "rank": 1,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 2.1287370331065754,
+      "a_latest_volume_ratio": 2.5917587213483677,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [
+          "Recursion remained loss-making in Q2 2026.",
+          "Recursion reported Genentech advanced a first neuroscience target.",
+          "REC-7735 was IND-cleared as of the Q2 2026 update."
+        ],
+        "uncertain": [],
+        "request_sha256": "337bb62d9b2e04c197b4242bacb9ef92534b5607bd3362b675cb2f03cd636a20",
+        "sources": [
+          "https://ir.recursion.com/news-releases/news-release-details/recursion-reports-second-quarter-financial-results-genentech"
+        ],
+        "summary_zh": "Q2仍亏损；Genentech推进首个神经科学靶点；REC-7735获IND许可。"
+      },
+      "structure_node": "A关K·2026-09-14；B底分型·2026-08-18；标签B?",
+      "current_stage": "关K后第4日；回调经过4个交易日／实际收跌2日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.13×；当前/关K 2.59×；转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $2.92",
       "latest_close": 3.83,
       "action": "只观察",
       "pullback_zone": [
@@ -156,277 +64,424 @@
       "invalidation_price": 2.92,
       "reduce_price": 4.59,
       "final_target_price": 5.26,
-      "review_trading_day": 5,
-      "max_trading_days": 15
+      "review_trading_day": 3,
+      "max_trading_days": 10
     },
     {
-      "ticker": "SNDK",
-      "name": "闪迪",
+      "ticker": "ASX",
+      "name": "日月光半导体",
       "sources": [
+        "B",
         "C"
       ],
-      "rank": 6,
+      "rank": 2,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩/强势平台",
-      "current_stage": "价格技术确认·待风险复核",
-      "momentum_volume": "双金叉确认",
-      "price_state": "价格技术确认",
-      "latest_close": 1791.82,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-14；标签B?；C趋势回踩",
+      "current_stage": "B·底分型观察｜本轮金叉转强；趋势候选·位置偏远不追",
+      "momentum_volume": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上；双金叉确认",
+      "price_state": "日线结构失效价 $36.68；位置偏远不追",
+      "latest_close": 41.63,
       "action": "只观察",
       "pullback_zone": [
-        1631.16,
-        1656.87
+        39.1,
+        39.49
       ],
-      "confirmation_price": 1631.16,
-      "maximum_acceptable_price": 1682.58,
-      "invalidation_price": 1504.2,
-      "reduce_price": 1821.6,
-      "final_target_price": 1948.56,
+      "confirmation_price": 40.29,
+      "maximum_acceptable_price": 41.09,
+      "invalidation_price": 36.68,
+      "reduce_price": 45.7,
+      "final_target_price": 49.31,
       "review_trading_day": 10,
       "max_trading_days": 30
     },
     {
-      "ticker": "AMPX",
-      "name": "Amprius Technologies",
+      "ticker": "NBIS",
+      "name": "NEBIUS",
       "sources": [
+        "A",
+        "B"
+      ],
+      "rank": 3,
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 2.2106587620054343,
+      "a_latest_volume_ratio": 0.6938364609475511,
+      "m30_status": "上升延续",
+      "m30_summary": "上升延续：高低点抬高／MACD金叉扩张／KDJ多头保持",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [
+          "Nebius published Q2 2026 financial results on August 12, 2026."
+        ],
+        "uncertain": [
+          "This excerpt does not provide enough numerical data to validate valuation or profitability."
+        ],
+        "request_sha256": "d126d7924f00a486a17b6012172319700094fb4b2bb18dfea679ad4cb20c8be8",
+        "sources": [
+          "https://nebius.com/financials"
+        ],
+        "summary_zh": "Q2财报发布日期获支持；当前证据不足以验证估值及盈利能力。"
+      },
+      "structure_node": "A关K·2026-09-17；B底分型·2026-09-14；标签B?",
+      "current_stage": "关K后第1日；尚无收盘回调；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 2.21×；当前/关K 0.69×；上升延续：高低点抬高／MACD金叉扩张／KDJ多头保持",
+      "price_state": "A原底未破；日线结构失效价 $203.87",
+      "latest_close": 223.54,
+      "action": "只观察",
+      "pullback_zone": [
+        219.0,
+        222.69
+      ],
+      "confirmation_price": 232.85,
+      "maximum_acceptable_price": 240.23,
+      "invalidation_price": 203.87,
+      "reduce_price": 276.32,
+      "final_target_price": 305.3,
+      "review_trading_day": 3,
+      "max_trading_days": 10
+    },
+    {
+      "ticker": "GEV",
+      "name": "GE Vernova",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": 4,
+      "a_key_date": "2026-09-16",
+      "a_key_volume_ratio": 1.7409347652734501,
+      "a_latest_volume_ratio": 1.1523170671846403,
+      "m30_status": "上升延续",
+      "m30_summary": "上升延续：高低点抬高／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [
+          "GE Vernova reported Q2 2026 revenue of $11.1 billion.",
+          "GE Vernova reported Q2 2026 free cash flow of $5.1 billion.",
+          "GE Vernova raised its 2026 guidance in the Q2 release."
+        ],
+        "uncertain": [],
+        "request_sha256": "86e5e21bde2f51bee18056bbfc8081503f0c391355cec8c636effac40fb0bcc1",
+        "sources": [
+          "https://www.gevernova.com/news/press-releases/ge-vernova-reports-second-quarter-2026-financial-results-raises-2026-financial"
+        ],
+        "summary_zh": "Q2收入、自由现金流及上调2026年指引均获支持。"
+      },
+      "structure_node": "A关K·2026-09-16；B底分型·2026-09-14；标签B?",
+      "current_stage": "关K后第2日；回调经过2个交易日／实际收跌1日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.74×；当前/关K 1.15×；上升延续：高低点抬高／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $868.25",
+      "latest_close": 940.33,
+      "action": "只观察",
+      "pullback_zone": [
+        938.87,
+        948.39
+      ],
+      "confirmation_price": 971.79,
+      "maximum_acceptable_price": 990.84,
+      "invalidation_price": 868.25,
+      "reduce_price": 1127.1,
+      "final_target_price": 1230.64,
+      "review_trading_day": 3,
+      "max_trading_days": 10
+    },
+    {
+      "ticker": "ENTG",
+      "name": "英特格",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": 5,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.65537307439738,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [
+          "Entegris reported Q2 2026 net sales of $883.2 million.",
+          "Entegris reported Q2 2026 GAAP net income of $93.6 million.",
+          "The Q3 sales range is guidance rather than realized revenue."
+        ],
+        "uncertain": [],
+        "request_sha256": "a37378b8e12fff3bfebfb86e32f26a7f227f1ae9627c7e0c3d02553eae3bb1c2",
+        "sources": [
+          "https://investor.entegris.com/financials/default.aspx"
+        ],
+        "summary_zh": "Q2销售额和GAAP净利润获支持；Q3销售区间属于指引，尚非已实现收入。"
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-03；标签B?",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.66×；转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $125.78",
+      "latest_close": 142.25,
+      "action": "只观察",
+      "pullback_zone": [
+        139.83,
+        141.35
+      ],
+      "confirmation_price": 136.02,
+      "maximum_acceptable_price": 139.06,
+      "invalidation_price": 125.78,
+      "reduce_price": 151.39,
+      "final_target_price": 161.63,
+      "review_trading_day": 3,
+      "max_trading_days": 10
+    },
+    {
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": 6,
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 2.215562015840987,
+      "a_latest_volume_ratio": 1.1389452334316104,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [
+          "Arm published fiscal 2027 first-quarter results on July 29, 2026."
+        ],
+        "uncertain": [
+          "This excerpt does not provide enough numerical data to validate valuation or earnings quality."
+        ],
+        "request_sha256": "5d9e61bd26b8d09779257ad9ae1eec1b816fa9530efcecee7f6ce7ca4f87f049",
+        "sources": [
+          "https://investors.arm.com/financials/quarterly-annual-results"
+        ],
+        "summary_zh": "FY2027第一季度财报发布日期获支持；当前证据不足以验证估值及盈利质量。"
+      },
+      "structure_node": "A关K·2026-09-17；B底分型·2026-08-03；标签无标签",
+      "current_stage": "关K后第1日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.22×；当前/关K 1.14×；转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $219.39",
+      "latest_close": 275.61,
+      "action": "只观察",
+      "pullback_zone": [
+        263.83,
+        267.47
+      ],
+      "confirmation_price": 267.0,
+      "maximum_acceptable_price": 274.29,
+      "invalidation_price": 219.39,
+      "reduce_price": 338.42,
+      "final_target_price": 386.03,
+      "review_trading_day": 3,
+      "max_trading_days": 10
+    },
+    {
+      "ticker": "COHR",
+      "name": "Coherent",
+      "sources": [
+        "A",
         "B"
       ],
       "rank": 7,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分上升延续",
-      "momentum_volume": "30分·上升延续：已有上升笔结构、回踩未破结构低点／本根金叉、动能转正／高位钝化、维持多头关系",
-      "price_state": "日线结构失效价 $8.76",
-      "latest_close": 9.5,
+      "a_key_date": "2026-09-16",
+      "a_key_volume_ratio": 1.737892053615162,
+      "a_latest_volume_ratio": 1.3483116052917268,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-16；B底分型·2026-09-03；标签无标签",
+      "current_stage": "关K后第2日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.74×；当前/关K 1.35×；转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $255.25",
+      "latest_close": 317.36,
       "action": "只观察",
       "pullback_zone": [
-        9.5,
-        9.62
+        304.44,
+        309.25
       ],
-      "confirmation_price": 11.06,
-      "maximum_acceptable_price": 11.3,
-      "invalidation_price": 8.76,
-      "reduce_price": 14.53,
-      "final_target_price": 16.84,
-      "review_trading_day": 5,
-      "max_trading_days": 15
+      "confirmation_price": 312.42,
+      "maximum_acceptable_price": 322.04,
+      "invalidation_price": 255.25,
+      "reduce_price": 398.18,
+      "final_target_price": 455.35,
+      "review_trading_day": 3,
+      "max_trading_days": 10
     },
     {
-      "ticker": "ONDS",
-      "name": "Ondas",
+      "ticker": "ICHR",
+      "name": "Ichor Holdings",
       "sources": [
+        "A",
         "B"
       ],
       "rank": 8,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.511609832581196,
       "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分上升延续",
-      "momentum_volume": "30分·上升延续：已有上升笔结构、回踩未破结构低点／本根金叉、动能转正／高位钝化、维持多头关系",
-      "price_state": "日线结构失效价 $6.98",
-      "latest_close": 7.39,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [],
+        "uncertain": [
+          "Ichor published second-quarter 2026 financial results on August 3, 2026.",
+          "This excerpt does not provide enough numerical data to validate profitability or valuation."
+        ],
+        "request_sha256": "190bb2c86ee7526038c0dae1768828261e3fe3ea83deba00ddf4f063e047871d",
+        "sources": [
+          "https://ir.ichorsystems.com/press-releases"
+        ],
+        "summary_zh": "Q2财报发布日期和财务判断仍属不确定，需补充数字证据。"
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-03；标签无标签",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.51×；转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $49.80",
+      "latest_close": 54.8,
       "action": "只观察",
       "pullback_zone": [
-        7.39,
-        7.48
+        54.16,
+        54.9
       ],
-      "confirmation_price": 8.12,
-      "maximum_acceptable_price": 8.3,
-      "invalidation_price": 6.98,
-      "reduce_price": 9.83,
-      "final_target_price": 10.97,
-      "review_trading_day": 5,
-      "max_trading_days": 15
+      "confirmation_price": 65.03,
+      "maximum_acceptable_price": 66.51,
+      "invalidation_price": 49.8,
+      "reduce_price": 87.88,
+      "final_target_price": 103.11,
+      "review_trading_day": 3,
+      "max_trading_days": 10
     },
     {
-      "ticker": "SPCE",
-      "name": "维珍银河",
+      "ticker": "MU",
+      "name": "美光科技",
       "sources": [
-        "C"
+        "B"
       ],
       "rank": 9,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C强势平台",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "双金叉确认",
-      "price_state": "待价格确认",
-      "latest_close": 3.07,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [
+          "Micron reported fiscal Q3 2026 revenue of $41.456 billion.",
+          "Micron reported fiscal Q3 2026 GAAP net income of $28.243 billion.",
+          "Micron had a fiscal Q4 earnings event scheduled for September 30, 2026."
+        ],
+        "uncertain": [],
+        "request_sha256": "94dce04c4c6f7fa5368049416f173fd10f8e616690cbfa953bde4782d2bb438d",
+        "sources": [
+          "https://investors.micron.com/financials/quarterly-results/"
+        ],
+        "summary_zh": "财年Q3收入、GAAP净利润及9月30日财报事件均获支持。"
+      },
+      "structure_node": "B底分型·2026-09-14；标签无标签",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "日线结构失效价 $902.60",
+      "latest_close": 1015.8,
       "action": "只观察",
       "pullback_zone": [
-        3.02,
-        3.06
+        968.64,
+        979.39
       ],
-      "confirmation_price": 3.18,
-      "maximum_acceptable_price": 3.26,
-      "invalidation_price": 2.9,
-      "reduce_price": 3.61,
-      "final_target_price": 3.89,
-      "review_trading_day": 10,
-      "max_trading_days": 30
+      "confirmation_price": 986.2,
+      "maximum_acceptable_price": 1007.69,
+      "invalidation_price": 902.6,
+      "reduce_price": 1111.6,
+      "final_target_price": 1195.2,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
-      "ticker": "QCOM",
-      "name": "高通",
+      "ticker": "ASML",
+      "name": "阿斯麦",
       "sources": [
-        "C"
+        "B"
       ],
       "rank": 10,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
-      "latest_close": 177.72,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-14；标签B?",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "日线结构失效价 $1,572.84",
+      "latest_close": 1679.92,
       "action": "只观察",
       "pullback_zone": [
-        174.85,
-        177.09
+        1656.81,
+        1670.49
       ],
-      "confirmation_price": 191.91,
-      "maximum_acceptable_price": 196.39,
-      "invalidation_price": 171.0,
-      "reduce_price": 223.28,
-      "final_target_price": 244.2,
-      "review_trading_day": 10,
-      "max_trading_days": 30
+      "confirmation_price": 1702.9,
+      "maximum_acceptable_price": 1730.26,
+      "invalidation_price": 1572.84,
+      "reduce_price": 1897.99,
+      "final_target_price": 2028.05,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     }
   ],
   "pool": [
     {
-      "ticker": "AAOI",
-      "name": "Applied Optoelectronics",
-      "sources": [
-        "B"
-      ],
-      "rank": 1,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分转强确认",
-      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
-      "price_state": "日线结构失效价 $94.00",
-      "latest_close": 105.17,
-      "action": "只观察",
-      "pullback_zone": [
-        102.22,
-        103.83
-      ],
-      "confirmation_price": 117.19,
-      "maximum_acceptable_price": 120.42,
-      "invalidation_price": 94.0,
-      "reduce_price": 151.98,
-      "final_target_price": 175.17,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "LRCX",
-      "name": "泛林集团",
-      "sources": [
-        "B"
-      ],
-      "rank": 2,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分转强确认",
-      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
-      "price_state": "日线结构失效价 $265.37",
-      "latest_close": 288.11,
-      "action": "只观察",
-      "pullback_zone": [
-        286.18,
-        289.66
-      ],
-      "confirmation_price": 306.49,
-      "maximum_acceptable_price": 313.45,
-      "invalidation_price": 265.37,
-      "reduce_price": 368.16,
-      "final_target_price": 409.27,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "POWI",
-      "name": "帕沃英蒂格盛",
-      "sources": [
-        "B"
-      ],
-      "rank": 3,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分转强确认",
-      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／本根金叉、动能转正／K在D上方、继续向上",
-      "price_state": "日线结构失效价 $46.71",
-      "latest_close": 50.39,
-      "action": "只观察",
-      "pullback_zone": [
-        49.88,
-        50.45
-      ],
-      "confirmation_price": 58.25,
-      "maximum_acceptable_price": 59.4,
-      "invalidation_price": 46.71,
-      "reduce_price": 75.57,
-      "final_target_price": 87.11,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
-      "ticker": "GFS",
-      "name": "GlobalFoundries",
-      "sources": [
-        "B"
-      ],
-      "rank": 4,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分转强确认",
-      "momentum_volume": "30分·转强确认：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
-      "price_state": "日线结构失效价 $42.70",
-      "latest_close": 47.82,
-      "action": "只观察",
-      "pullback_zone": [
-        46.24,
-        46.72
-      ],
-      "confirmation_price": 52.14,
-      "maximum_acceptable_price": 53.1,
-      "invalidation_price": 42.7,
-      "reduce_price": 66.3,
-      "final_target_price": 75.75,
-      "review_trading_day": 5,
-      "max_trading_days": 15
-    },
-    {
       "ticker": "RXRX",
       "name": "Recursion Pharmaceuticals",
       "sources": [
+        "A",
         "B"
       ],
-      "rank": 5,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分上升延续",
-      "momentum_volume": "30分·上升延续：低点抬高并突破相关反弹高点／金叉保持、交叉差扩大／高位钝化、维持多头关系",
-      "price_state": "日线结构失效价 $2.92",
+      "rank": 1,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 2.1287370331065754,
+      "a_latest_volume_ratio": 2.5917587213483677,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [
+          "Recursion remained loss-making in Q2 2026.",
+          "Recursion reported Genentech advanced a first neuroscience target.",
+          "REC-7735 was IND-cleared as of the Q2 2026 update."
+        ],
+        "uncertain": [],
+        "request_sha256": "337bb62d9b2e04c197b4242bacb9ef92534b5607bd3362b675cb2f03cd636a20",
+        "sources": [
+          "https://ir.recursion.com/news-releases/news-release-details/recursion-reports-second-quarter-financial-results-genentech"
+        ],
+        "summary_zh": "Q2仍亏损；Genentech推进首个神经科学靶点；REC-7735获IND许可。"
+      },
+      "structure_node": "A关K·2026-09-14；B底分型·2026-08-18；标签B?",
+      "current_stage": "关K后第4日；回调经过4个交易日／实际收跌2日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.13×；当前/关K 2.59×；转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $2.92",
       "latest_close": 3.83,
       "action": "只观察",
       "pullback_zone": [
@@ -438,195 +493,1551 @@
       "invalidation_price": 2.92,
       "reduce_price": 4.59,
       "final_target_price": 5.26,
-      "review_trading_day": 5,
-      "max_trading_days": 15
+      "review_trading_day": 3,
+      "max_trading_days": 10
     },
     {
-      "ticker": "SNDK",
-      "name": "闪迪",
+      "ticker": "ASX",
+      "name": "日月光半导体",
       "sources": [
+        "B",
         "C"
       ],
-      "rank": 6,
+      "rank": 2,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩/强势平台",
-      "current_stage": "价格技术确认·待风险复核",
-      "momentum_volume": "双金叉确认",
-      "price_state": "价格技术确认",
-      "latest_close": 1791.82,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-14；标签B?；C趋势回踩",
+      "current_stage": "B·底分型观察｜本轮金叉转强；趋势候选·位置偏远不追",
+      "momentum_volume": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上；双金叉确认",
+      "price_state": "日线结构失效价 $36.68；位置偏远不追",
+      "latest_close": 41.63,
       "action": "只观察",
       "pullback_zone": [
-        1631.16,
-        1656.87
+        39.1,
+        39.49
       ],
-      "confirmation_price": 1631.16,
-      "maximum_acceptable_price": 1682.58,
-      "invalidation_price": 1504.2,
-      "reduce_price": 1821.6,
-      "final_target_price": 1948.56,
+      "confirmation_price": 40.29,
+      "maximum_acceptable_price": 41.09,
+      "invalidation_price": 36.68,
+      "reduce_price": 45.7,
+      "final_target_price": 49.31,
       "review_trading_day": 10,
       "max_trading_days": 30
     },
     {
-      "ticker": "AMPX",
-      "name": "Amprius Technologies",
+      "ticker": "NBIS",
+      "name": "NEBIUS",
       "sources": [
+        "A",
+        "B"
+      ],
+      "rank": 3,
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 2.2106587620054343,
+      "a_latest_volume_ratio": 0.6938364609475511,
+      "m30_status": "上升延续",
+      "m30_summary": "上升延续：高低点抬高／MACD金叉扩张／KDJ多头保持",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [
+          "Nebius published Q2 2026 financial results on August 12, 2026."
+        ],
+        "uncertain": [
+          "This excerpt does not provide enough numerical data to validate valuation or profitability."
+        ],
+        "request_sha256": "d126d7924f00a486a17b6012172319700094fb4b2bb18dfea679ad4cb20c8be8",
+        "sources": [
+          "https://nebius.com/financials"
+        ],
+        "summary_zh": "Q2财报发布日期获支持；当前证据不足以验证估值及盈利能力。"
+      },
+      "structure_node": "A关K·2026-09-17；B底分型·2026-09-14；标签B?",
+      "current_stage": "关K后第1日；尚无收盘回调；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 2.21×；当前/关K 0.69×；上升延续：高低点抬高／MACD金叉扩张／KDJ多头保持",
+      "price_state": "A原底未破；日线结构失效价 $203.87",
+      "latest_close": 223.54,
+      "action": "只观察",
+      "pullback_zone": [
+        219.0,
+        222.69
+      ],
+      "confirmation_price": 232.85,
+      "maximum_acceptable_price": 240.23,
+      "invalidation_price": 203.87,
+      "reduce_price": 276.32,
+      "final_target_price": 305.3,
+      "review_trading_day": 3,
+      "max_trading_days": 10
+    },
+    {
+      "ticker": "GEV",
+      "name": "GE Vernova",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": 4,
+      "a_key_date": "2026-09-16",
+      "a_key_volume_ratio": 1.7409347652734501,
+      "a_latest_volume_ratio": 1.1523170671846403,
+      "m30_status": "上升延续",
+      "m30_summary": "上升延续：高低点抬高／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [
+          "GE Vernova reported Q2 2026 revenue of $11.1 billion.",
+          "GE Vernova reported Q2 2026 free cash flow of $5.1 billion.",
+          "GE Vernova raised its 2026 guidance in the Q2 release."
+        ],
+        "uncertain": [],
+        "request_sha256": "86e5e21bde2f51bee18056bbfc8081503f0c391355cec8c636effac40fb0bcc1",
+        "sources": [
+          "https://www.gevernova.com/news/press-releases/ge-vernova-reports-second-quarter-2026-financial-results-raises-2026-financial"
+        ],
+        "summary_zh": "Q2收入、自由现金流及上调2026年指引均获支持。"
+      },
+      "structure_node": "A关K·2026-09-16；B底分型·2026-09-14；标签B?",
+      "current_stage": "关K后第2日；回调经过2个交易日／实际收跌1日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.74×；当前/关K 1.15×；上升延续：高低点抬高／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $868.25",
+      "latest_close": 940.33,
+      "action": "只观察",
+      "pullback_zone": [
+        938.87,
+        948.39
+      ],
+      "confirmation_price": 971.79,
+      "maximum_acceptable_price": 990.84,
+      "invalidation_price": 868.25,
+      "reduce_price": 1127.1,
+      "final_target_price": 1230.64,
+      "review_trading_day": 3,
+      "max_trading_days": 10
+    },
+    {
+      "ticker": "ENTG",
+      "name": "英特格",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": 5,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.65537307439738,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [
+          "Entegris reported Q2 2026 net sales of $883.2 million.",
+          "Entegris reported Q2 2026 GAAP net income of $93.6 million.",
+          "The Q3 sales range is guidance rather than realized revenue."
+        ],
+        "uncertain": [],
+        "request_sha256": "a37378b8e12fff3bfebfb86e32f26a7f227f1ae9627c7e0c3d02553eae3bb1c2",
+        "sources": [
+          "https://investor.entegris.com/financials/default.aspx"
+        ],
+        "summary_zh": "Q2销售额和GAAP净利润获支持；Q3销售区间属于指引，尚非已实现收入。"
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-03；标签B?",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.66×；转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $125.78",
+      "latest_close": 142.25,
+      "action": "只观察",
+      "pullback_zone": [
+        139.83,
+        141.35
+      ],
+      "confirmation_price": 136.02,
+      "maximum_acceptable_price": 139.06,
+      "invalidation_price": 125.78,
+      "reduce_price": 151.39,
+      "final_target_price": 161.63,
+      "review_trading_day": 3,
+      "max_trading_days": 10
+    },
+    {
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": 6,
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 2.215562015840987,
+      "a_latest_volume_ratio": 1.1389452334316104,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [
+          "Arm published fiscal 2027 first-quarter results on July 29, 2026."
+        ],
+        "uncertain": [
+          "This excerpt does not provide enough numerical data to validate valuation or earnings quality."
+        ],
+        "request_sha256": "5d9e61bd26b8d09779257ad9ae1eec1b816fa9530efcecee7f6ce7ca4f87f049",
+        "sources": [
+          "https://investors.arm.com/financials/quarterly-annual-results"
+        ],
+        "summary_zh": "FY2027第一季度财报发布日期获支持；当前证据不足以验证估值及盈利质量。"
+      },
+      "structure_node": "A关K·2026-09-17；B底分型·2026-08-03；标签无标签",
+      "current_stage": "关K后第1日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.22×；当前/关K 1.14×；转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $219.39",
+      "latest_close": 275.61,
+      "action": "只观察",
+      "pullback_zone": [
+        263.83,
+        267.47
+      ],
+      "confirmation_price": 267.0,
+      "maximum_acceptable_price": 274.29,
+      "invalidation_price": 219.39,
+      "reduce_price": 338.42,
+      "final_target_price": 386.03,
+      "review_trading_day": 3,
+      "max_trading_days": 10
+    },
+    {
+      "ticker": "COHR",
+      "name": "Coherent",
+      "sources": [
+        "A",
         "B"
       ],
       "rank": 7,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
-      "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分上升延续",
-      "momentum_volume": "30分·上升延续：已有上升笔结构、回踩未破结构低点／本根金叉、动能转正／高位钝化、维持多头关系",
-      "price_state": "日线结构失效价 $8.76",
-      "latest_close": 9.5,
+      "a_key_date": "2026-09-16",
+      "a_key_volume_ratio": 1.737892053615162,
+      "a_latest_volume_ratio": 1.3483116052917268,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-16；B底分型·2026-09-03；标签无标签",
+      "current_stage": "关K后第2日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.74×；当前/关K 1.35×；转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $255.25",
+      "latest_close": 317.36,
       "action": "只观察",
       "pullback_zone": [
-        9.5,
-        9.62
+        304.44,
+        309.25
       ],
-      "confirmation_price": 11.06,
-      "maximum_acceptable_price": 11.3,
-      "invalidation_price": 8.76,
-      "reduce_price": 14.53,
-      "final_target_price": 16.84,
-      "review_trading_day": 5,
-      "max_trading_days": 15
+      "confirmation_price": 312.42,
+      "maximum_acceptable_price": 322.04,
+      "invalidation_price": 255.25,
+      "reduce_price": 398.18,
+      "final_target_price": 455.35,
+      "review_trading_day": 3,
+      "max_trading_days": 10
     },
     {
-      "ticker": "ONDS",
-      "name": "Ondas",
+      "ticker": "ICHR",
+      "name": "Ichor Holdings",
       "sources": [
+        "A",
         "B"
       ],
       "rank": 8,
-      "a_key_date": null,
-      "a_key_volume_ratio": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.511609832581196,
       "a_latest_volume_ratio": null,
-      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
-      "current_stage": "B·B?｜30分上升延续",
-      "momentum_volume": "30分·上升延续：已有上升笔结构、回踩未破结构低点／本根金叉、动能转正／高位钝化、维持多头关系",
-      "price_state": "日线结构失效价 $6.98",
-      "latest_close": 7.39,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [],
+        "uncertain": [
+          "Ichor published second-quarter 2026 financial results on August 3, 2026.",
+          "This excerpt does not provide enough numerical data to validate profitability or valuation."
+        ],
+        "request_sha256": "190bb2c86ee7526038c0dae1768828261e3fe3ea83deba00ddf4f063e047871d",
+        "sources": [
+          "https://ir.ichorsystems.com/press-releases"
+        ],
+        "summary_zh": "Q2财报发布日期和财务判断仍属不确定，需补充数字证据。"
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-03；标签无标签",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.51×；转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $49.80",
+      "latest_close": 54.8,
       "action": "只观察",
       "pullback_zone": [
-        7.39,
-        7.48
+        54.16,
+        54.9
       ],
-      "confirmation_price": 8.12,
-      "maximum_acceptable_price": 8.3,
-      "invalidation_price": 6.98,
-      "reduce_price": 9.83,
-      "final_target_price": 10.97,
-      "review_trading_day": 5,
-      "max_trading_days": 15
+      "confirmation_price": 65.03,
+      "maximum_acceptable_price": 66.51,
+      "invalidation_price": 49.8,
+      "reduce_price": 87.88,
+      "final_target_price": 103.11,
+      "review_trading_day": 3,
+      "max_trading_days": 10
     },
     {
-      "ticker": "SPCE",
-      "name": "维珍银河",
+      "ticker": "MU",
+      "name": "美光科技",
       "sources": [
-        "C"
+        "B"
       ],
       "rank": 9,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C强势平台",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "双金叉确认",
-      "price_state": "待价格确认",
-      "latest_close": 3.07,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "reviewed",
+        "model": "jev-1.13.0",
+        "supported": [
+          "Micron reported fiscal Q3 2026 revenue of $41.456 billion.",
+          "Micron reported fiscal Q3 2026 GAAP net income of $28.243 billion.",
+          "Micron had a fiscal Q4 earnings event scheduled for September 30, 2026."
+        ],
+        "uncertain": [],
+        "request_sha256": "94dce04c4c6f7fa5368049416f173fd10f8e616690cbfa953bde4782d2bb438d",
+        "sources": [
+          "https://investors.micron.com/financials/quarterly-results/"
+        ],
+        "summary_zh": "财年Q3收入、GAAP净利润及9月30日财报事件均获支持。"
+      },
+      "structure_node": "B底分型·2026-09-14；标签无标签",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "日线结构失效价 $902.60",
+      "latest_close": 1015.8,
       "action": "只观察",
       "pullback_zone": [
-        3.02,
-        3.06
+        968.64,
+        979.39
       ],
-      "confirmation_price": 3.18,
-      "maximum_acceptable_price": 3.26,
-      "invalidation_price": 2.9,
-      "reduce_price": 3.61,
-      "final_target_price": 3.89,
-      "review_trading_day": 10,
-      "max_trading_days": 30
+      "confirmation_price": 986.2,
+      "maximum_acceptable_price": 1007.69,
+      "invalidation_price": 902.6,
+      "reduce_price": 1111.6,
+      "final_target_price": 1195.2,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
-      "ticker": "QCOM",
-      "name": "高通",
+      "ticker": "ASML",
+      "name": "阿斯麦",
       "sources": [
-        "C"
+        "B"
       ],
       "rank": 10,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
-      "latest_close": 177.72,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-14；标签B?",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "日线结构失效价 $1,572.84",
+      "latest_close": 1679.92,
       "action": "只观察",
       "pullback_zone": [
-        174.85,
-        177.09
+        1656.81,
+        1670.49
       ],
-      "confirmation_price": 191.91,
-      "maximum_acceptable_price": 196.39,
-      "invalidation_price": 171.0,
-      "reduce_price": 223.28,
-      "final_target_price": 244.2,
-      "review_trading_day": 10,
-      "max_trading_days": 30
+      "confirmation_price": 1702.9,
+      "maximum_acceptable_price": 1730.26,
+      "invalidation_price": 1572.84,
+      "reduce_price": 1897.99,
+      "final_target_price": 2028.05,
+      "review_trading_day": 5,
+      "max_trading_days": 15
     },
     {
-      "ticker": "AAPL",
-      "name": "苹果",
+      "ticker": "AAOI",
+      "name": "Applied Optoelectronics",
       "sources": [
-        "C"
+        "B"
       ],
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩/强势平台",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-16；标签B?",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "日线结构失效价 $94.00",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "AAPL",
+      "name": "苹果",
+      "sources": [
+        "A",
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": "2026-06-26",
+      "a_key_volume_ratio": 2.44071346787339,
+      "a_latest_volume_ratio": 0.3307728169314579,
+      "m30_status": "上升延续",
+      "m30_summary": "上升延续：高低点抬高／MACD金叉扩张／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-06-26；C趋势回踩/强势平台",
+      "current_stage": "关K后第58日；回调经过58个交易日／实际收跌25日；回调/整理观察·待价格确认",
+      "momentum_volume": "A量能·关K/前日 2.44×；当前/关K 0.33×；MACD多头延续",
+      "price_state": "A原底未破；待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ABCL",
+      "name": "AbCellera Biologics",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-11；标签无标签",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "信号分歧：底分型守住／MACD尚未修复／KDJ多头向上",
+      "price_state": "日线结构失效价 $10.32",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ACHR",
+      "name": "Archer Aviation",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-07-20",
+      "a_key_volume_ratio": 3.910363335523056,
+      "a_latest_volume_ratio": 0.47259885449686956,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-07-20",
+      "current_stage": "关K后第43日；回调经过43个交易日／实际收跌25日",
+      "momentum_volume": "A量能·关K/前日 3.91×；当前/关K 0.47×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ACMR",
+      "name": "ACM Research",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-15；标签B?",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "信号分歧：高低点抬高／MACD尚未修复／KDJ多头向上",
+      "price_state": "日线结构失效价 $62.78",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "AEHR",
+      "name": "Aehr Test Systems",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2025-08-25",
+      "a_key_volume_ratio": 7.024880927556954,
+      "a_latest_volume_ratio": 0.19127318795054404,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2025-08-25",
+      "current_stage": "关K后第268日；回调经过267个交易日／实际收跌130日",
+      "momentum_volume": "A量能·关K/前日 7.02×；当前/关K 0.19×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "AEVA",
+      "name": "Aeva Technologies",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-16；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "日线结构失效价 $13.90",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ALAB",
+      "name": "Astera Labs",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.6920389269145624,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-15；标签B?",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.69×；信号分歧：底分型守住／MACD尚未修复／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $251.62",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "AMAT",
+      "name": "应用材料",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.064136187800853,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18",
+      "current_stage": "关K后第0日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 2.06×",
+      "price_state": "A原底未破",
       "action": "待生成交易计划"
     },
     {
       "ticker": "AMBA",
       "name": "安霸",
       "sources": [
-        "A"
+        "A",
+        "B"
       ],
       "rank": null,
       "a_key_date": "2026-09-17",
       "a_key_volume_ratio": 1.4526831029080063,
       "a_latest_volume_ratio": 0.8625604392438553,
-      "structure_node": "A关K·2026-09-17",
-      "current_stage": "A回调1天",
-      "momentum_volume": "A量能·关K/前日 1.45×；当前/关K 0.86×",
-      "price_state": "A原底未破",
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-17；B底分型·2026-09-04；标签无标签",
+      "current_stage": "关K后第1日；回调经过1个交易日／实际收跌1日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.45×；当前/关K 0.86×；转强酝酿：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $58.12",
       "action": "待生成交易计划"
     },
     {
-      "ticker": "ASX",
-      "name": "日月光半导体",
+      "ticker": "AMD",
+      "name": "美国超微公司",
       "sources": [
-        "C"
+        "B"
       ],
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "趋势候选·位置偏远不追",
-      "momentum_volume": "双金叉确认",
-      "price_state": "位置偏远不追",
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高、突破反弹高点／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-03；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：高低点抬高、突破反弹高点／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "日线结构失效价 $440.50",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "AMKR",
+      "name": "艾马克技术",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.5882270714524092,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18",
+      "current_stage": "关K后第0日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 1.59×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "AMPX",
+      "name": "Amprius Technologies",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-16；标签1B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "日线结构失效价 $8.76",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "亚马逊",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-07-30",
+      "a_key_volume_ratio": 2.265244278132399,
+      "a_latest_volume_ratio": 0.5133035055635532,
+      "m30_status": "尚未配合",
+      "m30_summary": "尚未配合：未形成守底向上结构／MACD多头减速/未扩张／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-07-30；B底分型·2026-09-16；标签B?",
+      "current_stage": "关K后第35日；回调经过33个交易日／实际收跌23日；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 2.27×；当前/关K 0.51×；尚未配合：未形成守底向上结构／MACD多头减速/未扩张／KDJ多头保持",
+      "price_state": "A原底未破；日线结构失效价 $244.30",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ANET",
+      "name": "Arista Networks",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-03；标签无标签",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "日线结构失效价 $181.27",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "APH",
+      "name": "安费诺",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-06-09",
+      "a_key_volume_ratio": 2.0558295845842487,
+      "a_latest_volume_ratio": 0.9650517917433494,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-06-09",
+      "current_stage": "关K后第70日；回调经过70个交易日／实际收跌36日",
+      "momentum_volume": "A量能·关K/前日 2.06×；当前/关K 0.97×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ASTS",
+      "name": "AST SpaceMobile",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-02",
+      "a_key_volume_ratio": 2.2965950078416935,
+      "a_latest_volume_ratio": 0.9991885293435866,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-02；B底分型·2026-09-14；标签B?",
+      "current_stage": "关K后第11日；回调经过11个交易日／实际收跌6日；B·底分型观察｜金叉保持但减速",
+      "momentum_volume": "A量能·关K/前日 2.30×；当前/关K 1.00×；转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $57.27",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ATI",
+      "name": "ATI Inc",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.7844774774296241,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18",
+      "current_stage": "关K后第0日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 1.78×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "AVAV",
+      "name": "AeroVironment",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-06-30",
+      "a_key_volume_ratio": 2.5432808613257887,
+      "a_latest_volume_ratio": 0.3032980231472356,
+      "m30_status": "尚未配合",
+      "m30_summary": "尚未配合：未形成守底向上结构／MACD尚未修复／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-06-30；B底分型·2026-09-11；标签1B?",
+      "current_stage": "关K后第56日；回调经过54个交易日／实际收跌27日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.54×；当前/关K 0.30×；尚未配合：未形成守底向上结构／MACD尚未修复／KDJ多头保持",
+      "price_state": "A原底未破；日线结构失效价 $138.31",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "AVGO",
+      "name": "博通",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-16；标签无标签",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "信号分歧：高低点抬高／MACD尚未修复／KDJ多头向上",
+      "price_state": "日线结构失效价 $335.81",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "AXTI",
+      "name": "AXT Inc",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-16",
+      "a_key_volume_ratio": 2.568603991053069,
+      "a_latest_volume_ratio": 1.3933344428153818,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-16；B底分型·2026-09-03；标签B?",
+      "current_stage": "关K后第2日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.57×；当前/关K 1.39×；信号分歧：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头保持",
+      "price_state": "A原底未破；日线结构失效价 $52.76",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "BABA",
+      "name": "阿里巴巴",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.5186320633083301,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-16；标签无标签",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 1.52×；信号分歧：高低点抬高／MACD多头减速/未扩张／KDJ尚未配合",
+      "price_state": "A原底未破；日线结构失效价 $106.64",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "BB",
+      "name": "黑莓",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-14；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ多头保持",
+      "price_state": "日线结构失效价 $7.46",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "BKR",
+      "name": "Baker Hughes",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-07-08",
+      "a_key_volume_ratio": 2.1629965745233606,
+      "a_latest_volume_ratio": 1.2551923713838193,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-07-08",
+      "current_stage": "关K后第51日；回调经过51个交易日／实际收跌24日",
+      "momentum_volume": "A量能·关K/前日 2.16×；当前/关K 1.26×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "BMNR",
+      "name": "Bitmine Immersion Technologies",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.5557555674004238,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18",
+      "current_stage": "关K后第0日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 1.56×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "BRK.B",
+      "name": "伯克希尔-B",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-07-28",
+      "a_key_volume_ratio": 1.8282695443350496,
+      "a_latest_volume_ratio": 1.9618947221347884,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-07-28",
+      "current_stage": "关K后第37日；回调经过37个交易日／实际收跌16日",
+      "momentum_volume": "A量能·关K/前日 1.83×；当前/关K 1.96×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CAMT",
+      "name": "康特科技",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-15；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "日线结构失效价 $131.38",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CAT",
+      "name": "卡特彼勒",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-02；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "日线结构失效价 $771.39",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CDNS",
+      "name": "铿腾电子",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-15；标签无标签",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "price_state": "日线结构失效价 $273.07",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CGNX",
+      "name": "康耐视",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2025-07-31",
+      "a_key_volume_ratio": 3.2329153607907863,
+      "a_latest_volume_ratio": 0.27179388613687616,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2025-07-31",
+      "current_stage": "关K后第285日；回调经过285个交易日／实际收跌145日",
+      "momentum_volume": "A量能·关K/前日 3.23×；当前/关K 0.27×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CIEN",
+      "name": "Ciena",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-02-06",
+      "a_key_volume_ratio": 10.09332646198782,
+      "a_latest_volume_ratio": 0.1454516724418531,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-02-06",
+      "current_stage": "关K后第154日；回调经过152个交易日／实际收跌69日",
+      "momentum_volume": "A量能·关K/前日 10.09×；当前/关K 0.15×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CLSK",
+      "name": "CleanSpark",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.6630910146372662,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-02；标签B?",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.66×；信号分歧：底分型守住／MACD多头减速/未扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $10.77",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.1947387676685715,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-16；标签B?",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 2.19×；信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "price_state": "A原底未破；日线结构失效价 $161.18",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CRCL",
+      "name": "Circle",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.1415541708344237,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18",
+      "current_stage": "关K后第0日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 2.14×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CRDO",
+      "name": "Credo Technology",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-14；标签无标签",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "转强酝酿：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "日线结构失效价 $149.14",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-08-27",
+      "a_key_volume_ratio": 1.7212491918062702,
+      "a_latest_volume_ratio": 0.830476499713947,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-08-27",
+      "current_stage": "关K后第15日；回调经过15个交易日／实际收跌9日",
+      "momentum_volume": "A量能·关K/前日 1.72×；当前/关K 0.83×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "CSCO",
+      "name": "思科",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "上升延续",
+      "m30_summary": "上升延续：高低点抬高／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-10；标签无标签",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "上升延续：高低点抬高／MACD金叉扩张／KDJ多头向上",
+      "price_state": "日线结构失效价 $107.36",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "DAVE",
+      "name": "Dave Inc",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-06-15",
+      "a_key_volume_ratio": 1.5208544171594516,
+      "a_latest_volume_ratio": 0.3900302240924423,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-06-15",
+      "current_stage": "关K后第66日；回调经过66个交易日／实际收跌31日",
+      "momentum_volume": "A量能·关K/前日 1.52×；当前/关K 0.39×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-08；标签无标签",
+      "current_stage": "B·底分型观察｜金叉保持但减速",
+      "momentum_volume": "信号分歧：底分型守住／MACD尚未修复／KDJ多头保持",
+      "price_state": "日线结构失效价 $203.24",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "DELL",
+      "name": "戴尔科技",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-02-27",
+      "a_key_volume_ratio": 2.3217740919176397,
+      "a_latest_volume_ratio": 0.3506767829371012,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-02-27；B底分型·2026-09-01；标签无标签",
+      "current_stage": "关K后第140日；回调经过139个交易日／实际收跌61日；B·底分型观察｜金叉保持但减速",
+      "momentum_volume": "A量能·关K/前日 2.32×；当前/关K 0.35×；信号分歧：高低点抬高／MACD尚未修复／KDJ尚未配合",
+      "price_state": "A原底未破；日线结构失效价 $421.89",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ELMT",
+      "name": "Elmet Group",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 97.96734748066213,
+      "a_latest_volume_ratio": 0.08600453011294042,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-14",
+      "current_stage": "关K后第4日；回调经过4个交易日／实际收跌1日",
+      "momentum_volume": "A量能·关K/前日 97.97×；当前/关K 0.09×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "EOSE",
+      "name": "Eos Energy",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-02",
+      "a_key_volume_ratio": 5.480958560839242,
+      "a_latest_volume_ratio": 0.33305069539657395,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-02",
+      "current_stage": "关K后第11日；回调经过11个交易日／实际收跌7日",
+      "momentum_volume": "A量能·关K/前日 5.48×；当前/关K 0.33×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "EROC",
+      "name": "ERock",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-16",
+      "a_key_volume_ratio": 1.6689793690907697,
+      "a_latest_volume_ratio": 2.34148718641625,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-16",
+      "current_stage": "关K后第2日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 1.67×；当前/关K 2.34×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "FCEL",
+      "name": "燃料电池能源",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 2.0988378695536967,
+      "a_latest_volume_ratio": 0.8808165883243749,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD尚未修复／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-17；B底分型·2026-09-14；标签B?",
+      "current_stage": "关K后第1日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.10×；当前/关K 0.88×；信号分歧：高低点抬高／MACD尚未修复／KDJ多头保持",
+      "price_state": "A原底未破；日线结构失效价 $14.71",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "FDS",
+      "name": "慧甚",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高、突破反弹高点／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-11；标签3B?",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "信号分歧：高低点抬高、突破反弹高点／MACD尚未修复／KDJ尚未配合",
+      "price_state": "日线结构失效价 $255.87",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "FLY",
+      "name": "Firefly Aerospace",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-16；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "日线结构失效价 $19.56",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "FN",
+      "name": "Fabrinet",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-15；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "日线结构失效价 $373.70",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "FORM",
+      "name": "FormFactor",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.8259584375039377,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高、突破反弹高点／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-03；标签B?",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.83×；转强酝酿：高低点抬高、突破反弹高点／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $92.05",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "FPS",
+      "name": "Forgent Power Solutions",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-15",
+      "a_key_volume_ratio": 2.6484871428849375,
+      "a_latest_volume_ratio": 0.6342890282365624,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-15",
+      "current_stage": "关K后第3日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 2.65×；当前/关K 0.63×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "FSLY",
+      "name": "Fastly",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-03；标签无标签",
+      "current_stage": "B·底分型观察｜金叉保持但减速",
+      "momentum_volume": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "日线结构失效价 $19.76",
       "action": "待生成交易计划"
     },
     {
@@ -639,6 +2050,13 @@
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "m30_status": "上升延续",
+      "m30_summary": "上升延续：高低点抬高／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
       "structure_node": "C趋势回踩",
       "current_stage": "回调/整理观察·待价格确认",
       "momentum_volume": "MACD多头延续",
@@ -646,19 +2064,470 @@
       "action": "待生成交易计划"
     },
     {
-      "ticker": "HOOD",
-      "name": "Robinhood",
+      "ticker": "FUTU",
+      "name": "富途控股",
       "sources": [
-        "C"
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-07-21",
+      "a_key_volume_ratio": 1.6922615408536492,
+      "a_latest_volume_ratio": 0.4241986483346635,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-07-21",
+      "current_stage": "关K后第42日；回调经过41个交易日／实际收跌20日",
+      "momentum_volume": "A量能·关K/前日 1.69×；当前/关K 0.42×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "GFS",
+      "name": "GlobalFoundries",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 2.320614615551123,
+      "a_latest_volume_ratio": 1.0307319536788933,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-17",
+      "current_stage": "关K后第1日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 2.32×；当前/关K 1.03×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "GH",
+      "name": "Guardant Health",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-07-31",
+      "a_key_volume_ratio": 1.676443676625798,
+      "a_latest_volume_ratio": 0.6720532846087967,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-07-31；B底分型·2026-09-04；标签无标签",
+      "current_stage": "关K后第34日；回调经过34个交易日／实际收跌18日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.68×；当前/关K 0.67×；转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $154.00",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "GNRC",
+      "name": "Generac",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 4.85081027971754,
+      "a_latest_volume_ratio": 0.3795274788225368,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-17；B底分型·2026-09-16；标签B?",
+      "current_stage": "关K后第1日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 4.85×；当前/关K 0.38×；信号分歧：底分型守住／MACD尚未修复／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $173.25",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "GOOG",
+      "name": "谷歌-C",
+      "sources": [
+        "B"
       ],
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "趋势候选·位置偏远不追",
-      "momentum_volume": "KDJ单金叉确认",
-      "price_state": "位置偏远不追",
+      "m30_status": "尚未配合",
+      "m30_summary": "尚未配合：未形成守底向上结构／MACD尚未修复／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-09；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "尚未配合：未形成守底向上结构／MACD尚未修复／KDJ多头保持",
+      "price_state": "日线结构失效价 $325.63",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "GPRO",
+      "name": "GoPro",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-08-31",
+      "a_key_volume_ratio": 24.543658753856512,
+      "a_latest_volume_ratio": 0.07391796869106966,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-08-31",
+      "current_stage": "关K后第13日；回调经过11个交易日／实际收跌9日",
+      "momentum_volume": "A量能·关K/前日 24.54×；当前/关K 0.07×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "HIMS",
+      "name": "Hims & Hers Health",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 1.6886956774338566,
+      "a_latest_volume_ratio": 0.7846083894798943,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-14；B底分型·2026-09-11；标签B?",
+      "current_stage": "关K后第4日；回调经过4个交易日／实际收跌2日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.69×；当前/关K 0.78×；转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $26.73",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sources": [
+        "A",
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.7961229415442583,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；C趋势回踩",
+      "current_stage": "关K后第0日；尚无收盘回调；趋势候选·位置偏远不追",
+      "momentum_volume": "A量能·关K/前日 1.80×；KDJ单金叉确认",
+      "price_state": "A原底未破；位置偏远不追",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "HPE",
+      "name": "慧与科技",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-03；标签无标签",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "信号分歧：高低点抬高／MACD尚未修复／KDJ多头向上",
+      "price_state": "日线结构失效价 $45.59",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ILMN",
+      "name": "Illumina",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-11；标签无标签",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "信号分歧：高低点抬高／MACD尚未修复／KDJ多头向上",
+      "price_state": "日线结构失效价 $200.01",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "IONQ",
+      "name": "IonQ Inc",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-14；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "日线结构失效价 $35.00",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "JD",
+      "name": "京东",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD金叉扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B日线标记·B?（首次显示2026-09-18）",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "信号分歧：底分型守住／MACD金叉扩张／KDJ尚未配合",
+      "price_state": "日线结构失效价 $26.63",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "KLAC",
+      "name": "科磊",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.027953881172894,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-16；标签B?",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.03×；转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $165.89",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "KRMN",
+      "name": "Karman Holdings",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-11；标签无标签",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "price_state": "日线结构失效价 $33.99",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "LITE",
+      "name": "Lumentum",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.8875676602489764,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-15；标签无标签",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 1.89×；转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $832.11",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "LLY",
+      "name": "礼来",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-08-05",
+      "a_key_volume_ratio": 1.5731990200103192,
+      "a_latest_volume_ratio": 0.7058908675240149,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-08-05；B底分型·2026-09-11；标签无标签",
+      "current_stage": "关K后第31日；回调经过30个交易日／实际收跌17日；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 1.57×；当前/关K 0.71×；转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $1,113.29",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "LMND",
+      "name": "Lemonade",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2025-08-05",
+      "a_key_volume_ratio": 5.239785910728963,
+      "a_latest_volume_ratio": 0.09800450679167215,
+      "m30_status": "尚未配合",
+      "m30_summary": "尚未配合：未形成守底向上结构／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2025-08-05",
+      "current_stage": "关K后第282日；回调经过281个交易日／实际收跌142日",
+      "momentum_volume": "A量能·关K/前日 5.24×；当前/关K 0.10×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "LRCX",
+      "name": "泛林集团",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.741830227117371,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18",
+      "current_stage": "关K后第0日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 1.74×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "尚未配合",
+      "m30_summary": "尚未配合：未形成守底向上结构／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-08-19；标签无标签",
+      "current_stage": "B·底分型观察｜金叉保持但减速",
+      "momentum_volume": "尚未配合：未形成守底向上结构／MACD尚未修复／KDJ多头向上",
+      "price_state": "日线结构失效价 $537.27",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "微软",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-06-26",
+      "a_key_volume_ratio": 2.8059117511112377,
+      "a_latest_volume_ratio": 0.21279237881648846,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-06-26",
+      "current_stage": "关K后第58日；回调经过58个交易日／实际收跌24日",
+      "momentum_volume": "A量能·关K/前日 2.81×；当前/关K 0.21×",
+      "price_state": "A原底未破",
       "action": "待生成交易计划"
     },
     {
@@ -671,6 +2540,13 @@
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
       "structure_node": "C趋势回踩",
       "current_stage": "回调/整理观察·待价格确认",
       "momentum_volume": "金叉前/动能改善观察",
@@ -678,40 +2554,478 @@
       "action": "待生成交易计划"
     },
     {
+      "ticker": "MSTR",
+      "name": "Strategy",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.9407826324135873,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-16；标签3B?",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.94×；信号分歧：底分型守住／MACD多头减速/未扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $123.33",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "MXL",
+      "name": "MaxLinear",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-03；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "信号分歧：高低点抬高／MACD尚未修复／KDJ尚未配合",
+      "price_state": "日线结构失效价 $55.93",
+      "action": "待生成交易计划"
+    },
+    {
       "ticker": "NET",
       "name": "Cloudflare",
       "sources": [
+        "B",
         "C"
       ],
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩/强势平台",
-      "current_stage": "回调/整理观察·待价格确认",
-      "momentum_volume": "MACD多头延续",
-      "price_state": "待价格确认",
+      "m30_status": "尚未配合",
+      "m30_summary": "尚未配合：未形成守底向上结构／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-02；标签无标签；C趋势回踩/强势平台",
+      "current_stage": "B·底分型观察｜金叉保持但减速；回调/整理观察·待价格确认",
+      "momentum_volume": "尚未配合：未形成守底向上结构／MACD金叉扩张／KDJ多头向上；MACD多头延续",
+      "price_state": "日线结构失效价 $269.30；待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "NOK",
+      "name": "诺基亚",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-16",
+      "a_key_volume_ratio": 1.543977620618553,
+      "a_latest_volume_ratio": 1.2416254545546264,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-16",
+      "current_stage": "关K后第2日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 1.54×；当前/关K 1.24×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-08-27",
+      "a_key_volume_ratio": 2.0781283561614257,
+      "a_latest_volume_ratio": 0.6920796846826669,
+      "m30_status": "尚未配合",
+      "m30_summary": "尚未配合：未形成守底向上结构／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-08-27",
+      "current_stage": "关K后第15日；回调经过13个交易日／实际收跌9日",
+      "momentum_volume": "A量能·关K/前日 2.08×；当前/关K 0.69×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "NTLA",
+      "name": "Intellia Therapeutics",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "尚未配合",
+      "m30_summary": "尚未配合：未形成守底向上结构／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-15；标签B?",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "尚未配合：未形成守底向上结构／MACD尚未修复／KDJ多头向上",
+      "price_state": "日线结构失效价 $11.24",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "NTRA",
+      "name": "Natera",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-08-19",
+      "a_key_volume_ratio": 1.5823519906900112,
+      "a_latest_volume_ratio": 2.0747725558119914,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高、突破反弹高点／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-08-19；B底分型·2026-07-29；标签3B?",
+      "current_stage": "关K后第21日；回调经过21个交易日／实际收跌8日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.58×；当前/关K 2.07×；信号分歧：高低点抬高、突破反弹高点／MACD尚未修复／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $248.03",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "NU",
+      "name": "Nu Holdings",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-08-14",
+      "a_key_volume_ratio": 2.3913878767064394,
+      "a_latest_volume_ratio": 0.45276861606102864,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-08-14",
+      "current_stage": "关K后第24日；回调经过24个交易日／实际收跌14日",
+      "momentum_volume": "A量能·关K/前日 2.39×；当前/关K 0.45×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "英伟达",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-08-27",
+      "a_key_volume_ratio": 1.6615331685125097,
+      "a_latest_volume_ratio": 0.6366048018321726,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高、突破反弹高点／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-08-27；B底分型·2026-09-14；标签无标签",
+      "current_stage": "关K后第15日；回调经过15个交易日／实际收跌7日；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 1.66×；当前/关K 0.64×；信号分歧：高低点抬高、突破反弹高点／MACD尚未修复／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $208.93",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "NVO",
+      "name": "诺和诺德",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-16；标签无标签",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "信号分歧：底分型守住／MACD尚未修复／KDJ尚未配合",
+      "price_state": "日线结构失效价 $41.47",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "NVTS",
+      "name": "纳微半导体",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-01-06",
+      "a_key_volume_ratio": 1.4852025799081443,
+      "a_latest_volume_ratio": 0.3475029352619193,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-01-06；B底分型·2026-09-16；标签无标签",
+      "current_stage": "关K后第176日；回调经过175个交易日／实际收跌88日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.49×；当前/关K 0.35×；转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $10.27",
       "action": "待生成交易计划"
     },
     {
       "ticker": "OKLO",
       "name": "Oklo Inc",
       "sources": [
-        "A"
+        "A",
+        "B"
       ],
       "rank": null,
       "a_key_date": "2026-09-17",
       "a_key_volume_ratio": 2.215866822016059,
       "a_latest_volume_ratio": 0.7944165999005882,
-      "structure_node": "A关K·2026-09-17",
-      "current_stage": "A回调1天",
-      "momentum_volume": "A量能·关K/前日 2.22×；当前/关K 0.79×",
-      "price_state": "A原底未破",
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD尚未修复／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-17；B底分型·2026-09-14；标签无标签",
+      "current_stage": "关K后第1日；回调经过1个交易日／实际收跌1日；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 2.22×；当前/关K 0.79×；信号分歧：高低点抬高／MACD尚未修复／KDJ多头保持",
+      "price_state": "A原底未破；日线结构失效价 $34.38",
       "action": "待生成交易计划"
     },
     {
       "ticker": "OKTA",
       "name": "Okta",
+      "sources": [
+        "A",
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": "2026-08-27",
+      "a_key_volume_ratio": 2.329098095281611,
+      "a_latest_volume_ratio": 0.3501864880231047,
+      "m30_status": "尚未配合",
+      "m30_summary": "尚未配合：未形成守底向上结构／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-08-27；C趋势回踩",
+      "current_stage": "关K后第15日；回调经过15个交易日／实际收跌8日；回调/整理观察·待价格确认",
+      "momentum_volume": "A量能·关K/前日 2.33×；当前/关K 0.35×；MACD多头延续",
+      "price_state": "A原底未破；待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ONDS",
+      "name": "Ondas",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-07-21",
+      "a_key_volume_ratio": 1.5146828985477403,
+      "a_latest_volume_ratio": 0.22532709768215498,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-07-21；B底分型·2026-09-16；标签B?",
+      "current_stage": "关K后第42日；回调经过41个交易日／实际收跌20日；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 1.51×；当前/关K 0.23×；转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $6.98",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ONTO",
+      "name": "Onto Innovation",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 3.2939054309096143,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-15；标签无标签",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 3.29×；信号分歧：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ尚未配合",
+      "price_state": "A原底未破；日线结构失效价 $240.01",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "OUST",
+      "name": "Ouster",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-05-13",
+      "a_key_volume_ratio": 3.0196873879681494,
+      "a_latest_volume_ratio": 0.1680408707053727,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-05-13；B底分型·2026-09-15；标签B?",
+      "current_stage": "关K后第88日；回调经过86个交易日／实际收跌44日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 3.02×；当前/关K 0.17×；转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $32.24",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "OXY",
+      "name": "西方石油",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-08-06",
+      "a_key_volume_ratio": 1.8834279119311585,
+      "a_latest_volume_ratio": 0.8759530564588357,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-08-06",
+      "current_stage": "关K后第30日；回调经过30个交易日／实际收跌13日",
+      "momentum_volume": "A量能·关K/前日 1.88×；当前/关K 0.88×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "PENG",
+      "name": "Penguin Solutions",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-03；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "日线结构失效价 $45.62",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "POWI",
+      "name": "帕沃英蒂格盛",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-16；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "price_state": "日线结构失效价 $46.71",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "PRQR",
+      "name": "ProQR Therapeutics",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-07-21",
+      "a_key_volume_ratio": 1.904352074306796,
+      "a_latest_volume_ratio": 0.2561326216067224,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-07-21",
+      "current_stage": "关K后第42日；回调经过42个交易日／实际收跌25日",
+      "momentum_volume": "A量能·关K/前日 1.90×；当前/关K 0.26×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "QCOM",
+      "name": "高通",
       "sources": [
         "C"
       ],
@@ -719,6 +3033,13 @@
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
       "structure_node": "C趋势回踩",
       "current_stage": "回调/整理观察·待价格确认",
       "momentum_volume": "MACD多头延续",
@@ -726,18 +3047,378 @@
       "action": "待生成交易计划"
     },
     {
+      "ticker": "RANI",
+      "name": "Rani Therapeutics",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-07-22",
+      "a_key_volume_ratio": 10.714722940324567,
+      "a_latest_volume_ratio": 0.061105113509414916,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-07-22；B底分型·2026-08-18；标签B?",
+      "current_stage": "关K后第41日；回调经过41个交易日／实际收跌21日；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 10.71×；当前/关K 0.06×；转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $0.75",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "RBRK",
+      "name": "Rubrik",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-11；标签无标签",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "日线结构失效价 $85.78",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "RDW",
+      "name": "Redwire",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-02；标签无标签",
+      "current_stage": "B·底分型观察｜金叉保持但减速",
+      "momentum_volume": "信号分歧：底分型守住／MACD尚未修复／KDJ多头向上",
+      "price_state": "日线结构失效价 $10.14",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "RIOT",
+      "name": "Riot Platforms",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-03",
+      "a_key_volume_ratio": 1.6852861509892192,
+      "a_latest_volume_ratio": 1.0514849189718156,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-03；B底分型·2026-09-02；标签B?",
+      "current_stage": "关K后第10日；回调经过8个交易日／实际收跌4日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.69×；当前/关K 1.05×；信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "price_state": "A原底未破；日线结构失效价 $17.39",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "RKLB",
+      "name": "Rocket Lab",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-14；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "日线结构失效价 $60.51",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "RMBS",
+      "name": "Rambus",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高、突破反弹高点／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-14；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：高低点抬高、突破反弹高点／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "日线结构失效价 $80.00",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "SDGR",
+      "name": "Schrodinger",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ低位拐头",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-11；标签无标签",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "信号分歧：底分型守住／MACD尚未修复／KDJ低位拐头",
+      "price_state": "日线结构失效价 $18.63",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "SILC",
+      "name": "Silicom电信",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-01-29",
+      "a_key_volume_ratio": 12.75719750684299,
+      "a_latest_volume_ratio": 0.1336714606817092,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-01-29；B底分型·2026-09-03；标签B?",
+      "current_stage": "关K后第160日；回调经过160个交易日／实际收跌75日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 12.76×；当前/关K 0.13×；转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $38.56",
+      "action": "待生成交易计划"
+    },
+    {
       "ticker": "SMCI",
       "name": "超微电脑",
       "sources": [
-        "A"
+        "A",
+        "B"
       ],
       "rank": null,
       "a_key_date": "2026-09-17",
       "a_key_volume_ratio": 1.991592084213402,
       "a_latest_volume_ratio": 0.7690571516323353,
-      "structure_node": "A关K·2026-09-17",
-      "current_stage": "A回调1天",
-      "momentum_volume": "A量能·关K/前日 1.99×；当前/关K 0.77×",
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-17；B底分型·2026-09-16；标签无标签",
+      "current_stage": "关K后第1日；回调经过1个交易日／实际收跌1日；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 1.99×；当前/关K 0.77×；转强酝酿：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $35.36",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "SMTC",
+      "name": "先科电子",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-16",
+      "a_key_volume_ratio": 2.533260882836548,
+      "a_latest_volume_ratio": 1.2092988055045257,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高、突破反弹高点／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-16；B底分型·2026-07-29；标签无标签",
+      "current_stage": "关K后第2日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.53×；当前/关K 1.21×；信号分歧：高低点抬高、突破反弹高点／MACD尚未修复／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $103.10",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "SNDK",
+      "name": "闪迪",
+      "sources": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.097569370786721,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD金叉扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-16；标签无标签；C趋势回踩/强势平台",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜本轮金叉转强；价格技术确认·待风险复核",
+      "momentum_volume": "A量能·关K/前日 2.10×；信号分歧：底分型守住／MACD金叉扩张／KDJ尚未配合；双金叉确认",
+      "price_state": "A原底未破；日线结构失效价 $1,504.20；价格技术确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-03",
+      "a_key_volume_ratio": 1.8743986884971213,
+      "a_latest_volume_ratio": 0.1978034770761419,
+      "m30_status": "尚未配合",
+      "m30_summary": "尚未配合：未形成守底向上结构／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-03",
+      "current_stage": "关K后第10日；回调经过10个交易日／实际收跌7日",
+      "momentum_volume": "A量能·关K/前日 1.87×；当前/关K 0.20×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "SOFI",
+      "name": "SoFi Technologies",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-08-03",
+      "a_key_volume_ratio": 1.4790768018429303,
+      "a_latest_volume_ratio": 0.5275258816160261,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-08-03",
+      "current_stage": "关K后第33日；回调经过32个交易日／实际收跌20日",
+      "momentum_volume": "A量能·关K/前日 1.48×；当前/关K 0.53×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "SPCE",
+      "name": "维珍银河",
+      "sources": [
+        "B",
+        "C"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-01；标签B?；C强势平台",
+      "current_stage": "B·底分型观察｜本轮金叉转强；回调/整理观察·待价格确认",
+      "momentum_volume": "转强酝酿：底分型守住／MACD负柱收敛、DIF上拐／KDJ多头向上；双金叉确认",
+      "price_state": "日线结构失效价 $2.85；待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "STM",
+      "name": "意法半导体",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.099521461277393,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18",
+      "current_stage": "关K后第0日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 2.10×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "TEAM",
+      "name": "Atlassian",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-05-01",
+      "a_key_volume_ratio": 3.1245116896684157,
+      "a_latest_volume_ratio": 0.3251474219584671,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-05-01",
+      "current_stage": "关K后第96日；回调经过95个交易日／实际收跌44日",
+      "momentum_volume": "A量能·关K/前日 3.12×；当前/关K 0.33×",
       "price_state": "A原底未破",
       "action": "待生成交易计划"
     },
@@ -745,32 +3426,330 @@
       "ticker": "TEM",
       "name": "Tempus AI",
       "sources": [
-        "A"
+        "A",
+        "B"
       ],
       "rank": null,
       "a_key_date": "2026-09-17",
       "a_key_volume_ratio": 2.2252515509490776,
       "a_latest_volume_ratio": 0.552188040567759,
-      "structure_node": "A关K·2026-09-17",
-      "current_stage": "A回调1天",
-      "momentum_volume": "A量能·关K/前日 2.23×；当前/关K 0.55×",
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-17；B底分型·2026-09-14；标签无标签",
+      "current_stage": "关K后第1日；回调经过1个交易日／实际收跌1日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.23×；当前/关K 0.55×；信号分歧：高低点抬高／MACD尚未修复／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $57.72",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "TER",
+      "name": "泰瑞达",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.6520567239421986,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18",
+      "current_stage": "关K后第0日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 1.65×",
       "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "TLN",
+      "name": "Talen Energy",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-15；标签B?",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "信号分歧：底分型守住／MACD尚未修复／KDJ尚未配合",
+      "price_state": "日线结构失效价 $279.77",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "TSEM",
+      "name": "Tower半导体",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 1.6773129908667748,
+      "a_latest_volume_ratio": 3.860416993065233,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高、突破反弹高点／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-17；B底分型·2026-09-14；标签B?",
+      "current_stage": "关K后第1日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.68×；当前/关K 3.86×；信号分歧：高低点抬高、突破反弹高点／MACD尚未修复／KDJ尚未配合",
+      "price_state": "A原底未破；日线结构失效价 $190.55",
       "action": "待生成交易计划"
     },
     {
       "ticker": "TSM",
       "name": "台积电",
       "sources": [
+        "B",
         "C"
       ],
       "rank": null,
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
-      "structure_node": "C趋势回踩",
-      "current_stage": "趋势候选·位置偏远不追",
-      "momentum_volume": "双金叉确认",
-      "price_state": "位置偏远不追",
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-15；标签B?；C趋势回踩",
+      "current_stage": "B·底分型观察｜本轮金叉转强；趋势候选·位置偏远不追",
+      "momentum_volume": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上；双金叉确认",
+      "price_state": "日线结构失效价 $411.45；位置偏远不追",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "TWLO",
+      "name": "Twilio",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-08-07",
+      "a_key_volume_ratio": 1.7901650401432327,
+      "a_latest_volume_ratio": 0.49921932015576437,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-08-07；B底分型·2026-09-08；标签无标签",
+      "current_stage": "关K后第29日；回调经过27个交易日／实际收跌15日；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.79×；当前/关K 0.50×；信号分歧：高低点抬高／MACD尚未修复／KDJ尚未配合",
+      "price_state": "A原底未破；日线结构失效价 $221.86",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "TWST",
+      "name": "Twist Bioscience",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-14",
+      "a_key_volume_ratio": 1.6292768720827977,
+      "a_latest_volume_ratio": 1.701626421319516,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高、突破反弹高点／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-14；B底分型·2026-09-10；标签无标签",
+      "current_stage": "关K后第4日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.63×；当前/关K 1.70×；转强酝酿：高低点抬高、突破反弹高点／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $120.19",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "UCTT",
+      "name": "超科林半导体",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.4061231442300794,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD金叉扩张／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18",
+      "current_stage": "关K后第0日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 2.41×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "UMC",
+      "name": "联电",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-17",
+      "a_key_volume_ratio": 1.5827874550420398,
+      "a_latest_volume_ratio": 1.694989163197925,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高、突破反弹高点／MACD负柱收敛、DIF上拐／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-17；B底分型·2026-08-20；标签B?",
+      "current_stage": "关K后第1日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 1.58×；当前/关K 1.69×；信号分歧：高低点抬高、突破反弹高点／MACD负柱收敛、DIF上拐／KDJ多头保持",
+      "price_state": "A原底未破；日线结构失效价 $17.88",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "VECO",
+      "name": "维易科精密仪器",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.0049380869556828,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-15；标签B?",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "A量能·关K/前日 2.00×；信号分歧：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ尚未配合",
+      "price_state": "A原底未破；日线结构失效价 $39.77",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "VIAV",
+      "name": "Viavi Solutions",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-08",
+      "a_key_volume_ratio": 2.1360814394259284,
+      "a_latest_volume_ratio": 1.7015868636505347,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-08；B底分型·2026-09-15；标签B?",
+      "current_stage": "关K后第8日；回调经过7个交易日／实际收跌3日；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 2.14×；当前/关K 1.70×；转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "price_state": "A原底未破；日线结构失效价 $33.30",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "VICR",
+      "name": "Vicor电子",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高、突破反弹高点／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-02；标签B?",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：高低点抬高、突破反弹高点／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "日线结构失效价 $172.56",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "VIVO",
+      "name": "VivoPower",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.7814136212956972,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18",
+      "current_stage": "关K后第0日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 2.78×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "VRT",
+      "name": "Vertiv Holdings",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ多头保持",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-14；标签B?",
+      "current_stage": "B·底分型观察｜金叉前修复",
+      "momentum_volume": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ多头保持",
+      "price_state": "日线结构失效价 $226.94",
       "action": "待生成交易计划"
     },
     {
@@ -783,10 +3762,179 @@
       "a_key_date": null,
       "a_key_volume_ratio": null,
       "a_latest_volume_ratio": null,
+      "m30_status": "尚未配合",
+      "m30_summary": "尚未配合：未形成守底向上结构／MACD尚未修复／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
       "structure_node": "C趋势回踩",
       "current_stage": "回调/整理观察·待价格确认",
       "momentum_volume": "金叉前/动能改善观察",
       "price_state": "待价格确认",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "WDC",
+      "name": "西部数据",
+      "sources": [
+        "A",
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.8909772411565695,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18；B底分型·2026-09-15；标签B?",
+      "current_stage": "关K后第0日；尚无收盘回调；B·底分型观察｜金叉前修复",
+      "momentum_volume": "A量能·关K/前日 1.89×；信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "price_state": "A原底未破；日线结构失效价 $407.12",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "WOLF",
+      "name": "Wolfspeed",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 2.016849374321936,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18",
+      "current_stage": "关K后第0日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 2.02×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "WYFI",
+      "name": "WhiteFiber",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-09-18",
+      "a_key_volume_ratio": 1.4513751256173661,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强确认",
+      "m30_summary": "转强确认：高低点抬高、突破反弹高点／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-09-18",
+      "current_stage": "关K后第0日；尚无收盘回调",
+      "momentum_volume": "A量能·关K/前日 1.45×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "XPEV",
+      "name": "小鹏集团",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-15；标签无标签",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "转强酝酿：高低点抬高／MACD负柱收敛、DIF上拐／KDJ多头向上",
+      "price_state": "日线结构失效价 $10.16",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ZETA",
+      "name": "Zeta Global",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-05-18",
+      "a_key_volume_ratio": 2.4860737382253784,
+      "a_latest_volume_ratio": 0.4413447813243425,
+      "m30_status": "转强酝酿",
+      "m30_summary": "转强酝酿：底分型守住／MACD金叉扩张／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-05-18",
+      "current_stage": "关K后第85日；回调经过85个交易日／实际收跌43日",
+      "momentum_volume": "A量能·关K/前日 2.49×；当前/关K 0.44×",
+      "price_state": "A原底未破",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ZS",
+      "name": "Zscaler",
+      "sources": [
+        "B"
+      ],
+      "rank": null,
+      "a_key_date": null,
+      "a_key_volume_ratio": null,
+      "a_latest_volume_ratio": null,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "B底分型·2026-09-08；标签无标签",
+      "current_stage": "B·底分型观察｜本轮金叉转强",
+      "momentum_volume": "信号分歧：底分型守住／MACD多头减速/未扩张／KDJ尚未配合",
+      "price_state": "日线结构失效价 $159.20",
+      "action": "待生成交易计划"
+    },
+    {
+      "ticker": "ZVRA",
+      "name": "Zevra Therapeutics",
+      "sources": [
+        "A"
+      ],
+      "rank": null,
+      "a_key_date": "2026-03-10",
+      "a_key_volume_ratio": 4.774959165475077,
+      "a_latest_volume_ratio": 0.1578470051793424,
+      "m30_status": "信号分歧",
+      "m30_summary": "信号分歧：底分型守住／MACD尚未修复／KDJ多头向上",
+      "jev": {
+        "status": "not_reviewed",
+        "supported": [],
+        "uncertain": []
+      },
+      "structure_node": "A关K·2026-03-10",
+      "current_stage": "关K后第133日；回调经过133个交易日／实际收跌64日",
+      "momentum_volume": "A量能·关K/前日 4.77×；当前/关K 0.16×",
+      "price_state": "A原底未破",
       "action": "待生成交易计划"
     }
   ]
