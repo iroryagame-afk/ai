@@ -1,0 +1,672 @@
+indicator('CL20', 'V20含跳空', True)
+import math
+import fdatetime
+FIXED_ANALYSIS_BARS = 240
+DISPLAY_STROKES = 12
+MINIMUM_MERGED_GAP = 4
+# 跨日完整区间跳空额外计一根；仅补计数，不伪造K线或分型。
+COUNT_OVERNIGHT_GAP = True
+MAX_CENTER_STROKES = 9
+RUNNING_DASH_CHANNELS = 6
+
+def remove_inclusion(high_values, low_values, raw_offset):
+    merged = []
+    last_direction = 0
+    for local_index in range(len(high_values)):
+        raw_index = local_index + raw_offset
+        new_high = high_values[local_index]
+        new_low = low_values[local_index]
+        new_bar = {'high': new_high, 'low': new_low, 'high_index': raw_index, 'low_index': raw_index, 'direction': last_direction, 'raw_start_index': raw_index, 'raw_end_index': raw_index}
+        if len(merged) == 0:
+            merged.append(new_bar)
+            continue
+        current = merged[-1]
+        included = new_high <= current['high'] and new_low >= current['low'] or (new_high >= current['high'] and new_low <= current['low'])
+        if not included:
+            if new_high > current['high'] and new_low > current['low']:
+                last_direction = 1
+            elif new_high < current['high'] and new_low < current['low']:
+                last_direction = -1
+            new_bar['direction'] = last_direction
+            merged.append(new_bar)
+            continue
+        current['raw_end_index'] = raw_index
+        direction_up = last_direction >= 0
+        if len(merged) >= 2:
+            previous = merged[-2]
+            if current['high'] > previous['high'] and current['low'] > previous['low']:
+                direction_up = True
+            elif current['high'] < previous['high'] and current['low'] < previous['low']:
+                direction_up = False
+        current['direction'] = 1 if direction_up else -1
+        last_direction = current['direction']
+        if direction_up:
+            if new_high >= current['high']:
+                current['high'] = new_high
+                current['high_index'] = raw_index
+            if new_low >= current['low']:
+                current['low'] = new_low
+                current['low_index'] = raw_index
+        else:
+            if new_high <= current['high']:
+                current['high'] = new_high
+                current['high_index'] = raw_index
+            if new_low <= current['low']:
+                current['low'] = new_low
+                current['low_index'] = raw_index
+    return merged
+
+def detect_fractals(merged):
+    candidates = []
+    for i in range(1, len(merged) - 1):
+        left = merged[i - 1]
+        middle = merged[i]
+        right = merged[i + 1]
+        is_top = middle['high'] > left['high'] and middle['high'] > right['high'] and (middle['low'] > left['low']) and (middle['low'] > right['low'])
+        is_bottom = middle['low'] < left['low'] and middle['low'] < right['low'] and (middle['high'] < left['high']) and (middle['high'] < right['high'])
+        if is_top:
+            candidates.append({'type': 'top', 'price': middle['high'], 'raw_index': middle['high_index'], 'merged_index': i})
+        elif is_bottom:
+            candidates.append({'type': 'bottom', 'price': middle['low'], 'raw_index': middle['low_index'], 'merged_index': i})
+    return candidates
+
+def is_more_extreme(candidate, reference):
+    if candidate['type'] == 'top':
+        return candidate['price'] >= reference['price']
+    return candidate['price'] <= reference['price']
+
+def geometry_is_valid(start, end):
+    if start['type'] == end['type']:
+        return False
+    if start['type'] == 'bottom':
+        return end['price'] > start['price']
+    return end['price'] < start['price']
+
+def interval_extremes_are_valid(start, end, merged):
+    if merged is None:
+        return True
+    left = start['merged_index']
+    right = end['merged_index']
+    if left < 0 or right >= len(merged) or left >= right:
+        return False
+    interval = merged[left:right + 1]
+    interval_high = interval[0]['high']
+    interval_low = interval[0]['low']
+    for item in interval[1:]:
+        interval_high = max(interval_high, item['high'])
+        interval_low = min(interval_low, item['low'])
+    if start['type'] == 'bottom':
+        return start['price'] <= interval_low and end['price'] >= interval_high
+    return start['price'] >= interval_high and end['price'] <= interval_low
+
+def overnight_gap_prefix(high_values, low_values, date_keys):
+    counts = [0] * len(high_values)
+    for i in range(1, len(high_values)):
+        cross_date = date_keys[i] != date_keys[i - 1]
+        full_gap = low_values[i] > high_values[i - 1] or high_values[i] < low_values[i - 1]
+        counts[i] = counts[i - 1] + (1 if COUNT_OVERNIGHT_GAP and cross_date and full_gap else 0)
+    return counts
+
+def pen_spacing_valid(start, end, minimum_gap):
+    real_gap = end['merged_index'] - start['merged_index']
+    bonus = end.get('gap_count', 0) - start.get('gap_count', 0)
+    return real_gap >= 3 and real_gap + bonus >= minimum_gap
+
+def running_pen_valid(high_values, low_values, analysis_start, start_index, start_price, end_index, end_price, gap_counts):
+    if start_index < analysis_start or end_index <= start_index or end_index >= len(high_values):
+        return False
+    # Count only to the actual extremum, never using bars or gaps after it.
+    merged = remove_inclusion(high_values[analysis_start:end_index + 1], low_values[analysis_start:end_index + 1], analysis_start)
+    left = -1
+    right = -1
+    for i in range(len(merged)):
+        bar = merged[i]
+        if bar['raw_start_index'] <= start_index <= bar['raw_end_index']:
+            left = i
+        if bar['raw_start_index'] <= end_index <= bar['raw_end_index']:
+            right = i
+    if left < 0 or right < 0:
+        return False
+    start_type = 'bottom' if end_price > start_price else 'top'
+    end_type = 'top' if end_price > start_price else 'bottom'
+    start = {'type': start_type, 'price': start_price, 'raw_index': start_index, 'merged_index': left, 'gap_count': gap_counts[start_index]}
+    end = {'type': end_type, 'price': end_price, 'raw_index': end_index, 'merged_index': right, 'gap_count': gap_counts[end_index]}
+    if not pen_spacing_valid(start, end, MINIMUM_MERGED_GAP):
+        return False
+    if not geometry_is_valid(start, end):
+        return False
+    return interval_extremes_are_valid(start, end, merged)
+
+def put_gap_running(channels, start_index, start_price, end_index, end_price, high_values, low_values, analysis_start, gap_counts):
+    if not running_pen_valid(high_values, low_values, analysis_start, start_index, start_price, end_index, end_price, gap_counts):
+        return
+    put_adaptive_dash_segments(channels, start_index, start_price, end_index, end_price)
+
+def build_confirmed_pens(candidates, minimum_gap, merged=None, terminal_allowed=None):
+    candidate_count = len(candidates)
+    if candidate_count == 0:
+        return []
+    chain_lengths = [1] * candidate_count
+    previous_indices = [-1] * candidate_count
+    for end_index in range(candidate_count):
+        end = candidates[end_index]
+        for start_index in range(end_index):
+            start = candidates[start_index]
+            if not pen_spacing_valid(start, end, minimum_gap):
+                continue
+            if not geometry_is_valid(start, end):
+                continue
+            if not interval_extremes_are_valid(start, end, merged):
+                continue
+            candidate_extremes_are_valid = True
+            for middle_index in range(start_index + 1, end_index):
+                middle = candidates[middle_index]
+                if start['type'] == 'bottom' and middle['type'] == 'bottom' and middle['price'] < start['price']:
+                    candidate_extremes_are_valid = False
+                    break
+                if start['type'] == 'bottom' and middle['type'] == 'top' and middle['price'] > end['price']:
+                    candidate_extremes_are_valid = False
+                    break
+                if start['type'] == 'top' and middle['type'] == 'top' and middle['price'] > start['price']:
+                    candidate_extremes_are_valid = False
+                    break
+                if start['type'] == 'top' and middle['type'] == 'bottom' and middle['price'] < end['price']:
+                    candidate_extremes_are_valid = False
+                    break
+            if not candidate_extremes_are_valid:
+                continue
+            proposed_length = chain_lengths[start_index] + 1
+            current_previous_index = previous_indices[end_index]
+            predecessor_is_better = current_previous_index < 0 or is_more_extreme(start, candidates[current_previous_index])
+            predecessor_is_tied_and_later = current_previous_index >= 0 and start['price'] == candidates[current_previous_index]['price'] and start['raw_index'] > candidates[current_previous_index]['raw_index']
+            if proposed_length > chain_lengths[end_index] or (proposed_length == chain_lengths[end_index] and (predecessor_is_better or predecessor_is_tied_and_later)):
+                chain_lengths[end_index] = proposed_length
+                previous_indices[end_index] = start_index
+    best_end_index = -1
+    for candidate_index in range(candidate_count):
+        if terminal_allowed is not None and not terminal_allowed[candidate_index]:
+            continue
+        if best_end_index < 0:
+            best_end_index = candidate_index
+            continue
+        longer_chain = chain_lengths[candidate_index] > chain_lengths[best_end_index]
+        equally_long_but_later = chain_lengths[candidate_index] == chain_lengths[best_end_index] and candidates[candidate_index]['raw_index'] > candidates[best_end_index]['raw_index']
+        if longer_chain or equally_long_but_later:
+            best_end_index = candidate_index
+    if best_end_index < 0:
+        return []
+    pivots_reversed = []
+    cursor = best_end_index
+    while cursor >= 0:
+        pivots_reversed.append(candidates[cursor])
+        cursor = previous_indices[cursor]
+    pivots = []
+    for reverse_index in range(len(pivots_reversed) - 1, -1, -1):
+        pivots.append(pivots_reversed[reverse_index])
+    return pivots
+
+def tail_breaks_pivot(pivot, high_values, low_values):
+    for i in range(pivot['raw_index'] + 1, len(high_values)):
+        if pivot['type'] == 'top' and high_values[i] > pivot['price']:
+            return True
+        if pivot['type'] == 'bottom' and low_values[i] < pivot['price']:
+            return True
+    return False
+
+def repair_stale_tail(pivots, candidates, merged, high_values, low_values, minimum_gap):
+    if len(pivots) < 2:
+        return pivots
+    # Original one-step rollback is sufficient if its previous anchor survives.
+    if not tail_breaks_pivot(pivots[-1], high_values, low_values):
+        return pivots
+    if not tail_breaks_pivot(pivots[-2], high_values, low_values):
+        return pivots
+    # Both ends have been overtaken. Re-select a complete valid chain using
+    # the original edge rules, excluding stale candidates only as terminal ends.
+    terminal_allowed = []
+    for candidate in candidates:
+        terminal_allowed.append(not tail_breaks_pivot(candidate, high_values, low_values))
+    repaired = build_confirmed_pens(candidates, minimum_gap, merged, terminal_allowed)
+    return validate_pivots(repaired, minimum_gap, merged)
+
+def validate_pivots(pivots, minimum_gap, merged=None):
+    if len(pivots) < 2:
+        return pivots
+    valid = [pivots[0]]
+    for pivot in pivots[1:]:
+        last = valid[-1]
+        alternating = pivot['type'] != last['type']
+        ordered = pivot['raw_index'] > last['raw_index']
+        spaced = pen_spacing_valid(last, pivot, minimum_gap)
+        interval_extremes = interval_extremes_are_valid(last, pivot, merged)
+        if alternating and ordered and spaced and interval_extremes and geometry_is_valid(last, pivot):
+            valid.append(pivot)
+    return valid
+
+def stroke_range(pivots, stroke_index):
+    price_a = pivots[stroke_index]['price']
+    price_b = pivots[stroke_index + 1]['price']
+    return (min(price_a, price_b), max(price_a, price_b))
+
+def stroke_direction(pivots, stroke_index):
+    start_price = pivots[stroke_index]['price']
+    end_price = pivots[stroke_index + 1]['price']
+    if end_price > start_price:
+        return 1
+    if end_price < start_price:
+        return -1
+    return 0
+
+def center_is_valid(center, pivots):
+    if center['start_pivot'] < 0 or center['end_pivot'] >= len(pivots):
+        return False
+    if center['start_pivot'] + 3 > center['end_pivot']:
+        return False
+    if center['start_index'] >= center['end_index']:
+        return False
+    if center['zd'] >= center['zg']:
+        return False
+    if center.get('entry_stroke', -1) != center['start_pivot'] - 1:
+        return False
+    if center.get('stroke_count', 0) < 3 or center.get('stroke_count', 0) > MAX_CENTER_STROKES:
+        return False
+    if stroke_direction(pivots, center['entry_stroke']) == stroke_direction(pivots, center['start_pivot']):
+        return False
+    ranges = []
+    for stroke_index in range(center['start_pivot'], center['start_pivot'] + 3):
+        ranges.append(stroke_range(pivots, stroke_index))
+    expected_zd = max(ranges[0][0], ranges[1][0], ranges[2][0])
+    expected_zg = min(ranges[0][1], ranges[1][1], ranges[2][1])
+    return center['zd'] == expected_zd and center['zg'] == expected_zg
+
+def detect_centers(pivots):
+    # scope=pen-center-proxy-v20
+    # The first confirmed stroke is treated as the entry stroke.  A center may
+    # therefore start only from the following stroke.  This prevents the
+    # visible entry leg from being swallowed by the first three-stroke core.
+    centers = []
+    stroke_count = len(pivots) - 1
+    i = 1
+    while i + 2 < stroke_count:
+        entry_stroke = i - 1
+        entry_direction = stroke_direction(pivots, entry_stroke)
+        center_direction = stroke_direction(pivots, i)
+        if entry_direction == 0 or center_direction == 0 or entry_direction == center_direction:
+            i += 1
+            continue
+        low_1, high_1 = stroke_range(pivots, i)
+        low_2, high_2 = stroke_range(pivots, i + 1)
+        low_3, high_3 = stroke_range(pivots, i + 2)
+        zd = max(low_1, low_2, low_3)
+        zg = min(high_1, high_2, high_3)
+        if zd >= zg:
+            i += 1
+            continue
+        end_pivot = i + 3
+        probe_stroke = i + 4
+        included_strokes = 3
+        active = True
+        exit_reason = 'active'
+        while probe_stroke < stroke_count:
+            probe_low, probe_high = stroke_range(pivots, probe_stroke)
+            if probe_high <= zd or probe_low >= zg:
+                active = False
+                exit_reason = 'departure'
+                break
+            end_pivot = probe_stroke + 1
+            included_strokes += 2
+            if included_strokes >= MAX_CENTER_STROKES:
+                active = False
+                exit_reason = 'upgrade'
+                break
+            probe_stroke += 2
+        center = { 'start_index': pivots[i]['raw_index'], 'end_index': pivots[end_pivot]['raw_index'], 'entry_stroke': entry_stroke, 'start_pivot': i, 'end_pivot': end_pivot, 'zd': zd, 'zg': zg, 'stroke_count': included_strokes, 'active': active, 'exit_reason': exit_reason, 'scope': 'pen-center-proxy-v20' }
+        if center_is_valid(center, pivots):
+            centers.append(center)
+        if exit_reason == 'active':
+            break
+        if exit_reason == 'upgrade':
+            # Nine lower-level proxy strokes end this original-level extension.
+            # A strict higher-level center needs completed lower-level trend
+            # types and is deliberately not fabricated from current-period pens.
+            i = end_pivot + 1
+        else:
+            # The failed same-direction Z stroke belongs to the departure /
+            # retrace structure.  It may become the first component of the next
+            # center, while the preceding connector is its entry stroke.
+            i = probe_stroke
+    return centers
+
+def put_segment(target, start_index, start_price, end_index, end_price):
+    if end_index < start_index:
+        old_index = start_index
+        old_price = start_price
+        start_index = end_index
+        start_price = end_price
+        end_index = old_index
+        end_price = old_price
+    distance = end_index - start_index
+    if distance == 0:
+        target[start_index] = start_price
+        return
+    for j in range(start_index, end_index + 1):
+        target[j] = start_price + (end_price - start_price) * float(j - start_index) / float(distance)
+
+def put_adaptive_dash_segments(channels, start_index, start_price, end_index, end_price):
+    if end_index < start_index:
+        old_index = start_index
+        old_price = start_price
+        start_index = end_index
+        start_price = end_price
+        end_index = old_index
+        end_price = old_price
+    distance = end_index - start_index
+    if distance < 3 or len(channels) < 2:
+        return
+    segment_count = min(len(channels), max(2, (distance + 1) // 2))
+    dash_width = max(1, distance // (2 * segment_count - 1))
+    remaining = max(0, distance - segment_count * dash_width)
+    gap_width = float(remaining) / float(segment_count - 1)
+    step_width = float(dash_width) + gap_width
+    for slot in range(segment_count):
+        segment_left = start_index + int(float(slot) * step_width + 0.5)
+        segment_right = end_index if slot == segment_count - 1 else min(end_index, segment_left + dash_width)
+        left_price = start_price + (end_price - start_price) * float(segment_left - start_index) / float(distance)
+        right_price = start_price + (end_price - start_price) * float(segment_right - start_index) / float(distance)
+        put_segment(channels[slot], segment_left, left_price, segment_right, right_price)
+
+def to_sequence(values):
+    result = close() * 1.0
+    for i in range(len(values)):
+        result[i] = values[i]
+    return result
+
+def to_independent_sequence(values):
+    result = close() * 1.0
+    for i in range(len(values)):
+        result[i] = values[i]
+    return result
+
+def fixed_ema(values, period):
+    result = []
+    if len(values) == 0:
+        return result
+    alpha = 2.0 / float(period + 1)
+    current = values[0]
+    for value in values:
+        current = alpha * value + (1.0 - alpha) * current
+        result.append(current)
+    return result
+
+def detect_latest_macd_observation(confirmed_pivots, diff_values):
+    observation = None
+    for i in range(2, len(confirmed_pivots)):
+        current = confirmed_pivots[i]
+        previous_same = confirmed_pivots[i - 2]
+        current_diff = diff_values[current['raw_index']]
+        previous_diff = diff_values[previous_same['raw_index']]
+        if current['type'] == 'bottom':
+            lower_low = current['price'] < previous_same['price']
+            weaker_down = current_diff < 0 and previous_diff < 0 and (abs(current_diff) < abs(previous_diff))
+            if lower_low and weaker_down:
+                observation = {'type': 'B?', 'pivot': current}
+        else:
+            higher_high = current['price'] > previous_same['price']
+            weaker_up = current_diff > 0 and previous_diff > 0 and (abs(current_diff) < abs(previous_diff))
+            if higher_high and weaker_up:
+                observation = {'type': 'S?', 'pivot': current}
+    return observation
+
+def detect_auxiliary_observations(confirmed_pivots, diff_values, centers, limit_per_side):
+    buy_observations = []
+    sell_observations = []
+    for i in range(2, len(confirmed_pivots)):
+        current = confirmed_pivots[i]
+        previous_same = confirmed_pivots[i - 2]
+        current_diff = diff_values[current['raw_index']]
+        previous_diff = diff_values[previous_same['raw_index']]
+        relevant_center = None
+        for center in centers:
+            if center['end_index'] < current['raw_index']:
+                relevant_center = center
+        if current['type'] == 'bottom':
+            momentum_improves = current_diff > previous_diff
+            negative_context = current_diff <= 0 or previous_diff <= 0
+            near_previous = current['price'] <= previous_same['price'] * 1.25
+            near_center = relevant_center is not None and current['price'] <= relevant_center['zd'] * 1.03
+            if momentum_improves and negative_context and (near_previous or near_center):
+                buy_observations.append({'type': 'B?', 'pivot': current})
+        else:
+            momentum_weakens = current_diff < previous_diff
+            positive_context = current_diff >= 0 or previous_diff >= 0
+            near_previous = current['price'] >= previous_same['price'] * 0.90
+            near_center = relevant_center is not None and current['price'] >= relevant_center['zg'] * 0.97
+            if momentum_weakens and positive_context and (near_previous or near_center):
+                sell_observations.append({'type': 'S?', 'pivot': current})
+    return buy_observations[-limit_per_side:], sell_observations[-limit_per_side:]
+
+def classify_first_point_candidate(observation, confirmed_pivots, centers):
+    if observation is None or len(centers) < 2:
+        return observation
+    pivot = observation['pivot']
+    first_center = centers[-2]
+    second_center = centers[-1]
+    if pivot['raw_index'] <= second_center['end_index']:
+        return observation
+    if observation['type'] == 'B?' and second_center['zg'] < first_center['zd']:
+        return {'type': '1B?', 'pivot': pivot}
+    if observation['type'] == 'S?' and second_center['zd'] > first_center['zg']:
+        return {'type': '1S?', 'pivot': pivot}
+    return observation
+
+def detect_latest_second_point(confirmed_pivots, first_point):
+    if first_point is None or first_point['type'] not in ('1B?', '1S?'):
+        return None
+    first_pivot = first_point['pivot']
+    first_position = -1
+    for i in range(len(confirmed_pivots)):
+        if confirmed_pivots[i]['raw_index'] == first_pivot['raw_index']:
+            first_position = i
+            break
+    if first_position < 0 or first_position + 2 >= len(confirmed_pivots):
+        return None
+    break_pivot = confirmed_pivots[first_position + 1]
+    retrace_pivot = confirmed_pivots[first_position + 2]
+    if first_point['type'] == '1B?':
+        if break_pivot['type'] != 'top' or retrace_pivot['type'] != 'bottom' or retrace_pivot['price'] <= first_pivot['price']:
+            return None
+        full_move = break_pivot['price'] - first_pivot['price']
+        retrace = break_pivot['price'] - retrace_pivot['price']
+        if full_move <= 0 or retrace / full_move > 0.8:
+            return None
+        return {'type': '2B?', 'pivot': retrace_pivot}
+    if break_pivot['type'] != 'bottom' or retrace_pivot['type'] != 'top' or retrace_pivot['price'] >= first_pivot['price']:
+        return None
+    full_move = first_pivot['price'] - break_pivot['price']
+    retrace = retrace_pivot['price'] - break_pivot['price']
+    if full_move <= 0 or retrace / full_move > 0.8:
+        return None
+    return {'type': '2S?', 'pivot': retrace_pivot}
+
+def detect_latest_third_point(confirmed_pivots, centers):
+    if len(centers) == 0:
+        return None
+    center = centers[-1]
+    if center.get('active', False) or center.get('exit_reason') != 'departure':
+        return None
+    first = center['end_pivot']
+    if first + 2 >= len(confirmed_pivots):
+        return None
+    departure_start = confirmed_pivots[first]
+    departure_end = confirmed_pivots[first + 1]
+    retrace_end = confirmed_pivots[first + 2]
+    if departure_start['type'] == 'bottom' and departure_end['type'] == 'top' and (retrace_end['type'] == 'bottom') and (departure_end['price'] > center['zg']) and (retrace_end['price'] > center['zg']):
+        return {'type': '3B?', 'pivot': retrace_end}
+    if departure_start['type'] == 'top' and departure_end['type'] == 'bottom' and (retrace_end['type'] == 'top') and (departure_end['price'] < center['zd']) and (retrace_end['price'] < center['zd']):
+        return {'type': '3S?', 'pivot': retrace_end}
+    return None
+
+def build_chanlun():
+    all_high_values = list(high())
+    all_low_values = list(low())
+    date_keys = list(fdatetime.year() * 10000 + fdatetime.month() * 100 + fdatetime.day())
+    gap_counts = overnight_gap_prefix(all_high_values, all_low_values, date_keys)
+    data_length = len(all_high_values)
+    analysis_end = max(0, data_length - 1)
+    analysis_start = max(0, analysis_end - FIXED_ANALYSIS_BARS)
+    analysis_high_values = all_high_values[analysis_start:analysis_end]
+    analysis_low_values = all_low_values[analysis_start:analysis_end]
+    analysis_close_values = list(close())[analysis_start:analysis_end]
+    ema12_values = fixed_ema(analysis_close_values, 12)
+    ema26_values = fixed_ema(analysis_close_values, 26)
+    diff_values = [0.0] * data_length
+    for i in range(len(analysis_close_values)):
+        diff_values[analysis_start + i] = ema12_values[i] - ema26_values[i]
+    merged = remove_inclusion(analysis_high_values, analysis_low_values, analysis_start)
+    candidates = detect_fractals(merged)
+    for candidate in candidates:
+        candidate['gap_count'] = gap_counts[candidate['raw_index']]
+    pivots = build_confirmed_pens(candidates, MINIMUM_MERGED_GAP, merged)
+    pivots = validate_pivots(pivots, MINIMUM_MERGED_GAP, merged)
+    pivots = repair_stale_tail(pivots, candidates, merged, all_high_values, all_low_values, MINIMUM_MERGED_GAP)
+    running_segment_values = []
+    for i in range(RUNNING_DASH_CHANNELS * 2):
+        running_segment_values.append([math.nan] * data_length)
+    last_pivot_invalidated = False
+    if len(pivots) >= 1 and data_length > 0:
+        last_pivot = pivots[-1]
+        tail_left = max(0, min(data_length - 1, last_pivot['raw_index']))
+        tail_high = all_high_values[tail_left]
+        tail_low = all_low_values[tail_left]
+        tail_high_index = tail_left
+        tail_low_index = tail_left
+        for tail_index in range(tail_left + 1, data_length):
+            if all_high_values[tail_index] >= tail_high:
+                tail_high = all_high_values[tail_index]
+                tail_high_index = tail_index
+            if all_low_values[tail_index] <= tail_low:
+                tail_low = all_low_values[tail_index]
+                tail_low_index = tail_index
+        if last_pivot['type'] == 'bottom':
+            if len(pivots) >= 2 and tail_low < last_pivot['price']:
+                previous_pivot = pivots[-2]
+                put_gap_running(running_segment_values[RUNNING_DASH_CHANNELS:RUNNING_DASH_CHANNELS * 2], previous_pivot['raw_index'], previous_pivot['price'], tail_low_index, tail_low, all_high_values, all_low_values, analysis_start, gap_counts)
+                last_pivot_invalidated = True
+            elif tail_high_index > last_pivot['raw_index'] and tail_high > last_pivot['price']:
+                put_gap_running(running_segment_values[0:RUNNING_DASH_CHANNELS], last_pivot['raw_index'], last_pivot['price'], tail_high_index, tail_high, all_high_values, all_low_values, analysis_start, gap_counts)
+        else:
+            if len(pivots) >= 2 and tail_high > last_pivot['price']:
+                previous_pivot = pivots[-2]
+                put_gap_running(running_segment_values[0:RUNNING_DASH_CHANNELS], previous_pivot['raw_index'], previous_pivot['price'], tail_high_index, tail_high, all_high_values, all_low_values, analysis_start, gap_counts)
+                last_pivot_invalidated = True
+            elif tail_low_index > last_pivot['raw_index'] and tail_low < last_pivot['price']:
+                put_gap_running(running_segment_values[RUNNING_DASH_CHANNELS:RUNNING_DASH_CHANNELS * 2], last_pivot['raw_index'], last_pivot['price'], tail_low_index, tail_low, all_high_values, all_low_values, analysis_start, gap_counts)
+    confirmed_pivots = pivots[:-1] if last_pivot_invalidated else pivots
+    centers = detect_centers(confirmed_pivots)
+    buy_observation_values = close() * 0
+    sell_observation_values = close() * 0
+    b1_values = close() * 0
+    s1_values = close() * 0
+    b2_values = close() * 0
+    s2_values = close() * 0
+    b3_values = close() * 0
+    s3_values = close() * 0
+    auxiliary_buys, auxiliary_sells = detect_auxiliary_observations(confirmed_pivots, diff_values, centers, 3)
+    for observation in auxiliary_buys:
+        signal_pivot = observation['pivot']
+        buy_observation_values[signal_pivot['raw_index']] = signal_pivot['price']
+    for observation in auxiliary_sells:
+        signal_pivot = observation['pivot']
+        sell_observation_values[signal_pivot['raw_index']] = signal_pivot['price']
+    macd_observation = detect_latest_macd_observation(confirmed_pivots, diff_values)
+    first_point = classify_first_point_candidate(macd_observation, confirmed_pivots, centers)
+    if first_point is not None:
+        signal_pivot = first_point['pivot']
+        if first_point['type'] == 'B?':
+            buy_observation_values[signal_pivot['raw_index']] = signal_pivot['price']
+        elif first_point['type'] == 'S?':
+            sell_observation_values[signal_pivot['raw_index']] = signal_pivot['price']
+        elif first_point['type'] == '1B?':
+            buy_observation_values[signal_pivot['raw_index']] = 0
+            b1_values[signal_pivot['raw_index']] = signal_pivot['price']
+        else:
+            sell_observation_values[signal_pivot['raw_index']] = 0
+            s1_values[signal_pivot['raw_index']] = signal_pivot['price']
+    second_point = detect_latest_second_point(confirmed_pivots, first_point)
+    if second_point is not None:
+        signal_pivot = second_point['pivot']
+        if second_point['type'] == '2B?':
+            buy_observation_values[signal_pivot['raw_index']] = 0
+            b2_values[signal_pivot['raw_index']] = signal_pivot['price']
+        else:
+            sell_observation_values[signal_pivot['raw_index']] = 0
+            s2_values[signal_pivot['raw_index']] = signal_pivot['price']
+    third_point = detect_latest_third_point(confirmed_pivots, centers)
+    if third_point is not None:
+        signal_pivot = third_point['pivot']
+        if third_point['type'] == '3B?':
+            buy_observation_values[signal_pivot['raw_index']] = 0
+            b3_values[signal_pivot['raw_index']] = signal_pivot['price']
+        else:
+            sell_observation_values[signal_pivot['raw_index']] = 0
+            s3_values[signal_pivot['raw_index']] = signal_pivot['price']
+    up_channel_values = []
+    down_channel_values = []
+    for i in range(6):
+        up_channel_values.append([math.nan] * data_length)
+        down_channel_values.append([math.nan] * data_length)
+    first_stroke = max(0, len(confirmed_pivots) - 1 - DISPLAY_STROKES)
+    up_slot = 0
+    down_slot = 0
+    display_pivot_count = len(confirmed_pivots)
+    for i in range(first_stroke, display_pivot_count - 1):
+        start = confirmed_pivots[i]
+        end = confirmed_pivots[i + 1]
+        if start['type'] == 'bottom' and end['type'] == 'top' and (up_slot < 6):
+            put_segment(up_channel_values[up_slot], start['raw_index'], start['price'], end['raw_index'], end['price'])
+            up_slot += 1
+        elif start['type'] == 'top' and end['type'] == 'bottom' and (down_slot < 6):
+            put_segment(down_channel_values[down_slot], start['raw_index'], start['price'], end['raw_index'], end['price'])
+            down_slot += 1
+    for i in range(6):
+        up_channel_values[i] = to_sequence(up_channel_values[i])
+        down_channel_values[i] = to_sequence(down_channel_values[i])
+    for i in range(RUNNING_DASH_CHANNELS * 2):
+        running_segment_values[i] = to_independent_sequence(running_segment_values[i])
+    version_value = close() * 0
+    if data_length >= 2:
+        version_value[data_length - 2] = all_low_values[data_length - 2]
+    return (up_channel_values, down_channel_values, running_segment_values, buy_observation_values, sell_observation_values, b1_values, s1_values, b2_values, s2_values, b3_values, s3_values, version_value)
+bi_up, bi_down, running_segments, buy_observation, sell_observation, b1, s1, b2, s2, b3, s3, version_mark = build_chanlun()
+plot('U1', bi_up[0], color=Color.red, linewidth=2)
+plot('U2', bi_up[1], color=Color.red, linewidth=2)
+plot('U3', bi_up[2], color=Color.red, linewidth=2)
+plot('U4', bi_up[3], color=Color.red, linewidth=2)
+plot('U5', bi_up[4], color=Color.red, linewidth=2)
+plot('U6', bi_up[5], color=Color.red, linewidth=2)
+plot('D1', bi_down[0], color=Color.green, linewidth=2)
+plot('D2', bi_down[1], color=Color.green, linewidth=2)
+plot('D3', bi_down[2], color=Color.green, linewidth=2)
+plot('D4', bi_down[3], color=Color.green, linewidth=2)
+plot('D5', bi_down[4], color=Color.green, linewidth=2)
+plot('D6', bi_down[5], color=Color.green, linewidth=2)
+plot('RUNU1', running_segments[0], color=Color.red, linewidth=2)
+plot('RUNU2', running_segments[1], color=Color.red, linewidth=2)
+plot('RUNU3', running_segments[2], color=Color.red, linewidth=2)
+plot('RUNU4', running_segments[3], color=Color.red, linewidth=2)
+plot('RUNU5', running_segments[4], color=Color.red, linewidth=2)
+plot('RUNU6', running_segments[5], color=Color.red, linewidth=2)
+plot('RUND1', running_segments[6], color=Color.green, linewidth=2)
+plot('RUND2', running_segments[7], color=Color.green, linewidth=2)
+plot('RUND3', running_segments[8], color=Color.green, linewidth=2)
+plot('RUND4', running_segments[9], color=Color.green, linewidth=2)
+plot('RUND5', running_segments[10], color=Color.green, linewidth=2)
+plot('RUND6', running_segments[11], color=Color.green, linewidth=2)
+plot_text('BQ', buy_observation > 0, buy_observation, 'B?', color=Color.hex('00FF66'), size=4, offsetv=-2.4)
+plot_text('SQ', sell_observation > 0, sell_observation, 'S?', color=Color.hex('FF1744'), size=4, offsetv=2.4)
+plot_text('B1Q', b1 > 0, b1, '1B?', color=Color.hex('00FF66'), size=5, offsetv=-2.8)
+plot_text('S1Q', s1 > 0, s1, '1S?', color=Color.hex('FF1744'), size=5, offsetv=2.8)
+plot_text('B2Q', b2 > 0, b2, '2B?', color=Color.hex('39FF14'), size=5, offsetv=-3.0)
+plot_text('S2Q', s2 > 0, s2, '2S?', color=Color.hex('FF3131'), size=5, offsetv=3.0)
+plot_text('B3Q', b3 > 0, b3, '3B?', color=Color.hex('00FF66'), size=5, offsetv=-3.2)
+plot_text('S3Q', s3 > 0, s3, '3S?', color=Color.hex('FF1744'), size=5, offsetv=3.2)

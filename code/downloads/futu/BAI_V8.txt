@@ -1,0 +1,69 @@
+{============================================================}
+{ BAI V8 - 回调底分型关键K变色（无遮挡版）                }
+{ 橙色：严格关K；白色：强关K；黄色：量能临界；青色：回调 }
+{ 确认K条件：始终对比紧邻前一K；涨幅>=3%，量比>=1.5     }
+{ 底分型条件：在确认K之前1至3根内独立查找                }
+{ 仅改变信号K颜色，不显示文字，不遮挡相邻K线             }
+{ 必须新建为主图指标，并在日K周期使用                     }
+{============================================================}
+
+UPMIN:=1.03;
+VMIN:=1.50;
+NEARVMIN:=1.20;
+PBVMAX:=0.67;
+
+{ 前1根为底分型中间K：左右K分别是前2根、当前确认K }
+BF1:=REF(L,1)<REF(L,2) AND REF(L,1)<L;
+PB1OK:=REF(L,1)=REF(LLV(L,5),1);
+B1:=BF1 AND PB1OK;
+{ 前2根为底分型中间K：左右K分别是前3根、前1根 }
+BF2:=REF(L,2)<REF(L,3) AND REF(L,2)<REF(L,1);
+PB2OK:=REF(L,2)=REF(LLV(L,5),2);
+B2:=BF2 AND PB2OK;
+{ 前3根为底分型中间K：左右K分别是前4根、前2根 }
+BF3:=REF(L,3)<REF(L,4) AND REF(L,3)<REF(L,2);
+PB3OK:=REF(L,3)=REF(LLV(L,5),3);
+B3:=BF3 AND PB3OK;
+BOK:=B1 OR B2 OR B3;
+BKPOS:=IF(B1,1,IF(B2,2,IF(B3,3,0)));
+
+KUPR:=C/MAX(REF(C,1),0.01);
+KVRATIO:=V/MAX(REF(V,1),1);
+UOK:=KUPR>=UPMIN;
+VOK:=KVRATIO>=VMIN;
+
+M5:=MA(C,5);
+M20:=MA(C,20);
+M5UP:=M5>REF(M5,1);
+BACK20:=C>M20 AND REF(C,1)<=REF(M20,1);
+MAOK:=M5UP AND C>M20 AND (BACK20 OR REF(BACK20,1));
+DIFV:=EMA(C,12)-EMA(C,26);
+DEAV:=EMA(DIFV,9);
+MACDOK:=CROSS(DIFV,DEAV) AND (DIFV<0 OR DEAV<0);
+
+KEYK:=BOK AND UOK AND VOK;
+WHITEK:=KEYK AND (MAOK OR MACDOK);
+ORANGEK:=KEYK AND NOT(WHITEK);
+NEARK:=BOK AND UOK AND KVRATIO>=NEARVMIN AND KVRATIO<VMIN;
+
+PB1:=REF(KEYK,1) AND C>=REF(L,1) AND V<=REF(V,1)*PBVMAX;
+PB2:=REF(KEYK,2) AND C>=REF(L,2) AND V<=REF(V,2)*PBVMAX;
+PB3:=REF(KEYK,3) AND C>=REF(L,3) AND V<=REF(V,3)*PBVMAX;
+PBOK:=PB1 OR PB2 OR PB3;
+
+{ 细实体、细影线、无文字 }
+STICKLINE(NEARK,L,H,0,0),COLORYELLOW;
+STICKLINE(NEARK,O,C,0.8,0),COLORYELLOW;
+STICKLINE(PBOK,L,H,0,0),COLORCYAN;
+STICKLINE(PBOK,O,C,0.8,0),COLORCYAN;
+STICKLINE(ORANGEK,L,H,0,0),COLORFF8800;
+STICKLINE(ORANGEK,O,C,0.8,0),COLORFF8800;
+STICKLINE(WHITEK,L,H,0,0),COLORWHITE;
+STICKLINE(WHITEK,O,C,0.8,0),COLORWHITE;
+
+关K信号:IF(KEYK,1,0),NODRAW;
+临界信号:IF(NEARK,1,0),NODRAW;
+底分型信号:IF(BOK,1,0),NODRAW;
+底分型距关K:BKPOS,NODRAW;
+量比:KVRATIO,NODRAW;
+涨幅百分比:(KUPR-1)*100,NODRAW;
