@@ -1,5 +1,5 @@
 {
-  "schema_version": "a_share_shortage_watch_v1",
+  "schema_version": "a_share_shortage_watch_v2",
   "asof": "2026-09-16",
   "generated_at_bj": "2026-09-16T16:11:47+08:00",
   "theme_count": 23,
@@ -31,7 +31,36 @@
           "https://www.ajinomoto.com/innovation/our_innovation/buildupfilm",
           "https://news.ajinomoto.co.jp/2026/05/20260507-02.html"
         ]
-      }
+      },
+      "industry": "先进封装",
+      "representatives": [
+        {
+          "name": "生益科技",
+          "original_name": "生益科技",
+          "code": "600183",
+          "market_cap": 3487.08,
+          "quote_time": "20260923161451",
+          "note": "封装基材布局；类ABF胶膜待核"
+        }
+      ],
+      "emerging_companies": [
+        {
+          "name": "华正新材",
+          "original_name": "华正新材",
+          "code": "603186",
+          "market_cap": 357.01,
+          "quote_time": "20260923161450",
+          "note": "CBF客户认证期"
+        },
+        {
+          "name": "莲花控股",
+          "original_name": "莲花控股",
+          "code": "600186",
+          "market_cap": 243.64,
+          "quote_time": "20260923161455",
+          "note": "参股纽菲斯；非并表胶膜收入"
+        }
+      ]
     },
     {
       "rank": 2,
@@ -58,7 +87,27 @@
           "https://static.cninfo.com.cn/finalpage/2026-08-27/1225512708.PDF",
           "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12512943&stockid=002436"
         ]
-      }
+      },
+      "industry": "先进封装",
+      "representatives": [
+        {
+          "name": "深南电路",
+          "original_name": "深南电路",
+          "code": "002916",
+          "market_cap": 2825.27,
+          "quote_time": "20260923161442",
+          "note": "载板制造；受上游供给影响"
+        },
+        {
+          "name": "兴森科技",
+          "original_name": "兴森科技",
+          "code": "002436",
+          "market_cap": 780.15,
+          "quote_time": "20260923161454",
+          "note": "载板制造；受上游供给影响"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 3,
@@ -74,7 +123,27 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-10.md#L222",
       "status": "供给约束线索",
       "company_count": 2,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "PCB",
+      "representatives": [
+        {
+          "name": "胜宏科技",
+          "original_name": "胜宏科技",
+          "code": "300476",
+          "market_cap": 2400.94,
+          "quote_time": "20260923161403",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "方正科技",
+          "original_name": "方正科技",
+          "code": "600601",
+          "market_cap": 643.63,
+          "quote_time": "20260923161454",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 4,
@@ -100,7 +169,19 @@
           "https://www.nittobo.co.jp/eng/ir/pdf/Nittobo_Integrated-Report_2025.pdf",
           "https://www.nittobo.co.jp/eng/business/electronicmaterials/index.htm"
         ]
-      }
+      },
+      "industry": "PCB",
+      "representatives": [
+        {
+          "name": "宏和科技",
+          "original_name": "宏和科技",
+          "code": "603256",
+          "market_cap": 1418.39,
+          "quote_time": "20260923161459",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 5,
@@ -121,12 +202,24 @@
         "nature": "断供传闻／客户与型号限制待核",
         "status": "断供未核验",
         "verified_at": "2026-09-23",
-        "claim": "MFC是质量流量控制器。未取得HORIBA全面对华断供的正式公告；官网产品仍可见，但这同样不能证明所有型号和客户都可供货。原名单高凯技术的证券身份和上市公司权益关系未核验。",
+        "claim": "MFC是质量流量控制器。未取得HORIBA全面对华断供的正式公告；官网产品仍可见，但这同样不能证明所有型号和客户都可供货。高凯技术证券身份已核验（688835）；供给限制及替代订单仍需单独核验。",
         "sources": [
           "https://www.horiba.com/chn/semiconductor/products/detail/action/show/Product/sec-z500x-729/",
           "https://static.horiba.com/fileadmin/Horiba/Company/Investor_Relations/IR_Library/Presentation_Materials/20250825_PR_en_01_Tx4.pdf"
         ]
-      }
+      },
+      "industry": "半导体设备与零部件",
+      "representatives": [
+        {
+          "name": "高凯技术",
+          "original_name": "高凯技术",
+          "code": "688835",
+          "market_cap": 354.71,
+          "quote_time": "20260923161440",
+          "note": "MFC；断供说法未核验"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 6,
@@ -141,7 +234,19 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L80",
       "status": "供给约束线索",
       "company_count": 1,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "电子材料",
+      "representatives": [
+        {
+          "name": "星源材质",
+          "original_name": "星源材质",
+          "code": "300568",
+          "market_cap": 254.22,
+          "quote_time": "20260923161403",
+          "note": "股权／产品映射待核"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 7,
@@ -157,7 +262,28 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-13.md#L406",
       "status": "双向风险",
       "company_count": 2,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "半导体设备与零部件",
+      "representatives": [
+        {
+          "name": "恒运昌",
+          "original_name": "恒运昌",
+          "code": "688785",
+          "market_cap": 257.94,
+          "quote_time": "20260923161452",
+          "note": "进口交付亦有风险"
+        }
+      ],
+      "emerging_companies": [
+        {
+          "name": "英杰电气",
+          "original_name": "英杰电气",
+          "code": "300820",
+          "market_cap": 163.65,
+          "quote_time": "20260923161406",
+          "note": "研究线索；兑现情况待核"
+        }
+      ]
     },
     {
       "rank": 8,
@@ -179,7 +305,76 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-16-%E5%8D%88%E9%97%B4.md#L648",
       "status": "供给约束线索",
       "company_count": 8,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "半导体设备与零部件",
+      "representatives": [
+        {
+          "name": "富创精密",
+          "original_name": "富创精密",
+          "code": "688409",
+          "market_cap": 589.76,
+          "quote_time": "20260923161458",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "江丰电子",
+          "original_name": "江丰电子",
+          "code": "300666",
+          "market_cap": 695.42,
+          "quote_time": "20260923161439",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": [
+        {
+          "name": "超纯应材",
+          "original_name": "超纯应材",
+          "code": "301717",
+          "market_cap": 382.94,
+          "quote_time": "20260923161409",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "珂玛科技",
+          "original_name": "珂玛科技",
+          "code": "301611",
+          "market_cap": 425.75,
+          "quote_time": "20260923161451",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "新莱应材",
+          "original_name": "新莱应材",
+          "code": "300260",
+          "market_cap": 261.2,
+          "quote_time": "20260923161424",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "正帆科技",
+          "original_name": "正帆科技",
+          "code": "688596",
+          "market_cap": 212.2,
+          "quote_time": "20260923161448",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "臻宝科技",
+          "original_name": "臻宝科技",
+          "code": "688797",
+          "market_cap": 437.73,
+          "quote_time": "20260923161457",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "恒运昌",
+          "original_name": "恒运昌",
+          "code": "688785",
+          "market_cap": 257.94,
+          "quote_time": "20260923161452",
+          "note": "进口交付亦有风险"
+        }
+      ]
     },
     {
       "rank": 9,
@@ -195,7 +390,27 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1268",
       "status": "紧张/缺货线索",
       "company_count": 2,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "半导体材料",
+      "representatives": [
+        {
+          "name": "中船特气",
+          "original_name": "中船特气",
+          "code": "688146",
+          "market_cap": 1150.94,
+          "quote_time": "20260923161449",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "昊华科技",
+          "original_name": "昊华科技",
+          "code": "600378",
+          "market_cap": 603.72,
+          "quote_time": "20260923161446",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 10,
@@ -220,7 +435,19 @@
         "sources": [
           "https://investors.3m.com/financials/sec-filings/content/0000066740-26-000014/mmm-20251231.htm"
         ]
-      }
+      },
+      "industry": "半导体材料",
+      "representatives": [
+        {
+          "name": "新宙邦",
+          "original_name": "新宙邦",
+          "code": "300037",
+          "market_cap": 545.59,
+          "quote_time": "20260923161448",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 11,
@@ -236,7 +463,27 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1270",
       "status": "供给约束线索",
       "company_count": 2,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "半导体材料",
+      "representatives": [
+        {
+          "name": "巨化股份",
+          "original_name": "巨化股份",
+          "code": "600160",
+          "market_cap": 946.26,
+          "quote_time": "20260923161456",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "新宙邦",
+          "original_name": "新宙邦",
+          "code": "300037",
+          "market_cap": 545.59,
+          "quote_time": "20260923161448",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 12,
@@ -256,7 +503,60 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1272",
       "status": "延伸映射",
       "company_count": 6,
-      "constraint_type": "延伸映射"
+      "constraint_type": "延伸映射",
+      "industry": "半导体材料",
+      "representatives": [
+        {
+          "name": "天赐材料",
+          "original_name": "天赐材料",
+          "code": "002709",
+          "market_cap": 669.46,
+          "quote_time": "20260923161500",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "雅克科技",
+          "original_name": "雅克科技",
+          "code": "002409",
+          "market_cap": 653.35,
+          "quote_time": "20260923161439",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "安集科技",
+          "original_name": "安集科技",
+          "code": "688019",
+          "market_cap": 530.7,
+          "quote_time": "20260923161453",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": [
+        {
+          "name": "三祥新材",
+          "original_name": "三祥新材",
+          "code": "603663",
+          "market_cap": 278.98,
+          "quote_time": "20260923161454",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "中巨芯-U",
+          "original_name": "中巨芯",
+          "code": "688549",
+          "market_cap": 351.3,
+          "quote_time": "20260923161456",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "多氟多",
+          "original_name": "多氟多",
+          "code": "002407",
+          "market_cap": 382.01,
+          "quote_time": "20260923161403",
+          "note": "研究线索；兑现情况待核"
+        }
+      ]
     },
     {
       "rank": 13,
@@ -271,7 +571,19 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14.md#L273",
       "status": "紧张/缺货线索",
       "company_count": 1,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "光通信",
+      "representatives": [
+        {
+          "name": "罗博特科",
+          "original_name": "罗博特科",
+          "code": "300757",
+          "market_cap": 1002.26,
+          "quote_time": "20260923161418",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 14,
@@ -286,7 +598,19 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-16-%E5%8D%88%E9%97%B4.md#L109",
       "status": "紧张/缺货线索",
       "company_count": 1,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "光通信",
+      "representatives": [
+        {
+          "name": "东田微",
+          "original_name": "东田微",
+          "code": "301183",
+          "market_cap": 251.26,
+          "quote_time": "20260923161448",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 15,
@@ -302,7 +626,28 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-14.md#L29",
       "status": "供给约束线索",
       "company_count": 2,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "光通信",
+      "representatives": [
+        {
+          "name": "优迅股份",
+          "original_name": "优迅股份",
+          "code": "688807",
+          "market_cap": 289.06,
+          "quote_time": "20260923161500",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": [
+        {
+          "name": "金字火腿",
+          "original_name": "金字火腿",
+          "code": "002515",
+          "market_cap": 93.22,
+          "quote_time": "20260923161424",
+          "note": "股权关系待核；非直接制造商"
+        }
+      ]
     },
     {
       "rank": 16,
@@ -318,7 +663,28 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-08.md#L24",
       "status": "紧张/缺货线索",
       "company_count": 2,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "半导体芯片",
+      "representatives": [
+        {
+          "name": "富满微",
+          "original_name": "富满微",
+          "code": "300671",
+          "market_cap": 139.39,
+          "quote_time": "20260923161409",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": [
+        {
+          "name": "明微电子",
+          "original_name": "明微电子",
+          "code": "688699",
+          "market_cap": 77.64,
+          "quote_time": "20260923161442",
+          "note": "研究线索；兑现情况待核"
+        }
+      ]
     },
     {
       "rank": 17,
@@ -338,7 +704,60 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/%E5%A4%A7%E7%9B%98%E4%B8%8E%E7%A7%91%E6%8A%80_20260819.md#L333",
       "status": "旧线索待刷新",
       "company_count": 6,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "半导体芯片",
+      "representatives": [
+        {
+          "name": "扬杰科技",
+          "original_name": "扬杰科技",
+          "code": "300373",
+          "market_cap": 496.57,
+          "quote_time": "20260923161409",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "华润微",
+          "original_name": "华润微",
+          "code": "688396",
+          "market_cap": 813.0,
+          "quote_time": "20260923161459",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "士兰微",
+          "original_name": "士兰微",
+          "code": "600460",
+          "market_cap": 560.29,
+          "quote_time": "20260923161458",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "杰华特",
+          "original_name": "杰华特",
+          "code": "688141",
+          "market_cap": 537.19,
+          "quote_time": "20260923161453",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": [
+        {
+          "name": "斯达半导",
+          "original_name": "斯达半导",
+          "code": "603290",
+          "market_cap": 210.81,
+          "quote_time": "20260923161457",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "新洁能",
+          "original_name": "新洁能",
+          "code": "605111",
+          "market_cap": 259.08,
+          "quote_time": "20260923161500",
+          "note": "研究线索；兑现情况待核"
+        }
+      ]
     },
     {
       "rank": 18,
@@ -353,7 +772,19 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L125",
       "status": "供给约束线索",
       "company_count": 1,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "能源设备",
+      "representatives": [
+        {
+          "name": "应流股份",
+          "original_name": "应流股份",
+          "code": "603308",
+          "market_cap": 292.47,
+          "quote_time": "20260923161447",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 19,
@@ -370,7 +801,36 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15-%E5%8D%88%E9%97%B4.md#L1007",
       "status": "供给约束线索",
       "company_count": 3,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "资源材料",
+      "representatives": [
+        {
+          "name": "东方钽业",
+          "original_name": "东方钽业",
+          "code": "000962",
+          "market_cap": 321.92,
+          "quote_time": "20260923161421",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": [
+        {
+          "name": "中矿资源",
+          "original_name": "中矿资源",
+          "code": "002738",
+          "market_cap": 323.48,
+          "quote_time": "20260923161436",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "新金路",
+          "original_name": "新金路",
+          "code": "000510",
+          "market_cap": 124.71,
+          "quote_time": "20260923161436",
+          "note": "研究线索；兑现情况待核"
+        }
+      ]
     },
     {
       "rank": 20,
@@ -397,7 +857,27 @@
           "https://exportcontrol.mofcom.gov.cn/article/hgfw/lywxcx/gzqd/202502/1102.html",
           "https://exportcontrol.mofcom.gov.cn/article/cjwt/202503/1112.html"
         ]
-      }
+      },
+      "industry": "资源材料",
+      "representatives": [
+        {
+          "name": "中钨高新",
+          "original_name": "中钨高新",
+          "code": "000657",
+          "market_cap": 1348.01,
+          "quote_time": "20260923161500",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "厦门钨业",
+          "original_name": "厦门钨业",
+          "code": "600549",
+          "market_cap": 773.31,
+          "quote_time": "20260923161459",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 21,
@@ -422,7 +902,19 @@
         "sources": [
           "https://exportcontrol.mofcom.gov.cn/article/hgfw/lywxcx/gzqd/202502/1102.html"
         ]
-      }
+      },
+      "industry": "资源材料",
+      "representatives": [
+        {
+          "name": "云南锗业",
+          "original_name": "云南锗业",
+          "code": "002428",
+          "market_cap": 616.48,
+          "quote_time": "20260923161448",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": []
     },
     {
       "rank": 22,
@@ -439,7 +931,36 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L544",
       "status": "双向风险",
       "company_count": 3,
-      "constraint_type": "历史供需线索待核"
+      "constraint_type": "历史供需线索待核",
+      "industry": "化工材料",
+      "representatives": [
+        {
+          "name": "中化国际",
+          "original_name": "中化国际",
+          "code": "600500",
+          "market_cap": 208.12,
+          "quote_time": "20260923161454",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": [
+        {
+          "name": "阳谷华泰",
+          "original_name": "阳谷华泰",
+          "code": "300121",
+          "market_cap": 44.12,
+          "quote_time": "20260923161415",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "齐翔腾达",
+          "original_name": "齐翔腾达",
+          "code": "002408",
+          "market_cap": 152.7,
+          "quote_time": "20260923161412",
+          "note": "研究线索；兑现情况待核"
+        }
+      ]
     },
     {
       "rank": 23,
@@ -457,7 +978,44 @@
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L552",
       "status": "延伸映射",
       "company_count": 4,
-      "constraint_type": "延伸映射"
+      "constraint_type": "延伸映射",
+      "industry": "食品配料",
+      "representatives": [
+        {
+          "name": "金禾实业",
+          "original_name": "金禾实业",
+          "code": "002597",
+          "market_cap": 124.97,
+          "quote_time": "20260923161442",
+          "note": "研究线索；兑现情况待核"
+        }
+      ],
+      "emerging_companies": [
+        {
+          "name": "百龙创园",
+          "original_name": "百龙创园",
+          "code": "605016",
+          "market_cap": 90.51,
+          "quote_time": "20260923161450",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "保龄宝",
+          "original_name": "保龄宝",
+          "code": "002286",
+          "market_cap": 33.25,
+          "quote_time": "20260923161445",
+          "note": "研究线索；兑现情况待核"
+        },
+        {
+          "name": "华康股份",
+          "original_name": "华康生物",
+          "code": "605077",
+          "market_cap": 35.96,
+          "quote_time": "20260923161459",
+          "note": "华康生物为上市公司子公司"
+        }
+      ]
     }
   ],
   "companies": [
@@ -847,7 +1405,7 @@
       "nature": "断供传闻／客户与型号限制待核",
       "status": "断供未核验",
       "verified_at": "2026-09-23",
-      "claim": "MFC是质量流量控制器。未取得HORIBA全面对华断供的正式公告；官网产品仍可见，但这同样不能证明所有型号和客户都可供货。原名单高凯技术的证券身份和上市公司权益关系未核验。",
+      "claim": "MFC是质量流量控制器。未取得HORIBA全面对华断供的正式公告；官网产品仍可见，但这同样不能证明所有型号和客户都可供货。高凯技术证券身份已核验（688835）；供给限制及替代订单仍需单独核验。",
       "sources": [
         "https://www.horiba.com/chn/semiconductor/products/detail/action/show/Product/sec-z500x-729/",
         "https://static.horiba.com/fileadmin/Horiba/Company/Investor_Relations/IR_Library/Presentation_Materials/20250825_PR_en_01_Tx4.pdf"
@@ -956,5 +1514,9 @@
       "market_cap_unit": "亿元人民币",
       "quote_time": "20260923161454"
     }
-  ]
+  ],
+  "market_cap_date": "2026-09-23",
+  "market_cap_source": "腾讯行情，总市值，亿元人民币；2026-09-23收盘后快照",
+  "table_updated_at": "2026-09-23",
+  "table_boundary": "代表企业是产业研究参照，不表示每家均为该产品龙头；新兴企业栏收录其余总市值不超过500亿元的候选，并非成立时间定义。单一公司子类不强凑第二家公司。"
 }
