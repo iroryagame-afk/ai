@@ -2,37 +2,12 @@
   "schema_version": "a_share_shortage_watch_v2",
   "asof": "2026-09-16",
   "generated_at_bj": "2026-09-16T16:11:47+08:00",
-  "theme_count": 23,
-  "company_count": 55,
+  "theme_count": 44,
+  "company_count": 48,
   "records": [
     {
-      "rank": 1,
-      "theme": "ABF胶膜",
-      "names": [
-        "华正新材",
-        "莲花控股",
-        "生益科技"
-      ],
-      "summary": "减供传闻／材料替代；不能写成正式禁运",
-      "path": "文字直播/2026-09-08.md",
-      "line": 74,
-      "source_date": "2026-09-08",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-08.md#L74",
-      "status": "供给约束线索",
-      "company_count": 3,
-      "constraint_type": "供给集中／减供传闻",
-      "review": {
-        "theme": "ABF胶膜",
-        "nature": "供给集中／减供传闻",
-        "status": "禁供未核验",
-        "verified_at": "2026-09-23",
-        "claim": "ABF是味之素的积层绝缘膜；不等于ABF载板。味之素已公告第三生产基地拟于2028年开工、2032年投产；该计划不能证明2032年前没有扩产，也不能证明当前对华断供。",
-        "sources": [
-          "https://www.ajinomoto.com/innovation/our_innovation/buildupfilm",
-          "https://news.ajinomoto.co.jp/2026/05/20260507-02.html"
-        ]
-      },
       "industry": "先进封装",
+      "theme": "封装载板基材（非ABF胶膜）",
       "representatives": [
         {
           "name": "生益科技",
@@ -40,9 +15,61 @@
           "code": "600183",
           "market_cap": 3487.08,
           "quote_time": "20260923161451",
-          "note": "封装基材布局；类ABF胶膜待核"
+          "note": "封装基材布局；类ABF胶膜待核",
+          "audit_id": "shortage_0_600183",
+          "audit": {
+            "row_index": 0,
+            "code": "600183",
+            "name": "生益科技",
+            "decision": "reclassify",
+            "subcategory": "封装载板基材（非ABF胶膜）",
+            "technology": "封装用覆铜板",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "本次原文仅证实封装用覆铜板，未证实ABF积层胶膜供应。卡类、LED、存储封装基材已批量；CPU/GPU高端封装基材开发应用，不能整体写量产。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475783.PDF"
+            ],
+            "source_excerpt": "介电损耗全系列高速产品，不 同介电应用要求、多技术路线高频产品，并已实现多品种批量应用。与此同时，在封装用覆铜板 技术方面，公司产品已在卡类封装、LED、存储芯片类等领域批量使用，同时突破了关键核心技 7 / 187 广东生益科技股份有限公司2026 年半年度报告 术，在更高端的以 FC-CSP、FC-BGA 封装为代表的 AP、CPU、GPU、AI 类产品进行开发和应 用。 在供应端，充分发挥公司良好的研发技术资源，主动与供应商共同开发各类材料，协助供应 商改善制造和品控问题，推动其技术进步，满足了供应多元化的需求。在市场供应紧张的时候， 确保了公司的交付和成本优",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "ABF胶膜",
+            "audit_id": "shortage_0_600183"
+          },
+          "technology": "封装用覆铜板",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475783.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "本次原文仅证实封装用覆铜板，未证实ABF积层胶膜供应。卡类、LED、存储封装基材已批量；CPU/GPU高端封装基材开发应用，不能整体写量产。",
+          "jev": {
+            "audit_id": "shortage_0_600183",
+            "name": "生益科技",
+            "code": "600183",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.56,
+            "remove_or_reclassify": 0.92,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "9c3c961038429a01e96e37c1dd37a5b013d3f54047cfd9f876b7f18fa86f783c",
+            "response_sha256": "0d1bf508a8b8b17349fdca67a43265771c76a049a9e86abded5db436c2e6e3cb"
+          }
         }
       ],
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "ABF胶膜"
+      ]
+    },
+    {
+      "industry": "先进封装",
+      "theme": "积层绝缘膜（CBF）",
+      "representatives": [],
       "emerging_companies": [
         {
           "name": "华正新材",
@@ -50,45 +77,59 @@
           "code": "603186",
           "market_cap": 357.01,
           "quote_time": "20260923161450",
-          "note": "CBF客户认证期"
-        },
-        {
-          "name": "莲花控股",
-          "original_name": "莲花控股",
-          "code": "600186",
-          "market_cap": 243.64,
-          "quote_time": "20260923161455",
-          "note": "参股纽菲斯；非并表胶膜收入"
+          "note": "CBF客户认证期",
+          "audit_id": "shortage_0_603186",
+          "audit": {
+            "row_index": 0,
+            "code": "603186",
+            "name": "华正新材",
+            "decision": "retain",
+            "subcategory": "积层绝缘膜（CBF）",
+            "technology": "CBF/CBF-RCC",
+            "stage": "客户认证期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "CPU/GPU算力应用开启验证；VCM音圈马达CBF-RCC小批不能替代算力认证，产线能力不等于已量产订单。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534785.PDF"
+            ],
+            "source_excerpt": "。公司 已形成适用于算力芯片等应用场景的系列产品，并在国内外头部 IC 载板厂商持续开展验证工作； CBF-RCC 产品在智能手机 VCM 音圈马达领域已实现小批量订单交付；同时，在 CPU/GPU 等算 力芯片及 PMIC 嵌埋电容基板等应用场景的客户端开启验证流程。为有效推进该系列产品从研发 到量产的高效转化，公司在青山湖工业园区已建成独立的研发中心与生产线，该产线已具备批量 订单交付能力。 3．功能性复合材料与交通物流用复合材料 公司坚持自主研发创新，已成功开发系列化可定制的高性能复合材料产品，材料具备轻质高 强、高模量、耐高温、耐穿刺、中低温快速成型、多彩外观",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "ABF胶膜",
+            "audit_id": "shortage_0_603186"
+          },
+          "technology": "CBF/CBF-RCC",
+          "stage": "客户认证期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534785.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "CPU/GPU算力应用开启验证；VCM音圈马达CBF-RCC小批不能替代算力认证，产线能力不等于已量产订单。",
+          "jev": {
+            "audit_id": "shortage_0_603186",
+            "name": "华正新材",
+            "code": "603186",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.59,
+            "remove_or_reclassify": 0.59,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "9c3c961038429a01e96e37c1dd37a5b013d3f54047cfd9f876b7f18fa86f783c",
+            "response_sha256": "0d1bf508a8b8b17349fdca67a43265771c76a049a9e86abded5db436c2e6e3cb"
+          }
         }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "ABF胶膜"
       ]
     },
     {
-      "rank": 2,
-      "theme": "ABF载板",
-      "names": [
-        "深南电路",
-        "兴森科技"
-      ],
-      "summary": "载板供需紧张；同时承担上游胶膜供应风险",
-      "path": "文字直播/2026-09-08.md",
-      "line": 82,
-      "source_date": "2026-09-08",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-08.md#L82",
-      "status": "双向风险",
-      "company_count": 2,
-      "constraint_type": "产能与认证瓶颈",
-      "review": {
-        "theme": "ABF载板",
-        "nature": "产能与认证瓶颈",
-        "status": "产品已核验／缺货幅度待核",
-        "verified_at": "2026-09-23",
-        "claim": "深南、兴森生产封装载板，是胶膜下游。缺货可能带来议价，也可能使其缺料、延期；不能把载板企业称为ABF胶膜国产供应商。",
-        "sources": [
-          "https://static.cninfo.com.cn/finalpage/2026-08-27/1225512708.PDF",
-          "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12512943&stockid=002436"
-        ]
-      },
       "industry": "先进封装",
+      "theme": "FC-BGA封装载板",
       "representatives": [
         {
           "name": "深南电路",
@@ -96,7 +137,49 @@
           "code": "002916",
           "market_cap": 2825.27,
           "quote_time": "20260923161442",
-          "note": "载板制造；受上游供给影响"
+          "note": "载板制造；受上游供给影响",
+          "audit_id": "shortage_1_002916",
+          "audit": {
+            "row_index": 1,
+            "code": "002916",
+            "name": "深南电路",
+            "decision": "retain",
+            "subcategory": "FC-BGA封装载板",
+            "technology": "ABF体系载板制造",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "制造载板、采购胶膜；高端产品多客户量产；上游短缺既可能涨价也可能缺料。",
+            "sources": [
+              "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-27/99646b65-8037-44b1-9cd8-61351de243a2.PDF"
+            ],
+            "source_excerpt": "，市场开拓取得一定进展。FC-BGA类封装基板，公司充分发挥核心技术优势与供应链协同能力，成功推动了高端产品在多个客户处实现规模化量产，带动广州工厂产能加速爬坡。面向下一代先进计算相关基板技术研发进展顺利，为匹配客户中长期产品需求做好技术储备。（3）电子装联业务进一步深化算力领域布局，推动收入与毛利同步提升报告期内，公司电子装联业务实现主营业务收入19.76亿元，同比增长33.70%，占公司营业总收入的12.92%；毛利率17.30%，同比增加2.32个百分点。2026年上半年，公司电子装联业务充分把握了数据中心领域需求增长机会，持续深化与战略客户的合作并加快新客户导入，相关项目进入量产",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "ABF载板",
+            "audit_id": "shortage_1_002916"
+          },
+          "technology": "ABF体系载板制造",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-27/99646b65-8037-44b1-9cd8-61351de243a2.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "制造载板、采购胶膜；高端产品多客户量产；上游短缺既可能涨价也可能缺料。",
+          "jev": {
+            "audit_id": "shortage_1_002916",
+            "name": "深南电路",
+            "code": "002916",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.71,
+            "remove_or_reclassify": 0.37,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "9c3c961038429a01e96e37c1dd37a5b013d3f54047cfd9f876b7f18fa86f783c",
+            "response_sha256": "0d1bf508a8b8b17349fdca67a43265771c76a049a9e86abded5db436c2e6e3cb"
+          }
         },
         {
           "name": "兴森科技",
@@ -104,27 +187,60 @@
           "code": "002436",
           "market_cap": 780.15,
           "quote_time": "20260923161454",
-          "note": "载板制造；受上游供给影响"
+          "note": "载板制造；受上游供给影响",
+          "audit_id": "shortage_1_002436",
+          "audit": {
+            "row_index": 1,
+            "code": "002436",
+            "name": "兴森科技",
+            "decision": "retain",
+            "subcategory": "FC-BGA封装载板",
+            "technology": "ABF体系载板制造",
+            "stage": "客户认证期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "2026半年报明示FCBGA尚未大批量生产；成熟CSP业务不能代替FCBGA阶段。",
+            "sources": [
+              "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-21/34dce469-f3be-42c2-902e-4b3f633b1c01.PDF"
+            ],
+            "source_excerpt": "整体毛利率-0.36%、 同比增长 24.81 个百分点，毛利率为负主要系 FCBGA 封装基板项目尚未实现大批量生产，人工、折旧、能源和材料等费用 投入较大。 CSP 封装基板业务聚焦于存储、射频两大主力方向，并向汽车市场拓展，产品结构逐步向高附加值高单价的方向拓展， 尤其是多层板和难度板，致力于通过优化产品结构增强盈利能力。受益于存储芯片行业复苏和主要存储客户的份额提升， 公司 CSP 封装基板业务订单饱满、产能利用率处于较高水平，整体收入实现较快增长。尽管上游原材料价格大幅上涨，公 司通过产品涨价有效转嫁成本压力。 FCBGA 封装基板项目已在技术能力、产能规模和产",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "ABF载板",
+            "audit_id": "shortage_1_002436"
+          },
+          "technology": "ABF体系载板制造",
+          "stage": "客户认证期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-21/34dce469-f3be-42c2-902e-4b3f633b1c01.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "2026半年报明示FCBGA尚未大批量生产；成熟CSP业务不能代替FCBGA阶段。",
+          "jev": {
+            "audit_id": "shortage_1_002436",
+            "name": "兴森科技",
+            "code": "002436",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.68,
+            "remove_or_reclassify": 0.51,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "9c3c961038429a01e96e37c1dd37a5b013d3f54047cfd9f876b7f18fa86f783c",
+            "response_sha256": "0d1bf508a8b8b17349fdca67a43265771c76a049a9e86abded5db436c2e6e3cb"
+          }
         }
       ],
-      "emerging_companies": []
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "ABF载板"
+      ]
     },
     {
-      "rank": 3,
-      "theme": "高阶AI PCB",
-      "names": [
-        "胜宏科技",
-        "方正科技"
-      ],
-      "summary": "资料称认证壁垒限制高端有效产能",
-      "path": "情报社/2026-09-10.md",
-      "line": 222,
-      "source_date": "2026-09-10",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-10.md#L222",
-      "status": "供给约束线索",
-      "company_count": 2,
-      "constraint_type": "历史供需线索待核",
       "industry": "PCB",
+      "theme": "高阶AI PCB",
       "representatives": [
         {
           "name": "胜宏科技",
@@ -132,7 +248,49 @@
           "code": "300476",
           "market_cap": 2400.94,
           "quote_time": "20260923161403",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_2_300476",
+          "audit": {
+            "row_index": 2,
+            "code": "300476",
+            "name": "胜宏科技",
+            "decision": "retain",
+            "subcategory": "高阶AI PCB",
+            "technology": "高阶HDI/高多层PCB",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "高阶PCB产品与AI应用确认；缺货幅度和每款产能不能由行业叙事推定。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522515.PDF"
+            ],
+            "source_excerpt": "CA、PCBA 等)；公司具备 100 层以上高多层 PCB、10 阶 30 层 HDI 与 16 层任意互联(Any-layer)HDI 的技术能力，成功攻克 30 层 10 阶 HDI、36 层 14 阶 HDI 核心制造工艺，高端高阶 PCB 制程能力迈上新台阶；积极推进 70 层以上铜浆烧结、垂直供 电埋容高多阶 HDI 以及 COWOP 先进封装基板技术落地，满足 AI 算力服务器、高端通讯领域的高阶 PCB 量产需求；公司的 AI 算力卡、AI Data Center UBB＆交换机市场份额全球领先。 15 胜宏科技（惠州）股份有限公司 2026 年半年度报告全文 公司是 CPCA 副理事长单位，是行业标准的制定单位之一，连续多年位居“中国 PCB 百强榜”和 “全球 PCB 百强榜”前列，入选 2025 广东省制造业 500 强（第 53 名），高密度多层 VGA(显卡)PCB、 AI 算力印制电路板荣获广东省制造业单项冠军。 胜宏科技始终将“品质”和“安全”视为企业的生命线。通过 CQC、IATF16949、ISO9001、RoHS、 QC080000、ISO14001",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "高阶AI PCB",
+            "audit_id": "shortage_2_300476"
+          },
+          "technology": "高阶HDI/高多层PCB",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522515.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "高阶PCB产品与AI应用确认；缺货幅度和每款产能不能由行业叙事推定。",
+          "jev": {
+            "audit_id": "shortage_2_300476",
+            "name": "胜宏科技",
+            "code": "300476",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.54,
+            "remove_or_reclassify": 0.25,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "9c3c961038429a01e96e37c1dd37a5b013d3f54047cfd9f876b7f18fa86f783c",
+            "response_sha256": "0d1bf508a8b8b17349fdca67a43265771c76a049a9e86abded5db436c2e6e3cb"
+          }
         },
         {
           "name": "方正科技",
@@ -140,37 +298,60 @@
           "code": "600601",
           "market_cap": 643.63,
           "quote_time": "20260923161454",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_2_600601",
+          "audit": {
+            "row_index": 2,
+            "code": "600601",
+            "name": "方正科技",
+            "decision": "retain",
+            "subcategory": "高阶AI PCB",
+            "technology": "高层高阶UHD PCB",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "正式半年报支持高端认证及批量交付，归类成立；800G/1.6T是光模块用PCB不是公司制造完整光模块。CoWoP仍前瞻研究。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12506893&stockid=600601"
+            ],
+            "source_excerpt": "力架构中的应用持续拓展，成功实现多层PCB堆叠互联，可稳定生产超高厚径比及局部高密度设计产品。同时，高层高阶UHD产品已通过头部厂商认证并批量交付，应用于800G及1.6T高端光模块产品已完成技术迭代与批量生产，持续为全球客户提供（N+1、N+2）产品技术服务，深化核心客户战略合作。Cavity、mSAP、阶梯金手指、能源厚铜等核心工艺已实现大规模应用，为高端产品研发提供坚实技术支撑。 在前瞻性技术布局上，公司研发重心聚焦PCB新材料应用研究及信号完整性优化，针对AI服务器及高性能计算需求，在低损耗材料加工、高可靠性散热解决方案、超大规模翘曲仿真、CoWoP互连",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "高阶AI PCB",
+            "audit_id": "shortage_2_600601"
+          },
+          "technology": "高层高阶UHD PCB",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12506893&stockid=600601"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "正式半年报支持高端认证及批量交付，归类成立；800G/1.6T是光模块用PCB不是公司制造完整光模块。CoWoP仍前瞻研究。",
+          "jev": {
+            "audit_id": "shortage_2_600601",
+            "name": "方正科技",
+            "code": "600601",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.6,
+            "remove_or_reclassify": 0.24,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "9c3c961038429a01e96e37c1dd37a5b013d3f54047cfd9f876b7f18fa86f783c",
+            "response_sha256": "0d1bf508a8b8b17349fdca67a43265771c76a049a9e86abded5db436c2e6e3cb"
+          }
         }
       ],
-      "emerging_companies": []
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "高阶AI PCB"
+      ]
     },
     {
-      "rank": 4,
-      "theme": "特种电子布",
-      "names": [
-        "宏和科技"
-      ],
-      "summary": "二代布/T布需求缺口；不等同普通布涨价",
-      "path": "文字直播/2026-09-10.md",
-      "line": 58,
-      "source_date": "2026-09-10",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-10.md#L58",
-      "status": "紧张/缺货线索",
-      "company_count": 1,
-      "constraint_type": "需求增长／扩产爬坡",
-      "review": {
-        "theme": "特种电子布",
-        "nature": "需求增长／扩产爬坡",
-        "status": "需求与扩产已核验",
-        "verified_at": "2026-09-23",
-        "claim": "日东纺披露T-glass需求增长及扩产。T-glass强调低热膨胀，NE/NER强调低介电；Q布也不能直接当T布。没有据此确认对华禁供。宏和具体品种替代能力应按型号认证。",
-        "sources": [
-          "https://www.nittobo.co.jp/eng/ir/pdf/Nittobo_Integrated-Report_2025.pdf",
-          "https://www.nittobo.co.jp/eng/business/electronicmaterials/index.htm"
-        ]
-      },
       "industry": "PCB",
+      "theme": "特种电子布",
       "representatives": [
         {
           "name": "宏和科技",
@@ -178,102 +359,183 @@
           "code": "603256",
           "market_cap": 1418.39,
           "quote_time": "20260923161459",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_3_603256",
+          "audit": {
+            "row_index": 3,
+            "code": "603256",
+            "name": "宏和科技",
+            "decision": "retain",
+            "subcategory": "特种电子布",
+            "technology": "低Dk/Df、低CTE玻璃纤维布",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "2025起批供特种电子布；不把Q布、T-glass和低介电玻纤混为一物，型号替代须逐项认证。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-14/1225471942.PDF"
+            ],
+            "source_excerpt": "公司 2025 年开始批量供应特种电子布给下游 CCL 客户",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "特种电子布",
+            "audit_id": "shortage_3_603256"
+          },
+          "technology": "低Dk/Df、低CTE玻璃纤维布",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-14/1225471942.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "2025起批供特种电子布；不把Q布、T-glass和低介电玻纤混为一物，型号替代须逐项认证。",
+          "jev": {
+            "audit_id": "shortage_3_603256",
+            "name": "宏和科技",
+            "code": "603256",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.49,
+            "remove_or_reclassify": 0.24,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "9c3c961038429a01e96e37c1dd37a5b013d3f54047cfd9f876b7f18fa86f783c",
+            "response_sha256": "0d1bf508a8b8b17349fdca67a43265771c76a049a9e86abded5db436c2e6e3cb"
+          }
         }
       ],
-      "emerging_companies": []
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "特种电子布"
+      ]
     },
     {
-      "rank": 5,
-      "theme": "MFC",
-      "names": [
-        "高凯技术"
-      ],
-      "summary": "海外部分产品断供的卖方线索，订单及身份另核",
-      "path": "情报社/2026-09-13.md",
-      "line": 412,
-      "source_date": "2026-09-13",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-13.md#L412",
-      "status": "紧张/缺货线索",
-      "company_count": 1,
-      "constraint_type": "断供传闻／客户与型号限制待核",
-      "review": {
-        "theme": "MFC",
-        "nature": "断供传闻／客户与型号限制待核",
-        "status": "断供未核验",
-        "verified_at": "2026-09-23",
-        "claim": "MFC是质量流量控制器。未取得HORIBA全面对华断供的正式公告；官网产品仍可见，但这同样不能证明所有型号和客户都可供货。高凯技术证券身份已核验（688835）；供给限制及替代订单仍需单独核验。",
-        "sources": [
-          "https://www.horiba.com/chn/semiconductor/products/detail/action/show/Product/sec-z500x-729/",
-          "https://static.horiba.com/fileadmin/Horiba/Company/Investor_Relations/IR_Library/Presentation_Materials/20250825_PR_en_01_Tx4.pdf"
-        ]
-      },
       "industry": "半导体设备与零部件",
-      "representatives": [
+      "theme": "MFC质量流量控制器",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "高凯技术",
           "original_name": "高凯技术",
           "code": "688835",
           "market_cap": 354.71,
           "quote_time": "20260923161440",
-          "note": "MFC；断供说法未核验"
+          "note": "MFC；断供说法未核验",
+          "audit_id": "shortage_4_688835",
+          "audit": {
+            "row_index": 4,
+            "code": "688835",
+            "name": "高凯技术",
+            "decision": "retain",
+            "subcategory": "MFC质量流量控制器",
+            "technology": "半导体压电式MFC",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "MFC已有批量交付和规模销售，产品匹配成立；海外全面断供与指定客户替代订单另核。",
+            "sources": [
+              "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12506846&stockid=688835"
+            ],
+            "source_excerpt": "核心部件的替代难题。公司已批量交付的MFC主要性能指标已达到国际厂商同等水平，部分甚至优于国际厂商。报告期内公司流量控制系列产品已实现规模销售，且收入增长快速，打破了多年来国外厂商在国内该领域的垄断局面，与国外厂商直接竞争，多款产品率先实现进口替代。 点胶封装系列产品领域，2014年，公司在业内率先推出自主研发的国产压电喷射阀，成功进入了声学器件龙头瑞声科技供应链，在国内压电喷射阀厂商中占据了先发优势。经过不断的研发和技术升级，目前公司压电喷射阀产品在点胶速度、精度、一致性等方面已达到或超过国外同类主流产品水平。公司在多年市场开拓和客户服务中取得了良好的市场口碑，不断拓展产品应用范围和场景。目前",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "MFC",
+            "audit_id": "shortage_4_688835"
+          },
+          "technology": "半导体压电式MFC",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12506846&stockid=688835"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "MFC已有批量交付和规模销售，产品匹配成立；海外全面断供与指定客户替代订单另核。",
+          "jev": {
+            "audit_id": "shortage_4_688835",
+            "name": "高凯技术",
+            "code": "688835",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.58,
+            "remove_or_reclassify": 0.26,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b62344e80071cb023d5bbf7dcee5140068776a685e1028b344852a6ea5febb91",
+            "response_sha256": "a6d542d73cb62a6d7b7a187b5be27acf3301c783223761e9e14d33f0f0552e45"
+          }
         }
       ],
-      "emerging_companies": []
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "MFC"
+      ]
     },
     {
-      "rank": 6,
-      "theme": "压电陶瓷",
-      "names": [
-        "星源材质"
-      ],
-      "summary": "日本供给不足；邦瓷验证及权益归属待核",
-      "path": "情报社/2026-09-15.md",
-      "line": 80,
-      "source_date": "2026-09-15",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L80",
-      "status": "供给约束线索",
-      "company_count": 1,
-      "constraint_type": "历史供需线索待核",
-      "industry": "电子材料",
-      "representatives": [
-        {
-          "name": "星源材质",
-          "original_name": "星源材质",
-          "code": "300568",
-          "market_cap": 254.22,
-          "quote_time": "20260923161403",
-          "note": "股权／产品映射待核"
-        }
-      ],
-      "emerging_companies": []
-    },
-    {
-      "rank": 7,
-      "theme": "MFC／分子泵交付",
-      "names": [
-        "恒运昌",
-        "英杰电气"
-      ],
-      "summary": "供给瓶颈与国产布局；恒运昌贸易业务也可能受损",
-      "path": "情报社/2026-09-13.md",
-      "line": 406,
-      "source_date": "2026-09-13",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-13.md#L406",
-      "status": "双向风险",
-      "company_count": 2,
-      "constraint_type": "历史供需线索待核",
       "industry": "半导体设备与零部件",
-      "representatives": [
+      "theme": "进口真空泵/流量计分销与服务",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "恒运昌",
           "original_name": "恒运昌",
           "code": "688785",
           "market_cap": 257.94,
           "quote_time": "20260923161452",
-          "note": "进口交付亦有风险"
+          "note": "进口交付亦有风险",
+          "audit_id": "shortage_6_688785",
+          "audit": {
+            "row_index": 6,
+            "code": "688785",
+            "name": "恒运昌",
+            "decision": "reclassify",
+            "subcategory": "进口真空泵/流量计分销与服务",
+            "technology": "引进真空泵及质量流量计",
+            "stage": "规模放量期",
+            "relationship": "进口产品贸易与技术服务",
+            "evidence_status": "公告原文已核验",
+            "reason": "不是这些进口MFC/真空泵的国产制造商；海外采购周期延长已影响引进产品收入，应展示供应风险。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12574387&stockid=688785"
+            ],
+            "source_excerpt": "（远程等离子体源、射频离子源）、等离子体直流电源、配件（滤波器、阻抗调整器等）；引进产品主要包括真空获得和流体控制分别所需的真空泵、质量流量计等核心零部件；同时还为晶圆厂提供等离子体射频电源系统原位替换及维修等技术服务。 （1）自研产品 1）等离子体射频电源系统 等离子体射频电源系统是半导体制造中极其关键的专用电源系统，主要由等离子体射频电源和匹配器组成。其核心作用是通过产生高频电场，在晶圆反应腔体内将特定工艺气体电离，创造并维持高活性、高能量的等离子体，；，主要以拓荆科技、中微公司、微导纳米、北方华创等客户为主，同时，屹唐股份、菲沃泰等也在逐步导入放量；引进产品3,136.29万元，同比有所下降，主要系海外采购周期延长所致；技术服务收入为427.57万元，主要系公司来自半导体领域客户的技术服务收入同比上升。 2",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "MFC／分子泵交付",
+            "audit_id": "shortage_6_688785"
+          },
+          "technology": "引进真空泵及质量流量计",
+          "stage": "规模放量期",
+          "relationship": "进口产品贸易与技术服务",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12574387&stockid=688785"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "不是这些进口MFC/真空泵的国产制造商；海外采购周期延长已影响引进产品收入，应展示供应风险。",
+          "jev": {
+            "audit_id": "shortage_6_688785",
+            "name": "恒运昌",
+            "code": "688785",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.28,
+            "remove_or_reclassify": 0.93,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b62344e80071cb023d5bbf7dcee5140068776a685e1028b344852a6ea5febb91",
+            "response_sha256": "a6d542d73cb62a6d7b7a187b5be27acf3301c783223761e9e14d33f0f0552e45"
+          }
         }
       ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "MFC／分子泵交付"
+      ]
+    },
+    {
+      "industry": "半导体设备与零部件",
+      "theme": "干式真空泵/真空阀",
+      "representatives": [],
       "emerging_companies": [
         {
           "name": "英杰电气",
@@ -281,32 +543,61 @@
           "code": "300820",
           "market_cap": 163.65,
           "quote_time": "20260923161406",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_6_300820",
+          "audit": {
+            "row_index": 6,
+            "code": "300820",
+            "name": "英杰电气",
+            "decision": "reclassify",
+            "subcategory": "干式真空泵/真空阀",
+            "technology": "开物智能真空零部件",
+            "stage": "未核验",
+            "relationship": "控股子公司英杰晨晖已完成收购开物智能100%股权",
+            "evidence_status": "公告原文已核验",
+            "reason": "6月30日公司正式记录确认收购工商完成；产品是干式真空泵及真空阀，不是分子泵或MFC。规模收入未核验，不能用电源收入替代。现有原文确认产品和并购，但本次未取得足够证据判定干式泵各型号客户认证/小批/规模阶段。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-06-30/1225400087.PDF",
+              "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-9/2026-09-11/12597413.PDF"
+            ],
+            "source_excerpt": "完成四川开物智能100%股权收购，相关工商变更手续已全部办结。标的公司主营干式真空泵、真空阀等半导体真空核心零部件。9月11日答复：开物智能公司有自己独立的研发团队和专利技术，相关产品属于独立研发。",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "MFC／分子泵交付",
+            "audit_id": "shortage_6_300820"
+          },
+          "technology": "开物智能真空零部件",
+          "stage": "未核验",
+          "relationship": "控股子公司英杰晨晖已完成收购开物智能100%股权",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-06-30/1225400087.PDF",
+            "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-9/2026-09-11/12597413.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "6月30日公司正式记录确认收购工商完成；产品是干式真空泵及真空阀，不是分子泵或MFC。规模收入未核验，不能用电源收入替代。现有原文确认产品和并购，但本次未取得足够证据判定干式泵各型号客户认证/小批/规模阶段。",
+          "jev": {
+            "audit_id": "shortage_6_300820",
+            "name": "英杰电气",
+            "code": "300820",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.29,
+            "remove_or_reclassify": 0.92,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b62344e80071cb023d5bbf7dcee5140068776a685e1028b344852a6ea5febb91",
+            "response_sha256": "a6d542d73cb62a6d7b7a187b5be27acf3301c783223761e9e14d33f0f0552e45"
+          }
         }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "MFC／分子泵交付"
       ]
     },
     {
-      "rank": 8,
-      "theme": "半导体零部件",
-      "names": [
-        "富创精密",
-        "江丰电子",
-        "超纯应材",
-        "珂玛科技",
-        "新莱应材",
-        "正帆科技",
-        "臻宝科技",
-        "恒运昌"
-      ],
-      "summary": "行业供应紧张映射；不代表每家公司具体产品均已缺货",
-      "path": "情报社/2026-09-16-午间.md",
-      "line": 648,
-      "source_date": "2026-09-16",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-16-%E5%8D%88%E9%97%B4.md#L648",
-      "status": "供给约束线索",
-      "company_count": 8,
-      "constraint_type": "历史供需线索待核",
       "industry": "半导体设备与零部件",
+      "theme": "金属精密零部件",
       "representatives": [
         {
           "name": "富创精密",
@@ -314,7 +605,49 @@
           "code": "688409",
           "market_cap": 589.76,
           "quote_time": "20260923161458",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_7_688409",
+          "audit": {
+            "row_index": 7,
+            "code": "688409",
+            "name": "富创精密",
+            "decision": "retain",
+            "subcategory": "金属精密零部件",
+            "technology": "反应腔/精密结构件",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "反应腔与精密件实际量产；并非所有半导体零部件都由公司生产。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12574217&stockid=688409"
+            ],
+            "source_excerpt": "能力的服务商。目前公司持续迭代研发800+工位先进制程腔体产品，已成功实现外形尺寸超2米的高洁净清洗大型反应腔量产交付与落地应用，产品可满足严苛的形位公差标准，同时具备优异的耐腐蚀性能。 在超高光洁度制造技术和深孔加工层面，公司将产品表面粗糙度稳定控制在机械加工高光级别，为超细深流道结构设计提供了坚实的工艺支撑，并攻克了深径比50倍以上超深孔加工行业难题。依托该核心技术，公司成功自研量产布气控温一体式匀气盘，彻底打破国外技术垄断，实现该核心部件的国产化替代。 依托超高精密加工工艺，公司可实现微米级形位公差精准管控，已顺利完成超临界清洗设备核心零部件的批量交付，并将该工艺技",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "半导体零部件",
+            "audit_id": "shortage_7_688409"
+          },
+          "technology": "反应腔/精密结构件",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12574217&stockid=688409"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "反应腔与精密件实际量产；并非所有半导体零部件都由公司生产。",
+          "jev": {
+            "audit_id": "shortage_7_688409",
+            "name": "富创精密",
+            "code": "688409",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.62,
+            "remove_or_reclassify": 0.3,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b62344e80071cb023d5bbf7dcee5140068776a685e1028b344852a6ea5febb91",
+            "response_sha256": "a6d542d73cb62a6d7b7a187b5be27acf3301c783223761e9e14d33f0f0552e45"
+          }
         },
         {
           "name": "江丰电子",
@@ -322,9 +655,61 @@
           "code": "300666",
           "market_cap": 695.42,
           "quote_time": "20260923161439",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_7_300666",
+          "audit": {
+            "row_index": 7,
+            "code": "300666",
+            "name": "江丰电子",
+            "decision": "retain",
+            "subcategory": "金属精密零部件",
+            "technology": "半导体精密零部件/溅射靶材",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "不能仅以靶材替代零部件证据，报告确有精密零部件业务。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-25/1225500171.PDF"
+            ],
+            "source_excerpt": "论与分析 一、报告期内公司从事的主要业务 （一）公司主营业务情况 江丰电子专注于超高纯金属溅射靶材和半导体精密零部件的研发、生产及销售，致力于成为世界上 一流的半导体企业，产品主要应用于半导体领域，均系超大规模集成电路和半导体设备生产制造过程中 的重要材料或部件。其中，超高纯金属溅射靶材包括铝靶、钛靶、钽靶、铜靶以及各种超高纯金属合金 靶材等，主要用于超大规模集成电路芯片、平板显示器的物理气相沉积（PVD）工艺，用于制备电子薄 膜材料。半导体精密零部件包括金属、陶瓷、树脂等多种材料经复杂工艺加工而成的精密零部件，主要 用于半导体芯片以及平板显示器生产线的机台，覆盖了包括",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "半导体零部件",
+            "audit_id": "shortage_7_300666"
+          },
+          "technology": "半导体精密零部件/溅射靶材",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-25/1225500171.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "不能仅以靶材替代零部件证据，报告确有精密零部件业务。",
+          "jev": {
+            "audit_id": "shortage_7_300666",
+            "name": "江丰电子",
+            "code": "300666",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.29,
+            "remove_or_reclassify": 0.4,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b62344e80071cb023d5bbf7dcee5140068776a685e1028b344852a6ea5febb91",
+            "response_sha256": "a6d542d73cb62a6d7b7a187b5be27acf3301c783223761e9e14d33f0f0552e45"
+          }
         }
       ],
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "industry": "半导体设备与零部件",
+      "theme": "腔室涂层与零部件",
+      "representatives": [],
       "emerging_companies": [
         {
           "name": "超纯应材",
@@ -332,66 +717,364 @@
           "code": "301717",
           "market_cap": 382.94,
           "quote_time": "20260923161409",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_7_301717",
+          "audit": {
+            "row_index": 7,
+            "code": "301717",
+            "name": "超纯应材",
+            "decision": "retain",
+            "subcategory": "腔室涂层与零部件",
+            "technology": "特种涂层工艺及涂覆零部件",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "实际产品是涂层工艺和涂覆零部件；客户先进制程认证不能外推所有新品成熟。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-06/1225460578.PDF"
+            ],
+            "source_excerpt": "设 备特殊涂层零部件领域的技术积累和持续创新以及与产业链各环节客户的深度 合作，已拥有多类特殊涂层工艺的半导体设备零部件的成熟配套能力，弥补了国 内特殊涂层零部件的关键核心技术的缺失，发展成为了国内极少数 5nm 及以下 制程半导体刻蚀设备核心零部件的供应商，在我国半导体国产化推进过程中发挥 着重要力量。 一、公司上市的目的 （一）加速半导体设备零部件国产化，助力集成电路制造业自主可控 半导体设备具有技术要求高、研发周期长、研发投入高、制造难度大、客户 验证周期长等行业壁垒。由于行业壁垒高、国内起步较晚，全球半导体零部件供 应链依然由日本、韩国、欧美等海外企业占据绝对主导地位，而国内半导体零部 件整体国产化率较低，特别是先进制程领域国产替代需求极为迫切。随着国外对 中国半",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "半导体零部件",
+            "audit_id": "shortage_7_301717"
+          },
+          "technology": "特种涂层工艺及涂覆零部件",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-06/1225460578.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "实际产品是涂层工艺和涂覆零部件；客户先进制程认证不能外推所有新品成熟。",
+          "jev": {
+            "audit_id": "shortage_7_301717",
+            "name": "超纯应材",
+            "code": "301717",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.4,
+            "remove_or_reclassify": 0.37,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b62344e80071cb023d5bbf7dcee5140068776a685e1028b344852a6ea5febb91",
+            "response_sha256": "a6d542d73cb62a6d7b7a187b5be27acf3301c783223761e9e14d33f0f0552e45"
+          }
+        }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "industry": "半导体设备与零部件",
+      "theme": "陶瓷精密零部件",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "珂玛科技",
           "original_name": "珂玛科技",
           "code": "301611",
           "market_cap": 425.75,
           "quote_time": "20260923161451",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_7_301611",
+          "audit": {
+            "row_index": 7,
+            "code": "301611",
+            "name": "珂玛科技",
+            "decision": "retain",
+            "subcategory": "陶瓷精密零部件",
+            "technology": "先进陶瓷结构件/陶瓷加热器",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "成熟陶瓷零部件规模供货；每一静电卡盘型号导入程度仍须分辨。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12504879&stockid=301611"
+            ],
+            "source_excerpt": "务的基础是材料，产品形式是高度定制化的零部件，最终端应用于半导体、新能源等多个国民经济重要行业。目前已量产氧化铝、氧化锆、氮化铝、碳化硅、氧化钇和氧化钛6大类材料先进陶瓷材料，累计设计开发了一万余款定制化零部件。 公司先进陶瓷材料零部件应用于多个领域，按领域区分的产品情况如下： （i）半导体领域 半导体设备零部件是公司报告期内先进陶瓷产品的最主要应用。半导体设备是半导体产业的基础支撑，其中前道工艺主要完成晶圆制造，该等工艺设备类型繁杂，技术难度较高。半导体设备由腔室内和腔室外组成，陶瓷大部分用在更接近晶圆的腔室内，其技术要求严苛，须在先进陶瓷材料性能、硬脆难加工材料",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "半导体零部件",
+            "audit_id": "shortage_7_301611"
+          },
+          "technology": "先进陶瓷结构件/陶瓷加热器",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12504879&stockid=301611"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "成熟陶瓷零部件规模供货；每一静电卡盘型号导入程度仍须分辨。",
+          "jev": {
+            "audit_id": "shortage_7_301611",
+            "name": "珂玛科技",
+            "code": "301611",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.45,
+            "remove_or_reclassify": 0.31,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b62344e80071cb023d5bbf7dcee5140068776a685e1028b344852a6ea5febb91",
+            "response_sha256": "a6d542d73cb62a6d7b7a187b5be27acf3301c783223761e9e14d33f0f0552e45"
+          }
+        }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "industry": "半导体设备与零部件",
+      "theme": "高洁净阀件与气路",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "新莱应材",
           "original_name": "新莱应材",
           "code": "300260",
           "market_cap": 261.2,
           "quote_time": "20260923161424",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_7_300260",
+          "audit": {
+            "row_index": 7,
+            "code": "300260",
+            "name": "新莱应材",
+            "decision": "retain",
+            "subcategory": "高洁净阀件与气路",
+            "technology": "真空管件/阀门/IGS模块",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "MFC Block是气路基块，不等于自主MFC控制器；ALD阀等有量产。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12569391&stockid=300260"
+            ],
+            "source_excerpt": "气体调压阀、气体隔膜阀、气体球阀、卡套、针阀、MicroFitting、超高纯隔膜阀、超高纯调压阀、IGS＆MFCBlock、波纹管阀等。报告期内，公司ALD阀等高端产品已实现量产，PVD腔体等高壁垒核心零部件在国内半导体设备厂商及Fab厂取得应用突破。 公司全资子公司方新精密主营气体分配盘（ShowerHead）和工艺套件（ProcessKits），应用于半导体集成电路薄膜及刻蚀制程设备。其中，工艺套件主要包括上部衬板（UpperLiner）、下部衬板（LowerLiner）、阴极衬板（CathodeLiner）、等离子屏蔽板（PlasmaScreen）、真空闸门门板（Sli",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "半导体零部件",
+            "audit_id": "shortage_7_300260"
+          },
+          "technology": "真空管件/阀门/IGS模块",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12569391&stockid=300260"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "MFC Block是气路基块，不等于自主MFC控制器；ALD阀等有量产。",
+          "jev": {
+            "audit_id": "shortage_7_300260",
+            "name": "新莱应材",
+            "code": "300260",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.55,
+            "remove_or_reclassify": 0.27,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "684d1c880a8e95b89ad99b68da8873cf974be0878a014668b2c99cbea86af62a",
+            "response_sha256": "4db12cd82c41d926b093f7c0bacfdb419f119ad7b023c96b0483e5bbba17cad9"
+          }
+        }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "industry": "半导体设备与零部件",
+      "theme": "设备气体供应模块",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "正帆科技",
           "original_name": "正帆科技",
           "code": "688596",
           "market_cap": 212.2,
           "quote_time": "20260923161448",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_7_688596",
+          "audit": {
+            "row_index": 7,
+            "code": "688596",
+            "name": "正帆科技",
+            "decision": "retain",
+            "subcategory": "设备气体供应模块",
+            "technology": "Gas Box/Chemical Box",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "Gas Box包含外部质量流量控制器，不能据此称其自主生产MFC。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-27/1225510855.PDF"
+            ],
+            "source_excerpt": "Box（气体输送模组）、Chemical Box（化学品输送模组）及 Bubbler （鼓泡器）。 Gas Box 是一种在半导体工艺设备侧的模组化气体供应系统，是半导体干法工艺设备中极为 重要的通用子系统。Gas Box 在为设备制程精密供气的同时还需要防止各种毒性、可燃性气体的 泄漏，具体包含手动/气动截止阀、逆止阀、质量流量控制器、压力调节控制器等组件。因其有极 高的安全气密性、耐蚀性和控制精度要求，故具有较高技术门槛和行业壁垒；Chemical Box 用于 湿法工艺中的高纯化学品精确输送与混合控制；Bubbler 在气体及前驱体的输送与混合中控制气化 与饱和程度，其",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "半导体零部件",
+            "audit_id": "shortage_7_688596"
+          },
+          "technology": "Gas Box/Chemical Box",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-27/1225510855.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "Gas Box包含外部质量流量控制器，不能据此称其自主生产MFC。",
+          "jev": {
+            "audit_id": "shortage_7_688596",
+            "name": "正帆科技",
+            "code": "688596",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.47,
+            "remove_or_reclassify": 0.32,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "684d1c880a8e95b89ad99b68da8873cf974be0878a014668b2c99cbea86af62a",
+            "response_sha256": "4db12cd82c41d926b093f7c0bacfdb419f119ad7b023c96b0483e5bbba17cad9"
+          }
+        }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "industry": "半导体设备与零部件",
+      "theme": "非金属精密零部件与再生服务",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "臻宝科技",
           "original_name": "臻宝科技",
           "code": "688797",
           "market_cap": 437.73,
           "quote_time": "20260923161457",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_7_688797",
+          "audit": {
+            "row_index": 7,
+            "code": "688797",
+            "name": "臻宝科技",
+            "decision": "retain",
+            "subcategory": "非金属精密零部件与再生服务",
+            "technology": "硅/石英/碳化硅/陶瓷零部件",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "零部件与清洗涂层再生业务成立；具体型号短缺未核验。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12523989&stockid=688797"
+            ],
+            "source_excerpt": "司在两大行业间形成了技术和产品的协同效应。 （二）公司主营业务、主要产品及服务 公司专注于半导体及显示面板领域真空腔体精密零部件的研发、生产与销售，并配套提供精密清洗、涂层再生等表面处理服务，构建起关键半导体材料+精密零部件+表面再生服务一体化业务平台。公司产品广泛应用于集成电路前道制造核心工序，覆盖等离子刻蚀（ICP/CCP刻蚀）、薄膜沉积（PVD/CVD）、离子注入等工艺场景，同时配套显示面板各类制程设备；其中等离子刻蚀工艺零部件为公司核心业务板块，产品可适配逻辑芯片、存储芯片及特色工艺各类制程产线。 公司零部件品类涵盖硅基、石英、碳化硅、氧化铝陶瓷等系列产品，现阶段已实现大直径单晶硅棒、多晶硅棒、化学气相沉积高纯碳化硅超厚基材、陶瓷造粒粉体等上游半导体原材料量产。核",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "半导体零部件",
+            "audit_id": "shortage_7_688797"
+          },
+          "technology": "硅/石英/碳化硅/陶瓷零部件",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12523989&stockid=688797"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "零部件与清洗涂层再生业务成立；具体型号短缺未核验。",
+          "jev": {
+            "audit_id": "shortage_7_688797",
+            "name": "臻宝科技",
+            "code": "688797",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.5,
+            "remove_or_reclassify": 0.35,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "684d1c880a8e95b89ad99b68da8873cf974be0878a014668b2c99cbea86af62a",
+            "response_sha256": "4db12cd82c41d926b093f7c0bacfdb419f119ad7b023c96b0483e5bbba17cad9"
+          }
+        }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "半导体零部件"
+      ]
+    },
+    {
+      "industry": "半导体设备与零部件",
+      "theme": "半导体射频电源/匹配器",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "恒运昌",
           "original_name": "恒运昌",
           "code": "688785",
           "market_cap": 257.94,
           "quote_time": "20260923161452",
-          "note": "进口交付亦有风险"
+          "note": "进口交付亦有风险",
+          "audit_id": "shortage_7_688785",
+          "audit": {
+            "row_index": 7,
+            "code": "688785",
+            "name": "恒运昌",
+            "decision": "retain",
+            "subcategory": "半导体射频电源/匹配器",
+            "technology": "等离子体射频电源及匹配器",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "自研产品核心是等离子电源与匹配器；与进口流量计和泵贸易应分列。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12574387&stockid=688785"
+            ],
+            "source_excerpt": "子体工艺提供核心零部件整体解决方案。 2.主营产品及服务情况 公司主要围绕等离子体工艺打造产品矩阵，自研产品具体包括等离子体射频电源系统（等离子体射频电源及匹配器）、等离子体激发装置（远程等离子体源、射频离子源）、等离子体直流电源、配件（滤波器、阻抗调整器等）；引进产品主要包括真空获得和流体控制分别所需的真空泵、质量流量计等核心零部件；同时还为晶圆厂提供等离子体射频电源系统原位替换及维修等技术服务。 （1）自研产品 1）等离子体射频电源系统 等离子体射频电源系统是半导体制造中极其关键的专用电源系统，主要由等离子体射频电源和匹配器组成。其核心作用是通过产生高频电场",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "半导体零部件",
+            "audit_id": "shortage_7_688785"
+          },
+          "technology": "等离子体射频电源及匹配器",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12574387&stockid=688785"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "自研产品核心是等离子电源与匹配器；与进口流量计和泵贸易应分列。",
+          "jev": {
+            "audit_id": "shortage_7_688785",
+            "name": "恒运昌",
+            "code": "688785",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.48,
+            "remove_or_reclassify": 0.21,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "684d1c880a8e95b89ad99b68da8873cf974be0878a014668b2c99cbea86af62a",
+            "response_sha256": "4db12cd82c41d926b093f7c0bacfdb419f119ad7b023c96b0483e5bbba17cad9"
+          }
         }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "半导体零部件"
       ]
     },
     {
-      "rank": 9,
-      "theme": "含氟特气WF6/C4F6",
-      "names": [
-        "中船特气",
-        "昊华科技"
-      ],
-      "summary": "原文明示供需偏紧；订单产能价格均待核",
-      "path": "情报社/2026-09-14-午间.md",
-      "line": 1268,
-      "source_date": "2026-09-14",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1268",
-      "status": "紧张/缺货线索",
-      "company_count": 2,
-      "constraint_type": "历史供需线索待核",
       "industry": "半导体材料",
+      "theme": "含氟电子特气",
       "representatives": [
         {
           "name": "中船特气",
@@ -399,7 +1082,49 @@
           "code": "688146",
           "market_cap": 1150.94,
           "quote_time": "20260923161449",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_8_688146",
+          "audit": {
+            "row_index": 8,
+            "code": "688146",
+            "name": "中船特气",
+            "decision": "retain",
+            "subcategory": "含氟电子特气",
+            "technology": "WF6/C4F6",
+            "stage": "规模放量期",
+            "relationship": "公司及控股业务产品",
+            "evidence_status": "公告原文已核验",
+            "reason": "六氟化钨与六氟丁二烯产品匹配；特气不等于浸没冷却液，先进制程型号仍分客户认证。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-07-18/1225429785.PDF"
+            ],
+            "source_excerpt": "加带动扣 除非经常性损益的净利润增长。 经营活动产生的现金流量净额变动原因说明:公司备货叠加主要产品六氟化钨原材料价格上涨， 致采购支付现金较大，账期内应收账款增加。 基本每股收益（元／股）、稀释每股收益（元／股）变动原因说明：报告期内净利润增长带动每 股收益增长。 扣除非经常性损益后的基本每股收益（元／股）变动原因说明：报告期内净利润增长带动扣除非 经常性损益后的基本每股收益增长。 七、 境内外会计准则下会计数据差异 □适用 √不适用 八、 非经常性损益项目和金额 √适用 □不适用 单位：元 币种：人民币 非经常性损益项目 金额 附注（如适用） 非流动性资产处；泛应用于半导体、功率器件细微线条蚀刻场景，可有效提升芯片制程精度与生产一致性； 六氟丁二烯为 5nm 及以下先进逻辑芯片、高端封装领域的核心刻蚀材料，是国内进口替代需求迫 切的高附加值产品。报告期内，公司持续迭代优化碳氟类产品提纯工艺，严格管控产品纯度、微 量杂质及批次稳定性，产品核心性能指标达到行业先进水平，顺利导入多家头部晶圆制造、新型 显示企业供应链。 （6）大宗气系列产品 公司大宗气体业务主营业务是研发、生产和销售以电子大宗气体为核心的工业气体，包括超 高纯氮气（N2）、氢气（H2）、氧气（O2）、氩气（Ar）、氦气（He）、二氧化碳（CO2）等",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "含氟特气WF6/C4F6",
+            "audit_id": "shortage_8_688146"
+          },
+          "technology": "WF6/C4F6",
+          "stage": "规模放量期",
+          "relationship": "公司及控股业务产品",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-07-18/1225429785.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "六氟化钨与六氟丁二烯产品匹配；特气不等于浸没冷却液，先进制程型号仍分客户认证。",
+          "jev": {
+            "audit_id": "shortage_8_688146",
+            "name": "中船特气",
+            "code": "688146",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.56,
+            "remove_or_reclassify": 0.23,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "684d1c880a8e95b89ad99b68da8873cf974be0878a014668b2c99cbea86af62a",
+            "response_sha256": "4db12cd82c41d926b093f7c0bacfdb419f119ad7b023c96b0483e5bbba17cad9"
+          }
         },
         {
           "name": "昊华科技",
@@ -407,112 +1132,49 @@
           "code": "600378",
           "market_cap": 603.72,
           "quote_time": "20260923161446",
-          "note": "研究线索；兑现情况待核"
-        }
-      ],
-      "emerging_companies": []
-    },
-    {
-      "rank": 10,
-      "theme": "氟化液PFPE/HFE",
-      "names": [
-        "新宙邦"
-      ],
-      "summary": "3M退出后的替代线索；企业退出不等同政府禁令",
-      "path": "情报社/2026-09-14-午间.md",
-      "line": 1266,
-      "source_date": "2026-09-14",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1266",
-      "status": "供给约束线索",
-      "company_count": 1,
-      "constraint_type": "海外厂商退出",
-      "review": {
-        "theme": "氟化液PFPE/HFE",
-        "nature": "海外厂商退出",
-        "status": "退出已核验",
-        "verified_at": "2026-09-23",
-        "claim": "3M正式年报确认2025年底完成退出PFAS制造。属于供应商退出，不等于政府禁止所有氟化液供华；国产厂商仍需满足客户认证、性能与合规要求。",
-        "sources": [
-          "https://investors.3m.com/financials/sec-filings/content/0000066740-26-000014/mmm-20251231.htm"
-        ]
-      },
-      "industry": "半导体材料",
-      "representatives": [
-        {
-          "name": "新宙邦",
-          "original_name": "新宙邦",
-          "code": "300037",
-          "market_cap": 545.59,
-          "quote_time": "20260923161448",
-          "note": "研究线索；兑现情况待核"
-        }
-      ],
-      "emerging_companies": []
-    },
-    {
-      "rank": 11,
-      "theme": "高端PFA/FFKM",
-      "names": [
-        "巨化股份",
-        "新宙邦"
-      ],
-      "summary": "海外供给集中与认证瓶颈；国产突破未等于规模收入",
-      "path": "情报社/2026-09-14-午间.md",
-      "line": 1270,
-      "source_date": "2026-09-14",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1270",
-      "status": "供给约束线索",
-      "company_count": 2,
-      "constraint_type": "历史供需线索待核",
-      "industry": "半导体材料",
-      "representatives": [
-        {
-          "name": "巨化股份",
-          "original_name": "巨化股份",
-          "code": "600160",
-          "market_cap": 946.26,
-          "quote_time": "20260923161456",
-          "note": "研究线索；兑现情况待核"
-        },
-        {
-          "name": "新宙邦",
-          "original_name": "新宙邦",
-          "code": "300037",
-          "market_cap": 545.59,
-          "quote_time": "20260923161448",
-          "note": "研究线索；兑现情况待核"
-        }
-      ],
-      "emerging_companies": []
-    },
-    {
-      "rank": 12,
-      "theme": "含氟材料扩展映射",
-      "names": [
-        "天赐材料",
-        "三祥新材",
-        "中巨芯",
-        "雅克科技",
-        "安集科技",
-        "多氟多"
-      ],
-      "summary": "同专题关注名单，缺乏逐股缺货证据，暂不自动挂缺货标签",
-      "path": "情报社/2026-09-14-午间.md",
-      "line": 1272,
-      "source_date": "2026-09-14",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1272",
-      "status": "延伸映射",
-      "company_count": 6,
-      "constraint_type": "延伸映射",
-      "industry": "半导体材料",
-      "representatives": [
-        {
-          "name": "天赐材料",
-          "original_name": "天赐材料",
-          "code": "002709",
-          "market_cap": 669.46,
-          "quote_time": "20260923161500",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_8_600378",
+          "audit": {
+            "row_index": 8,
+            "code": "600378",
+            "name": "昊华科技",
+            "decision": "retain",
+            "subcategory": "含氟电子特气",
+            "technology": "WF6/C4F6",
+            "stage": "规模放量期",
+            "relationship": "公司及控股业务产品",
+            "evidence_status": "公告原文已核验",
+            "reason": "公司原文有明确产品和产能；行业WF6紧缺叙述不能证明公司自身断供。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-27/1225512267.PDF"
+            ],
+            "source_excerpt": "书处、河南省含氟电 子气体工程技术研究中心、辽宁省特种气体专业技术创新中心等的依托单位。 目前，公司六氟丁二烯产能 1,000 吨/年，全球第一；三氟化氮产能 11,500 吨/年，市场份额全 国前三；四氟化碳产能 1,000 吨/年，市场份额全国前三；六氟化硫产能 6,000 吨/年，是目前国内 最大的电子级六氟化硫供应商；六氟化钨产能 600 吨/年，产能规模国内第二。 （3）高端制造化工材料 ①非轮胎橡胶制品 公司非轮胎橡胶制品业务主要依托西北院、沈橡院、株洲院、锦西院等核心平台开展。上述 院所均为原化工部直属科研机构，历经数十年技术积淀，在行业细分领域具备显著",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "含氟特气WF6/C4F6",
+            "audit_id": "shortage_8_600378"
+          },
+          "technology": "WF6/C4F6",
+          "stage": "规模放量期",
+          "relationship": "公司及控股业务产品",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-27/1225512267.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "公司原文有明确产品和产能；行业WF6紧缺叙述不能证明公司自身断供。",
+          "jev": {
+            "audit_id": "shortage_8_600378",
+            "name": "昊华科技",
+            "code": "600378",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.63,
+            "remove_or_reclassify": 0.23,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "684d1c880a8e95b89ad99b68da8873cf974be0878a014668b2c99cbea86af62a",
+            "response_sha256": "4db12cd82c41d926b093f7c0bacfdb419f119ad7b023c96b0483e5bbba17cad9"
+          }
         },
         {
           "name": "雅克科技",
@@ -520,59 +1182,359 @@
           "code": "002409",
           "market_cap": 653.35,
           "quote_time": "20260923161439",
-          "note": "研究线索；兑现情况待核"
-        },
-        {
-          "name": "安集科技",
-          "original_name": "安集科技",
-          "code": "688019",
-          "market_cap": 530.7,
-          "quote_time": "20260923161453",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_11_002409",
+          "audit": {
+            "row_index": 11,
+            "code": "002409",
+            "name": "雅克科技",
+            "decision": "reclassify",
+            "subcategory": "含氟电子特气",
+            "technology": "SF6/CF4",
+            "stage": "规模放量期",
+            "relationship": "控股科美特业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "控股科美特生产六氟化硫/四氟化碳；不是氟化液或FFKM，高端新产能计划不能当已投产。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12536266&stockid=002409"
+            ],
+            "source_excerpt": "处置子公司的情况 □适用 ?不适用 主要控股参股公司情况说明 1、科美特，注册资本 5000 万元，主要从事六氟化硫、 四氟化碳的生产、销售。本报告期主营业务收入同比增加 9.02%，净利润增加47.11%， 净利润增加主要为斯洋国际分红2,010万所致。 2、EMTIER 为韩国控股公司，主要销售光刻胶类产品，报告期内净利润同比增加82.63% ，主要为本报告期净利润增加的主要原因系①毛利率较上年上升，②汇兑收益的影响所致。 3、韩国先科是江苏雅克在韩国的控股公司，主要销售半导体化学材料，报告期内净利润同比增加 8.74%。主要原因是本报告期主要原因系产品结构变化和汇",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "含氟材料扩展映射",
+            "audit_id": "shortage_11_002409"
+          },
+          "technology": "SF6/CF4",
+          "stage": "规模放量期",
+          "relationship": "控股科美特业务",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12536266&stockid=002409"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "控股科美特生产六氟化硫/四氟化碳；不是氟化液或FFKM，高端新产能计划不能当已投产。",
+          "jev": {
+            "audit_id": "shortage_11_002409",
+            "name": "雅克科技",
+            "code": "002409",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.5,
+            "remove_or_reclassify": 0.86,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "be2c6ebd7650bca4fbca4dd0ddb14d8b5242565baad15258fc01db6e97bdccd2",
+            "response_sha256": "8b031465b63c34391b9b6d2a5f6c89edec9633e96889d7dc8902bcc275e61ec8"
+          }
         }
       ],
-      "emerging_companies": [
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "含氟特气WF6/C4F6",
+        "含氟材料扩展映射"
+      ]
+    },
+    {
+      "industry": "半导体材料",
+      "theme": "氟化液",
+      "representatives": [
         {
-          "name": "三祥新材",
-          "original_name": "三祥新材",
-          "code": "603663",
-          "market_cap": 278.98,
-          "quote_time": "20260923161454",
-          "note": "研究线索；兑现情况待核"
+          "name": "新宙邦",
+          "original_name": "新宙邦",
+          "code": "300037",
+          "market_cap": 545.59,
+          "quote_time": "20260923161448",
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_9_300037",
+          "audit": {
+            "row_index": 9,
+            "code": "300037",
+            "name": "新宙邦",
+            "decision": "retain",
+            "subcategory": "氟化液",
+            "technology": "PFPE/HFE氟化液",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "半导体温控氟化液成熟；数据中心浸没推广较早，不能用5500吨总产能宣称AI浸没规模使用。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12522957&stockid=300037"
+            ],
+            "source_excerpt": "争力，数据中心浸没式冷却领域远期发展潜力突出。 公司已提前完成技术储备与产能布局。产能规划方面，公司现有氟化液总产能 5,500 吨（含氢氟醚和全氟聚醚），生产运行平稳；另有3万吨高端氟精细化学品项目处于在建状态，预计于明年启动试车，投产后可根据市场需求灵活适配不同系列产品的生产。 3、请问公司的氟化液产品在半导体冷却领域的竞争地位是怎样的？ 答：半导体用含氟冷却液具备较高的技术与环保合规壁垒，目前全球范围内实现规模化产业化落地的市场参与者相对有限。随着下游厂商库存逐步消化，行业需求持续释放，细分市场增长态势向好，发展空间广阔。 公司凭借产品在性能表现与环保合规性方面的",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "氟化液PFPE/HFE",
+            "audit_id": "shortage_9_300037"
+          },
+          "technology": "PFPE/HFE氟化液",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12522957&stockid=300037"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "半导体温控氟化液成熟；数据中心浸没推广较早，不能用5500吨总产能宣称AI浸没规模使用。",
+          "jev": {
+            "audit_id": "shortage_9_300037",
+            "name": "新宙邦",
+            "code": "300037",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.43,
+            "remove_or_reclassify": 0.38,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "684d1c880a8e95b89ad99b68da8873cf974be0878a014668b2c99cbea86af62a",
+            "response_sha256": "4db12cd82c41d926b093f7c0bacfdb419f119ad7b023c96b0483e5bbba17cad9"
+          }
+        }
+      ],
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "氟化液PFPE/HFE"
+      ]
+    },
+    {
+      "industry": "半导体材料",
+      "theme": "高端含氟聚合物",
+      "representatives": [
+        {
+          "name": "巨化股份",
+          "original_name": "巨化股份",
+          "code": "600160",
+          "market_cap": 946.26,
+          "quote_time": "20260923161456",
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_10_600160",
+          "audit": {
+            "row_index": 10,
+            "code": "600160",
+            "name": "巨化股份",
+            "decision": "retain",
+            "subcategory": "高端含氟聚合物",
+            "technology": "高纯PFA/FFKM",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "必须拆产品阶段：高纯PFA工业化批量但收入不足1%；FFKM仅少量供货，对业绩影响小。",
+            "sources": [
+              "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-6/2026-06-30/12417311.PDF"
+            ],
+            "source_excerpt": "【回复】公司1万吨高纯PFA装置已于5月建成投产，并已工业化批量应用于 下游企业，但其销售收入占公司营业收入不足1%，敬请投资者注意投资风险。公 司高纯PFA产品经半导体客户测试验证，金属离子指标满足SEMI F57标准要求， 达到半导体级要求，关键金属离子析出量稳定控制在PPT级（万亿分之一），总；目前，公司FFKM全氟醚橡胶产品已少量供货于半导体等领域，但整体市场需 求较小，对公司经营业绩影响较小。 3、公司全氟聚醚冷却液产品出货情况？ 2 【回复】公司是国内最早从事数据中心冷却液的企业之一，",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "product_stages": {
+              "高纯PFA": "规模放量期（收入不足1%）",
+              "FFKM": "试点部署期（少量供货）"
+            },
+            "original_subcategory": "高端PFA/FFKM",
+            "audit_id": "shortage_10_600160"
+          },
+          "technology": "高纯PFA/FFKM",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-6/2026-06-30/12417311.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "必须拆产品阶段：高纯PFA工业化批量但收入不足1%；FFKM仅少量供货，对业绩影响小。",
+          "jev": {
+            "audit_id": "shortage_10_600160",
+            "name": "巨化股份",
+            "code": "600160",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.54,
+            "remove_or_reclassify": 0.55,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "684d1c880a8e95b89ad99b68da8873cf974be0878a014668b2c99cbea86af62a",
+            "response_sha256": "4db12cd82c41d926b093f7c0bacfdb419f119ad7b023c96b0483e5bbba17cad9"
+          }
         },
+        {
+          "name": "新宙邦",
+          "original_name": "新宙邦",
+          "code": "300037",
+          "market_cap": 545.59,
+          "quote_time": "20260923161448",
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_10_300037",
+          "audit": {
+            "row_index": 10,
+            "code": "300037",
+            "name": "新宙邦",
+            "decision": "reclassify",
+            "subcategory": "高端含氟聚合物",
+            "technology": "PFA/氟醚橡胶（未确认FFKM）",
+            "stage": "客户认证期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "公司说PFA和氟醚橡胶基本完成研发逐步市场导入；普通氟醚橡胶不能自动等同全氟醚橡胶FFKM。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12522957&stockid=300037"
+            ],
+            "source_excerpt": "品布局上，全氟磺酸树脂（PFSA）、可熔融聚四氟乙烯（PFA）、氟醚橡胶等多款重点高端氟聚合物产品已基本完成研发，正逐步导入市场，主要面向海外厂商垄断的高端应用领域。 客户验证与拓展进展顺利，部分与客户联合开发的产品可直接实现应用导入；受益于国产替代进程加快，部分产品的客户验证周期有所缩短。 经营表现方面，海德福亏损幅度已大幅收窄，管理层预计下半年经营业绩将得到明显改善。 现有布局的产能外，湖北宜都工厂即将启动试运行，增长趋势具备较强的可持续性。 7、请问公司部分关键原材料扩产后，明年是否可能出现供给过剩情形？ 答：公司电解液部分关键原材料尚未达到完全自给，新增材料",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "高端PFA/FFKM",
+            "audit_id": "shortage_10_300037"
+          },
+          "technology": "PFA/氟醚橡胶（未确认FFKM）",
+          "stage": "客户认证期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12522957&stockid=300037"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "公司说PFA和氟醚橡胶基本完成研发逐步市场导入；普通氟醚橡胶不能自动等同全氟醚橡胶FFKM。",
+          "jev": {
+            "audit_id": "shortage_10_300037",
+            "name": "新宙邦",
+            "code": "300037",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.39,
+            "remove_or_reclassify": 0.86,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "be2c6ebd7650bca4fbca4dd0ddb14d8b5242565baad15258fc01db6e97bdccd2",
+            "response_sha256": "8b031465b63c34391b9b6d2a5f6c89edec9633e96889d7dc8902bcc275e61ec8"
+          }
+        }
+      ],
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "高端PFA/FFKM"
+      ]
+    },
+    {
+      "industry": "半导体材料",
+      "theme": "电子湿化学品/含氟电子特气",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "中巨芯-U",
           "original_name": "中巨芯",
           "code": "688549",
           "market_cap": 351.3,
           "quote_time": "20260923161456",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_11_688549",
+          "audit": {
+            "row_index": 11,
+            "code": "688549",
+            "name": "中巨芯-U",
+            "decision": "reclassify",
+            "subcategory": "电子湿化学品/含氟电子特气",
+            "technology": "电子级氢氟酸/WF6等",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "湿电子化学品和气体实际成立，但不是PFPE/HFE氟化冷却液供应证据。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-08/1225465082.PDF"
+            ],
+            "source_excerpt": "氟丁二烯、八 刻蚀、清洗 氟环丁烷、八氟环戊烯等） 2、成膜气体 沉 积集 成 电路 内 钨 导电 高纯六氟化钨 层 HCDS 前驱体材 BDEAS 薄膜沉积 料 TDMAT （三）主要经营模式 1、盈利模式 报告期内，公司主要通过向下游集成电路、显示面板、光伏等领域的客户销售电子湿化学品、 电子特种气体及前驱体材料实现营业收入及利润。公司已建立了独立完整的研发、采购、生产、 质量检测和产品销售体系，拥有成熟的盈利模式。公司目前主要采用“以销定产、订单驱动、合 理库存”的生产经营模式，客户需求是公司生产经营的核心，研发、生产、销售、采购均围绕其 展开。 2、研发模式",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "含氟材料扩展映射",
+            "audit_id": "shortage_11_688549"
+          },
+          "technology": "电子级氢氟酸/WF6等",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-08/1225465082.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "湿电子化学品和气体实际成立，但不是PFPE/HFE氟化冷却液供应证据。",
+          "jev": {
+            "audit_id": "shortage_11_688549",
+            "name": "中巨芯-U",
+            "code": "688549",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.43,
+            "remove_or_reclassify": 0.87,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "be2c6ebd7650bca4fbca4dd0ddb14d8b5242565baad15258fc01db6e97bdccd2",
+            "response_sha256": "8b031465b63c34391b9b6d2a5f6c89edec9633e96889d7dc8902bcc275e61ec8"
+          }
+        }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "含氟材料扩展映射"
+      ]
+    },
+    {
+      "industry": "半导体材料",
+      "theme": "电子级氢氟酸/电子特气",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "多氟多",
           "original_name": "多氟多",
           "code": "002407",
           "market_cap": 382.01,
           "quote_time": "20260923161403",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_11_002407",
+          "audit": {
+            "row_index": 11,
+            "code": "002407",
+            "name": "多氟多",
+            "decision": "reclassify",
+            "subcategory": "电子级氢氟酸/电子特气",
+            "technology": "半导体级HF/高纯氟氮混合气等",
+            "stage": "规模放量期",
+            "relationship": "直接业务",
+            "evidence_status": "公告原文已核验",
+            "reason": "实际含氟湿化学品与特气，不得混入PFPE/HFE或PFA/FFKM。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-18/1225478600.PDF"
+            ],
+            "source_excerpt": "、高端电子特气、硼同位素材料三大类核心产品， 是国内少数可实现多品类高端电子化学品协同供应的企业。 半导体级氢氟酸：是晶圆制造不可或缺的湿电子化学品，广泛用于集成电路、显示面板的硅材料 清洗与蚀刻。 电子级硅烷：纯度达 6N 级，半导体领域国产替代需求迫切的关键“卡脖子”材料，既是半导体芯 片、TFT 液晶显示、光伏产业化学气相沉积（CVD）工序的核心硅原料，也是高性能锂电池硅碳负极的 关键前驱材料。 其他电子级化学品：包含高纯氟氮混合气、四氟化硅、电子级氨水、电子级氟化铵等产品，可应 用于电子制造、半导体、显示面板、新能源等多个领域。 硼同位素：包含三氟化硼、硼-10",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司具体产品缺货或断供未核验",
+            "original_subcategory": "含氟材料扩展映射",
+            "audit_id": "shortage_11_002407"
+          },
+          "technology": "半导体级HF/高纯氟氮混合气等",
+          "stage": "规模放量期",
+          "relationship": "直接业务",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-18/1225478600.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "实际含氟湿化学品与特气，不得混入PFPE/HFE或PFA/FFKM。",
+          "jev": {
+            "audit_id": "shortage_11_002407",
+            "name": "多氟多",
+            "code": "002407",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.48,
+            "remove_or_reclassify": 0.86,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "be2c6ebd7650bca4fbca4dd0ddb14d8b5242565baad15258fc01db6e97bdccd2",
+            "response_sha256": "8b031465b63c34391b9b6d2a5f6c89edec9633e96889d7dc8902bcc275e61ec8"
+          }
         }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "含氟材料扩展映射"
       ]
     },
     {
-      "rank": 13,
-      "theme": "CPO测试设备",
-      "names": [
-        "罗博特科"
-      ],
-      "summary": "供不应求线索；独供及客户说法待核",
-      "path": "情报社/2026-09-14.md",
-      "line": 273,
-      "source_date": "2026-09-14",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14.md#L273",
-      "status": "紧张/缺货线索",
-      "company_count": 1,
-      "constraint_type": "历史供需线索待核",
       "industry": "光通信",
+      "theme": "CPO封装／测试设备",
       "representatives": [
         {
           "name": "罗博特科",
@@ -580,101 +1542,248 @@
           "code": "300757",
           "market_cap": 1002.26,
           "quote_time": "20260923161418",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_12_300757",
+          "audit": {
+            "row_index": 12,
+            "rank": 13,
+            "code": "300757",
+            "name": "罗博特科",
+            "decision": "retain",
+            "subcategory": "CPO封装／测试设备",
+            "original_subcategory": "CPO测试设备",
+            "technology": "ficonTEC双面晶圆测试、晶粒测试设备",
+            "stage": "规模放量期",
+            "relationship": "控股子公司产品",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "公司原文确认CPO量产化订单部分已交付确收；封测设备不是光模块。24.52亿元为整个光电子及半导体业务订单，不能全部归CPO；缺货、独供及具体客户仍未核验。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507370.PDF"
+            ],
+            "source_excerpt": "，公司相继取得前述设备的多笔量产化订单，部分量产化订单已陆续完成交付及收入确认。在OCS领域，ficonTEC与瑞士某头部客户陆续签订了两条完整的自动化产线设备订单，用于其OCS核心模块的生产制造。2026年一季度，公司已经完成了首条OC",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_12_300757"
+          },
+          "technology": "ficonTEC双面晶圆测试、晶粒测试设备",
+          "stage": "规模放量期",
+          "relationship": "控股子公司产品",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507370.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "公司原文确认CPO量产化订单部分已交付确收；封测设备不是光模块。24.52亿元为整个光电子及半导体业务订单，不能全部归CPO；缺货、独供及具体客户仍未核验。",
+          "jev": {
+            "audit_id": "shortage_12_300757",
+            "name": "罗博特科",
+            "code": "300757",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.46,
+            "remove_or_reclassify": 0.52,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "7248d02db46941967189f270d63ddc979e83b9e1902eb930d76a703b392b8e46",
+            "response_sha256": "84fd3567dd886ebf226d021da03ed5609f7a98573b7a5959806ffcbcc08d6d05"
+          }
         }
       ],
-      "emerging_companies": []
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "CPO测试设备"
+      ]
     },
     {
-      "rank": 14,
-      "theme": "隔离器／滤光片",
-      "names": [
-        "东田微"
-      ],
-      "summary": "自身产品短缺与上游旋光片制约并存",
-      "path": "情报社/2026-09-16-午间.md",
-      "line": 109,
-      "source_date": "2026-09-16",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-16-%E5%8D%88%E9%97%B4.md#L109",
-      "status": "紧张/缺货线索",
-      "company_count": 1,
-      "constraint_type": "历史供需线索待核",
       "industry": "光通信",
-      "representatives": [
+      "theme": "光隔离器核心元件／滤光片",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "东田微",
           "original_name": "东田微",
           "code": "301183",
           "market_cap": 251.26,
           "quote_time": "20260923161448",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_13_301183",
+          "audit": {
+            "row_index": 13,
+            "rank": 14,
+            "code": "301183",
+            "name": "东田微",
+            "decision": "reclassify",
+            "subcategory": "光隔离器核心元件／滤光片",
+            "original_subcategory": "隔离器／滤光片",
+            "technology": "光通信滤光片、隔离器核心光学元件、旋光片深加工",
+            "stage": "规模放量期",
+            "relationship": "直接产品／元件制造",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "隔离器核心光学元件已大批稳定出货；公司有隔离器组装和旋光片切磨镀能力，但不能由深加工推为旋光晶体生长或上游原料自产，更不能推为已经缺货。",
+            "sources": [
+              "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-18/da8d9bbf-7c91-45e2-9790-ad5778acb192.PDF"
+            ],
+            "source_excerpt": "份有限公司2026年半年度报告全文（2）光隔离器核心光学元件：2026年上半年实现大批量稳定出货，下游匹配高速数通光模块需求，订单充足，公司按中长期需求规划持续扩产提量，同步优化自动化产线提升交付效率。（3）光接入元器件：GPON",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_13_301183"
+          },
+          "technology": "光通信滤光片、隔离器核心光学元件、旋光片深加工",
+          "stage": "规模放量期",
+          "relationship": "直接产品／元件制造",
+          "sources": [
+            "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-18/da8d9bbf-7c91-45e2-9790-ad5778acb192.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "隔离器核心光学元件已大批稳定出货；公司有隔离器组装和旋光片切磨镀能力，但不能由深加工推为旋光晶体生长或上游原料自产，更不能推为已经缺货。",
+          "jev": {
+            "audit_id": "shortage_13_301183",
+            "name": "东田微",
+            "code": "301183",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.63,
+            "remove_or_reclassify": 0.45,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "7248d02db46941967189f270d63ddc979e83b9e1902eb930d76a703b392b8e46",
+            "response_sha256": "84fd3567dd886ebf226d021da03ed5609f7a98573b7a5959806ffcbcc08d6d05"
+          }
         }
       ],
-      "emerging_companies": []
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "隔离器／滤光片"
+      ]
     },
     {
-      "rank": 15,
-      "theme": "DSP/TIA/Driver",
-      "names": [
-        "优迅股份",
-        "金字火腿"
-      ],
-      "summary": "交期延长映射；尤其金字火腿实际股权和业务归属待核，不视为直接量产",
-      "path": "文字直播/2026-09-14.md",
-      "line": 29,
-      "source_date": "2026-09-14",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-14.md#L29",
-      "status": "供给约束线索",
-      "company_count": 2,
-      "constraint_type": "历史供需线索待核",
       "industry": "光通信",
-      "representatives": [
+      "theme": "光通信TIA／Driver电芯片",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "优迅股份",
           "original_name": "优迅股份",
           "code": "688807",
           "market_cap": 289.06,
           "quote_time": "20260923161500",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_14_688807",
+          "audit": {
+            "row_index": 14,
+            "rank": 15,
+            "code": "688807",
+            "name": "优迅股份",
+            "decision": "reclassify",
+            "subcategory": "光通信TIA／Driver电芯片",
+            "original_subcategory": "DSP/TIA/Driver",
+            "technology": "成熟接入网TIA／LDD；单波100G／200G数据中心新品",
+            "stage": "客户认证期",
+            "relationship": "直接产品",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "建议将DSP与TIA／Driver拆开：DSP仅行业介绍出现，未获公司对应产品量产证据。FRO单波100G送样、100G／200G工程片投片，预计明年批量导入；LPO／NPO线性TIA及Driver样品验证，不能迁移10G成熟业务阶段。",
+            "sources": [
+              "https://stock.stockstar.com/notice/SN2026082500000932.shtml"
+            ],
+            "source_excerpt": "单波100G系列产品客户送样测试情况良好，已完成工程片投片，预计明年在400G/800G光模块应用中实现批量产品导入。",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_14_688807"
+          },
+          "technology": "成熟接入网TIA／LDD；单波100G／200G数据中心新品",
+          "stage": "客户认证期",
+          "relationship": "直接产品",
+          "sources": [
+            "https://stock.stockstar.com/notice/SN2026082500000932.shtml"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "建议将DSP与TIA／Driver拆开：DSP仅行业介绍出现，未获公司对应产品量产证据。FRO单波100G送样、100G／200G工程片投片，预计明年批量导入；LPO／NPO线性TIA及Driver样品验证，不能迁移10G成熟业务阶段。",
+          "jev": {
+            "audit_id": "shortage_14_688807",
+            "name": "优迅股份",
+            "code": "688807",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.4,
+            "remove_or_reclassify": 0.84,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "7248d02db46941967189f270d63ddc979e83b9e1902eb930d76a703b392b8e46",
+            "response_sha256": "84fd3567dd886ebf226d021da03ed5609f7a98573b7a5959806ffcbcc08d6d05"
+          }
         }
       ],
-      "emerging_companies": [
-        {
-          "name": "金字火腿",
-          "original_name": "金字火腿",
-          "code": "002515",
-          "market_cap": 93.22,
-          "quote_time": "20260923161424",
-          "note": "股权关系待核；非直接制造商"
-        }
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "DSP/TIA/Driver"
       ]
     },
     {
-      "rank": 16,
-      "theme": "成熟制程芯片",
-      "names": [
-        "富满微",
-        "明微电子"
-      ],
-      "summary": "结构性缺货／涨价线索",
-      "path": "情报社/2026-09-08.md",
-      "line": 24,
-      "source_date": "2026-09-08",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-08.md#L24",
-      "status": "紧张/缺货线索",
-      "company_count": 2,
-      "constraint_type": "历史供需线索待核",
       "industry": "半导体芯片",
-      "representatives": [
+      "theme": "模拟／混合信号IC",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "富满微",
           "original_name": "富满微",
           "code": "300671",
           "market_cap": 139.39,
           "quote_time": "20260923161409",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_15_300671",
+          "audit": {
+            "row_index": 15,
+            "rank": 16,
+            "code": "300671",
+            "name": "富满微",
+            "decision": "reclassify",
+            "subcategory": "模拟／混合信号IC",
+            "original_subcategory": "成熟制程芯片",
+            "technology": "电源管理、LED驱动等模拟混合信号芯片",
+            "stage": "规模放量期",
+            "relationship": "直接设计、封测与销售",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "真实业务是产品设计封测，成熟制程为工艺属性，不是它是晶圆代工厂的证据。结构性短缺和涨价须按具体型号及订单核验。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-07-30/1225447229.PDF"
+            ],
+            "source_excerpt": "主营业务情况公司是行业内具有技术优势的的高性能模拟和混合信号集成电路（“IC”）产品及解决方案提供商，公司专注于高性能、高质量IC产品的研发、设计、封装、测试、销售20余年。公司系首批建立涵盖芯片设计、封装、测试和销售全产业链垂直",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_15_300671"
+          },
+          "technology": "电源管理、LED驱动等模拟混合信号芯片",
+          "stage": "规模放量期",
+          "relationship": "直接设计、封测与销售",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-07-30/1225447229.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "真实业务是产品设计封测，成熟制程为工艺属性，不是它是晶圆代工厂的证据。结构性短缺和涨价须按具体型号及订单核验。",
+          "jev": {
+            "audit_id": "shortage_15_300671",
+            "name": "富满微",
+            "code": "300671",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.28,
+            "remove_or_reclassify": 0.86,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "7248d02db46941967189f270d63ddc979e83b9e1902eb930d76a703b392b8e46",
+            "response_sha256": "84fd3567dd886ebf226d021da03ed5609f7a98573b7a5959806ffcbcc08d6d05"
+          }
         }
       ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "成熟制程芯片"
+      ]
+    },
+    {
+      "industry": "半导体芯片",
+      "theme": "LED驱动／电源管理IC",
+      "representatives": [],
       "emerging_companies": [
         {
           "name": "明微电子",
@@ -682,64 +1791,309 @@
           "code": "688699",
           "market_cap": 77.64,
           "quote_time": "20260923161442",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_15_688699",
+          "audit": {
+            "row_index": 15,
+            "rank": 16,
+            "code": "688699",
+            "name": "明微电子",
+            "decision": "reclassify",
+            "subcategory": "LED驱动／电源管理IC",
+            "original_subcategory": "成熟制程芯片",
+            "technology": "显示驱动、线性电源、电源管理芯片",
+            "stage": "规模放量期",
+            "relationship": "直接产品",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "不是成熟制程晶圆产能供应商；已量产显示驱动与工程批、MiniLED小批新品分开。未证公司产品缺货。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475740.PDF"
+            ],
+            "source_excerpt": "并且集中研发力量做好细分行业的典型应用，公司产品主要分为显示驱动类、线性电源类和电源管理类等，产品广泛应用于显示屏、智能景观、照明和家电等领域。（1）显示驱动类包含显示屏驱动、智能景观驱动和MiniLED背光驱动芯片。显示屏驱动针对小间",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_15_688699"
+          },
+          "technology": "显示驱动、线性电源、电源管理芯片",
+          "stage": "规模放量期",
+          "relationship": "直接产品",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475740.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "不是成熟制程晶圆产能供应商；已量产显示驱动与工程批、MiniLED小批新品分开。未证公司产品缺货。",
+          "jev": {
+            "audit_id": "shortage_15_688699",
+            "name": "明微电子",
+            "code": "688699",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.39,
+            "remove_or_reclassify": 0.89,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "7248d02db46941967189f270d63ddc979e83b9e1902eb930d76a703b392b8e46",
+            "response_sha256": "84fd3567dd886ebf226d021da03ed5609f7a98573b7a5959806ffcbcc08d6d05"
+          }
         }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "成熟制程芯片"
       ]
     },
     {
-      "rank": 17,
-      "theme": "功率半导体",
-      "names": [
-        "扬杰科技",
-        "华润微",
-        "士兰微",
-        "斯达半导",
-        "杰华特",
-        "新洁能"
-      ],
-      "summary": "8月旧资料称海外交期30—50周，需刷新",
-      "path": "文字直播/大盘与科技_20260819.md",
-      "line": 333,
-      "source_date": "2026-08-19",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/%E5%A4%A7%E7%9B%98%E4%B8%8E%E7%A7%91%E6%8A%80_20260819.md#L333",
-      "status": "旧线索待刷新",
-      "company_count": 6,
-      "constraint_type": "历史供需线索待核",
       "industry": "半导体芯片",
-      "representatives": [
+      "theme": "功率器件",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "扬杰科技",
           "original_name": "扬杰科技",
           "code": "300373",
           "market_cap": 496.57,
           "quote_time": "20260923161409",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_16_300373",
+          "audit": {
+            "row_index": 16,
+            "rank": 17,
+            "code": "300373",
+            "name": "扬杰科技",
+            "decision": "retain",
+            "subcategory": "功率器件",
+            "original_subcategory": "功率半导体",
+            "technology": "二极管、MOSFET、IGBT、SiC等功率器件",
+            "stage": "规模放量期",
+            "relationship": "直接产品／IDM",
+            "evidence_status": "产品／关系已核验；公司披露行业产能紧缺；自身逐型号缺货未核验",
+            "reason": "半年报明确行业8英寸成熟制程产能紧缺，且自有业务增长；这是行业约束，公司新GaN和AI电源新品仍研发／认证，不能把海外30—50周旧传言用于全部产品。",
+            "sources": [
+              "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12518301&stockid=300373"
+            ],
+            "source_excerpt": "心、新能源汽车、光储等领域需求爆发，叠加8英寸成熟制程产能紧缺，呈现景气度上行、量价齐升的发展态势。报告期内，公司聚焦主业，积极落实产品领先战略，通过持续研发投入完善高附加值产品矩阵，实现营业收入同比增长30.69%。其中，汽车电子",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司披露行业产能紧缺；自身逐型号缺货未核验",
+            "audit_id": "shortage_16_300373"
+          },
+          "technology": "二极管、MOSFET、IGBT、SiC等功率器件",
+          "stage": "规模放量期",
+          "relationship": "直接产品／IDM",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12518301&stockid=300373"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "半年报明确行业8英寸成熟制程产能紧缺，且自有业务增长；这是行业约束，公司新GaN和AI电源新品仍研发／认证，不能把海外30—50周旧传言用于全部产品。",
+          "jev": {
+            "audit_id": "shortage_16_300373",
+            "name": "扬杰科技",
+            "code": "300373",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.45,
+            "remove_or_reclassify": 0.29,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "7248d02db46941967189f270d63ddc979e83b9e1902eb930d76a703b392b8e46",
+            "response_sha256": "84fd3567dd886ebf226d021da03ed5609f7a98573b7a5959806ffcbcc08d6d05"
+          }
+        }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "功率半导体"
+      ]
+    },
+    {
+      "industry": "半导体芯片",
+      "theme": "功率器件及制造",
+      "representatives": [
         {
           "name": "华润微",
           "original_name": "华润微",
           "code": "688396",
           "market_cap": 813.0,
           "quote_time": "20260923161459",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_16_688396",
+          "audit": {
+            "row_index": 16,
+            "rank": 17,
+            "code": "688396",
+            "name": "华润微",
+            "decision": "retain",
+            "subcategory": "功率器件及制造",
+            "original_subcategory": "功率半导体",
+            "technology": "MOSFET、IGBT等功率器件与晶圆制造",
+            "stage": "规模放量期",
+            "relationship": "直接产品／IDM",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "产品关系明确，成熟规模业务不证明所有SiC等新品同阶段；未获得所有产品当前供不应求或海外交期映射兑现的证据。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-25/1225497330.PDF"
+            ],
+            "source_excerpt": "ED驱动芯片、音频功放芯片等功率半导体指功率器件与功率IC的统称晶圆指半导体制作所用的圆形硅晶片。在硅晶片上可加工制作各种电路元件结构，成为有特定电性功能的集成电路产品模拟芯片指处理连续性模拟信号的集成电路芯片。电学上",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_16_688396"
+          },
+          "technology": "MOSFET、IGBT等功率器件与晶圆制造",
+          "stage": "规模放量期",
+          "relationship": "直接产品／IDM",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-25/1225497330.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "产品关系明确，成熟规模业务不证明所有SiC等新品同阶段；未获得所有产品当前供不应求或海外交期映射兑现的证据。",
+          "jev": {
+            "audit_id": "shortage_16_688396",
+            "name": "华润微",
+            "code": "688396",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.31,
+            "remove_or_reclassify": 0.25,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "7248d02db46941967189f270d63ddc979e83b9e1902eb930d76a703b392b8e46",
+            "response_sha256": "84fd3567dd886ebf226d021da03ed5609f7a98573b7a5959806ffcbcc08d6d05"
+          }
+        }
+      ],
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "功率半导体"
+      ]
+    },
+    {
+      "industry": "半导体芯片",
+      "theme": "功率器件及模块",
+      "representatives": [
         {
           "name": "士兰微",
           "original_name": "士兰微",
           "code": "600460",
           "market_cap": 560.29,
           "quote_time": "20260923161458",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_16_600460",
+          "audit": {
+            "row_index": 16,
+            "rank": 17,
+            "code": "600460",
+            "name": "士兰微",
+            "decision": "retain",
+            "subcategory": "功率器件及模块",
+            "original_subcategory": "功率半导体",
+            "technology": "MOSFET、IGBT／IPM／PIM、SiC器件",
+            "stage": "规模放量期",
+            "relationship": "直接产品／IDM",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "功率器件与模块已有收入；并有模拟IC、MCU、MEMS等，不把全部公司收入算功率或AI供电。海外缺货替代订单待核。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12525298&stockid=600460"
+            ],
+            "source_excerpt": "器件等）已在快速上量。2026年上半年，公司IPM模块的营业收入达到20.33亿元，较去年同期增长约9%。目前，公司IPM模块已广泛应用到下游家电、工业和汽车客户的变频产品上，包括空调、冰箱、洗衣机、油烟机、吊扇、家用风扇、工业风扇、水泵",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_16_600460"
+          },
+          "technology": "MOSFET、IGBT／IPM／PIM、SiC器件",
+          "stage": "规模放量期",
+          "relationship": "直接产品／IDM",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12525298&stockid=600460"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "功率器件与模块已有收入；并有模拟IC、MCU、MEMS等，不把全部公司收入算功率或AI供电。海外缺货替代订单待核。",
+          "jev": {
+            "audit_id": "shortage_16_600460",
+            "name": "士兰微",
+            "code": "600460",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.49,
+            "remove_or_reclassify": 0.21,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b31ffab15431f32c5fcaeb1c4f13d28ce46e218553e7a422f54ac7f93bfcef9d",
+            "response_sha256": "3479001e791c0101012dbfca243b38e0e085a99d76d7028e186075698cbc8719"
+          }
+        }
+      ],
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "功率半导体"
+      ]
+    },
+    {
+      "industry": "半导体芯片",
+      "theme": "电源管理／模拟IC",
+      "representatives": [
         {
           "name": "杰华特",
           "original_name": "杰华特",
           "code": "688141",
           "market_cap": 537.19,
           "quote_time": "20260923161453",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_16_688141",
+          "audit": {
+            "row_index": 16,
+            "rank": 17,
+            "code": "688141",
+            "name": "杰华特",
+            "decision": "reclassify",
+            "subcategory": "电源管理／模拟IC",
+            "original_subcategory": "功率半导体",
+            "technology": "DC-DC、AC-DC等电源管理与信号链IC",
+            "stage": "规模放量期",
+            "relationship": "虚拟IDM芯片设计",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "应从与IGBT/MOSFET并列的功率分立器件供应商中分开，是模拟IC及电源管理芯片；不能用海外功率器件交期推其直接替代。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-27/1225513670.PDF"
+            ],
+            "source_excerpt": "务公司是一家以虚拟IDM为主要经营模式的模拟集成电路设计企业，专业从事模拟集成电路的研发与销售，主要采用公司自有的国际先进的BCD工艺技术进行芯片设计与制造。公司具备包括芯片和系统设计技术、晶圆制造工艺在内的完整核心技术架构。目前",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_16_688141"
+          },
+          "technology": "DC-DC、AC-DC等电源管理与信号链IC",
+          "stage": "规模放量期",
+          "relationship": "虚拟IDM芯片设计",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-27/1225513670.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "应从与IGBT/MOSFET并列的功率分立器件供应商中分开，是模拟IC及电源管理芯片；不能用海外功率器件交期推其直接替代。",
+          "jev": {
+            "audit_id": "shortage_16_688141",
+            "name": "杰华特",
+            "code": "688141",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.37,
+            "remove_or_reclassify": 0.89,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b31ffab15431f32c5fcaeb1c4f13d28ce46e218553e7a422f54ac7f93bfcef9d",
+            "response_sha256": "3479001e791c0101012dbfca243b38e0e085a99d76d7028e186075698cbc8719"
+          }
         }
       ],
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "功率半导体"
+      ]
+    },
+    {
+      "industry": "半导体芯片",
+      "theme": "IGBT／SiC功率模块",
+      "representatives": [],
       "emerging_companies": [
         {
           "name": "斯达半导",
@@ -747,72 +2101,247 @@
           "code": "603290",
           "market_cap": 210.81,
           "quote_time": "20260923161457",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_16_603290",
+          "audit": {
+            "row_index": 16,
+            "rank": 17,
+            "code": "603290",
+            "name": "斯达半导",
+            "decision": "retain",
+            "subcategory": "IGBT／SiC功率模块",
+            "original_subcategory": "功率半导体",
+            "technology": "IGBT、SiC芯片及功率模块",
+            "stage": "规模放量期",
+            "relationship": "直接产品",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "成熟模块量产；AI电源新产品仍研发与客户验证。H1利润下降及竞争压力下，不能称行业全部缺货带动已兑现。",
+            "sources": [
+              "https://pdf.dfcfw.com/pdf/H2_AN202608241828366281_1.pdf"
+            ],
+            "source_excerpt": "一)主要业务、主要产品及用途1.主要业务公司主营业务是以IGBT、SiC为主的功率半导体芯片和模块的设计研发、生产及销售。公司总部位于浙江嘉兴，在上海、浙江、重庆和欧洲均设有子公司，并在国内和欧洲均设有研发中心。根据中国证监会",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_16_603290"
+          },
+          "technology": "IGBT、SiC芯片及功率模块",
+          "stage": "规模放量期",
+          "relationship": "直接产品",
+          "sources": [
+            "https://pdf.dfcfw.com/pdf/H2_AN202608241828366281_1.pdf"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "成熟模块量产；AI电源新产品仍研发与客户验证。H1利润下降及竞争压力下，不能称行业全部缺货带动已兑现。",
+          "jev": {
+            "audit_id": "shortage_16_603290",
+            "name": "斯达半导",
+            "code": "603290",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.4,
+            "remove_or_reclassify": 0.14,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b31ffab15431f32c5fcaeb1c4f13d28ce46e218553e7a422f54ac7f93bfcef9d",
+            "response_sha256": "3479001e791c0101012dbfca243b38e0e085a99d76d7028e186075698cbc8719"
+          }
+        }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "功率半导体"
+      ]
+    },
+    {
+      "industry": "半导体芯片",
+      "theme": "MOSFET／IGBT",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "新洁能",
           "original_name": "新洁能",
           "code": "605111",
           "market_cap": 259.08,
           "quote_time": "20260923161500",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_16_605111",
+          "audit": {
+            "row_index": 16,
+            "rank": 17,
+            "code": "605111",
+            "name": "新洁能",
+            "decision": "retain",
+            "subcategory": "MOSFET／IGBT",
+            "original_subcategory": "功率半导体",
+            "technology": "SGT、SJ、Trench MOSFET及IGBT",
+            "stage": "规模放量期",
+            "relationship": "Fabless设计与销售",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "MOSFET主业明确，晶圆由代工伙伴制造；成熟平台与GaN研发阶段分开；海外交期传闻不能等同公司订单兑现。",
+            "sources": [
+              "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12526211&stockid=605111"
+            ],
+            "source_excerpt": "司所属行业及主营业务情况说明1、主要业务公司成立以来即专注于中高端IGBT、MOSFET、集成功率器件及模块的研发、设计及销售。公司凭借多年技术积累及持续自主创新，在国内率先构建了IGBT、屏蔽栅MOSFET（SGTMOSFET）",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_16_605111"
+          },
+          "technology": "SGT、SJ、Trench MOSFET及IGBT",
+          "stage": "规模放量期",
+          "relationship": "Fabless设计与销售",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12526211&stockid=605111"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "MOSFET主业明确，晶圆由代工伙伴制造；成熟平台与GaN研发阶段分开；海外交期传闻不能等同公司订单兑现。",
+          "jev": {
+            "audit_id": "shortage_16_605111",
+            "name": "新洁能",
+            "code": "605111",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.39,
+            "remove_or_reclassify": 0.21,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b31ffab15431f32c5fcaeb1c4f13d28ce46e218553e7a422f54ac7f93bfcef9d",
+            "response_sha256": "3479001e791c0101012dbfca243b38e0e085a99d76d7028e186075698cbc8719"
+          }
         }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "功率半导体"
       ]
     },
     {
-      "rank": 18,
-      "theme": "燃机叶片",
-      "names": [
-        "应流股份"
-      ],
-      "summary": "海外产能瓶颈、排期延长，承接订单待核",
-      "path": "情报社/2026-09-15.md",
-      "line": 125,
-      "source_date": "2026-09-15",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L125",
-      "status": "供给约束线索",
-      "company_count": 1,
-      "constraint_type": "历史供需线索待核",
       "industry": "能源设备",
-      "representatives": [
+      "theme": "燃气轮机叶片／铸件",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "应流股份",
           "original_name": "应流股份",
           "code": "603308",
           "market_cap": 292.47,
           "quote_time": "20260923161447",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_17_603308",
+          "audit": {
+            "row_index": 17,
+            "rank": 18,
+            "code": "603308",
+            "name": "应流股份",
+            "decision": "retain",
+            "subcategory": "燃气轮机叶片／铸件",
+            "original_subcategory": "燃机叶片",
+            "technology": "高温合金燃机叶片及精密铸件",
+            "stage": "规模放量期",
+            "relationship": "直接零部件供应商",
+            "evidence_status": "产品／关系已核验；公司披露行业供需偏紧；逐型号排产待核",
+            "reason": "已有稳定供货及部分型号批量生产，其他新叶片认证研发；两机订单约22亿元包含航发，不能全部归燃机叶片。半年报引用行业供不应求，属于公司披露口径。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12565302&stockid=603308"
+            ],
+            "source_excerpt": "开发和国产替代成效持续显现。其中东方电气M701F燃机3个品种已顺利转入批量生产，M701J燃机3个品种正按计划推进首件认证与试验验证；新开发的中国联合重燃300MW三静、四静顺利通过首件鉴定，另有其他型号燃机大尺寸一动、四动完成产品交付。在航空发动",
+            "verified_at": "2026-09-23",
+            "supply_status": "公司披露行业供需偏紧；逐型号排产待核",
+            "audit_id": "shortage_17_603308"
+          },
+          "technology": "高温合金燃机叶片及精密铸件",
+          "stage": "规模放量期",
+          "relationship": "直接零部件供应商",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12565302&stockid=603308"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "已有稳定供货及部分型号批量生产，其他新叶片认证研发；两机订单约22亿元包含航发，不能全部归燃机叶片。半年报引用行业供不应求，属于公司披露口径。",
+          "jev": {
+            "audit_id": "shortage_17_603308",
+            "name": "应流股份",
+            "code": "603308",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.7,
+            "remove_or_reclassify": 0.3,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b31ffab15431f32c5fcaeb1c4f13d28ce46e218553e7a422f54ac7f93bfcef9d",
+            "response_sha256": "3479001e791c0101012dbfca243b38e0e085a99d76d7028e186075698cbc8719"
+          }
         }
       ],
-      "emerging_companies": []
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "燃机叶片"
+      ]
     },
     {
-      "rank": 19,
-      "theme": "钽资源／材料",
-      "names": [
-        "东方钽业",
-        "中矿资源",
-        "新金路"
-      ],
-      "summary": "海外矿山停产／进口收缩的资料线索；逐股资源权益待核",
-      "path": "情报社/2026-09-15-午间.md",
-      "line": 1007,
-      "source_date": "2026-09-15",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15-%E5%8D%88%E9%97%B4.md#L1007",
-      "status": "供给约束线索",
-      "company_count": 3,
-      "constraint_type": "历史供需线索待核",
       "industry": "资源材料",
-      "representatives": [
+      "theme": "钽铌金属加工材料",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "东方钽业",
           "original_name": "东方钽业",
           "code": "000962",
           "market_cap": 321.92,
           "quote_time": "20260923161421",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_18_000962",
+          "audit": {
+            "row_index": 18,
+            "rank": 19,
+            "code": "000962",
+            "name": "东方钽业",
+            "decision": "retain",
+            "subcategory": "钽铌金属加工材料",
+            "original_subcategory": "钽资源／材料",
+            "technology": "钽粉、钽丝、钽靶坯等",
+            "stage": "规模放量期",
+            "relationship": "直接材料制造",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "是钽铌加工材料厂，不是所有钽矿供应的直接持有人。上游矿不足也可能增加原料成本，未证利润单向受益。",
+            "sources": [
+              "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12523894&stockid=000962"
+            ],
+            "source_excerpt": "销售服务体系，在行业中企业品牌优势明显。公司生产的宝山牌钽粉及钽丝是中国名牌产品，分别荣获”中国制造业单项冠军”产品称号，公司宝山牌熔炼铌、大规模集成电路用钽靶坯等产品均被授予名牌产品。（2）技术优势公司长期坚持把技术进步放在首位，走生",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_18_000962"
+          },
+          "technology": "钽粉、钽丝、钽靶坯等",
+          "stage": "规模放量期",
+          "relationship": "直接材料制造",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12523894&stockid=000962"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "是钽铌加工材料厂，不是所有钽矿供应的直接持有人。上游矿不足也可能增加原料成本，未证利润单向受益。",
+          "jev": {
+            "audit_id": "shortage_18_000962",
+            "name": "东方钽业",
+            "code": "000962",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.46,
+            "remove_or_reclassify": 0.41,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b31ffab15431f32c5fcaeb1c4f13d28ce46e218553e7a422f54ac7f93bfcef9d",
+            "response_sha256": "3479001e791c0101012dbfca243b38e0e085a99d76d7028e186075698cbc8719"
+          }
         }
       ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "钽资源／材料"
+      ]
+    },
+    {
+      "industry": "资源材料",
+      "theme": "钽矿资源／精矿",
+      "representatives": [],
       "emerging_companies": [
         {
           "name": "中矿资源",
@@ -820,45 +2349,122 @@
           "code": "002738",
           "market_cap": 323.48,
           "quote_time": "20260923161436",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_18_002738",
+          "audit": {
+            "row_index": 18,
+            "rank": 19,
+            "code": "002738",
+            "name": "中矿资源",
+            "decision": "reclassify",
+            "subcategory": "钽矿资源／精矿",
+            "original_subcategory": "钽资源／材料",
+            "technology": "Bikita等锂铯钽资源；钽精矿合作线及自建线",
+            "stage": "未核验",
+            "relationship": "矿业权益及精矿业务",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "披露与第三方合作运营尾矿提钽线，预计150–200吨/年；自有钽精矿选矿线在建，达产预计500–600吨/年，不能当已实现产量或高纯钽材供应。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-25/1225496182.PDF"
+            ],
+            "source_excerpt": "经济效益，公司在津巴布韦Bikita矿山与第三方合作运营钽精矿选矿生产线，该生产线以锂辉石尾矿作为加工原料，设计处理能力200万吨/年，预计年产钽精矿150-200吨。与此同时，公司配套Bikita矿山锂辉石精矿产能的自有钽精矿选矿生产线处于",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_18_002738"
+          },
+          "technology": "Bikita等锂铯钽资源；钽精矿合作线及自建线",
+          "stage": "未核验",
+          "relationship": "矿业权益及精矿业务",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-25/1225496182.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "披露与第三方合作运营尾矿提钽线，预计150–200吨/年；自有钽精矿选矿线在建，达产预计500–600吨/年，不能当已实现产量或高纯钽材供应。",
+          "jev": {
+            "audit_id": "shortage_18_002738",
+            "name": "中矿资源",
+            "code": "002738",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.49,
+            "remove_or_reclassify": 0.89,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b31ffab15431f32c5fcaeb1c4f13d28ce46e218553e7a422f54ac7f93bfcef9d",
+            "response_sha256": "3479001e791c0101012dbfca243b38e0e085a99d76d7028e186075698cbc8719"
+          }
+        }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "钽资源／材料"
+      ]
+    },
+    {
+      "industry": "资源材料",
+      "theme": "钽铌矿项目（建设中）",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "新金路",
           "original_name": "新金路",
           "code": "000510",
           "market_cap": 124.71,
           "quote_time": "20260923161436",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_18_000510",
+          "audit": {
+            "row_index": 18,
+            "rank": 19,
+            "code": "000510",
+            "name": "新金路",
+            "decision": "reclassify",
+            "subcategory": "钽铌矿项目（建设中）",
+            "original_subcategory": "钽资源／材料",
+            "technology": "广西栗木钽铌锡钨矿勘察与选矿、资源综合利用项目",
+            "stage": "未核验",
+            "relationship": "项目建设映射",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "半年报在建工程列示栗木勘察、采矿技改及新建选矿等建设中；尚无该项目已投产及当期钽销售证据，不应作现货供应商。",
+            "sources": [
+              "https://stock.stockstar.com/notice/SN2026082800005652.shtml"
+            ],
+            "source_excerpt": "广西栗木钽铌锡钨多金属矿区勘察与储量核实：建设中；新建选矿项目：建设中。",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_18_000510"
+          },
+          "technology": "广西栗木钽铌锡钨矿勘察与选矿、资源综合利用项目",
+          "stage": "未核验",
+          "relationship": "项目建设映射",
+          "sources": [
+            "https://stock.stockstar.com/notice/SN2026082800005652.shtml"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "半年报在建工程列示栗木勘察、采矿技改及新建选矿等建设中；尚无该项目已投产及当期钽销售证据，不应作现货供应商。",
+          "jev": {
+            "audit_id": "shortage_18_000510",
+            "name": "新金路",
+            "code": "000510",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.31,
+            "remove_or_reclassify": 0.94,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "b31ffab15431f32c5fcaeb1c4f13d28ce46e218553e7a422f54ac7f93bfcef9d",
+            "response_sha256": "3479001e791c0101012dbfca243b38e0e085a99d76d7028e186075698cbc8719"
+          }
         }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "钽资源／材料"
       ]
     },
     {
-      "rank": 20,
-      "theme": "钨",
-      "names": [
-        "中钨高新",
-        "厦门钨业"
-      ],
-      "summary": "8月出口约束线索；区分中国限制和海外废料限制",
-      "path": "情报社/稀土与钨/00 行业综述.md",
-      "line": 15,
-      "source_date": "2026-08-11",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/%E7%A8%80%E5%9C%9F%E4%B8%8E%E9%92%A8/00%20%E8%A1%8C%E4%B8%9A%E7%BB%BC%E8%BF%B0.md#L15",
-      "status": "供给约束线索",
-      "company_count": 2,
-      "constraint_type": "中国出口许可",
-      "review": {
-        "theme": "钨",
-        "nature": "中国出口许可",
-        "status": "管制文件已核验",
-        "verified_at": "2026-09-23",
-        "claim": "商务部2025年第10号对符合列管描述的相关物项实施出口许可管理，不是国外对华禁供，也不是所有钨产品一律禁止出口。公司是否受益需区分出口收入和国内售价。",
-        "sources": [
-          "https://exportcontrol.mofcom.gov.cn/article/hgfw/lywxcx/gzqd/202502/1102.html",
-          "https://exportcontrol.mofcom.gov.cn/article/cjwt/202503/1112.html"
-        ]
-      },
       "industry": "资源材料",
+      "theme": "钨加工／硬质合金",
       "representatives": [
         {
           "name": "中钨高新",
@@ -866,44 +2472,123 @@
           "code": "000657",
           "market_cap": 1348.01,
           "quote_time": "20260923161500",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_19_000657",
+          "audit": {
+            "row_index": 19,
+            "rank": 20,
+            "code": "000657",
+            "name": "中钨高新",
+            "decision": "retain",
+            "subcategory": "钨加工／硬质合金",
+            "original_subcategory": "钨",
+            "technology": "硬质合金、刀具及微钻；钨产业链运营",
+            "stage": "规模放量期",
+            "relationship": "上市公司产品；受托矿山另区分",
+            "evidence_status": "产品／关系已核验；中国出口许可范围已核验；公司缺货未核验",
+            "reason": "受托管理资源不等于全部矿权归上市公司；中国出口许可针对列管物项，不是海外对华禁供，影响需看产品与出口占比。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-24/1225490814.PDF"
+            ],
+            "source_excerpt": "炼、加工与贸易于一体的完整钨产业链。公司受托管理范围内的钨资源储量、钨冶炼年生产能力均居全球第一，有力保障了加工端原材料的供应，增强抗风险能力，有利于整合上下游资源进行统一调配及优化配置，提高资源利用效率。（二）产品优势产品种类齐全，公",
+            "verified_at": "2026-09-23",
+            "supply_status": "中国出口许可范围已核验；公司缺货未核验",
+            "audit_id": "shortage_19_000657"
+          },
+          "technology": "硬质合金、刀具及微钻；钨产业链运营",
+          "stage": "规模放量期",
+          "relationship": "上市公司产品；受托矿山另区分",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-24/1225490814.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "受托管理资源不等于全部矿权归上市公司；中国出口许可针对列管物项，不是海外对华禁供，影响需看产品与出口占比。",
+          "jev": {
+            "audit_id": "shortage_19_000657",
+            "name": "中钨高新",
+            "code": "000657",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.28,
+            "remove_or_reclassify": 0.48,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "c0713562b4975b3870ac279c8f6e5c00c15ce89a390eebbd8b41159b43b0cf31",
+            "response_sha256": "3390f8269ed6638516660c1863e4e9c7addf8b84c14d8ba2ab6446e5debe9215"
+          }
+        }
+      ],
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "钨"
+      ]
+    },
+    {
+      "industry": "资源材料",
+      "theme": "钨矿冶炼及深加工",
+      "representatives": [
         {
           "name": "厦门钨业",
           "original_name": "厦门钨业",
           "code": "600549",
           "market_cap": 773.31,
           "quote_time": "20260923161459",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_19_600549",
+          "audit": {
+            "row_index": 19,
+            "rank": 20,
+            "code": "600549",
+            "name": "厦门钨业",
+            "decision": "retain",
+            "subcategory": "钨矿冶炼及深加工",
+            "original_subcategory": "钨",
+            "technology": "APT、钨粉、钨丝、硬质合金",
+            "stage": "规模放量期",
+            "relationship": "直接产业链业务",
+            "evidence_status": "产品／关系已核验；中国出口许可范围已核验；公司缺货未核验",
+            "reason": "拥有在产、在建及待建矿山须区分；中国出口许可非全面禁止出口，不能自动判定所有钨品缺货受益。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-21/1225485968.PDF"
+            ],
+            "source_excerpt": "超80%，全球领先。1.2公司钨产业情况公司拥有完整的钨产业链，在钨矿开采、钨冶炼、钨粉末、钨丝材和硬质合金深加工领域拥有较为突出的竞争优势。钨矿山业务方面，公司拥有三家在产钨矿企业（洛阳豫鹭，宁化行洛坑，都昌金鼎）、一家在建钨矿企",
+            "verified_at": "2026-09-23",
+            "supply_status": "中国出口许可范围已核验；公司缺货未核验",
+            "audit_id": "shortage_19_600549"
+          },
+          "technology": "APT、钨粉、钨丝、硬质合金",
+          "stage": "规模放量期",
+          "relationship": "直接产业链业务",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-21/1225485968.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "拥有在产、在建及待建矿山须区分；中国出口许可非全面禁止出口，不能自动判定所有钨品缺货受益。",
+          "jev": {
+            "audit_id": "shortage_19_600549",
+            "name": "厦门钨业",
+            "code": "600549",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.38,
+            "remove_or_reclassify": 0.23,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "c0713562b4975b3870ac279c8f6e5c00c15ce89a390eebbd8b41159b43b0cf31",
+            "response_sha256": "3390f8269ed6638516660c1863e4e9c7addf8b84c14d8ba2ab6446e5debe9215"
+          }
         }
       ],
-      "emerging_companies": []
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "钨"
+      ]
     },
     {
-      "rank": 21,
-      "theme": "磷化铟／锗",
-      "names": [
-        "云南锗业"
-      ],
-      "summary": "8月中国出口许可及反制映射，不是国外对华禁供",
-      "path": "情报社/光通信/云南锗业.md",
-      "line": 15,
-      "source_date": "2026-08-11",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/%E5%85%89%E9%80%9A%E4%BF%A1/%E4%BA%91%E5%8D%97%E9%94%97%E4%B8%9A.md#L15",
-      "status": "供给约束线索",
-      "company_count": 1,
-      "constraint_type": "中国出口许可",
-      "review": {
-        "theme": "磷化铟／锗",
-        "nature": "中国出口许可",
-        "status": "磷化铟列管已核验",
-        "verified_at": "2026-09-23",
-        "claim": "2025年第10号明确列管磷化铟等物项；属于中国向外出口管理。不能解释为海外对中国断供。这里核验的是磷化铟条款，锗须另查对应清单及目的地规则。",
-        "sources": [
-          "https://exportcontrol.mofcom.gov.cn/article/hgfw/lywxcx/gzqd/202502/1102.html"
-        ]
-      },
       "industry": "资源材料",
+      "theme": "锗材料／磷化铟衬底",
       "representatives": [
         {
           "name": "云南锗业",
@@ -911,38 +2596,62 @@
           "code": "002428",
           "market_cap": 616.48,
           "quote_time": "20260923161448",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_20_002428",
+          "audit": {
+            "row_index": 20,
+            "rank": 21,
+            "code": "002428",
+            "name": "云南锗业",
+            "decision": "retain",
+            "subcategory": "锗材料／磷化铟衬底",
+            "original_subcategory": "磷化铟／锗",
+            "technology": "锗系列产品及磷化铟晶片",
+            "stage": "规模放量期",
+            "relationship": "直接及控股子公司产品",
+            "evidence_status": "产品／关系已核验；磷化铟出口许可已核验；公司缺货未核验",
+            "reason": "公司磷化铟晶片实际生产已披露，2026H1产9.18万片；非光芯片或光模块。锗与磷化铟管制条款分别核验，中国出口许可不等于海外禁供。",
+            "sources": [
+              "https://static.cninfo.com.cn/finalpage/2026-08-28/1225520955.PDF"
+            ],
+            "source_excerpt": "砷化镓晶片6.56万片（1-6寸合计），磷化铟晶片9.18万片（2-4寸合计）。2、公司所处行业的发展情况（1）锗行业方面报告期内，国内锗市场在原料供应偏紧、战略价值重估及资金入场等多重因素推动下，材料级锗产品价格重心显著上移。原料",
+            "verified_at": "2026-09-23",
+            "supply_status": "磷化铟出口许可已核验；公司缺货未核验",
+            "audit_id": "shortage_20_002428"
+          },
+          "technology": "锗系列产品及磷化铟晶片",
+          "stage": "规模放量期",
+          "relationship": "直接及控股子公司产品",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-28/1225520955.PDF"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "公司磷化铟晶片实际生产已披露，2026H1产9.18万片；非光芯片或光模块。锗与磷化铟管制条款分别核验，中国出口许可不等于海外禁供。",
+          "jev": {
+            "audit_id": "shortage_20_002428",
+            "name": "云南锗业",
+            "code": "002428",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.46,
+            "remove_or_reclassify": 0.32,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "c0713562b4975b3870ac279c8f6e5c00c15ce89a390eebbd8b41159b43b0cf31",
+            "response_sha256": "3390f8269ed6638516660c1863e4e9c7addf8b84c14d8ba2ab6446e5debe9215"
+          }
         }
       ],
-      "emerging_companies": []
+      "emerging_companies": [],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "磷化铟／锗"
+      ]
     },
     {
-      "rank": 22,
-      "theme": "天然橡胶",
-      "names": [
-        "中化国际",
-        "阳谷华泰",
-        "齐翔腾达"
-      ],
-      "summary": "原文天气减产映射；并非均为天然胶生产商，成本受损风险待核",
-      "path": "情报社/2026-09-15.md",
-      "line": 544,
-      "source_date": "2026-09-15",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L544",
-      "status": "双向风险",
-      "company_count": 3,
-      "constraint_type": "历史供需线索待核",
       "industry": "化工材料",
-      "representatives": [
-        {
-          "name": "中化国际",
-          "original_name": "中化国际",
-          "code": "600500",
-          "market_cap": 208.12,
-          "quote_time": "20260923161454",
-          "note": "研究线索；兑现情况待核"
-        }
-      ],
+      "theme": "橡胶助剂",
+      "representatives": [],
       "emerging_companies": [
         {
           "name": "阳谷华泰",
@@ -950,46 +2659,185 @@
           "code": "300121",
           "market_cap": 44.12,
           "quote_time": "20260923161415",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_21_300121",
+          "audit": {
+            "row_index": 21,
+            "rank": 22,
+            "code": "300121",
+            "name": "阳谷华泰",
+            "decision": "reclassify",
+            "subcategory": "橡胶助剂",
+            "original_subcategory": "天然橡胶",
+            "technology": "防焦剂CTP、不溶性硫磺、促进剂等",
+            "stage": "规模放量期",
+            "relationship": "橡胶加工配套助剂供应商",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "不是天然橡胶生产商。天然胶减产不直接等于助剂缺货或涨价；需求随轮胎等下游变化。",
+            "sources": [
+              "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12568671&stockid=300121"
+            ],
+            "source_excerpt": "业务（一）主要业务公司属于橡胶助剂行业，主要从事橡胶助剂的生产、研发、销售。产品主要包括防焦剂CTP、不溶性硫磺、胶母粒、促进剂NS、促进剂CBS、促进剂DPG、防护蜡、硅烷偶联剂等品种。橡胶助剂是在天然橡胶和合成橡胶（合称“生胶”",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_21_300121"
+          },
+          "technology": "防焦剂CTP、不溶性硫磺、促进剂等",
+          "stage": "规模放量期",
+          "relationship": "橡胶加工配套助剂供应商",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12568671&stockid=300121"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "不是天然橡胶生产商。天然胶减产不直接等于助剂缺货或涨价；需求随轮胎等下游变化。",
+          "jev": {
+            "audit_id": "shortage_21_300121",
+            "name": "阳谷华泰",
+            "code": "300121",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.26,
+            "remove_or_reclassify": 0.93,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "c0713562b4975b3870ac279c8f6e5c00c15ce89a390eebbd8b41159b43b0cf31",
+            "response_sha256": "3390f8269ed6638516660c1863e4e9c7addf8b84c14d8ba2ab6446e5debe9215"
+          }
+        }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "天然橡胶"
+      ]
+    },
+    {
+      "industry": "化工材料",
+      "theme": "合成橡胶／碳四化工",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "齐翔腾达",
           "original_name": "齐翔腾达",
           "code": "002408",
           "market_cap": 152.7,
           "quote_time": "20260923161412",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_21_002408",
+          "audit": {
+            "row_index": 21,
+            "rank": 22,
+            "code": "002408",
+            "name": "齐翔腾达",
+            "decision": "reclassify",
+            "subcategory": "合成橡胶／碳四化工",
+            "original_subcategory": "天然橡胶",
+            "technology": "顺丁橡胶、丁二烯、丁腈胶乳等",
+            "stage": "规模放量期",
+            "relationship": "合成材料生产商",
+            "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+            "reason": "顺丁橡胶为合成橡胶，不是天然橡胶；替代需求和原料丁二烯成本应双向观察，未核验同批缺货。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12526291&stockid=002408"
+            ],
+            "source_excerpt": "丁烯、正丁烷和异丁烷为核心的综合产品链，主要产品涵盖甲乙酮、丁二烯、顺丁橡胶、丁腈胶乳、顺酐、MTBE、叔丁醇和MMA等，实现了碳四各组分的高效利用。在碳三产业上，公司正依据丙烷-丙烯-环氧丙烷的战略路径有序发展。产品种类的多元",
+            "verified_at": "2026-09-23",
+            "supply_status": "缺货／禁供未核验",
+            "audit_id": "shortage_21_002408"
+          },
+          "technology": "顺丁橡胶、丁二烯、丁腈胶乳等",
+          "stage": "规模放量期",
+          "relationship": "合成材料生产商",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12526291&stockid=002408"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "顺丁橡胶为合成橡胶，不是天然橡胶；替代需求和原料丁二烯成本应双向观察，未核验同批缺货。",
+          "jev": {
+            "audit_id": "shortage_21_002408",
+            "name": "齐翔腾达",
+            "code": "002408",
+            "status": "reviewed",
+            "label": "JEV支持修正",
+            "support": 0.25,
+            "remove_or_reclassify": 0.92,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "c0713562b4975b3870ac279c8f6e5c00c15ce89a390eebbd8b41159b43b0cf31",
+            "response_sha256": "3390f8269ed6638516660c1863e4e9c7addf8b84c14d8ba2ab6446e5debe9215"
+          }
         }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "天然橡胶"
       ]
     },
     {
-      "rank": 23,
-      "theme": "代糖",
-      "names": [
-        "金禾实业",
-        "百龙创园",
-        "保龄宝",
-        "华康生物"
-      ],
-      "summary": "原文糖减产后的替代需求映射，不是这些产品已缺货",
-      "path": "情报社/2026-09-15.md",
-      "line": 552,
-      "source_date": "2026-09-15",
-      "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L552",
-      "status": "延伸映射",
-      "company_count": 4,
-      "constraint_type": "延伸映射",
       "industry": "食品配料",
-      "representatives": [
+      "theme": "高倍甜味剂",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "金禾实业",
           "original_name": "金禾实业",
           "code": "002597",
           "market_cap": 124.97,
           "quote_time": "20260923161442",
-          "note": "研究线索；兑现情况待核"
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_22_002597",
+          "audit": {
+            "row_index": 22,
+            "rank": 23,
+            "code": "002597",
+            "name": "金禾实业",
+            "decision": "retain",
+            "subcategory": "高倍甜味剂",
+            "original_subcategory": "代糖",
+            "technology": "三氯蔗糖、安赛蜜等",
+            "stage": "规模放量期",
+            "relationship": "直接产品",
+            "evidence_status": "产品／关系已核验；替代需求映射；自身缺货未核验",
+            "reason": "确为甜味剂生产商；糖减产引发代糖替代需求仅研究推演，不能写三氯蔗糖／安赛蜜缺货已证实。",
+            "sources": [
+              "https://stock.stockstar.com/notice/SN2026082800042931.shtml"
+            ],
+            "source_excerpt": "在三氯蔗糖、安赛蜜、乙基麦芽酚等细分领域具备规模化生产与稳定供应能力",
+            "verified_at": "2026-09-23",
+            "supply_status": "替代需求映射；自身缺货未核验",
+            "audit_id": "shortage_22_002597"
+          },
+          "technology": "三氯蔗糖、安赛蜜等",
+          "stage": "规模放量期",
+          "relationship": "直接产品",
+          "sources": [
+            "https://stock.stockstar.com/notice/SN2026082800042931.shtml"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "确为甜味剂生产商；糖减产引发代糖替代需求仅研究推演，不能写三氯蔗糖／安赛蜜缺货已证实。",
+          "jev": {
+            "audit_id": "shortage_22_002597",
+            "name": "金禾实业",
+            "code": "002597",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.41,
+            "remove_or_reclassify": 0.28,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "c0713562b4975b3870ac279c8f6e5c00c15ce89a390eebbd8b41159b43b0cf31",
+            "response_sha256": "3390f8269ed6638516660c1863e4e9c7addf8b84c14d8ba2ab6446e5debe9215"
+          }
         }
       ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "代糖"
+      ]
+    },
+    {
+      "industry": "食品配料",
+      "theme": "阿洛酮糖／功能配料",
+      "representatives": [],
       "emerging_companies": [
         {
           "name": "百龙创园",
@@ -997,368 +2845,182 @@
           "code": "605016",
           "market_cap": 90.51,
           "quote_time": "20260923161450",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_22_605016",
+          "audit": {
+            "row_index": 22,
+            "rank": 23,
+            "code": "605016",
+            "name": "百龙创园",
+            "decision": "reclassify",
+            "subcategory": "阿洛酮糖／功能配料",
+            "original_subcategory": "代糖",
+            "technology": "阿洛酮糖甜味剂；益生元和膳食纤维另分",
+            "stage": "规模放量期",
+            "relationship": "直接产品",
+            "evidence_status": "产品／关系已核验；替代需求映射；自身缺货未核验",
+            "reason": "阿洛酮糖是甜味剂产品，益生元与膳食纤维不能全部叫代糖；糖短缺不等于公司产品短缺。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12573993&stockid=605016"
+            ],
+            "source_excerpt": "用时难以控制甜味剂的加入量。/公司生产的健康甜味剂系列产品主要为阿洛酮糖，为一种天然的甜味剂。阿洛酮糖是在自然界中天然存在但含量极少的一种稀有单糖，其甜味及口感与蔗糖相当类似或接近，但其热量却远低于蔗糖，对于肥胖以及糖尿病患者是一种理想的蔗糖",
+            "verified_at": "2026-09-23",
+            "supply_status": "替代需求映射；自身缺货未核验",
+            "audit_id": "shortage_22_605016"
+          },
+          "technology": "阿洛酮糖甜味剂；益生元和膳食纤维另分",
+          "stage": "规模放量期",
+          "relationship": "直接产品",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12573993&stockid=605016"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "阿洛酮糖是甜味剂产品，益生元与膳食纤维不能全部叫代糖；糖短缺不等于公司产品短缺。",
+          "jev": {
+            "audit_id": "shortage_22_605016",
+            "name": "百龙创园",
+            "code": "605016",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.29,
+            "remove_or_reclassify": 0.78,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "c0713562b4975b3870ac279c8f6e5c00c15ce89a390eebbd8b41159b43b0cf31",
+            "response_sha256": "3390f8269ed6638516660c1863e4e9c7addf8b84c14d8ba2ab6446e5debe9215"
+          }
+        }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "代糖"
+      ]
+    },
+    {
+      "industry": "食品配料",
+      "theme": "减糖甜味剂",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "保龄宝",
           "original_name": "保龄宝",
           "code": "002286",
           "market_cap": 33.25,
           "quote_time": "20260923161445",
-          "note": "研究线索；兑现情况待核"
-        },
+          "note": "研究线索；兑现情况待核",
+          "audit_id": "shortage_22_002286",
+          "audit": {
+            "row_index": 22,
+            "rank": 23,
+            "code": "002286",
+            "name": "保龄宝",
+            "decision": "retain",
+            "subcategory": "减糖甜味剂",
+            "original_subcategory": "代糖",
+            "technology": "赤藓糖醇、阿洛酮糖等",
+            "stage": "规模放量期",
+            "relationship": "直接产品",
+            "evidence_status": "产品／关系已核验；替代需求映射；自身缺货未核验",
+            "reason": "目录及主营分产品明确；不把果葡糖浆、全部淀粉糖都称无糖代糖，未证自身短缺。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12545092&stockid=002286"
+            ],
+            "source_excerpt": "型液、90型粉、90型液、高纤型、无糖型减糖甜味剂赤藓糖醇赤藓糖醇、有机赤藓糖醇、复配赤藓糖醇、药用赤藓糖醇阿洛酮糖阿洛酮糖液体、阿洛酮糖固体、复配阿洛酮糖结晶果糖结晶果糖淀粉糖及其他液体淀粉糖系列果葡糖浆、麦芽糖浆、葡萄糖浆、",
+            "verified_at": "2026-09-23",
+            "supply_status": "替代需求映射；自身缺货未核验",
+            "audit_id": "shortage_22_002286"
+          },
+          "technology": "赤藓糖醇、阿洛酮糖等",
+          "stage": "规模放量期",
+          "relationship": "直接产品",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12545092&stockid=002286"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "目录及主营分产品明确；不把果葡糖浆、全部淀粉糖都称无糖代糖，未证自身短缺。",
+          "jev": {
+            "audit_id": "shortage_22_002286",
+            "name": "保龄宝",
+            "code": "002286",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.35,
+            "remove_or_reclassify": 0.19,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "13ae19e6d64308569b4ac7c997d0faa65a15e86ae2050e581affe7edc75b2a87",
+            "response_sha256": "fb0fdde326a0d7ca4fc242fdae720e64f6a9613999a2d23973e020dc85d8ca32"
+          }
+        }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "代糖"
+      ]
+    },
+    {
+      "industry": "食品配料",
+      "theme": "功能性糖醇",
+      "representatives": [],
+      "emerging_companies": [
         {
           "name": "华康股份",
           "original_name": "华康生物",
           "code": "605077",
           "market_cap": 35.96,
           "quote_time": "20260923161459",
-          "note": "华康生物为上市公司子公司"
+          "note": "华康生物为上市公司子公司",
+          "audit_id": "shortage_22_605077",
+          "audit": {
+            "row_index": 22,
+            "rank": 23,
+            "code": "605077",
+            "name": "华康股份",
+            "decision": "retain",
+            "subcategory": "功能性糖醇",
+            "original_subcategory": "代糖",
+            "technology": "木糖醇、山梨糖醇、麦芽糖醇、赤藓糖醇",
+            "stage": "规模放量期",
+            "relationship": "上市公司及控股子公司产品",
+            "evidence_status": "产品／关系已核验；替代需求映射；自身缺货未核验",
+            "reason": "上市简称华康股份605077，舟山华康生物为全资子公司；市值只能归上市公司，不能把果葡糖浆算零糖代糖或新产能投放等同缺货。",
+            "sources": [
+              "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12508832&stockid=605077"
+            ],
+            "source_excerpt": "务情况说明（一）行业情况1、所属行业公司主营业务为“木糖醇、山梨糖醇、麦芽糖醇、赤藓糖醇、果葡糖浆等多种功能性糖醇、淀粉糖产品的研发、生产、销售”，主要产品为木糖醇、山梨糖醇、麦芽糖醇、赤藓糖醇、果葡糖浆等多种功能性糖醇",
+            "verified_at": "2026-09-23",
+            "supply_status": "替代需求映射；自身缺货未核验",
+            "audit_id": "shortage_22_605077"
+          },
+          "technology": "木糖醇、山梨糖醇、麦芽糖醇、赤藓糖醇",
+          "stage": "规模放量期",
+          "relationship": "上市公司及控股子公司产品",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12508832&stockid=605077"
+          ],
+          "verified_at": "2026-09-23",
+          "boundary": "上市简称华康股份605077，舟山华康生物为全资子公司；市值只能归上市公司，不能把果葡糖浆算零糖代糖或新产能投放等同缺货。",
+          "jev": {
+            "audit_id": "shortage_22_605077",
+            "name": "华康股份",
+            "code": "605077",
+            "status": "reviewed",
+            "label": "JEV待复核",
+            "support": 0.3,
+            "remove_or_reclassify": 0.33,
+            "model": "jev-1.13.0",
+            "review_date": "2026-09-23",
+            "request_sha256": "13ae19e6d64308569b4ac7c997d0faa65a15e86ae2050e581affe7edc75b2a87",
+            "response_sha256": "fb0fdde326a0d7ca4fc242fdae720e64f6a9613999a2d23973e020dc85d8ca32"
+          }
         }
+      ],
+      "note": "公司产品归属与供给限制分别核验；未确认的缺货、断供不得视为事实。",
+      "source_themes": [
+        "代糖"
       ]
     }
   ],
-  "companies": [
-    {
-      "name": "三祥新材",
-      "themes": [
-        "含氟材料扩展映射"
-      ]
-    },
-    {
-      "name": "东方钽业",
-      "themes": [
-        "钽资源／材料"
-      ]
-    },
-    {
-      "name": "东田微",
-      "themes": [
-        "隔离器／滤光片"
-      ]
-    },
-    {
-      "name": "中化国际",
-      "themes": [
-        "天然橡胶"
-      ]
-    },
-    {
-      "name": "中巨芯",
-      "themes": [
-        "含氟材料扩展映射"
-      ]
-    },
-    {
-      "name": "中矿资源",
-      "themes": [
-        "钽资源／材料"
-      ]
-    },
-    {
-      "name": "中船特气",
-      "themes": [
-        "含氟特气WF6/C4F6"
-      ]
-    },
-    {
-      "name": "中钨高新",
-      "themes": [
-        "钨"
-      ]
-    },
-    {
-      "name": "云南锗业",
-      "themes": [
-        "磷化铟／锗"
-      ]
-    },
-    {
-      "name": "优迅股份",
-      "themes": [
-        "DSP/TIA/Driver"
-      ]
-    },
-    {
-      "name": "保龄宝",
-      "themes": [
-        "代糖"
-      ]
-    },
-    {
-      "name": "兴森科技",
-      "themes": [
-        "ABF载板"
-      ]
-    },
-    {
-      "name": "华康生物",
-      "themes": [
-        "代糖"
-      ]
-    },
-    {
-      "name": "华正新材",
-      "themes": [
-        "ABF胶膜"
-      ]
-    },
-    {
-      "name": "华润微",
-      "themes": [
-        "功率半导体"
-      ]
-    },
-    {
-      "name": "厦门钨业",
-      "themes": [
-        "钨"
-      ]
-    },
-    {
-      "name": "士兰微",
-      "themes": [
-        "功率半导体"
-      ]
-    },
-    {
-      "name": "多氟多",
-      "themes": [
-        "含氟材料扩展映射"
-      ]
-    },
-    {
-      "name": "天赐材料",
-      "themes": [
-        "含氟材料扩展映射"
-      ]
-    },
-    {
-      "name": "安集科技",
-      "themes": [
-        "含氟材料扩展映射"
-      ]
-    },
-    {
-      "name": "宏和科技",
-      "themes": [
-        "特种电子布"
-      ]
-    },
-    {
-      "name": "富创精密",
-      "themes": [
-        "半导体零部件"
-      ]
-    },
-    {
-      "name": "富满微",
-      "themes": [
-        "成熟制程芯片"
-      ]
-    },
-    {
-      "name": "巨化股份",
-      "themes": [
-        "高端PFA/FFKM"
-      ]
-    },
-    {
-      "name": "应流股份",
-      "themes": [
-        "燃机叶片"
-      ]
-    },
-    {
-      "name": "恒运昌",
-      "themes": [
-        "MFC／分子泵交付",
-        "半导体零部件"
-      ]
-    },
-    {
-      "name": "扬杰科技",
-      "themes": [
-        "功率半导体"
-      ]
-    },
-    {
-      "name": "斯达半导",
-      "themes": [
-        "功率半导体"
-      ]
-    },
-    {
-      "name": "新宙邦",
-      "themes": [
-        "氟化液PFPE/HFE",
-        "高端PFA/FFKM"
-      ]
-    },
-    {
-      "name": "新洁能",
-      "themes": [
-        "功率半导体"
-      ]
-    },
-    {
-      "name": "新莱应材",
-      "themes": [
-        "半导体零部件"
-      ]
-    },
-    {
-      "name": "新金路",
-      "themes": [
-        "钽资源／材料"
-      ]
-    },
-    {
-      "name": "方正科技",
-      "themes": [
-        "高阶AI PCB"
-      ]
-    },
-    {
-      "name": "昊华科技",
-      "themes": [
-        "含氟特气WF6/C4F6"
-      ]
-    },
-    {
-      "name": "明微电子",
-      "themes": [
-        "成熟制程芯片"
-      ]
-    },
-    {
-      "name": "星源材质",
-      "themes": [
-        "压电陶瓷"
-      ]
-    },
-    {
-      "name": "杰华特",
-      "themes": [
-        "功率半导体"
-      ]
-    },
-    {
-      "name": "正帆科技",
-      "themes": [
-        "半导体零部件"
-      ]
-    },
-    {
-      "name": "江丰电子",
-      "themes": [
-        "半导体零部件"
-      ]
-    },
-    {
-      "name": "深南电路",
-      "themes": [
-        "ABF载板"
-      ]
-    },
-    {
-      "name": "珂玛科技",
-      "themes": [
-        "半导体零部件"
-      ]
-    },
-    {
-      "name": "生益科技",
-      "themes": [
-        "ABF胶膜"
-      ]
-    },
-    {
-      "name": "百龙创园",
-      "themes": [
-        "代糖"
-      ]
-    },
-    {
-      "name": "罗博特科",
-      "themes": [
-        "CPO测试设备"
-      ]
-    },
-    {
-      "name": "胜宏科技",
-      "themes": [
-        "高阶AI PCB"
-      ]
-    },
-    {
-      "name": "臻宝科技",
-      "themes": [
-        "半导体零部件"
-      ]
-    },
-    {
-      "name": "英杰电气",
-      "themes": [
-        "MFC／分子泵交付"
-      ]
-    },
-    {
-      "name": "莲花控股",
-      "themes": [
-        "ABF胶膜"
-      ]
-    },
-    {
-      "name": "超纯应材",
-      "themes": [
-        "半导体零部件"
-      ]
-    },
-    {
-      "name": "金字火腿",
-      "themes": [
-        "DSP/TIA/Driver"
-      ]
-    },
-    {
-      "name": "金禾实业",
-      "themes": [
-        "代糖"
-      ]
-    },
-    {
-      "name": "阳谷华泰",
-      "themes": [
-        "天然橡胶"
-      ]
-    },
-    {
-      "name": "雅克科技",
-      "themes": [
-        "含氟材料扩展映射"
-      ]
-    },
-    {
-      "name": "高凯技术",
-      "themes": [
-        "MFC"
-      ]
-    },
-    {
-      "name": "齐翔腾达",
-      "themes": [
-        "天然橡胶"
-      ]
-    }
-  ],
-  "status_counts": {
-    "供给约束线索": 11,
-    "双向风险": 3,
-    "紧张/缺货线索": 6,
-    "延伸映射": 2,
-    "旧线索待刷新": 1
-  },
   "evidence": {
     "source_sha256": "77213f230dcf15c48d7c1710f1f2498864af2cccdfa752853ebc407a37d2f517"
   },
@@ -1443,80 +3105,377 @@
       ]
     }
   ],
-  "abf_companies": [
-    {
-      "layer": "积层绝缘膜",
-      "product": "CBF",
-      "name": "华正新材",
-      "code": "603186",
-      "stage": "客户认证期",
-      "boundary": "CPU/GPU用CBF在客户验证；VCM用CBF-RCC已有小批交付。产线具备交付能力不等于AI芯片产品已批供。",
-      "sources": [
-        "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534785.PDF"
-      ],
-      "market_cap": 357.01,
-      "market_cap_unit": "亿元人民币",
-      "quote_time": "20260923161434"
-    },
-    {
-      "layer": "积层绝缘膜",
-      "product": "NBF股权布局",
-      "name": "莲花控股",
-      "code": "600186",
-      "stage": "具体型号阶段未核验",
-      "boundary": "通过莲花科创持有纽菲斯46%股权，布局NBF类ABF膜；不是上市公司全部主营已转成ABF，不能将股权投资额视作产品收入。",
-      "sources": [
-        "https://static.cninfo.com.cn/finalpage/2026-07-14/1225422618.PDF"
-      ],
-      "market_cap": 243.64,
-      "market_cap_unit": "亿元人民币",
-      "quote_time": "20260923161455"
-    },
-    {
-      "layer": "封装基材",
-      "product": "CCL／封装基板材料",
-      "name": "生益科技",
-      "code": "600183",
-      "stage": "具体类ABF膜阶段未核验",
-      "boundary": "公司回复确认多种封装基材开发应用，但未单独给出类ABF膜型号、产能和收入。成熟CCL及基材批量证据不能直接证明胶膜量产。",
-      "sources": [
-        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12548066&stockid=600183"
-      ],
-      "market_cap": 3487.08,
-      "market_cap_unit": "亿元人民币",
-      "quote_time": "20260923154351"
-    },
-    {
-      "layer": "载板制造",
-      "product": "FC-BGA载板",
-      "name": "深南电路",
-      "code": "002916",
-      "stage": "规模放量期",
-      "boundary": "半年报确认高端FC-BGA在多个客户处规模量产；这是载板制造，仍需采购积层膜等上游材料。",
-      "sources": [
-        "https://static.cninfo.com.cn/finalpage/2026-08-27/1225512708.PDF"
-      ],
-      "market_cap": 2825.27,
-      "market_cap_unit": "亿元人民币",
-      "quote_time": "20260923155042"
-    },
-    {
-      "layer": "载板制造",
-      "product": "FC-BGA载板",
-      "name": "兴森科技",
-      "code": "002436",
-      "stage": "客户导入／具体型号另核",
-      "boundary": "半年报披露FCBGA量产准备、良率改善及客户导入；不把全部项目的产能规划认定为已满产。",
-      "sources": [
-        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12512943&stockid=002436"
-      ],
-      "market_cap": 780.15,
-      "market_cap_unit": "亿元人民币",
-      "quote_time": "20260923161454"
-    }
-  ],
   "market_cap_date": "2026-09-23",
   "market_cap_source": "腾讯行情，总市值，亿元人民币；2026-09-23收盘后快照",
   "table_updated_at": "2026-09-23",
-  "table_boundary": "代表企业是产业研究参照，不表示每家均为该产品龙头；新兴企业栏收录其余总市值不超过500亿元的候选，并非成立时间定义。单一公司子类不强凑第二家公司。"
+  "table_boundary": "代表企业是产业研究参照，不表示每家均为该产品龙头；新兴企业栏收录其余总市值不超过500亿元的候选，并非成立时间定义。单一公司子类不强凑第二家公司。",
+  "removed_mappings": [
+    {
+      "name": "莲花控股",
+      "original_name": "莲花控股",
+      "code": "600186",
+      "market_cap": 243.64,
+      "quote_time": "20260923161455",
+      "note": "参股纽菲斯；非并表胶膜收入",
+      "audit_id": "shortage_0_600186",
+      "audit": {
+        "row_index": 0,
+        "code": "600186",
+        "name": "莲花控股",
+        "decision": "retain",
+        "subcategory": "积层绝缘膜（中低端类ABF）",
+        "technology": "纽菲斯NBF膜",
+        "stage": "试点部署期",
+        "relationship": "46%参股纽菲斯；非并表；公允价值计量金融资产",
+        "evidence_status": "公告原文已核验",
+        "reason": "中低端类ABF已有批供但规模小；不能称AI级ABF量产。46%持股不等于控制；问询题干31.66%表决权和联营假设不作为公司已确认事实。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-07-14/1225422618.PDF"
+        ],
+        "source_excerpt": "纽菲斯实现业务收入 467.52 万元（未经审计），同比增长 67.02%，呈现较快的业务增长趋势。现阶段，纽菲斯中低端“类 ABF 膜”产品已 实现批量供货，但相关业务营收及经营规模整体偏小，未来业务规模能否实现大 幅扩张存在不确定性。纽菲斯并非纳入合并报表的子公司，即便其后续实现盈利， 亦不会对公司整体营业收入增长产生重大影响。 根据《股东协议》《公司章程》及会计准则的相关规定，公司对纽菲斯的投 资按照以公允价值计量且其变动计入当期损益的金融资产进行核算。2025 年度， 纽菲斯净亏损 3,430.07 万元，结合莲花控股 2025 年业绩情况，本次投资预",
+        "verified_at": "2026-09-23",
+        "supply_status": "公司具体产品缺货或断供未核验",
+        "original_subcategory": "ABF胶膜",
+        "audit_id": "shortage_0_600186"
+      },
+      "technology": "纽菲斯NBF膜",
+      "stage": "试点部署期",
+      "relationship": "46%参股纽菲斯；非并表；公允价值计量金融资产",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-07-14/1225422618.PDF"
+      ],
+      "verified_at": "2026-09-23",
+      "boundary": "中低端类ABF已有批供但规模小；不能称AI级ABF量产。46%持股不等于控制；问询题干31.66%表决权和联营假设不作为公司已确认事实。",
+      "jev": {
+        "audit_id": "shortage_0_600186",
+        "name": "莲花控股",
+        "code": "600186",
+        "status": "reviewed",
+        "label": "JEV待复核",
+        "support": 0.59,
+        "remove_or_reclassify": 0.86,
+        "model": "jev-1.13.0",
+        "review_date": "2026-09-23",
+        "request_sha256": "9c3c961038429a01e96e37c1dd37a5b013d3f54047cfd9f876b7f18fa86f783c",
+        "response_sha256": "0d1bf508a8b8b17349fdca67a43265771c76a049a9e86abded5db436c2e6e3cb"
+      }
+    },
+    {
+      "name": "星源材质",
+      "original_name": "星源材质",
+      "code": "300568",
+      "market_cap": 254.22,
+      "quote_time": "20260923161403",
+      "note": "股权／产品映射待核",
+      "audit_id": "shortage_5_300568",
+      "audit": {
+        "row_index": 5,
+        "code": "300568",
+        "name": "星源材质",
+        "decision": "reclassify",
+        "subcategory": "压电陶瓷（股权布局）",
+        "technology": "邦瓷多层堆叠/单层压电陶瓷",
+        "stage": "未核验",
+        "relationship": "13.5%参股；拟增至73.4806%并控股，最新交割未核验",
+        "evidence_status": "公告原文已核验",
+        "reason": "原主营隔膜。已持有13.5%，8月拟追加收购；半年报明确交割未完成，不能写已控制。压电产品存在，但指定MFC客户认证及规模单独未核验。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-13/1225472030.PDF",
+          "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-28/d18d6b21-e85d-4b14-be3d-fc679ce310c7.PDF"
+        ],
+        "source_excerpt": "公司以人民币9,106.9750万元的价格现金受让了上述五家公司合计持有邦瓷电子13.5000%的股权。半年度报告：截至本报告批准报出日，本次交易尚需公司股东大会审议通过，相关股权交割及工商变更登记手续尚未完成，企业合并购买日尚未确定。",
+        "verified_at": "2026-09-23",
+        "supply_status": "公司具体产品缺货或断供未核验",
+        "original_subcategory": "压电陶瓷",
+        "audit_id": "shortage_5_300568"
+      },
+      "technology": "邦瓷多层堆叠/单层压电陶瓷",
+      "stage": "未核验",
+      "relationship": "13.5%参股；拟增至73.4806%并控股，最新交割未核验",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-08-13/1225472030.PDF",
+        "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-28/d18d6b21-e85d-4b14-be3d-fc679ce310c7.PDF"
+      ],
+      "verified_at": "2026-09-23",
+      "boundary": "原主营隔膜。已持有13.5%，8月拟追加收购；半年报明确交割未完成，不能写已控制。压电产品存在，但指定MFC客户认证及规模单独未核验。",
+      "jev": {
+        "audit_id": "shortage_5_300568",
+        "name": "星源材质",
+        "code": "300568",
+        "status": "reviewed",
+        "label": "JEV支持修正",
+        "support": 0.39,
+        "remove_or_reclassify": 0.94,
+        "model": "jev-1.13.0",
+        "review_date": "2026-09-23",
+        "request_sha256": "b62344e80071cb023d5bbf7dcee5140068776a685e1028b344852a6ea5febb91",
+        "response_sha256": "a6d542d73cb62a6d7b7a187b5be27acf3301c783223761e9e14d33f0f0552e45"
+      }
+    },
+    {
+      "name": "天赐材料",
+      "original_name": "天赐材料",
+      "code": "002709",
+      "market_cap": 669.46,
+      "quote_time": "20260923161500",
+      "note": "研究线索；兑现情况待核",
+      "audit_id": "shortage_11_002709",
+      "audit": {
+        "row_index": 11,
+        "code": "002709",
+        "name": "天赐材料",
+        "decision": "remove",
+        "subcategory": "锂电电解液及含氟锂盐",
+        "technology": "电解液/六氟磷酸锂",
+        "stage": "规模放量期",
+        "relationship": "直接业务",
+        "evidence_status": "公告原文已核验",
+        "reason": "属于电解液含氟锂盐链，未取得PFPE/HFE/PFA/FFKM产品归属证据；移出半导体含氟短缺主表。",
+        "sources": [
+          "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12511982&stockid=002709"
+        ],
+        "source_excerpt": "起到传导输送能量的作用，一般由高纯度有机溶剂、电解质、添加剂等材料在一定条件下按一定比例配制而成。 六氟磷酸锂 指 锂离子电池电解质，生产锂离子电池电解液的主要原料，俗称锂盐，是目前性能相对较好、使用量最多的电解质。 碳酸锂 指 一种常见的锂化合物，根据其纯度不同分为工业级碳酸锂、电池级碳酸锂和高纯碳酸锂，其中电池级碳酸锂为磷酸铁锂的主要原材料，高纯碳酸锂为六氟磷酸锂的主要原材料。 磷酸铁锂 指 一种锂离子电池的正极材料。电解液、正极材料、负极材料、隔膜为锂电池的四大原材料，其中，电解液与正极材料的兼容性和复配稳定性对锂电池性能有主要影响。 报告期 指 2026年",
+        "verified_at": "2026-09-23",
+        "supply_status": "公司具体产品缺货或断供未核验",
+        "original_subcategory": "含氟材料扩展映射",
+        "audit_id": "shortage_11_002709"
+      },
+      "technology": "电解液/六氟磷酸锂",
+      "stage": "规模放量期",
+      "relationship": "直接业务",
+      "sources": [
+        "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12511982&stockid=002709"
+      ],
+      "verified_at": "2026-09-23",
+      "boundary": "属于电解液含氟锂盐链，未取得PFPE/HFE/PFA/FFKM产品归属证据；移出半导体含氟短缺主表。",
+      "jev": {
+        "audit_id": "shortage_11_002709",
+        "name": "天赐材料",
+        "code": "002709",
+        "status": "reviewed",
+        "label": "JEV支持修正",
+        "support": 0.2,
+        "remove_or_reclassify": 0.93,
+        "model": "jev-1.13.0",
+        "review_date": "2026-09-23",
+        "request_sha256": "be2c6ebd7650bca4fbca4dd0ddb14d8b5242565baad15258fc01db6e97bdccd2",
+        "response_sha256": "8b031465b63c34391b9b6d2a5f6c89edec9633e96889d7dc8902bcc275e61ec8"
+      }
+    },
+    {
+      "name": "安集科技",
+      "original_name": "安集科技",
+      "code": "688019",
+      "market_cap": 530.7,
+      "quote_time": "20260923161453",
+      "note": "研究线索；兑现情况待核",
+      "audit_id": "shortage_11_688019",
+      "audit": {
+        "row_index": 11,
+        "code": "688019",
+        "name": "安集科技",
+        "decision": "remove",
+        "subcategory": "CMP材料/湿电子化学品",
+        "technology": "CMP抛光液/电镀液及添加剂",
+        "stage": "规模放量期",
+        "relationship": "直接业务",
+        "evidence_status": "公告原文已核验",
+        "reason": "真实产品是CMP及湿电子化学品，无所列氟化液或氟聚合物归属证据；移出对应短缺类别。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-27/1225513853.PDF"
+        ],
+        "source_excerpt": "湿电子化学品-领先技术节点多产品线布局”、“电镀液及其添加剂-强化及提升电 镀高端产品系列战略供应”三大具有核心竞争力的技术平台。目前，公司技术已涵盖集成电路制 造中的“抛光、清洗、沉积”三大关键工艺，产品组合可广泛应用于芯片前道制造及后道先进封 装过程中的抛光、清洗、刻蚀、沉积等关键循环重复工艺及衔接各工艺步骤的清洗工序。 15 / 206 安集微电子科技（上海）股份有限公司2026 年半年度报告 公司主要产品在芯片制造及先进封装领域的关键循环重复工艺中多次应用  化学机械抛光液市场情况 化学机械抛光（CMP）是半导体先进制程中的关键技术，其主要工作原理是在一定压力下",
+        "verified_at": "2026-09-23",
+        "supply_status": "公司具体产品缺货或断供未核验",
+        "original_subcategory": "含氟材料扩展映射",
+        "audit_id": "shortage_11_688019"
+      },
+      "technology": "CMP抛光液/电镀液及添加剂",
+      "stage": "规模放量期",
+      "relationship": "直接业务",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-08-27/1225513853.PDF"
+      ],
+      "verified_at": "2026-09-23",
+      "boundary": "真实产品是CMP及湿电子化学品，无所列氟化液或氟聚合物归属证据；移出对应短缺类别。",
+      "jev": {
+        "audit_id": "shortage_11_688019",
+        "name": "安集科技",
+        "code": "688019",
+        "status": "reviewed",
+        "label": "JEV支持修正",
+        "support": 0.21,
+        "remove_or_reclassify": 0.93,
+        "model": "jev-1.13.0",
+        "review_date": "2026-09-23",
+        "request_sha256": "be2c6ebd7650bca4fbca4dd0ddb14d8b5242565baad15258fc01db6e97bdccd2",
+        "response_sha256": "8b031465b63c34391b9b6d2a5f6c89edec9633e96889d7dc8902bcc275e61ec8"
+      }
+    },
+    {
+      "name": "三祥新材",
+      "original_name": "三祥新材",
+      "code": "603663",
+      "market_cap": 278.98,
+      "quote_time": "20260923161454",
+      "note": "研究线索；兑现情况待核",
+      "audit_id": "shortage_11_603663",
+      "audit": {
+        "row_index": 11,
+        "code": "603663",
+        "name": "三祥新材",
+        "decision": "remove",
+        "subcategory": "锆系材料",
+        "technology": "氧化锆/工业锆等",
+        "stage": "规模放量期",
+        "relationship": "直接业务",
+        "evidence_status": "公告原文已核验",
+        "reason": "报告支持锆材，未确认所述含氟冷却液或高端氟聚合物；不能以无氟替代主题直接映射。",
+        "sources": [
+          "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12514600&stockid=603663"
+        ],
+        "source_excerpt": "先进陶瓷系三大核心业务板块，持续推进产业链延伸拓展，拥有品类丰富的产品矩阵，覆盖电熔氧化锆、海绵锆、氧氯化锆、纳米氧化锆、氧化锆陶瓷、轻量化新材料、铸改新材料等160余个产品品种。 自上市以来，公司经营规模稳步增长，业绩保持持续盈利。为进一步扩充锆系产品品类，优化完善产业布局，保障长期发展战略落地实施，公司已基本完成锆系全产业链布局，相继布局海绵锆、氧氯化锆、锆基非晶合金、纳米复合氧化锆等细分领域，各板块产业化进程有序推进，有力驱动公司营业收入规模持续提升。 报告期内，公司牢牢把握国家能源结构改革、制造业供给侧结构性改革持续深化以及新材料行业快速发展的时代机遇，",
+        "verified_at": "2026-09-23",
+        "supply_status": "公司具体产品缺货或断供未核验",
+        "original_subcategory": "含氟材料扩展映射",
+        "audit_id": "shortage_11_603663"
+      },
+      "technology": "氧化锆/工业锆等",
+      "stage": "规模放量期",
+      "relationship": "直接业务",
+      "sources": [
+        "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12514600&stockid=603663"
+      ],
+      "verified_at": "2026-09-23",
+      "boundary": "报告支持锆材，未确认所述含氟冷却液或高端氟聚合物；不能以无氟替代主题直接映射。",
+      "jev": {
+        "audit_id": "shortage_11_603663",
+        "name": "三祥新材",
+        "code": "603663",
+        "status": "reviewed",
+        "label": "JEV支持修正",
+        "support": 0.17,
+        "remove_or_reclassify": 0.94,
+        "model": "jev-1.13.0",
+        "review_date": "2026-09-23",
+        "request_sha256": "be2c6ebd7650bca4fbca4dd0ddb14d8b5242565baad15258fc01db6e97bdccd2",
+        "response_sha256": "8b031465b63c34391b9b6d2a5f6c89edec9633e96889d7dc8902bcc275e61ec8"
+      }
+    },
+    {
+      "name": "金字火腿",
+      "original_name": "金字火腿",
+      "code": "002515",
+      "market_cap": 93.22,
+      "quote_time": "20260923161424",
+      "note": "股权关系待核；非直接制造商",
+      "audit_id": "shortage_14_002515",
+      "audit": {
+        "row_index": 14,
+        "rank": 15,
+        "code": "002515",
+        "name": "金字火腿",
+        "decision": "reclassify",
+        "subcategory": "光通信芯片股权映射",
+        "original_subcategory": "DSP/TIA/Driver",
+        "technology": "通过金字半导体参股中晟微电子",
+        "stage": "未核验",
+        "relationship": "参股公司映射，非自身芯片制造",
+        "evidence_status": "产品／关系已核验；缺货／禁供未核验",
+        "reason": "参股对象为中晟微电子，不是优迅股份。H1已完成9.0909%股权；2026年7月新协议拟增至不超20%，本次未核验后续交割。需另核中晟具体DSP产品与交付，不得当金字直接量产。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-07-31/1225448690.PDF"
+        ],
+        "source_excerpt": "增资完成后，金字半导体公司持有中晟微公司9.0909%的股权。截至2025年11月，上述投资已完成工商变更登记。根据《投资协议（二）》，金字半导体拟以不超过20,000万元，在中晟微本轮投前估值预计不高于18.5亿元且不低于",
+        "verified_at": "2026-09-23",
+        "supply_status": "缺货／禁供未核验",
+        "audit_id": "shortage_14_002515"
+      },
+      "technology": "通过金字半导体参股中晟微电子",
+      "stage": "未核验",
+      "relationship": "参股公司映射，非自身芯片制造",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-07-31/1225448690.PDF"
+      ],
+      "verified_at": "2026-09-23",
+      "boundary": "参股对象为中晟微电子，不是优迅股份。H1已完成9.0909%股权；2026年7月新协议拟增至不超20%，本次未核验后续交割。需另核中晟具体DSP产品与交付，不得当金字直接量产。",
+      "jev": {
+        "audit_id": "shortage_14_002515",
+        "name": "金字火腿",
+        "code": "002515",
+        "status": "reviewed",
+        "label": "JEV支持修正",
+        "support": 0.17,
+        "remove_or_reclassify": 0.95,
+        "model": "jev-1.13.0",
+        "review_date": "2026-09-23",
+        "request_sha256": "7248d02db46941967189f270d63ddc979e83b9e1902eb930d76a703b392b8e46",
+        "response_sha256": "84fd3567dd886ebf226d021da03ed5609f7a98573b7a5959806ffcbcc08d6d05"
+      }
+    },
+    {
+      "name": "中化国际",
+      "original_name": "中化国际",
+      "code": "600500",
+      "market_cap": 208.12,
+      "quote_time": "20260923161454",
+      "note": "研究线索；兑现情况待核",
+      "audit_id": "shortage_21_600500",
+      "audit": {
+        "row_index": 21,
+        "rank": 22,
+        "code": "600500",
+        "name": "中化国际",
+        "decision": "reclassify",
+        "subcategory": "天然橡胶股权映射",
+        "original_subcategory": "天然橡胶",
+        "technology": "合盛公司天然橡胶种植、加工和销售",
+        "stage": "未核验",
+        "relationship": "参股29.20%，权益法核算",
+        "evidence_status": "产品／关系已核验；股权已核验；减产传闻及受益待核",
+        "reason": "天然胶经营主体是参股公司合盛；非上市公司直接控制的新增天然胶产量。天气减产如何影响投资收益须另核。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-08/1225463941.PDF"
+        ],
+        "source_excerpt": "交割手续，公司对合盛公司的剩余持股比例为29.20%。注4：于2023年2月24日，本公司控股股东中国中化股份有限公司出资人民币7,920.44万元对中化共享财务服务(上海)有限公司(曾用名“中化宝砺商务服务有限公司”)增",
+        "verified_at": "2026-09-23",
+        "supply_status": "股权已核验；减产传闻及受益待核",
+        "audit_id": "shortage_21_600500"
+      },
+      "technology": "合盛公司天然橡胶种植、加工和销售",
+      "stage": "未核验",
+      "relationship": "参股29.20%，权益法核算",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-08-08/1225463941.PDF"
+      ],
+      "verified_at": "2026-09-23",
+      "boundary": "天然胶经营主体是参股公司合盛；非上市公司直接控制的新增天然胶产量。天气减产如何影响投资收益须另核。",
+      "jev": {
+        "audit_id": "shortage_21_600500",
+        "name": "中化国际",
+        "code": "600500",
+        "status": "reviewed",
+        "label": "JEV支持修正",
+        "support": 0.28,
+        "remove_or_reclassify": 0.93,
+        "model": "jev-1.13.0",
+        "review_date": "2026-09-23",
+        "request_sha256": "c0713562b4975b3870ac279c8f6e5c00c15ce89a390eebbd8b41159b43b0cf31",
+        "response_sha256": "3390f8269ed6638516660c1863e4e9c7addf8b84c14d8ba2ab6446e5debe9215"
+      }
+    }
+  ],
+  "audit_date": "2026-09-23",
+  "original_theme_count": 23,
+  "audit_summary": {
+    "scope": "全表产品与主体关系审计；参股、并购待交割及不匹配映射移至下方",
+    "original_mapping_count": 57,
+    "mapping_count": 50,
+    "removed_mapping_count": 7,
+    "jev_note": "JEV仅审阅本次提供的公开摘录，不抓取来源网址；分数是模型对证据支持度的辅助判断，不是事实认证、胜率或投资评级。待复核不等于公司没有相关产品。",
+    "jev_counts": {
+      "JEV支持修正": 15,
+      "JEV待复核": 35
+    }
+  }
 }
