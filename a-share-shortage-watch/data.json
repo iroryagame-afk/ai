@@ -19,7 +19,19 @@
       "source_date": "2026-09-08",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-08.md#L74",
       "status": "供给约束线索",
-      "company_count": 3
+      "company_count": 3,
+      "constraint_type": "供给集中／减供传闻",
+      "review": {
+        "theme": "ABF胶膜",
+        "nature": "供给集中／减供传闻",
+        "status": "禁供未核验",
+        "verified_at": "2026-09-23",
+        "claim": "ABF是味之素的积层绝缘膜；不等于ABF载板。味之素已公告第三生产基地拟于2028年开工、2032年投产；该计划不能证明2032年前没有扩产，也不能证明当前对华断供。",
+        "sources": [
+          "https://www.ajinomoto.com/innovation/our_innovation/buildupfilm",
+          "https://news.ajinomoto.co.jp/2026/05/20260507-02.html"
+        ]
+      }
     },
     {
       "rank": 2,
@@ -34,7 +46,19 @@
       "source_date": "2026-09-08",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-08.md#L82",
       "status": "双向风险",
-      "company_count": 2
+      "company_count": 2,
+      "constraint_type": "产能与认证瓶颈",
+      "review": {
+        "theme": "ABF载板",
+        "nature": "产能与认证瓶颈",
+        "status": "产品已核验／缺货幅度待核",
+        "verified_at": "2026-09-23",
+        "claim": "深南、兴森生产封装载板，是胶膜下游。缺货可能带来议价，也可能使其缺料、延期；不能把载板企业称为ABF胶膜国产供应商。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-27/1225512708.PDF",
+          "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12512943&stockid=002436"
+        ]
+      }
     },
     {
       "rank": 3,
@@ -49,7 +73,8 @@
       "source_date": "2026-09-10",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-10.md#L222",
       "status": "供给约束线索",
-      "company_count": 2
+      "company_count": 2,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 4,
@@ -63,7 +88,19 @@
       "source_date": "2026-09-10",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-10.md#L58",
       "status": "紧张/缺货线索",
-      "company_count": 1
+      "company_count": 1,
+      "constraint_type": "需求增长／扩产爬坡",
+      "review": {
+        "theme": "特种电子布",
+        "nature": "需求增长／扩产爬坡",
+        "status": "需求与扩产已核验",
+        "verified_at": "2026-09-23",
+        "claim": "日东纺披露T-glass需求增长及扩产。T-glass强调低热膨胀，NE/NER强调低介电；Q布也不能直接当T布。没有据此确认对华禁供。宏和具体品种替代能力应按型号认证。",
+        "sources": [
+          "https://www.nittobo.co.jp/eng/ir/pdf/Nittobo_Integrated-Report_2025.pdf",
+          "https://www.nittobo.co.jp/eng/business/electronicmaterials/index.htm"
+        ]
+      }
     },
     {
       "rank": 5,
@@ -77,7 +114,19 @@
       "source_date": "2026-09-13",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-13.md#L412",
       "status": "紧张/缺货线索",
-      "company_count": 1
+      "company_count": 1,
+      "constraint_type": "断供传闻／客户与型号限制待核",
+      "review": {
+        "theme": "MFC",
+        "nature": "断供传闻／客户与型号限制待核",
+        "status": "断供未核验",
+        "verified_at": "2026-09-23",
+        "claim": "MFC是质量流量控制器。未取得HORIBA全面对华断供的正式公告；官网产品仍可见，但这同样不能证明所有型号和客户都可供货。原名单高凯技术的证券身份和上市公司权益关系未核验。",
+        "sources": [
+          "https://www.horiba.com/chn/semiconductor/products/detail/action/show/Product/sec-z500x-729/",
+          "https://static.horiba.com/fileadmin/Horiba/Company/Investor_Relations/IR_Library/Presentation_Materials/20250825_PR_en_01_Tx4.pdf"
+        ]
+      }
     },
     {
       "rank": 6,
@@ -91,7 +140,8 @@
       "source_date": "2026-09-15",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L80",
       "status": "供给约束线索",
-      "company_count": 1
+      "company_count": 1,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 7,
@@ -106,7 +156,8 @@
       "source_date": "2026-09-13",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-13.md#L406",
       "status": "双向风险",
-      "company_count": 2
+      "company_count": 2,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 8,
@@ -127,7 +178,8 @@
       "source_date": "2026-09-16",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-16-%E5%8D%88%E9%97%B4.md#L648",
       "status": "供给约束线索",
-      "company_count": 8
+      "company_count": 8,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 9,
@@ -142,7 +194,8 @@
       "source_date": "2026-09-14",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1268",
       "status": "紧张/缺货线索",
-      "company_count": 2
+      "company_count": 2,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 10,
@@ -156,7 +209,18 @@
       "source_date": "2026-09-14",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1266",
       "status": "供给约束线索",
-      "company_count": 1
+      "company_count": 1,
+      "constraint_type": "海外厂商退出",
+      "review": {
+        "theme": "氟化液PFPE/HFE",
+        "nature": "海外厂商退出",
+        "status": "退出已核验",
+        "verified_at": "2026-09-23",
+        "claim": "3M正式年报确认2025年底完成退出PFAS制造。属于供应商退出，不等于政府禁止所有氟化液供华；国产厂商仍需满足客户认证、性能与合规要求。",
+        "sources": [
+          "https://investors.3m.com/financials/sec-filings/content/0000066740-26-000014/mmm-20251231.htm"
+        ]
+      }
     },
     {
       "rank": 11,
@@ -171,7 +235,8 @@
       "source_date": "2026-09-14",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1270",
       "status": "供给约束线索",
-      "company_count": 2
+      "company_count": 2,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 12,
@@ -190,7 +255,8 @@
       "source_date": "2026-09-14",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14-%E5%8D%88%E9%97%B4.md#L1272",
       "status": "延伸映射",
-      "company_count": 6
+      "company_count": 6,
+      "constraint_type": "延伸映射"
     },
     {
       "rank": 13,
@@ -204,7 +270,8 @@
       "source_date": "2026-09-14",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-14.md#L273",
       "status": "紧张/缺货线索",
-      "company_count": 1
+      "company_count": 1,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 14,
@@ -218,7 +285,8 @@
       "source_date": "2026-09-16",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-16-%E5%8D%88%E9%97%B4.md#L109",
       "status": "紧张/缺货线索",
-      "company_count": 1
+      "company_count": 1,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 15,
@@ -233,7 +301,8 @@
       "source_date": "2026-09-14",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/2026-09-14.md#L29",
       "status": "供给约束线索",
-      "company_count": 2
+      "company_count": 2,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 16,
@@ -248,7 +317,8 @@
       "source_date": "2026-09-08",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-08.md#L24",
       "status": "紧张/缺货线索",
-      "company_count": 2
+      "company_count": 2,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 17,
@@ -267,7 +337,8 @@
       "source_date": "2026-08-19",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%96%87%E5%AD%97%E7%9B%B4%E6%92%AD/%E5%A4%A7%E7%9B%98%E4%B8%8E%E7%A7%91%E6%8A%80_20260819.md#L333",
       "status": "旧线索待刷新",
-      "company_count": 6
+      "company_count": 6,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 18,
@@ -281,7 +352,8 @@
       "source_date": "2026-09-15",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L125",
       "status": "供给约束线索",
-      "company_count": 1
+      "company_count": 1,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 19,
@@ -297,7 +369,8 @@
       "source_date": "2026-09-15",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15-%E5%8D%88%E9%97%B4.md#L1007",
       "status": "供给约束线索",
-      "company_count": 3
+      "company_count": 3,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 20,
@@ -312,7 +385,19 @@
       "source_date": "2026-08-11",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/%E7%A8%80%E5%9C%9F%E4%B8%8E%E9%92%A8/00%20%E8%A1%8C%E4%B8%9A%E7%BB%BC%E8%BF%B0.md#L15",
       "status": "供给约束线索",
-      "company_count": 2
+      "company_count": 2,
+      "constraint_type": "中国出口许可",
+      "review": {
+        "theme": "钨",
+        "nature": "中国出口许可",
+        "status": "管制文件已核验",
+        "verified_at": "2026-09-23",
+        "claim": "商务部2025年第10号对符合列管描述的相关物项实施出口许可管理，不是国外对华禁供，也不是所有钨产品一律禁止出口。公司是否受益需区分出口收入和国内售价。",
+        "sources": [
+          "https://exportcontrol.mofcom.gov.cn/article/hgfw/lywxcx/gzqd/202502/1102.html",
+          "https://exportcontrol.mofcom.gov.cn/article/cjwt/202503/1112.html"
+        ]
+      }
     },
     {
       "rank": 21,
@@ -326,7 +411,18 @@
       "source_date": "2026-08-11",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/%E5%85%89%E9%80%9A%E4%BF%A1/%E4%BA%91%E5%8D%97%E9%94%97%E4%B8%9A.md#L15",
       "status": "供给约束线索",
-      "company_count": 1
+      "company_count": 1,
+      "constraint_type": "中国出口许可",
+      "review": {
+        "theme": "磷化铟／锗",
+        "nature": "中国出口许可",
+        "status": "磷化铟列管已核验",
+        "verified_at": "2026-09-23",
+        "claim": "2025年第10号明确列管磷化铟等物项；属于中国向外出口管理。不能解释为海外对中国断供。这里核验的是磷化铟条款，锗须另查对应清单及目的地规则。",
+        "sources": [
+          "https://exportcontrol.mofcom.gov.cn/article/hgfw/lywxcx/gzqd/202502/1102.html"
+        ]
+      }
     },
     {
       "rank": 22,
@@ -342,7 +438,8 @@
       "source_date": "2026-09-15",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L544",
       "status": "双向风险",
-      "company_count": 3
+      "company_count": 3,
+      "constraint_type": "历史供需线索待核"
     },
     {
       "rank": 23,
@@ -359,7 +456,8 @@
       "source_date": "2026-09-15",
       "url": "https://github.com/iroryagame-afk/codex/blob/e334351810ba55778f7c44dbf02d50b50d91686f/%E6%83%85%E6%8A%A5%E7%A4%BE/2026-09-15.md#L552",
       "status": "延伸映射",
-      "company_count": 4
+      "company_count": 4,
+      "constraint_type": "延伸映射"
     }
   ],
   "companies": [
@@ -706,5 +804,157 @@
   "evidence": {
     "source_sha256": "77213f230dcf15c48d7c1710f1f2498864af2cccdfa752853ebc407a37d2f517"
   },
-  "boundary": "资料原文线索汇总；不是逐股公告核验后的缺货受益名单，也不参与A/B/C评分或排序。"
+  "boundary": "资料原文线索汇总；不是逐股公告核验后的缺货受益名单，也不参与A/B/C评分或排序。",
+  "reviewed_at": "2026-09-23",
+  "review_scope": "重点复核ABF、T布、MFC、3M退出和部分出口许可；原23类55家公司未全部逐股重核",
+  "title": "缺货、断供与国产替代",
+  "supply_reviews": [
+    {
+      "theme": "ABF胶膜",
+      "nature": "供给集中／减供传闻",
+      "status": "禁供未核验",
+      "verified_at": "2026-09-23",
+      "claim": "ABF是味之素的积层绝缘膜；不等于ABF载板。味之素已公告第三生产基地拟于2028年开工、2032年投产；该计划不能证明2032年前没有扩产，也不能证明当前对华断供。",
+      "sources": [
+        "https://www.ajinomoto.com/innovation/our_innovation/buildupfilm",
+        "https://news.ajinomoto.co.jp/2026/05/20260507-02.html"
+      ]
+    },
+    {
+      "theme": "ABF载板",
+      "nature": "产能与认证瓶颈",
+      "status": "产品已核验／缺货幅度待核",
+      "verified_at": "2026-09-23",
+      "claim": "深南、兴森生产封装载板，是胶膜下游。缺货可能带来议价，也可能使其缺料、延期；不能把载板企业称为ABF胶膜国产供应商。",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-08-27/1225512708.PDF",
+        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12512943&stockid=002436"
+      ]
+    },
+    {
+      "theme": "特种电子布",
+      "nature": "需求增长／扩产爬坡",
+      "status": "需求与扩产已核验",
+      "verified_at": "2026-09-23",
+      "claim": "日东纺披露T-glass需求增长及扩产。T-glass强调低热膨胀，NE/NER强调低介电；Q布也不能直接当T布。没有据此确认对华禁供。宏和具体品种替代能力应按型号认证。",
+      "sources": [
+        "https://www.nittobo.co.jp/eng/ir/pdf/Nittobo_Integrated-Report_2025.pdf",
+        "https://www.nittobo.co.jp/eng/business/electronicmaterials/index.htm"
+      ]
+    },
+    {
+      "theme": "MFC",
+      "nature": "断供传闻／客户与型号限制待核",
+      "status": "断供未核验",
+      "verified_at": "2026-09-23",
+      "claim": "MFC是质量流量控制器。未取得HORIBA全面对华断供的正式公告；官网产品仍可见，但这同样不能证明所有型号和客户都可供货。原名单高凯技术的证券身份和上市公司权益关系未核验。",
+      "sources": [
+        "https://www.horiba.com/chn/semiconductor/products/detail/action/show/Product/sec-z500x-729/",
+        "https://static.horiba.com/fileadmin/Horiba/Company/Investor_Relations/IR_Library/Presentation_Materials/20250825_PR_en_01_Tx4.pdf"
+      ]
+    },
+    {
+      "theme": "氟化液PFPE/HFE",
+      "nature": "海外厂商退出",
+      "status": "退出已核验",
+      "verified_at": "2026-09-23",
+      "claim": "3M正式年报确认2025年底完成退出PFAS制造。属于供应商退出，不等于政府禁止所有氟化液供华；国产厂商仍需满足客户认证、性能与合规要求。",
+      "sources": [
+        "https://investors.3m.com/financials/sec-filings/content/0000066740-26-000014/mmm-20251231.htm"
+      ]
+    },
+    {
+      "theme": "钨",
+      "nature": "中国出口许可",
+      "status": "管制文件已核验",
+      "verified_at": "2026-09-23",
+      "claim": "商务部2025年第10号对符合列管描述的相关物项实施出口许可管理，不是国外对华禁供，也不是所有钨产品一律禁止出口。公司是否受益需区分出口收入和国内售价。",
+      "sources": [
+        "https://exportcontrol.mofcom.gov.cn/article/hgfw/lywxcx/gzqd/202502/1102.html",
+        "https://exportcontrol.mofcom.gov.cn/article/cjwt/202503/1112.html"
+      ]
+    },
+    {
+      "theme": "磷化铟／锗",
+      "nature": "中国出口许可",
+      "status": "磷化铟列管已核验",
+      "verified_at": "2026-09-23",
+      "claim": "2025年第10号明确列管磷化铟等物项；属于中国向外出口管理。不能解释为海外对中国断供。这里核验的是磷化铟条款，锗须另查对应清单及目的地规则。",
+      "sources": [
+        "https://exportcontrol.mofcom.gov.cn/article/hgfw/lywxcx/gzqd/202502/1102.html"
+      ]
+    }
+  ],
+  "abf_companies": [
+    {
+      "layer": "积层绝缘膜",
+      "product": "CBF",
+      "name": "华正新材",
+      "code": "603186",
+      "stage": "客户认证期",
+      "boundary": "CPU/GPU用CBF在客户验证；VCM用CBF-RCC已有小批交付。产线具备交付能力不等于AI芯片产品已批供。",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-08-31/1225534785.PDF"
+      ],
+      "market_cap": 357.01,
+      "market_cap_unit": "亿元人民币",
+      "quote_time": "20260923161434"
+    },
+    {
+      "layer": "积层绝缘膜",
+      "product": "NBF股权布局",
+      "name": "莲花控股",
+      "code": "600186",
+      "stage": "具体型号阶段未核验",
+      "boundary": "通过莲花科创持有纽菲斯46%股权，布局NBF类ABF膜；不是上市公司全部主营已转成ABF，不能将股权投资额视作产品收入。",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-07-14/1225422618.PDF"
+      ],
+      "market_cap": 243.64,
+      "market_cap_unit": "亿元人民币",
+      "quote_time": "20260923161455"
+    },
+    {
+      "layer": "封装基材",
+      "product": "CCL／封装基板材料",
+      "name": "生益科技",
+      "code": "600183",
+      "stage": "具体类ABF膜阶段未核验",
+      "boundary": "公司回复确认多种封装基材开发应用，但未单独给出类ABF膜型号、产能和收入。成熟CCL及基材批量证据不能直接证明胶膜量产。",
+      "sources": [
+        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12548066&stockid=600183"
+      ],
+      "market_cap": 3487.08,
+      "market_cap_unit": "亿元人民币",
+      "quote_time": "20260923154351"
+    },
+    {
+      "layer": "载板制造",
+      "product": "FC-BGA载板",
+      "name": "深南电路",
+      "code": "002916",
+      "stage": "规模放量期",
+      "boundary": "半年报确认高端FC-BGA在多个客户处规模量产；这是载板制造，仍需采购积层膜等上游材料。",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-08-27/1225512708.PDF"
+      ],
+      "market_cap": 2825.27,
+      "market_cap_unit": "亿元人民币",
+      "quote_time": "20260923155042"
+    },
+    {
+      "layer": "载板制造",
+      "product": "FC-BGA载板",
+      "name": "兴森科技",
+      "code": "002436",
+      "stage": "客户导入／具体型号另核",
+      "boundary": "半年报披露FCBGA量产准备、良率改善及客户导入；不把全部项目的产能规划认定为已满产。",
+      "sources": [
+        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12512943&stockid=002436"
+      ],
+      "market_cap": 780.15,
+      "market_cap_unit": "亿元人民币",
+      "quote_time": "20260923161454"
+    }
+  ]
 }
