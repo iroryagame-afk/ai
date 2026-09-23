@@ -3,7 +3,7 @@
   "as_of": "2026-09-23",
   "market_cap_date": "2026-09-23",
   "market_cap_basis": "腾讯财经总市值字段，收盘后快照；亿元人民币；A/H公司沿用行情商口径，不自行作跨市场折算。",
-  "row_policy": "每个二级子类一行，代表企业与新兴企业分别附市值；缺少合适的已核验对象时留空。",
+  "row_policy": "每个技术子类一行；代表/新兴企业优先展示；同类其他公司可展开，跨子类允许复用公司",
   "rows": [
     {
       "category": "PCB",
@@ -47,7 +47,8 @@
       "highlight": {
         "label": "新技术",
         "scope": "PTFE高速应用"
-      }
+      },
+      "additional_companies": []
     },
     {
       "category": "PCB",
@@ -91,7 +92,27 @@
       "highlight": {
         "label": "新技术",
         "scope": "M10材料路线"
-      }
+      },
+      "additional_companies": [
+        {
+          "code": "605589",
+          "name": "圣泉集团",
+          "category": "PCB",
+          "subcategory": "CCL上游树脂",
+          "technology": "PPO/OPE、ODV碳氢、BCB树脂",
+          "stage": "规模放量期",
+          "boundary": "2026-07-23交流：600吨/年碳氢产线已量产，ODV稳定批供；BCB小批供属试点部署期。600吨不是全为BCB。",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12463113"
+          ],
+          "role": "代表企业",
+          "market_cap": 348.96,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923160010",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ]
     },
     {
       "category": "PCB",
@@ -131,7 +152,27 @@
         "quote_time": "20260923154409",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
-      }
+      },
+      "additional_companies": [
+        {
+          "code": "002409",
+          "name": "雅克科技",
+          "category": "PCB",
+          "subcategory": "硅微粉／功能填料",
+          "technology": "华飞电子球形硅微粉、球形氧化铝",
+          "stage": "规模放量期",
+          "boundary": "粉体属于公司多业务之一；亚微米产品稳定供货，高端CCL市场继续拓展。",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12536266&stockid=002409"
+          ],
+          "role": "代表企业",
+          "market_cap": 653.35,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923154339",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ]
     },
     {
       "category": "PCB",
@@ -175,7 +216,8 @@
       "highlight": {
         "label": "新技术",
         "scope": "HVLP5"
-      }
+      },
+      "additional_companies": []
     },
     {
       "category": "PCB",
@@ -202,7 +244,8 @@
       "highlight": {
         "label": "新技术",
         "scope": "高端Q布"
-      }
+      },
+      "additional_companies": []
     },
     {
       "category": "PCB",
@@ -225,7 +268,193 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "additional_companies": [
+        {
+          "code": "300476",
+          "name": "胜宏科技",
+          "category": "PCB",
+          "subcategory": "电路板制造",
+          "technology": "高阶HDI、高多层、CoWoP相关研发",
+          "stage": "规模放量期",
+          "boundary": "高阶HDI已有量产；铜浆烧结、埋容及CoWoP等新增工艺不能沿用既有量产结论。",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522515.PDF"
+          ],
+          "role": "代表企业",
+          "market_cap": 2400.94,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923155103",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        },
+        {
+          "code": "002916",
+          "name": "深南电路",
+          "category": "PCB",
+          "subcategory": "电路板／封装基板",
+          "technology": "高多层PCB、IC封装基板",
+          "stage": "规模放量期",
+          "boundary": "跨PCB与封装基板；特定Rubin/PTFE供货关系未核验。",
+          "sources": [
+            "https://www.scc.com.cn/"
+          ],
+          "role": "代表企业",
+          "market_cap": 2825.27,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923155042",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ]
+    },
+    {
+      "category": "PCB",
+      "subcategory": "PTFE膜材",
+      "representative": {
+        "code": "301591",
+        "name": "肯特股份",
+        "category": "PCB",
+        "subcategory": "树脂／膜材",
+        "technology": "PTFE高性能膜材",
+        "stage": "标准化普及期",
+        "boundary": "用于高频覆铜板等；位于上游材料端，特定AI平台供货未核验。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2025-04-22/1223187453.PDF"
+        ],
+        "role": "配套企业",
+        "market_cap": 49.88,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923154333",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "补回项目",
+        "scope": "PTFE高频膜材"
+      }
+    },
+    {
+      "category": "PCB",
+      "subcategory": "BCB／ODV碳氢树脂",
+      "representative": {
+        "code": "605589",
+        "name": "圣泉集团",
+        "category": "PCB",
+        "subcategory": "CCL上游树脂",
+        "technology": "PPO/OPE、ODV碳氢、BCB树脂",
+        "stage": "规模放量期",
+        "boundary": "2026-07-23交流：600吨/年碳氢产线已量产，ODV稳定批供；BCB小批供属试点部署期。600吨不是全为BCB。",
+        "sources": [
+          "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12463113"
+        ],
+        "role": "代表企业",
+        "market_cap": 348.96,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923160010",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": {
+        "code": "300522",
+        "name": "世名科技",
+        "category": "PCB",
+        "subcategory": "CCL上游树脂",
+        "technology": "电子级碳氢树脂",
+        "stage": "客户认证期",
+        "boundary": "有少量销售但未规模化，部分客户仍在送样；用于纠正“A股只有两家”，不与成熟供应商等量齐观。",
+        "sources": [
+          "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-06-25/3efb2496-06ae-4f82-8987-17a76d4b4274.PDF"
+        ],
+        "role": "新进入者",
+        "market_cap": 50.53,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155945",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "additional_companies": [
+        {
+          "code": "601208",
+          "name": "东材科技",
+          "category": "PCB",
+          "subcategory": "CCL上游树脂",
+          "technology": "PPE/PPO、碳氢树脂、BMI、活性酯",
+          "stage": "规模放量期",
+          "boundary": "既有树脂供货；更高性能新品看认证。新增3500吨设计产能不得直接加总为现有4000吨，投产/达产尚未核验。",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-21/1225486300.PDF"
+          ],
+          "role": "代表企业",
+          "market_cap": 555.6,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923160012",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ],
+      "highlight": {
+        "label": "新技术",
+        "scope": "BCB新品与碳氢树脂分别看供货"
+      }
+    },
+    {
+      "category": "PCB",
+      "subcategory": "高阶HDI／CoWoP",
+      "representative": {
+        "code": "300476",
+        "name": "胜宏科技",
+        "category": "PCB",
+        "subcategory": "电路板制造",
+        "technology": "高阶HDI、高多层、CoWoP相关研发",
+        "stage": "规模放量期",
+        "boundary": "高阶HDI已有量产；铜浆烧结、埋容及CoWoP等新增工艺不能沿用既有量产结论。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522515.PDF"
+        ],
+        "role": "代表企业",
+        "market_cap": 2400.94,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155103",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "新技术",
+        "scope": "HDI量产；CoWoP为研发路线"
+      }
+    },
+    {
+      "category": "PCB",
+      "subcategory": "IC封装基板",
+      "representative": {
+        "code": "002916",
+        "name": "深南电路",
+        "category": "PCB",
+        "subcategory": "电路板／封装基板",
+        "technology": "高多层PCB、IC封装基板",
+        "stage": "规模放量期",
+        "boundary": "跨PCB与封装基板；特定Rubin/PTFE供货关系未核验。",
+        "sources": [
+          "https://www.scc.com.cn/"
+        ],
+        "role": "代表企业",
+        "market_cap": 2825.27,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155042",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "补回项目",
+        "scope": "封装基板与普通PCB区分"
+      }
     },
     {
       "category": "光通信",
@@ -252,7 +481,27 @@
       "highlight": {
         "label": "新技术",
         "scope": "1.6T及以上"
-      }
+      },
+      "additional_companies": [
+        {
+          "code": "300502",
+          "name": "新易盛",
+          "category": "光通信",
+          "subcategory": "光模块／光互连",
+          "technology": "800G/1.6T、SiPh、LPO/LRO、NPO、TFLN",
+          "stage": "规模放量期",
+          "boundary": "成熟模块与新方案分开；LPO/LRO、NPO等具体新品收入规模未核验。",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12528568&stockid=300502"
+          ],
+          "role": "代表企业",
+          "market_cap": 6293.05,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923155039",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ]
     },
     {
       "category": "光通信",
@@ -296,7 +545,8 @@
       "highlight": {
         "label": "新技术",
         "scope": "TFLN／CPO配套"
-      }
+      },
+      "additional_companies": []
     },
     {
       "category": "光通信",
@@ -340,7 +590,8 @@
       "highlight": {
         "label": "新技术",
         "scope": "CPO保偏配套"
-      }
+      },
+      "additional_companies": []
     },
     {
       "category": "光通信",
@@ -363,7 +614,306 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "additional_companies": []
+    },
+    {
+      "category": "光通信",
+      "subcategory": "硅光SiPh",
+      "representative": {
+        "code": "300308",
+        "name": "中际旭创",
+        "category": "光通信",
+        "subcategory": "光模块／光互连",
+        "technology": "800G/1.6T硅光、3.2T、NPO、OCS",
+        "stage": "规模放量期",
+        "boundary": "1.6T硅光放量；3.2T、NPO和OCS分别处于开发/客户协同，不能把全部新方向按量产处理。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-22/1225491753.PDF"
+        ],
+        "role": "代表企业",
+        "market_cap": 10866.22,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155027",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [
+        {
+          "code": "300502",
+          "name": "新易盛",
+          "category": "光通信",
+          "subcategory": "光模块／光互连",
+          "technology": "800G/1.6T、SiPh、LPO/LRO、NPO、TFLN",
+          "stage": "规模放量期",
+          "boundary": "成熟模块与新方案分开；LPO/LRO、NPO等具体新品收入规模未核验。",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12528568&stockid=300502"
+          ],
+          "role": "代表企业",
+          "market_cap": 6293.05,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923155039",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ],
+      "highlight": {
+        "label": "补回项目",
+        "scope": "硅光集成平台"
+      }
+    },
+    {
+      "category": "光通信",
+      "subcategory": "LPO／LRO",
+      "representative": {
+        "code": "300502",
+        "name": "新易盛",
+        "category": "光通信",
+        "subcategory": "光模块／光互连",
+        "technology": "800G/1.6T、SiPh、LPO/LRO、NPO、TFLN",
+        "stage": "规模放量期",
+        "boundary": "成熟模块与新方案分开；LPO/LRO、NPO等具体新品收入规模未核验。",
+        "sources": [
+          "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12528568&stockid=300502"
+        ],
+        "role": "代表企业",
+        "market_cap": 6293.05,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155039",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "补回项目",
+        "scope": "低功耗光模块架构"
+      }
+    },
+    {
+      "category": "光通信",
+      "subcategory": "CPO光引擎／ELS／FAU",
+      "representative": {
+        "code": "300394",
+        "name": "天孚通信",
+        "category": "光通信",
+        "subcategory": "精密光器件／光引擎",
+        "technology": "FAU、ELS、1.6T光引擎",
+        "stage": "规模放量期",
+        "boundary": "光器件与光引擎交付；不等于整套CPO系统已全面普及。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-19/1225480328.PDF"
+        ],
+        "role": "代表企业",
+        "market_cap": 3004.13,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155024",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": {
+        "code": "300620",
+        "name": "光库科技",
+        "category": "光通信",
+        "subcategory": "光调制器／精密器件",
+        "technology": "TFLN薄膜铌酸锂、保偏FAU、连接器",
+        "stage": "试点部署期",
+        "boundary": "此阶段针对部分TFLN新品小批订单；原有光纤器件业务成熟，CPO新品占比未核验。",
+        "sources": [
+          "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12499014&stockid=300620"
+        ],
+        "role": "新品扩展",
+        "market_cap": 720.58,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155106",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "additional_companies": [
+        {
+          "code": "688143",
+          "name": "长盈通",
+          "category": "光通信",
+          "subcategory": "特种光纤",
+          "technology": "保偏光纤、通信空芯样品",
+          "stage": "客户认证期",
+          "boundary": "CPO相关保偏产品认证；空芯为工程样机期。不能把传统特种光纤收入都计入数据中心。",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-25/1225495353.PDF"
+          ],
+          "role": "新品扩展",
+          "market_cap": 249.31,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923155059",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ],
+      "highlight": {
+        "label": "新技术",
+        "scope": "光引擎与配套器件"
+      }
+    },
+    {
+      "category": "光通信",
+      "subcategory": "NPO近封装光学",
+      "representative": {
+        "code": "300308",
+        "name": "中际旭创",
+        "category": "光通信",
+        "subcategory": "光模块／光互连",
+        "technology": "800G/1.6T硅光、3.2T、NPO、OCS",
+        "stage": "规模放量期",
+        "boundary": "1.6T硅光放量；3.2T、NPO和OCS分别处于开发/客户协同，不能把全部新方向按量产处理。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-22/1225491753.PDF"
+        ],
+        "role": "代表企业",
+        "market_cap": 10866.22,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155027",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [
+        {
+          "code": "300502",
+          "name": "新易盛",
+          "category": "光通信",
+          "subcategory": "光模块／光互连",
+          "technology": "800G/1.6T、SiPh、LPO/LRO、NPO、TFLN",
+          "stage": "规模放量期",
+          "boundary": "成熟模块与新方案分开；LPO/LRO、NPO等具体新品收入规模未核验。",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12528568&stockid=300502"
+          ],
+          "role": "代表企业",
+          "market_cap": 6293.05,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923155039",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ],
+      "highlight": {
+        "label": "新技术",
+        "scope": "客户协同／开发，不等于量产"
+      }
+    },
+    {
+      "category": "光通信",
+      "subcategory": "OCS光交换",
+      "representative": {
+        "code": "300308",
+        "name": "中际旭创",
+        "category": "光通信",
+        "subcategory": "光模块／光互连",
+        "technology": "800G/1.6T硅光、3.2T、NPO、OCS",
+        "stage": "规模放量期",
+        "boundary": "1.6T硅光放量；3.2T、NPO和OCS分别处于开发/客户协同，不能把全部新方向按量产处理。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-22/1225491753.PDF"
+        ],
+        "role": "代表企业",
+        "market_cap": 10866.22,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155027",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "新技术",
+        "scope": "开发方向，不等于独立收入"
+      }
+    },
+    {
+      "category": "光通信",
+      "subcategory": "TFLN薄膜铌酸锂",
+      "representative": {
+        "code": "300620",
+        "name": "光库科技",
+        "category": "光通信",
+        "subcategory": "光调制器／精密器件",
+        "technology": "TFLN薄膜铌酸锂、保偏FAU、连接器",
+        "stage": "试点部署期",
+        "boundary": "此阶段针对部分TFLN新品小批订单；原有光纤器件业务成熟，CPO新品占比未核验。",
+        "sources": [
+          "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12499014&stockid=300620"
+        ],
+        "role": "新品扩展",
+        "market_cap": 720.58,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155106",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "新技术",
+        "scope": "调制器材料路线"
+      }
+    },
+    {
+      "category": "光通信",
+      "subcategory": "MPO／MTP连接器",
+      "representative": {
+        "code": "300570",
+        "name": "太辰光",
+        "category": "光通信",
+        "subcategory": "光连接器",
+        "technology": "MPO/MTP、MT插芯",
+        "stage": "规模放量期",
+        "boundary": "多芯连接器已有业务，普通MPO与保偏新品不是同一型号。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475478.PDF"
+        ],
+        "role": "代表企业",
+        "market_cap": 513.72,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155039",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "补回项目",
+        "scope": "多芯光连接"
+      }
+    },
+    {
+      "category": "光通信",
+      "subcategory": "空芯光纤",
+      "representative": {
+        "code": "688143",
+        "name": "长盈通",
+        "category": "光通信",
+        "subcategory": "特种光纤",
+        "technology": "保偏光纤、通信空芯样品",
+        "stage": "客户认证期",
+        "boundary": "CPO相关保偏产品认证；空芯为工程样机期。不能把传统特种光纤收入都计入数据中心。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-25/1225495353.PDF"
+        ],
+        "role": "新品扩展",
+        "market_cap": 249.31,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155059",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "新技术",
+        "scope": "通信空芯样品／工程样机"
+      }
     },
     {
       "category": "算力芯片与存储",
@@ -386,7 +936,8 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "additional_companies": []
     },
     {
       "category": "算力芯片与存储",
@@ -409,7 +960,8 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "additional_companies": []
     },
     {
       "category": "算力芯片与存储",
@@ -436,7 +988,8 @@
       "highlight": {
         "label": "新技术",
         "scope": "CXL／MRDIMM"
-      }
+      },
+      "additional_companies": []
     },
     {
       "category": "算力芯片与存储",
@@ -459,7 +1012,19 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "additional_companies": []
+    },
+    {
+      "category": "算力芯片与存储",
+      "subcategory": "HBM／SOCAMM",
+      "representative": null,
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "技术参照",
+        "scope": "海外原厂／模块形态；不拿A股SSD公司冒充"
+      }
     },
     {
       "category": "算力互连",
@@ -482,7 +1047,8 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "additional_companies": []
     },
     {
       "category": "算力互连",
@@ -505,7 +1071,8 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "additional_companies": []
     },
     {
       "category": "算力互连",
@@ -546,7 +1113,45 @@
         "quote_time": "20260923155950",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
-      }
+      },
+      "additional_companies": [
+        {
+          "code": "301165",
+          "name": "锐捷网络",
+          "category": "算力互连",
+          "subcategory": "品牌交换机及网络方案",
+          "technology": "400G/800G交换机、AI-Fabric；128端口800G；51.2T CPO方案；超节点Demo",
+          "stage": "规模放量期",
+          "boundary": "常规400G/800G放量；CPO已发布、超节点Demo为工程样机期；方案发布不等于规模出货",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12494616&stockid=301165"
+          ],
+          "role": "代表企业",
+          "market_cap": 1271.33,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923160009",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        },
+        {
+          "code": "000063",
+          "name": "中兴通讯",
+          "category": "算力互连",
+          "subcategory": "品牌交换机及网络方案",
+          "technology": "ZXR10 9900X数据中心核心交换机，10GE至800GE，液冷、无损网络",
+          "stage": "未核验",
+          "boundary": "正式产品及选型确认；未取得该800G型号独立批量收入证据，不硬填规模放量",
+          "sources": [
+            "https://www.zte.com.cn/china/product_index/ip_network/item03/zxr10-9900x/zxr10_9900x.html"
+          ],
+          "role": "代表企业",
+          "market_cap": 1544.13,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923160009",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ]
     },
     {
       "category": "算力互连",
@@ -586,6 +1191,157 @@
         "quote_time": "20260923155203",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "additional_companies": []
+    },
+    {
+      "category": "算力互连",
+      "subcategory": "交换机ODM制造",
+      "representative": {
+        "code": "601138",
+        "name": "工业富联",
+        "category": "算力互连",
+        "subcategory": "交换机ODM／制造",
+        "technology": "高速交换机、SuperNIC、服务器及整机柜；设计协同及制造",
+        "stage": "规模放量期",
+        "boundary": "2026H1 800G以上交换机出货量同比增长1.4倍；ODM制造不可与品牌商或交换芯片商按同口径排名",
+        "sources": [
+          "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2026/2026-8/2026-08-12/12487983.PDF"
+        ],
+        "role": "代表企业",
+        "market_cap": 12497.81,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923160008",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": {
+        "code": "301191",
+        "name": "菲菱科思",
+        "category": "算力互连",
+        "subcategory": "交换机ODM",
+        "technology": "交换机研发制造；400G/800G产品形态迭代；国产CPU COMe模块",
+        "stage": "未核验",
+        "boundary": "25G以上销量增182.08%不能证明800G单项放量；800G独立批量规模及CPO量产未核验",
+        "sources": [
+          "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-8/2026-08-28/12562724.PDF"
+        ],
+        "role": "代表企业",
+        "market_cap": 85.38,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155915",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "additional_companies": [
+        {
+          "code": "603118",
+          "name": "共进股份",
+          "category": "算力互连",
+          "subcategory": "交换机ODM",
+          "technology": "园区、SMB白盒、400G/800G数据中心交换机",
+          "stage": "规模放量期",
+          "boundary": "2026H1 400G及800G交换机收入合计占整体不足5%；不能把全部数通收入等同高速交换机收入",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12534690&stockid=603118"
+          ],
+          "role": "代表企业",
+          "market_cap": 144.39,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923155950",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ],
+      "highlight": {
+        "label": "补回项目",
+        "scope": "制造环节，区别品牌商"
+      }
+    },
+    {
+      "category": "算力互连",
+      "subcategory": "WDM／DCI光传输",
+      "representative": {
+        "code": "603803",
+        "name": "瑞斯康达",
+        "category": "算力互连",
+        "subcategory": "交换机／WDM-DCI传输",
+        "technology": "32口全400G交换机、工业交换机；另有单通道800G长距WDM/DCI",
+        "stage": "未核验",
+        "boundary": "400G交换机开始批量；800G是光传输另一产品线，800G数据中心交换机未核验",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-26/1225503260.PDF"
+        ],
+        "role": "代表企业",
+        "market_cap": 54.68,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155955",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "补回项目",
+        "scope": "800G传输不等于800G交换机"
+      }
+    },
+    {
+      "category": "算力互连",
+      "subcategory": "交换机股权映射",
+      "representative": {
+        "code": "002396",
+        "name": "星网锐捷",
+        "category": "算力互连",
+        "subcategory": "锐捷网络股权映射",
+        "technology": "截至2026H1持有锐捷网络44.88%",
+        "stage": "未核验",
+        "boundary": "不是额外一家独立交换机供应商；名单可并列，行业份额及营收不能重复相加",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-08-15/1225473450.PDF"
+        ],
+        "role": "股权映射",
+        "market_cap": 276.61,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155957",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [
+        {
+          "code": "301165",
+          "name": "锐捷网络",
+          "category": "算力互连",
+          "subcategory": "品牌交换机及网络方案",
+          "technology": "400G/800G交换机、AI-Fabric；128端口800G；51.2T CPO方案；超节点Demo",
+          "stage": "规模放量期",
+          "boundary": "常规400G/800G放量；CPO已发布、超节点Demo为工程样机期；方案发布不等于规模出货",
+          "sources": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12494616&stockid=301165"
+          ],
+          "role": "代表企业",
+          "market_cap": 1271.33,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923160009",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ],
+      "highlight": {
+        "label": "补回项目",
+        "scope": "星网持有锐捷股权，不能重复计份额"
+      }
+    },
+    {
+      "category": "算力互连",
+      "subcategory": "UALink／NVLink",
+      "representative": null,
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "技术参照",
+        "scope": "不同互连体系，A股直接供货关系未核验"
       }
     },
     {
@@ -609,7 +1365,27 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "additional_companies": [
+        {
+          "code": "002156",
+          "name": "通富微电",
+          "category": "先进封装",
+          "subcategory": "异构集成／封测",
+          "technology": "高性能计算封装、Chiplet",
+          "stage": "规模放量期",
+          "boundary": "高端封测业务已有商业化；新封装工艺按具体订单验证。",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-29/1225527099.PDF"
+          ],
+          "role": "代表企业",
+          "market_cap": 1000.9,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923155015",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ]
     },
     {
       "category": "先进封装",
@@ -636,7 +1412,8 @@
       "highlight": {
         "label": "新技术",
         "scope": "TGV"
-      }
+      },
+      "additional_companies": []
     },
     {
       "category": "先进封装",
@@ -663,7 +1440,8 @@
       "highlight": {
         "label": "新技术",
         "scope": "玻璃微孔加工"
-      }
+      },
+      "additional_companies": []
     },
     {
       "category": "先进封装",
@@ -690,6 +1468,46 @@
       "highlight": {
         "label": "新技术",
         "scope": "TGV金属化"
+      },
+      "additional_companies": []
+    },
+    {
+      "category": "先进封装",
+      "subcategory": "PLP面板级曝光",
+      "representative": {
+        "code": "688630",
+        "name": "芯碁微装",
+        "category": "先进封装",
+        "subcategory": "曝光设备",
+        "technology": "面板级直写曝光、PLP2000",
+        "stage": "客户认证期",
+        "boundary": "已获订单；支持多类基材，不把全部设备订单都归玻璃基板。",
+        "sources": [
+          "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12544205&stockid=688630"
+        ],
+        "role": "新品扩展",
+        "market_cap": 645.62,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923154351",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "新技术",
+        "scope": "面板级直写曝光"
+      }
+    },
+    {
+      "category": "先进封装",
+      "subcategory": "UCIe／SoIC／CoWoS",
+      "representative": null,
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "技术参照",
+        "scope": "协议与专有封装品牌；不等同A股自有技术"
       }
     },
     {
@@ -734,7 +1552,63 @@
       "highlight": {
         "label": "新技术",
         "scope": "芯片散热应用"
-      }
+      },
+      "additional_companies": [
+        {
+          "code": "600172",
+          "name": "黄河旋风",
+          "category": "芯片散热与液冷",
+          "subcategory": "金刚石热沉",
+          "technology": "功能性金刚石热沉",
+          "stage": "试点部署期",
+          "boundary": "功能材料已投产，尚未形成重大经营贡献；产线建成不等于大规模收入。",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-27/1225511927.PDF"
+          ],
+          "role": "代表企业",
+          "market_cap": 241.42,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923154418",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        },
+        {
+          "code": "301071",
+          "name": "力量钻石",
+          "category": "芯片散热与液冷",
+          "subcategory": "金刚石热沉",
+          "technology": "功能金刚石散热片",
+          "stage": "工程样机期",
+          "boundary": "已有技术进展；散热产品批量收入未核验。",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-07-29/1225444454.PDF"
+          ],
+          "role": "新品扩展",
+          "market_cap": 180.76,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923154400",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        },
+        {
+          "code": "688028",
+          "name": "沃尔德",
+          "category": "芯片散热与液冷",
+          "subcategory": "金刚石复合材料",
+          "technology": "热沉、金刚石铜/铝、散热晶圆",
+          "stage": "工程样机期",
+          "boundary": "大尺寸研发成果不等于同尺寸自支撑热沉批量生产。",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-04-10/1225088739.PDF"
+          ],
+          "role": "新品扩展",
+          "market_cap": 196.45,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923154353",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ]
     },
     {
       "category": "芯片散热与液冷",
@@ -774,7 +1648,8 @@
         "quote_time": "20260923153819",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
-      }
+      },
+      "additional_companies": []
     },
     {
       "category": "芯片散热与液冷",
@@ -819,7 +1694,8 @@
       "highlight": {
         "label": "本次新增",
         "scope": "光模块散热材料"
-      }
+      },
+      "additional_companies": []
     },
     {
       "category": "芯片散热与液冷",
@@ -865,7 +1741,27 @@
       "highlight": {
         "label": "本次新增",
         "scope": "光模块均热"
-      }
+      },
+      "additional_companies": [
+        {
+          "code": "300684",
+          "name": "中石科技",
+          "category": "芯片散热与液冷",
+          "subcategory": "TIM、VC及液冷散热模组",
+          "technology": "光模块VC散热模组；垂直取向石墨烯导热垫片、液态金属TIM；新型光模块液冷产品",
+          "stage": "规模放量期",
+          "boundary": "既有光模块VC：规模放量期；石墨烯/液金新品：客户认证期。2026H1披露光模块VC交付规模持续增长；石墨烯导热垫片与液态金属仍推进性能优化、可靠性验证和客户送样；CPO/NPO/XPO定制液冷进行验证与应用。 不能把既有VC收入算成石墨烯/液金新品收入，特定GPU供应量未核验。",
+          "sources": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12523515&stockid=300684"
+          ],
+          "role": "新品扩展",
+          "market_cap": 357.91,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923155912",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ]
     },
     {
       "category": "芯片散热与液冷",
@@ -890,7 +1786,8 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "additional_companies": []
     },
     {
       "category": "芯片散热与液冷",
@@ -937,7 +1834,8 @@
       "highlight": {
         "label": "本次新增",
         "scope": "TEC陶瓷配套"
-      }
+      },
+      "additional_companies": []
     },
     {
       "category": "芯片散热与液冷",
@@ -983,6 +1881,136 @@
       "highlight": {
         "label": "新技术",
         "scope": "液冷Cage"
+      },
+      "additional_companies": []
+    },
+    {
+      "category": "芯片散热与液冷",
+      "subcategory": "封装热沉／金刚石复合",
+      "representative": {
+        "code": "688028",
+        "name": "沃尔德",
+        "category": "芯片散热与液冷",
+        "subcategory": "金刚石复合材料",
+        "technology": "热沉、金刚石铜/铝、散热晶圆",
+        "stage": "工程样机期",
+        "boundary": "大尺寸研发成果不等于同尺寸自支撑热沉批量生产。",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2026-04-10/1225088739.PDF"
+        ],
+        "role": "新品扩展",
+        "market_cap": 196.45,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923154353",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": null,
+      "additional_companies": [
+        {
+          "code": "301285",
+          "name": "鸿日达",
+          "category": "芯片散热与液冷",
+          "subcategory": "封装热沉",
+          "technology": "铜基热沉向金刚石散热拓展",
+          "stage": "客户认证期",
+          "boundary": "金刚石测试中，尚不具备规模生产能力；不能移用铜基产品量产证据。",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-07-10/1225418609.PDF"
+          ],
+          "role": "新品扩展",
+          "market_cap": 209.83,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923154418",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        },
+        {
+          "code": "600172",
+          "name": "黄河旋风",
+          "category": "芯片散热与液冷",
+          "subcategory": "金刚石热沉",
+          "technology": "功能性金刚石热沉",
+          "stage": "试点部署期",
+          "boundary": "功能材料已投产，尚未形成重大经营贡献；产线建成不等于大规模收入。",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-08-27/1225511927.PDF"
+          ],
+          "role": "代表企业",
+          "market_cap": 241.42,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923154418",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        },
+        {
+          "code": "301071",
+          "name": "力量钻石",
+          "category": "芯片散热与液冷",
+          "subcategory": "金刚石热沉",
+          "technology": "功能金刚石散热片",
+          "stage": "工程样机期",
+          "boundary": "已有技术进展；散热产品批量收入未核验。",
+          "sources": [
+            "https://static.cninfo.com.cn/finalpage/2026-07-29/1225444454.PDF"
+          ],
+          "role": "新品扩展",
+          "market_cap": 180.76,
+          "market_cap_unit": "亿元人民币",
+          "quote_time": "20260923154400",
+          "market_cap_status": "已核验",
+          "verified_at": "2026-09-23"
+        }
+      ],
+      "highlight": {
+        "label": "新技术",
+        "scope": "新品与传统刀具、连接器业务分开"
+      }
+    },
+    {
+      "category": "芯片散热与液冷",
+      "subcategory": "液态金属／石墨烯TIM",
+      "representative": {
+        "code": "300684",
+        "name": "中石科技",
+        "category": "芯片散热与液冷",
+        "subcategory": "TIM、VC及液冷散热模组",
+        "technology": "光模块VC散热模组；垂直取向石墨烯导热垫片、液态金属TIM；新型光模块液冷产品",
+        "stage": "规模放量期",
+        "boundary": "既有光模块VC：规模放量期；石墨烯/液金新品：客户认证期。2026H1披露光模块VC交付规模持续增长；石墨烯导热垫片与液态金属仍推进性能优化、可靠性验证和客户送样；CPO/NPO/XPO定制液冷进行验证与应用。 不能把既有VC收入算成石墨烯/液金新品收入，特定GPU供应量未核验。",
+        "sources": [
+          "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12523515&stockid=300684"
+        ],
+        "role": "新品扩展",
+        "market_cap": 357.91,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923155912",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "emerging": {
+        "code": "688035",
+        "name": "德邦科技",
+        "category": "芯片散热与液冷",
+        "subcategory": "高端TIM与芯片封装材料",
+        "technology": "TIM1.5/TIM2；导热硅脂、凝胶、垫片、相变材料、液态金属；芯片级TIM1",
+        "stage": "规模放量期",
+        "boundary": "成熟TIM1.5/TIM2：规模放量期；TIM1：客户认证期。2026半年度行动评估报告：TIM1.5/TIM2等稳定批供主流封测厂商，高端导热材料含液态金属已批量应用于AI服务器/GPU等领域；TIM1通过国内重点封测客户全套可靠性验证。半年报新TIM1研发项目仍列研究开发，须区分项目与已有产品。 可以称TIM与液金已商业应用，不能将所有TIM1系列或所有新配方视作规模放量。",
+        "sources": [
+          "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12486737&stockid=688035",
+          "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?CompanyCode=82548638&gather=1&id=12486736"
+        ],
+        "role": "新品扩展",
+        "market_cap": 120.25,
+        "market_cap_unit": "亿元人民币",
+        "quote_time": "20260923160000",
+        "market_cap_status": "已核验",
+        "verified_at": "2026-09-23"
+      },
+      "additional_companies": [],
+      "highlight": {
+        "label": "新技术",
+        "scope": "具体新品阶段分别核验"
       }
     },
     {
@@ -1027,7 +2055,8 @@
       "highlight": {
         "label": "新技术",
         "scope": "800V HVDC"
-      }
+      },
+      "additional_companies": []
     },
     {
       "category": "测试与电子装联",
@@ -1050,7 +2079,8 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "additional_companies": []
     },
     {
       "category": "测试与电子装联",
@@ -1090,6 +2120,18 @@
         "quote_time": "20260923154418",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "additional_companies": []
+    },
+    {
+      "category": "测试与电子装联",
+      "subcategory": "BERT误码率测试",
+      "representative": null,
+      "emerging": null,
+      "additional_companies": [],
+      "highlight": {
+        "label": "技术参照",
+        "scope": "与VNA测量不同；A股代表企业待核验"
       }
     }
   ],
@@ -1097,5 +2139,10 @@
   "highlight_legend": {
     "新技术": "子类中的新材料、新架构或新应用，不代表已经量产",
     "本次新增": "本次补充资料新增方向，不代表行业刚出现"
+  },
+  "coverage": {
+    "unique_a_share_companies": 66,
+    "subcategories": 54,
+    "original_missing": []
   }
 }
