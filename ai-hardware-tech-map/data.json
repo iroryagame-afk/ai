@@ -43,6 +43,10 @@
         "quote_time": "20260923154357",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "highlight": {
+        "label": "新技术",
+        "scope": "PTFE高速应用"
       }
     },
     {
@@ -83,6 +87,10 @@
         "quote_time": "20260923155945",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "highlight": {
+        "label": "新技术",
+        "scope": "M10材料路线"
       }
     },
     {
@@ -163,6 +171,10 @@
         "quote_time": "20260923154403",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "highlight": {
+        "label": "新技术",
+        "scope": "HVLP5"
       }
     },
     {
@@ -186,7 +198,11 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "highlight": {
+        "label": "新技术",
+        "scope": "高端Q布"
+      }
     },
     {
       "category": "PCB",
@@ -232,7 +248,11 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "highlight": {
+        "label": "新技术",
+        "scope": "1.6T及以上"
+      }
     },
     {
       "category": "光通信",
@@ -272,6 +292,10 @@
         "quote_time": "20260923155106",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "highlight": {
+        "label": "新技术",
+        "scope": "TFLN／CPO配套"
       }
     },
     {
@@ -312,6 +336,10 @@
         "quote_time": "20260923155059",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "highlight": {
+        "label": "新技术",
+        "scope": "CPO保偏配套"
       }
     },
     {
@@ -404,7 +432,11 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "highlight": {
+        "label": "新技术",
+        "scope": "CXL／MRDIMM"
+      }
     },
     {
       "category": "算力芯片与存储",
@@ -600,7 +632,11 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "highlight": {
+        "label": "新技术",
+        "scope": "TGV"
+      }
     },
     {
       "category": "先进封装",
@@ -623,7 +659,11 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "highlight": {
+        "label": "新技术",
+        "scope": "玻璃微孔加工"
+      }
     },
     {
       "category": "先进封装",
@@ -646,7 +686,11 @@
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
       },
-      "emerging": null
+      "emerging": null,
+      "highlight": {
+        "label": "新技术",
+        "scope": "TGV金属化"
+      }
     },
     {
       "category": "芯片散热与液冷",
@@ -686,6 +730,10 @@
         "quote_time": "20260923153831",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "highlight": {
+        "label": "新技术",
+        "scope": "芯片散热应用"
       }
     },
     {
@@ -767,6 +815,10 @@
         "quote_time": "20260923160000",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "highlight": {
+        "label": "本次新增",
+        "scope": "光模块散热材料"
       }
     },
     {
@@ -809,6 +861,10 @@
         "quote_time": "20260923155942",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "highlight": {
+        "label": "本次新增",
+        "scope": "光模块均热"
       }
     },
     {
@@ -877,6 +933,10 @@
         "quote_time": "20260923155912",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "highlight": {
+        "label": "本次新增",
+        "scope": "TEC陶瓷配套"
       }
     },
     {
@@ -919,6 +979,10 @@
         "quote_time": "20260923160003",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "highlight": {
+        "label": "新技术",
+        "scope": "液冷Cage"
       }
     },
     {
@@ -959,6 +1023,10 @@
         "quote_time": "20260923155057",
         "market_cap_status": "已核验",
         "verified_at": "2026-09-23"
+      },
+      "highlight": {
+        "label": "新技术",
+        "scope": "800V HVDC"
       }
     },
     {
@@ -1025,5 +1093,9 @@
       }
     }
   ],
-  "schema": "subcategory_pairs_v2"
+  "schema": "subcategory_pairs_v2",
+  "highlight_legend": {
+    "新技术": "子类中的新材料、新架构或新应用，不代表已经量产",
+    "本次新增": "本次补充资料新增方向，不代表行业刚出现"
+  }
 }
