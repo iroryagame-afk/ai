@@ -1,0 +1,98 @@
+{
+  "code": "US.PLTR",
+  "name": "Palantir",
+  "as_of": "2026-07-15 close",
+  "session_label": "overnight 133.56",
+  "currency": "USD",
+  "current": 133.76,
+  "status": "头肩底候选，尚未突破颈线",
+  "assessment": {
+    "quality": "medium",
+    "score": 68,
+    "score_is_probability": false,
+    "components": {
+      "geometry": 22,
+      "touches_duration": 10,
+      "volume": 8,
+      "breakout": 8,
+      "retest": 0,
+      "momentum": 10,
+      "regime_relative_strength": 10
+    },
+    "alternatives": ["箱体上沿测试"],
+    "contradictions": ["右肩仍未完成回踩"],
+    "missing_evidence": ["突破后回踩"]
+  },
+  "pattern": {
+    "type": "inverse_head_shoulders_candidate",
+    "label": "头肩底候选",
+    "family": "reversal",
+    "decision_zone": {"low": 136.0, "high": 139.0, "label": "颈线 136–139"},
+    "key_points": [
+      {"date": "2026-06-12", "label": "左肩", "value": 126.65},
+      {"date": "2026-06-25", "label": "头部", "value": 106.37},
+      {"date": "2026-07-14", "label": "右肩", "value": 122.64}
+    ],
+    "structure_lines": [
+      {
+        "label": "肩部支撑线",
+        "style": "support",
+        "points": [
+          {"date": "2026-06-12", "value": 126.65},
+          {"date": "2026-07-14", "value": 122.64}
+        ]
+      }
+    ]
+  },
+  "history": [
+    {"date": "2026-06-09", "close": 132.07},
+    {"date": "2026-06-10", "close": 130.21},
+    {"date": "2026-06-11", "close": 131.08},
+    {"date": "2026-06-12", "close": 127.99},
+    {"date": "2026-06-15", "close": 134.71},
+    {"date": "2026-06-17", "close": 130.63},
+    {"date": "2026-06-22", "close": 119.50},
+    {"date": "2026-06-24", "close": 113.50},
+    {"date": "2026-06-25", "close": 107.27},
+    {"date": "2026-06-26", "close": 112.93},
+    {"date": "2026-06-30", "close": 116.67},
+    {"date": "2026-07-01", "close": 125.73},
+    {"date": "2026-07-02", "close": 129.30},
+    {"date": "2026-07-07", "close": 134.37},
+    {"date": "2026-07-09", "close": 129.04},
+    {"date": "2026-07-10", "close": 126.79},
+    {"date": "2026-07-13", "close": 130.04},
+    {"date": "2026-07-14", "close": 133.72},
+    {"date": "2026-07-15", "close": 133.76}
+  ],
+  "scenarios": [
+    {"id": "A", "kind": "bullish", "label": "有效突破", "trigger": "收盘 >139，回踩 136–139 守住", "targets_label": "143–145 → 150–154 → 166–170", "path": [133.76, 138, 145, 152, 168]},
+    {"id": "B", "kind": "range", "label": "区间整理", "trigger": "123–139 震荡，等待右肩完成", "targets_label": "不预设上行目标", "path": [133.76, 126, 136, 130, 133]},
+    {"id": "C", "kind": "bearish", "label": "形态失效", "trigger": "收盘 <123；跌破 106 头部失效", "targets_label": "116 → 106", "path": [133.76, 125, 118, 110, 106]}
+  ],
+  "reminders": [
+    {"value": 139.0, "direction": "PRICE_UP", "note": "突破139｜不追·回踩136观察仓"},
+    {"value": 123.0, "direction": "PRICE_DOWN", "note": "跌破123｜减仓·收复再看"},
+    {"value": 106.0, "direction": "PRICE_DOWN", "note": "跌破106｜头部失效·止损"}
+  ],
+  "timing_overlay": {
+    "market": "US",
+    "source_skill": "stock-position-timing",
+    "data_status": "VERIFIED_FUTU_OPEND",
+    "trend_state": "healthy",
+    "heat_state": "normal",
+    "market_gate": "neutral",
+    "signal_state": "pending_close",
+    "position_state": "flat",
+    "decision": "wait_confirmation",
+    "summary": "候选突破，等收盘确认",
+    "confirmation": {
+      "required": ["收盘站上139", "回踩136–139守住"],
+      "met": []
+    },
+    "execution": {
+      "session": "after_hours",
+      "same_day_exit_allowed": true
+    }
+  }
+}
