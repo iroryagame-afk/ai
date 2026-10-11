@@ -262,9 +262,14 @@ def ensure_asset_tags(text: str, relative: str) -> str:
 
 
 def replace_or_insert_nav(text: str, relative: str) -> str:
-    canonical = re.compile(r'<nav class="csn-topnav".*?</nav>', re.S)
-    if canonical.search(text):
-        return canonical.sub(nav(relative), text, count=1)
+    canonical = re.compile(
+        r'<nav\b[^>]*\bclass=["\'][^"\']*\bcsn-topnav\b[^"\']*["\'][^>]*>.*?</nav>',
+        re.S,
+    )
+    matches = list(canonical.finditer(text))
+    if matches:
+        tail = canonical.sub("", text[matches[0].end() :])
+        return text[: matches[0].start()] + nav(relative) + tail
     body = re.search(r"<body[^>]*>", text, re.I)
     if not body:
         raise SystemExit(f"missing <body> in {relative}")

@@ -1,1329 +1,1616 @@
 {
-  "schema_version": "a_observe_ab_delivery_v1",
-  "data_date": "2026-09-17",
-  "next_session": "2026-09-18",
-  "scope": "本轮A/B；C规则未改但未重评",
-  "candidate_count": 53,
+  "schema_version": "a_observe_abc_full_v4",
+  "data_date": "2026-10-09",
+  "next_session": "2026-10-12",
+  "generated_at_bj": "2026-10-11T12:34:45+08:00",
+  "source_count": 106,
+  "covered_count": 104,
+  "coverage_ratio": 0.9811,
+  "C_pool_count": 11,
   "selected_count": 10,
-  "stocks": [
-    {
-      "code": "SH.688012",
-      "name": "中微公司",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -0.38854225751560056,
-      "volume_ratio": 0.5850886359952076,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -0.38854225751560056,
-          "volume_vs_key": 0.5850886359952076
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点3根日K（底日09-14；首次可知09-15后2根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300327",
-      "name": "中颖电子",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -0.1203369434416457,
-      "volume_ratio": 0.5904152279948404,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -0.1203369434416457,
-          "volume_vs_key": 0.5904152279948404
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688981",
-      "name": "中芯国际",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -1.8858560794044688,
-      "volume_ratio": 0.6214703992791242,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -1.8858560794044688,
-          "volume_vs_key": 0.6214703992791242
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点2根日K（底日09-15；首次可知09-16后1根）",
-      "theme_groups": [
-        "X"
-      ]
-    },
-    {
-      "code": "SZ.300576",
-      "name": "容大感光",
-      "classes": "A",
-      "industry": "电子化学品Ⅱ",
-      "stage": "回调第1日",
-      "change_pct": -1.3621262458471728,
-      "volume_ratio": 0.8313915363093933,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -1.3621262458471728,
-          "volume_vs_key": 0.8313915363093933
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688548",
-      "name": "广钢气体",
-      "classes": "A",
-      "industry": "电子化学品Ⅱ",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 3.689784762555526,
-      "volume_ratio": 1.599713421875504,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "转强确认",
-      "b_age_note": "本轮无有效B标记（不以底分型代替）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.002335",
-      "name": "科华数据",
-      "classes": "B",
-      "industry": "其他电源设备Ⅱ",
-      "stage": "日线笔底分型有效；KDJ单金叉",
-      "change_pct": -0.512820512820511,
-      "volume_ratio": 0.9005424132421114,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "转强酝酿",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300236",
-      "name": "上海新阳",
-      "classes": "A",
-      "industry": "电子化学品Ⅱ",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 0.7486870041345517,
-      "volume_ratio": 0.7917591736273386,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": [
-        "半导体"
-      ]
-    },
-    {
-      "code": "SZ.300243",
-      "name": "瑞丰高材",
-      "classes": "A",
-      "industry": "塑料",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 6.901763224181345,
-      "volume_ratio": 1.3720003778371521,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "本轮无有效B标记（不以底分型代替）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300567",
-      "name": "精测电子",
-      "classes": "B",
-      "industry": "通用设备",
-      "stage": "日线笔底分型有效；双金叉",
-      "change_pct": -0.7175757575757502,
-      "volume_ratio": 0.6316097625123471,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-15后2根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300274",
-      "name": "阳光电源",
-      "classes": "B",
-      "industry": "光伏设备",
-      "stage": "日线笔底分型有效；双金叉",
-      "change_pct": -0.5987320967363319,
-      "volume_ratio": 0.7455010844123157,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距1B?点4根日K（底日09-11；首次可知09-17后0根）",
-      "theme_groups": []
-    }
-  ],
+  "class_counts": {
+    "A": 1,
+    "B": 10,
+    "C": 1
+  },
+  "verified_nontechnology_count": 4,
+  "candidate_count": 29,
+  "candidate_class_counts": {
+    "A": 4,
+    "B": 17,
+    "C": 11
+  },
   "candidates": [
     {
-      "code": "SH.688012",
-      "name": "中微公司",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -0.38854225751560056,
-      "volume_ratio": 0.5850886359952076,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -0.38854225751560056,
-          "volume_vs_key": 0.5850886359952076
-        }
+      "rank": 1,
+      "code": "SH.601872",
+      "name": "招商轮船",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "B",
+        "C"
       ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点3根日K（底日09-14；首次可知09-15后2根）",
-      "theme_groups": []
+      "top10": true,
+      "technology": "已核验非科技",
+      "broad_category": "交通物流",
+      "industry": "航运港口",
+      "classification_path": "交通物流 → 航运港口",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "底部转强/酝酿／KDJ单金叉；C·趋势回踩、强势平台／趋势候选·位置偏远不追；本轮无有效B标记（不以底分型代替）",
+      "close": 22.07,
+      "volume_previous": 0.9295726731408172,
+      "volume_previous5": 1.7201,
+      "bottom_date": "2026-09-29",
+      "invalid": 19.78,
+      "crosses": [
+        "KDJ金叉 2026-10-09"
+      ],
+      "momentum": "KDJ单金叉确认",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
     },
     {
-      "code": "SZ.300327",
-      "name": "中颖电子",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -0.1203369434416457,
-      "volume_ratio": 0.5904152279948404,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -0.1203369434416457,
-          "volume_vs_key": 0.5904152279948404
-        }
+      "rank": 2,
+      "code": "SH.517520",
+      "name": "黄金股ETF永赢",
+      "kind": "ETF",
+      "origin": "板块ETF",
+      "classes": [
+        "B"
       ],
-      "m30_status": "信号分歧",
-      "b_age_note": "",
-      "theme_groups": []
+      "top10": true,
+      "technology": "未分类/ETF",
+      "broad_category": "ETF/未分类",
+      "industry": "黄金股ETF永赢",
+      "classification_path": "ETF/未分类 → 黄金股ETF永赢",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "底部转强/酝酿／KDJ单金叉；本轮无有效B标记（不以底分型代替）",
+      "close": 1.919,
+      "volume_previous": 3.0929931720299755,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-29",
+      "invalid": 1.8,
+      "crosses": [
+        "KDJ金叉 2026-10-09"
+      ],
+      "momentum": "金叉前修复",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
     },
     {
-      "code": "SH.688981",
-      "name": "中芯国际",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -1.8858560794044688,
-      "volume_ratio": 0.6214703992791242,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -1.8858560794044688,
-          "volume_vs_key": 0.6214703992791242
-        }
+      "rank": 3,
+      "code": "SH.688111",
+      "name": "金山办公",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "A",
+        "B"
       ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点2根日K（底日09-15；首次可知09-16后1根）",
-      "theme_groups": [
+      "top10": true,
+      "technology": "科技",
+      "broad_category": "科技",
+      "industry": "软件开发",
+      "classification_path": "科技 → 软件开发",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "底部转强/酝酿／双金叉；A·板块2/3观察，待补：华为HMS成分涨停1家，未达2家；本轮无有效B标记（不以底分型代替）",
+      "close": 228.95,
+      "volume_previous": 1.8455221388104193,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-29",
+      "invalid": 215.15,
+      "crosses": [
+        "MACD金叉 2026-10-09",
+        "KDJ金叉 2026-10-09"
+      ],
+      "momentum": "本轮金叉转强",
+      "A_confirmed": false,
+      "A_observation": true,
+      "A_pending_conditions": [
+        "华为HMS成分涨停1家，未达2家"
+      ],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 4,
+      "code": "SH.600141",
+      "name": "兴发集团",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "B"
+      ],
+      "top10": true,
+      "technology": "已核验非科技",
+      "broad_category": "材料化工",
+      "industry": "农化制品",
+      "classification_path": "材料化工 → 农化制品",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "底部转强/酝酿／KDJ单金叉；本轮无有效B标记（不以底分型代替）",
+      "close": 27.3,
+      "volume_previous": 1.4139314647222216,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-29",
+      "invalid": 26.28,
+      "crosses": [
+        "KDJ金叉 2026-10-08"
+      ],
+      "momentum": "金叉前修复",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 5,
+      "code": "SZ.159870",
+      "name": "化工ETF鹏华",
+      "kind": "ETF",
+      "origin": "板块ETF",
+      "classes": [
+        "B"
+      ],
+      "top10": true,
+      "technology": "未分类/ETF",
+      "broad_category": "ETF/未分类",
+      "industry": "化工ETF鹏华",
+      "classification_path": "ETF/未分类 → 化工ETF鹏华",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "底部转强/酝酿／KDJ单金叉；本轮无有效B标记（不以底分型代替）",
+      "close": 0.755,
+      "volume_previous": 0.702974493120157,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-29",
+      "invalid": 0.728,
+      "crosses": [
+        "KDJ金叉 2026-10-08"
+      ],
+      "momentum": "金叉前修复",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 6,
+      "code": "SH.600089",
+      "name": "特变电工",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "B"
+      ],
+      "top10": true,
+      "technology": "未分类/ETF",
+      "broad_category": "新能源",
+      "industry": "电网设备",
+      "classification_path": "新能源 → 电网设备",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "缩量回踩守底／双金叉；距B?点3根日K（底日09-29；首次可知09-30后2根）",
+      "close": 17.74,
+      "volume_previous": 0.7384214865564231,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-29",
+      "invalid": 17.13,
+      "crosses": [
+        "MACD金叉 2026-10-09",
+        "KDJ金叉 2026-10-08"
+      ],
+      "momentum": "本轮金叉转强",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 7,
+      "code": "SZ.159662",
+      "name": "交运ETF南方",
+      "kind": "ETF",
+      "origin": "板块ETF",
+      "classes": [
+        "B"
+      ],
+      "top10": true,
+      "technology": "未分类/ETF",
+      "broad_category": "ETF/未分类",
+      "industry": "交运ETF南方",
+      "classification_path": "ETF/未分类 → 交运ETF南方",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "底部转强/酝酿／双金叉；本轮无有效B标记（不以底分型代替）",
+      "close": 0.996,
+      "volume_previous": 0.9731520603688864,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-28",
+      "invalid": 0.96,
+      "crosses": [
+        "MACD金叉 2026-10-09",
+        "KDJ金叉 2026-10-08"
+      ],
+      "momentum": "本轮金叉转强",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 8,
+      "code": "SH.515220",
+      "name": "煤炭ETF国泰",
+      "kind": "ETF",
+      "origin": "板块ETF",
+      "classes": [
+        "B"
+      ],
+      "top10": true,
+      "technology": "未分类/ETF",
+      "broad_category": "ETF/未分类",
+      "industry": "煤炭ETF国泰",
+      "classification_path": "ETF/未分类 → 煤炭ETF国泰",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "底部转强/酝酿／KDJ单金叉；距B?点3根日K（底日09-29；首次可知10-08后1根）",
+      "close": 1.298,
+      "volume_previous": 1.53854311814714,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-29",
+      "invalid": 1.229,
+      "crosses": [
+        "KDJ金叉 2026-09-21"
+      ],
+      "momentum": "金叉前修复",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 9,
+      "code": "SH.600938",
+      "name": "中国海油",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "B"
+      ],
+      "top10": true,
+      "technology": "已核验非科技",
+      "broad_category": "能源公用",
+      "industry": "油气开采Ⅱ",
+      "classification_path": "能源公用 → 油气开采Ⅱ",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "缩量回踩守底／双金叉；距B?点8根日K（底日09-21；首次可知09-22后7根）",
+      "close": 33.82,
+      "volume_previous": 0.8370530303897203,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-21",
+      "invalid": 31.84,
+      "crosses": [
+        "MACD金叉 2026-10-08",
+        "KDJ金叉 2026-09-28"
+      ],
+      "momentum": "本轮金叉转强",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 10,
+      "code": "SH.600900",
+      "name": "长江电力",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "B"
+      ],
+      "top10": true,
+      "technology": "已核验非科技",
+      "broad_category": "能源公用",
+      "industry": "电力",
+      "classification_path": "能源公用 → 电力",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "底部转强/酝酿／双金叉；距3B?点39根日K（底日08-07；首次可知09-08后17根）",
+      "close": 28.99,
+      "volume_previous": 1.1730585951216836,
+      "volume_previous5": null,
+      "bottom_date": "2026-08-07",
+      "invalid": 27.51,
+      "crosses": [
+        "MACD金叉 2026-09-28",
+        "KDJ金叉 2026-09-28"
+      ],
+      "momentum": "本轮金叉转强",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 11,
+      "code": "SZ.159611",
+      "name": "电力ETF广发",
+      "kind": "ETF",
+      "origin": "板块ETF",
+      "classes": [
+        "B"
+      ],
+      "top10": false,
+      "technology": "未分类/ETF",
+      "broad_category": "ETF/未分类",
+      "industry": "电力ETF广发",
+      "classification_path": "ETF/未分类 → 电力ETF广发",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "底部转强/酝酿／双金叉；距B?点5根日K（底日09-24；首次可知09-28后4根）",
+      "close": 1.052,
+      "volume_previous": 0.610910358204619,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-24",
+      "invalid": 1.02,
+      "crosses": [
+        "MACD金叉 2026-10-08",
+        "KDJ金叉 2026-09-30"
+      ],
+      "momentum": "本轮金叉转强",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 12,
+      "code": "SZ.159697",
+      "name": "石油ETF鹏华",
+      "kind": "ETF",
+      "origin": "板块ETF",
+      "classes": [
+        "B"
+      ],
+      "top10": false,
+      "technology": "未分类/ETF",
+      "broad_category": "ETF/未分类",
+      "industry": "石油ETF鹏华",
+      "classification_path": "ETF/未分类 → 石油ETF鹏华",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "缩量回踩守底／KDJ单金叉；距3B?点2根日K（底日09-30；首次可知10-08后1根）",
+      "close": 1.33,
+      "volume_previous": 0.9491712766760484,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-30",
+      "invalid": 1.286,
+      "crosses": [
+        "KDJ金叉 2026-10-08"
+      ],
+      "momentum": "金叉前修复",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 13,
+      "code": "SH.600188",
+      "name": "兖矿能源",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "B"
+      ],
+      "top10": false,
+      "technology": "已核验非科技",
+      "broad_category": "能源公用",
+      "industry": "煤炭开采",
+      "classification_path": "能源公用 → 煤炭开采",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "底部转强/酝酿／双金叉；本轮无有效B标记（不以底分型代替）",
+      "close": 20.48,
+      "volume_previous": 1.4229821147707502,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-29",
+      "invalid": 18.88,
+      "crosses": [
+        "MACD金叉 2026-10-09",
+        "KDJ金叉 2026-09-28"
+      ],
+      "momentum": "本轮金叉转强",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 14,
+      "code": "SH.601899",
+      "name": "紫金矿业",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "A",
+        "B"
+      ],
+      "top10": false,
+      "technology": "已核验非科技",
+      "broad_category": "材料化工",
+      "industry": "工业金属",
+      "classification_path": "材料化工 → 工业金属",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "底部转强/酝酿／KDJ单金叉；A·板块2/3观察，待补：有色(锡)成分涨停0家，未达2家；本轮无有效B标记（不以底分型代替）",
+      "close": 30.8,
+      "volume_previous": 2.0748880684113513,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-29",
+      "invalid": 29.01,
+      "crosses": [
+        "KDJ金叉 2026-10-09"
+      ],
+      "momentum": "金叉前修复",
+      "A_confirmed": false,
+      "A_observation": true,
+      "A_pending_conditions": [
+        "有色(锡)成分涨停0家，未达2家"
+      ],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 15,
+      "code": "SZ.002415",
+      "name": "海康威视",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "B"
+      ],
+      "top10": false,
+      "technology": "科技",
+      "broad_category": "科技",
+      "industry": "计算机设备",
+      "classification_path": "科技 → 计算机设备",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "缩量回踩守底／双金叉；本轮无有效B标记（不以底分型代替）",
+      "close": 32.97,
+      "volume_previous": 0.9710080206759841,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-29",
+      "invalid": 31.98,
+      "crosses": [
+        "MACD金叉 2026-10-08",
+        "KDJ金叉 2026-10-08"
+      ],
+      "momentum": "本轮金叉转强",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 16,
+      "code": "SZ.300489",
+      "name": "光智科技",
+      "kind": "股票",
+      "origin": "三类A",
+      "classes": [
+        "C"
+      ],
+      "top10": false,
+      "technology": "未分类/ETF",
+      "broad_category": "科技",
+      "industry": "光学光电子",
+      "classification_path": "科技 → 光学光电子",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "回调/整理观察·待价格确认",
+      "close": 278.82,
+      "volume_previous": null,
+      "volume_previous5": 1.238147,
+      "bottom_date": "2026-10-08",
+      "invalid": 251.0,
+      "crosses": [],
+      "momentum": "KDJ单金叉确认",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "主题备注：X",
+      "other_groups": [
         "X"
       ]
     },
     {
-      "code": "SZ.300576",
-      "name": "容大感光",
-      "classes": "A",
-      "industry": "电子化学品Ⅱ",
-      "stage": "回调第1日",
-      "change_pct": -1.3621262458471728,
-      "volume_ratio": 0.8313915363093933,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -1.3621262458471728,
-          "volume_vs_key": 0.8313915363093933
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688548",
-      "name": "广钢气体",
-      "classes": "A",
-      "industry": "电子化学品Ⅱ",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 3.689784762555526,
-      "volume_ratio": 1.599713421875504,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "转强确认",
-      "b_age_note": "本轮无有效B标记（不以底分型代替）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.002335",
-      "name": "科华数据",
-      "classes": "B",
-      "industry": "其他电源设备Ⅱ",
-      "stage": "日线笔底分型有效；KDJ单金叉",
-      "change_pct": -0.512820512820511,
-      "volume_ratio": 0.9005424132421114,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "转强酝酿",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300236",
-      "name": "上海新阳",
-      "classes": "A",
-      "industry": "电子化学品Ⅱ",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 0.7486870041345517,
-      "volume_ratio": 0.7917591736273386,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": [
-        "半导体"
-      ]
-    },
-    {
-      "code": "SZ.300243",
-      "name": "瑞丰高材",
-      "classes": "A",
-      "industry": "塑料",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 6.901763224181345,
-      "volume_ratio": 1.3720003778371521,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "本轮无有效B标记（不以底分型代替）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300567",
-      "name": "精测电子",
-      "classes": "B",
-      "industry": "通用设备",
-      "stage": "日线笔底分型有效；双金叉",
-      "change_pct": -0.7175757575757502,
-      "volume_ratio": 0.6316097625123471,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-15后2根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300274",
-      "name": "阳光电源",
-      "classes": "B",
-      "industry": "光伏设备",
-      "stage": "日线笔底分型有效；双金叉",
-      "change_pct": -0.5987320967363319,
-      "volume_ratio": 0.7455010844123157,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距1B?点4根日K（底日09-11；首次可知09-17后0根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688372",
-      "name": "伟测科技",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -1.647882513661203,
-      "volume_ratio": 0.6255376618087722,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -1.647882513661203,
-          "volume_vs_key": 0.6255376618087722
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-15后2根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688362",
-      "name": "甬矽电子",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -2.0414673046251997,
-      "volume_ratio": 0.6599181691359985,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -2.0414673046251997,
-          "volume_vs_key": 0.6599181691359985
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-15后2根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300456",
-      "name": "赛微电子",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -1.702483951995537,
-      "volume_ratio": 0.6609708669616312,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -1.702483951995537,
-          "volume_vs_key": 0.6609708669616312
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688783",
-      "name": "西安奕材-U",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -1.790730337078661,
-      "volume_ratio": 0.707320973645541,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -1.790730337078661,
-          "volume_vs_key": 0.707320973645541
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点3根日K（底日09-14；首次可知09-15后2根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688591",
-      "name": "泰凌微",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -0.1770538243625941,
-      "volume_ratio": 0.7267178848211931,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -0.1770538243625941,
-          "volume_vs_key": 0.7267178848211931
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688126",
-      "name": "沪硅产业",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -0.5459890802183898,
-      "volume_ratio": 0.7467415391459212,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -0.5459890802183898,
-          "volume_vs_key": 0.7467415391459212
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": [
-        "半导体"
-      ]
-    },
-    {
-      "code": "SH.688153",
-      "name": "唯捷创芯",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -0.6019261637239204,
-      "volume_ratio": 0.750169557911806,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -0.6019261637239204,
-          "volume_vs_key": 0.750169557911806
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688584",
-      "name": "上海合晶",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -2.3672883787661414,
-      "volume_ratio": 0.7590768180689692,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -2.3672883787661414,
-          "volume_vs_key": 0.7590768180689692
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": [
-        "半导体"
-      ]
-    },
-    {
-      "code": "SH.688233",
-      "name": "神工股份",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -0.3184079601989964,
-      "volume_ratio": 0.7685757473153623,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -0.3184079601989964,
-          "volume_vs_key": 0.7685757473153623
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.002156",
-      "name": "通富微电",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -1.5200135112312108,
-      "volume_ratio": 0.7772424734342064,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -1.5200135112312108,
-          "volume_vs_key": 0.7772424734342064
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-15后2根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688234",
-      "name": "天岳先进",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -0.675547098001894,
-      "volume_ratio": 0.8066113833067253,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -0.675547098001894,
-          "volume_vs_key": 0.8066113833067253
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688515",
-      "name": "裕太微-U",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -1.1004590872265685,
-      "volume_ratio": 0.8286638411777827,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -1.1004590872265685,
-          "volume_vs_key": 0.8286638411777827
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-15后2根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.600584",
-      "name": "长电科技",
-      "classes": "A+B",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -2.588066139468004,
-      "volume_ratio": 0.8705501050152598,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -2.588066139468004,
-          "volume_vs_key": 0.8705501050152598
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-15后2根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300053",
-      "name": "航宇微",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "回调第1日",
-      "change_pct": -2.62941659819228,
-      "volume_ratio": 0.8765299103945479,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [
-        {
-          "date": "2026-09-17",
-          "change_pct": -2.62941659819228,
-          "volume_vs_key": 0.8765299103945479
-        }
-      ],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点17根日K（底日08-25；首次可知08-26后16根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688802",
-      "name": "沐曦股份-U",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K当日",
-      "change_pct": 14.43588240221123,
-      "volume_ratio": 1.0,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-17",
-      "pullback_days": [],
-      "m30_status": "转强酝酿",
-      "b_age_note": "",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688352",
-      "name": "颀中科技",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 0.46801872074881956,
-      "volume_ratio": 0.5916790917620635,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688484",
-      "name": "南芯科技",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 1.0670731707317138,
-      "volume_ratio": 0.6935498844458174,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.002371",
-      "name": "北方华创",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 0.393730483187249,
-      "volume_ratio": 0.748623712375177,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "本轮无有效B标记（不以底分型代替）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300054",
-      "name": "鼎龙股份",
-      "classes": "A",
-      "industry": "电子化学品Ⅱ",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 1.079698820855235,
-      "volume_ratio": 0.9046877325976985,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": [
-        "高弹"
-      ]
-    },
-    {
-      "code": "SH.688396",
-      "name": "华润微",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 0.8123055651572786,
-      "volume_ratio": 0.9509314809883498,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-15后2根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300373",
-      "name": "扬杰科技",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 0.9755550571876936,
-      "volume_ratio": 1.0804786229904761,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点3根日K（底日09-14；首次可知09-15后2根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.605358",
-      "name": "立昂微",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 0.8914642299977737,
-      "volume_ratio": 1.216595981896452,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": [
-        "半导体"
-      ]
-    },
-    {
-      "code": "SH.600641",
-      "name": "先导基电",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 10.01494768310911,
-      "volume_ratio": 1.2298629015273383,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "本轮无有效B标记（不以底分型代替）",
-      "theme_groups": [
-        "X",
-        "高弹"
-      ]
-    },
-    {
-      "code": "SH.688261",
-      "name": "东微半导",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 3.425058548009363,
-      "volume_ratio": 1.369894745888805,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688785",
-      "name": "恒运昌",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K当日",
-      "change_pct": 4.755871446229909,
-      "volume_ratio": 1.0,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-17",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "",
-      "theme_groups": [
-        "缺货"
-      ]
-    },
-    {
-      "code": "SZ.300346",
-      "name": "南大光电",
-      "classes": "A",
-      "industry": "电子化学品Ⅱ",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 1.8205222508274943,
-      "volume_ratio": 1.5691270455427493,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": [
-        "半导体"
-      ]
-    },
-    {
-      "code": "SH.605111",
-      "name": "新洁能",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 4.646643109540638,
-      "volume_ratio": 1.6255327104912376,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688795",
-      "name": "摩尔线程-U",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K当日",
-      "change_pct": 8.675824175824175,
-      "volume_ratio": 1.0,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-17",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "本轮无有效B标记（不以底分型代替）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.301678",
-      "name": "新恒汇",
-      "classes": "A",
-      "industry": "半导体",
-      "stage": "关K后回升/尚未回调",
-      "change_pct": 8.949933540097476,
-      "volume_ratio": 3.6712824321507567,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300666",
-      "name": "江丰电子",
-      "classes": "B",
-      "industry": "半导体",
-      "stage": "日线笔底分型有效；双金叉",
-      "change_pct": -1.3605980302970444,
-      "volume_ratio": 0.6775878199761637,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": [
-        "缺货"
-      ]
-    },
-    {
-      "code": "SZ.300458",
-      "name": "全志科技",
-      "classes": "B",
-      "industry": "半导体",
-      "stage": "日线笔底分型有效；KDJ单金叉",
-      "change_pct": -0.828363154406897,
-      "volume_ratio": 0.7234661264715175,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-14",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点3根日K（底日09-14；首次可知09-15后2根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300408",
-      "name": "三环集团",
-      "classes": "B",
-      "industry": "元件",
-      "stage": "日线笔底分型有效；双金叉",
-      "change_pct": -1.4397905759162333,
-      "volume_ratio": 0.8249794117787681,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-08-25",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点17根日K（底日08-25；首次可知08-27后15根）",
-      "theme_groups": [
-        "元器件",
-        "材料"
-      ]
-    },
-    {
-      "code": "SH.688249",
-      "name": "晶合集成",
-      "classes": "B",
-      "industry": "半导体",
-      "stage": "日线笔底分型有效；双金叉",
-      "change_pct": -1.850294365012628,
-      "volume_ratio": 0.8398724391438287,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.600276",
-      "name": "恒瑞医药",
-      "classes": "B",
-      "industry": "化学制药",
-      "stage": "日线笔底分型有效；KDJ单金叉",
-      "change_pct": -0.6663602941176627,
-      "volume_ratio": 0.8470147639069237,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "本轮无有效B标记（不以底分型代替）",
-      "theme_groups": []
-    },
-    {
-      "code": "SH.688110",
-      "name": "东芯股份",
-      "classes": "B",
-      "industry": "半导体",
-      "stage": "日线笔底分型有效；双金叉",
-      "change_pct": -0.2331606217616522,
-      "volume_ratio": 0.8500093729738741,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-07-20",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "本轮无有效B标记（不以底分型代替）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.002138",
-      "name": "顺络电子",
-      "classes": "B",
-      "industry": "元件",
-      "stage": "日线笔底分型有效；双金叉",
-      "change_pct": -2.327856025039121,
-      "volume_ratio": 0.8594973205741994,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-04",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点9根日K（底日09-04；首次可知09-07后8根）",
-      "theme_groups": [
-        "元器件"
-      ]
-    },
-    {
+      "rank": 17,
       "code": "SH.603893",
       "name": "瑞芯微",
-      "classes": "B",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "C"
+      ],
+      "top10": false,
+      "technology": "科技",
+      "broad_category": "科技",
       "industry": "半导体",
-      "stage": "日线笔底分型有效；金叉前观察",
-      "change_pct": 0.487994232795419,
-      "volume_ratio": 0.9776504047355444,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
+      "classification_path": "科技 → 半导体",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "回调/整理观察·待价格确认",
+      "close": 202.72,
+      "volume_previous": null,
+      "volume_previous5": 1.07713,
+      "bottom_date": "2026-10-09",
+      "invalid": 193.85,
+      "crosses": [],
+      "momentum": "MACD多头延续",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
     },
     {
-      "code": "SH.603259",
-      "name": "药明康德",
-      "classes": "B",
-      "industry": "医疗服务",
-      "stage": "日线笔底分型有效；KDJ单金叉",
-      "change_pct": 1.762729059666479,
-      "volume_ratio": 1.2120744199769125,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "本轮无有效B标记（不以底分型代替）",
-      "theme_groups": []
+      "rank": 18,
+      "code": "SH.603093",
+      "name": "南华期货",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "C"
+      ],
+      "top10": false,
+      "technology": "已核验非科技",
+      "broad_category": "金融",
+      "industry": "多元金融",
+      "classification_path": "金融 → 多元金融",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "回调/整理观察·待价格确认",
+      "close": 13.52,
+      "volume_previous": null,
+      "volume_previous5": 1.201555,
+      "bottom_date": "2026-09-14",
+      "invalid": 12.95,
+      "crosses": [],
+      "momentum": "金叉前/动能改善观察",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
     },
     {
-      "code": "SH.688322",
-      "name": "奥比中光-W",
-      "classes": "B",
-      "industry": "光学光电子",
-      "stage": "日线笔底分型有效；KDJ单金叉",
-      "change_pct": 0.8147087966530853,
-      "volume_ratio": 1.2372538945101894,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
+      "rank": 19,
+      "code": "SZ.301015",
+      "name": "百洋医药",
+      "kind": "股票",
+      "origin": "三类A",
+      "classes": [
+        "C"
+      ],
+      "top10": false,
+      "technology": "未分类/ETF",
+      "broad_category": "医药",
+      "industry": "医药商业",
+      "classification_path": "医药 → 医药商业",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "回调/整理观察·待价格确认",
+      "close": 25.94,
+      "volume_previous": null,
+      "volume_previous5": 1.29381,
+      "bottom_date": "2026-09-29",
+      "invalid": 24.62,
+      "crosses": [],
+      "momentum": "KDJ单金叉确认",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
     },
     {
-      "code": "SH.600707",
-      "name": "彩虹股份",
-      "classes": "B",
-      "industry": "光学光电子",
-      "stage": "日线笔底分型有效；双金叉",
-      "change_pct": 1.3157894736842257,
-      "volume_ratio": 1.3690909355190395,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
-    },
-    {
-      "code": "SZ.300857",
-      "name": "协创数据",
-      "classes": "B",
-      "industry": "消费电子",
-      "stage": "日线笔底分型有效；KDJ单金叉",
-      "change_pct": 3.0890416248358976,
-      "volume_ratio": 1.489790676305901,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-16",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "本轮无有效B标记（不以底分型代替）",
-      "theme_groups": [
+      "rank": 20,
+      "code": "SH.688008",
+      "name": "澜起科技",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "B"
+      ],
+      "top10": false,
+      "technology": "科技",
+      "broad_category": "科技",
+      "industry": "半导体",
+      "classification_path": "科技 → 半导体",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "动能有效待价格确认／MACD单金叉；本轮无有效B标记（不以底分型代替）",
+      "close": 197.6,
+      "volume_previous": 1.0421519976991156,
+      "volume_previous5": null,
+      "bottom_date": "2026-07-20",
+      "invalid": 179.864,
+      "crosses": [
+        "MACD金叉 2026-09-16"
+      ],
+      "momentum": "金叉保持但减速",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "主题备注：国算",
+      "other_groups": [
         "国算"
       ]
     },
     {
-      "code": "SZ.300115",
-      "name": "长盈精密",
-      "classes": "B",
-      "industry": "消费电子",
-      "stage": "日线笔底分型有效；双金叉",
-      "change_pct": 6.471095772217428,
-      "volume_ratio": 3.112594835003594,
-      "volume_basis": "前一交易日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [],
-      "m30_status": "信号分歧",
-      "b_age_note": "距B?点4根日K（底日09-11；首次可知09-14后3根）",
-      "theme_groups": []
+      "rank": 21,
+      "code": "SZ.301165",
+      "name": "锐捷网络",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "A"
+      ],
+      "top10": false,
+      "technology": "科技",
+      "broad_category": "科技",
+      "industry": "通信设备",
+      "classification_path": "科技 → 通信设备",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "关K回调第66日；A·板块2/3观察，待补：快手概念成分涨停1家，未达2家",
+      "close": 97.16,
+      "volume_previous": null,
+      "volume_previous5": null,
+      "bottom_date": "2026-07-01",
+      "invalid": 62.58,
+      "crosses": [],
+      "momentum": "板块2/3待补观察",
+      "A_confirmed": false,
+      "A_observation": true,
+      "A_pending_conditions": [
+        "快手概念成分涨停1家，未达2家"
+      ],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "主题备注：X、国算",
+      "other_groups": [
+        "X",
+        "国算"
+      ]
     },
     {
-      "code": "SH.688543",
-      "name": "国科军工",
-      "classes": "A",
-      "industry": "地面兵装Ⅱ",
-      "stage": "首次回调已结束；再次回调第1日",
-      "change_pct": -0.6769374416433438,
-      "volume_ratio": 0.35925953146149553,
-      "volume_basis": "关K日",
-      "structure_date": "2026-09-11",
-      "pullback_days": [
-        {
-          "date": "2026-09-14",
-          "change_pct": -5.634715025906734,
-          "volume_vs_key": 0.6871614018170145
-        },
-        {
-          "date": "2026-09-15",
-          "change_pct": -2.9741477922672233,
-          "volume_vs_key": 0.4196544066860593
-        }
+      "rank": 22,
+      "code": "SH.512800",
+      "name": "银行ETF华宝",
+      "kind": "ETF",
+      "origin": "板块ETF",
+      "classes": [
+        "B"
       ],
-      "m30_status": "尚未配合",
-      "b_age_note": "",
-      "theme_groups": []
+      "top10": false,
+      "technology": "未分类/ETF",
+      "broad_category": "ETF/未分类",
+      "industry": "银行ETF华宝",
+      "classification_path": "ETF/未分类 → 银行ETF华宝",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "动能有效待价格确认／双金叉；本轮无有效B标记（不以底分型代替）",
+      "close": 0.85,
+      "volume_previous": 1.5487959405602043,
+      "volume_previous5": null,
+      "bottom_date": "2026-09-21",
+      "invalid": 0.827,
+      "crosses": [
+        "MACD金叉 2026-10-08",
+        "KDJ金叉 2026-09-29"
+      ],
+      "momentum": "本轮金叉转强",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 23,
+      "code": "SH.688026",
+      "name": "洁特生物",
+      "kind": "股票",
+      "origin": "三类A",
+      "classes": [
+        "C"
+      ],
+      "top10": false,
+      "technology": "未分类/ETF",
+      "broad_category": "医药",
+      "industry": "医疗器械",
+      "classification_path": "医药 → 医疗器械",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "回调/整理观察·待价格确认",
+      "close": 27.95,
+      "volume_previous": null,
+      "volume_previous5": 1.576089,
+      "bottom_date": "2026-10-09",
+      "invalid": 25.0,
+      "crosses": [],
+      "momentum": "MACD多头延续",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 24,
+      "code": "SZ.300750",
+      "name": "宁德时代",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "A"
+      ],
+      "top10": false,
+      "technology": "已核验非科技",
+      "broad_category": "新能源",
+      "industry": "电池",
+      "classification_path": "新能源 → 电池",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "关K回调第0日；A·板块2/3观察，待补：固液电池成分涨停0家，未达2家",
+      "close": 297.75,
+      "volume_previous": null,
+      "volume_previous5": null,
+      "bottom_date": "2026-10-09",
+      "invalid": 285.17,
+      "crosses": [],
+      "momentum": "板块2/3待补观察",
+      "A_confirmed": false,
+      "A_observation": true,
+      "A_pending_conditions": [
+        "固液电池成分涨停0家，未达2家"
+      ],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 25,
+      "code": "SZ.002172",
+      "name": "澳洋健康",
+      "kind": "股票",
+      "origin": "三类A",
+      "classes": [
+        "C"
+      ],
+      "top10": false,
+      "technology": "未分类/ETF",
+      "broad_category": "医药",
+      "industry": "医疗服务",
+      "classification_path": "医药 → 医疗服务",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "趋势候选·位置偏远不追",
+      "close": 5.91,
+      "volume_previous": null,
+      "volume_previous5": 1.079683,
+      "bottom_date": "2026-09-29",
+      "invalid": 4.98,
+      "crosses": [],
+      "momentum": "双金叉确认",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 26,
+      "code": "SH.688175",
+      "name": "高凌信息",
+      "kind": "股票",
+      "origin": "三类A",
+      "classes": [
+        "C"
+      ],
+      "top10": false,
+      "technology": "未分类/ETF",
+      "broad_category": "军工",
+      "industry": "军工电子Ⅱ",
+      "classification_path": "军工 → 军工电子Ⅱ",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "趋势候选·位置偏远不追",
+      "close": 30.66,
+      "volume_previous": null,
+      "volume_previous5": 0.743746,
+      "bottom_date": "2026-10-09",
+      "invalid": 28.64,
+      "crosses": [],
+      "momentum": "MACD多头延续",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 27,
+      "code": "SH.603067",
+      "name": "振华股份",
+      "kind": "股票",
+      "origin": "三类A",
+      "classes": [
+        "C"
+      ],
+      "top10": false,
+      "technology": "未分类/ETF",
+      "broad_category": "材料化工",
+      "industry": "化学原料",
+      "classification_path": "材料化工 → 化学原料",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "趋势候选·位置偏远不追",
+      "close": 42.31,
+      "volume_previous": null,
+      "volume_previous5": 1.133509,
+      "bottom_date": "2026-10-09",
+      "invalid": 36.45,
+      "crosses": [],
+      "momentum": "KDJ单金叉确认",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "主题备注：材料",
+      "other_groups": [
+        "材料"
+      ]
+    },
+    {
+      "rank": 28,
+      "code": "SZ.301486",
+      "name": "致尚科技",
+      "kind": "股票",
+      "origin": "三类A",
+      "classes": [
+        "C"
+      ],
+      "top10": false,
+      "technology": "未分类/ETF",
+      "broad_category": "科技",
+      "industry": "消费电子",
+      "classification_path": "科技 → 消费电子",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "趋势候选·位置偏远不追",
+      "close": 222.0,
+      "volume_previous": null,
+      "volume_previous5": 1.78252,
+      "bottom_date": "2026-09-29",
+      "invalid": 178.07,
+      "crosses": [],
+      "momentum": "KDJ单金叉确认",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "主题备注：光",
+      "other_groups": [
+        "光"
+      ]
+    },
+    {
+      "rank": 29,
+      "code": "SZ.300981",
+      "name": "中红医疗",
+      "kind": "股票",
+      "origin": "三类A",
+      "classes": [
+        "C"
+      ],
+      "top10": false,
+      "technology": "未分类/ETF",
+      "broad_category": "医药",
+      "industry": "医疗器械",
+      "classification_path": "医药 → 医疗器械",
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "stage": "趋势候选·位置偏远不追",
+      "close": 23.36,
+      "volume_previous": null,
+      "volume_previous5": 1.296075,
+      "bottom_date": "2026-10-09",
+      "invalid": 18.5,
+      "crosses": [],
+      "momentum": "KDJ单金叉确认",
+      "A_confirmed": false,
+      "A_observation": false,
+      "A_pending_conditions": [],
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
     }
   ],
-  "group_notes_verified_at": "2026-09-17T17:52:16.153002",
-  "watchlist_readback_ok": true,
-  "C_source_verified": false,
-  "price_plan_complete": false,
-  "execution_ready": false,
-  "evidence": {
-    "result_sha256": "5fe2d3694e5a66524413fe4226243b892175fd92de2828943958dc3ca034a740"
+  "taxonomy_snapshot": {
+    "asof": "2026-09-16",
+    "source": "A观察本轮已核验行业字段的展示层分组；二级分类保留原行业名称",
+    "broad_order": [
+      "科技",
+      "高端制造",
+      "新能源",
+      "军工",
+      "医药",
+      "材料化工",
+      "农林牧渔",
+      "消费",
+      "金融",
+      "能源公用",
+      "基建地产",
+      "交通物流",
+      "综合",
+      "ETF/未分类"
+    ],
+    "broad_counts": {
+      "科技": 7,
+      "高端制造": 0,
+      "新能源": 2,
+      "军工": 1,
+      "医药": 4,
+      "材料化工": 3,
+      "农林牧渔": 0,
+      "消费": 0,
+      "金融": 1,
+      "能源公用": 3,
+      "基建地产": 0,
+      "交通物流": 1,
+      "综合": 0,
+      "ETF/未分类": 7
+    },
+    "industry_counts": {
+      "交运ETF南方": 1,
+      "光学光电子": 1,
+      "军工电子Ⅱ": 1,
+      "农化制品": 1,
+      "化学原料": 1,
+      "化工ETF鹏华": 1,
+      "医疗器械": 2,
+      "医疗服务": 1,
+      "医药商业": 1,
+      "半导体": 2,
+      "多元金融": 1,
+      "工业金属": 1,
+      "油气开采Ⅱ": 1,
+      "消费电子": 1,
+      "煤炭ETF国泰": 1,
+      "煤炭开采": 1,
+      "电力": 1,
+      "电力ETF广发": 1,
+      "电池": 1,
+      "电网设备": 1,
+      "石油ETF鹏华": 1,
+      "航运港口": 1,
+      "计算机设备": 1,
+      "软件开发": 1,
+      "通信设备": 1,
+      "银行ETF华宝": 1,
+      "黄金股ETF永赢": 1
+    }
   },
-  "research_review": {
-    "market_asof": "2026-09-18",
-    "research_verified_at": "2026-09-20",
-    "observation_session": "2026-09-21",
-    "jev_model": "jev-1.13.0",
-    "reviewed_count": 10,
-    "claims": 53,
-    "executable_buys": 0,
-    "watchlist_synced": true,
-    "rows": [
-      [
-        "厦门钨业 600549",
+  "shortage_snapshot": {
+    "asof": "2026-09-16",
+    "theme_count": 23,
+    "company_count": 55,
+    "matched_candidate_count": 0,
+    "page": "../a-share-shortage-watch/"
+  },
+  "futu_tab_snapshot": {
+    "asof": "2026-09-16",
+    "source": "本机 Codex 历史对话及其已验收富途页卡回读；不是本轮实时 OpenD 清单",
+    "group_counts": {
+      "半导体": 10,
+      "光": 19,
+      "PCB": 17
+    },
+    "matched_candidate_counts": {
+      "半导体": 0,
+      "光": 0,
+      "PCB": 0
+    }
+  },
+  "watchlist_readback_ok": true,
+  "C_source_verified": true,
+  "execution_ready": false,
+  "price_plan_complete": false,
+  "selection_policy": {
+    "m30_preference": "日线价格档之后、类别命中数之前，30分钟笔结构/MACD/KDJ综合转强确认或延续优先，其次酝酿，分歧/尚未配合不加分；不改变日线资格",
+    "momentum_preference": "同价格档及A/B/C命中数时，MACD水上金叉优于水下金叉，KDJ低位金叉优于高位金叉；双金叉取两项位置质量平均，不自动高于单金叉",
+    "b_marker_preference": "价格档、独立命中数、金叉位置同等时，本轮有效B类标记优先",
+    "technology_preference": "上述条件仍相同时科技优先",
+    "nontechnology_stock_quota_max": null,
+    "nontechnology_stock_reserved": 0,
+    "verified_nontechnology_selected": 4,
+    "unclassified_and_etf_count_as_nontechnology": false
+  },
+  "stocks": [
+    {
+      "rank": 1,
+      "code": "SH.601872",
+      "name": "招商轮船",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
         "B",
-        "双金叉；30分钟上升延续",
-        "1.03倍",
-        "等回调改善空间，不追；利润增长但现金流承压",
-        "**保留观察**：盈利增长，但现金流承压〔深入〕"
+        "C"
       ],
-      [
-        "龙磁科技 300835",
-        "C",
-        "平台技术确认；30分钟上升延续",
-        "1.98倍",
-        "谨慎观察：扣非下降、估值高，取消优先买入含义",
-        "**谨慎观察**：利润未随收入兑现，估值要求高〔深入〕"
+      "technology": "已核验非科技",
+      "broad_category": "交通物流",
+      "industry": "航运港口",
+      "classification_path": "交通物流 → 航运港口",
+      "technology_evidence": null,
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "A": null,
+      "B": {
+        "shape": "底部转强/酝酿",
+        "state": "KDJ单金叉",
+        "bottom_date": "2026-09-29",
+        "invalid": 19.78,
+        "macd_cross": null,
+        "kdj_cross": "2026-10-09",
+        "volume_previous": 0.9295726731408172
+      },
+      "C": {
+        "setups": [
+          "趋势回踩",
+          "强势平台"
+        ],
+        "stage": "趋势候选·位置偏远不追",
+        "momentum": "KDJ单金叉确认",
+        "volume_previous5": 1.7201,
+        "research_invalid": 19.78
+      },
+      "points": {
+        "close": 22.07,
+        "observation": 21.36,
+        "confirmation": 22.65,
+        "maximum_acceptable": null,
+        "invalid": 19.78,
+        "first_reduce": 22.98,
+        "final_target": null
+      },
+      "point_status": "等待确认；不执行",
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 2,
+      "code": "SH.517520",
+      "name": "黄金股ETF永赢",
+      "kind": "ETF",
+      "origin": "板块ETF",
+      "classes": [
+        "B"
       ],
-      [
-        "江丰电子 300666〔缺货〕",
+      "technology": "未分类/ETF",
+      "broad_category": "ETF/未分类",
+      "industry": "黄金股ETF永赢",
+      "classification_path": "ETF/未分类 → 黄金股ETF永赢",
+      "technology_evidence": null,
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "A": null,
+      "B": {
+        "shape": "底部转强/酝酿",
+        "state": "KDJ单金叉",
+        "bottom_date": "2026-09-29",
+        "invalid": 1.8,
+        "macd_cross": null,
+        "kdj_cross": "2026-10-09",
+        "volume_previous": 3.0929931720299755
+      },
+      "C": null,
+      "points": {
+        "close": 1.919,
+        "observation": 1.89,
+        "confirmation": 1.923,
+        "maximum_acceptable": null,
+        "invalid": 1.8,
+        "first_reduce": 2.136,
+        "final_target": 2.214
+      },
+      "point_status": "等待确认；不执行",
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 3,
+      "code": "SH.688111",
+      "name": "金山办公",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
         "A",
-        "**9/15关K，回调1日后回升**",
-        "1.32倍",
-        "保留A类；当日量为关K量97%，关注估值及项目延期",
-        "**保留A类、慎追**：扣非增速弱于归母，募投延期〔深入〕"
+        "B"
       ],
-      [
-        "机械ETF富国 159886",
-        "B",
-        "KDJ单金叉；30分钟酝酿",
-        "0.43倍",
-        "等转强，先查成交活跃度与买卖价差",
-        "**待流动性核验**：历史规模较小，查价差与IOPV"
+      "technology": "科技",
+      "broad_category": "科技",
+      "industry": "软件开发",
+      "classification_path": "科技 → 软件开发",
+      "technology_evidence": null,
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "A": {
+        "key_date": "2026-10-09",
+        "day": 0,
+        "invalid": 215.15,
+        "confirmed": false,
+        "pending_conditions": [
+          "华为HMS成分涨停1家，未达2家"
+        ]
+      },
+      "B": {
+        "shape": "底部转强/酝酿",
+        "state": "双金叉",
+        "bottom_date": "2026-09-29",
+        "invalid": 215.15,
+        "macd_cross": "2026-10-09",
+        "kdj_cross": "2026-10-09",
+        "volume_previous": 1.8455221388104193
+      },
+      "C": null,
+      "points": {
+        "close": 228.95,
+        "observation": 223.09,
+        "confirmation": 229.79,
+        "maximum_acceptable": null,
+        "invalid": 215.15,
+        "first_reduce": 232.49,
+        "final_target": 233.44
+      },
+      "point_status": "等待确认；不执行",
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 4,
+      "code": "SH.600141",
+      "name": "兴发集团",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "B"
       ],
-      [
-        "稀有金属ETF广发 159608",
-        "B",
-        "KDJ单金叉；30分钟酝酿",
-        "0.69倍",
-        "上方空间有限，等回调；不因缺货主题追涨",
-        "**谨慎观察**：非纯钨组合，需核验做市与价差"
+      "technology": "已核验非科技",
+      "broad_category": "材料化工",
+      "industry": "农化制品",
+      "classification_path": "材料化工 → 农化制品",
+      "technology_evidence": null,
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "A": null,
+      "B": {
+        "shape": "底部转强/酝酿",
+        "state": "KDJ单金叉",
+        "bottom_date": "2026-09-29",
+        "invalid": 26.28,
+        "macd_cross": null,
+        "kdj_cross": "2026-10-08",
+        "volume_previous": 1.4139314647222216
+      },
+      "C": null,
+      "points": {
+        "close": 27.3,
+        "observation": 27.23,
+        "confirmation": 27.5,
+        "maximum_acceptable": null,
+        "invalid": 26.28,
+        "first_reduce": 27.5,
+        "final_target": 29.84
+      },
+      "point_status": "等待确认；不执行",
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 5,
+      "code": "SZ.159870",
+      "name": "化工ETF鹏华",
+      "kind": "ETF",
+      "origin": "板块ETF",
+      "classes": [
+        "B"
       ],
-      [
-        "新能源ETF南方 516160",
-        "B",
-        "KDJ单金叉；30分钟酝酿",
-        "1.45倍",
-        "成分盈利分化，避免与其他新能源标的重复配置",
-        "**仅方向观察**：成分盈利分化、重复暴露较高"
+      "technology": "未分类/ETF",
+      "broad_category": "ETF/未分类",
+      "industry": "化工ETF鹏华",
+      "classification_path": "ETF/未分类 → 化工ETF鹏华",
+      "technology_evidence": null,
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "A": null,
+      "B": {
+        "shape": "底部转强/酝酿",
+        "state": "KDJ单金叉",
+        "bottom_date": "2026-09-29",
+        "invalid": 0.728,
+        "macd_cross": null,
+        "kdj_cross": "2026-10-08",
+        "volume_previous": 0.702974493120157
+      },
+      "C": null,
+      "points": {
+        "close": 0.755,
+        "observation": 0.75,
+        "confirmation": 0.763,
+        "maximum_acceptable": null,
+        "invalid": 0.728,
+        "first_reduce": 0.763,
+        "final_target": 0.782
+      },
+      "point_status": "等待确认；不执行",
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 6,
+      "code": "SH.600089",
+      "name": "特变电工",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "B"
       ],
-      [
-        "鼎泰高科 301377",
-        "B",
-        "双金叉；30分钟酝酿",
-        "0.91倍",
-        "高增长但现金流为负；**9/24除息后重算点位**",
-        "**谨慎观察**：利润高增与负现金流背离"
+      "technology": "未分类/ETF",
+      "broad_category": "新能源",
+      "industry": "电网设备",
+      "classification_path": "新能源 → 电网设备",
+      "technology_evidence": null,
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "A": null,
+      "B": {
+        "shape": "缩量回踩守底",
+        "state": "双金叉",
+        "bottom_date": "2026-09-29",
+        "invalid": 17.13,
+        "macd_cross": "2026-10-09",
+        "kdj_cross": "2026-10-08",
+        "volume_previous": 0.7384214865564231
+      },
+      "C": null,
+      "points": {
+        "close": 17.74,
+        "observation": 17.63,
+        "confirmation": 17.92,
+        "maximum_acceptable": null,
+        "invalid": 17.13,
+        "first_reduce": 17.92,
+        "final_target": 18.38
+      },
+      "point_status": "等待确认；不执行",
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 7,
+      "code": "SZ.159662",
+      "name": "交运ETF南方",
+      "kind": "ETF",
+      "origin": "板块ETF",
+      "classes": [
+        "B"
       ],
-      [
-        "先导智能 300450",
-        "B",
-        "双金叉；30分钟酝酿",
-        "0.99倍",
-        "**优先检查30分钟能否确认转强**；利润与现金流同步改善",
-        "**优先补查交易条件**：利润、现金流同步改善，仍未到买点"
+      "technology": "未分类/ETF",
+      "broad_category": "ETF/未分类",
+      "industry": "交运ETF南方",
+      "classification_path": "ETF/未分类 → 交运ETF南方",
+      "technology_evidence": null,
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "A": null,
+      "B": {
+        "shape": "底部转强/酝酿",
+        "state": "双金叉",
+        "bottom_date": "2026-09-28",
+        "invalid": 0.96,
+        "macd_cross": "2026-10-09",
+        "kdj_cross": "2026-10-08",
+        "volume_previous": 0.9731520603688864
+      },
+      "C": null,
+      "points": {
+        "close": 0.996,
+        "observation": 0.98,
+        "confirmation": 0.996,
+        "maximum_acceptable": null,
+        "invalid": 0.96,
+        "first_reduce": 0.998,
+        "final_target": 1.011
+      },
+      "point_status": "等待确认；不执行",
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 8,
+      "code": "SH.515220",
+      "name": "煤炭ETF国泰",
+      "kind": "ETF",
+      "origin": "板块ETF",
+      "classes": [
+        "B"
       ],
-      [
-        "阳光电源 300274",
-        "B",
-        "双金叉；30分钟酝酿",
-        "1.87倍",
-        "**9/21除息，旧点位停用**；等待重算及盈利改善",
-        "**等待重算**：盈利下滑，周一除息，旧点位停用"
+      "technology": "未分类/ETF",
+      "broad_category": "ETF/未分类",
+      "industry": "煤炭ETF国泰",
+      "classification_path": "ETF/未分类 → 煤炭ETF国泰",
+      "technology_evidence": null,
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "A": null,
+      "B": {
+        "shape": "底部转强/酝酿",
+        "state": "KDJ单金叉",
+        "bottom_date": "2026-09-29",
+        "invalid": 1.229,
+        "macd_cross": null,
+        "kdj_cross": "2026-09-21",
+        "volume_previous": 1.53854311814714
+      },
+      "C": null,
+      "points": {
+        "close": 1.298,
+        "observation": 1.28,
+        "confirmation": 1.309,
+        "maximum_acceptable": null,
+        "invalid": 1.229,
+        "first_reduce": 1.347,
+        "final_target": 1.4
+      },
+      "point_status": "等待确认；不执行",
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 9,
+      "code": "SH.600938",
+      "name": "中国海油",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "B"
       ],
-      [
-        "光伏ETF华泰柏瑞 515790",
-        "B",
-        "双金叉；30分钟酝酿",
-        "1.31倍",
-        "等价格与盈利配合，注意与阳光电源重复暴露",
-        "**仅方向观察**：代表成分承压，盈利反转证据不足"
-      ]
-    ],
-    "sources": [
-      [
-        "厦门钨业 · h1 · 2026-08-21",
-        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12510412&stockid=600549"
+      "technology": "已核验非科技",
+      "broad_category": "能源公用",
+      "industry": "油气开采Ⅱ",
+      "classification_path": "能源公用 → 油气开采Ⅱ",
+      "technology_evidence": null,
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "A": null,
+      "B": {
+        "shape": "缩量回踩守底",
+        "state": "双金叉",
+        "bottom_date": "2026-09-21",
+        "invalid": 31.84,
+        "macd_cross": "2026-10-08",
+        "kdj_cross": "2026-09-28",
+        "volume_previous": 0.8370530303897203
+      },
+      "C": null,
+      "points": {
+        "close": 33.82,
+        "observation": 33.64,
+        "confirmation": 34.45,
+        "maximum_acceptable": null,
+        "invalid": 31.84,
+        "first_reduce": 34.45,
+        "final_target": 35.5
+      },
+      "point_status": "等待确认；不执行",
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    },
+    {
+      "rank": 10,
+      "code": "SH.600900",
+      "name": "长江电力",
+      "kind": "股票",
+      "origin": "A核",
+      "classes": [
+        "B"
       ],
-      [
-        "厦门钨业 · product · 2026-08-21",
-        "https://wap.stockstar.com/detail/SN2026082000037115"
-      ],
-      [
-        "厦门钨业 · independent · 2025-03-12",
-        "https://exportcontrol.mofcom.gov.cn/article/cjwt/202503/1112.html"
-      ],
-      [
-        "厦门钨业 · calendar · 2025-12-22",
-        "https://www.sse.com.cn/disclosure/announcement/general/c/c_20251222_10802507.shtml"
-      ],
-      [
-        "龙磁科技 · h1 · 2026-08-29",
-        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12570821&stockid=300835"
-      ],
-      [
-        "龙磁科技 · sale · 2026-09-15",
-        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12603575&stockid=300835"
-      ],
-      [
-        "龙磁科技 · prospectus · 2026-09-08",
-        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12590756&stockid=300835"
-      ],
-      [
-        "龙磁科技 · independent · 2026-04-28",
-        "https://www.tdk.com/system/files/2026_4q01_0mqf56xw_en.pdf"
-      ],
-      [
-        "江丰电子 · h1 · 2026-08-25",
-        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12529284&stockid=300666"
-      ],
-      [
-        "江丰电子 · independent · 2026-07-29",
-        "https://www.semi.org/en/semi-press-release/semi-reports-worldwide-silicon-wafer-shipments-increase-7.4-percent-year-on-year-in-q2-2026"
-      ],
-      [
-        "机械ETF富国 · fund · 2026-08-31",
-        "https://www.fullgoal.com.cn/wbs-file/fund_report/20260831/CN_50100000_159886_FB020010_20260012.pdf"
-      ],
-      [
-        "机械ETF富国 · index · 2026-08-31",
-        "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/000812factsheet.pdf"
-      ],
-      [
-        "机械ETF富国 · catl · 2026-07-24",
-        "https://static.cninfo.com.cn/finalpage/2026-07-24/1225442062.PDF"
-      ],
-      [
-        "稀有金属ETF广发 · index · 2026-08-31",
-        "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/930632factsheet.pdf"
-      ],
-      [
-        "稀有金属ETF广发 · fund_event · 2026-08-17",
-        "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-17/f1150fb5-340c-4a04-b1f8-a1599cfbc72d.PDF"
-      ],
-      [
-        "新能源ETF南方 · index · 2026-08-31",
-        "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/399808factsheet.pdf"
-      ],
-      [
-        "新能源ETF南方 · fund · 2026-03-23",
-        "https://www.nffund.com/main/files/2026/03/20/980714377670.pdf"
-      ],
-      [
-        "新能源ETF南方 · h1 · 2026-08-29",
-        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12570250&stockid=300274"
-      ],
-      [
-        "新能源ETF南方 · dividend · 2026-09-15",
-        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12605360&stockid=300274"
-      ],
-      [
-        "鼎泰高科 · h1 · 2026-08-20",
-        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12506614&stockid=301377"
-      ],
-      [
-        "鼎泰高科 · dividend · 2026-09-17",
-        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12607637&stockid=301377"
-      ],
-      [
-        "先导智能 · h1 · 2026-08-29",
-        "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12570681&stockid=300450"
-      ],
-      [
-        "光伏ETF华泰柏瑞 · index · 2026-08-31",
-        "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/931151factsheet.pdf"
-      ]
-    ],
-    "watchlist_sync_verified_at": "2026-09-20T20:49:56+08:00",
-    "watchlist_added": 9,
-    "watchlist_removed": 9
+      "technology": "已核验非科技",
+      "broad_category": "能源公用",
+      "industry": "电力",
+      "classification_path": "能源公用 → 电力",
+      "technology_evidence": null,
+      "shortage_flag": false,
+      "shortage_themes": [],
+      "shortage_refs": [],
+      "A": null,
+      "B": {
+        "shape": "底部转强/酝酿",
+        "state": "双金叉",
+        "bottom_date": "2026-08-07",
+        "invalid": 27.51,
+        "macd_cross": "2026-09-28",
+        "kdj_cross": "2026-09-28",
+        "volume_previous": 1.1730585951216836
+      },
+      "C": null,
+      "points": {
+        "close": 28.99,
+        "observation": 28.71,
+        "confirmation": 29.4,
+        "maximum_acceptable": null,
+        "invalid": 27.51,
+        "first_reduce": 29.57,
+        "final_target": null
+      },
+      "point_status": "等待确认；不执行",
+      "market_gate": "防守/等待",
+      "futu_tabs": [],
+      "futu_tab_label": "未归入三页卡",
+      "conversation_note": "—",
+      "other_groups": []
+    }
+  ],
+  "evidence": {
+    "result_sha256": "f734185c8f4fa5fc76a1c6872ff10fb7aa546611ad23d190537187f3eaa63d84",
+    "sync_sha256": "5615939ff1c81cc1fde3d7fe740e73096250d8ea3dbd53d9bab8c4a7d3b930e9",
+    "trade_plan_sha256": "8d5b0a6baa1e5aa818ac5a47f01501e7b2a452b1e9994f5a1ec57bcf7fb89610",
+    "futu_tabs_sha256": "d5356fed08451b0eb94d31100f1ad330fd484495967d1d6b604a29fda4d17a2e",
+    "taxonomy_sha256": "bf5697ac04773ef9cf351121ff0d7bde536f3cdc5223f59590e2c4d4eaf33bc5",
+    "shortage_inventory_sha256": "77213f230dcf15c48d7c1710f1f2498864af2cccdfa752853ebc407a37d2f517"
   }
 }
