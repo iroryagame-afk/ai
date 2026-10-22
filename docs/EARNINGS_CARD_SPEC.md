@@ -1,5 +1,11 @@
 # 财报卡片规范
 
+## 默认模板
+
+- 用户只说“财报”且未指定其他视觉模板时，默认使用公开仓库 `iroryagame-afk/earnings-templates`。
+- 模板基准固定为 commit `d832b6678f1c8c21b3c15bae0fe62f0032b15c35`：单公司使用 `single-company/template.html`，多公司合并使用 `combined/template.html`。
+- 必须遵守该仓库 README 的字段顺序、公开 Whisper、实际值、锁定 Beat 线、✓△✕□ 验收和多公司排序规则；不得复制模板示例公司的数据。
+
 ## 通用要求
 
 - 默认尺寸为 9:16；所有文字必须在手机端可读，模板与品牌资产存入 `assets/templates/` 并版本化。
