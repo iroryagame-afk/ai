@@ -31,3 +31,13 @@
 - 任务状态只使用：`planned`、`in_progress`、`blocked`、`ready_for_review`、`merged`、`deployed_unverified`、`published_verified`。
 - 只有已推送快照完成部署、cache-busting 公网回读和必要的视觉核验后，才允许标记 `published_verified`。任何硬门失败时保留线上旧版并如实记录。
 - 详细流程、数据规则和验收要求见 `docs/WORKFLOW.md`、`docs/DATA_SOURCE_RULES.md` 与 `docs/RELEASE_CHECKLIST.md`。
+
+## Cursor Cloud specific instructions
+
+本仓库是 Cloudflare 静态站点。校验与页面生成脚本只使用 Python 3 标准库，没有包管理器锁文件，也没有需要安装的第三方依赖。
+
+- 本地预览由环境 `start` 在 `http://127.0.0.1:8080` 提供整站静态文件。手动启动：`python3 -m http.server 8080 --bind 0.0.0.0`。该进程可重复启动：8080 已在监听时直接退出。
+- Python 静态服务不执行 `_redirects`。`/futu-indicators` 到 `/code/` 的 301 只在 Cloudflare / Wrangler 上生效。
+- 发布门禁：`python3 scripts/validate_report_nav.py` 与 `python3 scripts/validate_csnpk_refresh_manifest.py`。
+- 单元测试：`python3 -m unittest discover -s tests`。
+- `tests/test_site_navigation.py` 要求仓库里存在当前 ISO 周（周六起指向下一周）的完整 `weekly-event-transmission-*` 页面。缺页时这些用例以 `SystemExit` 失败，这是内容日期，不是环境缺依赖。
