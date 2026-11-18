@@ -2,19 +2,25 @@
   Cache-Control: public, max-age=60, stale-while-revalidate=86400
 
 /assets/*
+  ! Cache-Control
   Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
 
 /*.js
+  ! Cache-Control
   Cache-Control: public, max-age=3600, stale-while-revalidate=604800
 
 /*.css
+  ! Cache-Control
   Cache-Control: public, max-age=3600, stale-while-revalidate=604800
 
 /*.png
+  ! Cache-Control
   Cache-Control: public, max-age=604800
 
 /*.svg
+  ! Cache-Control
   Cache-Control: public, max-age=604800
 
 /*/data.json
+  ! Cache-Control
   Cache-Control: public, max-age=60, stale-while-revalidate=3600
